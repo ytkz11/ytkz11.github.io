@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ytkz&#39;s Blog</title>
+  
+  <subtitle>遥感Remote Sensing</subtitle>
+  <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://ytkz11@.github.io/"/>
+  <updated>2021-07-04T12:48:23.234Z</updated>
+  <id>http://ytkz11@.github.io/</id>
+  
+  <author>
+    <name>ytkz</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Sentinel 5p 中国区域no2空气污染数据可视化</title>
+    <link href="http://ytkz11@.github.io/2021/06/21/sentinel-5p-zhong-guo-qu-yu-no2-kong-qi-wu-ran-shu-ju-ke-shi-hua/"/>
+    <id>http://ytkz11@.github.io/2021/06/21/sentinel-5p-zhong-guo-qu-yu-no2-kong-qi-wu-ran-shu-ju-ke-shi-hua/</id>
+    <published>2021-06-21T03:00:10.000Z</published>
+    <updated>2021-07-04T12:48:23.234Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/ytkz11/sentinel-5p-no2-Visualization&quot;&gt;开源地址&lt;/a&gt;，如果对你有帮助，欢迎点个Star。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;input checked=&quot;&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机编程语言流派间的关系</title>
+    <link href="http://ytkz11@.github.io/2021/05/12/ji-suan-ji-bian-cheng-yu-yan-liu-pai-jian-de-guan-xi/"/>
+    <id>http://ytkz11@.github.io/2021/05/12/ji-suan-ji-bian-cheng-yu-yan-liu-pai-jian-de-guan-xi/</id>
+    <published>2021-05-12T04:00:10.000Z</published>
+    <updated>2021-06-29T15:32:32.242Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;计算机编程语言流派间的关系&quot;&gt;&lt;a href=&quot;#计算机编程语言流派间的关系&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RS_GUI开发</title>
+    <link href="http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/"/>
+    <id>http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/</id>
+    <published>2021-05-08T11:00:10.000Z</published>
+    <updated>2021-06-29T15:32:32.176Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;RS-GUI开发&quot;&gt;&lt;a href=&quot;#RS-GUI开发&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遥感的需求</title>
+    <link href="http://ytkz11@.github.io/2021/04/30/za-wen-ge-ren-jiao-du-kan-dai-dang-qian-yi-ji-jin-hou-yao-gan-de-xu-qiu-shi-shi-me/"/>
+    <id>http://ytkz11@.github.io/2021/04/30/za-wen-ge-ren-jiao-du-kan-dai-dang-qian-yi-ji-jin-hou-yao-gan-de-xu-qiu-shi-shi-me/</id>
+    <published>2021-04-30T03:47:10.000Z</published>
+    <updated>2021-06-29T15:32:32.236Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;个人角度看待当前以及今后遥感的需求是什么？&quot;&gt;&lt;a href=&quot;#个人角度看待当前以及今后遥感的需求是什么？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="杂文" scheme="http://ytkz11@.github.io/categories/%E6%9D%82%E6%96%87/"/>
+    
+    
+    <category term="杂文" scheme="http://ytkz11@.github.io/tags/%E6%9D%82%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gdal api笔记</title>
+    <link href="http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/"/>
+    <id>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</id>
+    <published>2021-03-10T07:38:20.000Z</published>
+    <updated>2021-06-29T15:32:32.186Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;​        如果你的gdal版本是3.2.2及以上，那么只能：&lt;/p&gt;
+&lt;p&gt;from osgeo import gdal &lt;/p&gt;
+&lt;hr&gt;
+&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>纯新手向——遥感栅格gdal安装步骤</title>
+    <link href="http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/"/>
+    <id>http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/</id>
+    <published>2021-02-27T08:58:20.000Z</published>
+    <updated>2021-06-29T15:32:32.191Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一-简介&quot;&gt;&lt;a href=&quot;#一-简介&quot; class=&quot;headerlink&quot; title=&quot;一.简介&quot;&gt;&lt;/a&gt;一.简介&lt;/h2&gt;&lt;p&gt;​        GDAL(Geospatial Data Abstraction</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>全极化合成孔径雷达可视化之pauli分解</title>
+    <link href="http://ytkz11@.github.io/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/"/>
+    <id>http://ytkz11@.github.io/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/</id>
+    <published>2021-02-11T02:43:20.000Z</published>
+    <updated>2021-07-04T12:48:23.234Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/ytkz11/sar-image-pauli-decomposition&quot;&gt;开源&lt;/a&gt;, 欢迎Star!&lt;/p&gt;
+&lt;h2 id=&quot;一-简介&quot;&gt;&lt;a href=&quot;#一-简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>风云四号与海洋一号海温数据融合</title>
+    <link href="http://ytkz11@.github.io/2021/02/02/feng-yun-si-hao-yu-hai-yang-yi-hao-hai-wen-shu-ju-rong-he/"/>
+    <id>http://ytkz11@.github.io/2021/02/02/feng-yun-si-hao-yu-hai-yang-yi-hao-hai-wen-shu-ju-rong-he/</id>
+    <published>2021-02-02T07:05:20.000Z</published>
+    <updated>2021-06-29T15:32:32.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;​    时隔半个月，更新一下博客，记录一下之前做的数据融合的东西。&lt;/p&gt;
+&lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;&lt;p&gt;​       </summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>光学遥感影像融合</title>
+    <link href="http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/"/>
+    <id>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</id>
+    <published>2021-01-15T13:10:34.000Z</published>
+    <updated>2021-06-29T15:32:32.195Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一-简介&quot;&gt;&lt;a href=&quot;#一-简介&quot; class=&quot;headerlink&quot; title=&quot;一.简介&quot;&gt;&lt;/a&gt;一.简介&lt;/h2&gt;&lt;p&gt;​        光学遥感影像融合,需要在几何校正后进行。&lt;/p&gt;
+&lt;h2 id=&quot;二-方法种类&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+</feed>
