@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</loc>
+    
+    <lastmod>2021-07-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ytkz11@.github.io/about/index.html</loc>
     
     <lastmod>2021-07-06</lastmod>
@@ -116,7 +123,7 @@
 
   <url>
     <loc>http://ytkz11@.github.io/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -124,21 +131,21 @@
   
   <url>
     <loc>http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/%E6%9D%82%E6%96%87/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -147,21 +154,21 @@
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E6%9D%82%E6%96%87/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

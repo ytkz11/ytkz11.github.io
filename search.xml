@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>什么是遥感图像？</title>
+      <link href="2021/07/14/shi-me-shi-yao-gan-tu-xiang/"/>
+      <url>2021/07/14/shi-me-shi-yao-gan-tu-xiang/</url>
+      
+        <content type="html"><![CDATA[<p>遥感图像属于数字图像的分支。一般来说，遥感图像的观察对象为地球。随着时间的发展，未来把一系列观察地球的手段应用到别的星球，比如说，地物识别：识别某个星球表面有没有矿、有没有水等等</p><h2 id="1-什么是数字图像"><a href="#1-什么是数字图像" class="headerlink" title="1.什么是数字图像"></a>1.什么是数字图像</h2><p>​        图像是物体或场景的图片、照片或任何形式的二维(2D)表示。图像中的信息以色调或颜色呈现。数字图像是数字的二维数组。数字图像的每个单元称为一个像素，代表像素亮度的数字称为数字(DN)。作为2D阵列，数字图像由行和列的数据组成。像素的位置用其行和列来表示。这种规则排列的数据，没有x和y坐标，通常被称为栅格数据。由于数字图像只不过是数据矩阵，因此可以很容易地对数字图像进行数学运算。对数字图像的数学运算称为数字图像处理。</p><p>遥感图像和普通图像的区别之一：普通图像一般来说是三个波段（RGB），比如说手机拍摄的照片。遥感图像则是波段数不固定，比如美国的LANDSAT 8、欧盟的SENTINEL 2波段数均大于8个。</p><p><a href="https://imgtu.com/i/WVV800"><img src="https://z3.ax1x.com/2021/07/14/WVV800.png" alt="WVV800.png"></a></p><h2 id="2-什么是波段（Band）"><a href="#2-什么是波段（Band）" class="headerlink" title="2.什么是波段（Band）"></a>2.什么是波段（Band）</h2><p>数字图像数据也可以具有第三个维度:波段，也叫做图层。图层是同一场景的图像，但包含不同的信息。在多光谱图像中，图层是不同光谱范围的图像，称为波段或通道。例如，数码相机拍摄的彩色照片由分别包含红、绿、蓝光谱信息的三个波段组成。术语“波段”比“图层”更常用于指代多光谱图像。一般来说，同一场景的几何配准多维数据集可以被视为图像的层。例如，我们可以将地质图数字化，然后将数字图与高分卫星图像进行配准。然后，数字地图就变成了4个波段的场景的额外一层。类似地，如果我们有一个数字高程模型(DEM)数据集，高分卫星图像被校正到该数据集，那么DEM可以被认为是SPOT图像在其四个光谱带之外的一个层。从这个意义上说，我们可以将一组共同配准的数字图像视为一个三维(3D)数据集，而“第三维”提供了图像处理和地理信息系统(GIS)之间的联系。</p><p><a href="https://imgtu.com/i/WVPs7F"><img src="https://z3.ax1x.com/2021/07/14/WVPs7F.png" alt="WVPs7F.png"></a></p><h2 id="3-成像方式"><a href="#3-成像方式" class="headerlink" title="3.成像方式"></a>3.成像方式</h2><p>​        遥感图像由飞机或航天器上的传感器系统获取，如地球观测卫星。传感器系统可以分为两大类:被动传感器和主动传感器。多光谱光学成像系统是被动式、使用太阳辐射作为成像源的传感器。雷达SAR是主动式，优点是不受云层、黑夜的影响。</p><p><a href="https://imgtu.com/i/WVeQZq"><img src="https://z3.ax1x.com/2021/07/14/WVeQZq.png" alt="WVeQZq.png"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Sentinel 5p 中国区域no2空气污染数据可视化</title>
       <link href="2021/06/21/sentinel-5p-zhong-guo-qu-yu-no2-kong-qi-wu-ran-shu-ju-ke-shi-hua/"/>
       <url>2021/06/21/sentinel-5p-zhong-guo-qu-yu-no2-kong-qi-wu-ran-shu-ju-ke-shi-hua/</url>

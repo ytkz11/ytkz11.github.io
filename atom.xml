@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2021-07-04T12:48:23.234Z</updated>
+  <updated>2021-07-14T15:43:45.739Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>什么是遥感图像？</title>
+    <link href="http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/"/>
+    <id>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</id>
+    <published>2021-07-14T02:43:20.000Z</published>
+    <updated>2021-07-14T15:43:45.739Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;遥感图像属于数字图像的分支。一般来说，遥感图像的观察对象为地球。随着时间的发展，未来把一系列观察地球的手段应用到别的星球，比如说，地物识别：识别某个星球表面有没有矿、有没有水等等&lt;/p&gt;
+&lt;h2 id=&quot;1-什么是数字图像&quot;&gt;&lt;a href=&quot;#1-什么是数字图像&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>Sentinel 5p 中国区域no2空气污染数据可视化</title>
