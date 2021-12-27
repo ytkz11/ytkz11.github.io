@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2021-12-22T08:41:18.197Z</updated>
+  <updated>2021-12-27T08:52:12.098Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>风云极轨卫星的几何校正</title>
+    <link href="http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/"/>
+    <id>http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/</id>
+    <published>2021-12-27T08:00:10.000Z</published>
+    <updated>2021-12-27T08:52:12.098Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;遇到问题记录：&lt;br&gt;1.风云极轨卫星的几何校正，有单独的经度和纬度以及DN数据，试过GLT校正但是不行&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="遥感; 技术" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F-%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="遥感; 技术" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F-%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用python进行影像配准</title>
+    <link href="http://ytkz11@.github.io/2021/12/23/shi-yong-python-jin-xing-ying-xiang-pei-zhun/"/>
+    <id>http://ytkz11@.github.io/2021/12/23/shi-yong-python-jin-xing-ying-xiang-pei-zhun/</id>
+    <published>2021-12-23T08:00:10.000Z</published>
+    <updated>2021-12-24T02:16:54.395Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;参考影像是google tif&lt;br&gt;遇到问题记录：&lt;br&gt;1.google tif的坐标不是经纬度，所以要进行转换到WGS84坐标投影&lt;br&gt;google tif</summary>
+        
+      
+    
+    
+    
+    <category term="遥感; 技术" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F-%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="遥感; 技术" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F-%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>jar打包exe过程记录</title>
@@ -47,7 +98,7 @@
     <link href="http://ytkz11@.github.io/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/"/>
     <id>http://ytkz11@.github.io/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/</id>
     <published>2021-10-13T03:00:10.000Z</published>
-    <updated>2021-12-22T08:40:54.743Z</updated>
+    <updated>2021-12-27T08:39:44.968Z</updated>
     
     
       
@@ -368,31 +419,6 @@
   </entry>
   
   <entry>
-    <title>bing首页爬虫批量下载图片</title>
-    <link href="http://ytkz11@.github.io/2021/03/20/bing-shou-ye-pa-chong-pi-liang-xia-zai-tu-pian/"/>
-    <id>http://ytkz11@.github.io/2021/03/20/bing-shou-ye-pa-chong-pi-liang-xia-zai-tu-pian/</id>
-    <published>2021-03-20T11:01:20.000Z</published>
-    <updated>2021-12-22T08:29:37.260Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; </summary>
-        
-      
-    
-    
-    
-    <category term="业余; 爬虫" scheme="http://ytkz11@.github.io/categories/%E4%B8%9A%E4%BD%99-%E7%88%AC%E8%99%AB/"/>
-    
-    
-    <category term="业余; 爬虫" scheme="http://ytkz11@.github.io/tags/%E4%B8%9A%E4%BD%99-%E7%88%AC%E8%99%AB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>gdal api笔记</title>
     <link href="http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/"/>
     <id>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</id>
@@ -493,31 +519,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用git提交代码到github的完整步骤</title>
-    <link href="http://ytkz11@.github.io/2021/01/26/yong-git-ti-jiao-dai-ma-dao-github-de-wan-zheng-bu-zou/"/>
-    <id>http://ytkz11@.github.io/2021/01/26/yong-git-ti-jiao-dai-ma-dao-github-de-wan-zheng-bu-zou/</id>
-    <published>2021-01-26T12:00:10.000Z</published>
-    <updated>2021-12-22T08:24:09.032Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h5 id=&quot;设置git的用户名和密码&quot;&gt;&lt;a href=&quot;#设置git的用户名和密码&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="git" scheme="http://ytkz11@.github.io/tags/git/"/>
     
   </entry>
   
