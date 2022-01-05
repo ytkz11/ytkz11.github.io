@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2021-12-27T08:52:12.098Z</updated>
+  <updated>2021-12-30T07:35:55.318Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,28 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>风云极轨卫星的几何校正</title>
+    <title>风云三号极轨卫星的几何校正</title>
     <link href="http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/"/>
     <id>http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/</id>
     <published>2021-12-27T08:00:10.000Z</published>
-    <updated>2021-12-27T08:52:12.098Z</updated>
+    <updated>2021-12-30T07:35:55.318Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;遇到问题记录：&lt;br&gt;1.风云极轨卫星的几何校正，有单独的经度和纬度以及DN数据，试过GLT校正但是不行&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
+    <summary type="html">&lt;h2 id=&quot;遇到问题记录：&quot;&gt;&lt;a href=&quot;#遇到问题记录：&quot; class=&quot;headerlink&quot; title=&quot;遇到问题记录：&quot;&gt;&lt;/a&gt;遇到问题记录：&lt;/h2&gt;&lt;p&gt;1.风云极轨卫星的几何校正，有单独的经度和纬度以及DN数据，试过GLT校正但是不行&lt;/p&gt;
+&lt;h2</summary>
         
       
     
     
     
-    <category term="遥感; 技术" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F-%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="遥感; 技术" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F-%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="http://ytkz11@.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -47,7 +47,7 @@
     <link href="http://ytkz11@.github.io/2021/12/23/shi-yong-python-jin-xing-ying-xiang-pei-zhun/"/>
     <id>http://ytkz11@.github.io/2021/12/23/shi-yong-python-jin-xing-ying-xiang-pei-zhun/</id>
     <published>2021-12-23T08:00:10.000Z</published>
-    <updated>2021-12-28T08:07:19.807Z</updated>
+    <updated>2022-01-04T09:31:03.714Z</updated>
     
     
       
@@ -60,10 +60,10 @@
     
     
     
-    <category term="遥感; 技术" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F-%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="遥感; 技术" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F-%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="http://ytkz11@.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -423,7 +423,7 @@
     <link href="http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/"/>
     <id>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</id>
     <published>2021-03-10T07:38:20.000Z</published>
-    <updated>2021-12-28T09:29:13.770Z</updated>
+    <updated>2022-01-05T01:09:19.414Z</updated>
     
     
       
