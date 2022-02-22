@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-02-08T08:09:23.350Z</updated>
+  <updated>2022-02-18T02:18:11.296Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PYQT技巧小笔记</title>
+    <link href="http://ytkz11@.github.io/2022/02/18/pyqt-ji-qiao-xiao-bi-ji/"/>
+    <id>http://ytkz11@.github.io/2022/02/18/pyqt-ji-qiao-xiao-bi-ji/</id>
+    <published>2022-02-18T08:00:10.000Z</published>
+    <updated>2022-02-18T02:18:11.296Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;目录&quot;&gt;&lt;a href=&quot;#目录&quot; class=&quot;headerlink&quot; title=&quot;目录&quot;&gt;&lt;/a&gt;目录&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://ytkz11@.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>智能添加字幕-autosub</title>
@@ -494,31 +520,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用git提交代码到github的完整步骤</title>
-    <link href="http://ytkz11@.github.io/2021/01/26/yong-git-ti-jiao-dai-ma-dao-github-de-wan-zheng-bu-zou/"/>
-    <id>http://ytkz11@.github.io/2021/01/26/yong-git-ti-jiao-dai-ma-dao-github-de-wan-zheng-bu-zou/</id>
-    <published>2021-01-26T12:00:10.000Z</published>
-    <updated>2021-12-22T08:24:09.032Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h5 id=&quot;设置git的用户名和密码&quot;&gt;&lt;a href=&quot;#设置git的用户名和密码&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="git" scheme="http://ytkz11@.github.io/tags/git/"/>
     
   </entry>
   
