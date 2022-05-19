@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-02-18T02:18:11.296Z</updated>
+  <updated>2022-05-19T05:55:29.882Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Geemap 显示ROI区域（1）</title>
+    <link href="http://ytkz11@.github.io/2022/05/19/geemap-xian-shi-roi-qu-yu-1/"/>
+    <id>http://ytkz11@.github.io/2022/05/19/geemap-xian-shi-roi-qu-yu-1/</id>
+    <published>2022-05-19T07:00:10.000Z</published>
+    <updated>2022-05-19T05:55:29.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-自学Geemap&quot;&gt;&lt;a href=&quot;#1-自学Geemap&quot; class=&quot;headerlink&quot; title=&quot;1 自学Geemap&quot;&gt;&lt;/a&gt;1 自学Geemap&lt;/h2&gt;&lt;p&gt;显示roi区域&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="GEE" scheme="http://ytkz11@.github.io/categories/GEE/"/>
+    
+    
+    <category term="GEE" scheme="http://ytkz11@.github.io/tags/GEE/"/>
+    
+  </entry>
   
   <entry>
     <title>PYQT技巧小笔记</title>
@@ -39,6 +65,32 @@
     
     
     <category term="技术" scheme="http://ytkz11@.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>单GCP点几何粗校正</title>
+    <link href="http://ytkz11@.github.io/2022/02/08/dan-gcp-dian-ji-he-cu-xiao-zheng/"/>
+    <id>http://ytkz11@.github.io/2022/02/08/dan-gcp-dian-ji-he-cu-xiao-zheng/</id>
+    <published>2022-02-08T08:00:10.000Z</published>
+    <updated>2022-05-19T05:54:11.893Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;针对RPC校正后仍出现严重的几何错位问题&lt;/p&gt;
+&lt;h2 id=&quot;tps单GCP点粗校正&quot;&gt;&lt;a href=&quot;#tps单GCP点粗校正&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
@@ -458,58 +510,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;一-简介&quot;&gt;&lt;a href=&quot;#一-简介&quot; class=&quot;headerlink&quot; title=&quot;一.简介&quot;&gt;&lt;/a&gt;一.简介&lt;/h2&gt;&lt;p&gt;​        GDAL(Geospatial Data Abstraction</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>全极化合成孔径雷达可视化之pauli分解</title>
-    <link href="http://ytkz11@.github.io/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/"/>
-    <id>http://ytkz11@.github.io/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/</id>
-    <published>2021-02-11T02:43:20.000Z</published>
-    <updated>2021-11-23T09:57:42.122Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/ytkz11/sar-image-pauli-decomposition&quot;&gt;开源&lt;/a&gt;, 欢迎Star!&lt;/p&gt;
-&lt;h2 id=&quot;一-简介&quot;&gt;&lt;a href=&quot;#一-简介&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>风云四号与海洋一号海温数据融合</title>
-    <link href="http://ytkz11@.github.io/2021/02/02/feng-yun-si-hao-yu-hai-yang-yi-hao-hai-wen-shu-ju-rong-he/"/>
-    <id>http://ytkz11@.github.io/2021/02/02/feng-yun-si-hao-yu-hai-yang-yi-hao-hai-wen-shu-ju-rong-he/</id>
-    <published>2021-02-02T07:05:20.000Z</published>
-    <updated>2021-11-23T09:57:42.142Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;​    时隔半个月，更新一下博客，记录一下之前做的数据融合的东西。&lt;/p&gt;
-&lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;&lt;p&gt;​       </summary>
         
       
     
