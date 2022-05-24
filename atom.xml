@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-05-19T05:55:29.882Z</updated>
+  <updated>2022-05-24T03:19:57.989Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Restart study deep learn(MNIST)</title>
+    <link href="http://ytkz11@.github.io/2022/05/24/restart-study-deep-learn-mnist/"/>
+    <id>http://ytkz11@.github.io/2022/05/24/restart-study-deep-learn-mnist/</id>
+    <published>2022-05-24T03:20:10.000Z</published>
+    <updated>2022-05-24T03:19:57.989Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Restart-study-Deep-learn&quot;&gt;&lt;a href=&quot;#1-Restart-study-Deep-learn&quot; class=&quot;headerlink&quot; title=&quot;1 Restart study Deep learn&quot;&gt;&lt;/a&gt;1</summary>
+        
+      
+    
+    
+    
+    <category term="GEE" scheme="http://ytkz11@.github.io/categories/GEE/"/>
+    
+    
+    <category term="GEE" scheme="http://ytkz11@.github.io/tags/GEE/"/>
+    
+  </entry>
   
   <entry>
     <title>Geemap 显示ROI区域（1）</title>
@@ -485,31 +510,6 @@
     <summary type="html">&lt;p&gt;​        如果你的gdal版本是3.2.2及以上，那么只能：&lt;/p&gt;
 &lt;p&gt;from osgeo import gdal &lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/WBtMsU&quot;&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>纯新手向——遥感栅格gdal安装步骤</title>
-    <link href="http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/"/>
-    <id>http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/</id>
-    <published>2021-02-27T08:58:20.000Z</published>
-    <updated>2021-11-23T09:57:42.121Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一-简介&quot;&gt;&lt;a href=&quot;#一-简介&quot; class=&quot;headerlink&quot; title=&quot;一.简介&quot;&gt;&lt;/a&gt;一.简介&lt;/h2&gt;&lt;p&gt;​        GDAL(Geospatial Data Abstraction</summary>
         
       
     
