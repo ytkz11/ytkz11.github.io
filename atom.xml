@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>ytkz&#39;s Blog</title>
   
-  <subtitle>遥感Remote Sensing</subtitle>
+  <subtitle>Some personal notes</subtitle>
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-05-25T07:55:09.681Z</updated>
+  <updated>2022-05-26T01:17:27.652Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>python selfstudy</title>
-    <link href="http://ytkz11@.github.io/2022/05/25/python-selfstudy/"/>
-    <id>http://ytkz11@.github.io/2022/05/25/python-selfstudy/</id>
-    <published>2022-05-25T08:20:10.000Z</published>
-    <updated>2022-05-25T07:55:09.681Z</updated>
+    <link href="http://ytkz11@.github.io/2022/05/26/python-selfstudy/"/>
+    <id>http://ytkz11@.github.io/2022/05/26/python-selfstudy/</id>
+    <published>2022-05-26T08:20:10.000Z</published>
+    <updated>2022-05-26T01:17:27.652Z</updated>
     
     
       
@@ -148,7 +148,7 @@
     <link href="http://ytkz11@.github.io/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/"/>
     <id>http://ytkz11@.github.io/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/</id>
     <published>2021-10-13T03:00:10.000Z</published>
-    <updated>2021-12-27T08:39:44.968Z</updated>
+    <updated>2022-05-26T07:02:41.493Z</updated>
     
     
       
@@ -371,6 +371,32 @@
   </entry>
   
   <entry>
+    <title>爬虫抖音视频下载</title>
+    <link href="http://ytkz11@.github.io/2021/06/20/pa-chong-dou-yin-shi-pin-xia-zai/"/>
+    <id>http://ytkz11@.github.io/2021/06/20/pa-chong-dou-yin-shi-pin-xia-zai/</id>
+    <published>2021-06-20T12:01:20.000Z</published>
+    <updated>2022-05-26T03:02:56.378Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;下载视频&quot;&gt;&lt;a href=&quot;#下载视频&quot; class=&quot;headerlink&quot; title=&quot;下载视频&quot;&gt;&lt;/a&gt;下载视频&lt;/h1&gt;&lt;p&gt;1.根据抖音用户地址检索到抖音特定的sec_uid码，在进行下载保存&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="爬虫" scheme="http://ytkz11@.github.io/categories/%E7%88%AC%E8%99%AB/"/>
+    
+    
+    <category term="爬虫" scheme="http://ytkz11@.github.io/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>精准农业的计算机视觉</title>
     <link href="http://ytkz11@.github.io/2021/05/20/jing-zhun-nong-ye-de-ji-suan-ji-shi-jue/"/>
     <id>http://ytkz11@.github.io/2021/05/20/jing-zhun-nong-ye-de-ji-suan-ji-shi-jue/</id>
@@ -469,54 +495,27 @@
   </entry>
   
   <entry>
-    <title>gdal api笔记</title>
-    <link href="http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/"/>
-    <id>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</id>
-    <published>2021-03-10T07:38:20.000Z</published>
-    <updated>2022-04-27T09:34:08.957Z</updated>
+    <title>bing首页爬虫批量下载图片</title>
+    <link href="http://ytkz11@.github.io/2021/03/20/bing-shou-ye-pa-chong-pi-liang-xia-zai-tu-pian/"/>
+    <id>http://ytkz11@.github.io/2021/03/20/bing-shou-ye-pa-chong-pi-liang-xia-zai-tu-pian/</id>
+    <published>2021-03-20T11:01:20.000Z</published>
+    <updated>2022-05-26T03:18:38.663Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;​        如果你的gdal版本是3.2.2及以上，那么只能：&lt;/p&gt;
-&lt;p&gt;from osgeo import gdal &lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://imgtu.com/i/WBtMsU&quot;&gt;&lt;img</summary>
+    <summary type="html">&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; </summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    <category term="爬虫" scheme="http://ytkz11@.github.io/categories/%E7%88%AC%E8%99%AB/"/>
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>纯新手向——遥感栅格gdal安装步骤</title>
-    <link href="http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/"/>
-    <id>http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/</id>
-    <published>2021-02-27T08:58:20.000Z</published>
-    <updated>2021-11-23T09:57:42.121Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一-简介&quot;&gt;&lt;a href=&quot;#一-简介&quot; class=&quot;headerlink&quot; title=&quot;一.简介&quot;&gt;&lt;/a&gt;一.简介&lt;/h2&gt;&lt;p&gt;​        GDAL(Geospatial Data Abstraction</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    <category term="爬虫" scheme="http://ytkz11@.github.io/tags/%E7%88%AC%E8%99%AB/"/>
     
   </entry>
   
