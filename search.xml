@@ -373,6 +373,31 @@
     
     
     <entry>
+      <title>Some ffmpeg skill</title>
+      <link href="2021/06/14/ffmpeg-ming-ling-xing-diao-yong/"/>
+      <url>2021/06/14/ffmpeg-ming-ling-xing-diao-yong/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Compress-Size-Of-Vedio"><a href="#Compress-Size-Of-Vedio" class="headerlink" title="Compress  Size Of Vedio"></a>Compress  Size Of Vedio</h2><pre class="line-numbers language-none"><code class="language-none">ffmpeg -i input.mp4 -vcodec libx265 -crf 28 output.mp4<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> ffmpeg </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ffmpeg </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>精准农业的计算机视觉</title>
       <link href="2021/05/20/jing-zhun-nong-ye-de-ji-suan-ji-shi-jue/"/>
       <url>2021/05/20/jing-zhun-nong-ye-de-ji-suan-ji-shi-jue/</url>
