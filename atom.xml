@@ -319,6 +319,58 @@
   </entry>
   
   <entry>
+    <title>随机森林分类</title>
+    <link href="http://ytkz11@.github.io/2021/07/04/sui-ji-sen-lin-fen-lei/"/>
+    <id>http://ytkz11@.github.io/2021/07/04/sui-ji-sen-lin-fen-lei/</id>
+    <published>2021-07-04T02:00:10.000Z</published>
+    <updated>2022-07-04T01:42:38.720Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;随机森林是一种基于bagging的分类算法，它通过自助法（bootstrap）重采样技术，从原始训练样本集N中有放回地重复随机抽取n个样本生成新的训练样本集合训练决策树，然后按以上步骤生成m棵决策树组成随机森林，新数据的分类结果按分类树投票多少形成的分数而定。&lt;/p&gt;
+&lt;h</summary>
+        
+      
+    
+    
+    
+    <category term="分类" scheme="http://ytkz11@.github.io/categories/%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="分类" scheme="http://ytkz11@.github.io/tags/%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux 学习记录</title>
+    <link href="http://ytkz11@.github.io/2021/06/23/linux-xue-xi-ji-lu/"/>
+    <id>http://ytkz11@.github.io/2021/06/23/linux-xue-xi-ji-lu/</id>
+    <published>2021-06-23T12:00:10.000Z</published>
+    <updated>2022-06-23T11:44:11.731Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;处理目录的常用命令&quot;&gt;&lt;a href=&quot;#处理目录的常用命令&quot; class=&quot;headerlink&quot; title=&quot;处理目录的常用命令&quot;&gt;&lt;/a&gt;处理目录的常用命令&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;ls（英文全拼：list files）:</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>深度学习-遥感影像云检测</title>
     <link href="http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/"/>
     <id>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</id>
@@ -466,56 +518,6 @@
     
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RS_GUI开发</title>
-    <link href="http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/"/>
-    <id>http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/</id>
-    <published>2021-05-08T11:00:10.000Z</published>
-    <updated>2021-12-22T08:34:35.960Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;RS-GUI开发&quot;&gt;&lt;a href=&quot;#RS-GUI开发&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>遥感的需求</title>
-    <link href="http://ytkz11@.github.io/2021/04/30/za-wen-ge-ren-jiao-du-kan-dai-dang-qian-yi-ji-jin-hou-yao-gan-de-xu-qiu-shi-shi-me/"/>
-    <id>http://ytkz11@.github.io/2021/04/30/za-wen-ge-ren-jiao-du-kan-dai-dang-qian-yi-ji-jin-hou-yao-gan-de-xu-qiu-shi-shi-me/</id>
-    <published>2021-04-30T03:47:10.000Z</published>
-    <updated>2021-11-23T09:57:42.123Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;个人角度看待当前以及今后遥感的需求是什么？&quot;&gt;&lt;a href=&quot;#个人角度看待当前以及今后遥感的需求是什么？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="杂文" scheme="http://ytkz11@.github.io/categories/%E6%9D%82%E6%96%87/"/>
-    
-    
-    <category term="杂文" scheme="http://ytkz11@.github.io/tags/%E6%9D%82%E6%96%87/"/>
     
   </entry>
   
