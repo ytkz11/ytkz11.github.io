@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</loc>
+    <lastmod>2022-07-15</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2021/12/29/zhi-neng-tian-jia-zi-mu-autosub/</loc>
+    <lastmod>2022-07-15</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2021/12/22/jiang-jar-da-bao-setup.exe/</loc>
+    <lastmod>2022-07-15</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/</loc>
+    <lastmod>2022-07-15</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2021/01/26/yong-git-ti-jiao-dai-ma-dao-github-de-wan-zheng-bu-zou/</loc>
     <lastmod>2022-07-11</lastmod>
   </url>
@@ -11,10 +27,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2021/06/23/linux-xue-xi-ji-lu/</loc>
     <lastmod>2022-06-23</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</loc>
-    <lastmod>2022-06-21</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2021/06/14/ffmpeg-ming-ling-xing-diao-yong/</loc>
@@ -29,10 +41,6 @@
     <lastmod>2022-05-26</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/06/20/pa-chong-dou-yin-shi-pin-xia-zai/</loc>
-    <lastmod>2022-05-26</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2022/05/26/python-selfstudy/</loc>
     <lastmod>2022-05-26</lastmod>
   </url>
@@ -43,18 +51,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2022/05/19/geemap-xian-shi-roi-qu-yu-1/</loc>
     <lastmod>2022-05-19</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2022/02/08/dan-gcp-dian-ji-he-cu-xiao-zheng/</loc>
-    <lastmod>2022-05-19</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2021/12/29/zhi-neng-tian-jia-zi-mu-autosub/</loc>
-    <lastmod>2022-02-08</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/</loc>
-    <lastmod>2021-12-22</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2021/06/21/sentinel-5p-zhong-guo-qu-yu-no2-kong-qi-wu-ran-shu-ju-ke-shi-hua/</loc>
