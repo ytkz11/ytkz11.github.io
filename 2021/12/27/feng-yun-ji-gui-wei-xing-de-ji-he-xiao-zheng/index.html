@@ -1,0 +1,378 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>风云三号极轨卫星的几何校正 | ytkz's Blog</title><meta name="keywords" content="遥感,gdal"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="遇到问题记录：1.风云极轨卫星的几何校正，有单独的经度和纬度以及DN数据，试过GLT校正但是不行 解决方法：构造vrt文件，再进行几何校正。 vrt文件官方vrt资料VRT驱动程序是GDAL的一个格式驱动程序，它允许虚拟GDAL数据集由其他GDAL数据集组成，并具有重新定位、可能应用的算法以及更改或添加的各种元数据。数据集的VRT描述可以保存为XML格式，通常给出扩展名.VRT。 针对风云三号提取">
+<meta property="og:type" content="article">
+<meta property="og:title" content="风云三号极轨卫星的几何校正">
+<meta property="og:url" content="http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/index.html">
+<meta property="og:site_name" content="ytkz&#39;s Blog">
+<meta property="og:description" content="遇到问题记录：1.风云极轨卫星的几何校正，有单独的经度和纬度以及DN数据，试过GLT校正但是不行 解决方法：构造vrt文件，再进行几何校正。 vrt文件官方vrt资料VRT驱动程序是GDAL的一个格式驱动程序，它允许虚拟GDAL数据集由其他GDAL数据集组成，并具有重新定位、可能应用的算法以及更改或添加的各种元数据。数据集的VRT描述可以保存为XML格式，通常给出扩展名.VRT。 针对风云三号提取">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s4.ax1x.com/2021/12/27/TDnUx0.jpg">
+<meta property="article:published_time" content="2021-12-27T08:00:10.000Z">
+<meta property="article:modified_time" content="2022-07-18T06:57:41.688Z">
+<meta property="article:author" content="ytkz">
+<meta property="article:tag" content="遥感">
+<meta property="article:tag" content="gdal">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s4.ax1x.com/2021/12/27/TDnUx0.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2022-07-18 14:57:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" ><meta name="generator" content="Hexo 5.4.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="ytkz's Blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-folder-open"></i><span> 参考资料</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-tags"></i><span> 电子书</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://s4.ax1x.com/2021/12/27/TDnUx0.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ytkz's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-folder-open"></i><span> 参考资料</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-tags"></i><span> 电子书</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">风云三号极轨卫星的几何校正</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-12-27T08:00:10.000Z" title="发表于 2021-12-27 16:00:10">2021-12-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-07-18T06:57:41.688Z" title="更新于 2022-07-18 14:57:41">2022-07-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/gdal/">gdal</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/gdal/%E9%81%A5%E6%84%9F/">遥感</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="遇到问题记录："><a href="#遇到问题记录：" class="headerlink" title="遇到问题记录："></a>遇到问题记录：</h2><p>1.风云极轨卫星的几何校正，有单独的经度和纬度以及DN数据，试过GLT校正但是不行</p>
+<h2 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h2><p>构造vrt文件，再进行几何校正。</p>
+<h2 id="vrt文件"><a href="#vrt文件" class="headerlink" title="vrt文件"></a>vrt文件</h2><p><a target="_blank" rel="noopener" href="https://www.osgeo.cn/gdal/drivers/raster/vrt.html">官方vrt资料</a><br>VRT驱动程序是GDAL的一个格式驱动程序，它允许虚拟GDAL数据集由其他GDAL数据集组成，并具有重新定位、可能应用的算法以及更改或添加的各种元数据。数据集的VRT描述可以保存为XML格式，通常给出扩展名.VRT。</p>
+<h2 id="针对风云三号提取EV-Emissive、EV-RefSB数据示例"><a href="#针对风云三号提取EV-Emissive、EV-RefSB数据示例" class="headerlink" title="针对风云三号提取EV_Emissive、EV_RefSB数据示例"></a>针对风云三号提取EV_Emissive、EV_RefSB数据示例</h2><pre class="line-numbers language-none"><code class="language-none">
+```python
+#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+# @Time : 2021/12/24 10:21 
+# @Author : 
+# @File : fy3_corretion.py
+from osgeo import gdal, osr
+import os
+
+def geoMERSI2(file, geoFile, afterGeoPath):
+    '''
+
+    Parameters
+    ----------
+    file : 文件绝对路径
+        需要校正的文件.
+    geoFile : 文件绝对路径
+        地理坐标存在的文件.
+    afterGeoPath : tif文件夹绝对路径
+        经过校正后的tif格式 Albers投影 250m空间分辨率.
+    Returns
+    -------
+    None.
+
+    '''
+    # os.chdir(r'F:\Py_project\gdalDealMERSI2')
+    dataset = gdal.Open(file)
+    # geoDataset = gdal.Open(geoFile)
+    # print(gdal.Info(dataset)) # 查看元数据
+    # print(gdal.Info(geoDataset))
+    # subdataset = dataset.GetSubDatasets() # 查看子数据集
+    # print(subdataset)
+    '''
+    查看子数据集位置：
+       SUBDATASET_6_NAME=HDF5:"F:\FY3D_MERSI_data\FY3D_MERSI_GBAL_L1_20190403_0445_0250M_MS.hdf"://Data/EV_250_Emissive_b24
+       SUBDATASET_6_DESC=[8000x8192] //Data/EV_250_Emissive_b24 (16-bit unsigned integer) 
+    '''
+    '''
+    地理校正数据的位置：
+      SUBDATASET_1_NAME=HDF5:"F:\FY3D_MERSI_data\FY3D_MERSI_GBAL_L1_20190403_0445_GEOQK_MS.hdf"://Latitude
+      SUBDATASET_1_DESC=[8000x8192] //Latitude (32-bit floating-point)
+      SUBDATASET_2_NAME=HDF5:"F:\FY3D_MERSI_data\FY3D_MERSI_GBAL_L1_20190403_0445_GEOQK_MS.hdf"://Longitude
+      SUBDATASET_2_DESC=[8000x8192] //Longitude (32-bit floating-point)  
+    '''
+
+
+    vrtEV_EmissiveDir = os.path.splitext(file)[0]+'EV_Emissive' + '.vrt'
+    vrtEV_RefSBDir = os.path.splitext(file)[0] + 'EV_RefSB' + '.vrt'
+    subDatasetEV_Emissive = dataset.GetSubDatasets()[0][0]  #
+    subDatasetEV_RefSB= dataset.GetSubDatasets()[1][0]
+    vrtEV_EmissiveFile = gdal.Translate(vrtEV_EmissiveDir,
+                             subDatasetEV_Emissive,
+                             format='vrt')
+    vrtEV_RefSBDirFile = gdal.Translate(vrtEV_RefSBDir,
+                             subDatasetEV_RefSB,
+                             format='vrt')
+    '''
+    需要写入描述GEOLOCATION元数据域的信息：
+        &lt;Metadata domain="GEOLOCATION"&gt;
+         &lt;MDI key="LINE_OFFSET"&gt;1&lt;/MDI&gt;
+         &lt;MDI key="LINE_STEP"&gt;1&lt;/MDI&gt;
+         &lt;MDI key="PIXEL_OFFSET"&gt;1&lt;/MDI&gt;
+         &lt;MDI key="PIXEL_STEP"&gt;1&lt;/MDI&gt;
+         &lt;MDI key="SRS"&gt;GEOGCS["WGS84",DATUM["WGS_1984",SPHEROID["WGS84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9108"]],AUTHORITY["EPSG","4326"]]&lt;/MDI&gt;
+         &lt;MDI key="X_BAND"&gt;1&lt;/MDI&gt;
+         &lt;MDI key="X_DATASET"&gt;HDF5:"D:\dengkaiyuan\data\FY3C_VIRRX_GBAL_L1_20211110_0825_GEOXX_MS.HDF"://Geolocation/Longitude&lt;/MDI&gt;
+         &lt;MDI key="Y_BAND"&gt;1&lt;/MDI&gt;
+         &lt;MDI key="Y_DATASET"&gt;HDF5:"D:\dengkaiyuan\data\FY3C_VIRRX_GBAL_L1_20211110_0825_GEOXX_MS.HDF"://Geolocation/Latitude&lt;/MDI&gt;
+        &lt;/Metadata&gt; 
+    '''
+    srs = osr.SpatialReference()
+    srs.ImportFromProj4(
+        '+proj=aea +lat_0=0 +lon_0=105 +lat_1=25 +lat_2=47 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs')
+
+    lines = []
+    with open(vrtEV_EmissiveDir, 'r') as f:
+        for line in f:
+            lines.append(line)
+
+    lines.insert(1, '&lt;Metadata domain="GEOLOCATION"&gt;\n')
+    lines.insert(2, ' &lt;MDI key="LINE_OFFSET"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(3, ' &lt;MDI key="LINE_STEP"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(4, ' &lt;MDI key="PIXEL_OFFSET"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(5, ' &lt;MDI key="PIXEL_STEP"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(6,
+                 ' &lt;MDI key="SRS"&gt;GEOGCS["WGS84",DATUM["WGS_1984",SPHEROID["WGS84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9108"]],AUTHORITY["EPSG","4326"]]&lt;/MDI&gt;\n')
+    lines.insert(7, ' &lt;MDI key="X_BAND"&gt;1&lt;/MDI&gt;')
+    lines.insert(8, ' &lt;MDI key="X_DATASET"&gt;HDF5:"{}"://Geolocation/Longitude&lt;/MDI&gt;\n'.format(geoFile))
+    lines.insert(9, ' &lt;MDI key="Y_BAND"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(10, ' &lt;MDI key="Y_DATASET"&gt;HDF5:"{}"://Geolocation/Latitude&lt;/MDI&gt;\n'.format(geoFile))
+    lines.insert(11, '&lt;/Metadata&gt;\n')
+    with open(vrtEV_EmissiveDir, 'w') as f:
+        for line in lines:
+            f.writelines(line)
+    '''
+    geoData = gdal.Warp('F:\Py_project\gdalDealMERSI2\Warp_B24_WGS.tif',  
+              'F:\Py_project\gdalDealMERSI2\MERSI2_0403_B24_vrt.vrt', 
+              format='GTiff', geoloc=True, dstSRS="EPSG:4326",
+              xRes=0.25, yRes=0.25)
+    '''
+    # 输出文件名字
+    os.path.basename(file).split()
+    tempname1= os.path.splitext(file)[0] + 'EV_Emissive' + '.tif'
+    tempname2= os.path.splitext(file)[0] + 'EV_RefSB' + '.tif'
+
+    EV_Emissivefile = os.path.join(afterGeoPath,os.path.basename(tempname1))
+    geoData = gdal.Warp(EV_Emissivefile, vrtEV_EmissiveDir,
+                        format='GTiff', geoloc=True, dstSRS=srs,
+                        resampleAlg=gdal.GRIORA_Bilinear, xRes=1000, yRes=1000)
+    lines = []
+    with open(vrtEV_RefSBDir, 'r') as f:
+        for line in f:
+            lines.append(line)
+    lines.insert(1, '&lt;Metadata domain="GEOLOCATION"&gt;\n')
+    lines.insert(2, ' &lt;MDI key="LINE_OFFSET"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(3, ' &lt;MDI key="LINE_STEP"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(4, ' &lt;MDI key="PIXEL_OFFSET"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(5, ' &lt;MDI key="PIXEL_STEP"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(6,
+                 ' &lt;MDI key="SRS"&gt;GEOGCS["WGS84",DATUM["WGS_1984",SPHEROID["WGS84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9108"]],AUTHORITY["EPSG","4326"]]&lt;/MDI&gt;\n')
+    lines.insert(7, ' &lt;MDI key="X_BAND"&gt;1&lt;/MDI&gt;')
+    lines.insert(8, ' &lt;MDI key="X_DATASET"&gt;HDF5:"{}"://Geolocation/Longitude&lt;/MDI&gt;\n'.format(geoFile))
+    lines.insert(9, ' &lt;MDI key="Y_BAND"&gt;1&lt;/MDI&gt;\n')
+    lines.insert(10, ' &lt;MDI key="Y_DATASET"&gt;HDF5:"{}"://Geolocation/Latitude&lt;/MDI&gt;\n'.format(geoFile))
+    lines.insert(11, '&lt;/Metadata&gt;\n')
+    with open(vrtEV_RefSBDir, 'w') as f:
+        for line in lines:
+            f.writelines(line)
+    EV_RefSBfile = os.path.join(afterGeoPath, os.path.basename(tempname2))
+    geoData = gdal.Warp(EV_RefSBfile, vrtEV_RefSBDir,
+                        format='GTiff', geoloc=True, dstSRS=srs,
+                        resampleAlg=gdal.GRIORA_Bilinear, xRes=1000, yRes=1000)
+    if geoData == None:
+        print('deal failure!')
+    del geoData
+    print('{} finish Geo\n'.format(file))
+
+
+if __name__ == '__main__':
+
+    afterGeoPath = r'outpath'
+    fy3file = r'FY3C_VIRRX_GBAL_L1_20211110_0825_1000M_MS.HDF'
+    fy3GEOfile =r'FY3C_VIRRX_GBAL_L1_20211110_0825_GEOXX_MS.HDF'
+
+    geoMERSI2(fy3file, fy3GEOfile, afterGeoPath)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tk20190411/article/details/108547883?spm=1001.2101.3001.6650.4&amp;utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-4.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EOPENSEARCH%7Edefault-4.nonecase">参考资料</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">ytkz</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/">http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">ytkz's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%81%A5%E6%84%9F/">遥感</a><a class="post-meta__tags" href="/tags/gdal/">gdal</a></div><div class="post_share"><div class="social-share" data-image="https://s4.ax1x.com/2021/12/27/TDnUx0.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/29/zhi-neng-tian-jia-zi-mu-autosub/"><img class="prev-cover" src="https://s4.ax1x.com/2021/12/27/TDntGn.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">智能添加字幕-autosub</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/22/jiang-jar-da-bao-setup.exe/"><img class="next-cover" src="https://z3.ax1x.com/2021/09/13/4CLRlq.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">jar打包exe过程记录</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/03/10/gdal-api-bi-ji/" title="gdal api笔记"><img class="cover" src="https://z3.ax1x.com/2021/01/11/s8Nhmn.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-10</div><div class="title">gdal api笔记</div></div></a></div><div><a href="/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/" title="高分三号L1到L2的处理方法"><img class="cover" src="https://z3.ax1x.com/2021/09/13/4CLcfs.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-13</div><div class="title">高分三号L1到L2的处理方法</div></div></a></div><div><a href="/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/" title="反射散射机制"><img class="cover" src="https://z3.ax1x.com/2021/09/24/4DptKg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-24</div><div class="title">反射散射机制</div></div></a></div><div><a href="/2021/09/08/sentinel-2-pi-liang-zip-sheng-cheng-rgb-tu/" title="Sentinel 2 批量zip生成RGB图"><img class="cover" src="https://z3.ax1x.com/2021/09/13/4CLykQ.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-08</div><div class="title">Sentinel 2 批量zip生成RGB图</div></div></a></div><div><a href="/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/" title="深度学习-遥感影像建筑物检测"><img class="cover" src="https://z3.ax1x.com/2021/08/30/ht6m8J.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-30</div><div class="title">深度学习-遥感影像建筑物检测</div></div></a></div><div><a href="/2021/07/23/jiao-cha-ding-biao/" title="雷达干涉仪的原理"><img class="cover" src="https://z3.ax1x.com/2021/07/20/WNSSDf.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-23</div><div class="title">雷达干涉仪的原理</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">ytkz</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ytkz11"><i class="fab fa-github"></i><span>github</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/05/26/python-selfstudy/" title="python selfstudy"><img src="https://s1.ax1x.com/2022/05/25/XkVuHx.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python selfstudy"/></a><div class="content"><a class="title" href="/2022/05/26/python-selfstudy/" title="python selfstudy">python selfstudy</a><time datetime="2022-05-26T08:20:10.000Z" title="发表于 2022-05-26 16:20:10">2022-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/24/restart-study-deep-learn-mnist/" title="Restart study deep learn(MNIST)"><img src="https://s1.ax1x.com/2022/05/24/XCds3R.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Restart study deep learn(MNIST)"/></a><div class="content"><a class="title" href="/2022/05/24/restart-study-deep-learn-mnist/" title="Restart study deep learn(MNIST)">Restart study deep learn(MNIST)</a><time datetime="2022-05-24T03:20:10.000Z" title="发表于 2022-05-24 11:20:10">2022-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/19/geemap-xian-shi-roi-qu-yu-1/" title="Geemap 显示ROI区域（1）"><img src="https://s1.ax1x.com/2022/05/19/OHbVDP.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Geemap 显示ROI区域（1）"/></a><div class="content"><a class="title" href="/2022/05/19/geemap-xian-shi-roi-qu-yu-1/" title="Geemap 显示ROI区域（1）">Geemap 显示ROI区域（1）</a><time datetime="2022-05-19T07:00:10.000Z" title="发表于 2022-05-19 15:00:10">2022-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/29/zhi-neng-tian-jia-zi-mu-autosub/" title="智能添加字幕-autosub"><img src="https://s4.ax1x.com/2021/12/27/TDntGn.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="智能添加字幕-autosub"/></a><div class="content"><a class="title" href="/2021/12/29/zhi-neng-tian-jia-zi-mu-autosub/" title="智能添加字幕-autosub">智能添加字幕-autosub</a><time datetime="2021-12-29T08:00:10.000Z" title="发表于 2021-12-29 16:00:10">2021-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/" title="风云三号极轨卫星的几何校正"><img src="https://s4.ax1x.com/2021/12/27/TDnUx0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="风云三号极轨卫星的几何校正"/></a><div class="content"><a class="title" href="/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/" title="风云三号极轨卫星的几何校正">风云三号极轨卫星的几何校正</a><time datetime="2021-12-27T08:00:10.000Z" title="发表于 2021-12-27 16:00:10">2021-12-27</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://s4.ax1x.com/2021/12/27/TDnUx0.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By ytkz</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    loader: {
+      source: {
+        '[tex]/amsCd': '[tex]/amscd'
+      }
+    },
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        addClass: [200,() => {
+          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
+            const target = node.parentNode
+            if (!target.classList.contains('has-jax')) {
+              target.classList.add('mathjax-overflow')
+            }
+          })
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>

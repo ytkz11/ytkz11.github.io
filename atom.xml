@@ -126,6 +126,36 @@
   </entry>
   
   <entry>
+    <title>风云三号极轨卫星的几何校正</title>
+    <link href="http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/"/>
+    <id>http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/</id>
+    <published>2021-12-27T08:00:10.000Z</published>
+    <updated>2022-07-18T06:57:41.688Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;遇到问题记录：&quot;&gt;&lt;a href=&quot;#遇到问题记录：&quot; class=&quot;headerlink&quot; title=&quot;遇到问题记录：&quot;&gt;&lt;/a&gt;遇到问题记录：&lt;/h2&gt;&lt;p&gt;1.风云极轨卫星的几何校正，有单独的经度和纬度以及DN数据，试过GLT校正但是不行&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="gdal" scheme="http://ytkz11@.github.io/categories/gdal/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/gdal/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jar打包exe过程记录</title>
     <link href="http://ytkz11@.github.io/2021/12/22/jiang-jar-da-bao-setup.exe/"/>
     <id>http://ytkz11@.github.io/2021/12/22/jiang-jar-da-bao-setup.exe/</id>
@@ -439,7 +469,7 @@
     <link href="http://ytkz11@.github.io/2021/06/14/ffmpeg-ming-ling-xing-diao-yong/"/>
     <id>http://ytkz11@.github.io/2021/06/14/ffmpeg-ming-ling-xing-diao-yong/</id>
     <published>2021-06-14T03:00:10.000Z</published>
-    <updated>2022-06-17T08:19:29.841Z</updated>
+    <updated>2022-07-24T05:15:04.755Z</updated>
     
     
       
@@ -504,31 +534,6 @@
     
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pyside6使用笔记</title>
-    <link href="http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/"/>
-    <id>http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/</id>
-    <published>2021-05-08T11:00:10.000Z</published>
-    <updated>2022-07-15T07:17:51.950Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;RS-GUI开发&quot;&gt;&lt;a href=&quot;#RS-GUI开发&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="pyside6" scheme="http://ytkz11@.github.io/tags/pyside6/"/>
     
   </entry>
   
