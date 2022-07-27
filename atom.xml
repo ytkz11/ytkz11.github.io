@@ -365,7 +365,7 @@
     <link href="http://ytkz11@.github.io/2021/07/04/sui-ji-sen-lin-fen-lei/"/>
     <id>http://ytkz11@.github.io/2021/07/04/sui-ji-sen-lin-fen-lei/</id>
     <published>2021-07-04T02:00:10.000Z</published>
-    <updated>2022-07-06T05:50:21.766Z</updated>
+    <updated>2022-07-27T03:07:18.225Z</updated>
     
     
       
@@ -379,8 +379,12 @@
     
     
     
-    <category term="分类" scheme="http://ytkz11@.github.io/categories/%E5%88%86%E7%B1%BB/"/>
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
     
+    <category term="分类" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E5%88%86%E7%B1%BB/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="分类" scheme="http://ytkz11@.github.io/tags/%E5%88%86%E7%B1%BB/"/>
     
