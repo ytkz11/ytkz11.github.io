@@ -198,6 +198,13 @@
   </url>
   
   <url>
+    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
+    
+    <lastmod>2021-11-23</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ytkz11@.github.io/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/</loc>
     
     <lastmod>2021-11-23</lastmod>
@@ -212,7 +219,7 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
+    <loc>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -220,13 +227,6 @@
   
   <url>
     <loc>http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/</loc>
-    
-    <lastmod>2021-11-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -263,14 +263,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/tags/deep-learn/</loc>
+    <loc>http://ytkz11@.github.io/tags/pyside6/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/tags/pyside6/</loc>
+    <loc>http://ytkz11@.github.io/tags/deep-learn/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -377,14 +377,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/deep-learn/</loc>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/</loc>
+    <loc>http://ytkz11@.github.io/categories/deep-learn/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -461,14 +461,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E5%88%86%E7%B1%BB/</loc>
+    <loc>http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/autosub/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/autosub/</loc>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E5%88%86%E7%B1%BB/</loc>
     <lastmod>2022-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
