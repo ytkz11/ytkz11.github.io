@@ -156,36 +156,6 @@
   </entry>
   
   <entry>
-    <title>jar打包exe过程记录</title>
-    <link href="http://ytkz11@.github.io/2021/12/22/jiang-jar-da-bao-setup.exe/"/>
-    <id>http://ytkz11@.github.io/2021/12/22/jiang-jar-da-bao-setup.exe/</id>
-    <published>2021-12-22T08:00:10.000Z</published>
-    <updated>2022-07-15T07:22:22.370Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;将 jar打包成setup.exe，需要两个步骤：1.exe4j;2.inno&lt;/p&gt;
-&lt;h2 id=&quot;exe4j&quot;&gt;&lt;a href=&quot;#exe4j&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="java" scheme="http://ytkz11@.github.io/categories/java/"/>
-    
-    <category term="打包" scheme="http://ytkz11@.github.io/categories/java/%E6%89%93%E5%8C%85/"/>
-    
-    
-    <category term="java" scheme="http://ytkz11@.github.io/tags/java/"/>
-    
-    <category term="打包" scheme="http://ytkz11@.github.io/tags/%E6%89%93%E5%8C%85/"/>
-    
-  </entry>
-  
-  <entry>
     <title>高分三号L1到L2的处理方法</title>
     <link href="http://ytkz11@.github.io/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/"/>
     <id>http://ytkz11@.github.io/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/</id>
@@ -473,7 +443,7 @@
     <link href="http://ytkz11@.github.io/2021/06/14/ffmpeg-ming-ling-xing-diao-yong/"/>
     <id>http://ytkz11@.github.io/2021/06/14/ffmpeg-ming-ling-xing-diao-yong/</id>
     <published>2021-06-14T03:00:10.000Z</published>
-    <updated>2022-07-24T10:24:31.287Z</updated>
+    <updated>2022-08-11T12:57:09.607Z</updated>
     
     
       
@@ -538,6 +508,31 @@
     
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pyside6使用笔记</title>
+    <link href="http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/"/>
+    <id>http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/</id>
+    <published>2021-05-08T11:00:10.000Z</published>
+    <updated>2022-07-15T07:17:51.950Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;RS-GUI开发&quot;&gt;&lt;a href=&quot;#RS-GUI开发&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="pyside6" scheme="http://ytkz11@.github.io/tags/pyside6/"/>
     
   </entry>
   

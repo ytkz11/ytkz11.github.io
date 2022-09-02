@@ -1,230 +1,707 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>深度学习-遥感影像云检测 | ytkz's Blog</title><meta name="keywords" content="遥感"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="​        一个简单的深度学习模型，实现语义分割，数据将使用Kaggle的“云层分割卫星影像”。 ​        以下是记录一下在jupyter notebook 上运行的结果">
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="遥感," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ytkz's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="​        一个简单的深度学习模型，实现语义分割，数据将使用Kaggle的“云层分割卫星影像”。 ​        以下是记录一下在jupyter notebook 上运行的结果">
 <meta property="og:type" content="article">
 <meta property="og:title" content="深度学习-遥感影像云检测">
 <meta property="og:url" content="http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/index.html">
 <meta property="og:site_name" content="ytkz&#39;s Blog">
 <meta property="og:description" content="​        一个简单的深度学习模型，实现语义分割，数据将使用Kaggle的“云层分割卫星影像”。 ​        以下是记录一下在jupyter notebook 上运行的结果">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://z3.ax1x.com/2021/07/27/W47gHO.png">
+<meta property="og:image" content="https://z3.ax1x.com/2021/07/27/W4oZ8I.png">
 <meta property="article:published_time" content="2021-06-21T13:00:10.000Z">
 <meta property="article:modified_time" content="2021-11-23T09:57:42.124Z">
 <meta property="article:author" content="ytkz">
 <meta property="article:tag" content="遥感">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://z3.ax1x.com/2021/07/27/W47gHO.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+<meta name="twitter:image" content="https://z3.ax1x.com/2021/07/27/W4oZ8I.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
     },
-    fancybox: {
-      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isanchor: false
-};
+  };
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1028021536343754"
+     crossorigin="anonymous"></script>
 
-var saveToLocal = {
-  set: function setWithExpiry(key, value, ttl) {
-    const now = new Date()
-    const expiryDay = ttl * 86400000
-    const item = {
-      value: value,
-      expiry: now.getTime() + expiryDay,
-    }
-    localStorage.setItem(key, JSON.stringify(item))
-  },
 
-  get: function getWithExpiry(key) {
-    const itemStr = localStorage.getItem(key)
+  <link rel="canonical" href="http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/"/>
 
-    if (!itemStr) {
-      return undefined
-    }
-    const item = JSON.parse(itemStr)
-    const now = new Date()
 
-    if (now.getTime() > item.expiry) {
-      localStorage.removeItem(key)
-      return undefined
-    }
-    return item.value
-  }
-}
 
-// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
-const getScript = url => new Promise((resolve, reject) => {
-  const script = document.createElement('script')
-  script.src = url
-  script.async = true
-  script.onerror = reject
-  script.onload = script.onreadystatechange = function() {
-    const loadState = this.readyState
-    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-    script.onload = script.onreadystatechange = null
-    resolve()
-  }
-  document.head.appendChild(script)
-})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
-  isPost: true,
-  isHome: false,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2021-11-23 17:57:42'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(function () {  window.activateDarkMode = function () {
-    document.documentElement.setAttribute('data-theme', 'dark')
-    if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-    }
-  }
-  window.activateLightMode = function () {
-    document.documentElement.setAttribute('data-theme', 'light')
-   if (document.querySelector('meta[name="theme-color"]') !== null) {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-    }
-  }
-  const autoChangeMode = 'false'
-  const t = saveToLocal.get('theme')
-  if (autoChangeMode === '1') {
-    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
-    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
-    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
-    if (t === undefined) {
-      if (isLightMode) activateLightMode()
-      else if (isDarkMode) activateDarkMode()
-      else if (isNotSpecified || hasNoSupport) {
-        const now = new Date()
-        const hour = now.getHours()
-        const isNight = hour <= 6 || hour >= 18
-        isNight ? activateDarkMode() : activateLightMode()
-      }
-      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
-        if (saveToLocal.get('theme') === undefined) {
-          e.matches ? activateDarkMode() : activateLightMode()
-        }
-      })
-    } else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else if (autoChangeMode === '2') {
-    const now = new Date()
-    const hour = now.getHours()
-    const isNight = hour <= 6 || hour >= 18
-    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
-    else if (t === 'light') activateLightMode()
-    else activateDarkMode()
-  } else {
-    if (t === 'dark') activateDarkMode()
-    else if (t === 'light') activateLightMode()
-  }const asideStatus = saveToLocal.get('aside-status')
-if (asideStatus !== undefined) {
-   if (asideStatus === 'hide') {
-     document.documentElement.classList.add('hide-aside')
-   } else {
-     document.documentElement.classList.remove('hide-aside')
-   }
-}})()</script><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_1.css" ><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/zyoushuo/Blog@latest/hexo/css/loading_style_2.css" ><meta name="generator" content="Hexo 5.4.0">
+
+  <title>深度学习-遥感影像云检测 | ytkz's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="ytkz's Blog" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/null" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-folder-open"></i><span> 参考资料</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-tags"></i><span> 电子书</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://z3.ax1x.com/2021/07/27/W47gHO.png)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">ytkz's Blog</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-folder-open"></i><span> 参考资料</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/books/"><i class="fa-fw fa fa-tags"></i><span> 电子书</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">深度学习-遥感影像云检测</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-06-21T13:00:10.000Z" title="发表于 2021-06-21 21:00:10">2021-06-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-23T09:57:42.124Z" title="更新于 2021-11-23 17:57:42">2021-11-23</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>​        一个简单的深度学习模型，实现语义分割，数据将使用Kaggle的“<a href="https://link.zhihu.com/?target=https%3A//www.kaggle.com/sorour/38cloud-cloud-segmentation-in-satellite-images">云层分割卫星影像</a>”。</p>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ytkz's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Some personal notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ytkz's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">深度学习-遥感影像云检测</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-06-21T21:00:10+08:00">
+                2021-06-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%81%A5%E6%84%9F/" itemprop="url" rel="index">
+                    <span itemprop="name">遥感</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>​        一个简单的深度学习模型，实现语义分割，数据将使用Kaggle的“<a href="https://link.zhihu.com/?target=https%3A//www.kaggle.com/sorour/38cloud-cloud-segmentation-in-satellite-images">云层分割卫星影像</a>”。</p>
 <p>​        以下是记录一下在jupyter notebook 上运行的结果</p>
 <p>   <a target="_blank" rel="noopener" href="https://imgtu.com/i/W4oZ8I"><img src="https://z3.ax1x.com/2021/07/27/W4oZ8I.png" alt="W4oZ8I.png"></a></p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">ytkz</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/">http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">ytkz's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%81%A5%E6%84%9F/">遥感</a></div><div class="post_share"><div class="social-share" data-image="https://z3.ax1x.com/2021/07/27/W47gHO.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/06/23/linux-xue-xi-ji-lu/"><img class="prev-cover" src="https://z3.ax1x.com/2021/09/13/4CLrTg.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">linux 学习记录</div></div></a></div><div class="next-post pull-right"><a href="/2021/06/21/sentinel-5p-zhong-guo-qu-yu-no2-kong-qi-wu-ran-shu-ju-ke-shi-hua/"><img class="next-cover" src="https://z3.ax1x.com/2021/06/18/Rp26rd.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Sentinel 5p 中国区域no2空气污染数据可视化</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/03/10/gdal-api-bi-ji/" title="gdal api笔记"><img class="cover" src="https://z3.ax1x.com/2021/01/11/s8Nhmn.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-03-10</div><div class="title">gdal api笔记</div></div></a></div><div><a href="/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/" title="风云三号极轨卫星的几何校正"><img class="cover" src="https://s4.ax1x.com/2021/12/27/TDnUx0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-27</div><div class="title">风云三号极轨卫星的几何校正</div></div></a></div><div><a href="/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/" title="高分三号L1到L2的处理方法"><img class="cover" src="https://z3.ax1x.com/2021/09/13/4CLcfs.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-13</div><div class="title">高分三号L1到L2的处理方法</div></div></a></div><div><a href="/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/" title="反射散射机制"><img class="cover" src="https://z3.ax1x.com/2021/09/24/4DptKg.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-24</div><div class="title">反射散射机制</div></div></a></div><div><a href="/2021/09/08/sentinel-2-pi-liang-zip-sheng-cheng-rgb-tu/" title="Sentinel 2 批量zip生成RGB图"><img class="cover" src="https://z3.ax1x.com/2021/09/13/4CLykQ.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-09-08</div><div class="title">Sentinel 2 批量zip生成RGB图</div></div></a></div><div><a href="/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/" title="深度学习-遥感影像建筑物检测"><img class="cover" src="https://z3.ax1x.com/2021/08/30/ht6m8J.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-30</div><div class="title">深度学习-遥感影像建筑物检测</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/null" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">ytkz</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">29</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">18</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ytkz11"><i class="fab fa-github"></i><span>github</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/05/26/python-selfstudy/" title="python selfstudy"><img src="https://s1.ax1x.com/2022/05/25/XkVuHx.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python selfstudy"/></a><div class="content"><a class="title" href="/2022/05/26/python-selfstudy/" title="python selfstudy">python selfstudy</a><time datetime="2022-05-26T08:20:10.000Z" title="发表于 2022-05-26 16:20:10">2022-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/24/restart-study-deep-learn-mnist/" title="Restart study deep learn(MNIST)"><img src="https://s1.ax1x.com/2022/05/24/XCds3R.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Restart study deep learn(MNIST)"/></a><div class="content"><a class="title" href="/2022/05/24/restart-study-deep-learn-mnist/" title="Restart study deep learn(MNIST)">Restart study deep learn(MNIST)</a><time datetime="2022-05-24T03:20:10.000Z" title="发表于 2022-05-24 11:20:10">2022-05-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/19/geemap-xian-shi-roi-qu-yu-1/" title="Geemap 显示ROI区域（1）"><img src="https://s1.ax1x.com/2022/05/19/OHbVDP.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Geemap 显示ROI区域（1）"/></a><div class="content"><a class="title" href="/2022/05/19/geemap-xian-shi-roi-qu-yu-1/" title="Geemap 显示ROI区域（1）">Geemap 显示ROI区域（1）</a><time datetime="2022-05-19T07:00:10.000Z" title="发表于 2022-05-19 15:00:10">2022-05-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/29/zhi-neng-tian-jia-zi-mu-autosub/" title="智能添加字幕-autosub"><img src="https://s4.ax1x.com/2021/12/27/TDntGn.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="智能添加字幕-autosub"/></a><div class="content"><a class="title" href="/2021/12/29/zhi-neng-tian-jia-zi-mu-autosub/" title="智能添加字幕-autosub">智能添加字幕-autosub</a><time datetime="2021-12-29T08:00:10.000Z" title="发表于 2021-12-29 16:00:10">2021-12-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/" title="风云三号极轨卫星的几何校正"><img src="https://s4.ax1x.com/2021/12/27/TDnUx0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="风云三号极轨卫星的几何校正"/></a><div class="content"><a class="title" href="/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/" title="风云三号极轨卫星的几何校正">风云三号极轨卫星的几何校正</a><time datetime="2021-12-27T08:00:10.000Z" title="发表于 2021-12-27 16:00:10">2021-12-27</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://z3.ax1x.com/2021/07/27/W47gHO.png)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By ytkz</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
-  endLoading: () => {
-    document.body.style.overflow = 'auto';
-    document.getElementById('loading-box').classList.add("loaded")
-  },
-  initLoading: () => {
-    document.body.style.overflow = '';
-    document.getElementById('loading-box').classList.remove("loaded")
 
-  }
-}
-window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
-  window.MathJax = {
-    loader: {
-      source: {
-        '[tex]/amsCd': '[tex]/amscd'
-      }
-    },
-    tex: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"]],
-      tags: 'ams'
-    },
-    options: {
-      renderActions: {
-        findScript: [10, doc => {
-          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-            const display = !!node.type.match(/; *mode=display/)
-            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
-            const text = document.createTextNode('')
-            node.parentNode.replaceChild(text, node)
-            math.start = {node: text, delim: '', n: 0}
-            math.end = {node: text, delim: '', n: 0}
-            doc.math.push(math)
-          }
-        }, ''],
-        addClass: [200,() => {
-          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
-            const target = node.parentNode
-            if (!target.classList.contains('has-jax')) {
-              target.classList.add('mathjax-overflow')
-            }
-          })
-        }, '', false]
-      }
-    }
-  }
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E9%81%A5%E6%84%9F/" rel="tag"># 遥感</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/06/21/sentinel-5p-zhong-guo-qu-yu-no2-kong-qi-wu-ran-shu-ju-ke-shi-hua/" rel="next" title="Sentinel 5p 中国区域no2空气污染数据可视化">
+                <i class="fa fa-chevron-left"></i> Sentinel 5p 中国区域no2空气污染数据可视化
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/06/23/linux-xue-xi-ji-lu/" rel="prev" title="linux 学习记录">
+                linux 学习记录 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
   
-  const script = document.createElement('script')
-  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
-  script.id = 'MathJax-script'
-  script.async = true
-  document.head.appendChild(script)
-} else {
-  MathJax.startup.document.state(0)
-  MathJax.texReset()
-  MathJax.typeset()
-}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ytkz</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
