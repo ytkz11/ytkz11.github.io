@@ -191,6 +191,31 @@
     
     
     <entry>
+      <title>遥感专业怎么提高编程能力？</title>
+      <link href="2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/"/>
+      <url>2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/</url>
+      
+        <content type="html"><![CDATA[<p>遥感专业怎么提高编程能力？首先明确一个问题是：编程要一步一步一个一个的脚印去学，才能学得会，学得好，用得好。其次用编程去解决一些遥感遇到的问题：比如初步(数据处理，模型的计算，地物的分类，定量、定性的反演），高端的是海量数据与数据库结合（Google earth engine给我们展示了一个好例子），当然做一个GEE也不是一两个人能做出来的。现在且说新手如何提高编程能力，完成相应的工作和目的。</p><p>第一步，多在网上搜，用google搜，去github上找相关的问题，看看有无相关的资料。最好的情况就是，一边看着别人写的代码，一边看着书本上的公式，二者对应的学习，这个学习遥感编程的方式是最快的一种（个人看来）。</p><p>第二步，学一门编程语言，新手还是比较推荐Python语言，万金油语言而且入门简单。</p><p>第三步，学习跟自己需要的相关的功能模块，需要什么就去学什么。</p><p>第四步，和第三步差不多，不要局限于python，有机会的话也要去学c\c++\java等后端语言，c++中的gdal是遥感编程的核心，gdal集成很多遥感算法，提供了很多直接可以用的算法推荐李民录老师出版的书:gdal源码剖析与开发指南。欧空局的snap是用java写的，并且开源在github，这是一个学习sar数据编程的好资料，但是sar太难，涉及到的数学公式也太难了。此外，大数据并发处理一般情况下也用到java。如果自己还想学习前端，以后做做全栈开发，html\CSS\JS也要着手开始学习了（其实精力是有限的），当然前端语言是对科研没有帮助，是对找工作有帮助。但是呢，你还在学校的话，多学一些知识是没问题的，量力而行。</p><p>截止到此，通过上边四步，你就可以达到自己写几个小的遥感影像处理的程序了，但是后续做更深的科研或者就业开发岗肯定还得再进一步学习。我会分享一些自己写代码出来，后续有可能的话，会做一个遥感与编程的教程</p><p>最后附上一张最近写的影像镶嵌代码运行后的结果图（文章不能没有图，嘻嘻）</p><p><a href="https://imgse.com/i/x9SKns"><img src="https://s1.ax1x.com/2022/09/18/x9SKns.png" alt="x9SKns.png"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>如何将Python 包发布到PyPI上</title>
       <link href="2021/09/09/ru-he-jiang-python-bao-fa-bu-dao-pypi-shang/"/>
       <url>2021/09/09/ru-he-jiang-python-bao-fa-bu-dao-pypi-shang/</url>

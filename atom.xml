@@ -207,6 +207,31 @@
   </entry>
   
   <entry>
+    <title>遥感专业怎么提高编程能力？</title>
+    <link href="http://ytkz11@.github.io/2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/"/>
+    <id>http://ytkz11@.github.io/2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/</id>
+    <published>2021-09-18T13:27:10.000Z</published>
+    <updated>2022-09-18T13:27:41.492Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;遥感专业怎么提高编程能力？首先明确一个问题是：编程要一步一步一个一个的脚印去学，才能学得会，学得好，用得好。其次用编程去解决一些遥感遇到的问题：比如初步(数据处理，模型的计算，地物的分类，定量、定性的反演），高端的是海量数据与数据库结合（Google earth</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>如何将Python 包发布到PyPI上</title>
     <link href="http://ytkz11@.github.io/2021/09/09/ru-he-jiang-python-bao-fa-bu-dao-pypi-shang/"/>
     <id>http://ytkz11@.github.io/2021/09/09/ru-he-jiang-python-bao-fa-bu-dao-pypi-shang/</id>
@@ -507,31 +532,6 @@
     
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pyside6使用笔记</title>
-    <link href="http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/"/>
-    <id>http://ytkz11@.github.io/2021/05/08/rs-gui-kai-fa/</id>
-    <published>2021-05-08T11:00:10.000Z</published>
-    <updated>2022-07-15T07:17:51.950Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;RS-GUI开发&quot;&gt;&lt;a href=&quot;#RS-GUI开发&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="pyside6" scheme="http://ytkz11@.github.io/tags/pyside6/"/>
     
   </entry>
   
