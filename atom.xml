@@ -207,6 +207,42 @@
   </entry>
   
   <entry>
+    <title>IDL文件操作说明</title>
+    <link href="http://ytkz11@.github.io/2021/09/19/idl-wen-jian-cao-zuo-shuo-ming/"/>
+    <id>http://ytkz11@.github.io/2021/09/19/idl-wen-jian-cao-zuo-shuo-ming/</id>
+    <published>2021-09-19T13:27:10.000Z</published>
+    <updated>2022-09-19T06:57:14.307Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;IDL初学者少不了要和文件操作打交道，下面是常用的文件操作函数。&lt;/p&gt;
+&lt;div class=&quot;table-container&quot;&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;序号&lt;/th&gt;
+&lt;th&gt;函数&lt;/th&gt;
+&lt;th</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="IDL" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/IDL/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="IDL" scheme="http://ytkz11@.github.io/tags/IDL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>遥感专业怎么提高编程能力？</title>
     <link href="http://ytkz11@.github.io/2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/"/>
     <id>http://ytkz11@.github.io/2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/</id>
@@ -507,31 +543,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机编程语言流派间的关系</title>
-    <link href="http://ytkz11@.github.io/2021/05/12/ji-suan-ji-bian-cheng-yu-yan-liu-pai-jian-de-guan-xi/"/>
-    <id>http://ytkz11@.github.io/2021/05/12/ji-suan-ji-bian-cheng-yu-yan-liu-pai-jian-de-guan-xi/</id>
-    <published>2021-05-12T04:00:10.000Z</published>
-    <updated>2021-11-23T09:57:42.126Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;计算机编程语言流派间的关系&quot;&gt;&lt;a href=&quot;#计算机编程语言流派间的关系&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   

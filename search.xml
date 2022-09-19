@@ -191,6 +191,35 @@
     
     
     <entry>
+      <title>IDL文件操作说明</title>
+      <link href="2021/09/19/idl-wen-jian-cao-zuo-shuo-ming/"/>
+      <url>2021/09/19/idl-wen-jian-cao-zuo-shuo-ming/</url>
+      
+        <content type="html"><![CDATA[<p>IDL初学者少不了要和文件操作打交道，下面是常用的文件操作函数。</p><div class="table-container"><table><thead><tr><th>序号</th><th>函数</th><th style="text-align:left">功能说明</th><th style="text-align:right">语法</th></tr></thead><tbody><tr><td><strong>01</strong></td><td>CD</td><td style="text-align:left">修改当前的工作空间路径。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>02</strong></td><td>FILE_SEARCH</td><td style="text-align:left">对文件名进行特定的查找。返回字符串数组。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>03</strong></td><td>FILE_COPY</td><td style="text-align:left">复制文件或者文件夹。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>04</strong></td><td>FILE_DELETE</td><td style="text-align:left">删除文件或者文件夹。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>05</strong></td><td>FILE_MOVE</td><td style="text-align:left">移动文件或文件夹。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>06</strong></td><td>FILE_MKDIR</td><td style="text-align:left">新建文件夹。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>07</strong></td><td>FILE_TEST</td><td style="text-align:left">判断文件是否存在，返回布尔值。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>08</strong></td><td>FILE_BASENAME</td><td style="text-align:left">返回文件路径中的文件名称。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>09</strong></td><td>FILE_DIRNAME</td><td style="text-align:left">返回文件路径所在的文件夹路径。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>10</strong></td><td>FILE_EXPAND_PATH</td><td style="text-align:left">返回给定文件/文件夹的完整路径。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>11</strong></td><td>FILE_INFO</td><td style="text-align:left">返回给定文件/文件夹的属性信息。</td><td style="text-align:right"><a href="https://www.cnblogs.com/alex-bn-lee/p/5791069.html#FILE_COPY">点击这里看具体语法</a></td></tr><tr><td><strong>12</strong></td><td>FILE_LINES</td><td style="text-align:left">返回指定文件的行数。</td><td style="text-align:right">返回指定文件的行数。</td></tr><tr><td><strong>13</strong></td><td>ROUTINE_FILEPATH</td><td style="text-align:left">返回当前编译过程或函数的完整路径。</td><td style="text-align:right">返回当前编译过程或函数的完整路径。</td></tr></tbody></table></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+          <category> IDL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+            <tag> IDL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>遥感专业怎么提高编程能力？</title>
       <link href="2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/"/>
       <url>2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/</url>
