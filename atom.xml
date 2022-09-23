@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-09-23T01:00:49.036Z</updated>
+  <updated>2022-09-23T08:04:19.689Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,18 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>为何学习JavaScript-2022年</title>
+    <link href="http://ytkz11@.github.io/2022/09/23/wei-he-xue-xi-javascript-2022-nian/"/>
+    <id>http://ytkz11@.github.io/2022/09/23/wei-he-xue-xi-javascript-2022-nian/</id>
+    <published>2022-09-23T07:00:10.000Z</published>
+    <updated>2022-09-23T08:04:19.689Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;为何学习-JavaScript？&quot;&gt;&lt;a href=&quot;#为何学习-JavaScript？&quot; class=&quot;headerlink&quot; title=&quot;为何学习 JavaScript？&quot;&gt;&lt;/a&gt;为何学习 JavaScript？&lt;/h2&gt;&lt;p&gt;JavaScript 是</summary>
+        
+      
+    
+    
+    
+    <category term="JavaScript" scheme="http://ytkz11@.github.io/categories/JavaScript/"/>
+    
+    
+    <category term="JavaScript" scheme="http://ytkz11@.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
     <title>遥感应用和用途-2022年</title>
     <link href="http://ytkz11@.github.io/2022/09/21/yao-gan-ying-yong-he-yong-tu-2022-nian/"/>
     <id>http://ytkz11@.github.io/2022/09/21/yao-gan-ying-yong-he-yong-tu-2022-nian/</id>
     <published>2022-09-21T07:00:10.000Z</published>
-    <updated>2022-09-23T01:00:49.036Z</updated>
+    <updated>2022-09-23T03:14:32.562Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;军事&quot;&gt;&lt;a href=&quot;#军事&quot; class=&quot;headerlink&quot; title=&quot;军事&quot;&gt;&lt;/a&gt;军事&lt;/h2&gt;&lt;h4 id=&quot;用侦察卫星监视敌人&quot;&gt;&lt;a href=&quot;#用侦察卫星监视敌人&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;军事&quot;&gt;&lt;a href=&quot;#军事&quot; class=&quot;headerlink&quot; title=&quot;军事&quot;&gt;&lt;/a&gt;军事&lt;/h1&gt;&lt;h4 id=&quot;用侦察卫星监视地面目标&quot;&gt;&lt;a href=&quot;#用侦察卫星监视地面目标&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -520,31 +545,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Some ffmpeg skill</title>
-    <link href="http://ytkz11@.github.io/2021/06/14/ffmpeg-ming-ling-xing-diao-yong/"/>
-    <id>http://ytkz11@.github.io/2021/06/14/ffmpeg-ming-ling-xing-diao-yong/</id>
-    <published>2021-06-14T03:00:10.000Z</published>
-    <updated>2022-08-11T12:57:09.607Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Compress-Size-Of-Vedio&quot;&gt;&lt;a href=&quot;#Compress-Size-Of-Vedio&quot; class=&quot;headerlink&quot; title=&quot;Compress  Size Of Vedio&quot;&gt;&lt;/a&gt;Compress  Size Of</summary>
-        
-      
-    
-    
-    
-    <category term="ffmpeg" scheme="http://ytkz11@.github.io/categories/ffmpeg/"/>
-    
-    
-    <category term="ffmpeg" scheme="http://ytkz11@.github.io/tags/ffmpeg/"/>
     
   </entry>
   
