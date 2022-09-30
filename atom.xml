@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-09-23T08:44:17.611Z</updated>
+  <updated>2022-09-30T09:26:13.326Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用python实现批量从高德下载全国矢量数据</title>
+    <link href="http://ytkz11@.github.io/2022/09/30/shi-yong-python-shi-xian-pi-liang-cong-gao-de-xia-zai-quan-guo-shi-liang-shu-ju/"/>
+    <id>http://ytkz11@.github.io/2022/09/30/shi-yong-python-shi-xian-pi-liang-cong-gao-de-xia-zai-quan-guo-shi-liang-shu-ju/</id>
+    <published>2022-09-30T09:10:10.000Z</published>
+    <updated>2022-09-30T09:26:13.326Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;因为网上很多shp都是国外制作的，导致某些敏感地区缺失，比如藏南地区、台湾省等。调查发现高德提供中国地区的矢量数据，其完整性较好。这也就是有这篇记录文章的目的，使用python爬虫进行下载。&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>为何学习JavaScript-2022年</title>
@@ -509,33 +534,6 @@
         
         
     <summary type="html">&lt;p&gt;​        一个简单的深度学习模型，实现语义分割，数据将使用Kaggle的“&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sentinel 5p 中国区域no2空气污染数据可视化</title>
-    <link href="http://ytkz11@.github.io/2021/06/21/sentinel-5p-zhong-guo-qu-yu-no2-kong-qi-wu-ran-shu-ju-ke-shi-hua/"/>
-    <id>http://ytkz11@.github.io/2021/06/21/sentinel-5p-zhong-guo-qu-yu-no2-kong-qi-wu-ran-shu-ju-ke-shi-hua/</id>
-    <published>2021-06-21T03:00:10.000Z</published>
-    <updated>2021-12-22T08:19:08.550Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/ytkz11/sentinel-5p-no2-Visualization&quot;&gt;开源地址&lt;/a&gt;，如果对你有帮助，欢迎点个Star。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;[x]</summary>
         
       
     
