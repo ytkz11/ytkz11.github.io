@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-09-30T09:26:13.326Z</updated>
+  <updated>2022-10-09T07:20:52.779Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Landsat影像的单独的tif文件合成为一个tif影像</title>
+    <link href="http://ytkz11@.github.io/2022/10/09/landsat-ying-xiang-de-dan-du-de-tif-wen-jian-he-cheng-wei-yi-ge-tif-ying-xiang/"/>
+    <id>http://ytkz11@.github.io/2022/10/09/landsat-ying-xiang-de-dan-du-de-tif-wen-jian-he-cheng-wei-yi-ge-tif-ying-xiang/</id>
+    <published>2022-10-09T09:10:10.000Z</published>
+    <updated>2022-10-09T07:20:52.779Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;今天需要在ENVI显示一景Landsat-9-影像，猛地发现竟然不能在envi直接打开，网上一搜大概是要下载插件，于是乎就打开俺以前写的基础代码，修修改改实现了Landsat-9影像的所有文件合成为一个波段。&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用python实现批量从高德下载全国矢量数据</title>
     <link href="http://ytkz11@.github.io/2022/09/30/shi-yong-python-shi-xian-pi-liang-cong-gao-de-xia-zai-quan-guo-shi-liang-shu-ju/"/>
     <id>http://ytkz11@.github.io/2022/09/30/shi-yong-python-shi-xian-pi-liang-cong-gao-de-xia-zai-quan-guo-shi-liang-shu-ju/</id>
     <published>2022-09-30T09:10:10.000Z</published>
-    <updated>2022-09-30T09:26:13.326Z</updated>
+    <updated>2022-10-09T07:12:15.159Z</updated>
     
     
       
@@ -518,31 +543,6 @@
     
     
     <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习-遥感影像云检测</title>
-    <link href="http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/"/>
-    <id>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</id>
-    <published>2021-06-21T13:00:10.000Z</published>
-    <updated>2021-11-23T09:57:42.124Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;​        一个简单的深度学习模型，实现语义分割，数据将使用Kaggle的“&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
