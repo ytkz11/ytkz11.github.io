@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ytkz11@.github.io/2022/10/14/a-li-ai-earth-di-qiu-ke-xue-yun-ping-tai-1/</loc>
+    
+    <lastmod>2022-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2022/09/23/wei-he-xue-xi-javascript-2022-nian/</loc>
+    
+    <lastmod>2022-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2022/09/30/shi-yong-python-shi-xian-pi-liang-cong-gao-de-xia-zai-quan-guo-shi-liang-shu-ju/</loc>
+    
+    <lastmod>2022-10-17</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2022/10/09/landsat-ying-xiang-de-dan-du-de-tif-wen-jian-he-cheng-wei-yi-ge-tif-ying-xiang/</loc>
+    
+    <lastmod>2022-10-17</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ytkz11@.github.io/2022/10/17/ti-qu-dong-xiao-mai-zai-ai-earth-shang-shi-xian/</loc>
     
     <lastmod>2022-10-17</lastmod>
@@ -16,13 +44,6 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2022/10/14/a-li-ai-earth-di-qiu-ke-xue-yun-ping-tai-1/</loc>
-    
-    <lastmod>2022-10-14</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ytkz11@.github.io/2022/10/13/tu-di-fu-gai-fen-lei-jie-shao/</loc>
     
     <lastmod>2022-10-14</lastmod>
@@ -30,28 +51,7 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2022/10/09/landsat-ying-xiang-de-dan-du-de-tif-wen-jian-he-cheng-wei-yi-ge-tif-ying-xiang/</loc>
-    
-    <lastmod>2022-10-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/2022/09/30/shi-yong-python-shi-xian-pi-liang-cong-gao-de-xia-zai-quan-guo-shi-liang-shu-ju/</loc>
-    
-    <lastmod>2022-10-09</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ytkz11@.github.io/2022/09/21/yao-gan-ying-yong-he-yong-tu-2022-nian/</loc>
-    
-    <lastmod>2022-09-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/2022/09/23/wei-he-xue-xi-javascript-2022-nian/</loc>
     
     <lastmod>2022-09-23</lastmod>
     
@@ -226,14 +226,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
+    <loc>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
+    <loc>http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
+    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -268,14 +268,7 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
-    
-    <lastmod>2021-11-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</loc>
+    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -283,6 +276,13 @@
   
   <url>
     <loc>http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/</loc>
+    
+    <lastmod>2021-11-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -333,14 +333,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/tags/pyside6/</loc>
+    <loc>http://ytkz11@.github.io/tags/deep-learn/</loc>
     <lastmod>2022-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/tags/deep-learn/</loc>
+    <loc>http://ytkz11@.github.io/tags/pyside6/</loc>
     <lastmod>2022-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -454,14 +454,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/IDL/</loc>
+    <loc>http://ytkz11@.github.io/categories/deep-learn/</loc>
     <lastmod>2022-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/deep-learn/</loc>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/IDL/</loc>
     <lastmod>2022-10-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
