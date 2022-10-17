@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-10-14T09:47:00.103Z</updated>
+  <updated>2022-10-17T07:27:34.361Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>顾忌物候信息提取冬小麦面积（基于AI earth）</title>
+    <link href="http://ytkz11@.github.io/2022/10/17/ti-qu-dong-xiao-mai-zai-ai-earth-shang-shi-xian/"/>
+    <id>http://ytkz11@.github.io/2022/10/17/ti-qu-dong-xiao-mai-zai-ai-earth-shang-shi-xian/</id>
+    <published>2022-10-17T09:30:10.000Z</published>
+    <updated>2022-10-17T07:27:34.361Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;农业遥感&quot;&gt;&lt;a href=&quot;#农业遥感&quot; class=&quot;headerlink&quot; title=&quot;农业遥感&quot;&gt;&lt;/a&gt;农业遥感&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/xDV2xH&quot;&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>阿里AI Earth地球科学云平台1</title>
@@ -504,32 +529,6 @@
         
         
     <summary type="html">&lt;p&gt;​        对于许多遥感应用，我们使用经过处理的多视合成孔径雷达SAR图像。这些产品代表多个雷达图像的平均强度(或振幅)，以减少雷达斑点(多视图)。单视复杂single look complex</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是遥感图像？</title>
-    <link href="http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/"/>
-    <id>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</id>
-    <published>2021-07-14T02:43:20.000Z</published>
-    <updated>2021-11-23T09:57:42.121Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;遥感图像属于数字图像的分支。一般来说，遥感图像的观察对象为地球。随着时间的发展，未来把一系列观察地球的手段应用到别的星球，比如说，地物识别：识别某个星球表面有没有矿、有没有水等等&lt;/p&gt;
-&lt;h2 id=&quot;1-什么是数字图像&quot;&gt;&lt;a href=&quot;#1-什么是数字图像&quot;</summary>
         
       
     
