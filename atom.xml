@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-10-18T08:17:14.726Z</updated>
+  <updated>2022-10-19T07:51:21.212Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>高分3号1级到2级的处理过程</title>
+    <link href="http://ytkz11@.github.io/2022/10/19/gao-fen-3-hao-1-ji-dao-2-ji-de-chu-li-guo-cheng/"/>
+    <id>http://ytkz11@.github.io/2022/10/19/gao-fen-3-hao-1-ji-dao-2-ji-de-chu-li-guo-cheng/</id>
+    <published>2022-10-19T08:30:10.000Z</published>
+    <updated>2022-10-19T07:51:21.212Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; title=&quot;1.简介&quot;&gt;&lt;/a&gt;1.简介&lt;/h2&gt;&lt;p&gt;这是针对国产合成孔径雷达遥感影像预处理的算法。&lt;/p&gt;
+&lt;h2 id=&quot;2-特点&quot;&gt;&lt;a href=&quot;#2-特点&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>顾及物候信息提取冬小麦面积（基于AI earth）</title>
     <link href="http://ytkz11@.github.io/2022/10/17/ti-qu-dong-xiao-mai-zai-ai-earth-shang-shi-xian/"/>
     <id>http://ytkz11@.github.io/2022/10/17/ti-qu-dong-xiao-mai-zai-ai-earth-shang-shi-xian/</id>
     <published>2022-10-17T07:30:10.000Z</published>
-    <updated>2022-10-18T08:17:14.726Z</updated>
+    <updated>2022-10-18T09:29:28.837Z</updated>
     
     
       
@@ -503,31 +529,6 @@
         
         
     <summary type="html">&lt;p&gt;​                一个简单的深度学习模型，实现语义分割，将使用“&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>雷达干涉仪的原理</title>
-    <link href="http://ytkz11@.github.io/2021/07/23/jiao-cha-ding-biao/"/>
-    <id>http://ytkz11@.github.io/2021/07/23/jiao-cha-ding-biao/</id>
-    <published>2021-07-23T07:38:20.000Z</published>
-    <updated>2021-11-23T09:57:42.127Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;​        对于许多遥感应用，我们使用经过处理的多视合成孔径雷达SAR图像。这些产品代表多个雷达图像的平均强度(或振幅)，以减少雷达斑点(多视图)。单视复杂single look complex</summary>
         
       
     
