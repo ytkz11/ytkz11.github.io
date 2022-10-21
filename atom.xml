@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-10-19T08:02:10.281Z</updated>
+  <updated>2022-10-21T07:02:10.967Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>地图的失真</title>
+    <link href="http://ytkz11@.github.io/2022/10/21/di-tu-de-shi-zhen/"/>
+    <id>http://ytkz11@.github.io/2022/10/21/di-tu-de-shi-zhen/</id>
+    <published>2022-10-21T03:30:10.000Z</published>
+    <updated>2022-10-21T07:02:10.967Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;有时候，看地图会误判，地图上俄罗斯过大（6400公里），非洲过小（7200公里）。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/x6Rol9&quot;&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>高分3号1级到2级的处理过程</title>
@@ -504,31 +530,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习-遥感影像建筑物检测</title>
-    <link href="http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/"/>
-    <id>http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</id>
-    <published>2021-08-30T13:00:10.000Z</published>
-    <updated>2021-11-23T09:57:42.124Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;​                一个简单的深度学习模型，实现语义分割，将使用“&lt;a</summary>
         
       
     
