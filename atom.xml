@@ -383,6 +383,41 @@
   </entry>
   
   <entry>
+    <title>Cartopy绘制底图</title>
+    <link href="http://ytkz11@.github.io/2021/10/27/zui-da-si-ran-fen-lei/"/>
+    <id>http://ytkz11@.github.io/2021/10/27/zui-da-si-ran-fen-lei/</id>
+    <published>2021-10-27T10:00:10.000Z</published>
+    <updated>2022-10-27T09:05:16.932Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Cartopy是一个为地理空间数据处理设计的Python包，目的是生成地图和其他地理空间数据分析。&lt;/p&gt;
+&lt;p&gt;Cartopy利用了功能强大的PROJ、NumPy和Shapely库，并包括一个构建在Matplotlib之上的编程接口，用于创建发布质量地图。&lt;/p&gt;
+&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="绘图" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/python/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="绘图" scheme="http://ytkz11@.github.io/tags/%E7%BB%98%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>高分三号L1到L2的处理方法</title>
     <link href="http://ytkz11@.github.io/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/"/>
     <id>http://ytkz11@.github.io/2021/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/</id>
@@ -514,31 +549,6 @@
     
     
     <category term="技术" scheme="http://ytkz11@.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sentinel 2 批量zip生成RGB图</title>
-    <link href="http://ytkz11@.github.io/2021/09/08/sentinel-2-pi-liang-zip-sheng-cheng-rgb-tu/"/>
-    <id>http://ytkz11@.github.io/2021/09/08/sentinel-2-pi-liang-zip-sheng-cheng-rgb-tu/</id>
-    <published>2021-09-08T06:00:10.000Z</published>
-    <updated>2021-11-23T09:57:42.118Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
