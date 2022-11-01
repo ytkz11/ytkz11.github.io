@@ -383,11 +383,70 @@
   </entry>
   
   <entry>
+    <title>编程|遥感影像显示拉伸</title>
+    <link href="http://ytkz11@.github.io/2021/11/01/bian-cheng-zhi-yao-gan-ying-xiang-xian-shi-la-shen/"/>
+    <id>http://ytkz11@.github.io/2021/11/01/bian-cheng-zhi-yao-gan-ying-xiang-xian-shi-la-shen/</id>
+    <published>2021-11-01T10:00:10.000Z</published>
+    <updated>2022-11-01T07:34:06.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;计算机显示图像主要以两种方式的数据类型：浮点型和整型。&lt;/p&gt;
+&lt;p&gt;浮点型：图像范围大小在0:1之间&lt;/p&gt;
+&lt;p&gt;整型：图像范围大小在0:255之间&lt;/p&gt;
+&lt;p&gt;其中，0:255的整型也称为8bit，8字节。一个字节代表01，8个字节也就是2的8次方，等于255。正常</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杂|为什么物体潮湿时会变暗</title>
+    <link href="http://ytkz11@.github.io/2021/11/01/yao-gan-ying-xiang-xian-shi-de-la-shen-fang-shi-fu-ben/"/>
+    <id>http://ytkz11@.github.io/2021/11/01/yao-gan-ying-xiang-xian-shi-de-la-shen-fang-shi-fu-ben/</id>
+    <published>2021-11-01T10:00:10.000Z</published>
+    <updated>2022-11-01T07:31:08.634Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://aryankashyap.com/why-are-some-things-darker-when-wet&quot;&gt;为什么物体潮湿时会变暗？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;你是否想过，为什么向地上倒了一摊水，土地就变暗了？&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="其他知识" scheme="http://ytkz11@.github.io/categories/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="其他知识" scheme="http://ytkz11@.github.io/tags/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Cartopy 系列教程：安装并绘制地图</title>
     <link href="http://ytkz11@.github.io/2021/10/27/cartopy-xi-lie-jiao-cheng-an-zhuang-bing-hui-zhi-di-tu/"/>
     <id>http://ytkz11@.github.io/2021/10/27/cartopy-xi-lie-jiao-cheng-an-zhuang-bing-hui-zhi-di-tu/</id>
     <published>2021-10-27T10:00:10.000Z</published>
-    <updated>2022-10-27T09:21:31.776Z</updated>
+    <updated>2022-10-27T11:55:53.980Z</updated>
     
     
       
@@ -501,54 +560,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="IDL" scheme="http://ytkz11@.github.io/tags/IDL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>遥感专业怎么提高编程能力？</title>
-    <link href="http://ytkz11@.github.io/2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/"/>
-    <id>http://ytkz11@.github.io/2021/09/18/yao-gan-zhuan-ye-zen-me-ti-gao-bian-cheng-neng-li/</id>
-    <published>2021-09-18T13:27:10.000Z</published>
-    <updated>2022-09-18T13:27:41.492Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;遥感专业怎么提高编程能力？首先明确一个问题是：编程要一步一步一个一个的脚印去学，才能学得会，学得好，用得好。其次用编程去解决一些遥感遇到的问题：比如初步(数据处理，模型的计算，地物的分类，定量、定性的反演），高端的是海量数据与数据库结合（Google earth</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何将Python 包发布到PyPI上</title>
-    <link href="http://ytkz11@.github.io/2021/09/09/ru-he-jiang-python-bao-fa-bu-dao-pypi-shang/"/>
-    <id>http://ytkz11@.github.io/2021/09/09/ru-he-jiang-python-bao-fa-bu-dao-pypi-shang/</id>
-    <published>2021-09-09T06:00:10.000Z</published>
-    <updated>2021-11-23T09:57:42.123Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;1-PyPi-的用途&quot;&gt;&lt;a href=&quot;#1-PyPi-的用途&quot; class=&quot;headerlink&quot; title=&quot;1. PyPi 的用途&quot;&gt;&lt;/a&gt;1. PyPi 的用途&lt;/h2&gt;&lt;p&gt;Python</summary>
-        
-      
-    
-    
-    
-    
-    <category term="技术" scheme="http://ytkz11@.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
