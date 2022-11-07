@@ -366,6 +366,106 @@
     
     
     <entry>
+      <title>python两个魔方变量使用说明</title>
+      <link href="2021/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/"/>
+      <url>2021/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/</url>
+      
+        <content type="html"><![CDATA[<p>我常常分不清楚python中的<em>args和*</em>kwargs的用法，所以才有这篇文章的编写的必要性。</p><p><em>args、*</em>kwargs主要用于函数定义，可以将不确定个数的参数传递给一个函数。</p><p>注意，参数的英文是argument。</p><h2 id="args"><a href="#args" class="headerlink" title="*args"></a>*args</h2><p>一般的函数是确定参数的个数的。在这里，不确定个数的意思是，预先不知道使用者会传</p><p>递多少个参数。*args是代表一个非键值对的可变数量的参数列表给一个函数。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">test_args</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>args<span class="token punctuation">)</span> <span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">:</span>        <span class="token keyword">for</span> arg <span class="token keyword">in</span> args<span class="token punctuation">:</span>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'参数是：%s'</span><span class="token operator">%</span>arg<span class="token punctuation">)</span>    <span class="token keyword">else</span><span class="token punctuation">:</span>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'这个函数没有输入参数'</span><span class="token punctuation">)</span>test_args<span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token string">'2'</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>test_args<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>test_args(‘1’,’2’,3)会返回：</p><pre class="line-numbers language-none"><code class="language-none">参数是：1参数是：2参数是：3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>test_args()会返回：</p><pre class="line-numbers language-none"><code class="language-none">这个函数没有输入参数<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><a href="https://imgse.com/i/xOLGzd"><img src="https://s1.ax1x.com/2022/11/05/xOLGzd.png" alt="xOLGzd.png"></a></p><p>这里test_args(‘1’,’2’,3) 等价于 test_args([‘1’,’2’,3])，*args代指[‘1’,’2’,3]</p><h2 id="kwargs"><a href="#kwargs" class="headerlink" title="**kwargs"></a>**kwargs</h2><p>**kwargs代表一个不确定个数的键值对,传递给函数例子如下：</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">test_kwargs</span><span class="token punctuation">(</span><span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> kwargs<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"{0}={1}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">)</span>test_kwargs<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'qqq'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>返回：</p><pre class="line-numbers language-none"><code class="language-none">name=qqq<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><a href="https://imgse.com/i/xOL7l9"><img src="https://s1.ax1x.com/2022/11/05/xOL7l9.png" alt="xOL7l9.png"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>遥感监测珊瑚礁如何应对气候变化</title>
+      <link href="2021/11/03/yao-gan-jian-ce-shan-hu-jiao-ru-he-ying-dui-qi-hou-bian-hua/"/>
+      <url>2021/11/03/yao-gan-jian-ce-shan-hu-jiao-ru-he-ying-dui-qi-hou-bian-hua/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://imgse.com/i/xqsUAS"><img src="https://s1.ax1x.com/2022/11/03/xqsUAS.png" alt="xqsUAS.png"></a><br>为什么要监测珊瑚礁？原因有二：</p><p>1.研究珊瑚礁与气候的关系。因为珊瑚礁与海温是密切相关。</p><p>2.因为珊瑚礁基线变化导致海域丧失。</p><p>多数国家普遍承认，管辖范围从领海（距海岸或礁石低水位线最多 12 海里）到最多 200 海里的专属经济区。</p><p>专属经济区编纂了航行自由规则，并允许各国开发、保护和管理邻近水域的资源。</p><p>对于珊瑚岛，珊瑚礁的外部‘低潮线’被用作建立海域的法律基线。</p><p>现有主张的一种方法是使用 GPS 等地理坐标或卫星测深等遥感方法定义珊瑚礁基线。以防珊瑚礁自然消失。</p><p>气候变化以四种可能影响海洋边界的方式破坏珊瑚礁系统：海平面上升、海洋变暖、海洋酸化和风暴增加。</p><p>每一个都对相互关联的生物物理过程产生影响，这些过程允许珊瑚礁和岛屿的形成、撤退和整体结构稳定性。</p><p>例如，较高的温度会引发珊瑚和其他无脊椎动物（如巨型蛤蜊）中藻类共生体的排出，导致珊瑚白化，如果足够多的珊瑚生物死亡，可能会导致珊瑚礁坍塌。在未来的几十年里，这可能会导致珊瑚礁外部低水位线的收缩，从而降低海洋主张的基础。</p><p>随着海洋吸收越来越多的二氧化碳，海洋酸化，降低了它们的矿物质饱和度，使珊瑚更难形成。像鹿角珊瑚这样的造礁物种——一种在热带珊瑚礁中很常见的小型珊瑚虫——开始改变它们的骨骼结构，以减少对碳酸盐矿物的依赖，从而危及整体珊瑚礁的完整性。</p><p>随着珊瑚礁的生长和扩张，它们会变成边缘、屏障或环礁。边缘礁是最常见的，从海岸向海突出，形成沿海岸线和周围岛屿的边界。大堡礁在更远的距离这样做，与陆地隔着一个通常是深水的泻湖。如果一个火山岛沉入海平面以下并且其珊瑚礁继续生长，就会形成一个环礁。 </p><p>将现场测量结果与卫星图像进行了比较，使用这两个数据集来分析珊瑚礁随时间的演变。是否可以通过监测珊瑚礁，从而预测未来气候变化，这个值得我们思考。</p><p><a href="https://imgse.com/i/xqst78"><img src="https://s1.ax1x.com/2022/11/03/xqst78.png" alt="xqst78.png"></a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杂|为什么物体潮湿时会变暗</title>
+      <link href="2021/11/03/install-gdal-golang-for-windows/"/>
+      <url>2021/11/03/install-gdal-golang-for-windows/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://aryankashyap.com/why-are-some-things-darker-when-wet">为什么物体潮湿时会变暗？</a></p><p>你是否想过，为什么向地上倒了一摊水，土地就变暗了？</p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011008.jpg" alt="img"></p><p>首先，我们要知道，物体的亮或暗，取决于反射的光的数量。反射的光线多，就比较亮；反射的光线少，就比较暗。</p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011009.jpg" alt="img"></p><p>当我们向土地倒水的时候，湿的那块地的表面就有一层水。在此之前，光可以100%击中那块地，现在必须穿过那层水才能被地面反射。有一些光会被水面反射，还有一些光会在水中被吸收，所以地面接受的光量就比以前少。</p><p>另外，光进入水中后，一部分光会出现漫反射，反射到人眼的光量进一步减少。</p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011010.jpg" alt="img"></p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011011.jpg" alt="img"></p><p>以上两个原因，使得一个物体变湿以后，人眼接收到的光量要小得多。这就是为什么物体潮湿时看起来更暗的原因。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> golang </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> golang </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>杂|为什么物体潮湿时会变暗</title>
+      <link href="2021/11/01/za-wei-shi-me-wu-ti-chao-shi-shi-hui-bian-an/"/>
+      <url>2021/11/01/za-wei-shi-me-wu-ti-chao-shi-shi-hui-bian-an/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://aryankashyap.com/why-are-some-things-darker-when-wet">为什么物体潮湿时会变暗？</a></p><p>你是否想过，为什么向地上倒了一摊水，土地就变暗了？</p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011008.jpg" alt="img"></p><p>首先，我们要知道，物体的亮或暗，取决于反射的光的数量。反射的光线多，就比较亮；反射的光线少，就比较暗。</p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011009.jpg" alt="img"></p><p>当我们向土地倒水的时候，湿的那块地的表面就有一层水。在此之前，光可以100%击中那块地，现在必须穿过那层水才能被地面反射。有一些光会被水面反射，还有一些光会在水中被吸收，所以地面接受的光量就比以前少。</p><p>另外，光进入水中后，一部分光会出现漫反射，反射到人眼的光量进一步减少。</p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011010.jpg" alt="img"></p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011011.jpg" alt="img"></p><p>以上两个原因，使得一个物体变湿以后，人眼接收到的光量要小得多。这就是为什么物体潮湿时看起来更暗的原因。</p><p><img src="http://n.sinaimg.cn/sinacn10111/123/w640h283/20191119/c33b-iipztff0404050.jpg" alt="img"></p><p>严格的说，这个世界上其实就没有颜色，大自然不会在意自己是不是五颜六色，是不是漂亮或好看！颜色只是人类的眼睛和不同波长的光相互作用以后，在大脑里反应出来的结果。如果没有人类，当然也没有颜色这个说法。</p><p><img src="http://n.sinaimg.cn/sinacn10111/773/w500h273/20191119/7637-iipztff0404106.jpg" alt="img"></p><p>大部分物体的原子会吸收光线，但不同物体的原子的口味不同，喜欢吸收的光线波长不同。例如，蓝色的牛仔裤，它就喜欢吸收除了蓝色以外的所用颜色的光，将不喜欢的蓝色发射出来被我们眼睛看到，我们就说这个裤子是蓝色的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 其他知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 其他知识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>编程|遥感影像显示拉伸</title>
       <link href="2021/11/01/bian-cheng-zhi-yao-gan-ying-xiang-xian-shi-la-shen/"/>
       <url>2021/11/01/bian-cheng-zhi-yao-gan-ying-xiang-xian-shi-la-shen/</url>
@@ -387,31 +487,6 @@
             <tag> 遥感 </tag>
             
             <tag> python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>杂|为什么物体潮湿时会变暗</title>
-      <link href="2021/11/01/yao-gan-ying-xiang-xian-shi-de-la-shen-fang-shi-fu-ben/"/>
-      <url>2021/11/01/yao-gan-ying-xiang-xian-shi-de-la-shen-fang-shi-fu-ben/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://aryankashyap.com/why-are-some-things-darker-when-wet">为什么物体潮湿时会变暗？</a></p><p>你是否想过，为什么向地上倒了一摊水，土地就变暗了？</p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011008.jpg" alt="img"></p><p>首先，我们要知道，物体的亮或暗，取决于反射的光的数量。反射的光线多，就比较亮；反射的光线少，就比较暗。</p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011009.jpg" alt="img"></p><p>当我们向土地倒水的时候，湿的那块地的表面就有一层水。在此之前，光可以100%击中那块地，现在必须穿过那层水才能被地面反射。有一些光会被水面反射，还有一些光会在水中被吸收，所以地面接受的光量就比以前少。</p><p>另外，光进入水中后，一部分光会出现漫反射，反射到人眼的光量进一步减少。</p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011010.jpg" alt="img"></p><p><img src="https://www.wangbase.com/blogimg/asset/202001/bg2020011011.jpg" alt="img"></p><p>以上两个原因，使得一个物体变湿以后，人眼接收到的光量要小得多。这就是为什么物体潮湿时看起来更暗的原因。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 其他知识 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 其他知识 </tag>
             
         </tags>
       
@@ -1007,7 +1082,7 @@
       <link href="2021/01/26/yong-git-ti-jiao-dai-ma-dao-github-de-wan-zheng-bu-zou/"/>
       <url>2021/01/26/yong-git-ti-jiao-dai-ma-dao-github-de-wan-zheng-bu-zou/</url>
       
-        <content type="html"><![CDATA[<h5 id="设置git的用户名和密码"><a href="#设置git的用户名和密码" class="headerlink" title="设置git的用户名和密码"></a>设置git的用户名和密码</h5><p>点击开始菜单》git-bash打开命令窗口，输入下列命令，将双引号中内容替换成自己的用户名和密码。</p><pre class="line-numbers language-none"><code class="language-none">git config --global user.name "ytkz11"git config --global user.email "ytkz11@163.com"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h5 id="创建本机的ssh-Key"><a href="#创建本机的ssh-Key" class="headerlink" title="创建本机的ssh Key"></a>创建本机的ssh Key</h5><p>在git Bash窗口中输入下列命令，创建本电脑的ssh Key</p><pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C "ytkz11@163.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p> 输入后一路回车，直到显示如下图则表示生成成功。</p><p>注意这段代码里有一个文件地址：/c/Users/Administrator/.ssh/，这个就是SSH Key文件夹了，打开文件夹找到id_rsa.pub，用记事本打开它，复制下来。</p><h5 id="在github账号中填写公钥"><a href="#在github账号中填写公钥" class="headerlink" title="在github账号中填写公钥"></a>在github账号中填写公钥</h5><p>按照下图步骤，依次点击Setting》SSH and GPG keys进入SSH Key设置页面</p><p>这台电脑就可以向github提交代码了。</p><h5 id="在github中创建仓库"><a href="#在github中创建仓库" class="headerlink" title="在github中创建仓库"></a>在github中创建仓库</h5><p>点击New repository进入仓库创建页面，然后填写仓库名称，其他内容可不填，直接保存</p><p>点击New SSH key新增SSH keys，title可以随意填写，Key填写刚刚复制的内容，然后保存。</p><h6 id="将本地仓库与github仓库关联"><a href="#将本地仓库与github仓库关联" class="headerlink" title="将本地仓库与github仓库关联"></a>将本地仓库与github仓库关联</h6><p>在本地新建一个文件夹，和github仓库名称一致。<br> 然后选中本地仓库文件夹，右键选择git Bash打开git命令窗口。使用git init命令初始化，在本地工作区中创建一个git隐藏目录。<br> 然后使用如下命令即可关联，注意将origin后面的地址换成你自己的github地址。</p><pre class="line-numbers language-none"><code class="language-none">git remote add origin git@github.com:ytkz11/my-blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h5><p>为了检验是否能正常提交，可在文件夹中放入一个txt测试文件。<br> git有一个工作区和暂存区。工作区就是我们在电脑上看见的文件夹，工作区有一个隐藏的目录.git，这个是版本库。版本库中分为暂存区和master分支。提交代码的时候，我们需要先将工作区的代码提交到暂存区，再从暂存区同步到master分支。<br> 所以第一步使用git add命令将本地工作区的文件添加待提交的文件。git add .表示添加文件夹中的所有文件，一般都是用这个命令一次性添加。<br> 接下来使用git commit -m”描述文字”将添加的文件提交到暂存区。<br> 最后，使用git push origin master同步到github远程仓库。</p><p>以后每次提交代码，只需重复以下命令：</p><pre class="line-numbers language-none"><code class="language-none">git add .git commit -m"提交描述"git push origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>第一次使用git的push命令时，会出现如下警告：</p><pre class="line-numbers language-none"><code class="language-none">The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.RSA key fingerprint is xx.xx.xx.xx.xx.Are you sure you want to continue connecting (yes/no)?<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p> 这是github的安全验证，直接输入yes即可，下次就不会有提示了。</p><h5 id="Git回滚到上一次提交的节点"><a href="#Git回滚到上一次提交的节点" class="headerlink" title="Git回滚到上一次提交的节点"></a>Git回滚到上一次提交的节点</h5><pre class="line-numbers language-none"><code class="language-none">git log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>找到最近一次提交，复制提交的信息码，如图：<br><a href="https://imgtu.com/i/T1ZRjU"><img src="https://s4.ax1x.com/2021/12/22/T1ZRjU.png" alt="T1ZRjU.png"></a><br>复制该信息码，然后控制台revert一下，就OK<br></p><pre class="line-numbers language-none"><code class="language-none">git revert 26d45f06ceff03a3348b3c6626345f8bcd6f59d9<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>想回到其他的节点，直接获取节点的值，复制后revert粘贴，恢复到之前提交的节点。<p></p><h2 id="切换成-https协议连接github"><a href="#切换成-https协议连接github" class="headerlink" title="切换成 https协议连接github"></a>切换成 https协议连接github</h2><p>ssh: connect to host github.com port 22: Connection refused</p><p>查看当前git的远程仓库版本：</p><pre class="line-numbers language-none"><code class="language-none">git remote -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>移除掉远程仓库的配置</p><p>git remote rm origin</p><p>再设置本地设置</p><p>git config —global http.proxy 127.0.0.1:7890</p><p>git remote add origin <a href="https://github.com/xxx/m3u8_mp4.git">https://github.com/xxx/m3u8_mp4.git</a></p><h3 id="在-Linux-上为-Git-配置-SSH"><a href="#在-Linux-上为-Git-配置-SSH" class="headerlink" title="在 Linux 上为 Git 配置 SSH"></a>在 Linux 上为 Git 配置 SSH</h3><pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -b 4096 -C "ytkz11@163.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>当提示输入文件名时，指定要保存密钥的位置并按<strong>Enter</strong> ；要继续使用默认选项，请按<strong>Enter</strong> 。</p><p>系统现在会要求您设置密码，为您机器上的 SSH 添加额外的安全层。<strong>输入</strong>一个您能记住的强密码，然后<strong>按 Enter 键</strong>。</p><p>最后，您需要将 SSH 密钥添加到<strong>ssh-agent</strong> ，它保存您系统的私钥。为此，请在终端中运行以下代码：</p><pre class="line-numbers language-none"><code class="language-none">ssh-add ~/.ssh/id<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="删除大文件提交记录"><a href="#删除大文件提交记录" class="headerlink" title="删除大文件提交记录"></a>删除大文件提交记录</h2><pre class="line-numbers language-none"><code class="language-none">git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch clssfygui/masked.tif' --prune-empty --tag-name-filter cat -- --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="debug-在pycharm的快捷键设置"><a href="#debug-在pycharm的快捷键设置" class="headerlink" title="debug 在pycharm的快捷键设置"></a>debug 在pycharm的快捷键设置</h2><p><a href="https://imgse.com/i/xBSrGt"><img src="https://s1.ax1x.com/2022/10/16/xBSrGt.png" alt="xBSrGt.png"></a></p>]]></content>
+        <content type="html"><![CDATA[<h5 id="设置git的用户名和密码"><a href="#设置git的用户名和密码" class="headerlink" title="设置git的用户名和密码"></a>设置git的用户名和密码</h5><p>点击开始菜单》git-bash打开命令窗口，输入下列命令，将双引号中内容替换成自己的用户名和密码。</p><pre class="line-numbers language-none"><code class="language-none">git config --global user.name "ytkz11"git config --global user.email "ytkz11@163.com"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h5 id="创建本机的ssh-Key"><a href="#创建本机的ssh-Key" class="headerlink" title="创建本机的ssh Key"></a>创建本机的ssh Key</h5><p>在git Bash窗口中输入下列命令，创建本电脑的ssh Key</p><pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -C "ytkz11@163.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p> 输入后一路回车，直到显示如下图则表示生成成功。</p><p>注意这段代码里有一个文件地址：/c/Users/Administrator/.ssh/，这个就是SSH Key文件夹了，打开文件夹找到id_rsa.pub，用记事本打开它，复制下来。</p><h5 id="在github账号中填写公钥"><a href="#在github账号中填写公钥" class="headerlink" title="在github账号中填写公钥"></a>在github账号中填写公钥</h5><p>按照下图步骤，依次点击Setting》SSH and GPG keys进入SSH Key设置页面</p><p>这台电脑就可以向github提交代码了。</p><h5 id="在github中创建仓库"><a href="#在github中创建仓库" class="headerlink" title="在github中创建仓库"></a>在github中创建仓库</h5><p>点击New repository进入仓库创建页面，然后填写仓库名称，其他内容可不填，直接保存</p><p>点击New SSH key新增SSH keys，title可以随意填写，Key填写刚刚复制的内容，然后保存。</p><h6 id="将本地仓库与github仓库关联"><a href="#将本地仓库与github仓库关联" class="headerlink" title="将本地仓库与github仓库关联"></a>将本地仓库与github仓库关联</h6><p>在本地新建一个文件夹，和github仓库名称一致。<br> 然后选中本地仓库文件夹，右键选择git Bash打开git命令窗口。使用git init命令初始化，在本地工作区中创建一个git隐藏目录。<br> 然后使用如下命令即可关联，注意将origin后面的地址换成你自己的github地址。</p><pre class="line-numbers language-none"><code class="language-none">git remote add origin git@github.com:ytkz11/my-blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h5 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h5><p>为了检验是否能正常提交，可在文件夹中放入一个txt测试文件。<br> git有一个工作区和暂存区。工作区就是我们在电脑上看见的文件夹，工作区有一个隐藏的目录.git，这个是版本库。版本库中分为暂存区和master分支。提交代码的时候，我们需要先将工作区的代码提交到暂存区，再从暂存区同步到master分支。<br> 所以第一步使用git add命令将本地工作区的文件添加待提交的文件。git add .表示添加文件夹中的所有文件，一般都是用这个命令一次性添加。<br> 接下来使用git commit -m”描述文字”将添加的文件提交到暂存区。<br> 最后，使用git push origin master同步到github远程仓库。</p><p>以后每次提交代码，只需重复以下命令：</p><pre class="line-numbers language-none"><code class="language-none">git add .git commit -m"提交描述"git push origin master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>第一次使用git的push命令时，会出现如下警告：</p><pre class="line-numbers language-none"><code class="language-none">The authenticity of host 'github.com (xx.xx.xx.xx)' can't be established.RSA key fingerprint is xx.xx.xx.xx.xx.Are you sure you want to continue connecting (yes/no)?<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p> 这是github的安全验证，直接输入yes即可，下次就不会有提示了。</p><h5 id="Git回滚到上一次提交的节点"><a href="#Git回滚到上一次提交的节点" class="headerlink" title="Git回滚到上一次提交的节点"></a>Git回滚到上一次提交的节点</h5><pre class="line-numbers language-none"><code class="language-none">git log<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>找到最近一次提交，复制提交的信息码，如图：<br><a href="https://imgtu.com/i/T1ZRjU"><img src="https://s4.ax1x.com/2021/12/22/T1ZRjU.png" alt="T1ZRjU.png"></a><br>复制该信息码，然后控制台revert一下，就OK<br></p><pre class="line-numbers language-none"><code class="language-none">git revert 26d45f06ceff03a3348b3c6626345f8bcd6f59d9<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>想回到其他的节点，直接获取节点的值，复制后revert粘贴，恢复到之前提交的节点。<p></p><h2 id="切换成-https协议连接github"><a href="#切换成-https协议连接github" class="headerlink" title="切换成 https协议连接github"></a>切换成 https协议连接github</h2><p>ssh: connect to host github.com port 22: Connection refused</p><p>查看当前git的远程仓库版本：</p><pre class="line-numbers language-none"><code class="language-none">git remote -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>移除掉远程仓库的配置</p><p>git remote rm origin</p><p>再设置本地设置</p><p>git config —global http.proxy 127.0.0.1:7890</p><p>git remote add origin <a href="https://github.com/xxx/m3u8_mp4.git">https://github.com/xxx/m3u8_mp4.git</a></p><h3 id="在-Linux-上为-Git-配置-SSH"><a href="#在-Linux-上为-Git-配置-SSH" class="headerlink" title="在 Linux 上为 Git 配置 SSH"></a>在 Linux 上为 Git 配置 SSH</h3><pre class="line-numbers language-none"><code class="language-none">ssh-keygen -t rsa -b 4096 -C "ytkz11@163.com"<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>当提示输入文件名时，指定要保存密钥的位置并按<strong>Enter</strong> ；要继续使用默认选项，请按<strong>Enter</strong> 。</p><p>系统现在会要求您设置密码，为您机器上的 SSH 添加额外的安全层。<strong>输入</strong>一个您能记住的强密码，然后<strong>按 Enter 键</strong>。</p><p>最后，您需要将 SSH 密钥添加到<strong>ssh-agent</strong> ，它保存您系统的私钥。为此，请在终端中运行以下代码：</p><pre class="line-numbers language-none"><code class="language-none">ssh-add ~/.ssh/id<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="删除大文件提交记录"><a href="#删除大文件提交记录" class="headerlink" title="删除大文件提交记录"></a>删除大文件提交记录</h2><pre class="line-numbers language-none"><code class="language-none">git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch clssfygui/masked.tif' --prune-empty --tag-name-filter cat -- --all<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="debug-在pycharm的快捷键设置"><a href="#debug-在pycharm的快捷键设置" class="headerlink" title="debug 在pycharm的快捷键设置"></a>debug 在pycharm的快捷键设置</h2><p><a href="https://imgse.com/i/xBSrGt"><img src="https://s1.ax1x.com/2022/10/16/xBSrGt.png" alt="xBSrGt.png"></a></p><h2 id="22端口被封导致无法与github连接"><a href="#22端口被封导致无法与github连接" class="headerlink" title="22端口被封导致无法与github连接"></a>22端口被封导致无法与github连接</h2><p><a href="https://imgse.com/i/xbnz7D"><img src="https://s1.ax1x.com/2022/11/03/xbnz7D.png" alt="xbnz7D.png"></a></p><p>To set this in your ssh config, edit the file at ~/.ssh/config, and add this section:<br></p><pre class="line-numbers language-none"><code class="language-none">Host github.com  Hostname ssh.github.com  Port 443<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p></p><p>You can test that this works by connecting once more to GitHub:<br></p><pre class="line-numbers language-none"><code class="language-none">ssh -T git@github.com<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>原文地址：<a href="https://help.github.com/articles/using-ssh-over-the-https-port/">https://help.github.com/articles/using-ssh-over-the-https-port/</a><p></p>]]></content>
       
       
       <categories>
