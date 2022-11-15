@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-10-21T07:02:10.967Z</updated>
+  <updated>2022-11-15T02:09:39.274Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://ytkz11@.github.io/2022/11/15/xmly-jie-xi/"/>
+    <id>http://ytkz11@.github.io/2022/11/15/xmly-jie-xi/</id>
+    <published>2022-11-15T02:07:17.716Z</published>
+    <updated>2022-11-15T02:09:39.274Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;title: Web 网站破解前置知识&lt;br&gt;top: false&lt;br&gt;cover: &lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>地图的失真</title>
@@ -383,6 +404,35 @@
   </entry>
   
   <entry>
+    <title>遥感入门 | 使用matlab读取Landsat8</title>
+    <link href="http://ytkz11@.github.io/2021/11/14/yao-gan-ru-men-zhi-shi-yong-matlab-du-qu-landsat8/"/>
+    <id>http://ytkz11@.github.io/2021/11/14/yao-gan-ru-men-zhi-shi-yong-matlab-du-qu-landsat8/</id>
+    <published>2021-11-14T10:00:10.000Z</published>
+    <updated>2022-11-14T08:54:45.669Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202211141613257.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/matlab/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python两个魔方变量使用说明</title>
     <link href="http://ytkz11@.github.io/2021/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/"/>
     <id>http://ytkz11@.github.io/2021/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/</id>
@@ -485,73 +535,6 @@
     
     
     <category term="其他知识" scheme="http://ytkz11@.github.io/tags/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程|遥感影像显示拉伸</title>
-    <link href="http://ytkz11@.github.io/2021/11/01/bian-cheng-zhi-yao-gan-ying-xiang-xian-shi-la-shen/"/>
-    <id>http://ytkz11@.github.io/2021/11/01/bian-cheng-zhi-yao-gan-ying-xiang-xian-shi-la-shen/</id>
-    <published>2021-11-01T10:00:10.000Z</published>
-    <updated>2022-11-02T09:47:17.174Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;计算机显示图像主要以两种方式的数据类型：浮点型和整型。&lt;/p&gt;
-&lt;p&gt;浮点型：图像范围大小在0:1之间&lt;/p&gt;
-&lt;p&gt;整型：图像范围大小在0:255之间&lt;/p&gt;
-&lt;p&gt;其中，0:255的整型也称为8bit，8字节。一个字节代表01，8个字节也就是2的8次方，等于255。正常</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cartopy 系列教程：安装并绘制地图</title>
-    <link href="http://ytkz11@.github.io/2021/10/27/cartopy-xi-lie-jiao-cheng-an-zhuang-bing-hui-zhi-di-tu/"/>
-    <id>http://ytkz11@.github.io/2021/10/27/cartopy-xi-lie-jiao-cheng-an-zhuang-bing-hui-zhi-di-tu/</id>
-    <published>2021-10-27T10:00:10.000Z</published>
-    <updated>2022-10-27T11:55:53.980Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Cartopy是一个为地理空间数据处理设计的Python包，目的是生成地图和其他地理空间数据分析。&lt;/p&gt;
-&lt;p&gt;Cartopy利用了功能强大的PROJ、NumPy和Shapely库，并包括一个构建在Matplotlib之上的编程接口，用于创建发布质量地图。&lt;/p&gt;
-&lt;p&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="绘图" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/python/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="绘图" scheme="http://ytkz11@.github.io/tags/%E7%BB%98%E5%9B%BE/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
