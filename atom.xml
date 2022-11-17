@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-11-15T02:09:39.274Z</updated>
+  <updated>2022-10-21T07:02:10.967Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://ytkz11@.github.io/2022/11/15/xmly-jie-xi/"/>
-    <id>http://ytkz11@.github.io/2022/11/15/xmly-jie-xi/</id>
-    <published>2022-11-15T02:07:17.716Z</published>
-    <updated>2022-11-15T02:09:39.274Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;title: Web 网站破解前置知识&lt;br&gt;top: false&lt;br&gt;cover: &lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>地图的失真</title>
@@ -400,6 +379,31 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遥感入门 | H5文件读写</title>
+    <link href="http://ytkz11@.github.io/2021/11/16/yao-gan-ru-men-zhi-h5-wen-jian-du-xie/"/>
+    <id>http://ytkz11@.github.io/2021/11/16/yao-gan-ru-men-zhi-h5-wen-jian-du-xie/</id>
+    <published>2021-11-16T10:00:10.000Z</published>
+    <updated>2022-11-16T09:29:16.152Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;什么是-H5-文件？&quot;&gt;&lt;a href=&quot;#什么是-H5-文件？&quot; class=&quot;headerlink&quot; title=&quot;什么是 H5 文件？&quot;&gt;&lt;/a&gt;什么是 H5 文件？&lt;/h2&gt;&lt;p&gt;H5 是用于存储大量数据的分层数据格式 (HDF)</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
