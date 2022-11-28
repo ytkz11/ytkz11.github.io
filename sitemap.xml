@@ -2,6 +2,48 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ytkz11@.github.io/2021/11/24/gao-fen-san-hao-lei-da-shu-ju-rpc-xiao-zheng/</loc>
+    
+    <lastmod>2022-11-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2021/11/23/yun-se-zhi-zhi-fang-tu-pi-pei-suan-fa-ji-qi-dai-ma/</loc>
+    
+    <lastmod>2022-11-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2021/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/</loc>
+    
+    <lastmod>2022-11-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2021/11/20/ben-jiao-cheng-jie-shao-numpy-yi-ge-yong-yu-zai-python-zhong-zhi-xing-shu-zhi-ji-suan-de-python-ku/</loc>
+    
+    <lastmod>2022-11-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</loc>
+    
+    <lastmod>2022-11-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2021/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/</loc>
+    
+    <lastmod>2022-11-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ytkz11@.github.io/2021/11/16/yao-gan-ru-men-zhi-h5-wen-jian-du-xie/</loc>
     
     <lastmod>2022-11-16</lastmod>
@@ -12,13 +54,6 @@
     <loc>http://ytkz11@.github.io/2021/11/14/yao-gan-ru-men-zhi-shi-yong-matlab-du-qu-landsat8/</loc>
     
     <lastmod>2022-11-14</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/2021/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/</loc>
-    
-    <lastmod>2022-11-05</lastmod>
     
   </url>
   
@@ -170,13 +205,6 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</loc>
-    
-    <lastmod>2022-08-10</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ytkz11@.github.io/2021/12/27/feng-yun-ji-gui-wei-xing-de-ji-he-xiao-zheng/</loc>
     
     <lastmod>2022-07-18</lastmod>
@@ -261,14 +289,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/index.html</loc>
+    <loc>http://ytkz11@.github.io/books/index.html</loc>
     
     <lastmod>2021-11-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/books/index.html</loc>
+    <loc>http://ytkz11@.github.io/categories/index.html</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -296,14 +324,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
+    <loc>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
+    <loc>http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -324,7 +352,7 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
+    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -338,14 +366,7 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
-    
-    <lastmod>2021-11-23</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</loc>
+    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -353,6 +374,13 @@
   
   <url>
     <loc>http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/</loc>
+    
+    <lastmod>2021-11-23</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</loc>
     
     <lastmod>2021-11-23</lastmod>
     
@@ -375,162 +403,183 @@
 
   <url>
     <loc>http://ytkz11@.github.io/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>http://ytkz11@.github.io/tags/GEE/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/%E7%BB%98%E5%9B%BE/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/python/</loc>
-    <lastmod>2022-11-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/tags/GEE/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/IDL/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/pyside6/</loc>
-    <lastmod>2022-11-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/tags/%E7%88%AC%E8%99%AB/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/deep-learn/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/tags/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/ffmpeg/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/gdal/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/golang/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/linux/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/JavaScript/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/tags/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <loc>http://ytkz11@.github.io/tags/%E5%8C%80%E8%89%B2/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/autosub/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/%E8%A7%86%E9%A2%91/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/tags/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/tags/numpy/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/%E6%9D%82%E6%96%87/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/git/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/matlab/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/tags/%E5%88%86%E7%B1%BB/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/tags/RPC/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -538,169 +587,190 @@
 
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <loc>http://ytkz11@.github.io/categories/GEE/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/GEE/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/</loc>
-    <lastmod>2022-11-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/categories/%E7%88%AC%E8%99%AB/</loc>
-    <lastmod>2022-11-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/IDL/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/deep-learn/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/python/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/IDL/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/categories/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/ffmpeg/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/python/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/gdal/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/golang/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/linux/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/python/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/JavaScript/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/gdal/%E9%81%A5%E6%84%9F/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E5%8C%80%E8%89%B2/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/categories/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/numpy/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E6%9D%82%E6%96%87/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/git/</loc>
-    <lastmod>2022-11-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/matlab/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/autosub/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/autosub/%E8%A7%86%E9%A2%91/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/matlab/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E5%88%86%E7%B1%BB/</loc>
-    <lastmod>2022-11-17</lastmod>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/autosub/%E8%A7%86%E9%A2%91/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/RPC/</loc>
+    <lastmod>2022-11-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

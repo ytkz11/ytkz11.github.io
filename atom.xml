@@ -383,6 +383,124 @@
   </entry>
   
   <entry>
+    <title>RPC | 高分三号雷达数据RPC校正代码</title>
+    <link href="http://ytkz11@.github.io/2021/11/24/gao-fen-san-hao-lei-da-shu-ju-rpc-xiao-zheng/"/>
+    <id>http://ytkz11@.github.io/2021/11/24/gao-fen-san-hao-lei-da-shu-ju-rpc-xiao-zheng/</id>
+    <published>2021-11-24T03:00:10.000Z</published>
+    <updated>2022-11-24T06:45:25.947Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;RPC（rational polynomial coefficients），有理&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="RPC" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/RPC/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="RPC" scheme="http://ytkz11@.github.io/tags/RPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>匀色 | 直方图匹配算法及其代码</title>
+    <link href="http://ytkz11@.github.io/2021/11/23/yun-se-zhi-zhi-fang-tu-pi-pei-suan-fa-ji-qi-dai-ma/"/>
+    <id>http://ytkz11@.github.io/2021/11/23/yun-se-zhi-zhi-fang-tu-pi-pei-suan-fa-ji-qi-dai-ma/</id>
+    <published>2021-11-23T08:00:10.000Z</published>
+    <updated>2022-11-23T06:58:27.559Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;相关理论不再展示，感兴趣去网上搜，现在是基于图片图片进行匀色，代码如下：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="匀色" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E5%8C%80%E8%89%B2/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="匀色" scheme="http://ytkz11@.github.io/tags/%E5%8C%80%E8%89%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>maltab 语言如何熟练掌握？</title>
+    <link href="http://ytkz11@.github.io/2021/11/20/ben-jiao-cheng-jie-shao-numpy-yi-ge-yong-yu-zai-python-zhong-zhi-xing-shu-zhi-ji-suan-de-python-ku/"/>
+    <id>http://ytkz11@.github.io/2021/11/20/ben-jiao-cheng-jie-shao-numpy-yi-ge-yong-yu-zai-python-zhong-zhi-xing-shu-zhi-ji-suan-de-python-ku/</id>
+    <published>2021-11-20T15:00:10.000Z</published>
+    <updated>2022-11-23T06:41:16.822Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;为了能够使用numpy，我们需要使用import numpy导入库。此外，指定np代表numpy:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="numpy" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/numpy/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="numpy" scheme="http://ytkz11@.github.io/tags/numpy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>maltab 语言如何熟练掌握？</title>
+    <link href="http://ytkz11@.github.io/2021/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/"/>
+    <id>http://ytkz11@.github.io/2021/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/</id>
+    <published>2021-11-19T15:00:10.000Z</published>
+    <updated>2022-11-23T06:41:16.823Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;由来&quot;&gt;&lt;a href=&quot;#由来&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/matlab/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
     <title>遥感入门 | H5文件读写</title>
     <link href="http://ytkz11@.github.io/2021/11/16/yao-gan-ru-men-zhi-h5-wen-jian-du-xie/"/>
     <id>http://ytkz11@.github.io/2021/11/16/yao-gan-ru-men-zhi-h5-wen-jian-du-xie/</id>
@@ -433,112 +551,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python两个魔方变量使用说明</title>
-    <link href="http://ytkz11@.github.io/2021/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/"/>
-    <id>http://ytkz11@.github.io/2021/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/</id>
-    <published>2021-11-05T10:00:10.000Z</published>
-    <updated>2022-11-05T09:49:32.008Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我常常分不清楚python中的&lt;em&gt;args和*&lt;/em&gt;kwargs的用法，所以才有这篇文章的编写的必要性。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;args、*&lt;/em&gt;kwargs主要用于函数定义，可以将不确定个数的参数传递给一个函数。&lt;/p&gt;
-&lt;p&gt;注意，参数的英文是argumen</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>遥感监测珊瑚礁如何应对气候变化</title>
-    <link href="http://ytkz11@.github.io/2021/11/03/yao-gan-jian-ce-shan-hu-jiao-ru-he-ying-dui-qi-hou-bian-hua/"/>
-    <id>http://ytkz11@.github.io/2021/11/03/yao-gan-jian-ce-shan-hu-jiao-ru-he-ying-dui-qi-hou-bian-hua/</id>
-    <published>2021-11-03T15:00:10.000Z</published>
-    <updated>2022-11-05T01:51:51.716Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/xqsUAS&quot;&gt;&lt;img src=&quot;https://s1.ax1x.com/2022/11/03/xqsUAS.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杂|为什么物体潮湿时会变暗</title>
-    <link href="http://ytkz11@.github.io/2021/11/03/install-gdal-golang-for-windows/"/>
-    <id>http://ytkz11@.github.io/2021/11/03/install-gdal-golang-for-windows/</id>
-    <published>2021-11-03T10:00:10.000Z</published>
-    <updated>2022-11-02T09:47:35.111Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://aryankashyap.com/why-are-some-things-darker-when-wet&quot;&gt;为什么物体潮湿时会变暗？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;你是否想过，为什么向地上倒了一摊水，土地就变暗了？&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="golang" scheme="http://ytkz11@.github.io/categories/golang/"/>
-    
-    
-    <category term="golang" scheme="http://ytkz11@.github.io/tags/golang/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杂|为什么物体潮湿时会变暗</title>
-    <link href="http://ytkz11@.github.io/2021/11/01/za-wei-shi-me-wu-ti-chao-shi-shi-hui-bian-an/"/>
-    <id>http://ytkz11@.github.io/2021/11/01/za-wei-shi-me-wu-ti-chao-shi-shi-hui-bian-an/</id>
-    <published>2021-11-01T10:00:10.000Z</published>
-    <updated>2022-11-02T09:46:56.541Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://aryankashyap.com/why-are-some-things-darker-when-wet&quot;&gt;为什么物体潮湿时会变暗？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;你是否想过，为什么向地上倒了一摊水，土地就变暗了？&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="其他知识" scheme="http://ytkz11@.github.io/categories/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="其他知识" scheme="http://ytkz11@.github.io/tags/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/"/>
     
   </entry>
   
