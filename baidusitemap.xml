@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2022/12/06/shi-yong-cpp-diao-yong-gdal/</loc>
+    <lastmod>2022-12-06</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2022/12/01/sentinel-5p-ke-shi-hua-zhan-shi-kong-qi-wu-ran-cheng-du/</loc>
+    <lastmod>2022-12-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2022/12/01/pei-zhi-gdal-ji-shi-yong-cpp-diao-yong-gdal/</loc>
     <lastmod>2022-12-02</lastmod>
   </url>
   <url>
