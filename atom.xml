@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2022-12-06T02:09:28.108Z</updated>
+  <updated>2023-01-30T09:25:25.889Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用git提交代码到github的完整步骤</title>
+    <link href="http://ytkz11@.github.io/2023/01/30/shi-yong-python-jiang-netcdf-zhuan-huan-wei-geotiff-wen-jian/"/>
+    <id>http://ytkz11@.github.io/2023/01/30/shi-yong-python-jiang-netcdf-zhuan-huan-wei-geotiff-wen-jian/</id>
+    <published>2023-01-30T09:25:10.000Z</published>
+    <updated>2023-01-30T09:25:25.889Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;&lt;strong&gt;介绍&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;我们将使用 Python 将 netCDF 文件转换为 GeoTIFF。GeoTIFF 基于 TIFF</summary>
+        
+      
+    
+    
+    
+    <category term="git" scheme="http://ytkz11@.github.io/categories/git/"/>
+    
+    
+    <category term="git" scheme="http://ytkz11@.github.io/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>配置GDAL及使用CPP调用GDAL</title>
@@ -535,32 +560,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/xaTusf&quot;&gt;&lt;img src=&quot;https://s1.ax1x.com/2022/10/13/xaTusf.jpg&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高分三号L1到L2的处理方法</title>
-    <link href="http://ytkz11@.github.io/2022/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/"/>
-    <id>http://ytkz11@.github.io/2022/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/</id>
-    <published>2022-10-13T03:00:10.000Z</published>
-    <updated>2022-12-01T02:20:37.491Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;定标常数的获取&quot;&gt;&lt;a href=&quot;#定标常数的获取&quot; class=&quot;headerlink&quot; title=&quot;定标常数的获取&quot;&gt;&lt;/a&gt;定标常数的获取&lt;/h2&gt;&lt;p&gt;利用定标场已知雷达截面积的角反射器和有源定标器确定定标常数。&lt;/p&gt;
-&lt;script</summary>
         
       
     
