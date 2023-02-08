@@ -1,251 +1,459 @@
-const btf = {
-  debounce: function (func, wait, immediate) {
-    let timeout
-    return function () {
-      const context = this
-      const args = arguments
-      const later = function () {
-        timeout = null
-        if (!immediate) func.apply(context, args)
+/* global KEEP */
+
+KEEP.initUtils = () => {
+  KEEP.utils = {
+    html_root_dom: document.querySelector('html'),
+    pageContainer_dom: document.querySelector('.page-container'),
+    pageTop_dom: document.querySelector('.page-main-content-top'),
+    firstScreen_dom: document.querySelector('.first-screen-container'),
+    scrollProgressBar_dom: document.querySelector('.scroll-progress-bar'),
+    pjaxProgressBar_dom: document.querySelector('.pjax-progress-bar'),
+    pjaxProgressIcon_dom: document.querySelector('.pjax-progress-icon'),
+    back2TopButton_dom: document.querySelector('.tool-scroll-to-top'),
+    headerWrapper_dom: document.querySelector('.header-wrapper'),
+
+    innerHeight: window.innerHeight,
+    pjaxProgressBarTimer: null,
+    prevScrollValue: 0,
+    fontSizeLevel: 0,
+    isHasScrollProgressBar: false,
+    isHasScrollPercent: false,
+    isHeaderTransparent: false,
+    hasToc: false,
+
+    initData() {
+      const { scroll, first_screen } = KEEP.theme_config.style
+      this.isHasScrollProgressBar = scroll.progress_bar === true
+      this.isHasScrollPercent = scroll.percent === true
+      const { enable, header_transparent } = first_screen
+      this.isHeaderTransparent = enable === true && header_transparent === true
+    },
+
+    // Scroll Style Handle
+    styleHandleWhenScroll() {
+      const scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+      const scrollHeight = document.body.scrollHeight || document.documentElement.scrollHeight
+      const clientHeight = window.innerHeight || document.documentElement.clientHeight
+
+      const percent = Math.round((scrollTop / (scrollHeight - clientHeight)) * 100)
+
+      if (this.isHasScrollProgressBar) {
+        const ProgressPercent = ((scrollTop / (scrollHeight - clientHeight)) * 100).toFixed(3)
+        this.scrollProgressBar_dom.style.visibility = percent === 0 ? 'hidden' : 'visible'
+        this.scrollProgressBar_dom.style.width = `${ProgressPercent}%`
       }
-      const callNow = immediate && !timeout
-      clearTimeout(timeout)
-      timeout = setTimeout(later, wait)
-      if (callNow) func.apply(context, args)
-    }
-  },
 
-  throttle: function (func, wait, options) {
-    let timeout, context, args
-    let previous = 0
-    if (!options) options = {}
-
-    const later = function () {
-      previous = options.leading === false ? 0 : new Date().getTime()
-      timeout = null
-      func.apply(context, args)
-      if (!timeout) context = args = null
-    }
-
-    const throttled = function () {
-      const now = new Date().getTime()
-      if (!previous && options.leading === false) previous = now
-      const remaining = wait - (now - previous)
-      context = this
-      args = arguments
-      if (remaining <= 0 || remaining > wait) {
-        if (timeout) {
-          clearTimeout(timeout)
-          timeout = null
+      if (this.isHasScrollPercent) {
+        const percent_dom = this.back2TopButton_dom.querySelector('.percent')
+        if (percent === 0 || percent === undefined) {
+          this.back2TopButton_dom.classList.remove('show')
+        } else {
+          this.back2TopButton_dom.classList.add('show')
+          percent_dom.innerHTML = percent.toFixed(0)
         }
-        previous = now
-        func.apply(context, args)
-        if (!timeout) context = args = null
-      } else if (!timeout && options.trailing !== false) {
-        timeout = setTimeout(later, remaining)
       }
-    }
 
-    return throttled
-  },
+      // hide header handle
+      if (scrollTop > this.prevScrollValue && scrollTop > this.innerHeight) {
+        this.pageTop_dom.classList.add('hide')
+        if (this.isHeaderTransparent) {
+          this.headerWrapper_dom.classList.remove('transparent-1', 'transparent-2')
+        }
+      } else {
+        this.pageTop_dom.classList.remove('hide')
+        if (this.isHeaderTransparent) {
+          if (scrollTop <= this.headerWrapper_dom.getBoundingClientRect().height) {
+            this.headerWrapper_dom.classList.remove('transparent-2')
+            this.headerWrapper_dom.classList.add('transparent-1')
+          } else if (scrollTop < this.innerHeight) {
+            this.headerWrapper_dom.classList.add('transparent-2')
+          }
+        }
+      }
+      this.prevScrollValue = scrollTop
+    },
 
-  sidebarPaddingR: () => {
-    const innerWidth = window.innerWidth
-    const clientWidth = document.body.clientWidth
-    const paddingRight = innerWidth - clientWidth
-    if (innerWidth !== clientWidth) {
-      document.body.style.paddingRight = paddingRight + 'px'
-    }
-  },
+    // register window scroll event
+    registerWindowScroll() {
+      window.addEventListener('scroll', () => {
+        // style handle when scroll
+        this.styleHandleWhenScroll()
 
-  snackbarShow: (text, showAction, duration) => {
-    const sa = (typeof showAction !== 'undefined') ? showAction : false
-    const dur = (typeof duration !== 'undefined') ? duration : 2000
-    const position = GLOBAL_CONFIG.Snackbar.position
-    const bg = document.documentElement.getAttribute('data-theme') === 'light' ? GLOBAL_CONFIG.Snackbar.bgLight : GLOBAL_CONFIG.Snackbar.bgDark
-    Snackbar.show({
-      text: text,
-      backgroundColor: bg,
-      showAction: sa,
-      duration: dur,
-      pos: position
-    })
-  },
+        // TOC scroll handle
+        if (KEEP.theme_config.toc.enable && KEEP.utils.hasOwnProperty('findActiveIndexByTOC')) {
+          KEEP.utils.findActiveIndexByTOC()
+        }
 
-  initJustifiedGallery: function (selector) {
-    if (!(selector instanceof jQuery)) {
-      selector = $(selector)
-    }
-    selector.each(function (i, o) {
-      if ($(this).is(':visible')) {
-        $(this).justifiedGallery({
-          rowHeight: 220,
-          margins: 4
+        // header shrink
+        KEEP.utils.headerShrink.headerShrink()
+      })
+    },
+
+    // toggle show tools list
+    toggleShowToolsList() {
+      const sideToolsListDom = document.querySelector('.side-tools-list')
+      const toggleShowToolsDom = document.querySelector('.tool-toggle-show')
+      toggleShowToolsDom.addEventListener('click', (e) => {
+        sideToolsListDom.classList.toggle('show')
+        e.stopPropagation()
+      })
+      sideToolsListDom.querySelectorAll('.tools-item').forEach((item) => {
+        item.addEventListener('click', (e) => {
+          e.stopPropagation()
+        })
+      })
+      document.addEventListener('click', () => {
+        sideToolsListDom.classList.contains('show') && sideToolsListDom.classList.remove('show')
+      })
+    },
+
+    // global font adjust
+    globalFontAdjust() {
+      const fontSize = document.defaultView.getComputedStyle(document.body).fontSize
+      const fs = parseFloat(fontSize)
+
+      const initFontSize = () => {
+        const styleStatus = KEEP.getStyleStatus()
+        if (styleStatus) {
+          this.fontSizeLevel = styleStatus.fontSizeLevel
+          setFontSize(this.fontSizeLevel)
+        }
+      }
+
+      const setFontSize = (fontSizeLevel) => {
+        this.html_root_dom.style.fontSize = `${fs * (1 + fontSizeLevel * 0.05)}px`
+        KEEP.styleStatus.fontSizeLevel = fontSizeLevel
+        KEEP.setStyleStatus()
+      }
+
+      initFontSize()
+
+      document.querySelector('.tool-font-adjust-plus').addEventListener('click', () => {
+        if (this.fontSizeLevel === 5) return
+        this.fontSizeLevel++
+        setFontSize(this.fontSizeLevel)
+      })
+
+      document.querySelector('.tool-font-adjust-minus').addEventListener('click', () => {
+        if (this.fontSizeLevel <= 0) return
+        this.fontSizeLevel--
+        setFontSize(this.fontSizeLevel)
+      })
+    },
+
+    // get dom element height
+    getElementHeight(selectors) {
+      const dom = document.querySelector(selectors)
+      return dom ? dom.getBoundingClientRect().height : 0
+    },
+
+    // init has TOC
+    initHasToc() {
+      const tocNavDoms = document.querySelectorAll('.post-toc-wrap .post-toc li')
+      if (tocNavDoms.length > 0) {
+        this.hasToc = true
+        document.body.classList.add('has-toc')
+      } else {
+        this.hasToc = false
+        document.body.classList.remove('has-toc')
+      }
+    },
+
+    // init page height handle
+    initPageHeightHandle() {
+      if (this.firstScreen_dom) return
+      const temp_h1 = this.getElementHeight('.page-main-content-top')
+      const temp_h2 = this.getElementHeight('.page-main-content-middle')
+      const temp_h3 = this.getElementHeight('.page-main-content-bottom')
+      const allDomHeight = temp_h1 + temp_h2 + temp_h3
+      const innerHeight = window.innerHeight
+      const pb_dom = document.querySelector('.page-main-content-bottom')
+      if (allDomHeight < innerHeight) {
+        const marginTopValue = Math.floor(innerHeight - allDomHeight)
+        if (marginTopValue > 0) {
+          pb_dom.style.marginTop = `${marginTopValue - 2}px`
+        }
+      }
+    },
+
+    // zoom in image
+    zoomInImage() {
+      let SIDE_GAP = 40
+      let isZoomIn = false
+      let curWinScrollY = 0
+      let selectedImgDom = null
+      const imgDomList = document.querySelectorAll('.keep-markdown-body img')
+      const zoomInImgMask = document.querySelector('.zoom-in-image-mask')
+      const zoomInImg = zoomInImgMask.querySelector('.zoom-in-image')
+
+      const zoomOut = () => {
+        if (isZoomIn) {
+          isZoomIn = false
+          curWinScrollY = 0
+          zoomInImg && (zoomInImg.style.transform = `scale(1)`)
+          zoomInImgMask && zoomInImgMask.classList.remove('show')
+          setTimeout(() => {
+            selectedImgDom && selectedImgDom.classList.remove('hide')
+          }, 300)
+        }
+      }
+
+      const zoomOutHandle = () => {
+        zoomInImgMask &&
+          zoomInImgMask.addEventListener('click', () => {
+            zoomOut()
+          })
+
+        document.addEventListener('scroll', () => {
+          if (isZoomIn && Math.abs(curWinScrollY - window.scrollY) >= 50) {
+            zoomOut()
+          }
         })
       }
-    })
-  },
 
-  diffDate: (d, more = false) => {
-    const dateNow = new Date()
-    const datePost = new Date(d)
-    const dateDiff = dateNow.getTime() - datePost.getTime()
-    const minute = 1000 * 60
-    const hour = minute * 60
-    const day = hour * 24
-    const month = day * 30
-
-    let result
-    if (more) {
-      const monthCount = dateDiff / month
-      const dayCount = dateDiff / day
-      const hourCount = dateDiff / hour
-      const minuteCount = dateDiff / minute
-
-      if (monthCount > 12) {
-        result = datePost.toLocaleDateString().replace(/\//g, '-')
-      } else if (monthCount >= 1) {
-        result = parseInt(monthCount) + ' ' + GLOBAL_CONFIG.date_suffix.month
-      } else if (dayCount >= 1) {
-        result = parseInt(dayCount) + ' ' + GLOBAL_CONFIG.date_suffix.day
-      } else if (hourCount >= 1) {
-        result = parseInt(hourCount) + ' ' + GLOBAL_CONFIG.date_suffix.hour
-      } else if (minuteCount >= 1) {
-        result = parseInt(minuteCount) + ' ' + GLOBAL_CONFIG.date_suffix.min
-      } else {
-        result = GLOBAL_CONFIG.date_suffix.just
-      }
-    } else {
-      result = parseInt(dateDiff / day)
-    }
-    return result
-  },
-
-  loadComment: (dom, callback) => {
-    if ('IntersectionObserver' in window) {
-      const observerItem = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-          callback()
-          observerItem.disconnect()
-        }
-      }, { threshold: [0] })
-      observerItem.observe(dom)
-    } else {
-      callback()
-    }
-  },
-
-  scrollToDest: (pos, time) => {
-    if (pos < 0 || time < 0) {
-      return
-    }
-
-    const currentPos = window.scrollY || window.screenTop
-    if (currentPos > pos) pos = pos - 70
-
-    if ('CSS' in window && CSS.supports('scroll-behavior', 'smooth')) {
-      window.scrollTo({
-        top: pos,
-        behavior: 'smooth'
-      })
-      return
-    }
-
-    let start = null
-    time = time || 500
-    window.requestAnimationFrame(function step (currentTime) {
-      start = !start ? currentTime : start
-      if (currentPos < pos) {
-        const progress = currentTime - start
-        window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos)
-        if (progress < time) {
-          window.requestAnimationFrame(step)
+      const setSideGap = () => {
+        const w = document.body.offsetWidth
+        if (w <= 500) {
+          SIDE_GAP = 10
+        } else if (w <= 800) {
+          SIDE_GAP = 20
         } else {
-          window.scrollTo(0, pos)
-        }
-      } else {
-        const progress = currentTime - start
-        window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time))
-        if (progress < time) {
-          window.requestAnimationFrame(step)
-        } else {
-          window.scrollTo(0, pos)
+          SIDE_GAP = 40
         }
       }
-    })
-  },
 
-  fadeIn: (ele, time) => {
-    ele.style.cssText = `display:block;animation: to_show ${time}s`
-  },
+      if (imgDomList.length) {
+        zoomOutHandle()
+        imgDomList.forEach((img) => {
+          img.addEventListener('click', () => {
+            curWinScrollY = window.scrollY
+            isZoomIn = !isZoomIn
+            setSideGap()
+            zoomInImg.setAttribute('src', img.getAttribute('src'))
+            selectedImgDom = img
+            if (isZoomIn) {
+              const imgRect = selectedImgDom.getBoundingClientRect()
+              const imgW = imgRect.width
+              const imgH = imgRect.height
+              const imgL = imgRect.left
+              const imgT = imgRect.top
+              const winW = document.body.offsetWidth - SIDE_GAP * 2
+              const winH = document.body.offsetHeight - SIDE_GAP * 2
+              const scaleX = winW / imgW
+              const scaleY = winH / imgH
+              const scale = (scaleX < scaleY ? scaleX : scaleY) || 1
+              const translateX = winW / 2 - (imgRect.x + imgW / 2) + SIDE_GAP
+              const translateY = winH / 2 - (imgRect.y + imgH / 2) + SIDE_GAP
 
-  fadeOut: (ele, time) => {
-    ele.addEventListener('animationend', function f () {
-      ele.style.cssText = "display: none; animation: '' "
-      ele.removeEventListener('animationend', f)
-    })
-    ele.style.animation = `to_hide ${time}s`
-  },
-
-  getParents: (elem, selector) => {
-    for (; elem && elem !== document; elem = elem.parentNode) {
-      if (elem.matches(selector)) return elem
-    }
-    return null
-  },
-
-  siblings: (ele, selector) => {
-    return [...ele.parentNode.children].filter((child) => {
-      if (selector) {
-        return child !== ele && child.matches(selector)
+              selectedImgDom.classList.add('hide')
+              zoomInImgMask.classList.add('show')
+              zoomInImg.style.top = imgT + 'px'
+              zoomInImg.style.left = imgL + 'px'
+              zoomInImg.style.width = imgW + 'px'
+              zoomInImg.style.height = imgH + 'px'
+              zoomInImg.style.transform = `translateX(${translateX}px) translateY(${translateY}px) scale(${scale}) `
+            }
+          })
+        })
       }
-      return child !== ele
-    })
-  },
+    },
 
-  /**
-   *
-   * @param {*} selector
-   * @param {*} eleType the type of create element
-   * @param {*} id id
-   * @param {*} cn class name
-   */
-  wrap: function (selector, eleType, id = '', cn = '') {
-    const creatEle = document.createElement(eleType)
-    if (id) creatEle.id = id
-    if (cn) creatEle.className = cn
-    selector.parentNode.insertBefore(creatEle, selector)
-    creatEle.appendChild(selector)
-  },
+    // set how long ago language
+    setHowLongAgoLanguage(p1, p2) {
+      return p2.replace(/%s/g, p1)
+    },
 
-  unwrap: function (el) {
-    const elParentNode = el.parentNode
-    if (elParentNode !== document.body) {
-      elParentNode.parentNode.insertBefore(el, elParentNode)
-      elParentNode.parentNode.removeChild(elParentNode)
+    getHowLongAgo(timestamp) {
+      const lang = KEEP.language_ago
+      const __Y = Math.floor(timestamp / (60 * 60 * 24 * 30) / 12)
+      const __M = Math.floor(timestamp / (60 * 60 * 24 * 30))
+      const __W = Math.floor(timestamp / (60 * 60 * 24) / 7)
+      const __d = Math.floor(timestamp / (60 * 60 * 24))
+      const __h = Math.floor((timestamp / (60 * 60)) % 24)
+      const __m = Math.floor((timestamp / 60) % 60)
+      const __s = Math.floor(timestamp % 60)
+
+      if (__Y > 0) {
+        return this.setHowLongAgoLanguage(__Y, lang.year)
+      } else if (__M > 0) {
+        return this.setHowLongAgoLanguage(__M, lang.month)
+      } else if (__W > 0) {
+        return this.setHowLongAgoLanguage(__W, lang.week)
+      } else if (__d > 0) {
+        return this.setHowLongAgoLanguage(__d, lang.day)
+      } else if (__h > 0) {
+        return this.setHowLongAgoLanguage(__h, lang.hour)
+      } else if (__m > 0) {
+        return this.setHowLongAgoLanguage(__m, lang.minute)
+      } else if (__s > 0) {
+        return this.setHowLongAgoLanguage(__s, lang.second)
+      }
+    },
+
+    setHowLongAgoInHome() {
+      const post = document.querySelectorAll('.home-article-meta-info .home-article-date')
+      post &&
+        post.forEach((v) => {
+          const nowDate = Date.now()
+          const postDate = new Date(v.dataset.updated.split(' GMT')[0]).getTime()
+          v.innerHTML = this.getHowLongAgo(Math.floor((nowDate - postDate) / 1000))
+        })
+    },
+
+    // loading progress bar start
+    pjaxProgressBarStart() {
+      this.pjaxProgressBarTimer && clearInterval(this.pjaxProgressBarTimer)
+      if (this.isHasScrollProgressBar) {
+        this.scrollProgressBar_dom.classList.add('hide')
+      }
+
+      this.pjaxProgressBar_dom.style.width = '0'
+      this.pjaxProgressIcon_dom.classList.add('show')
+
+      let width = 1
+      const maxWidth = 99
+
+      this.pjaxProgressBar_dom.classList.add('show')
+      this.pjaxProgressBar_dom.style.width = width + '%'
+
+      this.pjaxProgressBarTimer = setInterval(() => {
+        width += 5
+        if (width > maxWidth) width = maxWidth
+        this.pjaxProgressBar_dom.style.width = width + '%'
+      }, 100)
+    },
+
+    // loading progress bar end
+    pjaxProgressBarEnd() {
+      this.pjaxProgressBarTimer && clearInterval(this.pjaxProgressBarTimer)
+      this.pjaxProgressBar_dom.style.width = '100%'
+
+      const temp_1 = setTimeout(() => {
+        this.pjaxProgressBar_dom.classList.remove('show')
+        this.pjaxProgressIcon_dom.classList.remove('show')
+
+        if (this.isHasScrollProgressBar) {
+          this.scrollProgressBar_dom.classList.remove('hide')
+        }
+
+        const temp_2 = setTimeout(() => {
+          this.pjaxProgressBar_dom.style.width = '0'
+          clearTimeout(temp_1), clearTimeout(temp_2)
+        }, 200)
+      }, 200)
+    },
+
+    // insert tooltip content dom
+    insertTooltipContent() {
+      const init = () => {
+        // tooltip
+        document.querySelectorAll('.tooltip').forEach((element) => {
+          const { content, offsetX, offsetY } = element.dataset
+
+          let style = ''
+          let sTop = ''
+          let sLeft = ''
+          if (offsetX) {
+            sTop = `left: ${offsetX};`
+          }
+          if (offsetY) {
+            sLeft = `top: ${offsetY};`
+          }
+          if (offsetX || offsetY) {
+            style = ` style="${sLeft}${sTop}"`
+          }
+
+          if (content) {
+            element.insertAdjacentHTML(
+              'afterbegin',
+              `<span class="tooltip-content"${style}>${content}</span>`
+            )
+          }
+        })
+
+        // tooltip-img
+        const imgsSet = {}
+
+        const toggleShowImg = (dom, nameIdx) => {
+          document.addEventListener('click', () => {
+            if (imgsSet[nameIdx].isShowImg) {
+              dom.classList.remove('show-img')
+              imgsSet[nameIdx].isShowImg = false
+            }
+          })
+        }
+
+        const loadImg = (img, imgLoaded) => {
+          const temp = new Image()
+          const { src } = img.dataset
+          temp.src = src
+          temp.onload = () => {
+            img.src = src
+            img.removeAttribute('lazyload')
+            imgLoaded = true
+          }
+        }
+
+        document.querySelectorAll('.tooltip-img').forEach((dom, idx) => {
+          const { imgUrl, name } = dom.dataset
+          if (imgUrl) {
+            const imgDomClass = `tooltip-img-${name}`
+            const nameIdx = `${name}_${idx}`
+            const imgDom = `<img class="${imgDomClass}" lazyload data-src="${imgUrl}" alt="${name}">`
+            const imgTooltipBox = `<div class="tooltip-img-box">${imgDom}</div>`
+
+            imgsSet[nameIdx] = {
+              imgLoaded: false,
+              isShowImg: false
+            }
+
+            dom.insertAdjacentHTML('afterbegin', imgTooltipBox)
+            dom.addEventListener('click', (e) => {
+              if (!imgsSet[nameIdx].imgLoaded) {
+                loadImg(
+                  document.querySelector(`.tooltip-img-box img.${imgDomClass}`),
+                  imgsSet[nameIdx].imgLoaded
+                )
+              }
+              imgsSet[nameIdx].isShowImg = !imgsSet[nameIdx].isShowImg
+              dom.classList.toggle('show-img')
+              e.stopPropagation()
+            })
+
+            toggleShowImg(dom, nameIdx)
+          }
+        })
+      }
+      setTimeout(() => {
+        init()
+      }, 1000)
     }
-  },
-
-  isJqueryLoad: (fn) => {
-    if (typeof jQuery === 'undefined') {
-      getScript(GLOBAL_CONFIG.source.jQuery).then(fn)
-    } else {
-      fn()
-    }
-  },
-
-  isHidden: (ele) => ele.offsetHeight === 0 && ele.offsetWidth === 0,
-
-  getEleTop: (ele) => {
-    let actualTop = ele.offsetTop
-    let current = ele.offsetParent
-
-    while (current !== null) {
-      actualTop += current.offsetTop
-      current = current.offsetParent
-    }
-
-    return actualTop
   }
 
+  // init data
+  KEEP.utils.initData()
+
+  // init scroll
+  KEEP.utils.registerWindowScroll()
+
+  // toggle show tools list
+  KEEP.utils.toggleShowToolsList()
+
+  // global font adjust
+  KEEP.utils.globalFontAdjust()
+
+  // init page height handle
+  KEEP.utils.initPageHeightHandle()
+
+  // check whether TOC exists
+  KEEP.utils.initHasToc()
+
+  // big image viewer handle
+  KEEP.utils.zoomInImage()
+
+  // set how long age in home article block
+  KEEP.utils.setHowLongAgoInHome()
+
+  // insert tooltip content dom
+  KEEP.utils.insertTooltipContent()
 }
