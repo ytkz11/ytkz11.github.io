@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-01-30T09:25:25.889Z</updated>
+  <updated>2023-02-10T07:50:16.022Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>6个波段的landsat数据怎么在Matlab里叠加成12个波段</title>
+    <link href="http://ytkz11@.github.io/2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/"/>
+    <id>http://ytkz11@.github.io/2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/</id>
+    <published>2023-02-10T10:00:10.000Z</published>
+    <updated>2023-02-10T07:50:16.022Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/categories/matlab/"/>
+    
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
+    
+  </entry>
   
   <entry>
     <title>用git提交代码到github的完整步骤</title>
@@ -274,9 +299,9 @@
     <category term="matlab" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/matlab/"/>
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
     <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
@@ -328,9 +353,9 @@
     <category term="matlab" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/matlab/"/>
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
     <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
@@ -533,31 +558,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/xDnCJf&quot;&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>地物分类介绍</title>
-    <link href="http://ytkz11@.github.io/2022/10/13/tu-di-fu-gai-fen-lei-jie-shao/"/>
-    <id>http://ytkz11@.github.io/2022/10/13/tu-di-fu-gai-fen-lei-jie-shao/</id>
-    <published>2022-10-13T09:10:10.000Z</published>
-    <updated>2022-10-14T01:00:11.343Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/xaTusf&quot;&gt;&lt;img src=&quot;https://s1.ax1x.com/2022/10/13/xaTusf.jpg&quot;</summary>
         
       
     

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>6个波段的landsat数据怎么在Matlab里叠加成12个波段</title>
+      <link href="2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/"/>
+      <url>2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/</url>
+      
+        <content type="html"><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>很久没用过matlab，不记得了获取矩阵的大小的函数、不记得矩阵的下标索引操作，一些语法都忘记一干二净。但是要记住解决问题的大概思路，换个语言实现也是可以的，过程中遇到问题就去搜索。<img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302101531312.png" alt="微信截图_20230210145228"></p><p>回到这个这篇文章的主题，6个波段的landsat数据怎么在Matlab里叠加成12个波段，是一个网友向我咨询，我给出了大概的思路。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302101531066.png" alt="微信截图_20230210152449"></p><h1 id="试验"><a href="#试验" class="headerlink" title="试验"></a>试验</h1><p>由于没有landsat 8影像，这里暂用一张单波段的影像作为示例。</p><p>具体代码如下：</p><pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">clc<span class="token punctuation">,</span>clear<span class="token punctuation">;</span>filepath1 <span class="token operator">=</span> <span class="token string">'D:\hh1.tif'</span>img_1 <span class="token operator">=</span> <span class="token function">imread</span><span class="token punctuation">(</span>filepath1<span class="token punctuation">)</span><span class="token punctuation">;</span>img_2 <span class="token operator">=</span> img_1<span class="token punctuation">;</span>  <span class="token comment">% 没有第二张影像，使用第一张影像的复制</span><span class="token punctuation">[</span>row<span class="token punctuation">,</span> col<span class="token punctuation">,</span> bands<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">size</span><span class="token punctuation">(</span>img_1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">% 获取数组维度信息</span>new_bands <span class="token operator">=</span> bands<span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">% 新的影像的波段是原来的两倍</span>img_3 <span class="token operator">=</span> <span class="token function">zeros</span><span class="token punctuation">(</span><span class="token punctuation">[</span>row<span class="token punctuation">,</span> col<span class="token punctuation">,</span> new_bands<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">% 创建新的数组</span><span class="token function">img_3</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token operator">:</span>bands<span class="token punctuation">)</span> <span class="token operator">=</span> img_1<span class="token punctuation">;</span>  <span class="token comment">% 前一半放第一张影像</span><span class="token function">img_3</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">,</span>bands<span class="token operator">+</span><span class="token number">1</span><span class="token operator">:</span><span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token operator">=</span> img_2<span class="token punctuation">;</span> <span class="token comment">% 后一半放第二张影像</span>img_8 <span class="token operator">=</span> <span class="token function">uint8</span><span class="token punctuation">(</span>img_3<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">% 数值转换，不一定用得上，看有些数据是8bit 还是10bit\12bit\14bit16bit</span><span class="token comment">% 保存为tif图像</span>t <span class="token operator">=</span> <span class="token function">Tiff</span><span class="token punctuation">(</span><span class="token string">'imageIndiaP.tif'</span><span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">% 影像信息</span>tagstruct<span class="token punctuation">.</span>ImageLength <span class="token operator">=</span> <span class="token function">size</span><span class="token punctuation">(</span>img_8<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> tagstruct<span class="token punctuation">.</span>ImageWidth <span class="token operator">=</span> <span class="token function">size</span><span class="token punctuation">(</span>img_8<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">% 颜色空间解释方式</span>tagstruct<span class="token punctuation">.</span>Photometric <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">% 每个像素的数值位数，这里转换为unit8，所以为8位</span>tagstruct<span class="token punctuation">.</span>BitsPerSample <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span><span class="token comment">% 每个像素的波段个数，一般图像为1或3，但是对于遥感影像存在多个波段所以常常大于3</span>tagstruct<span class="token punctuation">.</span>SamplesPerPixel <span class="token operator">=</span> new_bands<span class="token punctuation">;</span>tagstruct<span class="token punctuation">.</span>RowsPerStrip <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>tagstruct<span class="token punctuation">.</span>PlanarConfiguration <span class="token operator">=</span> Tiff<span class="token punctuation">.</span>PlanarConfiguration<span class="token punctuation">.</span>Chunky<span class="token punctuation">;</span><span class="token comment">% 表示生成影像的软件</span>tagstruct<span class="token punctuation">.</span>Software <span class="token operator">=</span> <span class="token string">'MATLAB'</span><span class="token punctuation">;</span> <span class="token comment">% 表示对数据类型的解释</span>tagstruct<span class="token punctuation">.</span>SampleFormat <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">% 设置Tiff对象的tag</span>t<span class="token punctuation">.</span><span class="token function">setTag</span><span class="token punctuation">(</span>tagstruct<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">% 以准备好头文件，开始写数据</span>t<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>img_8<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">% 关闭影像</span>t<span class="token punctuation">.</span>close<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>可以在matlab先慢慢入门，多去网上，特别是matlab官网查看别人的代码，多多学习。<br>在matlab这样读写遥感影像，有1个点值得注意：经纬度的信息如何保存。<br>俺一开始用matlab是处理NC之类的文件，这类文件存储经纬度不同于TIF文件。</p><p>到后续处理tif文件还是要转到使用GDAL的库，在遥感领域免不了使用GDAL</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> matlab </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> matlab </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>用git提交代码到github的完整步骤</title>
       <link href="2023/01/30/shi-yong-python-jiang-netcdf-zhuan-huan-wei-geotiff-wen-jian/"/>
       <url>2023/01/30/shi-yong-python-jiang-netcdf-zhuan-huan-wei-geotiff-wen-jian/</url>
@@ -254,9 +279,9 @@
       
         <tags>
             
-            <tag> 遥感 </tag>
-            
             <tag> matlab </tag>
+            
+            <tag> 遥感 </tag>
             
         </tags>
       
@@ -308,9 +333,9 @@
       
         <tags>
             
-            <tag> 遥感 </tag>
-            
             <tag> matlab </tag>
+            
+            <tag> 遥感 </tag>
             
         </tags>
       
