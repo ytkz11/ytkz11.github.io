@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-02-16 14:13:04</span>
+        <span class="pc">2023-02-16 15:25:41</span>
     </span>
     
     
@@ -208,12 +208,43 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png" alt="download"></p>
-<p>文章很多内容机翻于w3schools， 有需要的同学可以去它家网站学习:<a class="link" target="_blank" rel="noopener" href="https://www.w3schools.com/KOTLIN/kotlin_intro.php">https://www.w3schools.com/KOTLIN/kotlin_intro.php<i class="fas fa-external-link-alt"></i></a></p>
+                <h1 id=""><a href="#" class="headerlink" title=" "></a> </h1><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png" alt="download"></p>
 <hr>
-<h1 id="Kotlin-OOP"><a href="#Kotlin-OOP" class="headerlink" title="Kotlin OOP"></a>Kotlin OOP</h1><p><strong>Object-Oriented Programming</strong>简称OOP，中文叫做面向对象编程。</p>
+<h1 id="OOP"><a href="#OOP" class="headerlink" title="OOP"></a>OOP</h1><p><strong>Object-Oriented Programming</strong>简称OOP，中文叫做面向对象编程。</p>
 <p>和面向对象编程不一样的是另一种编程思想：面向过程编程。</p>
-<p>你可以这么理解，C语言是面向过程编程。但是面向过程编程一旦工程变大，管理就面临着困难，debug都不知道在哪里改</p>
+<p>过程编程是关于编写对数据执行操作的过程或方法，而面向对象编程是关于创建包含数据和方法的对象。</p>
+<p>你可以这么理解，C语言是面向过程编程。但是面向过程编程一旦工程变大，管理就面临着困难，debug都不知道在哪里改。C PLUS PLUS语言应运而生，C Plus Plus简写cpp,或者叫c++。</p>
+<p>C++、Java、Kotlin、C#、Python都是C语言家族的成员，也是面向对象编程语言。</p>
+<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><p>面向对象编程与过程编程相比有几个优点：</p>
+<ul>
+<li>OOP 执行起来更快更容易</li>
+<li>OOP 为程序提供了清晰的结构</li>
+<li>OOP 有助于保持 Kotlin 代码的 DRY“Don’t Repeat Yourself”，并使代码更易于维护、修改和调试</li>
+<li>OOP 可以用更少的代码和更短的开发时间创建完全可重用的应用程序</li>
+</ul>
+<h2 id="什么是类和对象？"><a href="#什么是类和对象？" class="headerlink" title="什么是类和对象？"></a>什么是类和对象？</h2><p>类是对象的模板，对象是类的实例。</p>
+<p>创建单个对象时，它们会继承类的所有变量和方法。</p>
+<h1 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h1><pre class="line-numbers language-none"><code class="language-none">fun main(){
+    var myFriend = 朋友()
+    myFriend.name = "张三"
+    myFriend.hobby = "钓鱼"
+    println("我有一个朋友叫"+myFriend.name)
+    println(myFriend.name +"喜欢"+ myFriend.hobby)
+}
+class 朋友 {
+    var name = ""
+    var hobby = ""
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><p>在 Kotlin 中，有一种更快的方法，即使用<strong>构造函数</strong>。</p>
+<p>构造函数就像一个特殊的<a class="link" target="_blank" rel="noopener" href="https://www.w3schools.com/kotlin/kotlin_functions.php">函数<i class="fas fa-external-link-alt"></i></a>，它是通过<code>()</code> 类名后的两个括号来定义的。您可以在括号内指定属性（例如将参数传递给常规函数）。</p>
+<p>创建类的对象时，构造函数将初始化属性。请记住指定属性/变量的类型：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">class</span> 朋友<span class="token punctuation">(</span><span class="token keyword">var</span> name<span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token keyword">var</span> hobby<span class="token operator">:</span> String<span class="token punctuation">)</span>
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">val</span> friend <span class="token operator">=</span> 朋友<span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"钓鱼"</span><span class="token punctuation">)</span>
+    <span class="token function">Println</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+      <span class="token function">Println</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
 
