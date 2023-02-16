@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-02-10T07:50:16.022Z</updated>
+  <updated>2023-02-16T06:00:55.407Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kotlin自学过程，第二天2023年2月16日</title>
+    <link href="http://ytkz11@.github.io/2023/02/16/kotlin-zi-xue-ji-lu-2/"/>
+    <id>http://ytkz11@.github.io/2023/02/16/kotlin-zi-xue-ji-lu-2/</id>
+    <published>2023-02-16T14:00:10.000Z</published>
+    <updated>2023-02-16T06:00:55.407Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么要学Kotlin&quot;&gt;&lt;a href=&quot;#为什么要学Kotlin&quot; class=&quot;headerlink&quot; title=&quot;为什么要学Kotlin&quot;&gt;&lt;/a&gt;为什么要学Kotlin&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="kotlin" scheme="http://ytkz11@.github.io/categories/kotlin/"/>
+    
+    
+    <category term="kotlin" scheme="http://ytkz11@.github.io/tags/kotlin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kotlin自学过程，第一天2023年2月13日</title>
+    <link href="http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/"/>
+    <id>http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/</id>
+    <published>2023-02-13T14:00:10.000Z</published>
+    <updated>2023-02-16T05:59:34.271Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么要学Kotlin&quot;&gt;&lt;a href=&quot;#为什么要学Kotlin&quot; class=&quot;headerlink&quot; title=&quot;为什么要学Kotlin&quot;&gt;&lt;/a&gt;为什么要学Kotlin&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="kotlin" scheme="http://ytkz11@.github.io/categories/kotlin/"/>
+    
+    
+    <category term="kotlin" scheme="http://ytkz11@.github.io/tags/kotlin/"/>
+    
+  </entry>
   
   <entry>
     <title>6个波段的landsat数据怎么在Matlab里叠加成12个波段</title>
@@ -299,9 +349,9 @@
     <category term="matlab" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/matlab/"/>
     
     
-    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
-    
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
     
   </entry>
   
@@ -353,9 +403,9 @@
     <category term="matlab" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/matlab/"/>
     
     
-    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
-    
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
     
   </entry>
   
@@ -508,56 +558,6 @@
         
     <summary type="html">&lt;p&gt;&lt;u&gt;SAR的一级数据的无物理意义的DN值，而二级数据则是带有坐标信息的后向散射系数信息（图像）&lt;/u&gt;&lt;/p&gt;
 &lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>顾及物候信息提取冬小麦面积（基于AI earth）</title>
-    <link href="http://ytkz11@.github.io/2022/10/17/ti-qu-dong-xiao-mai-zai-ai-earth-shang-shi-xian/"/>
-    <id>http://ytkz11@.github.io/2022/10/17/ti-qu-dong-xiao-mai-zai-ai-earth-shang-shi-xian/</id>
-    <published>2022-10-17T07:30:10.000Z</published>
-    <updated>2022-10-18T09:29:28.837Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;农业遥感&quot;&gt;&lt;a href=&quot;#农业遥感&quot; class=&quot;headerlink&quot; title=&quot;农业遥感&quot;&gt;&lt;/a&gt;农业遥感&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/xDV2xH&quot;&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阿里AI Earth地球科学云平台1</title>
-    <link href="http://ytkz11@.github.io/2022/10/14/a-li-ai-earth-di-qiu-ke-xue-yun-ping-tai-1/"/>
-    <id>http://ytkz11@.github.io/2022/10/14/a-li-ai-earth-di-qiu-ke-xue-yun-ping-tai-1/</id>
-    <published>2022-10-14T09:30:10.000Z</published>
-    <updated>2022-10-17T07:36:00.142Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/xDnCJf&quot;&gt;&lt;img</summary>
         
       
     
