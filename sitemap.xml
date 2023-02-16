@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/</loc>
+    <loc>http://ytkz11@.github.io/2023/02/16/kotlin-zi-xue-ji-lu-2/</loc>
     
     <lastmod>2023-02-16</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-2/</loc>
+    <loc>http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/</loc>
     
     <lastmod>2023-02-16</lastmod>
     
@@ -508,14 +508,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/tags/pyside6/</loc>
+    <loc>http://ytkz11@.github.io/tags/deep-learn/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/tags/deep-learn/</loc>
+    <loc>http://ytkz11@.github.io/tags/pyside6/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -627,14 +627,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/tags/%E6%9D%82%E6%96%87/</loc>
+    <loc>http://ytkz11@.github.io/tags/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/tags/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/</loc>
+    <loc>http://ytkz11@.github.io/tags/%E6%9D%82%E6%96%87/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -692,14 +692,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/</loc>
+    <loc>http://ytkz11@.github.io/categories/deep-learn/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/deep-learn/</loc>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -748,14 +748,14 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/python/</loc>
+    <loc>http://ytkz11@.github.io/categories/linux/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/linux/</loc>
+    <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/python/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -825,13 +825,6 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E6%9D%82%E6%96%87/</loc>
-    <lastmod>2023-02-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://ytkz11@.github.io/categories/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
@@ -839,7 +832,7 @@
   </url>
   
   <url>
-    <loc>http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
+    <loc>http://ytkz11@.github.io/categories/%E6%9D%82%E6%96%87/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -847,6 +840,13 @@
   
   <url>
     <loc>http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/</loc>
+    <lastmod>2023-02-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2023-02-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
