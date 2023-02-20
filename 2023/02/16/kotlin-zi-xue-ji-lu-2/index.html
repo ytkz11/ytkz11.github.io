@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-02-16 15:25:41</span>
+        <span class="pc">2023-02-16 19:31:27</span>
     </span>
     
     
@@ -235,6 +235,7 @@ class 朋友 {
     var name = ""
     var hobby = ""
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="C:\Users\OBT-SJCP-B-A08\Pictures\blog\微信截图_20230216145802.png" alt="微信截图_20230216145802"></p>
 <h1 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h1><p>在 Kotlin 中，有一种更快的方法，即使用<strong>构造函数</strong>。</p>
 <p>构造函数就像一个特殊的<a class="link" target="_blank" rel="noopener" href="https://www.w3schools.com/kotlin/kotlin_functions.php">函数<i class="fas fa-external-link-alt"></i></a>，它是通过<code>()</code> 类名后的两个括号来定义的。您可以在括号内指定属性（例如将参数传递给常规函数）。</p>
 <p>创建类的对象时，构造函数将初始化属性。请记住指定属性/变量的类型：</p>
@@ -243,8 +244,51 @@ class 朋友 {
 <span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">val</span> friend <span class="token operator">=</span> 朋友<span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"钓鱼"</span><span class="token punctuation">)</span>
     <span class="token function">Println</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
-      <span class="token function">Println</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+      <span class="token function">Println</span><span class="token punctuation">(</span>friend<span class="token punctuation">.</span>hobby<span class="token punctuation">)</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="C:\Users\OBT-SJCP-B-A08\Pictures\blog\微信截图_20230216152621.png" alt="微信截图_20230216152621"></p>
+<h1 id="Kotlin-类方法"><a href="#Kotlin-类方法" class="headerlink" title="Kotlin 类方法"></a>Kotlin 类方法</h1><p>写在类里面的方法或者函数。实例化后可以调用类方法。</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">class</span> <span class="token function">Friend</span><span class="token punctuation">(</span><span class="token keyword">var</span> name<span class="token operator">:</span> String<span class="token punctuation">,</span> <span class="token keyword">var</span> food<span class="token operator">:</span> String<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 类方法</span>
+    <span class="token keyword">fun</span> <span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// Class function with parameters</span>
+    <span class="token keyword">fun</span> <span class="token function">showHeight</span><span class="token punctuation">(</span>height<span class="token operator">:</span> Int<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Max height is: "</span> <span class="token operator">+</span> height<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">val</span> myFriend <span class="token operator">=</span> <span class="token function">Friend</span><span class="token punctuation">(</span><span class="token string">"Zhangsan"</span><span class="token punctuation">,</span> <span class="token string">"beef"</span><span class="token punctuation">)</span>
+
+    <span class="token function">println</span><span class="token punctuation">(</span> myFriend<span class="token punctuation">.</span><span class="token function">showName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span> myFriend<span class="token punctuation">.</span><span class="token function">showHeight</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="C:\Users\OBT-SJCP-B-A08\Pictures\blog\微信截图_20230216193102.png" alt="微信截图_20230216193102"></p>
+<h1 id="Kotlin-继承"><a href="#Kotlin-继承" class="headerlink" title="Kotlin 继承"></a>Kotlin 继承</h1><p>在 Kotlin 中，可以将类的属性和函数从一个类继承到另一个类。我们将“继承概念”分为两类：</p>
+<ul>
+<li><strong>子类</strong> - 从另一个类继承的类</li>
+<li><strong>超类</strong>（父类）- 继承的来源类</li>
+</ul>
+<p>在下面的示例中，<code>MyFriendClass</code>（子类）继承了friend类（超类）的属性<code>name</code>：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token comment">// 超类</span>
+<span class="token keyword">open</span> <span class="token keyword">class</span> friend <span class="token punctuation">{</span>
+    <span class="token keyword">val</span> name <span class="token operator">=</span> <span class="token string">"张三"</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 子类</span>
+<span class="token keyword">class</span> MyFriendClass<span class="token operator">:</span> <span class="token function">friend</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">fun</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// x is now inherited from the superclass</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">val</span> myFriend<span class="token operator">=</span> <span class="token function">MyFriendClass</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    myFriend<span class="token punctuation">.</span><span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="C:\Users\OBT-SJCP-B-A08\Pictures\blog\微信截图_20230216192316.png" alt="微信截图_20230216192316"></p>
 
             </div>
 
@@ -267,10 +311,10 @@ class 朋友 {
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/02/13/kotlin-zi-xue-ji-lu-1/"
+                               href="/2023/02/16/ji-lu-yi-ci-pa-chong-li-zi/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">kotlin自学过程，第一天2023年2月13日</span>
+                                <span class="post-nav-title-item">记录一次爬虫例子</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">

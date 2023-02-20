@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-02-16T07:25:41.009Z</updated>
+  <updated>2023-02-16T11:31:27.457Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ytkz11@.github.io/2023/02/16/kotlin-zi-xue-ji-lu-2/"/>
     <id>http://ytkz11@.github.io/2023/02/16/kotlin-zi-xue-ji-lu-2/</id>
     <published>2023-02-16T14:00:10.000Z</published>
-    <updated>2023-02-16T07:25:41.009Z</updated>
+    <updated>2023-02-16T11:31:27.457Z</updated>
     
     
       
@@ -29,6 +29,32 @@
         
         
     <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="kotlin" scheme="http://ytkz11@.github.io/categories/kotlin/"/>
+    
+    
+    <category term="kotlin" scheme="http://ytkz11@.github.io/tags/kotlin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录一次爬虫例子</title>
+    <link href="http://ytkz11@.github.io/2023/02/16/ji-lu-yi-ci-pa-chong-li-zi/"/>
+    <id>http://ytkz11@.github.io/2023/02/16/ji-lu-yi-ci-pa-chong-li-zi/</id>
+    <published>2023-02-16T14:00:10.000Z</published>
+    <updated>2023-02-20T09:31:48.619Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;hr&gt;
+&lt;h1 id=&quot;爬虫&quot;&gt;&lt;a href=&quot;#爬虫&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -532,32 +558,6 @@
         
     <summary type="html">&lt;p&gt;有时候，看地图会误判，地图上俄罗斯过大（6400公里），非洲过小（7200公里）。&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://imgse.com/i/x6Rol9&quot;&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高分3号1级到2级的处理过程</title>
-    <link href="http://ytkz11@.github.io/2022/10/19/gao-fen-3-hao-1-ji-dao-2-ji-de-chu-li-guo-cheng/"/>
-    <id>http://ytkz11@.github.io/2022/10/19/gao-fen-3-hao-1-ji-dao-2-ji-de-chu-li-guo-cheng/</id>
-    <published>2022-10-19T08:30:10.000Z</published>
-    <updated>2022-10-19T08:02:10.281Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;u&gt;SAR的一级数据的无物理意义的DN值，而二级数据则是带有坐标信息的后向散射系数信息（图像）&lt;/u&gt;&lt;/p&gt;
-&lt;h2 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot;</summary>
         
       
     
