@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Keep Team">
+    
+    <title>
+        
+            一个PyTorch 库，提供特定于地理空间数据的数据集、采样器、转换和预训练模型，由 Microsoft 提供支持。 |
+        
+        Keep Theme
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/logo.svg","favicon":"/images/logo.svg","avatar":"/images/avatar.svg","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="logo-title" href="/">
+               Keep Theme
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">一个PyTorch 库，提供特定于地理空间数据的数据集、采样器、转换和预训练模型，由 Microsoft 提供支持。</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/avatar.svg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Keep Team</span>
+                            
+                                <span class="author-label">Lv4</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-02-10 18:00:10</span>
+        <span class="mobile">2023-02-10 18:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-02-24 17:47:57</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/matlab/">matlab</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/matlab/">matlab</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>很久没用过matlab，不记得了获取矩阵的大小的函数、不记得矩阵的下标索引操作，一些语法都忘记一干二净。但是要记住解决问题的大概思路，换个语言实现也是可以的，过程中遇到问题就去搜索。<img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302101531312.png" alt="微信截图_20230210145228"></p>
+<p>回到这个这篇文章的主题，6个波段的landsat数据怎么在Matlab里叠加成12个波段，是一个网友向我咨询，我给出了大概的思路。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302101531066.png" alt="微信截图_20230210152449"></p>
+<h1 id="试验"><a href="#试验" class="headerlink" title="试验"></a>试验</h1><p>由于没有landsat 8影像，这里暂用一张单波段的影像作为示例。</p>
+<p>具体代码如下：</p>
+<pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab">clc<span class="token punctuation">,</span>clear<span class="token punctuation">;</span>
+filepath1 <span class="token operator">=</span> <span class="token string">'D:\hh1.tif'</span>
+img_1 <span class="token operator">=</span> <span class="token function">imread</span><span class="token punctuation">(</span>filepath1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+img_2 <span class="token operator">=</span> img_1<span class="token punctuation">;</span>  <span class="token comment">% 没有第二张影像，使用第一张影像的复制</span>
+<span class="token punctuation">[</span>row<span class="token punctuation">,</span> col<span class="token punctuation">,</span> bands<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">size</span><span class="token punctuation">(</span>img_1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">% 获取数组维度信息</span>
+new_bands <span class="token operator">=</span> bands<span class="token operator">*</span><span class="token number">2</span><span class="token punctuation">;</span> <span class="token comment">% 新的影像的波段是原来的两倍</span>
+img_3 <span class="token operator">=</span> <span class="token function">zeros</span><span class="token punctuation">(</span><span class="token punctuation">[</span>row<span class="token punctuation">,</span> col<span class="token punctuation">,</span> new_bands<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">% 创建新的数组</span>
+<span class="token function">img_3</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token operator">:</span>bands<span class="token punctuation">)</span> <span class="token operator">=</span> img_1<span class="token punctuation">;</span>  <span class="token comment">% 前一半放第一张影像</span>
+<span class="token function">img_3</span><span class="token punctuation">(</span><span class="token operator">:</span><span class="token punctuation">,</span><span class="token operator">:</span><span class="token punctuation">,</span>bands<span class="token operator">+</span><span class="token number">1</span><span class="token operator">:</span><span class="token keyword">end</span><span class="token punctuation">)</span> <span class="token operator">=</span> img_2<span class="token punctuation">;</span> <span class="token comment">% 后一半放第二张影像</span>
+
+
+img_8 <span class="token operator">=</span> <span class="token function">uint8</span><span class="token punctuation">(</span>img_3<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">% 数值转换，不一定用得上，看有些数据是8bit 还是10bit\12bit\14bit16bit</span>
+<span class="token comment">% 保存为tif图像</span>
+t <span class="token operator">=</span> <span class="token function">Tiff</span><span class="token punctuation">(</span><span class="token string">'imageIndiaP.tif'</span><span class="token punctuation">,</span><span class="token string">'w'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">% 影像信息</span>
+tagstruct<span class="token punctuation">.</span>ImageLength <span class="token operator">=</span> <span class="token function">size</span><span class="token punctuation">(</span>img_8<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+tagstruct<span class="token punctuation">.</span>ImageWidth <span class="token operator">=</span> <span class="token function">size</span><span class="token punctuation">(</span>img_8<span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+
+<span class="token comment">% 颜色空间解释方式</span>
+tagstruct<span class="token punctuation">.</span>Photometric <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token comment">% 每个像素的数值位数，这里转换为unit8，所以为8位</span>
+tagstruct<span class="token punctuation">.</span>BitsPerSample <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+<span class="token comment">% 每个像素的波段个数，一般图像为1或3，但是对于遥感影像存在多个波段所以常常大于3</span>
+tagstruct<span class="token punctuation">.</span>SamplesPerPixel <span class="token operator">=</span> new_bands<span class="token punctuation">;</span>
+tagstruct<span class="token punctuation">.</span>RowsPerStrip <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
+tagstruct<span class="token punctuation">.</span>PlanarConfiguration <span class="token operator">=</span> Tiff<span class="token punctuation">.</span>PlanarConfiguration<span class="token punctuation">.</span>Chunky<span class="token punctuation">;</span>
+<span class="token comment">% 表示生成影像的软件</span>
+tagstruct<span class="token punctuation">.</span>Software <span class="token operator">=</span> <span class="token string">'MATLAB'</span><span class="token punctuation">;</span> 
+<span class="token comment">% 表示对数据类型的解释</span>
+tagstruct<span class="token punctuation">.</span>SampleFormat <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token comment">% 设置Tiff对象的tag</span>
+t<span class="token punctuation">.</span><span class="token function">setTag</span><span class="token punctuation">(</span>tagstruct<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">% 以准备好头文件，开始写数据</span>
+t<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>img_8<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">% 关闭影像</span>
+t<span class="token punctuation">.</span>close<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>可以在matlab先慢慢入门，多去网上，特别是matlab官网查看别人的代码，多多学习。<br>在matlab这样读写遥感影像，有1个点值得注意：经纬度的信息如何保存。<br>俺一开始用matlab是处理NC之类的文件，这类文件存储经纬度不同于TIF文件。</p>
+<p>到后续处理tif文件还是要转到使用GDAL的库，在遥感领域免不了使用GDAL</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/matlab/">#matlab</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">6个波段的landsat数据怎么在Matlab里叠加成12个波段</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/01/30/shi-yong-python-jiang-netcdf-zhuan-huan-wei-geotiff-wen-jian/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">用git提交代码到github的完整步骤</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">Keep Team</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

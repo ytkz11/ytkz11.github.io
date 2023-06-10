@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-02-16T11:31:27.457Z</updated>
+  <updated>2023-02-27T12:46:14.997Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>himawari8地球同步卫星影像瓦片下载</title>
+    <link href="http://ytkz11@.github.io/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/"/>
+    <id>http://ytkz11@.github.io/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/</id>
+    <published>2023-02-27T14:00:10.000Z</published>
+    <updated>2023-02-27T12:46:14.997Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;himawari8地球同步卫星&quot;&gt;&lt;a href=&quot;#himawari8地球同步卫星&quot; class=&quot;headerlink&quot; title=&quot;himawari8地球同步卫星&quot;&gt;&lt;/a&gt;himawari8地球同步卫星&lt;/h1&gt;&lt;p&gt;地球静止轨道（或作“地球静止&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="himawari8" scheme="http://ytkz11@.github.io/categories/himawari8/"/>
+    
+    
+    <category term="himawari8" scheme="http://ytkz11@.github.io/tags/himawari8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello go</title>
+    <link href="http://ytkz11@.github.io/2023/02/27/hello-go/"/>
+    <id>http://ytkz11@.github.io/2023/02/27/hello-go/</id>
+    <published>2023-02-27T14:00:10.000Z</published>
+    <updated>2023-03-01T00:46:02.197Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-go&quot; data-language=&quot;go&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="http://ytkz11@.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="http://ytkz11@.github.io/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自学PyQt-GUI编程</title>
+    <link href="http://ytkz11@.github.io/2023/02/21/pyqt-zi-xue-ji-lu/"/>
+    <id>http://ytkz11@.github.io/2023/02/21/pyqt-zi-xue-ji-lu/</id>
+    <published>2023-02-21T14:00:10.000Z</published>
+    <updated>2023-02-21T07:30:21.406Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么要学PyQt&quot;&gt;&lt;a href=&quot;#为什么要学PyQt&quot; class=&quot;headerlink&quot; title=&quot;为什么要学PyQt&quot;&gt;&lt;/a&gt;为什么要学PyQt&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="PyQt" scheme="http://ytkz11@.github.io/categories/PyQt/"/>
+    
+    
+    <category term="PyQt" scheme="http://ytkz11@.github.io/tags/PyQt/"/>
+    
+  </entry>
   
   <entry>
     <title>kotlin自学记录2，第二天2023年2月16日</title>
@@ -124,6 +199,31 @@
     <id>http://ytkz11@.github.io/2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/</id>
     <published>2023-02-10T10:00:10.000Z</published>
     <updated>2023-02-10T07:50:16.022Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/categories/matlab/"/>
+    
+    
+    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个PyTorch 库，提供特定于地理空间数据的数据集、采样器、转换和预训练模型，由 Microsoft 提供支持。</title>
+    <link href="http://ytkz11@.github.io/2023/02/10/torchgeo/"/>
+    <id>http://ytkz11@.github.io/2023/02/10/torchgeo/</id>
+    <published>2023-02-10T10:00:10.000Z</published>
+    <updated>2023-02-24T09:47:57.315Z</updated>
     
     
       
@@ -458,115 +558,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python两个魔方变量使用说明</title>
-    <link href="http://ytkz11@.github.io/2022/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/"/>
-    <id>http://ytkz11@.github.io/2022/11/05/python-liang-ge-mo-fang-bian-liang-shi-yong-shuo-ming/</id>
-    <published>2022-11-05T10:00:10.000Z</published>
-    <updated>2022-12-01T02:13:08.759Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我常常分不清楚python中的&lt;em&gt;args和*&lt;/em&gt;kwargs的用法，所以才有这篇文章的编写的必要性。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;args、*&lt;/em&gt;kwargs主要用于函数定义，可以将不确定个数的参数传递给一个函数。&lt;/p&gt;
-&lt;p&gt;在 Python</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>遥感监测珊瑚礁如何应对气候变化</title>
-    <link href="http://ytkz11@.github.io/2022/11/03/yao-gan-jian-ce-shan-hu-jiao-ru-he-ying-dui-qi-hou-bian-hua/"/>
-    <id>http://ytkz11@.github.io/2022/11/03/yao-gan-jian-ce-shan-hu-jiao-ru-he-ying-dui-qi-hou-bian-hua/</id>
-    <published>2022-11-03T15:00:10.000Z</published>
-    <updated>2022-12-01T02:13:40.915Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://imgse.com/i/xqsUAS&quot;&gt;&lt;img src=&quot;https://s1.ax1x.com/2022/11/03/xqsUAS.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杂|为什么物体潮湿时会变暗</title>
-    <link href="http://ytkz11@.github.io/2022/11/01/za-wei-shi-me-wu-ti-chao-shi-shi-hui-bian-an/"/>
-    <id>http://ytkz11@.github.io/2022/11/01/za-wei-shi-me-wu-ti-chao-shi-shi-hui-bian-an/</id>
-    <published>2022-11-01T10:00:10.000Z</published>
-    <updated>2022-12-01T02:13:54.262Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot; href=&quot;https://aryankashyap.com/why-are-some-things-darker-when-wet&quot;&gt;为什么物体潮湿时会变暗？&lt;i class=&quot;fas</summary>
-        
-      
-    
-    
-    
-    <category term="其他知识" scheme="http://ytkz11@.github.io/categories/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="其他知识" scheme="http://ytkz11@.github.io/tags/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程|遥感影像显示拉伸</title>
-    <link href="http://ytkz11@.github.io/2022/11/01/bian-cheng-zhi-yao-gan-ying-xiang-xian-shi-la-shen/"/>
-    <id>http://ytkz11@.github.io/2022/11/01/bian-cheng-zhi-yao-gan-ying-xiang-xian-shi-la-shen/</id>
-    <published>2022-11-01T10:00:10.000Z</published>
-    <updated>2022-12-01T02:13:47.782Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;计算机显示图像主要以两种方式的数据类型：浮点型和整型。&lt;/p&gt;
-&lt;p&gt;浮点型：图像范围大小在0:1之间&lt;/p&gt;
-&lt;p&gt;整型：图像范围大小在0:255之间&lt;/p&gt;
-&lt;p&gt;其中，0:255的整型也称为8bit，8字节。一个字节代表01，8个字节也就是2的8次方，等于255。正常</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
