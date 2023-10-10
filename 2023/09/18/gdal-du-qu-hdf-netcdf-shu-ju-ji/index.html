@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            GDAL读取HDF、NetCDF数据集 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">GDAL读取HDF、NetCDF数据集</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-09-18 14:32:10</span>
+        <span class="mobile">2023-09-18 14:32</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-09-18 16:47:13</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/gdal/">gdal</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/gdal/">gdal</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="HDF5、NetCDF"><a href="#HDF5、NetCDF" class="headerlink" title="HDF5、NetCDF"></a>HDF5、NetCDF</h1><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202309181605772.png" alt="xarray"></p>
+<p>默认HDF5、NetCDF这两类文件是相似，读取文件的步骤也是相似的。</p>
+<p>HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc</p>
+<p>以下用nc文件代指HDF、NetCDF文件。</p>
+<p>对程序员来说，nc文件和zip、jpeg、bmp文件格式类似，都是一种文件格式的标准。netcdf文件开始的目的是用于存储气象科学中的数据，已经成为许多数据采集软件的生成文件的格式。利用NetCDF可以对网格数据进行高效地存储、管理、获取和分发等操作。</p>
+<p>由于其灵活性，能够传输海量的面向阵列（array-oriented）数据，广泛应用于大气科学、水文、海洋学、环境模拟、地球物理等诸多领域，例如，NCEP(美国国家环境预报中心)发布的再分析资料，NOAA的CDC(气候数据中心)发布的海洋与大气综合数据集(COADS)均采用NetCDF作为标准。</p>
+<p>从数学上来说，netcdf存储的数据就是一个多自变量的单值函数。用公式来说就是f(x,y,z,…)=value,函数的自变量x,y,z等在netcdf中叫做维(dimension)或坐标轴(axis),函数值value在netcdf中叫做变量(Variables).而自变量和函数值在物理学上的一些性质，比如计量单位(量纲)、物理学名称等等在netcdf中就叫属性(Attributes).</p>
+<h1 id="gdal读取NC文件的步骤"><a href="#gdal读取NC文件的步骤" class="headerlink" title="gdal读取NC文件的步骤"></a>gdal读取NC文件的步骤</h1><p>1.使用gdalinfo获取NC文件的中包含的子数据信息。</p>
+<p>2.根据子数据信息，打开对应的数据集。</p>
+<h2 id="gdalinfo获取NC子数据信息"><a href="#gdalinfo获取NC子数据信息" class="headerlink" title="gdalinfo获取NC子数据信息"></a>gdalinfo获取NC子数据信息</h2><p>在命令行输入 gdalinfo xxx.nc</p>
+<p>以下是用sentinel3数据为示例，如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202309181605451.png" alt="image-20230912144929846"></p>
+<h2 id="打开对应的数据集"><a href="#打开对应的数据集" class="headerlink" title="打开对应的数据集"></a>打开对应的数据集</h2><p>因为 HDF5 、nc是 GDAL 支持的格式，所以GDAL是一种打开HDF5的一种方法</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+
+hdf_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span><span class="token string">"/path/to/hdf/hdf_file.h5"</span><span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+
+<span class="token comment"># 替换 &lt;subdataset&gt; 为你要读取的波段,从0开始索引</span>
+band_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>hdf_ds<span class="token punctuation">.</span>GetSubDatasets<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">&lt;</span>subdataset<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+
+band_array <span class="token operator">=</span> band_ds<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>band_array</code>然后将是一个包含子数据集值的 numpy 数组。</p>
+<p>可以使用该方法或从命令行<code>.GetSubDatasets()</code>使用来找出要寻址的子数据集。</p>
+<p>以下是具体例子，使用GDAL获取Sentinel-3 数据的经度‘、纬度、高度</p>
+<p>Sentinel-3 数据地理空间信息保存在geo_coordinates.nc，该文件共有三个波段，第一个波段到第三个波段分别是高度、纬度、经度。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> osr
+geo_file <span class="token operator">=</span> <span class="token string">r'xxx\\geo_coordinates.nc'</span>
+ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>geo_file<span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+altitude_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>ds<span class="token punctuation">.</span>GetSubDatasets<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+latitude_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>ds<span class="token punctuation">.</span>GetSubDatasets<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+longitude_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>ds<span class="token punctuation">.</span>GetSubDatasets<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+
+altitude_array <span class="token operator">=</span> altitude_ds<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span>
+latitude_array <span class="token operator">=</span> latitude_ds<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">0.000001</span>
+longitude_array <span class="token operator">=</span> longitude_ds<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">0.000001</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在nc文件中保存的数值一般是整型，为了保证数值的精确性一般要进行缩放。例如，假设纬度是21.111578°，如果用浮点型进行保存，存储空间占比大。所以，欧空局对此的操作是，把经纬度放大1000000倍进行保存，变成21111578。相对的，我们要读取数据则要进行缩小1000000倍。这样做的好处在于存储空间大大减少。</p>
+<p>缩放系数0.000001，在gdalinfo 读取信息发现。</p>
+<p>或者使用gdal中的 ds.GetMetadata()函数获取信息.</p>
+<pre class="line-numbers language-none"><code class="language-none">from osgeo import gdal, osr
+geo_file = r'xxx\\geo_coordinates.nc'
+ds = gdal.Open(geo_file, gdal.GA_ReadOnly)
+print(ds.GetMetadata())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>输出如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">Out[1]: 
+{'absolute_orbit_number': '35981 ',
+ 'altitude_long_name': 'DEM corrected altitude',
+ 'altitude_positive': 'up',
+ 'altitude_standard_name': 'altitude',
+ 'altitude_units': 'meters',
+ 'altitude_valid_max': '9000 ',
+ 'altitude_valid_min': '-1000 ',
+ 'altitude__FillValue': '-32768 ',
+ 'columns_CLASS': 'DIMENSION_SCALE',
+ 'columns_NAME': 'This is a netCDF dimension but not a netCDF variable.      4865',
+ 'columns_REFERENCE_LIST': '',
+ 'comment': ' ',
+ 'contact': 'eosupport@copernicus.esa.int',
+ 'creation_time': '2022-01-15T21:01:27Z',
+ 'history': '  2022-02-15T22:00:27Z: PUGCoreProcessor joborder.21059.xml',
+ 'institution': 'PS1',
+ 'lat_long_name': 'DEM corrected latitude',
+ 'lat_scale_factor': '1e-06 ',
+ 'lat_standard_name': 'latitude',
+ 'lat_units': 'degrees_north',
+ 'lat_valid_max': '90000000 ',
+ 'lat_valid_min': '-90000000 ',
+ 'lat__FillValue': '-2147483648 ',
+ 'lon_long_name': 'DEM corrected longitude',
+ 'lon_scale_factor': '1e-06 ',
+ 'lon_standard_name': 'longitude',
+ 'lon_units': 'degrees_east',
+ 'lon_valid_max': '180000000 ',
+ 'lon_valid_min': '-180000000 ',
+ 'lon__FillValue': '-2147483648 ',
+ 'netCDF_version': '4.2 of Mar 13 2018 10:14:33 $',
+ 'processing_baseline': 'SYN_L2_.002.16.00',
+ 'product_name': 'S3A_SY_2_SYN___XXXXX.SEN3',
+ 'references': 'S3IPF PDS 006 - i1r14 - Product Data Format Specification - SYNERGY, S3IPF PDS 002 - i1r8 - Product Data Format Specification - Product Structures, S3IPF DPM 004 - i1r11 - Detailed Processing Model - SYN',
+ 'resolution': '[ 300 300 ]',
+ 'rows_CLASS': 'DIMENSION_SCALE',
+ 'rows_NAME': 'This is a netCDF dimension but not a netCDF variable.      4091',
+ 'rows_REFERENCE_LIST': '',
+ 'source': 'IPF-SY-2 06.23',
+ 'start_time': '2022-02-14T02:42:05.084552Z',
+ 'stop_time': '2022-02-14T02:45:05.049627Z',
+ 'title': 'SYN L2, high resolution georeferencing data'}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>以上是简单的介绍gdal读取netcdf格式的例子。</p>
+<p>读取nc中的经纬度信息有什么用？这个是为了后续进行几何校正用的。比如nc转tif就要进行几何校正。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/gdal/">#gdal</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">编程 | 从RGBA图片格式理解波段</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/06/12/gadm-shi-liang-xia-zai/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">GADM-矢量下载</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-06-12T02:46:20.802Z</updated>
+  <updated>2023-10-10T10:31:29.005Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编程 | 从RGBA图片格式理解波段</title>
+    <link href="http://ytkz11@.github.io/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/"/>
+    <id>http://ytkz11@.github.io/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/</id>
+    <published>2023-10-10T10:26:58.000Z</published>
+    <updated>2023-10-10T10:31:29.005Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;RGBA格式&quot;&gt;&lt;a href=&quot;#RGBA格式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="gdal" scheme="http://ytkz11@.github.io/categories/gdal/"/>
+    
+    
+    <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GDAL读取HDF、NetCDF数据集</title>
+    <link href="http://ytkz11@.github.io/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/"/>
+    <id>http://ytkz11@.github.io/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/</id>
+    <published>2023-09-18T06:32:10.000Z</published>
+    <updated>2023-09-18T08:47:13.228Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HDF5、NetCDF&quot;&gt;&lt;a href=&quot;#HDF5、NetCDF&quot; class=&quot;headerlink&quot; title=&quot;HDF5、NetCDF&quot;&gt;&lt;/a&gt;HDF5、NetCDF&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="gdal" scheme="http://ytkz11@.github.io/categories/gdal/"/>
+    
+    
+    <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
+    
+  </entry>
   
   <entry>
     <title>GADM-矢量下载</title>
@@ -30,31 +80,6 @@
     
     
     <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>himawari8地球同步卫星影像瓦片下载</title>
-    <link href="http://ytkz11@.github.io/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/"/>
-    <id>http://ytkz11@.github.io/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/</id>
-    <published>2023-02-27T14:00:10.000Z</published>
-    <updated>2023-02-27T12:46:14.997Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;himawari8地球同步卫星&quot;&gt;&lt;a href=&quot;#himawari8地球同步卫星&quot; class=&quot;headerlink&quot; title=&quot;himawari8地球同步卫星&quot;&gt;&lt;/a&gt;himawari8地球同步卫星&lt;/h1&gt;&lt;p&gt;地球静止轨道（或作“地球静止&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="himawari8" scheme="http://ytkz11@.github.io/categories/himawari8/"/>
-    
-    
-    <category term="himawari8" scheme="http://ytkz11@.github.io/tags/himawari8/"/>
     
   </entry>
   
@@ -80,6 +105,31 @@
     
     
     <category term="Go" scheme="http://ytkz11@.github.io/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>himawari8地球同步卫星影像瓦片下载</title>
+    <link href="http://ytkz11@.github.io/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/"/>
+    <id>http://ytkz11@.github.io/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/</id>
+    <published>2023-02-27T14:00:10.000Z</published>
+    <updated>2023-02-27T12:46:14.997Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;himawari8地球同步卫星&quot;&gt;&lt;a href=&quot;#himawari8地球同步卫星&quot; class=&quot;headerlink&quot; title=&quot;himawari8地球同步卫星&quot;&gt;&lt;/a&gt;himawari8地球同步卫星&lt;/h1&gt;&lt;p&gt;地球静止轨道（或作“地球静止&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="himawari8" scheme="http://ytkz11@.github.io/categories/himawari8/"/>
+    
+    
+    <category term="himawari8" scheme="http://ytkz11@.github.io/tags/himawari8/"/>
     
   </entry>
   
@@ -492,60 +542,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="numpy" scheme="http://ytkz11@.github.io/tags/numpy/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>maltab 语言如何熟练掌握？</title>
-    <link href="http://ytkz11@.github.io/2022/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/"/>
-    <id>http://ytkz11@.github.io/2022/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/</id>
-    <published>2022-11-19T15:00:10.000Z</published>
-    <updated>2022-12-01T02:13:02.200Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;由来&quot;&gt;&lt;a href=&quot;#由来&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="matlab" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/matlab/"/>
-    
-    
-    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>遥感入门 | H5文件读写</title>
-    <link href="http://ytkz11@.github.io/2022/11/16/yao-gan-ru-men-zhi-h5-wen-jian-du-xie/"/>
-    <id>http://ytkz11@.github.io/2022/11/16/yao-gan-ru-men-zhi-h5-wen-jian-du-xie/</id>
-    <published>2022-11-16T10:00:10.000Z</published>
-    <updated>2022-12-01T02:13:13.824Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;什么是-H5-文件？&quot;&gt;&lt;a href=&quot;#什么是-H5-文件？&quot; class=&quot;headerlink&quot; title=&quot;什么是 H5 文件？&quot;&gt;&lt;/a&gt;什么是 H5 文件？&lt;/h2&gt;&lt;p&gt;H5 是用于存储大量数据的分层数据格式 (HDF)</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
