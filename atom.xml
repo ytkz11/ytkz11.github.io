@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-10-16T09:46:17.970Z</updated>
+  <updated>2023-10-16T09:46:34.957Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ytkz11@.github.io/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/"/>
     <id>http://ytkz11@.github.io/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/</id>
     <published>2023-10-16T10:26:58.000Z</published>
-    <updated>2023-10-16T09:46:17.970Z</updated>
+    <updated>2023-10-16T09:46:34.957Z</updated>
     
     
       
@@ -36,8 +36,12 @@
     
     <category term="gdal" scheme="http://ytkz11@.github.io/categories/gdal/"/>
     
+    <category term="landsat9" scheme="http://ytkz11@.github.io/categories/gdal/landsat9/"/>
+    
     
     <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
+    
+    <category term="landsat9" scheme="http://ytkz11@.github.io/tags/landsat9/"/>
     
   </entry>
   
@@ -109,31 +113,6 @@
   </entry>
   
   <entry>
-    <title>hello go</title>
-    <link href="http://ytkz11@.github.io/2023/02/27/hello-go/"/>
-    <id>http://ytkz11@.github.io/2023/02/27/hello-go/</id>
-    <published>2023-02-27T14:00:10.000Z</published>
-    <updated>2023-03-01T00:46:02.197Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-go&quot; data-language=&quot;go&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="http://ytkz11@.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="http://ytkz11@.github.io/tags/Go/"/>
-    
-  </entry>
-  
-  <entry>
     <title>himawari8地球同步卫星影像瓦片下载</title>
     <link href="http://ytkz11@.github.io/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/"/>
     <id>http://ytkz11@.github.io/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/</id>
@@ -155,6 +134,31 @@
     
     
     <category term="himawari8" scheme="http://ytkz11@.github.io/tags/himawari8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello go</title>
+    <link href="http://ytkz11@.github.io/2023/02/27/hello-go/"/>
+    <id>http://ytkz11@.github.io/2023/02/27/hello-go/</id>
+    <published>2023-02-27T14:00:10.000Z</published>
+    <updated>2023-03-01T00:46:02.197Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-go&quot; data-language=&quot;go&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="Go" scheme="http://ytkz11@.github.io/categories/Go/"/>
+    
+    
+    <category term="Go" scheme="http://ytkz11@.github.io/tags/Go/"/>
     
   </entry>
   

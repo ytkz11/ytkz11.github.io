@@ -15,12 +15,16 @@
           
           <category> gdal </category>
           
+          <category> landsat9 </category>
+          
       </categories>
       
       
         <tags>
             
             <tag> gdal </tag>
+            
+            <tag> landsat9 </tag>
             
         </tags>
       
@@ -104,31 +108,6 @@
     
     
     <entry>
-      <title>hello go</title>
-      <link href="2023/02/27/hello-go/"/>
-      <url>2023/02/27/hello-go/</url>
-      
-        <content type="html"><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> main<span class="token keyword">import</span> <span class="token punctuation">(</span>   <span class="token string">"fmt"</span>   <span class="token boolean">_</span> <span class="token string">"fmt"</span><span class="token punctuation">)</span><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>   <span class="token keyword">var</span> a <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">5</span>   <span class="token keyword">var</span> b <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">5</span>   <span class="token keyword">var</span> ret <span class="token builtin">int</span>   ret <span class="token operator">=</span> <span class="token function">addd</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>   fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">func</span> <span class="token function">addd</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2 <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>   <span class="token keyword">var</span> result <span class="token builtin">int</span>   result <span class="token operator">=</span> num1 <span class="token operator">+</span> num2   <span class="token keyword">return</span> result<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>import “fmt” 报错</p><p>Gogland没设置好</p><h1 id="安装gin"><a href="#安装gin" class="headerlink" title="安装gin"></a>安装gin</h1><p>gin是go语言在构建web的框架。</p><p>在项目的目录命令行cmd运行：</p><pre class="line-numbers language-none"><code class="language-none">go get -u github.com/gin-gonic/gin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>在本地安装gin。</p><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> main<span class="token keyword">import</span> <span class="token string">"github.com/gin-gonic/gin"</span><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>r <span class="token operator">:=</span> gin<span class="token punctuation">.</span><span class="token function">Default</span><span class="token punctuation">(</span><span class="token punctuation">)</span>r<span class="token punctuation">.</span><span class="token function">GET</span><span class="token punctuation">(</span><span class="token string">"/lala"</span><span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span>c <span class="token operator">*</span>gin<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>c<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> gin<span class="token punctuation">.</span>H<span class="token punctuation">{</span><span class="token string">"message"</span><span class="token punctuation">:</span> <span class="token string">"hello"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>r<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//  127.0.0.1:8080</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>package main表示一个可独立执行的程序，每个Go 应用程序都包含一个名为main 的包。</p><p>import “github.com/gin-gonic/gin” 导入gin包。</p><p>func main() Go 语言程序有一个特殊的函数，就是 main 函数，main 函数是程序的入口，也就是说程序的运行一定是从 main 函数开始的。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Go </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Go </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>himawari8地球同步卫星影像瓦片下载</title>
       <link href="2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/"/>
       <url>2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/</url>
@@ -146,6 +125,31 @@
         <tags>
             
             <tag> himawari8 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hello go</title>
+      <link href="2023/02/27/hello-go/"/>
+      <url>2023/02/27/hello-go/</url>
+      
+        <content type="html"><![CDATA[<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> main<span class="token keyword">import</span> <span class="token punctuation">(</span>   <span class="token string">"fmt"</span>   <span class="token boolean">_</span> <span class="token string">"fmt"</span><span class="token punctuation">)</span><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>   <span class="token keyword">var</span> a <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">5</span>   <span class="token keyword">var</span> b <span class="token builtin">int</span> <span class="token operator">=</span> <span class="token number">5</span>   <span class="token keyword">var</span> ret <span class="token builtin">int</span>   ret <span class="token operator">=</span> <span class="token function">addd</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span>   fmt<span class="token punctuation">.</span><span class="token function">Println</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token keyword">func</span> <span class="token function">addd</span><span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2 <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token builtin">int</span> <span class="token punctuation">{</span>   <span class="token keyword">var</span> result <span class="token builtin">int</span>   result <span class="token operator">=</span> num1 <span class="token operator">+</span> num2   <span class="token keyword">return</span> result<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>import “fmt” 报错</p><p>Gogland没设置好</p><h1 id="安装gin"><a href="#安装gin" class="headerlink" title="安装gin"></a>安装gin</h1><p>gin是go语言在构建web的框架。</p><p>在项目的目录命令行cmd运行：</p><pre class="line-numbers language-none"><code class="language-none">go get -u github.com/gin-gonic/gin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>在本地安装gin。</p><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token keyword">package</span> main<span class="token keyword">import</span> <span class="token string">"github.com/gin-gonic/gin"</span><span class="token keyword">func</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>r <span class="token operator">:=</span> gin<span class="token punctuation">.</span><span class="token function">Default</span><span class="token punctuation">(</span><span class="token punctuation">)</span>r<span class="token punctuation">.</span><span class="token function">GET</span><span class="token punctuation">(</span><span class="token string">"/lala"</span><span class="token punctuation">,</span> <span class="token keyword">func</span><span class="token punctuation">(</span>c <span class="token operator">*</span>gin<span class="token punctuation">.</span>Context<span class="token punctuation">)</span> <span class="token punctuation">{</span>c<span class="token punctuation">.</span><span class="token function">JSON</span><span class="token punctuation">(</span><span class="token number">200</span><span class="token punctuation">,</span> gin<span class="token punctuation">.</span>H<span class="token punctuation">{</span><span class="token string">"message"</span><span class="token punctuation">:</span> <span class="token string">"hello"</span><span class="token punctuation">,</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>r<span class="token punctuation">.</span><span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//  127.0.0.1:8080</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>package main表示一个可独立执行的程序，每个Go 应用程序都包含一个名为main 的包。</p><p>import “github.com/gin-gonic/gin” 导入gin包。</p><p>func main() Go 语言程序有一个特殊的函数，就是 main 函数，main 函数是程序的入口，也就是说程序的运行一定是从 main 函数开始的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Go </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Go </tag>
             
         </tags>
       
