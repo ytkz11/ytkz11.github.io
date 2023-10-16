@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-10-10T10:31:29.005Z</updated>
+  <updated>2023-10-16T09:46:17.970Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>编程 | Landsat9影像转真彩色RGBA缩略图</title>
+    <link href="http://ytkz11@.github.io/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/"/>
+    <id>http://ytkz11@.github.io/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/</id>
+    <published>2023-10-16T10:26:58.000Z</published>
+    <updated>2023-10-16T09:46:17.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Landsat-9&quot;&gt;&lt;a href=&quot;#Landsat-9&quot; class=&quot;headerlink&quot; title=&quot;Landsat 9&quot;&gt;&lt;/a&gt;Landsat</summary>
+        
+      
+    
+    
+    
+    <category term="gdal" scheme="http://ytkz11@.github.io/categories/gdal/"/>
+    
+    
+    <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
+    
+  </entry>
+  
+  <entry>
     <title>编程 | 从RGBA图片格式理解波段</title>
     <link href="http://ytkz11@.github.io/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/"/>
     <id>http://ytkz11@.github.io/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/</id>
     <published>2023-10-10T10:26:58.000Z</published>
-    <updated>2023-10-10T10:31:29.005Z</updated>
+    <updated>2023-10-13T11:16:41.119Z</updated>
     
     
       
@@ -512,36 +537,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="匀色" scheme="http://ytkz11@.github.io/tags/%E5%8C%80%E8%89%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>maltab 语言如何熟练掌握？</title>
-    <link href="http://ytkz11@.github.io/2022/11/20/ben-jiao-cheng-jie-shao-numpy-yi-ge-yong-yu-zai-python-zhong-zhi-xing-shu-zhi-ji-suan-de-python-ku/"/>
-    <id>http://ytkz11@.github.io/2022/11/20/ben-jiao-cheng-jie-shao-numpy-yi-ge-yong-yu-zai-python-zhong-zhi-xing-shu-zhi-ji-suan-de-python-ku/</id>
-    <published>2022-11-20T15:00:10.000Z</published>
-    <updated>2022-12-01T02:12:55.704Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;为了能够使用numpy，我们需要使用import numpy导入库。此外，指定np代表numpy:&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="numpy" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/numpy/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="numpy" scheme="http://ytkz11@.github.io/tags/numpy/"/>
     
   </entry>
   
