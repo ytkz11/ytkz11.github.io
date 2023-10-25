@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-10-16T09:46:34.957Z</updated>
+  <updated>2023-10-25T08:13:56.713Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>arcgis闪退导致shp文件破损及修复方法</title>
+    <link href="http://ytkz11@.github.io/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/"/>
+    <id>http://ytkz11@.github.io/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/</id>
+    <published>2023-10-25T10:26:58.000Z</published>
+    <updated>2023-10-25T08:13:56.713Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;arcgis闪退&quot;&gt;&lt;a href=&quot;#arcgis闪退&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="arcgis" scheme="http://ytkz11@.github.io/categories/arcgis/"/>
+    
+    
+    <category term="arcgis" scheme="http://ytkz11@.github.io/tags/arcgis/"/>
+    
+  </entry>
   
   <entry>
     <title>编程 | Landsat9影像转真彩色RGBA缩略图</title>
@@ -511,36 +536,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="RPC" scheme="http://ytkz11@.github.io/tags/RPC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>匀色 | 直方图匹配算法及其代码</title>
-    <link href="http://ytkz11@.github.io/2022/11/23/yun-se-zhi-zhi-fang-tu-pi-pei-suan-fa-ji-qi-dai-ma/"/>
-    <id>http://ytkz11@.github.io/2022/11/23/yun-se-zhi-zhi-fang-tu-pi-pei-suan-fa-ji-qi-dai-ma/</id>
-    <published>2022-11-23T08:00:10.000Z</published>
-    <updated>2022-12-01T02:12:38.407Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;相关理论不再展示，感兴趣去网上搜，现在是基于图片图片进行匀色，代码如下：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="匀色" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E5%8C%80%E8%89%B2/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="匀色" scheme="http://ytkz11@.github.io/tags/%E5%8C%80%E8%89%B2/"/>
     
   </entry>
   

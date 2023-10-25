@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>arcgis闪退导致shp文件破损及修复方法</title>
+      <link href="2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/"/>
+      <url>2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/</url>
+      
+        <content type="html"><![CDATA[<h1 id="arcgis闪退"><a href="#arcgis闪退" class="headerlink" title="arcgis闪退"></a>arcgis闪退</h1><p>再一次出现了正在画矢量时，arcgis软件闪退，导致shp文件不能打开，这次详细的记录下来，解决方法。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251446541.png" alt="微信截图_20231025144540"></p><h1 id="普通的修复方法"><a href="#普通的修复方法" class="headerlink" title="普通的修复方法"></a>普通的修复方法</h1><p>在ENVI软件打开对应的shp文件，把shp拖拽到envi中。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251433986.png" alt="微信截图_20231025143238"></p><p>点击Load Data.</p><p>在左侧的Later Manager中右击对应的文件，选择Matadata Viewer,查看shp有多少个矢量。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251436901.png" alt="微信截图_20231025143451"></p><p>上图显示，该文件有180个矢量。</p><p>在  dbf viewer 2000  软件中打开 shp同一个文件夹下对应的dbf文件</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251446227.png" alt="微信截图_20231025144008"></p><p>在 dbf viewer 2000  发现dbf文件中的记录只有170个。与之前在envi中看到的180个不相等。这时候只要添加10个空记录（180-170），就能修复好shp文件。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251449043.png" alt="微信截图_20231025144921"></p><p>成功的在arcgis打开修复好的shp文件。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251454661.png" alt="微信截图_20231025145359"></p><p>最后还有一步就是，别忘了重新给shp赋属性。</p><p>总结解决办法就是，令shp文件的矢量个数与dbf文件的记录个数相等。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> arcgis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> arcgis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>编程 | Landsat9影像转真彩色RGBA缩略图</title>
       <link href="2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/"/>
       <url>2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/</url>

@@ -9,7 +9,7 @@
     
     <title>
         
-            标签 |
+            arcgis闪退导致shp文件破损及修复方法 |
         
         remote sensing
     </title>
@@ -133,15 +133,140 @@
             <div class="main-content">
 
                 
-                    
-    <div class="fade-in-down-animation">
-        <div class="tagcloud-container">
-            <div class="tagcloud-content">
-                <a href="/tags/GDAL/" style="font-size: 1rem;">GDAL</a> <a href="/tags/GEE/" style="font-size: 1rem;">GEE</a> <a href="/tags/Go/" style="font-size: 1rem;">Go</a> <a href="/tags/IDL/" style="font-size: 1rem;">IDL</a> <a href="/tags/JavaScript/" style="font-size: 1rem;">JavaScript</a> <a href="/tags/PyQt/" style="font-size: 1rem;">PyQt</a> <a href="/tags/RPC/" style="font-size: 1rem;">RPC</a> <a href="/tags/Sentinel5/" style="font-size: 1.24rem;">Sentinel5</a> <a href="/tags/arcgis/" style="font-size: 1rem;">arcgis</a> <a href="/tags/autosub/" style="font-size: 1rem;">autosub</a> <a href="/tags/deep-learn/" style="font-size: 1rem;">deep_learn</a> <a href="/tags/ffmpeg/" style="font-size: 1rem;">ffmpeg</a> <a href="/tags/gdal/" style="font-size: 1.48rem;">gdal</a> <a href="/tags/git/" style="font-size: 1.12rem;">git</a> <a href="/tags/golang/" style="font-size: 1rem;">golang</a> <a href="/tags/himawari8/" style="font-size: 1rem;">himawari8</a> <a href="/tags/kotlin/" style="font-size: 1.36rem;">kotlin</a> <a href="/tags/landsat9/" style="font-size: 1rem;">landsat9</a> <a href="/tags/linux/" style="font-size: 1rem;">linux</a> <a href="/tags/matlab/" style="font-size: 1.48rem;">matlab</a> <a href="/tags/numpy/" style="font-size: 1rem;">numpy</a> <a href="/tags/pyside6/" style="font-size: 1rem;">pyside6</a> <a href="/tags/python/" style="font-size: 1.36rem;">python</a> <a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1rem;">下载</a> <a href="/tags/%E5%85%B6%E4%BB%96%E7%9F%A5%E8%AF%86/" style="font-size: 1rem;">其他知识</a> <a href="/tags/%E5%88%86%E7%B1%BB/" style="font-size: 1rem;">分类</a> <a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1rem;">匀色</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.12rem;">技术</a> <a href="/tags/%E6%9D%82%E6%96%87/" style="font-size: 1rem;">杂文</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1rem;">爬虫</a> <a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1rem;">绘图</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1rem;">编程</a> <a href="/tags/%E8%A7%86%E9%A2%91/" style="font-size: 1rem;">视频</a> <a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.6rem;">遥感</a>
-            </div>
-        </div>
-    </div>
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
 
+            <div class="article-title">
+                <span class="title-hover-animation">arcgis闪退导致shp文件破损及修复方法</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-10-25 18:26:58</span>
+        <span class="mobile">2023-10-25 18:26</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-10-25 16:13:56</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/arcgis/">arcgis</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/arcgis/">arcgis</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="arcgis闪退"><a href="#arcgis闪退" class="headerlink" title="arcgis闪退"></a>arcgis闪退</h1><p>再一次出现了正在画矢量时，arcgis软件闪退，导致shp文件不能打开，这次详细的记录下来，解决方法。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251446541.png" alt="微信截图_20231025144540"></p>
+<h1 id="普通的修复方法"><a href="#普通的修复方法" class="headerlink" title="普通的修复方法"></a>普通的修复方法</h1><p>在ENVI软件打开对应的shp文件，把shp拖拽到envi中。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251433986.png" alt="微信截图_20231025143238"></p>
+<p>点击Load Data.</p>
+<p>在左侧的Later Manager中右击对应的文件，选择Matadata Viewer,查看shp有多少个矢量。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251436901.png" alt="微信截图_20231025143451"></p>
+<p>上图显示，该文件有180个矢量。</p>
+<p>在  dbf viewer 2000  软件中打开 shp同一个文件夹下对应的dbf文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251446227.png" alt="微信截图_20231025144008"></p>
+<p>在 dbf viewer 2000  发现dbf文件中的记录只有170个。与之前在envi中看到的180个不相等。这时候只要添加10个空记录（180-170），就能修复好shp文件。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251449043.png" alt="微信截图_20231025144921"></p>
+<p>成功的在arcgis打开修复好的shp文件。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202310251454661.png" alt="微信截图_20231025145359"></p>
+<p>最后还有一步就是，别忘了重新给shp赋属性。</p>
+<p>总结解决办法就是，令shp文件的矢量个数与dbf文件的记录个数相等。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/arcgis/">#arcgis</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">编程 | Landsat9影像转真彩色RGBA缩略图</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
 
 
                 
@@ -176,6 +301,19 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -249,6 +387,12 @@
 
 
 <div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
     
 </div>
 
