@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-10-25T08:13:56.713Z</updated>
+  <updated>2023-11-09T09:45:54.885Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>maven编译snap-engine过程遇到的问题及解决方法</title>
+    <link href="http://ytkz11@.github.io/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/"/>
+    <id>http://ytkz11@.github.io/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/</id>
+    <published>2023-11-09T10:26:58.000Z</published>
+    <updated>2023-11-09T09:45:54.885Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; title=&quot;1&quot;&gt;&lt;/a&gt;1&lt;/h1&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>借助ogr2ogr工具实现shp文件转换kml格式</title>
+    <link href="http://ytkz11@.github.io/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/"/>
+    <id>http://ytkz11@.github.io/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/</id>
+    <published>2023-11-06T10:26:58.000Z</published>
+    <updated>2023-11-06T01:49:00.094Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;kml格式是一种在GOOGLE地图浏览器中用于交换地理数据的文件。它基于XML，并定义了一些TAG用于规定地理数据的显示方式。KML可用于定义的地理特征包括地点、描述、叠层、路径和多边形等。&lt;/p&gt;
+&lt;p&gt;实际工作中我们拿到的矢量数据格式大部分是shp格式的文件，如果需要在</summary>
+        
+      
+    
+    
+    
+    <category term="shp" scheme="http://ytkz11@.github.io/categories/shp/"/>
+    
+    
+    <category term="shp" scheme="http://ytkz11@.github.io/tags/shp/"/>
+    
+  </entry>
   
   <entry>
     <title>arcgis闪退导致shp文件破损及修复方法</title>
@@ -473,69 +524,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="Sentinel5" scheme="http://ytkz11@.github.io/tags/Sentinel5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>下载 | Sentinel-5P下载代码测试</title>
-    <link href="http://ytkz11@.github.io/2022/11/30/sentinel-5p-xia-zai-dai-ma-ce-shi/"/>
-    <id>http://ytkz11@.github.io/2022/11/30/sentinel-5p-xia-zai-dai-ma-ce-shi/</id>
-    <published>2022-11-30T07:30:10.000Z</published>
-    <updated>2022-12-01T02:12:21.041Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Sentinel-5P下载代码测试&lt;/p&gt;
-&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Sentinel-5P任务旨在在 2017 年至至少 2023</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="Sentinel5" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/Sentinel5/"/>
-    
-    <category term="下载" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/Sentinel5/%E4%B8%8B%E8%BD%BD/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="Sentinel5" scheme="http://ytkz11@.github.io/tags/Sentinel5/"/>
-    
-    <category term="下载" scheme="http://ytkz11@.github.io/tags/%E4%B8%8B%E8%BD%BD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RPC | 高分三号雷达数据RPC校正代码</title>
-    <link href="http://ytkz11@.github.io/2022/11/24/gao-fen-san-hao-lei-da-shu-ju-rpc-xiao-zheng/"/>
-    <id>http://ytkz11@.github.io/2022/11/24/gao-fen-san-hao-lei-da-shu-ju-rpc-xiao-zheng/</id>
-    <published>2022-11-24T03:00:10.000Z</published>
-    <updated>2022-12-01T02:15:04.166Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;RPC（rational polynomial coefficients），有理&lt;a class=&quot;link&quot; href=&quot;https://so.csdn.net/so/search?q=多项式&amp;amp;spm=1001.2101.3001.7020&quot;&gt;多项式&lt;i</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="RPC" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/RPC/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="RPC" scheme="http://ytkz11@.github.io/tags/RPC/"/>
     
   </entry>
   

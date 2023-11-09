@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>maven编译snap-engine过程遇到的问题及解决方法</title>
+      <link href="2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/"/>
+      <url>2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1"><a href="#1" class="headerlink" title="1"></a>1</h1><table><tbody><tr><td bgcolor="yellow">问题</td></tr></tbody></table><p>java的版本、编译的环境</p><table><tbody><tr><td bgcolor="yellow">解决办法</td></tr></tbody></table><ul><li><a class="link" href="http://maven.apache.org/">Maven <i class="fas fa-external-link-alt"></i></a>&gt;= v3.2.5, recommended 3.9.2</li><li><a class="link" href="https://bell-sw.com/pages/downloads/">Java JDK <i class="fas fa-external-link-alt"></i></a> = v11 (Any of the available OpenJDK distributions should work).</li><li>编译的环境是window 10</li></ul><h1 id="2"><a href="#2" class="headerlink" title="2"></a>2</h1><table><tbody><tr><td bgcolor="yellow">问题</td></tr></tbody></table><p>netcdfAll-5.3.3.jar 太大了，mvn下载时失败。</p><table><tbody><tr><td bgcolor="yellow">解决办法</td></tr></tbody></table><p>单独从web下载netcdfAll-5.3.3.jar </p><p>然后在命令行输入</p><pre class="line-numbers language-none"><code class="language-none">mvn install:install-file -Dfile=文件的绝对路径<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>该解决办法失败</strong></p><h1 id="3"><a href="#3" class="headerlink" title="3"></a>3</h1><table><tbody><tr><td bgcolor="yellow">问题</td></tr></tbody></table><pre class="line-numbers language-none"><code class="language-none">mvn clean install <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>通不过测试TEST。</p><table><tbody><tr><td bgcolor="yellow">解决办法</td></tr></tbody></table><code class="language-none">mvn clean install -Dmaven.test.skip=true<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code>![image-20231109130016590](https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202311091300810.png)完成对snap-engine的编译# 4<table><tbody><tr><td bgcolor="yellow">问题</td></tr></tbody></table><table><tbody><tr><td bgcolor="yellow">解决办法</td></tr></tbody></table>问题<table><tbody><tr><td bgcolor="yellow">解决办法</td></tr></tbody></table>问题<p><p></p><table><tbody><tr><td bgcolor="yellow">解决办法</td></tr></tbody></table>&lt;/table</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>借助ogr2ogr工具实现shp文件转换kml格式</title>
+      <link href="2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/"/>
+      <url>2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/</url>
+      
+        <content type="html"><![CDATA[<p>kml格式是一种在GOOGLE地图浏览器中用于交换地理数据的文件。它基于XML，并定义了一些TAG用于规定地理数据的显示方式。KML可用于定义的地理特征包括地点、描述、叠层、路径和多边形等。</p><p>实际工作中我们拿到的矢量数据格式大部分是shp格式的文件，如果需要在谷歌软件或者其他第三方软件中使用的时候，有时候需要转换为kml格式，便于使用。在《QGIS中如何将kml转换为shp文件》一文中介绍了如果将kml文件转化为shp文件，参考该文章也很容易实现shp转kml格式，当然借助ARCGIS强大的工具箱也可以实现该方法。</p><p>本文介绍基于ogr2ogr工具的转换方法。在进行各类GIS文件格式转换的时候，使用ogr2ogr工具可以实现dxf、shp、kml等很多种格式之间的转换。</p><p>一、ogr2ogr工具安装与启动。工具的安装与启动可以参考文章《借助ogr2ogr工具实现SHP文件编码转换》、《GDAL的安装与使用》。</p><p>二、shp文件转kml格式。在命令行界面输入“ogr2ogr -f “KML” +转换后kml格式文件 +需要转换的shp文件。</p><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231106094619787.png" alt="image-20231106094619787"></p><p>为什么要转为KML？</p><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231106094852610.png" alt="image-20231106094852610"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> shp </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> shp </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>arcgis闪退导致shp文件破损及修复方法</title>
       <link href="2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/"/>
       <url>2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/</url>
@@ -608,9 +658,9 @@
       
         <tags>
             
-            <tag> 遥感 </tag>
-            
             <tag> matlab </tag>
+            
+            <tag> 遥感 </tag>
             
         </tags>
       
@@ -662,9 +712,9 @@
       
         <tags>
             
-            <tag> 遥感 </tag>
-            
             <tag> matlab </tag>
+            
+            <tag> 遥感 </tag>
             
         </tags>
       
