@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-11-09T09:45:54.885Z</updated>
+  <updated>2023-11-16T02:04:03.127Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,61 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python多版本与虚拟环境</title>
+    <link href="http://ytkz11@.github.io/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/"/>
+    <id>http://ytkz11@.github.io/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/</id>
+    <published>2023-11-14T13:26:58.000Z</published>
+    <updated>2023-11-16T02:04:03.127Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么要使用多个版本的python？&quot;&gt;&lt;a href=&quot;#为什么要使用多个版本的python？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从gadm下载世界各国的行政边界</title>
+    <link href="http://ytkz11@.github.io/2023/11/14/cong-gadm-xia-zai-shi-jie-ge-guo-de-xing-zheng-bian-jie/"/>
+    <id>http://ytkz11@.github.io/2023/11/14/cong-gadm-xia-zai-shi-jie-ge-guo-de-xing-zheng-bian-jie/</id>
+    <published>2023-11-14T10:26:58.000Z</published>
+    <updated>2023-11-14T02:52:24.416Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;GADM-全球行政区划数据库&quot;&gt;&lt;a href=&quot;#GADM-全球行政区划数据库&quot; class=&quot;headerlink&quot; title=&quot;GADM: 全球行政区划数据库&quot;&gt;&lt;/a&gt;GADM:</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>maven编译snap-engine过程遇到的问题及解决方法</title>
     <link href="http://ytkz11@.github.io/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/"/>
     <id>http://ytkz11@.github.io/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/</id>
     <published>2023-11-09T10:26:58.000Z</published>
-    <updated>2023-11-09T09:45:54.885Z</updated>
+    <updated>2023-11-16T02:03:23.392Z</updated>
     
     
       
@@ -466,64 +516,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="GDAL" scheme="http://ytkz11@.github.io/tags/GDAL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sentinel-5P可视化展示空气污染程度</title>
-    <link href="http://ytkz11@.github.io/2022/12/01/sentinel-5p-ke-shi-hua-zhan-shi-kong-qi-wu-ran-cheng-du/"/>
-    <id>http://ytkz11@.github.io/2022/12/01/sentinel-5p-ke-shi-hua-zhan-shi-kong-qi-wu-ran-cheng-du/</id>
-    <published>2022-12-01T07:30:10.000Z</published>
-    <updated>2023-02-16T06:41:15.805Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Sentinel-5P任务旨在在 2017 年至至少 2023 年之间提供有关空气质量和气候的信息和服务。通过机载 TROPOMI</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="Sentinel5" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/Sentinel5/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="Sentinel5" scheme="http://ytkz11@.github.io/tags/Sentinel5/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sentinel-5P可视化展示空气污染程度</title>
-    <link href="http://ytkz11@.github.io/2022/12/01/pei-zhi-gdal-ji-shi-yong-cpp-diao-yong-gdal/"/>
-    <id>http://ytkz11@.github.io/2022/12/01/pei-zhi-gdal-ji-shi-yong-cpp-diao-yong-gdal/</id>
-    <published>2022-12-01T07:30:10.000Z</published>
-    <updated>2022-12-02T10:26:14.643Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h2&gt;&lt;p&gt;Sentinel-5P任务旨在在 2017 年至至少 2023 年之间提供有关空气质量和气候的信息和服务。通过机载 TROPOMI</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="Sentinel5" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/Sentinel5/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="Sentinel5" scheme="http://ytkz11@.github.io/tags/Sentinel5/"/>
     
   </entry>
   
