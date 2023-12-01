@@ -9,7 +9,7 @@
     
     <title>
         
-            clion中使用gdal的历程 |
+            编程_矢量转为栅格 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">clion中使用gdal的历程</span>
+                <span class="title-hover-animation">编程_矢量转为栅格</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-11-16 21:26:58</span>
-        <span class="mobile">2023-11-16 21:26</span>
+        <span class="pc">2023-12-01 18:26:58</span>
+        <span class="mobile">2023-12-01 18:26</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-11-16 13:33:14</span>
+        <span class="pc">2023-12-01 14:19:43</span>
     </span>
     
     
@@ -175,7 +175,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/gdal/">gdal</a>&nbsp;
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -187,7 +187,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/gdal/">gdal</a>&nbsp;
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,32 +208,67 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="为什么要使用多个版本的python？"><a href="#为什么要使用多个版本的python？" class="headerlink" title="为什么要使用多个版本的python？"></a>为什么要使用多个版本的python？</h1><p>使用多了pycharm,所以试试他们家的clion。</p>
-<h2 id="一、用vs编译GDAL"><a href="#一、用vs编译GDAL" class="headerlink" title="一、用vs编译GDAL"></a>一、用vs编译GDAL</h2><p>网上教程有，按照步骤一步一步编译gdal。</p>
-<h2 id="二、-dll文件转-a文件"><a href="#二、-dll文件转-a文件" class="headerlink" title="二、.dll文件转.a文件"></a>二、.dll文件转.a文件</h2><p>编译好的gdal文件夹中有gdal204.dll文件，单独复制一份，重命名为libgdal.dll，然后打开终端</p>
-<pre class="line-numbers language-none"><code class="language-none">gendef libgdal.dll
-dlltool -d libgdal.def -D libgdal.dll -l libgdal.a -k<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231116132741935.png" alt="image-20231116132741935"></p>
-<p>第一条命令会生成一个libmysql.def文件供第二条命令使用。<br>第二条命令使用前面生成的def文件以及dll文件生成.a文件并把导出名称中的@N去掉。</p>
-<h2 id="三、生成的-a文件放入wingw64安装目录的lib下"><a href="#三、生成的-a文件放入wingw64安装目录的lib下" class="headerlink" title="三、生成的.a文件放入wingw64安装目录的lib下"></a>三、生成的.a文件放入wingw64安装目录的lib下</h2><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231116133056188.png" alt="image-20231116133056188"></p>
-<h2 id="四、修改CMakeLists-txt文件"><a href="#四、修改CMakeLists-txt文件" class="headerlink" title="四、修改CMakeLists.txt文件"></a>四、修改CMakeLists.txt文件</h2><p>修改clion项目文件夹下的CMakeLists.txt文件。</p>
-<pre class="line-numbers language-none"><code class="language-none">cmake_minimum_required(VERSION 3.24)
-project(gdal_study)
+                <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312011415129.png" alt="image-20231201135533280"></p>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2023/11/30 10:53 </span>
+<span class="token comment"># @File : shp2tif.py</span>
 
-set(CMAKE_CXX_STANDARD 17)
+<span class="token triple-quoted-string string">'''
+shp to tif
+'''</span>
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> ogr
 
-add_executable(gdal_study main.cpp)
+<span class="token keyword">def</span> <span class="token function">shp_to_tiff</span><span class="token punctuation">(</span>shp_file<span class="token punctuation">,</span>refore_tif<span class="token punctuation">,</span> output_tiff<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+     将shp文件转换成tiff文件
+    :param shp_file: 边界矢量数据
+    :param output_tiff: 转换的tiff结果
+    :param projection:  转换后的tiff格式
+    :return: 矢量栅格图像
+    """</span>
+    <span class="token comment"># 读取shp文件</span>
+    driver <span class="token operator">=</span> ogr<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">"ESRI Shapefile"</span><span class="token punctuation">)</span>
+    data_source <span class="token operator">=</span> driver<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>shp_file<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token comment"># 获取图层文件对象</span>
+    shp_layer <span class="token operator">=</span> data_source<span class="token punctuation">.</span>GetLayer<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-#引入头文件
-include_directories(D:\\GDAL_240\\include)
+    img <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>refore_tif<span class="token punctuation">)</span>
+    projection <span class="token operator">=</span> img<span class="token punctuation">.</span>GetProjection<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    transform <span class="token operator">=</span> img<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    cols <span class="token operator">=</span> img<span class="token punctuation">.</span>RasterXSize
+    rows <span class="token operator">=</span> img<span class="token punctuation">.</span>RasterYSize
 
-#引入库文件
-link_directories(D:\\GDAL_240\\lib)
+    <span class="token comment"># 根据模板tif属性信息创建对应标准的目标栅格</span>
+    target_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">'GTiff'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Create<span class="token punctuation">(</span>output_tiff<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GDT_Byte<span class="token punctuation">)</span>
+    target_ds<span class="token punctuation">.</span>SetGeoTransform<span class="token punctuation">(</span>transform<span class="token punctuation">)</span>
+    target_ds<span class="token punctuation">.</span>SetProjection<span class="token punctuation">(</span>projection<span class="token punctuation">)</span>
 
-#将第三方库连接在一起
-target_link_libraries(gdal_study libgdal.a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>修改clion运行配置</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231116133307570.png" alt="image-20231116133307570"></p>
+    band <span class="token operator">=</span> target_ds<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token comment"># 设置背景数值</span>
+    NoData_value <span class="token operator">=</span> <span class="token number">0</span>
+    band<span class="token punctuation">.</span>SetNoDataValue<span class="token punctuation">(</span>NoData_value<span class="token punctuation">)</span>
+    band<span class="token punctuation">.</span>FlushCache<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 调用栅格化函数。gdal.RasterizeLayer函数有四个参数，分别有栅格对象，波段，矢量对象，value的属性值将为栅格值</span>
+    gdal<span class="token punctuation">.</span>RasterizeLayer<span class="token punctuation">(</span>target_ds<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> shp_layer<span class="token punctuation">,</span> options<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"ATTRIBUTE=ID"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token comment"># gdal.RasterizeLayer(target_ds, [1], shp_layer)</span>
+
+    y_buffer <span class="token operator">=</span> band<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    target_ds<span class="token punctuation">.</span>WriteRaster<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> y_buffer<span class="token punctuation">.</span>tobytes<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    target_ds <span class="token operator">=</span> <span class="token boolean">None</span>  <span class="token comment"># todo 释放内存，只有强制为None才可以释放干净</span>
+    <span class="token keyword">del</span> target_ds<span class="token punctuation">,</span> shp_layer
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+
+    shp_file <span class="token operator">=</span> <span class="token string">r'D:\dengkaiyuan\金昌\六坝乡\植被范围.shp'</span>
+    reference_tif <span class="token operator">=</span> <span class="token string">r'D:\dengkaiyuan\金昌\六坝乡\img1.tif'</span>
+    output_tiff <span class="token operator">=</span> <span class="token string">r'D:\dengkaiyuan\金昌\六坝乡\植被范围3.tif'</span>
+    shp_to_tiff<span class="token punctuation">(</span>shp_file<span class="token punctuation">,</span> reference_tif<span class="token punctuation">,</span> output_tiff<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><p>1.读取shp文件<br>2.获取shp文件的图层对象<br>3.读取tif文件<br>4.获取tif文件的投影信息、仿射变换信息、行列数<br>5.根据tif文件的属性信息创建对应标准的目标栅格<br>6.设置背景数值<br>7.调用栅格化函数。gdal.RasterizeLayer函数有四个参数，分别有栅格对象，波段，矢量对象，value的属性值将为栅格值<br>8.将栅格数据写入到目标文件中<br>9.释放内存，只有强制为None才可以释放干净</p>
+<p>结果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312011419036.png" alt="image-20231201141805550"></p>
 
             </div>
 
@@ -243,7 +278,7 @@ target_link_libraries(gdal_study libgdal.a)<span aria-hidden="true" class="line-
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/gdal/">#gdal</a>&nbsp;
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -252,29 +287,14 @@ target_link_libraries(gdal_study libgdal.a)<span aria-hidden="true" class="line-
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">编程_栅格进行裁剪</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/"
+                               href="/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">python多版本与虚拟环境</span>
+                                <span class="post-nav-title-item">编程_栅格进行裁剪</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
