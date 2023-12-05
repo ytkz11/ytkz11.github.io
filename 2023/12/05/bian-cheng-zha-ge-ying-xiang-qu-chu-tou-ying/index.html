@@ -9,7 +9,7 @@
     
     <title>
         
-            clion中使用gdal的历程 |
+            编程_栅格影像去除投影 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">clion中使用gdal的历程</span>
+                <span class="title-hover-animation">编程_栅格影像去除投影</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-11-16 21:26:58</span>
-        <span class="mobile">2023-11-16 21:26</span>
+        <span class="pc">2023-12-05 18:26:58</span>
+        <span class="mobile">2023-12-05 18:26</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-05 09:50:15</span>
+        <span class="pc">2023-12-05 15:17:40</span>
     </span>
     
     
@@ -175,7 +175,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/gdal/">gdal</a>&nbsp;
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -187,7 +187,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/gdal/">gdal</a>&nbsp;
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,32 +208,46 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="为什么要使用clion？"><a href="#为什么要使用clion？" class="headerlink" title="为什么要使用clion？"></a>为什么要使用clion？</h1><p>使用多了pycharm,所以试试他们家的clion。</p>
-<h2 id="一、用vs编译GDAL"><a href="#一、用vs编译GDAL" class="headerlink" title="一、用vs编译GDAL"></a>一、用vs编译GDAL</h2><p>网上教程有，按照步骤一步一步编译gdal。</p>
-<h2 id="二、-dll文件转-a文件"><a href="#二、-dll文件转-a文件" class="headerlink" title="二、.dll文件转.a文件"></a>二、.dll文件转.a文件</h2><p>编译好的gdal文件夹中有gdal204.dll文件，单独复制一份，重命名为libgdal.dll，然后打开终端</p>
-<pre class="line-numbers language-none"><code class="language-none">gendef libgdal.dll
-dlltool -d libgdal.def -D libgdal.dll -l libgdal.a -k<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231116132741935.png" alt="image-20231116132741935"></p>
-<p>第一条命令会生成一个libmysql.def文件供第二条命令使用。<br>第二条命令使用前面生成的def文件以及dll文件生成.a文件并把导出名称中的@N去掉。</p>
-<h2 id="三、生成的-a文件放入wingw64安装目录的lib下"><a href="#三、生成的-a文件放入wingw64安装目录的lib下" class="headerlink" title="三、生成的.a文件放入wingw64安装目录的lib下"></a>三、生成的.a文件放入wingw64安装目录的lib下</h2><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231116133056188.png" alt="image-20231116133056188"></p>
-<h2 id="四、修改CMakeLists-txt文件"><a href="#四、修改CMakeLists-txt文件" class="headerlink" title="四、修改CMakeLists.txt文件"></a>四、修改CMakeLists.txt文件</h2><p>修改clion项目文件夹下的CMakeLists.txt文件。</p>
-<pre class="line-numbers language-none"><code class="language-none">cmake_minimum_required(VERSION 3.24)
-project(gdal_study)
+                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Latitude_and_longitude_graticule_on_an_ellipsoid.svg/300px-Latitude_and_longitude_graticule_on_an_ellipsoid.svg.png" alt="image-20231201135533280"></p>
+<p>地理坐标系一般是指由经度、纬度和相对高度组成的坐标系，能够标示地球上的任何一个位置。经度和纬度常合称为经纬度，把球面上的经纬度显示在平面地图上需要采用某种地图投影</p>
+<h1 id="地理坐标系"><a href="#地理坐标系" class="headerlink" title="地理坐标系"></a>地理坐标系</h1><p>由于地面高低的不同和地球形状的不正规，天体测量所得的信息不足用于明确地计算地理位置。一般采用某个标准的大地测量系统所规定的地理坐标系统，目前最常用的标准是<a class="link" target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/WGS84">WGS84<i class="fas fa-external-link-alt"></i></a>，它被<a class="link" target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/卫星导航系统">卫星导航系统<i class="fas fa-external-link-alt"></i></a>如美国<a class="link" target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/全球定位系统">GPS<i class="fas fa-external-link-alt"></i></a>、中国的北斗导航系统使用。</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hammer_projection_SW.jpg/1920px-Hammer_projection_SW.jpg" alt="image-1"></p>
+<h1 id="投影坐标系"><a href="#投影坐标系" class="headerlink" title="投影坐标系"></a>投影坐标系</h1><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Mercator_projection_SW.jpg/1024px-Mercator_projection_SW.jpg" alt="image-1"></p>
+<p>投影坐标系最出名的墨卡托投影，这里不过多讨论。</p>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>现在有一份栅格影像tif文件，需要把这份栅格文件去除投影坐标，变为地理坐标。准确地说是，让这景tif的坐标系从GCS2000 变为WGS84 。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2023/12/5 14:40 </span>
+<span class="token comment"># @File : reprojection.py</span>
 
-set(CMAKE_CXX_STANDARD 17)
 
-add_executable(gdal_study main.cpp)
+<span class="token comment"># 栅格数据可以重投影，但比矢量数据投影更复杂。</span>
+<span class="token comment"># 栅格数据需要处理栅格数据中像元会弯曲和移动的事实，一对一的映射并不存在</span>
+<span class="token comment"># 通常用最近邻域插值法、双线性插值和三次卷积插值法进行插值</span>
+<span class="token comment"># 方法：1.gdalwarp 2.AutoCreateWarpedVRT</span>
 
-#引入头文件
-include_directories(D:\\GDAL_240\\include)
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> osr
+<span class="token keyword">import</span> os
 
-#引入库文件
-link_directories(D:\\GDAL_240\\lib)
+<span class="token keyword">def</span> <span class="token function">reproject</span><span class="token punctuation">(</span>infile<span class="token punctuation">,</span> outfile<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>outfile<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>outfile<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-#将第三方库连接在一起
-target_link_libraries(gdal_study libgdal.a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>修改clion运行配置</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231116133307570.png" alt="image-20231116133307570"></p>
+    srs <span class="token operator">=</span> osr<span class="token punctuation">.</span>SpatialReference<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    srs<span class="token punctuation">.</span>SetWellKnownGeogCS<span class="token punctuation">(</span><span class="token string">'WGS84'</span><span class="token punctuation">)</span>  <span class="token comment"># UTM转无投影，即地理坐标系</span>
+    old_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>infile<span class="token punctuation">)</span>
+    vrt_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>AutoCreateWarpedVRT<span class="token punctuation">(</span>old_ds<span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">,</span> srs<span class="token punctuation">.</span>ExportToWkt<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                      gdal<span class="token punctuation">.</span>GRA_Bilinear<span class="token punctuation">)</span>  <span class="token comment"># 第一个默认值None，使用源栅格数据的srs；第二个如果None，表示不发生重投影</span>
+    gdal<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">'gtiff'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>CreateCopy<span class="token punctuation">(</span>outfile<span class="token punctuation">,</span> vrt_ds<span class="token punctuation">)</span>  <span class="token comment"># 该函数返回一个数据集对象，用CreateCopy函数保存为gtiff</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+
+    <span class="token builtin">file</span> <span class="token operator">=</span> <span class="token string">r'D:\img1.tif'</span>
+    outfile <span class="token operator">=</span> <span class="token string">r'D:\img1_wgs84.tif'</span>
+    reproject<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span> outfile<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><p>分析reproject函数<br>1.创建输出文件夹<br>2.设置投影坐标系<br>3.打开待重投影影像<br>4.创建虚拟数据集<br>5.保存重投影后的影像<br>6.输出重投影后的影像</p>
 
             </div>
 
@@ -243,7 +257,7 @@ target_link_libraries(gdal_study libgdal.a)<span aria-hidden="true" class="line-
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/gdal/">#gdal</a>&nbsp;
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -252,29 +266,14 @@ target_link_libraries(gdal_study libgdal.a)<span aria-hidden="true" class="line-
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/12/01/bian-cheng-shi-liang-zhuan-wei-zha-ge/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">编程_矢量转为栅格</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/"
+                               href="/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">python多版本与虚拟环境</span>
+                                <span class="post-nav-title-item">编程_栅格进行裁剪</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
