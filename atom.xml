@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-12-05T07:17:40.322Z</updated>
+  <updated>2023-12-08T09:07:02.864Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>编程_不使用gdal读取tif文件</title>
+    <link href="http://ytkz11@.github.io/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/"/>
+    <id>http://ytkz11@.github.io/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/</id>
+    <published>2023-12-08T13:26:58.000Z</published>
+    <updated>2023-12-08T09:07:02.864Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么要使用多个版本的python？&quot;&gt;&lt;a href=&quot;#为什么要使用多个版本的python？&quot; class=&quot;headerlink&quot; title=&quot;为什么要使用多个版本的python？&quot;&gt;&lt;/a&gt;为什么要使用多个版本的python？&lt;/h1&gt;&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>编程_栅格影像去除投影</title>
     <link href="http://ytkz11@.github.io/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/"/>
     <id>http://ytkz11@.github.io/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/</id>
     <published>2023-12-05T10:26:58.000Z</published>
-    <updated>2023-12-05T07:17:40.322Z</updated>
+    <updated>2023-12-05T11:57:53.423Z</updated>
     
     
       
@@ -123,7 +148,7 @@
     <link href="http://ytkz11@.github.io/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/"/>
     <id>http://ytkz11@.github.io/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/</id>
     <published>2023-11-14T13:26:58.000Z</published>
-    <updated>2023-11-16T02:04:03.127Z</updated>
+    <updated>2023-12-07T16:04:21.958Z</updated>
     
     
       
@@ -488,31 +513,6 @@
     
     
     <category term="kotlin" scheme="http://ytkz11@.github.io/tags/kotlin/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>6个波段的landsat数据怎么在Matlab里叠加成12个波段</title>
-    <link href="http://ytkz11@.github.io/2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/"/>
-    <id>http://ytkz11@.github.io/2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/</id>
-    <published>2023-02-10T10:00:10.000Z</published>
-    <updated>2023-02-10T07:50:16.022Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="matlab" scheme="http://ytkz11@.github.io/categories/matlab/"/>
-    
-    
-    <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
     
   </entry>
   
