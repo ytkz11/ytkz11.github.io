@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            GIS格式和地理空间文件扩展名的汇总 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">GIS格式和地理空间文件扩展名的汇总</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-12-10 22:33:58</span>
+        <span class="mobile">2023-12-10 22:33</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-12-11 17:05:49</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/GIS/">GIS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/GIS/">GIS</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>某些地理空间数据格式很常见。但有些并不常见。笔者汇总 GIS 文件格式：</p>
+<h1 id="矢量-GIS-文件格式"><a href="#矢量-GIS-文件格式" class="headerlink" title="矢量 GIS 文件格式"></a>矢量 GIS 文件格式</h1><p><img src="https://gisgeography.com/wp-content/uploads/2015/11/vector-layer.png" alt=""></p>
+<p>矢量数据不是由像素网格组成的。相反，矢量图形由顶点和路径组成</p>
+<p>矢量数据的三种基本符号类型是点、线和面（面）。这些GIS文件格式包含矢量数据。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件类型</th>
+<th>后缀</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Esri Shapefile</td>
+<td>.SHP,<br>.DBF,<br>.SHX</td>
+<td>到目前为止，shapefile 是最常见的地理空间文件类型。所有商业和开源都接受 shapefile 作为 GIS 格式。它无处不在，已成为行业标准。SHP文件必须包含三个文件，这些文件是构成 shapefile 所必需的。三个必需的文件是：<br>1.SHP 是特征几何。<br>2.SHX 是形状索引位置。<br>DBF 是属性数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">GeoJSON</td>
+<td>.GEOJSON<br>.JSON</td>
+<td>GeoJSON 是一种使用 JavaScript 对象表示法 （JSON） 对地理数据结构（如点、线和多边形）进行编码的格式。它是在线 Web 制图应用程序最常见的开放标准格式之一。</td>
+</tr>
+<tr>
+<td style="text-align:left">Geography Markup Language (GML)</td>
+<td>.GML</td>
+<td>GML 以文本形式存储地理实体（要素）。与 GeoJSON 类似，GML 可以在任何文本编辑器中更新。每个要素都具有属性列表、几何（点、线、曲线、曲面和面）以及空间参考系。<br>将 GML 与 GeoJSON 进行比较时，通常会有更多的开销。这是因为 GML 会为相同数量的信息生成更多数据。</td>
+</tr>
+<tr>
+<td style="text-align:left">Google Keyhole 标记语言KML/KMZ</td>
+<td>.KML<br>.KMZ</td>
+<td>KML 代表 Keyhole 标记语言。这种 GIS 格式基于 XML，主要用于 Google 地球。KML由Keyhole Inc开发，后来被Google收购.KMZ（KML-Zipped）取代KML成为默认的Google Earth地理空间格式，因为它是文件的压缩版本。</td>
+</tr>
+<tr>
+<td style="text-align:left">GPS 交换格式 （GPX）</td>
+<td>.GPX</td>
+<td>GPS 交换格式是一种 XML 架构，用于描述从 GPS 接收器捕获的航点、航迹和路线。由于 GPX 是一种交换格式，因此您可以根据其描述属性将 GPS 数据从一个程序公开传输到另一个程序。最低要求。<br>GPX 是纬度和经度坐标。此外，GPX 文件还可以选择存储。<br>位置属性，包括时间、高程和大地水准面高度作为标签。</td>
+</tr>
+<tr>
+<td style="text-align:left">IDRISI 矢量图</td>
+<td>.VCT<br>.VDC</td>
+<td>MapInfo TAB文件是MapInfo软件的专有格式。<br>与 shapefile 类似，它们需要一组文件来表示地理信息和属性。<br>TAB 文件采用 ASCII 格式，用于链接关联的 ID、DAT、MAP 和 IND 文件。<br>DAT文件包含与dBase DBF相关联的表格数据 file.ID 文件是将图形对象链接到数据库信息的索引文件。<br>MAP文件是存储地理信息的地图对象。IND 文件是表格数据的索引文件。</td>
+</tr>
+<tr>
+<td style="text-align:left">MapInfo TAB</td>
+<td>.TAB<br>.DAT<br>.ID<br>.MAP<br>.IND</td>
+<td>MapInfo TAB文件是MapInfo软件的专有格式。与 shapefile 类似，它们需要一组文件来表示地理信息和属性。<br> TAB 文件是链接关联的 ID、DAT、MAP 和 IND 文件的 ASCII 格式。 <br> DAT文件包含与dBase DBF文件相关联的表格数据。 <br>ID 文件是将图形对象链接到数据库信息的索引文件。 <br>MAP文件是存储地理信息的地图对象。<br> IND 文件是表格数据的索引文件。</td>
+</tr>
+<tr>
+<td style="text-align:left">OpenStreetMap OSM XML</td>
+<td>.OSM</td>
+<td>GIS格式OSM是OpenStreetMap基于XML的文件格式。<br>更高效、更小的 PBF 格式（“Protocolbuffer 二进制格式”）是基于 XML 的格式的替代方法。<br>QGIS中的数据互操作性可以加载本地OSM文件。<br>OpenStreetMap插件可以将PBF转换为OSM，然后可以在QGIS中使用。</td>
+</tr>
+<tr>
+<td style="text-align:left">Digital Line Graph (DLG)</td>
+<td>.DLG</td>
+<td>数字折线图（DLG）文件是在传统纸质地形图上生成的自然矢量。<br>例如，这包括乡镇和山脉、等高线、河流、湖泊、道路、铁路和城镇。<br>美国人口普查局拓扑集成地理编码和参考 （TIGER） 的大部分数据都是使用标准 DLG 格式生成的。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="栅格-GIS-文件格式"><a href="#栅格-GIS-文件格式" class="headerlink" title="栅格 GIS 文件格式"></a>栅格 GIS 文件格式</h1><p><img src="https://gisgeography.com/wp-content/uploads/2014/07/discrete-raster-300x99.png" alt="Discrete raster"></p>
+<p>栅格数据由像素（也称为格网像元）组成。它们通常是规则的间隔和方形的.</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件类型</th>
+<th>后缀</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">GeoTIFF</td>
+<td>.TIF<br>.TIFF<br> .OVR</td>
+<td>GeoTIFF已成为GIS和卫星遥感应用的行业图像标准文件。GeoTIFF 可能附带其他文件：<br>TFW 是提供栅格地理位置所需的坐标定位文件。<br>XML 可以选择随 GeoTIFF 一起提供，并且是您的元数据。<br>AUX 辅助文件存储投影和其他信息。<br>OVR 金字塔文件提高了光栅显示的性能。</td>
+</tr>
+<tr>
+<td style="text-align:left">IDRISI Raster</td>
+<td>.RST<br>.RDC</td>
+<td>IDRISI 将 RST 扩展分配给所有栅格图层。<br>它们由整数、实数、字节和 RGB24 等数字网格单元格值组成。<br>栅格文档文件 （RDC） 是 RST 文件的配套文本文件。<br>它们将列数和行数分配给 RST 文件。<br>此外，它们还记录了文件类型、坐标系、参考单位和位置误差。</td>
+</tr>
+<tr>
+<td style="text-align:left">ASCII 网格</td>
+<td>.ASC</td>
+<td>ASCII 使用一组介于 0 和 255 之间的数字（包括浮点数）进行信息存储和处理。它们还包含带有一组关键字的标题信息。<br>ASCII 文本文件以其本机形式以分隔格式存储 GIS 数据。这可以是逗号、空格或制表符分隔的格式。</td>
+</tr>
+<tr>
+<td style="text-align:left">IMG</td>
+<td>.IMG</td>
+<td>ERDAS Imagine IMG 文件是由 Hexagon Geospatial 开发的专有文件格式。<br>IMG 文件通常用于栅格数据，以存储单个和多个波段的卫星数据。IMG 文件使用分层格式 （HFA），该格式是可选的，用于存储有关文件的基本信息。<br>例如，这可以包括文件信息、地面控制点和传感器类型。<br>作为 IMG 文件一部分的每个栅格图层都包含有关其数据值的信息。<br>例如，这包括投影、统计数据、属性、金字塔以及栅格类型是连续的还是离散的。</td>
+</tr>
+<tr>
+<td style="text-align:left">Envi RAW Raster</td>
+<td>.BIL<br>.BIP<br>.BSQ</td>
+<td>envi波段存储文件是用于单波段/多波段航空影像和卫星影像的栅格存储扩展模块。<br> BIL 文件由一个头文件 （HDR） 组成，该文件描述图像中的列数、行数、波段数、位深度和布局。</td>
+</tr>
+<tr>
+<td style="text-align:left">PCI Geomatics 数据库文件 （PCIDSK）</td>
+<td>.PIX</td>
+<td>PIX 文件是由 PCI Geomatics 开发的栅格存储图层。<br>它是一种灵活的文件类型，将所有图像和辅助数据（称为“片段”）存储在一个独立的文件中。<br>例如，区段可以包括图像通道、训练站点和直方图信息。<br>作为数据库文件，PIX 文件可以保存具有不同位深度的光栅通道。<br>它们还可以存储投影、属性信息、元数据和图像/矢量。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="压缩的光栅文件格式"><a href="#压缩的光栅文件格式" class="headerlink" title="压缩的光栅文件格式"></a>压缩的光栅文件格式</h1><p><img src="https://gisgeography.com/wp-content/uploads/2015/11/compressed-raster-layer-300x96.png" alt="Compressed Raster GIS Formats"></p>
+<p>有损 GIS 压缩通过永久删除某些信息（尤其是冗余信息）来减小文件大小（即使用户可能没有注意到它）。</p>
+<p>这些有损压缩算法通常会导致文件大小的更大减小。以下是高度压缩的 GIS 格式的示例。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件类型</th>
+<th>后缀</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ER Mapper 增强压缩小波</td>
+<td>.ECW</td>
+<td>ECW 是一种压缩图像格式，通常用于航空和卫星图像。<br>这种 GIS 文件类型以其高压缩比而闻名，同时仍保持图像的高质量对比度。</td>
+</tr>
+<tr>
+<td style="text-align:left">JPEG2000</td>
+<td>.JP2</td>
+<td>JPEG 2000 通常具有 JP2 文件扩展名。它们是具有最新JPG格式的小波压缩，提供了有损或无损压缩的选项。<br>JPEG 2000 GIS 格式需要一个坐标定位文件，该文件可提供栅格地理位置。<br>它们是背景图像的最佳选择，因为它具有有损压缩。<br>JPEG 2000 可以实现 20：1 的压缩比，类似于 MrSID 格式。</td>
+</tr>
+<tr>
+<td style="text-align:left">多分辨率无缝图像数据库 MrSID</td>
+<td>.SID<br>.SDW</td>
+<td>MrSID 图像的扩展名为 SID，并附有文件扩展名为 SDW 的坐标定位文件。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="地理数据库文件格式"><a href="#地理数据库文件格式" class="headerlink" title="地理数据库文件格式"></a>地理数据库文件格式</h1><p><img src="https://gisgeography.com/wp-content/uploads/2016/11/city-geodatabases-550x136.png" alt="city geodatabases"></p>
+<p>数据库是结构化的数据/信息集。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件类型</th>
+<th>后缀</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Esri 文件地理数据库</td>
+<td>.GDB</td>
+<td>Esri 创建了文件地理数据库，作为用于存储多个属性表、矢量和栅格数据集的容器。<br>它是个人地理数据库 （MDB） 的后继者，Esri 建议使用文件地理数据库而不是个人地理数据库。<br>文件地理数据库在结构和性能方面具有优势。<br>它们具有快速的性能、通用关系、兼容的栅格存储、改进的空间索引、数据压缩、可自定义的配置和 1 TB 的文件大小限制。<br>在地理数据库中，地理数据集称为要素类。<br>但地理数据库可以存储更复杂的数据，例如网络、栅格镶嵌和要素数据集。</td>
+</tr>
+<tr>
+<td style="text-align:left">Esri 个人地理数据库</td>
+<td>.MDB</td>
+<td>个人地理数据库使用默认的 Microsoft Access 数据库文件扩展名 （MDB）。<br>它们曾经是用于管理地理空间数据的最普遍的数据库类型。<br>但它们最大的缺点是 2GB 的存储容量有限。而文件地理数据库提供 2TB 的容量。最后，只需添加几个栅格和矢量数据集，即可快速达到个人地理数据库的存储容量。</td>
+</tr>
+<tr>
+<td style="text-align:left">OGC GeoPackage</td>
+<td>.GPKG</td>
+<td>GPKG 是独立的无服务器 SQLite 数据库，可以包含矢量、切片、栅格、图层属性甚至扩展等任何内容。<br>与具有 3 个必需文件的 shapefile 不同，这个开放标准的地理空间容器易于共享，因为它都包含在一个文件中。</td>
+</tr>
+<tr>
+<td style="text-align:left">Mapbox MBTiles</td>
+<td>.MBTILES</td>
+<td>MBTILES 用于在单个文件中存储和打包栅格或矢量地图切片集。<br>文件格式基于 SQLite 数据库。MBTiles 支持的唯一坐标系是球面墨卡托。<br>MBTiles 文件格式专为 Mapbox 和其他 Web/移动应用程序而设计。</td>
+</tr>
+<tr>
+<td style="text-align:left">SpatiaLite</td>
+<td>.SL3, .SQLITE</td>
+<td>SpatiaLite 使用 SQLite 数据库引擎。<br>但是 SpatiaLite 通过赋予 SQLite 空间功能来扩展它。SpatiaLite 提供与地理数据库类似的功能，大致等同于 PostgreSQL + PostGIS。<br>它们是开源和轻量级的，能够在单个文件容器中保存空间和非空间文件。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="LiDAR-文件格式"><a href="#LiDAR-文件格式" class="headerlink" title="LiDAR 文件格式"></a>LiDAR 文件格式</h1><p>光探测和测距 （LiDAR） 技术的发展彻底改变了我们看待地球表面的方式。</p>
+<p><img src="https://gisgeography.com/wp-content/uploads/2017/06/lidar-points-3d-300x145.png" alt="lidar points 3d"></p>
+<p>作为点云数据，LiDAR 是具有高程值的坐标点的密集网络。这些 GIS 格式需要专门的软件或扩展程序才能查看或编辑。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件类型</th>
+<th>后缀</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ASPRS LiDAR 数据交换格式</td>
+<td>.LAS,<br>.LASD,<br>.LAZ</td>
+<td>LAS 文件格式是一种二进制文件格式，专门用于供应商和客户之间的交换。<br>总体而言，LAS 文件可维护特定于 LIDAR 的信息，而不会丢失信息。<br>LAS 文件可供公众使用，这与 ASCII 和其他专有文件格式不同。坐标点测量的密集网络有时非常大，以至于经常需要将它们拆分以防止文件大小变得太大。<br>压缩 LAS 文件时，专门用于此文件的文件格式为 LAZ。<br>可以使用 LAZ 文件格式节省大量存储空间。与大多数文件压缩一样，LAZ 没有信息丢失。<br>最后，LAS 数据集 （LASD） 引用一组 LAS 文件。LASD 的目的是能够检查引用的 LAS 文件中的 3D 点云属性。<br>通过 LAS 数据集，可以可视化三角化表面并执行统计分析。</td>
+</tr>
+<tr>
+<td style="text-align:left">XYZ 点云</td>
+<td>.XYZ</td>
+<td>XYZ 文件没有用于存储点云数据的规范。前 3 列通常表示 X、Y 和 Z 坐标。<br>但是没有标准规范，因此它可能包括RGB，强度值和其他LiDAR值。<br>它们属于 ASCII 点云文件格式组，包括 TXT、ASC 和 PTS。<br> 像 XYZ 这样的非二进制文件是有利的，因为它们可以在文本编辑器中打开和编辑。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="CAD-文件格式"><a href="#CAD-文件格式" class="headerlink" title="CAD 文件格式"></a>CAD 文件格式</h1><p>CAD（计算机辅助制图）通常与地理信息系统（GIS）齐头并进。GIS 导入的设计模型可能是在 Autodesk 或 Bentley Systems MicroStation 中构建的。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件类型</th>
+<th>后缀</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Autodesk Drawing</td>
+<td>.DWF,<br>.DWG,<br>.DXF</td>
+<td>Autodesk CAD（计算机辅助绘图）文件格式专为二维和三维设计而设计。它们通常包含图层中的边缘、曲线和注释文本等元素。DWG/DXF 是使用笛卡尔坐标的矢量文件。每个元素在网格中绘制 XY 点。<br>DWF（设计 Web 格式）更具体地用于在 Internet 上查看和使用。<br>DWG （DraWinG） 是包含元数据的 AutoCAD 的本机格式和工作版本。<br>最后，DXF（图形交换格式）将图形信息存储为数据的精确表示。但 DXF 的目的是用于 CAD 程序之间的数据交换。</td>
+</tr>
+<tr>
+<td style="text-align:left">Bentley Microsystems DGN 文件格式</td>
+<td>.DGN</td>
+<td>DGN 文件由图层组成，包括注释、点、折线、多边形、和多路径。它们还包含样式信息 （ColorIndex） 和空间参考系统。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="高程文件格式"><a href="#高程文件格式" class="headerlink" title="高程文件格式"></a>高程文件格式</h1><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件类型</th>
+<th>后缀</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">DEM</td>
+<td>.DEM</td>
+<td>DEM格式是由USGS专门开发的基于栅格的ASCII文件，用于捕获数字高程模型。由于 USGS 制作了大量传统高程模型，因此它们在行业中被广泛使用。DEM 格式是包含 3 种记录类型的单个文件。<br>记录 A 存储 DEM 的一般特征，例如描述性名称、最小和最大高程、范围边界和 B 记录数。<br>记录 B 包含标题和高程剖面图。<br>记录 C 存储数据的准确性，并且是可选的。</td>
+</tr>
+<tr>
+<td style="text-align:left">数字地形高程数据 （DTED）</td>
+<td>.DT0<br>.DT1<br>.DT2</td>
+<td>数字地形高程数据 （DTED） 是由美国国家地理空间情报局创建的标准格式。它们是一种栅格格式，由通常从飞机雷达捕获的地形高程值组成。用户定义的属性通过 TAB 文件进行分配。3 级分辨率包含各种单元格间距分辨率：<br>0 级间距为 30 角秒间距（标称一公里）<br>1 级间距为 3 角秒（约 100 米）<br>2 级间距为 1 角秒（约 30 米）</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="Web-文件格式"><a href="#Web-文件格式" class="headerlink" title="Web 文件格式"></a>Web 文件格式</h1><p>这些 Web 文件格式是专门为在 Internet 上提供和显示地理要素而构建的。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件类型</th>
+<th>后缀</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">GeoRSS</td>
+<td>URL<br>.XML</td>
+<td>网站向订阅者发布 RSS 源，这些源以 XML 文件的形式提供。GeoRSS 扩展了 XML 源以包含地理数据。<br>GeoRSS 规范描述了如何向 XML 源添加空间几何图形（如点、线和多边形）。<br>带有位置的网络源已成为灾难通知的工具。例如，美国地质调查局通过GeoRSS发布实时地震。现在，RSS 有位置了。</td>
+</tr>
+<tr>
+<td style="text-align:left">Web 要素服务 （WFS）</td>
+<td>URL</td>
+<td>Web 要素服务允许用户通过 Internet 共享地理空间（或非空间）。因此，可以通过 Internet 在 Web 地图、桌面和 Web 应用程序中使用要素服务。用户通过指向 REST 端点或 URL 来访问 Web 要素服务。<br>Web 要素服务 （WFS） 用于编辑要素。<br>Web 制图服务 （WMS） 显示要素，不带编辑功能</td>
+</tr>
+<tr>
+<td style="text-align:left">Esri ArcGIS Online Web 服务</td>
+<td>URL</td>
+<td>ArcGIS Online 是 Esri 基于云的平台，允许用户在线发布内容，以便与其他组织或公众协作共享。<br>要素图层是可由组织中的用户查看和编辑的矢量图层。<br>切片图层是预绘制的，通常用于底图。<br>场景图层特定于三维数据的集合</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="多时态文件格式"><a href="#多时态文件格式" class="headerlink" title="多时态文件格式"></a>多时态文件格式</h1><p>时态数据附加了时间分量。由于时间与天气的关系非常重要，许多天气数据都使用时态 GIS 数据格式。</p>
+<p>时态数据的其他示例包括人口趋势、土地利用。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">文件类型</th>
+<th>后缀</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">网络通用数据表单 （NetCDF）</td>
+<td>.NC</td>
+<td>NetCDF GIS格式是用于存储多维变量的面向数组的数据的接口。<br>多维 NetCDF 的一个例子可以是温度、降水或风速随时间的变化。它通常作为 GIS 数据存储格式用于海洋和大气界涉及的科学数据。<br>ArcGIS 多维工具箱和 QGIS NetCDF 浏览器均支持 NetCDF 文件。</td>
+</tr>
+<tr>
+<td style="text-align:left">分层数据格式(Hierarchical Data Format) HDF</td>
+<td>.HDF</td>
+<td>HDF（分层数据格式）由美国国家超级计算应用中心 （NCSA） 设计，用于管理极其庞大和复杂的科学数据。它是一种通用数据模型，对集合中数据对象的数量或大小没有限制。<br>ArcGIS 能够读取 HDF4 和 HDF5 数据。免费的开源 GDAL（命令行）工具支持将 HDF 文件转换为 GeoTIFF。该HDFView程序允许用户查看HDF文件。</td>
+</tr>
+<tr>
+<td style="text-align:left">GRIB</td>
+<td>.GRIB</td>
+<td>与NetCDF类似，GRIB文件通常用于气象学中存储历史和预报天气数据。<br>它是一个多维文件，具有自我描述、灵活性和可扩展性的优点。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>在这个行业中会遇到各种各样的 GIS 格式。</p>
+<p>从 2维 到 3维 ，三维文件格式增加了深度。然后，从固定时间到动态时间，多时态格式增加了时间元素。</p>
+<p>今天的分享先到这里了。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/GIS/">#GIS</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2023/12/11/da-jian-chatgpt-xiao-cheng-xu-qian-hou-duan-ji-xiang-mu-yan-shi/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item"></span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">编程_如何列出 Python 项目中未使用的包</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

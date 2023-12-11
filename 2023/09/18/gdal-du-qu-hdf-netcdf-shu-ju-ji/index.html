@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-09-18 16:47:13</span>
+        <span class="pc">2023-12-11 17:05:49</span>
     </span>
     
     
@@ -208,7 +208,7 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="HDF5、NetCDF"><a href="#HDF5、NetCDF" class="headerlink" title="HDF5、NetCDF"></a>HDF5、NetCDF</h1><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202309181605772.png" alt="xarray"></p>
+                <h1 id="HDF5、NetCDF"><a href="#HDF5、NetCDF" class="headerlink" title="HDF5、NetCDF"></a>HDF5、NetCDF</h1><p><img src="C:\Users\Administrator\Pictures\imgs202309181605772.png" alt="xarray"></p>
 <p>默认HDF5、NetCDF这两类文件是相似，读取文件的步骤也是相似的。</p>
 <p>HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc</p>
 <p>以下用nc文件代指HDF、NetCDF文件。</p>
@@ -231,7 +231,7 @@ band_ds <span class="token operator">=</span> gdal<span class="token punctuation
 band_array <span class="token operator">=</span> band_ds<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><code>band_array</code>然后将是一个包含子数据集值的 numpy 数组。</p>
 <p>可以使用该方法或从命令行<code>.GetSubDatasets()</code>使用来找出要寻址的子数据集。</p>
-<p>以下是具体例子，使用GDAL获取Sentinel-3 数据的经度‘、纬度、高度</p>
+<p>以下是具体例子，使用GDAL获取Sentinel-3 数据的经度、纬度、高度</p>
 <p>Sentinel-3 数据地理空间信息保存在geo_coordinates.nc，该文件共有三个波段，第一个波段到第三个波段分别是高度、纬度、经度。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> osr
 geo_file <span class="token operator">=</span> <span class="token string">r'xxx\\geo_coordinates.nc'</span>

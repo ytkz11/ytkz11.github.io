@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/</loc>
+    <lastmod>2023-12-11</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/12/11/da-jian-chatgpt-xiao-cheng-xu-qian-hou-duan-ji-xiang-mu-yan-shi/</loc>
+    <lastmod>2023-12-11</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2021/01/26/chang-yong-de-zui-jian-dan-de-git-yu-ju/</loc>
+    <lastmod>2023-12-11</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/02/10/ji-yu-chatgpt-wen-da-ji-qi-ren/</loc>
+    <lastmod>2023-12-11</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/03/11/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/</loc>
+    <lastmod>2023-12-11</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/</loc>
+    <lastmod>2023-12-11</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/</loc>
+    <lastmod>2023-12-11</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/</loc>
     <lastmod>2023-12-08</lastmod>
   </url>
@@ -47,10 +75,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/</loc>
     <lastmod>2023-10-13</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/</loc>
-    <lastmod>2023-09-18</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2023/06/12/gadm-shi-liang-xia-zai/</loc>
