@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-12-11T09:05:49.594Z</updated>
+  <updated>2023-12-14T07:13:46.197Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pyside6将图片资源转为py格式</title>
+    <link href="http://ytkz11@.github.io/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/"/>
+    <id>http://ytkz11@.github.io/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/</id>
+    <published>2023-12-14T10:26:58.000Z</published>
+    <updated>2023-12-14T07:13:46.197Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h1&gt;&lt;p&gt;pyside6将图片资源转为py格式， 是为了打包为exe的时候不丢失图片文件&lt;/p&gt;
+&lt;h1 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="pyside6" scheme="http://ytkz11@.github.io/categories/pyside6/"/>
+    
+    
+    <category term="pyside6" scheme="http://ytkz11@.github.io/tags/pyside6/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -141,32 +167,6 @@
   </entry>
   
   <entry>
-    <title>编程_栅格进行裁剪</title>
-    <link href="http://ytkz11@.github.io/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/"/>
-    <id>http://ytkz11@.github.io/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/</id>
-    <published>2023-12-01T10:26:58.000Z</published>
-    <updated>2023-12-01T05:51:30.883Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h1&gt;&lt;p&gt;现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>编程_矢量转为栅格</title>
     <link href="http://ytkz11@.github.io/2023/12/01/bian-cheng-shi-liang-zhuan-wei-zha-ge/"/>
     <id>http://ytkz11@.github.io/2023/12/01/bian-cheng-shi-liang-zhuan-wei-zha-ge/</id>
@@ -180,6 +180,32 @@
         
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312011415129.png&quot; alt=&quot;image-20231201135533280&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;需求&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编程_栅格进行裁剪</title>
+    <link href="http://ytkz11@.github.io/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/"/>
+    <id>http://ytkz11@.github.io/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/</id>
+    <published>2023-12-01T10:26:58.000Z</published>
+    <updated>2023-12-01T05:51:30.883Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h1&gt;&lt;p&gt;现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。&lt;/p&gt;
+&lt;h2 id=&quot;代码&quot;&gt;&lt;a</summary>
         
       
     
@@ -247,7 +273,7 @@
     <link href="http://ytkz11@.github.io/2023/11/14/cong-gadm-xia-zai-shi-jie-ge-guo-de-xing-zheng-bian-jie/"/>
     <id>http://ytkz11@.github.io/2023/11/14/cong-gadm-xia-zai-shi-jie-ge-guo-de-xing-zheng-bian-jie/</id>
     <published>2023-11-14T10:26:58.000Z</published>
-    <updated>2023-11-20T09:49:38.253Z</updated>
+    <updated>2023-12-14T07:29:48.870Z</updated>
     
     
       
@@ -461,31 +487,6 @@
     
     
     <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hello go</title>
-    <link href="http://ytkz11@.github.io/2023/02/27/hello-go/"/>
-    <id>http://ytkz11@.github.io/2023/02/27/hello-go/</id>
-    <published>2023-02-27T14:00:10.000Z</published>
-    <updated>2023-03-01T00:46:02.197Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-go&quot; data-language=&quot;go&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="Go" scheme="http://ytkz11@.github.io/categories/Go/"/>
-    
-    
-    <category term="Go" scheme="http://ytkz11@.github.io/tags/Go/"/>
     
   </entry>
   

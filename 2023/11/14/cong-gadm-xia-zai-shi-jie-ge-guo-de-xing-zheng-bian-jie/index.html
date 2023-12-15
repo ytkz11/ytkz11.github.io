@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-11-20 17:49:38</span>
+        <span class="pc">2023-12-14 15:29:48</span>
     </span>
     
     
@@ -349,6 +349,152 @@ proxies <span class="token operator">=</span> <span class="token punctuation">{<
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
     outpath <span class="token operator">=</span> <span class="token string">r'D:\gadm'</span>
     download_gadm<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>request_save<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="方便使用"><a href="#方便使用" class="headerlink" title="方便使用"></a>方便使用</h1><p>为了方便使用，用pyside6写一个前端，结合以上代码打包为exe文件。</p>
+<p>代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2023/12/13 22:15</span>
+<span class="token comment"># @File : world_map_gui.py</span>
+
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span> sys
+<span class="token keyword">import</span> requests
+<span class="token keyword">from</span> PySide6<span class="token punctuation">.</span>QtCore <span class="token keyword">import</span> Signal<span class="token punctuation">,</span> QThread
+<span class="token keyword">from</span> PySide6<span class="token punctuation">.</span>QtGui <span class="token keyword">import</span> QIcon
+<span class="token keyword">from</span> PySide6<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QApplication<span class="token punctuation">,</span> QGridLayout<span class="token punctuation">,</span> QPushButton<span class="token punctuation">,</span> QTextEdit<span class="token punctuation">,</span> QDialog<span class="token punctuation">,</span> QLineEdit
+
+proxies <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'http'</span><span class="token punctuation">:</span> <span class="token string">'socks5h://127.0.0.1:7890'</span><span class="token punctuation">,</span>
+           <span class="token string">'https'</span><span class="token punctuation">:</span> <span class="token string">'socks5h://127.0.0.1:7890'</span>
+           <span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">MapDownload</span><span class="token punctuation">(</span>QThread<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    _signal <span class="token operator">=</span> Signal<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    text_signal <span class="token operator">=</span> Signal<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> savepath<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        QThread<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>savepath <span class="token operator">=</span> savepath
+        self<span class="token punctuation">.</span>url <span class="token operator">=</span> <span class="token string">'https://gadm.org/download_country.html'</span>
+        self<span class="token punctuation">.</span>proxies <span class="token operator">=</span> proxies
+        self<span class="token punctuation">.</span>headers <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">'user-agent'</span><span class="token punctuation">:</span> <span class="token string">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '</span>
+                          <span class="token string">'(KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'</span>
+        <span class="token punctuation">}</span>
+
+
+
+    <span class="token keyword">def</span> <span class="token function">target_url</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> country<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token string">r'https://geodata.ucdavis.edu/gadm/gadm4.1/shp/gadm41_AUS_shp.zip'</span>
+        url <span class="token operator">=</span> <span class="token string">r'https://geodata.ucdavis.edu/gadm/gadm4.1/shp/gadm41_%s_shp.zip'</span> <span class="token operator">%</span> country
+        <span class="token keyword">return</span> url
+
+    <span class="token keyword">def</span> <span class="token function">run</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>self<span class="token punctuation">.</span>savepath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">pass</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token comment"># create a new folder</span>
+            os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>self<span class="token punctuation">.</span>savepath<span class="token punctuation">)</span>
+
+        html <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>self<span class="token punctuation">.</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>headers<span class="token punctuation">,</span> proxies<span class="token operator">=</span>self<span class="token punctuation">.</span>proxies<span class="token punctuation">)</span><span class="token punctuation">.</span>text
+
+        country_lists <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'&lt;option value="(.*)"&gt;'</span><span class="token punctuation">,</span> html<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> countrys <span class="token keyword">in</span> country_lists<span class="token punctuation">:</span>
+            <span class="token keyword">try</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> <span class="token string">'_'</span> <span class="token keyword">in</span> countrys<span class="token punctuation">:</span>
+                    <span class="token keyword">try</span><span class="token punctuation">:</span>
+                        country_abbreviation <span class="token operator">=</span> countrys<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'_'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+                        country_name <span class="token operator">=</span> countrys<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'_'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+                        url <span class="token operator">=</span> self<span class="token punctuation">.</span>target_url<span class="token punctuation">(</span>country_abbreviation<span class="token punctuation">)</span>
+
+                        context <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>headers<span class="token punctuation">,</span> proxies<span class="token operator">=</span>self<span class="token punctuation">.</span>proxies<span class="token punctuation">)</span>
+                        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>savepath <span class="token operator">+</span> <span class="token string-interpolation"><span class="token string">f'/</span><span class="token interpolation"><span class="token punctuation">{</span>country_name<span class="token punctuation">}</span></span><span class="token string">.zip'</span></span><span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+                            f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>context<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+                            self<span class="token punctuation">.</span>text_signal<span class="token punctuation">.</span>emit<span class="token punctuation">(</span><span class="token string">'已下载 %s'</span> <span class="token operator">%</span> country_name<span class="token punctuation">)</span>
+                            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'completed download %s'</span> <span class="token operator">%</span> country_name<span class="token punctuation">)</span>
+
+                    <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+                        <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'空值'</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">except</span><span class="token punctuation">:</span>
+                <span class="token keyword">try</span><span class="token punctuation">:</span>
+                    country_abbreviation <span class="token operator">=</span> countrys<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'_'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+                    country_name <span class="token operator">=</span> countrys<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'_'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+                    url <span class="token operator">=</span> self<span class="token punctuation">.</span>target_url<span class="token punctuation">(</span>country_abbreviation<span class="token punctuation">)</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+                    context <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token operator">=</span>url<span class="token punctuation">,</span> headers<span class="token operator">=</span>self<span class="token punctuation">.</span>headers<span class="token punctuation">)</span>
+                    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>savepath <span class="token operator">+</span> <span class="token string-interpolation"><span class="token string">f'/</span><span class="token interpolation"><span class="token punctuation">{</span>country_name<span class="token punctuation">}</span></span><span class="token string">.zip'</span></span><span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+                        f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>context<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+                        self<span class="token punctuation">.</span>text_signal<span class="token punctuation">.</span>emit<span class="token punctuation">(</span><span class="token string">'completed download %s'</span> <span class="token operator">%</span> country_name<span class="token punctuation">)</span>
+                        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'completed download %s'</span> <span class="token operator">%</span> country_name<span class="token punctuation">)</span>
+
+                <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>_signal<span class="token punctuation">.</span>emit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Ui_MainWindow</span><span class="token punctuation">(</span>QDialog<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>Ui_MainWindow<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setupUi<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+
+
+        <span class="token comment"># TypeError: native Qt signal instance 'clicked' is not callable</span>
+        self<span class="token punctuation">.</span>pushButton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>download_map<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">setupUi</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> MainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        MainWindow<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"MainWindow"</span><span class="token punctuation">)</span>
+        MainWindow<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span>
+        MainWindow<span class="token punctuation">.</span>setMinimumSize<span class="token punctuation">(</span><span class="token number">400</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>gridLayout <span class="token operator">=</span> QGridLayout<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>gridLayout<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"gridLayout"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setLayout<span class="token punctuation">(</span>self<span class="token punctuation">.</span>gridLayout<span class="token punctuation">)</span>
+
+        <span class="token comment"># 图标</span>
+        self<span class="token punctuation">.</span>setWindowTitle<span class="token punctuation">(</span><span class="token string">'世界各国矢量下载'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setWindowIcon<span class="token punctuation">(</span>QIcon<span class="token punctuation">(</span><span class="token string">':/pic/icon1.png'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>pushButton <span class="token operator">=</span> QPushButton<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>pushButton<span class="token punctuation">.</span>setText<span class="token punctuation">(</span><span class="token string">'运行'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>pushButton<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"pushButton"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>savepathtext <span class="token operator">=</span> QLineEdit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>savepathtext<span class="token punctuation">.</span>setPlaceholderText<span class="token punctuation">(</span><span class="token string">'输入保存路径'</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>messageTE <span class="token operator">=</span> QTextEdit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>messageTE<span class="token punctuation">.</span>setObjectName<span class="token punctuation">(</span><span class="token string">"text"</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>gridLayout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>savepathtext<span class="token punctuation">,</span>  <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>gridLayout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>pushButton<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>gridLayout<span class="token punctuation">.</span>addWidget<span class="token punctuation">(</span>self<span class="token punctuation">.</span>messageTE<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+
+
+    <span class="token keyword">def</span> <span class="token function">download_map</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        save_path <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>savepathtext<span class="token punctuation">.</span>text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> save_path <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">:</span>
+            <span class="token comment"># 按钮不可选</span>
+            self<span class="token punctuation">.</span>pushButton<span class="token punctuation">.</span>setDisabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>savepathtext<span class="token punctuation">.</span>setDisabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+
+
+            self<span class="token punctuation">.</span>thread <span class="token operator">=</span> MapDownload<span class="token punctuation">(</span>save_path<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>thread<span class="token punctuation">.</span>_signal<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>completed<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>thread<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>thread<span class="token punctuation">.</span>text_signal<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>messageTE<span class="token punctuation">.</span>append<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">completed</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>messageTE<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'下载完成'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>savepathtext<span class="token punctuation">.</span>setDisabled<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>pushButton<span class="token punctuation">.</span>setEnabled<span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+    window <span class="token operator">=</span> Ui_MainWindow<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    window<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    app<span class="token punctuation">.</span><span class="token keyword">exec</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231214152307841.png" alt="image-20231214152307841"></p>
+<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>在公众号回复“gdam”获取下载后的数据。该数据不包括咱们中国的矢量，这个教程也只是作为分享。</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231214152914364.png" alt="image-20231214152914364"></p>
 
             </div>
 
