@@ -9,7 +9,7 @@
     
     <title>
         
-            clion中使用gdal的历程 |
+            分类: rust |
         
         remote sensing
     </title>
@@ -134,162 +134,42 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="post-page-container">
-        <div class="article-content-container">
-
-            <div class="article-title">
-                <span class="title-hover-animation">clion中使用gdal的历程</span>
-            </div>
-
+    <div class="category-container">
+        <div class="category-name">
+            <i class="fas fa-folder"></i>&nbsp;rust
+        </div>
+        <div class="category-post-list">
             
-                <div class="article-header">
-                    <div class="avatar">
-                        <img src="/images/favicon.png">
-                    </div>
-                    <div class="info">
-                        <div class="author">
-                            <span class="name">ytkz</span>
-                            
-                                <span class="author-label">Lv5</span>
-                            
-                        </div>
-                        <div class="meta-info">
-                            
-<div class="article-meta-info">
-    <span class="article-date article-meta-item">
-        
-            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
-        
-        <span class="pc">2023-11-16 21:26:58</span>
-        <span class="mobile">2023-11-16 21:26</span>
-    </span>
+<div class="archive-list-container">
     
-        <span class="article-update-date article-meta-item">
-        <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-05 09:50:15</span>
-    </span>
-    
-    
-        <span class="article-categories article-meta-item">
-            <i class="fas fa-folder"></i>&nbsp;
-            <ul>
+        <section class="archive-item">
+            <div class="archive-item-header">
+                <span class="archive-year">2023</span>
+                <span class="archive-year-post-count">[1]</span>
+            </div>
+            <ul class="article-list">
                 
-                    <li>
-                        <a href="/categories/gdal/">gdal</a>&nbsp;
+                    <li class="article-item">
+                        <a class="article-title"
+                           href="/2023/12/19/windows-an-zhuang-rust-ban-ben-gdal/"
+                        >Windows安装Rust版本GDAL</a>
+                        <span class="article-date">12-19</span>
                     </li>
                 
             </ul>
-        </span>
-    
-    
-        <span class="article-tags article-meta-item">
-            <i class="fas fa-tags"></i>&nbsp;
-            <ul>
-                
-                    <li>
-                        <a href="/tags/gdal/">gdal</a>&nbsp;
-                    </li>
-                
-            </ul>
-        </span>
-    
-
-    
-    
-    
+        </section>
     
 </div>
 
-                        </div>
-                    </div>
-                </div>
-            
-
-            <div class="article-content keep-markdown-body">
-                
-
-                <h1 id="为什么要使用clion？"><a href="#为什么要使用clion？" class="headerlink" title="为什么要使用clion？"></a>为什么要使用clion？</h1><p>使用多了pycharm,所以试试他们家的clion。</p>
-<h2 id="一、用vs编译GDAL"><a href="#一、用vs编译GDAL" class="headerlink" title="一、用vs编译GDAL"></a>一、用vs编译GDAL</h2><p>网上教程有，按照步骤一步一步编译gdal。</p>
-<h2 id="二、-dll文件转-a文件"><a href="#二、-dll文件转-a文件" class="headerlink" title="二、.dll文件转.a文件"></a>二、.dll文件转.a文件</h2><p>编译好的gdal文件夹中有gdal204.dll文件，单独复制一份，重命名为libgdal.dll，然后打开终端</p>
-<pre class="line-numbers language-none"><code class="language-none">gendef libgdal.dll
-dlltool -d libgdal.def -D libgdal.dll -l libgdal.a -k<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231116132741935.png" alt="image-20231116132741935"></p>
-<p>第一条命令会生成一个libmysql.def文件供第二条命令使用。<br>第二条命令使用前面生成的def文件以及dll文件生成.a文件并把导出名称中的@N去掉。</p>
-<h2 id="三、生成的-a文件放入wingw64安装目录的lib下"><a href="#三、生成的-a文件放入wingw64安装目录的lib下" class="headerlink" title="三、生成的.a文件放入wingw64安装目录的lib下"></a>三、生成的.a文件放入wingw64安装目录的lib下</h2><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231116133056188.png" alt="image-20231116133056188"></p>
-<h2 id="四、修改CMakeLists-txt文件"><a href="#四、修改CMakeLists-txt文件" class="headerlink" title="四、修改CMakeLists.txt文件"></a>四、修改CMakeLists.txt文件</h2><p>修改clion项目文件夹下的CMakeLists.txt文件。</p>
-<pre class="line-numbers language-none"><code class="language-none">cmake_minimum_required(VERSION 3.24)
-project(gdal_study)
-
-set(CMAKE_CXX_STANDARD 17)
-
-add_executable(gdal_study main.cpp)
-
-#引入头文件
-include_directories(D:\\GDAL_240\\include)
-
-#引入库文件
-link_directories(D:\\GDAL_240\\lib)
-
-#将第三方库连接在一起
-target_link_libraries(gdal_study libgdal.a)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>修改clion运行配置</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231116133307570.png" alt="image-20231116133307570"></p>
-
-            </div>
-
-            
-
-            
-                <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/gdal/">#gdal</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            
-
-            
-                <div class="article-nav">
-                    
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/12/01/bian-cheng-shi-liang-zhuan-wei-zha-ge/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">编程_矢量转为栅格</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
-                    
-                        <div class="article-next">
-                            <a class="next"
-                               rel="next"
-                               href="/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/"
-                            >
-                            <span class="title flex-center">
-                                <span class="post-nav-title-item">python多版本与虚拟环境</span>
-                                <span class="post-nav-item">下一篇</span>
-                            </span>
-                                <span class="right arrow-icon flex-center">
-                              <i class="fas fa-chevron-right"></i>
-                            </span>
-                            </a>
-                        </div>
-                    
-                </div>
-            
-
-            
         </div>
+    </div>
+    <div class="category-paginator">
+        <div class="paginator">
+    
 
-        
+    
+</div>
+
     </div>
 </div>
 
@@ -326,19 +206,6 @@ target_link_libraries(gdal_study libgdal.a)<span aria-hidden="true" class="line-
         </div>
     </div>
 
-    
-        <div class="post-tools">
-            <div class="post-tools-container">
-    <ul class="tools-list">
-        <!-- TOC aside toggle -->
-        
-
-        <!-- go comment -->
-        
-    </ul>
-</div>
-
-        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -412,12 +279,6 @@ target_link_libraries(gdal_study libgdal.a)<span aria-hidden="true" class="line-
 
 
 <div class="post-scripts">
-    
-        
-<script src="/js/post-helper.js"></script>
-
-        
-        
     
 </div>
 
