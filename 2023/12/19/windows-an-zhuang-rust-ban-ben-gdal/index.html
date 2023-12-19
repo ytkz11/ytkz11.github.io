@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-19 15:31:10</span>
+        <span class="pc">2023-12-19 15:40:09</span>
     </span>
     
     
@@ -234,8 +234,8 @@ GDAL_VERSION=373<span aria-hidden="true" class="line-numbers-rows"><span></span>
 choco install pkgconfiglite<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312191524875.png" alt="image-20231219152441170"></p>
 <h3 id="4、查看gdal版本"><a href="#4、查看gdal版本" class="headerlink" title="4、查看gdal版本"></a>4、查看gdal版本</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gdalinfo --version
-// GDAL <span class="token number">3.7</span>.1, released <span class="token number">2023</span>/07/06<span class="token punctuation">(</span>配置正常时命令行打印此内容<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="5、写入gdal-pc文件-注意-Version-3-7-1要和第四步相同"><a href="#5、写入gdal-pc文件-注意-Version-3-7-1要和第四步相同" class="headerlink" title="5、写入gdal.pc文件,注意**Version:3.7.1要和第四步相同"></a>5、写入gdal.pc文件,注意<em>**Version:3.7.1</em>要和第四步相同</h3><blockquote>
+//GDAL <span class="token number">3.7</span>.3, released <span class="token number">2023</span>/10/30<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="5、写入gdal-pc文件-注意-Version-3-7-3要和第四步相同"><a href="#5、写入gdal-pc文件-注意-Version-3-7-3要和第四步相同" class="headerlink" title="5、写入gdal.pc文件,注意**Version:3.7.3要和第四步相同"></a>5、写入gdal.pc文件,注意<em>**Version:3.7.3</em>要和第四步相同</h3><blockquote>
 <p>gdal.pc文件路径 C:\xxxxxx\gdal_lib\gdal\gdal.pc</p>
 </blockquote>
 <p>gdal.pc文件内容</p>
@@ -273,6 +273,7 @@ Cflags: -I${includedir}/${name}<span aria-hidden="true" class="line-numbers-rows
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312191530061.png" alt="image-20231219152959686"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312191531972.png" alt="image-20231219152931881"></p>
 <p>成功把rust-gdal在win10下进行调用。</p>
+<p>参考<a class="link" target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/655508921，才把整个过程走通，感谢。">https://zhuanlan.zhihu.com/p/655508921，才把整个过程走通，感谢。<i class="fas fa-external-link-alt"></i></a></p>
 
             </div>
 
