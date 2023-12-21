@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-11-23 14:41:16</span>
+        <span class="pc">2023-12-21 13:38:46</span>
     </span>
     
     
@@ -561,6 +561,74 @@ x<span class="token punctuation">,</span> y<span class="token punctuation">,</sp
         f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'/n'</span><span class="token punctuation">)</span>
         f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'/n'</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="为栅格数据添加地面控制点"><a href="#为栅格数据添加地面控制点" class="headerlink" title="为栅格数据添加地面控制点"></a>为栅格数据添加地面控制点</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> shutil
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+orig_fn <span class="token operator">=</span> <span class="token string">r''</span>
+shutil<span class="token punctuation">.</span>copy<span class="token punctuation">(</span>orig_fn<span class="token punctuation">,</span> fn<span class="token punctuation">)</span>   <span class="token comment">#因为要更新，所以需要对文件做个备份</span>
+ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>fn<span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_Update<span class="token punctuation">)</span>
+sr <span class="token operator">=</span> osr<span class="token punctuation">.</span>SpatialReference<span class="token punctuation">(</span><span class="token punctuation">)</span>
+sr <span class="token operator">=</span> osr<span class="token punctuation">.</span>SetWellKnownGeogCS<span class="token punctuation">(</span><span class="token string">'WGS84'</span><span class="token punctuation">)</span>  <span class="token comment">#WGS84基准</span>
+gcps <span class="token operator">=</span> <span class="token punctuation">[</span>gdal<span class="token punctuation">.</span>GCP<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">111.93</span><span class="token punctuation">,</span> <span class="token number">41.74</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1078</span><span class="token punctuation">,</span> <span class="token number">648</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        gdal<span class="token punctuation">.</span>GCP<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">111.90</span><span class="token punctuation">,</span> <span class="token number">41.75</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">3531</span><span class="token punctuation">,</span> <span class="token number">295</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+ds<span class="token punctuation">.</span>SetGCPS<span class="token punctuation">(</span>gcps<span class="token punctuation">,</span> sr<span class="token punctuation">.</span>ExportToWkt<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">#将地面控制点附加到数据集</span>
+ds <span class="token operator">=</span> <span class="token boolean">None</span>
+
+
+<span class="token comment">#如果要使用一阶变换来创建地理变换，将地面控制点列表传递给GCPsToGeotransform,确保在数据集上设置了地理变换和投影信息</span>
+
+ds<span class="token punctuation">.</span>SetProjection<span class="token punctuation">(</span>sr<span class="token punctuation">.</span>ExportToWkt<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+ds<span class="token punctuation">.</span>SetGeoTransform<span class="token punctuation">(</span>gdal<span class="token punctuation">.</span>GCPsToGeotransform<span class="token punctuation">(</span>gcps<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#从地面控制点中创建地理变换，并设置在数据集上</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="几何校正"><a href="#几何校正" class="headerlink" title="几何校正"></a>几何校正</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+
+<span class="token keyword">def</span> <span class="token function">get_indices</span><span class="token punctuation">(</span>source_ds<span class="token punctuation">,</span> target_width<span class="token punctuation">,</span> target_height<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    source_geotransform <span class="token operator">=</span> source_ds<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    source_width <span class="token operator">=</span> source_ds<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    source_height <span class="token operator">=</span> source_ds<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span>
+    dx <span class="token operator">=</span> target_width<span class="token operator">/</span>source_width
+    dy <span class="token operator">=</span> target_height<span class="token operator">/</span>source_height
+    target_x <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>dx<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> source_ds<span class="token punctuation">.</span>RasterXSize<span class="token punctuation">,</span> dx<span class="token punctuation">)</span>
+    target_y <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>dy<span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">,</span> source_ds<span class="token punctuation">.</span>RasterYSize<span class="token punctuation">,</span> dy<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> np<span class="token punctuation">.</span>meshgrid<span class="token punctuation">(</span>target_x<span class="token punctuation">,</span> target_y<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">bilinear</span><span class="token punctuation">(</span>in_data<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    x<span class="token operator">-=</span><span class="token number">0.5</span>
+    y<span class="token operator">-=</span><span class="token number">0.5</span>
+    x0<span class="token operator">=</span>np<span class="token punctuation">.</span>floor<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+    x1<span class="token operator">=</span>x0<span class="token operator">+</span><span class="token number">1</span>
+    y0<span class="token operator">=</span>np<span class="token punctuation">.</span>floor<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+    y1<span class="token operator">=</span>y0<span class="token operator">+</span><span class="token number">1</span>
+    
+    ul<span class="token operator">=</span>in_data<span class="token punctuation">[</span>y0<span class="token punctuation">,</span>x0<span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>y1<span class="token operator">-</span>y<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>x1<span class="token operator">-</span>x<span class="token punctuation">)</span>
+    ur<span class="token operator">=</span>in_data<span class="token punctuation">[</span>y0<span class="token punctuation">,</span>x1<span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>y1<span class="token operator">-</span>y<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">-</span>x0<span class="token punctuation">)</span>
+    ll<span class="token operator">=</span>in_data<span class="token punctuation">[</span>y1<span class="token punctuation">,</span>x0<span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>y<span class="token operator">-</span>y0<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>x1<span class="token operator">-</span>x<span class="token punctuation">)</span>
+    lr<span class="token operator">=</span>in_data<span class="token punctuation">[</span>y1<span class="token punctuation">,</span>x1<span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>y<span class="token operator">-</span>y0<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">-</span>x0<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> ul<span class="token operator">+</span>ur<span class="token operator">+</span>ll<span class="token operator">+</span>lr
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span><span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    in_fn<span class="token operator">=</span><span class="token string">r''</span>
+    out_fn<span class="token operator">=</span><span class="token string">r''</span>
+    cell_size<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0.02</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">0.02</span><span class="token punctuation">)</span>
+
+    in_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>in_fn<span class="token punctuation">)</span>
+    x<span class="token punctuation">,</span> y<span class="token operator">=</span>get_indices<span class="token punctuation">(</span>in_ds<span class="token punctuation">,</span><span class="token operator">*</span>cell_size<span class="token punctuation">)</span>
+    outdata<span class="token operator">=</span>bilinear<span class="token punctuation">(</span>in_ds<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+    
+    driver<span class="token operator">=</span>gdal<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">'GTiff'</span><span class="token punctuation">)</span>
+    rows<span class="token punctuation">,</span>cols<span class="token operator">=</span>outdata<span class="token punctuation">.</span>shape
+    out_ds<span class="token operator">=</span>driver<span class="token punctuation">.</span>Create<span class="token punctuation">(</span>out_fn<span class="token punctuation">,</span>cols<span class="token punctuation">,</span>rows<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span>gdal<span class="token punctuation">.</span>GDT_ Int32<span class="token punctuation">)</span>
+
+    gt<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span>in_ds<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    gt<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>cell_size<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    gt<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">=</span>cell_size<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    out_ds<span class="token punctuation">.</span>SetGeoTransform<span class="token punctuation">(</span>gt<span class="token punctuation">)</span>
+    
+    out_band <span class="token operator">=</span> out_ds<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    out_band<span class="token punctuation">.</span>WriteArray<span class="token punctuation">(</span>outdata<span class="token punctuation">)</span>
+    out_band<span class="token punctuation">.</span>FlushCache<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    out_band<span class="token punctuation">.</span>ComputeStatistics<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
 
