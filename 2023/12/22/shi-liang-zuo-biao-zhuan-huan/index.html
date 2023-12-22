@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            矢量坐标转换 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">矢量坐标转换</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2023-12-22 18:26:58</span>
+        <span class="mobile">2023-12-22 18:26</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2023-12-22 15:32:34</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%9F%A2%E9%87%8F/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231222153133081.png" alt="image-20231222153133081"></p>
+<p>需要把非84坐标的矢量转换为WGS84坐标的矢量。</p>
+<h1 id="方法介绍"><a href="#方法介绍" class="headerlink" title="方法介绍"></a>方法介绍</h1><p>跟栅格数据投影转换一样，使用GDAL库，我们有两种方法进行矢量数据的重投影：</p>
+<p>1.使用命令工具及其对应的命令行API接口进行转换（简单，准确，实践中一定要用这种方法）</p>
+<p>GDAL提供了<code>ogr2ogr</code>命令行工具进行矢量数据投影转换，命令如下：<code>ogr2ogr -t_srs "+proj=aea +lat_1=25 +lat_2=47 +lat_0=30 +lon_0=105 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs " China_Projected.shp China.shp</code></p>
+<p><code>-t_srs</code>选项制定输出数据投影，当然可以是ESPG，也可以是PROJ4或者OGC WKT格式的投影定义都OK</p>
+<p>GDAL对该命令的封装的C/C++函数是<code>GDALVectorTranslate()</code>,Python中是<code>gdal.VectorTranslate()</code></p>
+<p>2.使用GDAL提供的基本API进行实现。如果要自己利用基本API函数实现的话，基本思路如下：</p>
+<ul>
+<li>利用<code>osgeo.ogr.Driver.CreateDataSource()</code>创建输出数据</li>
+<li>根据源文件创建目标文件的属性字段定义</li>
+<li>利用<code>osgeo.osr.CoordinateTransformation</code>对象将源文件中的Geometry对象转为目标文件中的Geometry对象（其实质是进行不同投影系统下空间几何体的坐标转换）</li>
+<li>遍历源文件，依次将所有几何体的Geometry及其属性写入目标文件</li>
+</ul>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2023/12/22 19:12 </span>
+<span class="token comment"># @File : transfer_project.py</span>
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> ogr<span class="token punctuation">,</span> gdal
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> osr
+<span class="token keyword">import</span> os
+
+<span class="token keyword">def</span> <span class="token function">VectorTranslate</span><span class="token punctuation">(</span>
+        shapeFilePath<span class="token punctuation">,</span>
+        saveFolderPath<span class="token punctuation">,</span>
+        <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">"GeoJSON"</span><span class="token punctuation">,</span>
+        accessMode<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
+        dstSrsESPG<span class="token operator">=</span><span class="token number">4326</span><span class="token punctuation">,</span>
+        selectFields<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
+        geometryType<span class="token operator">=</span><span class="token string">"POLYGON"</span><span class="token punctuation">,</span>
+        dim<span class="token operator">=</span><span class="token string">"XY"</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    转换矢量文件，包括坐标系，名称，格式，字段，类型，纬度等。
+    :param shapeFilePath: 要转换的矢量文件
+    :param saveFolderPath: 生成矢量文件保存目录
+    :param format: 矢量文件格式，强烈建议不要使用ESRI Shapefile格式。
+    :param accessMode:None代表creation,'update','append','overwrite'
+    :param dstSrsESPG: 目标坐标系EPSG代码，4326是wgs84地理坐标系
+    :param selectFields: 需要保留的字段列表如果都保留，则为None
+    :param geometryType: 几何类型,"POLYGON","POINT"。。。
+    :param dim: 新矢量文件坐标纬度,建议查阅官方API。
+    :return:
+    """</span>
+    ogr<span class="token punctuation">.</span>RegisterAll<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    gdal<span class="token punctuation">.</span>SetConfigOption<span class="token punctuation">(</span><span class="token string">"GDAL_FILENAME_IS_UTF8"</span><span class="token punctuation">,</span> <span class="token string">"YES"</span><span class="token punctuation">)</span>
+    data <span class="token operator">=</span> ogr<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>shapeFilePath<span class="token punctuation">)</span>
+    layer <span class="token operator">=</span> data<span class="token punctuation">.</span>GetLayer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    spatial <span class="token operator">=</span> layer<span class="token punctuation">.</span>GetSpatialRef<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    layerName <span class="token operator">=</span> layer<span class="token punctuation">.</span>GetName<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>Destroy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    dstSRS <span class="token operator">=</span> osr<span class="token punctuation">.</span>SpatialReference<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    dstSRS<span class="token punctuation">.</span>ImportFromEPSG<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>dstSrsESPG<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> <span class="token builtin">format</span> <span class="token operator">==</span> <span class="token string">"GeoJSON"</span><span class="token punctuation">:</span>
+        destDataName <span class="token operator">=</span> layerName <span class="token operator">+</span> <span class="token string">".geojson"</span>
+        destDataPath <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>saveFolderPath<span class="token punctuation">,</span> destDataName<span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> <span class="token builtin">format</span> <span class="token operator">==</span> <span class="token string">"ESRI Shapefile"</span><span class="token punctuation">:</span>
+        destDataName <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>saveFolderPath<span class="token punctuation">,</span> layerName<span class="token punctuation">)</span>
+        flag <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>destDataName<span class="token punctuation">)</span>
+        os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>destDataName<span class="token punctuation">)</span> <span class="token keyword">if</span> <span class="token keyword">not</span> flag <span class="token keyword">else</span> <span class="token boolean">None</span>
+        destDataPath <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>destDataName<span class="token punctuation">,</span> layerName <span class="token operator">+</span> <span class="token string">".shp"</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"不支持该格式！"</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span>
+    options <span class="token operator">=</span> gdal<span class="token punctuation">.</span>VectorTranslateOptions<span class="token punctuation">(</span>
+        <span class="token builtin">format</span><span class="token operator">=</span><span class="token builtin">format</span><span class="token punctuation">,</span>
+        accessMode<span class="token operator">=</span>accessMode<span class="token punctuation">,</span>
+        srcSRS<span class="token operator">=</span>spatial<span class="token punctuation">,</span>
+        dstSRS<span class="token operator">=</span>dstSRS<span class="token punctuation">,</span>
+        reproject<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+        selectFields<span class="token operator">=</span>selectFields<span class="token punctuation">,</span>
+        layerName<span class="token operator">=</span>layerName<span class="token punctuation">,</span>
+        geometryType<span class="token operator">=</span>geometryType<span class="token punctuation">,</span>
+        dim<span class="token operator">=</span>dim
+    <span class="token punctuation">)</span>
+    gdal<span class="token punctuation">.</span>VectorTranslate<span class="token punctuation">(</span>
+        destDataPath<span class="token punctuation">,</span>
+        srcDS<span class="token operator">=</span>shapeFilePath<span class="token punctuation">,</span>
+        options<span class="token operator">=</span>options
+    <span class="token punctuation">)</span>
+    <span class="token keyword">return</span> destDataPath
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    shapeFilePath <span class="token operator">=</span> <span class="token string">r'D:\china1820.shp'</span>
+    saveFolderPath <span class="token operator">=</span> <span class="token string">r'D:\china'</span>
+    VectorTranslate<span class="token punctuation">(</span>
+        shapeFilePath<span class="token punctuation">,</span>
+        saveFolderPath<span class="token punctuation">,</span>
+        <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">"ESRI Shapefile"</span><span class="token punctuation">,</span>
+        accessMode<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
+        dstSrsESPG<span class="token operator">=</span><span class="token number">4326</span><span class="token punctuation">,</span>
+        selectFields<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span>
+        geometryType<span class="token operator">=</span><span class="token string">"POLYGON"</span><span class="token punctuation">,</span>
+        dim<span class="token operator">=</span><span class="token string">"XY"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231222153111974.png" alt="image-20231222153111974"></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%9F%A2%E9%87%8F/">#矢量</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2023/12/19/windows-an-zhuang-rust-ban-ben-gdal/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Windows安装Rust版本GDAL</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2023
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

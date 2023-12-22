@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-12-19T07:40:09.876Z</updated>
+  <updated>2023-12-22T07:32:34.290Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>矢量坐标转换</title>
+    <link href="http://ytkz11@.github.io/2023/12/22/shi-liang-zuo-biao-zhuan-huan/"/>
+    <id>http://ytkz11@.github.io/2023/12/22/shi-liang-zuo-biao-zhuan-huan/</id>
+    <published>2023-12-22T10:26:58.000Z</published>
+    <updated>2023-12-22T07:32:34.290Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231222153133081.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows安装Rust版本GDAL</title>
@@ -491,31 +520,6 @@
     
     
     <category term="matlab" scheme="http://ytkz11@.github.io/tags/matlab/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>shp文件在arcgis打开失败及其修复</title>
-    <link href="http://ytkz11@.github.io/2023/03/11/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/"/>
-    <id>http://ytkz11@.github.io/2023/03/11/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/</id>
-    <published>2023-03-11T10:00:10.000Z</published>
-    <updated>2023-12-11T09:05:49.590Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;h1 id=&quot;一-打开不了shp文件&quot;&gt;&lt;a href=&quot;#一-打开不了shp文件&quot; class=&quot;headerlink&quot; title=&quot;一</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
   </entry>
   
