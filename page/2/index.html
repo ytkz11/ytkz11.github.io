@@ -139,18 +139,16 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/12/01/bian-cheng-shi-liang-zhuan-wei-zha-ge/">
-                        编程_矢量转为栅格
+                    <a href="/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/">
+                        编程_不使用gdal读取tif文件
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        
-需求现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。
-代码#!/usr/bin/env python
-# -*- coding: utf-8 -*- 
-# @Time : 2023/11/30 10:...
+                        为什么要使用多个版本的python？读取tif文件正常来说，读取tif文件，使用gdal库就能解决了。
+gdal库在遥感行业过于强大、简单、易用，以至于很多商业软件的底层也调用了gdal。
+平常在python环境下使用gdal库对tif文件进行读写是...
                     
                 </div>
 
@@ -158,7 +156,42 @@
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Dec 05 2023 14:52:44 GMT+0800">
+            <span class="home-article-date" data-updated="Fri Dec 08 2023 17:07:02 GMT+0800">
+                2023-12-08
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/">
+                        编程_栅格影像去除投影
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        
+地理坐标系一般是指由经度、纬度和相对高度组成的坐标系，能够标示地球上的任何一个位置。经度和纬度常合称为经纬度，把球面上的经纬度显示在平面地图上需要采用某种地图投影
+地理坐标系由于地面高低的不同和地球形状的不正规，天体测量所得的信息不足用于明确地计算...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Dec 05 2023 19:57:53 GMT+0800">
                 2023-12-05
             </span>
         </span>
@@ -166,7 +199,7 @@
         
     </div>
 
-    <a class="read-more" href="/2023/12/01/bian-cheng-shi-liang-zhuan-wei-zha-ge/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -454,39 +487,6 @@ Landsat9 ...
     </div>
 
     <a class="read-more" href="/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/">
-                        编程 | 从RGBA图片格式理解波段
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        RGBA格式RGBA是一种色彩空间的模型，由RGB色彩空间和Alpha通道组成。RGBA代表红、绿、蓝和Alpha通道。 RGB是RGBA采用的颜色，它可以属于任何一种RGB色彩空间。而艾德文·卡特姆和匠白光在1971至1972年间提出的Alpha参...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Oct 13 2023 19:16:41 GMT+0800">
-                2023-10-13
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

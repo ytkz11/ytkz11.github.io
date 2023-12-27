@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-12-22T09:38:29.560Z</updated>
+  <updated>2023-12-27T01:28:21.854Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编程_矢量转为栅格</title>
+    <link href="http://ytkz11@.github.io/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/"/>
+    <id>http://ytkz11@.github.io/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/</id>
+    <published>2023-12-26T10:26:58.000Z</published>
+    <updated>2023-12-27T01:28:21.854Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312011415129.png&quot; alt=&quot;image-20231201135533280&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;需求&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何将tif格式的文件由30m重采样到100m?</title>
+    <link href="http://ytkz11@.github.io/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/"/>
+    <id>http://ytkz11@.github.io/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/</id>
+    <published>2023-12-22T14:26:58.000Z</published>
+    <updated>2023-12-25T05:04:57.599Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;D:\dengkaiyuan\code\my_blog\source\_posts\imgs202312222107377.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>clion配置gdal遇到的问题</title>
@@ -51,14 +106,14 @@
     <link href="http://ytkz11@.github.io/2023/12/22/shi-liang-zuo-biao-zhuan-huan/"/>
     <id>http://ytkz11@.github.io/2023/12/22/shi-liang-zuo-biao-zhuan-huan/</id>
     <published>2023-12-22T10:26:58.000Z</published>
-    <updated>2023-12-22T07:32:34.290Z</updated>
+    <updated>2023-12-26T01:00:06.941Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231222153133081.png&quot;</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312222030776.png&quot;</summary>
         
       
     
@@ -242,32 +297,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程_矢量转为栅格</title>
-    <link href="http://ytkz11@.github.io/2023/12/01/bian-cheng-shi-liang-zhuan-wei-zha-ge/"/>
-    <id>http://ytkz11@.github.io/2023/12/01/bian-cheng-shi-liang-zhuan-wei-zha-ge/</id>
-    <published>2023-12-01T10:26:58.000Z</published>
-    <updated>2023-12-05T06:52:44.498Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312011415129.png&quot; alt=&quot;image-20231201135533280&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;需求&quot;&gt;&lt;a</summary>
         
       
     
@@ -499,31 +528,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;RGBA格式&quot;&gt;&lt;a href=&quot;#RGBA格式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="gdal" scheme="http://ytkz11@.github.io/categories/gdal/"/>
-    
-    
-    <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GDAL读取HDF、NetCDF数据集</title>
-    <link href="http://ytkz11@.github.io/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/"/>
-    <id>http://ytkz11@.github.io/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/</id>
-    <published>2023-09-18T06:32:10.000Z</published>
-    <updated>2023-12-11T09:05:49.394Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;HDF5、NetCDF&quot;&gt;&lt;a href=&quot;#HDF5、NetCDF&quot; class=&quot;headerlink&quot; title=&quot;HDF5、NetCDF&quot;&gt;&lt;/a&gt;HDF5、NetCDF&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
         
       
     

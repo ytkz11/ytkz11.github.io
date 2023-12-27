@@ -9,7 +9,7 @@
     
     <title>
         
-            编程_栅格进行裁剪 |
+            如何将tif格式的文件由30m重采样到100m? |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">编程_栅格进行裁剪</span>
+                <span class="title-hover-animation">如何将tif格式的文件由30m重采样到100m?</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-12-01 18:26:58</span>
-        <span class="mobile">2023-12-01 18:26</span>
+        <span class="pc">2023-12-22 22:26:58</span>
+        <span class="mobile">2023-12-22 22:26</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-01 13:51:30</span>
+        <span class="pc">2023-12-25 13:04:57</span>
     </span>
     
     
@@ -175,7 +175,11 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                        <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%BC%96%E7%A8%8B/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -188,6 +192,10 @@
                 
                     <li>
                         <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,49 +216,46 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+                <p><img src="D:\dengkaiyuan\code\my_blog\source\_posts\imgs202312222107377.png" alt="image-20231222204533103"></p>
+<p>在知乎上看到这个问题，记录一下解决的过程。</p>
+<h1 id="命令行的方式"><a href="#命令行的方式" class="headerlink" title="命令行的方式"></a>命令行的方式</h1><p>如果你安装编译好gdal，可以使用以下命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">gdalwarp -tr 100 100 input.tif output.tif<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="代码的方式"><a href="#代码的方式" class="headerlink" title="代码的方式"></a>代码的方式</h1><p>此外，你还可以用python代码的方式进行重采样，把影像重采样到100米。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
 <span class="token comment"># -*- coding: utf-8 -*- </span>
-<span class="token comment"># @Time : 2023/11/27 10:18 </span>
-<span class="token comment"># @File : shp_clip_img.py</span>
+<span class="token comment"># @Time : 2023/12/22 20:39 </span>
+<span class="token comment"># @File : resample_100.py</span>
 
 <span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
-<span class="token keyword">import</span> os
 
-<span class="token comment">#  根据shp 裁剪影像</span>
-<span class="token keyword">def</span> <span class="token function">clip_image_by_shp</span><span class="token punctuation">(</span>input_file<span class="token punctuation">,</span> output_file<span class="token punctuation">,</span> clip_shape<span class="token punctuation">,</span> nodata<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">'''
-    @todo 根据shp 裁剪影像
-    @param shp_file: shp file
-    @param img_file: image file
-    @param outpath: output path
-    @return:
-    '''</span>
-    outpath <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>output_file<span class="token punctuation">)</span>
-    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">pass</span>
-    <span class="token keyword">else</span><span class="token punctuation">:</span>
-        os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span>
-    <span class="token comment"># 根据已知矩形矢量裁剪图像</span>
-    input_file_raster <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>input_file<span class="token punctuation">)</span>  <span class="token comment"># 打开待裁剪图像</span>
-    <span class="token comment"># 用gdal.Warp裁剪，cropToCutline=True即使裁剪后的图像size和矢量一致，否则还和原图像一样。</span>
-    gdal<span class="token punctuation">.</span>Warp<span class="token punctuation">(</span>output_file<span class="token punctuation">,</span>
-                  input_file_raster<span class="token punctuation">,</span>
-                  <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'GTiff'</span><span class="token punctuation">,</span>
-                  cutlineDSName<span class="token operator">=</span>clip_shape<span class="token punctuation">,</span>
-                  cropToCutline<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
-                  dstNodata<span class="token operator">=</span>nodata<span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">resample_to_100m</span><span class="token punctuation">(</span>input_path<span class="token punctuation">,</span> output_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""Resamples a raster dataset to 100 meters using GDAL.
 
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-    shp_file <span class="token operator">=</span> <span class="token string">r'D:\scope.shp'</span>
-    img_file <span class="token operator">=</span> <span class="token string">r'D:\img1.tif'</span>
-    outfile <span class="token operator">=</span> <span class="token string">r'D:\' + os.path.splitext(os.path.basename(img_file))[0]+ '</span><span class="token punctuation">.</span>tif'
-    clip_image_by_shp<span class="token punctuation">(</span>img_file<span class="token punctuation">,</span>outfile<span class="token punctuation">,</span>shp_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><pre class="line-numbers language-none"><code class="language-none"># 1.打开待裁剪图像
-# 2.用gdal.Warp裁剪，cropToCutline=True即使裁剪后的图像size和矢量一致，否则还和原图像一样。
-# 3.输出裁剪后的图像<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312011350177.png" alt="image-20231201134942928"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312011350564.png" alt="image-20231201135006382"></p>
+    Args:
+        input_path: Path to the input raster dataset.
+        output_path: Path to the output raster dataset.
+    """</span>
+
+    <span class="token comment"># Open the input raster dataset</span>
+    input_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>input_path<span class="token punctuation">)</span>
+    output_format <span class="token operator">=</span> <span class="token string">"GTiff"</span>
+    <span class="token comment"># Create the output raster dataset</span>
+    resampling_method <span class="token operator">=</span> gdal<span class="token punctuation">.</span>GRA_Bilinear
+    output_resolution <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">100</span><span class="token operator">/</span><span class="token number">111000</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token operator">/</span><span class="token number">111000</span><span class="token punctuation">]</span>
+
+    <span class="token comment"># 进行重采样</span>
+    gdal<span class="token punctuation">.</span>Warp<span class="token punctuation">(</span>output_path<span class="token punctuation">,</span> input_ds<span class="token punctuation">,</span> dstSRS <span class="token operator">=</span> input_ds<span class="token punctuation">.</span>GetProjection<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token builtin">format</span><span class="token operator">=</span>output_format<span class="token punctuation">,</span> xRes<span class="token operator">=</span>output_resolution<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> yRes<span class="token operator">=</span>output_resolution<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+              resampleAlg<span class="token operator">=</span>resampling_method<span class="token punctuation">)</span>
+
+    <span class="token comment"># Clean up</span>
+    input_ds <span class="token operator">=</span> <span class="token boolean">None</span>
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    input_path <span class="token operator">=</span> <span class="token string">'path/to/input.tif'</span>
+    output_path <span class="token operator">=</span> <span class="token string">'path/to/output.tif'</span>
+    resample_to_100m<span class="token punctuation">(</span>input_path<span class="token punctuation">,</span> output_path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>手头上没有30米的数据，现在用2米的数据来测试一下。</p>
+<p><img src="D:\dengkaiyuan\code\my_blog\source\_posts\image-20231222210905584.png" alt="image-20231222210905584"></p>
+<p><img src="D:\dengkaiyuan\code\my_blog\source\_posts\imgs202312222106296.png" alt="image-20231222210425210"></p>
 
             </div>
 
@@ -263,6 +268,10 @@
                             <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
                         </li>
                     
+                        <li class="tag-item">
+                            <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>&nbsp;
+                        </li>
+                    
                 </ul>
             
 
@@ -272,13 +281,13 @@
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/"
+                               href="/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">编程_栅格影像去除投影</span>
+                                <span class="post-nav-title-item">编程_矢量转为栅格</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
@@ -288,10 +297,10 @@
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/11/16/clion-zhong-shi-yong-gdal-de-li-cheng/"
+                               href="/2023/12/22/clion-pei-zhi-gdal-yu-dao-de-wen-ti/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">clion中使用gdal的历程</span>
+                                <span class="post-nav-title-item">clion配置gdal遇到的问题</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
