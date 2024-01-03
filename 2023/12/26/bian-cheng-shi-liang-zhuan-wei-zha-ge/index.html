@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-27 09:28:21</span>
+        <span class="pc">2023-12-28 08:48:42</span>
     </span>
     
     
@@ -269,7 +269,7 @@ shp to tif
 <h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><p>1.读取shp文件<br>2.获取shp文件的图层对象<br>3.读取tif文件<br>4.获取tif文件的投影信息、仿射变换信息、行列数<br>5.根据tif文件的属性信息创建对应标准的目标栅格<br>6.设置背景数值<br>7.调用栅格化函数。gdal.RasterizeLayer函数有四个参数，分别有栅格对象，波段，矢量对象，value的属性值将为栅格值<br>8.将栅格数据写入到目标文件中<br>9.释放内存，只有强制为None才可以释放干净</p>
 <p>结果如下：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312011419036.png" alt="image-20231201141805550"></p>
-<h1 id="矢量中的数值为小数"><a href="#矢量中的数值为小数" class="headerlink" title="矢量中的数值为小数"></a>矢量中的数值为小数</h1><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231227085945638.png" alt="image-20231227085945638"></p>
+<h1 id="矢量中的数值为小数"><a href="#矢量中的数值为小数" class="headerlink" title="矢量中的数值为小数"></a>矢量中的数值为小数</h1><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312280848708.png" alt="image-20231227085945638"></p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312270857189.png" alt="image-20231227085748860"></p>
 <p>把shp_to_tiff函数增加多一个形参type，类型是字符串。</p>
 <p>如果type=’int’，则表示矢量的数值是整数。</p>
@@ -374,6 +374,21 @@ shp to tif
             
                 <div class="article-nav">
                     
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">shp文件在arcgis打开失败及其修复</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
                     
                         <div class="article-next">
                             <a class="next"
@@ -415,7 +430,7 @@ shp to tif
             
                 <span>2020</span> -
             
-            2023
+            2024
             
                 &nbsp;<i class="fas fa-heart icon-animate"></i>
                 &nbsp;<a href="/">ytkz</a>

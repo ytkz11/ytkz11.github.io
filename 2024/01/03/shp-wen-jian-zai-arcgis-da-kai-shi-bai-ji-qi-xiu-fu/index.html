@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-03-11 18:00:10</span>
-        <span class="mobile">2023-03-11 18:00</span>
+        <span class="pc">2024-01-03 18:00:10</span>
+        <span class="mobile">2024-01-03 18:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-11 17:05:49</span>
+        <span class="pc">2024-01-03 16:33:52</span>
     </span>
     
     
@@ -208,55 +208,19 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h1 id="一-打开不了shp文件"><a href="#一-打开不了shp文件" class="headerlink" title="一 打开不了shp文件"></a>一 打开不了shp文件</h1><p>同学们在平常使用arcgis的时候，是否遇到了下面这样的情况。</p>
-<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20230311132526235.png" alt="image-20230311132526235"></p>
+                <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h1 id="打开不了shp文件"><a href="#打开不了shp文件" class="headerlink" title="打开不了shp文件"></a>打开不了shp文件</h1><p>同学们在平常使用arcgis的时候，是否遇到了下面这样的情况。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401031520846.png" alt="image-20240103152004322"></p>
 <p>这是由于shp文件丢失了部分数据，导致在arcgis打不开。</p>
 <p>1个 Shape文件结构Shape文件的文件构成Shape文件由3 个文件构成: <strong>主文件、索引文件、数据文件</strong>。它们分别是“.shp” , “.shx””.dbf”文件。</p>
 <p>如果数据文件dbf，丢失了部分数据，就会出现上面说的打不开的错误。</p>
-<h1 id="二-修复"><a href="#二-修复" class="headerlink" title="二 修复"></a>二 修复</h1><p>dbf文件记录的是对应的属性表信息，比如arcgis的属性表的字段、面积信息等等。</p>
-<p>步骤如下：</p>
-<p>1.用envi打开shp,查看shp有多少个几何实体。记录下来。</p>
-<p>2.用DBFViewer 或者excell,打开对应的dbf文件，这里要分情况处理。</p>
-<p>情况一：例如你在步骤1中记录该shp有15个图斑，dbf的个数是10个，这时你要填充5条假数据到dbf末端中，使dbf文件记录的几何实体与shp的几何实体数量保持一致。</p>
-<p>情况二：例如你在步骤1中记录该shp有15个图斑，dbf的个数是20个，这时你要删除dbf末端5条，使dbf文件记录的几何实体与shp的几何实体数量保持一致。</p>
-<p>这样就能简单修复了。</p>
-<h1 id="三-其他修复的方法"><a href="#三-其他修复的方法" class="headerlink" title="三 其他修复的方法"></a>三 其他修复的方法</h1><ol>
-<li>envi可以直接打开shp。在envi上把shp直接另存为新的数据。</li>
-<li>同理，google earth 也能直接打开shp文件，再次导出即可。</li>
-</ol>
-<h1 id="四-写代码修复的步骤"><a href="#四-写代码修复的步骤" class="headerlink" title="四 写代码修复的步骤"></a>四 写代码修复的步骤</h1><p>读取dbf文件，在python使用第三方库dbfread，借助dbfread可以读取dbf文件，dbfread安装如下：</p>
-<pre class="line-numbers language-none"><code class="language-none">pip install dbfread<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>下面是简单的python读取dbf示例：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token builtin">file</span> <span class="token operator">=</span> <span class="token string">r'test.dbf'</span>
-<span class="token keyword">from</span> dbfread <span class="token keyword">import</span> DBF
-
-<span class="token comment"># 读取 DBF 文件</span>
-table <span class="token operator">=</span> DBF<span class="token punctuation">(</span><span class="token string">'test.dbf'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'gbk'</span><span class="token punctuation">)</span>
-
-<span class="token comment"># 输出记录</span>
-<span class="token keyword">for</span> record <span class="token keyword">in</span> table<span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>record<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>安装pyshp，读取shp文件：</p>
-<pre class="line-numbers language-none"><code class="language-none">pip install pyshp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>下面是简单的python读取shp示例：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">
-<span class="token keyword">def</span> <span class="token function">get_shp_shape_records</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">try</span><span class="token punctuation">:</span>
-        <span class="token comment"># 先读取原文件的几何数据和属性数据, 返回几何数据的个数</span>
-        <span class="token keyword">try</span><span class="token punctuation">:</span>
-            <span class="token builtin">file</span> <span class="token operator">=</span> shapefile<span class="token punctuation">.</span>Reader<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
-            shape_records <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>shapeRecords<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">except</span> UnicodeDecodeError<span class="token punctuation">:</span>
-            <span class="token builtin">file</span> <span class="token operator">=</span> shapefile<span class="token punctuation">.</span>Reader<span class="token punctuation">(</span>path<span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"gbk"</span><span class="token punctuation">)</span>
-            shape_records <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>shapeRecords<span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
-        <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
-    <span class="token keyword">return</span>  <span class="token builtin">len</span><span class="token punctuation">(</span>shape_records<span class="token punctuation">)</span>
-<span class="token builtin">file</span> <span class="token operator">=</span> <span class="token string">r'test.shp'</span>
-a <span class="token operator">=</span> get_shp_shape_records<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>整合部分</p>
+<h1 id="用代码修复"><a href="#用代码修复" class="headerlink" title="用代码修复"></a>用代码修复</h1><p>略。</p>
+<p>开源代码地址在：</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://github.com/ytkz11/RestoreShp">https://github.com/ytkz11/RestoreShp<i class="fas fa-external-link-alt"></i></a></p>
+<p>如果对你有帮助，请点一个star!</p>
+<h1 id="快捷修复"><a href="#快捷修复" class="headerlink" title="快捷修复"></a>快捷修复</h1><p>我把以上的代码打包为一个命令行的exe，如果你对代码不熟练，可以直接运行这个exe，输入对应的文件路径，完成对shape文件的修复。</p>
+<p>在公众号回复：<strong>shp修复</strong></p>
+<p>获得exe文件。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401031615335.png" alt="image-20240103161521093"></p>
 
             </div>
 
@@ -275,29 +239,14 @@ a <span class="token operator">=</span> get_shp_shape_records<span class="token 
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2023/06/12/gadm-shi-liang-xia-zai/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">GADM-矢量下载</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/02/27/hello-go/"
+                               href="/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">hello go</span>
+                                <span class="post-nav-title-item">编程_矢量转为栅格</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
@@ -331,7 +280,7 @@ a <span class="token operator">=</span> get_shp_shape_records<span class="token 
             
                 <span>2020</span> -
             
-            2023
+            2024
             
                 &nbsp;<i class="fas fa-heart icon-animate"></i>
                 &nbsp;<a href="/">ytkz</a>

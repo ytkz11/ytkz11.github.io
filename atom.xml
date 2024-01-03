@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2023-12-27T01:28:21.854Z</updated>
+  <updated>2024-01-03T08:33:52.701Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>shp文件在arcgis打开失败及其修复</title>
+    <link href="http://ytkz11@.github.io/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/"/>
+    <id>http://ytkz11@.github.io/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/</id>
+    <published>2024-01-03T10:00:10.000Z</published>
+    <updated>2024-01-03T08:33:52.701Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;h1 id=&quot;打开不了shp文件&quot;&gt;&lt;a href=&quot;#打开不了shp文件&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>编程_矢量转为栅格</title>
     <link href="http://ytkz11@.github.io/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/"/>
     <id>http://ytkz11@.github.io/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/</id>
     <published>2023-12-26T10:26:58.000Z</published>
-    <updated>2023-12-27T01:28:21.854Z</updated>
+    <updated>2023-12-28T00:48:42.496Z</updated>
     
     
       
@@ -512,31 +537,6 @@
     <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
     
     <category term="landsat9" scheme="http://ytkz11@.github.io/tags/landsat9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程 | 从RGBA图片格式理解波段</title>
-    <link href="http://ytkz11@.github.io/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/"/>
-    <id>http://ytkz11@.github.io/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/</id>
-    <published>2023-10-10T10:26:58.000Z</published>
-    <updated>2023-10-13T11:16:41.119Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;RGBA格式&quot;&gt;&lt;a href=&quot;#RGBA格式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="gdal" scheme="http://ytkz11@.github.io/categories/gdal/"/>
-    
-    
-    <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
     
   </entry>
   
