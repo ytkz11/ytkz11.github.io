@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-01-03 18:00:10</span>
-        <span class="mobile">2024-01-03 18:00</span>
+        <span class="pc">2024-01-10 21:00:10</span>
+        <span class="mobile">2024-01-10 21:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-01-03 16:33:52</span>
+        <span class="pc">2024-01-10 14:49:19</span>
     </span>
     
     
@@ -208,19 +208,95 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h1 id="打开不了shp文件"><a href="#打开不了shp文件" class="headerlink" title="打开不了shp文件"></a>打开不了shp文件</h1><p>同学们在平常使用arcgis的时候，是否遇到了下面这样的情况。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401031520846.png" alt="image-20240103152004322"></p>
-<p>这是由于shp文件丢失了部分数据，导致在arcgis打不开。</p>
-<p>1个 Shape文件结构Shape文件的文件构成Shape文件由3 个文件构成: <strong>主文件、索引文件、数据文件</strong>。它们分别是“.shp” , “.shx””.dbf”文件。</p>
-<p>如果数据文件dbf，丢失了部分数据，就会出现上面说的打不开的错误。</p>
-<h1 id="用代码修复"><a href="#用代码修复" class="headerlink" title="用代码修复"></a>用代码修复</h1><p>略。</p>
-<p>开源代码地址在：</p>
-<p><a class="link" target="_blank" rel="noopener" href="https://github.com/ytkz11/RestoreShp">https://github.com/ytkz11/RestoreShp<i class="fas fa-external-link-alt"></i></a></p>
-<p>如果对你有帮助，请点一个star!</p>
-<h1 id="快捷修复"><a href="#快捷修复" class="headerlink" title="快捷修复"></a>快捷修复</h1><p>我把以上的代码打包为一个命令行的exe，如果你对代码不熟练，可以直接运行这个exe，输入对应的文件路径，完成对shape文件的修复。</p>
-<p>在公众号回复：<strong>shp修复</strong></p>
-<p>获得exe文件。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401031615335.png" alt="image-20240103161521093"></p>
+                <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h1 id="传统操作"><a href="#传统操作" class="headerlink" title="传统操作"></a>传统操作</h1><p>面矢量合并，在arcgis是一个常见的操作。使用ArcGIS合并重叠的多边形的步骤如下：</p>
+<ol>
+<li><strong>准备数据</strong>：首先需要准备待处理的重叠多边形数据，这可以通过遥感影像解译、野外实地调查等方式获得。</li>
+<li><strong>构建重叠区域图层</strong>：使用ArcGIS的”Union”工具，将重叠的多边形数据层合并为一个新图层。</li>
+<li><strong>进行拓扑合并</strong>：使用ArcGIS的”TopologicalUnion”工具，对重叠区域图层进行拓扑合并。这个过程会自动将重叠区域合并为一个新的多边形。</li>
+</ol>
+<p>完成上述步骤后，即可完成多边形的合并。注意，以上步骤可能会根据具体的重叠情况和数据类型有所变化，需要具体问题具体分析。</p>
+<p>那如何用代码实现这个功能呢？</p>
+<h1 id="测试数据"><a href="#测试数据" class="headerlink" title="测试数据"></a>测试数据</h1><p>以德国矢量作为测试数据。</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240110144326993.png" alt="image-20240110144326993"></p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @File : DissolveOverlappingPolygons.py</span>
+<span class="token comment"># 合并重叠的多边形</span>
+
+<span class="token keyword">import</span> fiona
+<span class="token keyword">from</span> shapely<span class="token punctuation">.</span>ops <span class="token keyword">import</span> unary_union
+<span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry <span class="token keyword">import</span> shape<span class="token punctuation">,</span> mapping
+
+<span class="token keyword">def</span> <span class="token function">dissolve_overlapping_polygons</span><span class="token punctuation">(</span>src<span class="token punctuation">,</span> dst<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''
+    Dissolve overlapping polygons in a shapefile
+    @param src: input shapefile
+    @param dst: output shapefile
+    @return:
+    '''</span>
+    <span class="token keyword">with</span> fiona<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>src<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> ds_in<span class="token punctuation">:</span>
+        crs <span class="token operator">=</span> ds_in<span class="token punctuation">.</span>crs
+        drv <span class="token operator">=</span> ds_in<span class="token punctuation">.</span>driver
+
+        filtered <span class="token operator">=</span> <span class="token builtin">filter</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> shape<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">"geometry"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>is_valid<span class="token punctuation">,</span> <span class="token builtin">list</span><span class="token punctuation">(</span>ds_in<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        geoms <span class="token operator">=</span> <span class="token punctuation">[</span>shape<span class="token punctuation">(</span>x<span class="token punctuation">[</span><span class="token string">"geometry"</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">for</span> x <span class="token keyword">in</span> filtered<span class="token punctuation">]</span>
+        dissolved <span class="token operator">=</span> unary_union<span class="token punctuation">(</span>geoms<span class="token punctuation">)</span>
+
+    schema <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">"geometry"</span><span class="token punctuation">:</span> <span class="token string">"Polygon"</span><span class="token punctuation">,</span>
+        <span class="token string">"properties"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">"id"</span><span class="token punctuation">:</span> <span class="token string">"int"</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">with</span> fiona<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>dst<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> driver<span class="token operator">=</span>drv<span class="token punctuation">,</span> schema<span class="token operator">=</span>schema<span class="token punctuation">,</span> crs<span class="token operator">=</span>crs<span class="token punctuation">)</span> <span class="token keyword">as</span> ds_dst<span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> i<span class="token punctuation">,</span>g <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>dissolved<span class="token punctuation">.</span>geoms<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                ds_dst<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"geometry"</span><span class="token punctuation">:</span> mapping<span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"properties"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span><span class="token string">"id"</span><span class="token punctuation">:</span> i<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    src <span class="token operator">=</span> <span class="token string">r"D:\gadm\Germany\gadm41_DEU_0.shp"</span>
+    dst <span class="token operator">=</span> <span class="token string">r"D:\gadm\Germany\gadm41_DEU_0_merge.shp"</span>
+    dissolve_overlapping_polygons<span class="token punctuation">(</span>src<span class="token punctuation">,</span>dst<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h1><p>这段代码的目的是合并重叠的多边形。以下是代码的详细分析：</p>
+<ol>
+<li><strong>导入必要的库</strong>：<ul>
+<li><code>fiona</code>：用于读写地理空间数据格式，如Shapefile。</li>
+<li><code>shapely.ops.unary_union</code>：用于将多个几何对象合并为一个对象。</li>
+<li><code>shapely.geometry</code>：用于创建、编辑和分析几何对象。</li>
+</ul>
+</li>
+<li><strong>定义<code>dissolve_overlapping_polygons</code>函数</strong>：<ul>
+<li>参数<ul>
+<li><code>src</code>：输入的Shapefile路径。</li>
+<li><code>dst</code>：输出的Shapefile路径。</li>
+</ul>
+</li>
+<li><strong>功能</strong>：读取输入的Shapefile，合并重叠的多边形，并将结果写入到输出文件。</li>
+</ul>
+</li>
+<li><strong>处理Shapefile</strong>：<ul>
+<li>使用<code>fiona.open</code>打开输入的Shapefile，并获取其坐标参考系统（CRS）和驱动程序。</li>
+<li>使用<code>filter</code>函数和<code>is_valid</code>方法筛选出有效的几何对象（即非自交的多边形）。</li>
+<li>将筛选后的几何对象转换为Shapely对象，并使用<code>unary_union</code>函数进行合并。</li>
+</ul>
+</li>
+<li><strong>定义输出文件的模式</strong>：<ul>
+<li>定义了输出的Shapefile的模式，其中几何类型为”Polygon”，属性中有一个”id”字段。</li>
+</ul>
+</li>
+<li><strong>写入输出文件</strong>：<ul>
+<li>使用<code>fiona.open</code>打开输出文件，并使用定义的schema和CRS。</li>
+<li>遍历合并后的多边形，将每个多边形的几何信息和属性（在这里，属性只有一个id）写入到输出文件。</li>
+</ul>
+</li>
+<li><strong>主函数</strong>：定义了输入和输出文件的路径，并调用上述函数进行合并操作。</li>
+<li><strong>异常处理</strong>：如果在写入过程中出现异常，会捕获该异常并打印出来。</li>
+</ol>
+<p>注意：代码中没有处理不同坐标参考系统的问题，如果输入和输出文件的CRS不同，可能需要进行坐标转换。此外，为了代码的正常运行，你需要确保安装了所有必要的库，包括Fiona和Shapely。</p>
+<h1 id="结果展示"><a href="#结果展示" class="headerlink" title="结果展示"></a>结果展示</h1><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240110144730011.png" alt="image-20240110144730011"></p>
+<h1 id="代码分享"><a href="#代码分享" class="headerlink" title="代码分享"></a>代码分享</h1><p>在公众号回复”合并多边形面”，获取代码及测试数据。</p>
 
             </div>
 
@@ -239,29 +315,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/01/10/he-bing-chong-die-de-duo-bian-xing-mian-shi-liang/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">shp文件在arcgis打开失败及其修复</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/"
+                               href="/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">编程_矢量转为栅格</span>
+                                <span class="post-nav-title-item">shp文件在arcgis打开失败及其修复</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
