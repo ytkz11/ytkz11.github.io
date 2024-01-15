@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-01-10T06:58:03.527Z</updated>
+  <updated>2024-01-15T07:18:26.888Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>线矢量分割面矢量</title>
+    <link href="http://ytkz11@.github.io/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/"/>
+    <id>http://ytkz11@.github.io/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/</id>
+    <published>2024-01-15T13:00:10.000Z</published>
+    <updated>2024-01-15T07:18:26.888Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>shp文件在arcgis打开失败及其修复</title>
@@ -508,31 +533,6 @@
     
     
     <category term="shp" scheme="http://ytkz11@.github.io/tags/shp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>arcgis闪退导致shp文件破损及修复方法</title>
-    <link href="http://ytkz11@.github.io/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/"/>
-    <id>http://ytkz11@.github.io/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/</id>
-    <published>2023-10-25T10:26:58.000Z</published>
-    <updated>2023-10-25T08:13:56.713Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;arcgis闪退&quot;&gt;&lt;a href=&quot;#arcgis闪退&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="arcgis" scheme="http://ytkz11@.github.io/categories/arcgis/"/>
-    
-    
-    <category term="arcgis" scheme="http://ytkz11@.github.io/tags/arcgis/"/>
     
   </entry>
   
