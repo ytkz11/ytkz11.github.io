@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-01-16T05:20:27.828Z</updated>
+  <updated>2024-01-25T06:23:48.972Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,18 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>矢量文件的读取和写入</title>
+    <link href="http://ytkz11@.github.io/2024/01/25/shi-liang-wen-jian-de-du-qu-he-xie-ru/"/>
+    <id>http://ytkz11@.github.io/2024/01/25/shi-liang-wen-jian-de-du-qu-he-xie-ru/</id>
+    <published>2024-01-25T13:00:10.000Z</published>
+    <updated>2024-01-25T06:23:48.972Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;矢量的本质是什么&quot;&gt;&lt;a href=&quot;#矢量的本质是什么&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>线矢量分割面矢量</title>
     <link href="http://ytkz11@.github.io/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/"/>
     <id>http://ytkz11@.github.io/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/</id>
     <published>2024-01-15T13:00:10.000Z</published>
-    <updated>2024-01-16T05:20:27.828Z</updated>
+    <updated>2024-01-25T06:25:18.945Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
+    <summary type="html">&lt;p&gt;最近遇到一个问题：怎么用线矢量去切割面矢量。这个功能看似很简单，其实还是要一定的功夫才能完成它。所以也才有了这篇技术文章的记录。&lt;/p&gt;
+&lt;p&gt;目的：使用线段分割多边形，并将分割后的多边形保存为Shapefile文件&lt;/p&gt;
+&lt;h1 id=&quot;代码&quot;&gt;&lt;a</summary>
         
       
     
@@ -202,35 +229,6 @@
     <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows安装Rust版本GDAL</title>
-    <link href="http://ytkz11@.github.io/2023/12/19/windows-an-zhuang-rust-ban-ben-gdal/"/>
-    <id>http://ytkz11@.github.io/2023/12/19/windows-an-zhuang-rust-ban-ben-gdal/</id>
-    <published>2023-12-19T11:26:58.000Z</published>
-    <updated>2023-12-19T07:40:09.876Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Windows安装Rust版本Gdal步骤&quot;&gt;&lt;a href=&quot;#Windows安装Rust版本Gdal步骤&quot; class=&quot;headerlink&quot; title=&quot;Windows安装Rust版本Gdal步骤</summary>
-        
-      
-    
-    
-    
-    <category term="rust" scheme="http://ytkz11@.github.io/categories/rust/"/>
-    
-    <category term="gdal" scheme="http://ytkz11@.github.io/categories/rust/gdal/"/>
-    
-    
-    <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
-    
-    <category term="rust" scheme="http://ytkz11@.github.io/tags/rust/"/>
     
   </entry>
   

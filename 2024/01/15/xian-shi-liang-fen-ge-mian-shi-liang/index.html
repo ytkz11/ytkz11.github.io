@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-01-16 13:20:27</span>
+        <span class="pc">2024-01-25 14:25:18</span>
     </span>
     
     
@@ -208,7 +208,9 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+                <p>最近遇到一个问题：怎么用线矢量去切割面矢量。这个功能看似很简单，其实还是要一定的功夫才能完成它。所以也才有了这篇技术文章的记录。</p>
+<p>目的：使用线段分割多边形，并将分割后的多边形保存为Shapefile文件</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span>
 <span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
 <span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry <span class="token keyword">import</span> Polygon<span class="token punctuation">,</span> LineString
@@ -246,8 +248,22 @@
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401151503195.png" alt="image-20240115150250958"></p>
 <p>线矢量可视化如下：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401151512025.png" alt="image-20240115150459533"></p>
-<p>线叠加面矢量的可视化如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401161320852.png" alt="image-20240115151954575"></p>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
+<h1 id=""><a href="#" class="headerlink" title=""></a><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401161320852.png" alt="image-20240115151954575"></h1><blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>e8e02ff5542145568539ca02109bd75f955339c9</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 <p>分割后结果，在arcgis打开如下：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401151512658.png" alt="image-20240115151201195"></p>
 <h1 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h1><p>逐行解析以上代码：</p>
@@ -289,8 +305,8 @@
 <li><p><code>save_polygons_to_shp(polygon, lines, 'output.shp')</code>: 调用前面定义的函数，使用线段分割多边形，并将结果保存为Shapefile。</p>
 </li>
 </ol>
-<p>这段代码的主要目的是创建一个多边形，然后使用两条线段将其分割，最后将分割后的多边形保存为Shapefile。</p>
-<h1 id=""><a href="#" class="headerlink" title=" "></a> </h1>
+<p>代码虽短，但其中含义却不”短”。</p>
+
             </div>
 
             
@@ -307,6 +323,21 @@
 
             
                 <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/01/25/shi-liang-wen-jian-de-du-qu-he-xie-ru/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">矢量文件的读取和写入</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
                     
                     
                         <div class="article-next">

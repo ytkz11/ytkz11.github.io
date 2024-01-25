@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-11 17:05:49</span>
+        <span class="pc">2024-01-16 13:21:08</span>
     </span>
     
     
@@ -225,7 +225,7 @@
 
 hdf_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span><span class="token string">"/path/to/hdf/hdf_file.h5"</span><span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
 
-<span class="token comment"># 替换 &lt;subdataset&gt; 为你要读取的波段,从0开始索引</span>
+<span class="token comment"># Replace the &lt;subdataset&gt; with the band you want to read, indexing from 0</span>
 band_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>hdf_ds<span class="token punctuation">.</span>GetSubDatasets<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token operator">&lt;</span>subdataset<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
 
 band_array <span class="token operator">=</span> band_ds<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
