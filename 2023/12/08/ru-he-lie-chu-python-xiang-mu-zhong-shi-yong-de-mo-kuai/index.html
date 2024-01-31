@@ -9,7 +9,7 @@
     
     <title>
         
-            6个波段的landsat数据怎么在Matlab里叠加成12个波段 |
+            如何列出 Python 项目中使用的模块 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">6个波段的landsat数据怎么在Matlab里叠加成12个波段</span>
+                <span class="title-hover-animation">如何列出 Python 项目中使用的模块</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2023-02-10 18:00:10</span>
-        <span class="mobile">2023-02-10 18:00</span>
+        <span class="pc">2023-12-08 23:26:58</span>
+        <span class="mobile">2023-12-08 23:26</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-11 17:05:49</span>
+        <span class="pc">2024-01-31 16:50:27</span>
     </span>
     
     
@@ -175,7 +175,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/matlab/">matlab</a>&nbsp;
+                        <a href="/categories/python/">python</a>&nbsp;
                     </li>
                 
             </ul>
@@ -187,7 +187,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/matlab/">matlab</a>&nbsp;
+                        <a href="/tags/python/">python</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,13 +208,24 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>chatgpt，在2022年横空出世，甚至说又一次的掀起了深度学习的热度。</p>
-<h1 id="API"><a href="#API" class="headerlink" title="API"></a>API</h1><p>API是指 <strong>application programming interface</strong>。openai在2023年3月1日，开发了chatgpt的python接口，同时大幅度的降低了chatgpt费用。</p>
-<h1 id="费用"><a href="#费用" class="headerlink" title="费用"></a>费用</h1><p>现在chatgpt是按照token来收费，每1000token是0.002美元。大概是490字左右。</p>
-<h1 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h1><p>今晚搭建一个基于chatgpt的AI问答聊天的小程序，各位可以去试用一下。</p>
-<p><img src="C:\Users\Administrator\Pictures\公众号\03081.PNG" alt="03081"></p>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>一开始，我是在推特看到这个东西，后面用了一下，发现是真的好用。不过这个小程序速度不快，主要是它会等所有字符返回了再把聊天结果渲染出来。其实这个我是搬运了别人的开源项目的，花了三个小时。主要花在阿里云云函数上，第一次使用，不懂他的步骤和设置，不过学到了很多东西。你们去公众号点击小程序的菜单。这个小程序是不花钱的~小程序在这里。</p>
-<p><img src="C:\Users\Administrator\Downloads\宣传物料\搜一搜小程序推广物料图片-png\扫码_搜索联合传播样式-微信标准绿版.png" alt="扫码_搜索联合传播样式-微信标准绿版"></p>
+                <p>在项目开发中，我们有时会引入一些包，后续由于种种原因，并没有 import 到项目中。如果在部署到时候使用 pip freeze，则会将这些并未引入到包也列到 requirements 中，而实际这些包是不需要的。</p>
+<p>pipreqs 这个包就可以解决这个问题，它会分析项目中的代码，只列出被导入了的包。使用方法：</p>
+<pre class="line-numbers language-none"><code class="language-none">pip install pipreqs
+pipreqs --encoding=utf-8-sig your_project_path --force<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>pipreqs 会生成 requirements.txt 到你分析的项目根目录中，与 pip freeze 生成的文件格式一致，可以使用 <code>pip install -r requirements.txt</code> 安装。</p>
+<pre class="line-numbers language-none"><code class="language-none">GDAL==3.4.2
+numpy==1.22.3
+PyQt5==5.15.10
+PyQt5_sip==12.11.0
+QtAwesome==1.2.3
+setuptools==58.1.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>列出并删除 Python 项目中未使用的包有几个重要的原因：</p>
+<ol>
+<li><strong>清晰性和可读性</strong>：未使用的导入会使代码更难理解和阅读。删除这些导入可以使代码更清晰，更易于理解。</li>
+<li><strong>减少错误</strong>：有时，未使用的导入可能会引发错误，或者在代码中引入难以追踪的错误。例如，如果你有两个库都有一个名为 <code>open</code> 的函数，但你只使用了其中一个库的 <code>open</code> 函数，那么你可能会无意中调用错误的函数。</li>
+<li><strong>提高性能</strong>：虽然导入未使用的库通常不会对性能产生大的影响，但在某些情况下，可能会浪费内存和处理器资源。例如，如果一个库在导入时执行了一些计算密集型的操作，但你的代码并没有实际使用这个库，那么这将是一种资源的浪费。</li>
+<li><strong>依赖管理</strong>：知道你的代码实际上依赖哪些包对于依赖管理非常重要。这可以帮助你减少项目的复杂性，并确保你的 <code>requirements.txt</code> 或 <code>Pipfile</code> 只包含实际需要的包。</li>
+</ol>
 
             </div>
 
@@ -224,7 +235,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/matlab/">#matlab</a>&nbsp;
+                            <a href="/tags/python/">#python</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -236,13 +247,13 @@
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2023/02/10/torchgeo/"
+                               href="/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">一个PyTorch 库，提供特定于地理空间数据的数据集、采样器、转换和预训练模型，由 Microsoft 提供支持。</span>
+                                <span class="post-nav-title-item">GIS格式和地理空间文件扩展名的汇总</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
@@ -252,10 +263,10 @@
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2023/01/30/shi-yong-python-jiang-netcdf-zhuan-huan-wei-geotiff-wen-jian/"
+                               href="/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">用git提交代码到github的完整步骤</span>
+                                <span class="post-nav-title-item">如何列出 Python 项目中使用的模块</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">

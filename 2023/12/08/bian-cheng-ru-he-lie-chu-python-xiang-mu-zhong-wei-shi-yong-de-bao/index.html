@@ -9,7 +9,7 @@
     
     <title>
         
-            编程_如何列出 Python 项目中未使用的包 |
+            如何列出 Python 项目中使用的模块 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">编程_如何列出 Python 项目中未使用的包</span>
+                <span class="title-hover-animation">如何列出 Python 项目中使用的模块</span>
             </div>
 
             
@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-11 17:05:49</span>
+        <span class="pc">2024-01-31 17:03:27</span>
     </span>
     
     
@@ -213,13 +213,27 @@
 <pre class="line-numbers language-none"><code class="language-none">pip install pipreqs
 pipreqs --encoding=utf-8-sig your_project_path --force<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>pipreqs 会生成 requirements.txt 到你分析的项目根目录中，与 pip freeze 生成的文件格式一致，可以使用 <code>pip install -r requirements.txt</code> 安装。</p>
-<pre class="line-numbers language-none"><code class="language-none">GDAL==3.4.2
-numpy==1.22.3
-PyQt5==5.15.10
-PyQt5_sip==12.11.0
-QtAwesome==1.2.3
-setuptools==58.1.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>今天的分享就到了，拜了个拜。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token assign-left variable">matplotlib</span><span class="token operator">==</span><span class="token number">3.5</span>.0
+<span class="token assign-left variable">numpy</span><span class="token operator">==</span><span class="token number">1.22</span>.4
+<span class="token assign-left variable">opencv_contrib_python</span><span class="token operator">==</span><span class="token number">4.5</span>.4.60
+<span class="token assign-left variable">opencv_python_headless</span><span class="token operator">==</span><span class="token number">4.5</span>.5.64
+<span class="token assign-left variable">Pillow</span><span class="token operator">==</span><span class="token number">8.3</span>.2
+<span class="token assign-left variable">Pillow</span><span class="token operator">==</span><span class="token number">10.2</span>.0
+<span class="token assign-left variable">torch</span><span class="token operator">==</span><span class="token number">1.9</span>.0+cpu
+<span class="token assign-left variable">torchvision</span><span class="token operator">==</span><span class="token number">0.10</span>.0
+<span class="token assign-left variable">tqdm</span><span class="token operator">==</span><span class="token number">4.66</span>.1
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>列出并删除 Python 项目中未使用的包有几个重要的原因：</p>
+<ol>
+<li><strong>清晰性和可读性</strong>：未使用的导入会使代码更难理解和阅读。删除这些导入可以使代码更清晰，更易于理解。</li>
+<li><strong>减少错误</strong>：有时，未使用的导入可能会引发错误，或者在代码中引入难以追踪的错误。例如，如果你有两个库都有一个名为 <code>open</code> 的函数，但你只使用了其中一个库的 <code>open</code> 函数，那么你可能会无意中调用错误的函数。</li>
+<li><strong>提高性能</strong>：虽然导入未使用的库通常不会对性能产生大的影响，但在某些情况下，可能会浪费内存和处理器资源。例如，如果一个库在导入时执行了一些计算密集型的操作，但你的代码并没有实际使用这个库，那么这将是一种资源的浪费。</li>
+<li><strong>依赖管理</strong>：知道你的代码实际上依赖哪些包对于依赖管理非常重要。这可以帮助你减少项目的复杂性，并确保你的 <code>requirements.txt</code> 或 <code>Pipfile</code> 只包含实际需要的包。</li>
+</ol>
+<h1 id="依赖示意图"><a href="#依赖示意图" class="headerlink" title="依赖示意图"></a>依赖示意图</h1><p><code>pydeps</code>可以生成一个模块的依赖关系图。首先，你需要安装<code>pydeps</code>：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip <span class="token function">install</span> pydeps<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后，你可以使用<code>pydeps</code>来生成一个依赖关系图。假设你的主要Python文件是<code>main.py</code>，你可以使用以下命令：</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pydeps --noshow -o depgraph.svg main.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
             </div>
 
@@ -241,13 +255,13 @@ setuptools==58.1.0<span aria-hidden="true" class="line-numbers-rows"><span></spa
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/"
+                               href="/2023/12/08/ru-he-lie-chu-python-xiang-mu-zhong-shi-yong-de-mo-kuai/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">GIS格式和地理空间文件扩展名的汇总</span>
+                                <span class="post-nav-title-item">如何列出 Python 项目中使用的模块</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>

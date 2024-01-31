@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/12/08/ru-he-lie-chu-python-xiang-mu-zhong-shi-yong-de-mo-kuai/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/01/26/bu-yao-ba-gui-yi-hua-he-biao-zhun-hua-hun-wei-yi-tan/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/</loc>
     <lastmod>2024-01-25</lastmod>
   </url>
@@ -29,14 +45,6 @@
     <lastmod>2023-12-26</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/</loc>
-    <lastmod>2023-12-25</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/12/22/clion-pei-zhi-gdal-yu-dao-de-wen-ti/</loc>
-    <lastmod>2023-12-22</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</loc>
     <lastmod>2023-12-21</lastmod>
   </url>
@@ -53,19 +61,11 @@
     <lastmod>2023-12-18</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/</loc>
-    <lastmod>2023-12-11</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2023/12/11/da-jian-chatgpt-xiao-cheng-xu-qian-hou-duan-ji-xiang-mu-yan-shi/</loc>
     <lastmod>2023-12-11</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2021/01/26/chang-yong-de-zui-jian-dan-de-git-yu-ju/</loc>
-    <lastmod>2023-12-11</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/02/10/ji-yu-chatgpt-wen-da-ji-qi-ren/</loc>
     <lastmod>2023-12-11</lastmod>
   </url>
   <url>
@@ -82,10 +82,6 @@
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/</loc>
-    <lastmod>2023-12-05</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/11/16/clion-zhong-shi-yong-gdal-de-li-cheng/</loc>
     <lastmod>2023-12-05</lastmod>
   </url>
   <url>
@@ -333,7 +329,7 @@
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
+    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
@@ -341,15 +337,15 @@
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
-    <lastmod>2021-11-23</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</loc>
+    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2021/02/27/python-di-san-fang-ku-gdal-an-zhuang-bu-zou/</loc>
+    <lastmod>2021-11-23</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2021/07/14/shi-me-shi-yao-gan-tu-xiang/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>

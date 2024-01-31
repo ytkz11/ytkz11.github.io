@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-01-25T06:23:48.972Z</updated>
+  <updated>2024-01-31T08:44:14.733Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>预处理之归一化和标准化</title>
+    <link href="http://ytkz11@.github.io/2024/01/26/bu-yao-ba-gui-yi-hua-he-biao-zhun-hua-hun-wei-yi-tan/"/>
+    <id>http://ytkz11@.github.io/2024/01/26/bu-yao-ba-gui-yi-hua-he-biao-zhun-hua-hun-wei-yi-tan/</id>
+    <published>2024-01-26T13:00:10.000Z</published>
+    <updated>2024-01-31T08:44:14.733Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;公式&quot;&gt;&lt;a href=&quot;#公式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>矢量文件的读取和写入</title>
@@ -149,14 +174,15 @@
     <link href="http://ytkz11@.github.io/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/"/>
     <id>http://ytkz11@.github.io/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/</id>
     <published>2023-12-22T14:26:58.000Z</published>
-    <updated>2023-12-25T05:04:57.599Z</updated>
+    <updated>2024-01-31T08:45:19.017Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;D:\dengkaiyuan\code\my_blog\source\_posts\imgs202312222107377.png&quot;</summary>
+    <summary type="html">&lt;p&gt;在知乎上看到这个问题，记录一下解决的过程。&lt;/p&gt;
+&lt;h1 id=&quot;命令行的方式&quot;&gt;&lt;a href=&quot;#命令行的方式&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -168,36 +194,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>clion配置gdal遇到的问题</title>
-    <link href="http://ytkz11@.github.io/2023/12/22/clion-pei-zhi-gdal-yu-dao-de-wen-ti/"/>
-    <id>http://ytkz11@.github.io/2023/12/22/clion-pei-zhi-gdal-yu-dao-de-wen-ti/</id>
-    <published>2023-12-22T10:26:58.000Z</published>
-    <updated>2023-12-22T09:38:29.560Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;记录一下clion配置gdal遇到的问题&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231222154606005.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
@@ -307,11 +303,37 @@
   </entry>
   
   <entry>
-    <title>编程_如何列出 Python 项目中未使用的包</title>
+    <title>如何列出 Python 项目中使用的模块</title>
+    <link href="http://ytkz11@.github.io/2023/12/08/ru-he-lie-chu-python-xiang-mu-zhong-shi-yong-de-mo-kuai/"/>
+    <id>http://ytkz11@.github.io/2023/12/08/ru-he-lie-chu-python-xiang-mu-zhong-shi-yong-de-mo-kuai/</id>
+    <published>2023-12-08T15:26:58.000Z</published>
+    <updated>2024-01-31T08:50:27.409Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在项目开发中，我们有时会引入一些包，后续由于种种原因，并没有 import 到项目中。如果在部署到时候使用 pip freeze，则会将这些并未引入到包也列到 requirements 中，而实际这些包是不需要的。&lt;/p&gt;
+&lt;p&gt;pipreqs</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何列出 Python 项目中使用的模块</title>
     <link href="http://ytkz11@.github.io/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/"/>
     <id>http://ytkz11@.github.io/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/</id>
     <published>2023-12-08T15:26:58.000Z</published>
-    <updated>2023-12-11T09:05:49.596Z</updated>
+    <updated>2024-01-31T09:03:27.459Z</updated>
     
     
       
@@ -405,31 +427,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>clion中使用gdal的历程</title>
-    <link href="http://ytkz11@.github.io/2023/11/16/clion-zhong-shi-yong-gdal-de-li-cheng/"/>
-    <id>http://ytkz11@.github.io/2023/11/16/clion-zhong-shi-yong-gdal-de-li-cheng/</id>
-    <published>2023-11-16T13:26:58.000Z</published>
-    <updated>2023-12-05T01:50:15.550Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;为什么要使用clion？&quot;&gt;&lt;a href=&quot;#为什么要使用clion？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="gdal" scheme="http://ytkz11@.github.io/categories/gdal/"/>
-    
-    
-    <category term="gdal" scheme="http://ytkz11@.github.io/tags/gdal/"/>
     
   </entry>
   
