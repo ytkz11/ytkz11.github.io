@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-01-31 17:03:27</span>
+        <span class="pc">2024-01-31 17:27:55</span>
     </span>
     
     
@@ -210,8 +210,8 @@
 
                 <p>在项目开发中，我们有时会引入一些包，后续由于种种原因，并没有 import 到项目中。如果在部署到时候使用 pip freeze，则会将这些并未引入到包也列到 requirements 中，而实际这些包是不需要的。</p>
 <p>pipreqs 这个包就可以解决这个问题，它会分析项目中的代码，只列出被导入了的包。使用方法：</p>
-<pre class="line-numbers language-none"><code class="language-none">pip install pipreqs
-pipreqs --encoding=utf-8-sig your_project_path --force<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip <span class="token function">install</span> pipreqs
+pipreqs --encoding<span class="token operator">=</span>utf-8-sig your_project_path --force<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>pipreqs 会生成 requirements.txt 到你分析的项目根目录中，与 pip freeze 生成的文件格式一致，可以使用 <code>pip install -r requirements.txt</code> 安装。</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token assign-left variable">matplotlib</span><span class="token operator">==</span><span class="token number">3.5</span>.0
 <span class="token assign-left variable">numpy</span><span class="token operator">==</span><span class="token number">1.22</span>.4
@@ -230,10 +230,6 @@ pipreqs --encoding=utf-8-sig your_project_path --force<span aria-hidden="true" c
 <li><strong>提高性能</strong>：虽然导入未使用的库通常不会对性能产生大的影响，但在某些情况下，可能会浪费内存和处理器资源。例如，如果一个库在导入时执行了一些计算密集型的操作，但你的代码并没有实际使用这个库，那么这将是一种资源的浪费。</li>
 <li><strong>依赖管理</strong>：知道你的代码实际上依赖哪些包对于依赖管理非常重要。这可以帮助你减少项目的复杂性，并确保你的 <code>requirements.txt</code> 或 <code>Pipfile</code> 只包含实际需要的包。</li>
 </ol>
-<h1 id="依赖示意图"><a href="#依赖示意图" class="headerlink" title="依赖示意图"></a>依赖示意图</h1><p><code>pydeps</code>可以生成一个模块的依赖关系图。首先，你需要安装<code>pydeps</code>：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip <span class="token function">install</span> pydeps<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>然后，你可以使用<code>pydeps</code>来生成一个依赖关系图。假设你的主要Python文件是<code>main.py</code>，你可以使用以下命令：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pydeps --noshow -o depgraph.svg main.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
             </div>
 

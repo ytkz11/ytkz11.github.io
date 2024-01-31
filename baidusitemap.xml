@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2024/01/25/shi-liang-wen-jian-de-du-qu-he-xie-ru/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/01/10/he-bing-chong-die-de-duo-bian-xing-mian-shi-liang/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/01/26/bu-yao-ba-gui-yi-hua-he-biao-zhun-hua-hun-wei-yi-tan/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/12/11/da-jian-chatgpt-xiao-cheng-xu-qian-hou-duan-ji-xiang-mu-yan-shi/</loc>
+    <lastmod>2024-01-31</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/</loc>
     <lastmod>2024-01-31</lastmod>
   </url>
@@ -13,24 +37,8 @@
     <lastmod>2024-01-31</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2024/01/26/bu-yao-ba-gui-yi-hua-he-biao-zhun-hua-hun-wei-yi-tan/</loc>
-    <lastmod>2024-01-31</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/</loc>
     <lastmod>2024-01-25</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/01/25/shi-liang-wen-jian-de-du-qu-he-xie-ru/</loc>
-    <lastmod>2024-01-25</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/</loc>
-    <lastmod>2024-01-16</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/01/10/he-bing-chong-die-de-duo-bian-xing-mian-shi-liang/</loc>
-    <lastmod>2024-01-10</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/</loc>
@@ -61,10 +69,6 @@
     <lastmod>2023-12-18</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2023/12/11/da-jian-chatgpt-xiao-cheng-xu-qian-hou-duan-ji-xiang-mu-yan-shi/</loc>
-    <lastmod>2023-12-11</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2021/01/26/chang-yong-de-zui-jian-dan-de-git-yu-ju/</loc>
     <lastmod>2023-12-11</lastmod>
   </url>
@@ -75,10 +79,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/</loc>
     <lastmod>2023-12-08</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/</loc>
-    <lastmod>2023-12-07</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/</loc>
@@ -313,11 +313,11 @@
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
+    <loc>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
+    <loc>http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
@@ -329,11 +329,11 @@
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
+    <loc>http://ytkz11@.github.io/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/</loc>
+    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
