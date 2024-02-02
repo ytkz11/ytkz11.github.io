@@ -119,11 +119,11 @@
   </entry>
   
   <entry>
-    <title>合并重叠的多边形面矢量</title>
-    <link href="http://ytkz11@.github.io/2024/01/10/he-bing-chong-die-de-duo-bian-xing-mian-shi-liang/"/>
-    <id>http://ytkz11@.github.io/2024/01/10/he-bing-chong-die-de-duo-bian-xing-mian-shi-liang/</id>
+    <title>合并单个文件内多个重叠的多边形面矢量</title>
+    <link href="http://ytkz11@.github.io/2024/01/10/he-bing-dan-ge-wen-jian-nei-duo-ge-chong-die-de-duo-bian-xing-mian-shi-liang/"/>
+    <id>http://ytkz11@.github.io/2024/01/10/he-bing-dan-ge-wen-jian-nei-duo-ge-chong-die-de-duo-bian-xing-mian-shi-liang/</id>
     <published>2024-01-10T13:00:10.000Z</published>
-    <updated>2024-02-02T07:59:22.155Z</updated>
+    <updated>2024-02-02T08:03:26.288Z</updated>
     
     
       
@@ -276,28 +276,6 @@
     
     
     <category term="pyside6" scheme="http://ytkz11@.github.io/tags/pyside6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://ytkz11@.github.io/2023/12/11/da-jian-chatgpt-xiao-cheng-xu-qian-hou-duan-ji-xiang-mu-yan-shi/"/>
-    <id>http://ytkz11@.github.io/2023/12/11/da-jian-chatgpt-xiao-cheng-xu-qian-hou-duan-ji-xiang-mu-yan-shi/</id>
-    <published>2023-12-11T09:05:49.594Z</published>
-    <updated>2024-01-31T09:28:20.080Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;chatgpt套壳小程序的源代码获取途径：&lt;/p&gt;
-&lt;p&gt;前端地址：&lt;a class=&quot;link&quot;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
@@ -527,6 +505,32 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>借助ogr2ogr工具实现shp文件转换kml格式</title>
+    <link href="http://ytkz11@.github.io/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/"/>
+    <id>http://ytkz11@.github.io/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/</id>
+    <published>2023-11-06T10:26:58.000Z</published>
+    <updated>2023-11-06T01:49:00.094Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;kml格式是一种在GOOGLE地图浏览器中用于交换地理数据的文件。它基于XML，并定义了一些TAG用于规定地理数据的显示方式。KML可用于定义的地理特征包括地点、描述、叠层、路径和多边形等。&lt;/p&gt;
+&lt;p&gt;实际工作中我们拿到的矢量数据格式大部分是shp格式的文件，如果需要在</summary>
+        
+      
+    
+    
+    
+    <category term="shp" scheme="http://ytkz11@.github.io/categories/shp/"/>
+    
+    
+    <category term="shp" scheme="http://ytkz11@.github.io/tags/shp/"/>
     
   </entry>
   
