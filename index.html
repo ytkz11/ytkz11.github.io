@@ -139,6 +139,45 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2021/03/10/gdal-api-bi-ji/">
+                        gdal api笔记
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        ​        如果你的gdal版本是3.2.2及以上，那么只能：
+from osgeo import gdal 
+
+
+ds = gdal.Open(data)
+rows = ds.RasterYSize
+cols = ds.RasterXSize...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Thu Dec 21 2023 13:38:46 GMT+0800">
+                2023-12-21
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2021/03/10/gdal-api-bi-ji/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2024/02/02/shi-yong-leaflet.js-zai-web-ying-yong-zhong-ke-shi-hua-geojson-shu-ju/">
                         使用 Leaflet.js 在 Web 应用中可视化 GeoJSON 数据
                     </a>
@@ -154,7 +193,7 @@
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Feb 02 2024 15:56:45 GMT+0800">
+            <span class="home-article-date" data-updated="Fri Feb 02 2024 16:06:35 GMT+0800">
                 2024-02-02
             </span>
         </span>
@@ -452,43 +491,6 @@ GDAL提供了ogr...
     </div>
 
     <a class="read-more" href="/2023/12/22/shi-liang-zuo-biao-zhuan-huan/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/">
-                        pyside6将图片资源转为py格式
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        需求pyside6将图片资源转为py格式， 是为了打包为exe的时候不丢失图片文件
-步骤新建img.qrc文件，例子如下：
-&lt;RCC&gt;
-    &lt;qresource prefix="pic"&gt;
-        &lt;file...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Thu Dec 21 2023 10:12:42 GMT+0800">
-                2023-12-21
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
