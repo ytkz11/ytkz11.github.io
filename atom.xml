@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-01-31T09:32:37.610Z</updated>
+  <updated>2024-02-02T07:56:45.530Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 Leaflet.js 在 Web 应用中可视化 GeoJSON 数据</title>
+    <link href="http://ytkz11@.github.io/2024/02/02/shi-yong-leaflet.js-zai-web-ying-yong-zhong-ke-shi-hua-geojson-shu-ju/"/>
+    <id>http://ytkz11@.github.io/2024/02/02/shi-yong-leaflet.js-zai-web-ying-yong-zhong-ke-shi-hua-geojson-shu-ju/</id>
+    <published>2024-02-02T14:00:10.000Z</published>
+    <updated>2024-02-02T07:56:45.530Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;在本篇博客中，我们将带领您了解如何创建一个允许用户在地图上可视化 GeoJSON 数据的 web</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>预处理之归一化和标准化</title>
@@ -98,7 +123,7 @@
     <link href="http://ytkz11@.github.io/2024/01/10/he-bing-chong-die-de-duo-bian-xing-mian-shi-liang/"/>
     <id>http://ytkz11@.github.io/2024/01/10/he-bing-chong-die-de-duo-bian-xing-mian-shi-liang/</id>
     <published>2024-01-10T13:00:10.000Z</published>
-    <updated>2024-01-31T09:39:58.251Z</updated>
+    <updated>2024-02-02T07:59:22.155Z</updated>
     
     
       
@@ -502,32 +527,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>借助ogr2ogr工具实现shp文件转换kml格式</title>
-    <link href="http://ytkz11@.github.io/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/"/>
-    <id>http://ytkz11@.github.io/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/</id>
-    <published>2023-11-06T10:26:58.000Z</published>
-    <updated>2023-11-06T01:49:00.094Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;kml格式是一种在GOOGLE地图浏览器中用于交换地理数据的文件。它基于XML，并定义了一些TAG用于规定地理数据的显示方式。KML可用于定义的地理特征包括地点、描述、叠层、路径和多边形等。&lt;/p&gt;
-&lt;p&gt;实际工作中我们拿到的矢量数据格式大部分是shp格式的文件，如果需要在</summary>
-        
-      
-    
-    
-    
-    <category term="shp" scheme="http://ytkz11@.github.io/categories/shp/"/>
-    
-    
-    <category term="shp" scheme="http://ytkz11@.github.io/tags/shp/"/>
     
   </entry>
   
