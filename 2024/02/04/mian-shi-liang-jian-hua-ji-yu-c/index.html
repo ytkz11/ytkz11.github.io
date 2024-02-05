@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            面矢量简化--基于cpp |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">面矢量简化--基于cpp</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-02-04 22:00:10</span>
+        <span class="mobile">2024-02-04 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-02-05 11:32:05</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>先放全部的代码。</p>
+<h1 id="c-代码"><a href="#c-代码" class="headerlink" title="c++代码"></a>c++代码</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include "ogr_spatialref.h"
+#include "gdal_priv.h"
+#include "ogr_feature.h"
+#include "ogrsf_frmts.h"
+
+#include "ogr_spatialref.h"
+#include "gdal_priv.h"
+#include "ogr_feature.h"
+#include "ogrsf_frmts.h"
+
+void SimplifyShapefile(const char* inputPath, const char* outputPath, double tolerance)
+{
+	GDALAllRegister(); // 注册所有的驱动
+
+	GDALDataset* poDS;
+	poDS = (GDALDataset*)GDALOpenEx(inputPath, GDAL_OF_VECTOR, NULL, NULL, NULL); // 打开输入的Shapefile
+	if (poDS == NULL)
+	{
+		printf("打开文件失败.\n");
+		exit(1);
+	}
+
+	OGRLayer* poLayer;
+	poLayer = poDS-&gt;GetLayer(0); // 获取输入Shapefile的第一个图层
+
+	// 创建一个新的Shapefile来存储简化的多边形
+	GDALDriver* poDriver = GetGDALDriverManager()-&gt;GetDriverByName("ESRI Shapefile");
+	GDALDataset* poDSOut = poDriver-&gt;Create(outputPath, 0, 0, 0, GDT_Unknown, NULL);
+	OGRLayer* poLayerOut = poDSOut-&gt;CreateLayer("simplified", NULL, wkbPolygon, NULL);
+
+	OGRFeature* poFeature;
+	poLayer-&gt;ResetReading();
+	int featureCount = poLayer-&gt;GetFeatureCount(); // 获取特征总数，用于显示进度
+	int processedCount = 0; // 已处理的特征数
+	while ((poFeature = poLayer-&gt;GetNextFeature()) != NULL)
+	{
+		OGRGeometry* poGeometry;
+		poGeometry = poFeature-&gt;GetGeometryRef();
+		if (poGeometry != NULL)
+		{
+			OGRPolygon* poPolygon = (OGRPolygon*)poGeometry;
+
+			// 使用给定的公差简化多边形
+			OGRGeometry* poSimplified = poPolygon-&gt;Simplify(tolerance);
+
+			// 在输出图层中创建一个新的特征，并将其几何设为简化的多边形
+			OGRFeature* poFeatureOut = OGRFeature::CreateFeature(poLayerOut-&gt;GetLayerDefn());
+			poFeatureOut-&gt;SetGeometry(poSimplified);
+			poLayerOut-&gt;CreateFeature(poFeatureOut);
+
+			// 清理
+			OGRFeature::DestroyFeature(poFeatureOut);
+			delete poSimplified;
+		}
+		else
+		{
+			printf("没有多边形几何\n");
+		}
+		OGRFeature::DestroyFeature(poFeature);
+		
+		processedCount++;
+		printf("进度: %d/%d\n", processedCount, featureCount); // 打印进度
+	}
+
+	// 清理
+	GDALClose(poDS);
+	GDALClose(poDSOut);
+}
+int main()
+{
+	SimplifyShapefile("USA_south.shp", "south_simplified.shp", 0.001);
+	return 0;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="使用GDAL库来简化Shapefile多边形特征"><a href="#使用GDAL库来简化Shapefile多边形特征" class="headerlink" title="使用GDAL库来简化Shapefile多边形特征"></a>使用GDAL库来简化Shapefile多边形特征</h1><p>在地理信息系统（GIS）中，Shapefile是一种常见的文件格式，用于存储地理空间数据。然而，Shapefile中的多边形特征可能会因为过于复杂而导致处理效率低下。为了解决这个问题，我们可以使用GDAL库来简化多边形特征。在本文中，我们将介绍如何使用GDAL库来简化Shapefile中的多边形特征，并生成一个可执行文件。</p>
+<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><p>首先，我们需要包含一些必要的头文件：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include "ogr_spatialref.h"
+#include "gdal_priv.h"
+#include "ogr_feature.h"
+#include "ogrsf_frmts.h"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这些头文件分别来自GDAL库，它们分别提供了处理空间参考系统、GDAL数据集、特征和各种空间格式支持的功能。</p>
+<p>接着，我们定义一个函数<code>SimplifyShapefile</code>，它接收三个参数：输入Shapefile的路径、输出Shapefile的路径和简化的公差。</p>
+<p>在函数体中，我们首先使用<code>GDALAllRegister</code>函数注册所有的驱动，然后使用<code>GDALOpenEx</code>函数打开输入的Shapefile。如果打开文件失败，程序将打印错误信息并退出。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">GDALAllRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 注册所有的驱动</span>
+
+GDALDataset<span class="token operator">*</span> poDS<span class="token punctuation">;</span>
+poDS <span class="token operator">=</span> <span class="token punctuation">(</span>GDALDataset<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">GDALOpenEx</span><span class="token punctuation">(</span>inputPath<span class="token punctuation">,</span> GDAL_OF_VECTOR<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 打开输入的Shapefile</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>poDS <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"打开文件失败.\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>接下来，我们获取输入Shapefile的第一个图层，并创建一个新的Shapefile来存储简化的多边形。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">OGRLayer<span class="token operator">*</span> poLayer<span class="token punctuation">;</span>
+poLayer <span class="token operator">=</span> poDS<span class="token operator">-&gt;</span><span class="token function">GetLayer</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取输入Shapefile的第一个图层</span>
+
+<span class="token comment">// 创建一个新的Shapefile来存储简化的多边形</span>
+GDALDriver<span class="token operator">*</span> poDriver <span class="token operator">=</span> <span class="token function">GetGDALDriverManager</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">GetDriverByName</span><span class="token punctuation">(</span><span class="token string">"ESRI Shapefile"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+GDALDataset<span class="token operator">*</span> poDSOut <span class="token operator">=</span> poDriver<span class="token operator">-&gt;</span><span class="token function">Create</span><span class="token punctuation">(</span>outputPath<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> GDT_Unknown<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+OGRLayer<span class="token operator">*</span> poLayerOut <span class="token operator">=</span> poDSOut<span class="token operator">-&gt;</span><span class="token function">CreateLayer</span><span class="token punctuation">(</span><span class="token string">"simplified"</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> wkbPolygon<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然后，我们遍历输入图层中的每一个特征。对于每一个特征，我们获取其几何体，使用给定的公差简化多边形，并在输出图层中创建一个新的特征，将其几何设为简化的多边形。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">OGRFeature<span class="token operator">*</span> poFeature<span class="token punctuation">;</span>
+poLayer<span class="token operator">-&gt;</span><span class="token function">ResetReading</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> featureCount <span class="token operator">=</span> poLayer<span class="token operator">-&gt;</span><span class="token function">GetFeatureCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取特征总数，用于显示进度</span>
+<span class="token keyword">int</span> processedCount <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">// 已处理的特征数</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>poFeature <span class="token operator">=</span> poLayer<span class="token operator">-&gt;</span><span class="token function">GetNextFeature</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	OGRGeometry<span class="token operator">*</span> poGeometry<span class="token punctuation">;</span>
+	poGeometry <span class="token operator">=</span> poFeature<span class="token operator">-&gt;</span><span class="token function">GetGeometryRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>poGeometry <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		OGRPolygon<span class="token operator">*</span> poPolygon <span class="token operator">=</span> <span class="token punctuation">(</span>OGRPolygon<span class="token operator">*</span><span class="token punctuation">)</span>poGeometry<span class="token punctuation">;</span>
+
+		<span class="token comment">// 使用给定的公差简化多边形</span>
+		OGRGeometry<span class="token operator">*</span> poSimplified <span class="token operator">=</span> poPolygon<span class="token operator">-&gt;</span><span class="token function">Simplify</span><span class="token punctuation">(</span>tolerance<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// 在输出图层中创建一个新的特征，并将其几何设为简化的多边形</span>
+		OGRFeature<span class="token operator">*</span> poFeatureOut <span class="token operator">=</span> <span class="token class-name">OGRFeature</span><span class="token operator">::</span><span class="token function">CreateFeature</span><span class="token punctuation">(</span>poLayerOut<span class="token operator">-&gt;</span><span class="token function">GetLayerDefn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		poFeatureOut<span class="token operator">-&gt;</span><span class="token function">SetGeometry</span><span class="token punctuation">(</span>poSimplified<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		poLayerOut<span class="token operator">-&gt;</span><span class="token function">CreateFeature</span><span class="token punctuation">(</span>poFeatureOut<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+		<span class="token comment">// 清理</span>
+		<span class="token class-name">OGRFeature</span><span class="token operator">::</span><span class="token function">DestroyFeature</span><span class="token punctuation">(</span>poFeatureOut<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">delete</span> poSimplified<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">else</span>
+	<span class="token punctuation">{</span>
+		<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"没有多边形几何\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token class-name">OGRFeature</span><span class="token operator">::</span><span class="token function">DestroyFeature</span><span class="token punctuation">(</span>poFeature<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	processedCount<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"进度: %d/%d\n"</span><span class="token punctuation">,</span> processedCount<span class="token punctuation">,</span> featureCount<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 打印进度</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>最后，我们需要关闭输入和输出的数据集，以释放资源。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 清理</span>
+<span class="token function">GDALClose</span><span class="token punctuation">(</span>poDS<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">GDALClose</span><span class="token punctuation">(</span>poDSOut<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>在<code>main</code>函数中，我们调用<code>SimplifyShapefile</code>函数，传入输入和输出的Shapefile路径，以及简化的公差。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token function">SimplifyShapefile</span><span class="token punctuation">(</span><span class="token string">"USA_south.shp"</span><span class="token punctuation">,</span> <span class="token string">"south_simplified.shp"</span><span class="token punctuation">,</span> <span class="token number">0.001</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>以上就是使用GDAL库来简化Shapefile多边形特征的全过程。可以看到，GDAL库提供了一套完整的API，让我们可以方便地处理地理空间数据。</p>
+<p><img src="https://github.com/getActivity/EmojiPackage/blob/master/%E5%AD%A6%E4%B9%A0/%E6%88%91%E7%88%B1%E5%AD%A6%E4%B9%A0.gif?raw=true" alt="我爱学习.gif"></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%9F%A2%E9%87%8F/">#矢量</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">面矢量简化--基于python</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/02/03/shapefile-yu-geojson-zhi-jian-de-zhuan-huan-python-shi-jian/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Shapefile 与 GeoJSON 之间的转换：Python 实践</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

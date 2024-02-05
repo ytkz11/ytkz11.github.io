@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-02-03T06:30:32.117Z</updated>
+  <updated>2024-02-05T06:30:33.458Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,115 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>github star 8k：将copilot转为gpt4（学生党免费使用gpt的教程）</title>
+    <link href="http://ytkz11@.github.io/2024/02/05/github-star-8k-jiang-copilot-zhuan-wei-gpt4-xue-sheng-dang-mian-fei-shi-yong-gpt-de-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/02/05/github-star-8k-jiang-copilot-zhuan-wei-gpt4-xue-sheng-dang-mian-fei-shi-yong-gpt-de-jiao-cheng/</id>
+    <published>2024-02-05T14:00:10.000Z</published>
+    <updated>2024-02-05T06:30:33.458Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在Visual Studio中配置GDAL的基本步骤</title>
+    <link href="http://ytkz11@.github.io/2024/02/04/zai-visual-studio-zhong-pei-zhi-gdal-de-ji-ben-bu-zou/"/>
+    <id>http://ytkz11@.github.io/2024/02/04/zai-visual-studio-zhong-pei-zhi-gdal-de-ji-ben-bu-zou/</id>
+    <published>2024-02-04T14:00:10.000Z</published>
+    <updated>2024-02-05T03:31:59.661Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;以下是在Visual</summary>
+        
+      
+    
+    
+    
+    <category term="GDAL" scheme="http://ytkz11@.github.io/categories/GDAL/"/>
+    
+    <category term="cpp" scheme="http://ytkz11@.github.io/categories/GDAL/cpp/"/>
+    
+    <category term="vs" scheme="http://ytkz11@.github.io/categories/GDAL/cpp/vs/"/>
+    
+    
+    <category term="GDAL" scheme="http://ytkz11@.github.io/tags/GDAL/"/>
+    
+    <category term="cpp" scheme="http://ytkz11@.github.io/tags/cpp/"/>
+    
+    <category term="vs" scheme="http://ytkz11@.github.io/tags/vs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面矢量简化--基于python</title>
+    <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/"/>
+    <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/</id>
+    <published>2024-02-04T14:00:10.000Z</published>
+    <updated>2024-02-04T08:19:08.717Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;面矢量简化&quot;&gt;&lt;a href=&quot;#面矢量简化&quot; class=&quot;headerlink&quot; title=&quot;面矢量简化&quot;&gt;&lt;/a&gt;面矢量简化&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面矢量简化--基于cpp</title>
+    <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/"/>
+    <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/</id>
+    <published>2024-02-04T14:00:10.000Z</published>
+    <updated>2024-02-05T03:32:05.864Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;先放全部的代码。&lt;/p&gt;
+&lt;h1 id=&quot;c-代码&quot;&gt;&lt;a href=&quot;#c-代码&quot; class=&quot;headerlink&quot; title=&quot;c++代码&quot;&gt;&lt;/a&gt;c++代码&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-c++&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>Shapefile 与 GeoJSON 之间的转换：Python 实践</title>
@@ -420,107 +529,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程_栅格进行裁剪</title>
-    <link href="http://ytkz11@.github.io/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/"/>
-    <id>http://ytkz11@.github.io/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/</id>
-    <published>2023-12-01T10:26:58.000Z</published>
-    <updated>2023-12-01T05:51:30.883Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h1&gt;&lt;p&gt;现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。&lt;/p&gt;
-&lt;h2 id=&quot;代码&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python多版本与虚拟环境</title>
-    <link href="http://ytkz11@.github.io/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/"/>
-    <id>http://ytkz11@.github.io/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/</id>
-    <published>2023-11-14T13:26:58.000Z</published>
-    <updated>2024-01-31T09:33:35.648Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;为什么要使用多个版本的python？&quot;&gt;&lt;a href=&quot;#为什么要使用多个版本的python？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从gadm下载世界各国的行政边界</title>
-    <link href="http://ytkz11@.github.io/2023/11/14/cong-gadm-xia-zai-shi-jie-ge-guo-de-xing-zheng-bian-jie/"/>
-    <id>http://ytkz11@.github.io/2023/11/14/cong-gadm-xia-zai-shi-jie-ge-guo-de-xing-zheng-bian-jie/</id>
-    <published>2023-11-14T10:26:58.000Z</published>
-    <updated>2023-12-18T00:46:24.788Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;GADM-全球行政区划数据库&quot;&gt;&lt;a href=&quot;#GADM-全球行政区划数据库&quot; class=&quot;headerlink&quot; title=&quot;GADM: 全球行政区划数据库&quot;&gt;&lt;/a&gt;GADM:</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>maven编译snap-engine过程遇到的问题及解决方法</title>
-    <link href="http://ytkz11@.github.io/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/"/>
-    <id>http://ytkz11@.github.io/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/</id>
-    <published>2023-11-09T10:26:58.000Z</published>
-    <updated>2023-11-16T02:03:23.392Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot; title=&quot;1&quot;&gt;&lt;/a&gt;1&lt;/h1&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td</summary>
         
       
     
