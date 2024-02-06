@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-02-05 11:32:05</span>
+        <span class="pc">2024-02-06 15:33:30</span>
     </span>
     
     
@@ -176,6 +176,10 @@
                 
                     <li>
                         <a href="/categories/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%9F%A2%E9%87%8F/c/">c++</a>&nbsp;
                     </li>
                 
             </ul>
@@ -188,6 +192,10 @@
                 
                     <li>
                         <a href="/tags/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/c/">c++</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,83 +216,8 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>先放全部的代码。</p>
-<h1 id="c-代码"><a href="#c-代码" class="headerlink" title="c++代码"></a>c++代码</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include "ogr_spatialref.h"
-#include "gdal_priv.h"
-#include "ogr_feature.h"
-#include "ogrsf_frmts.h"
-
-#include "ogr_spatialref.h"
-#include "gdal_priv.h"
-#include "ogr_feature.h"
-#include "ogrsf_frmts.h"
-
-void SimplifyShapefile(const char* inputPath, const char* outputPath, double tolerance)
-{
-	GDALAllRegister(); // 注册所有的驱动
-
-	GDALDataset* poDS;
-	poDS = (GDALDataset*)GDALOpenEx(inputPath, GDAL_OF_VECTOR, NULL, NULL, NULL); // 打开输入的Shapefile
-	if (poDS == NULL)
-	{
-		printf("打开文件失败.\n");
-		exit(1);
-	}
-
-	OGRLayer* poLayer;
-	poLayer = poDS-&gt;GetLayer(0); // 获取输入Shapefile的第一个图层
-
-	// 创建一个新的Shapefile来存储简化的多边形
-	GDALDriver* poDriver = GetGDALDriverManager()-&gt;GetDriverByName("ESRI Shapefile");
-	GDALDataset* poDSOut = poDriver-&gt;Create(outputPath, 0, 0, 0, GDT_Unknown, NULL);
-	OGRLayer* poLayerOut = poDSOut-&gt;CreateLayer("simplified", NULL, wkbPolygon, NULL);
-
-	OGRFeature* poFeature;
-	poLayer-&gt;ResetReading();
-	int featureCount = poLayer-&gt;GetFeatureCount(); // 获取特征总数，用于显示进度
-	int processedCount = 0; // 已处理的特征数
-	while ((poFeature = poLayer-&gt;GetNextFeature()) != NULL)
-	{
-		OGRGeometry* poGeometry;
-		poGeometry = poFeature-&gt;GetGeometryRef();
-		if (poGeometry != NULL)
-		{
-			OGRPolygon* poPolygon = (OGRPolygon*)poGeometry;
-
-			// 使用给定的公差简化多边形
-			OGRGeometry* poSimplified = poPolygon-&gt;Simplify(tolerance);
-
-			// 在输出图层中创建一个新的特征，并将其几何设为简化的多边形
-			OGRFeature* poFeatureOut = OGRFeature::CreateFeature(poLayerOut-&gt;GetLayerDefn());
-			poFeatureOut-&gt;SetGeometry(poSimplified);
-			poLayerOut-&gt;CreateFeature(poFeatureOut);
-
-			// 清理
-			OGRFeature::DestroyFeature(poFeatureOut);
-			delete poSimplified;
-		}
-		else
-		{
-			printf("没有多边形几何\n");
-		}
-		OGRFeature::DestroyFeature(poFeature);
-		
-		processedCount++;
-		printf("进度: %d/%d\n", processedCount, featureCount); // 打印进度
-	}
-
-	// 清理
-	GDALClose(poDS);
-	GDALClose(poDSOut);
-}
-int main()
-{
-	SimplifyShapefile("USA_south.shp", "south_simplified.shp", 0.001);
-	return 0;
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="使用GDAL库来简化Shapefile多边形特征"><a href="#使用GDAL库来简化Shapefile多边形特征" class="headerlink" title="使用GDAL库来简化Shapefile多边形特征"></a>使用GDAL库来简化Shapefile多边形特征</h1><p>在地理信息系统（GIS）中，Shapefile是一种常见的文件格式，用于存储地理空间数据。然而，Shapefile中的多边形特征可能会因为过于复杂而导致处理效率低下。为了解决这个问题，我们可以使用GDAL库来简化多边形特征。在本文中，我们将介绍如何使用GDAL库来简化Shapefile中的多边形特征，并生成一个可执行文件。</p>
-<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><p>首先，我们需要包含一些必要的头文件：</p>
+                <h1 id="使用GDAL库来简化Shapefile多边形特征"><a href="#使用GDAL库来简化Shapefile多边形特征" class="headerlink" title="使用GDAL库来简化Shapefile多边形特征"></a>使用GDAL库来简化Shapefile多边形特征</h1><p>在地理信息系统（GIS）中，Shapefile是一种常见的文件格式，用于存储地理空间数据。然而，Shapefile中的多边形特征可能会因为过于复杂而导致处理效率低下。为了解决这个问题，我们可以使用GDAL库来简化多边形特征。在本文中，我们将介绍如何使用GDAL库来简化Shapefile中的多边形特征，并生成一个可执行文件。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>首先，我们需要包含一些必要的头文件：</p>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include "ogr_spatialref.h"
 #include "gdal_priv.h"
 #include "ogr_feature.h"
@@ -354,6 +287,75 @@ poLayer<span class="token operator">-&gt;</span><span class="token function">Res
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>以上就是使用GDAL库来简化Shapefile多边形特征的全过程。可以看到，GDAL库提供了一套完整的API，让我们可以方便地处理地理空间数据。</p>
+<h1 id="完整的c-代码"><a href="#完整的c-代码" class="headerlink" title="完整的c++代码"></a>完整的c++代码</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include "ogr_spatialref.h"
+#include "gdal_priv.h"
+#include "ogr_feature.h"
+#include "ogrsf_frmts.h"
+
+void SimplifyShapefile(const char* inputPath, const char* outputPath, double tolerance)
+{
+	GDALAllRegister(); // 注册所有的驱动
+
+	GDALDataset* poDS;
+	poDS = (GDALDataset*)GDALOpenEx(inputPath, GDAL_OF_VECTOR, NULL, NULL, NULL); // 打开输入的Shapefile
+	if (poDS == NULL)
+	{
+		printf("打开文件失败.\n");
+		exit(1);
+	}
+
+	OGRLayer* poLayer;
+	poLayer = poDS-&gt;GetLayer(0); // 获取输入Shapefile的第一个图层
+
+	// 创建一个新的Shapefile来存储简化的多边形
+	GDALDriver* poDriver = GetGDALDriverManager()-&gt;GetDriverByName("ESRI Shapefile");
+	GDALDataset* poDSOut = poDriver-&gt;Create(outputPath, 0, 0, 0, GDT_Unknown, NULL);
+	OGRLayer* poLayerOut = poDSOut-&gt;CreateLayer("simplified", NULL, wkbPolygon, NULL);
+
+	OGRFeature* poFeature;
+	poLayer-&gt;ResetReading();
+	int featureCount = poLayer-&gt;GetFeatureCount(); // 获取特征总数，用于显示进度
+	int processedCount = 0; // 已处理的特征数
+	while ((poFeature = poLayer-&gt;GetNextFeature()) != NULL)
+	{
+		OGRGeometry* poGeometry;
+		poGeometry = poFeature-&gt;GetGeometryRef();
+		if (poGeometry != NULL)
+		{
+			OGRPolygon* poPolygon = (OGRPolygon*)poGeometry;
+
+			// 使用给定的公差简化多边形
+			OGRGeometry* poSimplified = poPolygon-&gt;Simplify(tolerance);
+
+			// 在输出图层中创建一个新的特征，并将其几何设为简化的多边形
+			OGRFeature* poFeatureOut = OGRFeature::CreateFeature(poLayerOut-&gt;GetLayerDefn());
+			poFeatureOut-&gt;SetGeometry(poSimplified);
+			poLayerOut-&gt;CreateFeature(poFeatureOut);
+
+			// 清理
+			OGRFeature::DestroyFeature(poFeatureOut);
+			delete poSimplified;
+		}
+		else
+		{
+			printf("没有多边形几何\n");
+		}
+		OGRFeature::DestroyFeature(poFeature);
+		
+		processedCount++;
+		printf("进度: %d/%d\n", processedCount, featureCount); // 打印进度
+	}
+
+	// 清理
+	GDALClose(poDS);
+	GDALClose(poDSOut);
+}
+int main()
+{
+	SimplifyShapefile("USA_south.shp", "south_simplified.shp", 0.001);
+	return 0;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="https://github.com/getActivity/EmojiPackage/blob/master/%E5%AD%A6%E4%B9%A0/%E6%88%91%E7%88%B1%E5%AD%A6%E4%B9%A0.gif?raw=true" alt="我爱学习.gif"></p>
 
             </div>
@@ -367,6 +369,10 @@ poLayer<span class="token operator">-&gt;</span><span class="token function">Res
                             <a href="/tags/%E7%9F%A2%E9%87%8F/">#矢量</a>&nbsp;
                         </li>
                     
+                        <li class="tag-item">
+                            <a href="/tags/c/">#c++</a>&nbsp;
+                        </li>
+                    
                 </ul>
             
 
@@ -376,13 +382,13 @@ poLayer<span class="token operator">-&gt;</span><span class="token function">Res
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/"
+                               href="/2024/02/04/zai-visual-studio-zhong-pei-zhi-gdal-de-ji-ben-bu-zou/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">面矢量简化--基于python</span>
+                                <span class="post-nav-title-item">在Visual Studio中配置GDAL的基本步骤</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
@@ -392,10 +398,10 @@ poLayer<span class="token operator">-&gt;</span><span class="token function">Res
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/02/03/shapefile-yu-geojson-zhi-jian-de-zhuan-huan-python-shi-jian/"
+                               href="/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Shapefile 与 GeoJSON 之间的转换：Python 实践</span>
+                                <span class="post-nav-title-item">面矢量简化--基于python</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
