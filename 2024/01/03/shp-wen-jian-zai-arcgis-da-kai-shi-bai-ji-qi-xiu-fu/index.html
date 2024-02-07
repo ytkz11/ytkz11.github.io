@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-02-07 10:47:58</span>
+        <span class="pc">2024-02-07 11:32:28</span>
     </span>
     
     
@@ -208,12 +208,27 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h1 id="打开不了shp文件"><a href="#打开不了shp文件" class="headerlink" title="打开不了shp文件"></a>打开不了shp文件</h1><p>同学们在平常使用arcgis的时候，是否遇到了下面这样的情况。</p>
+                <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240207110903501.png" alt="image-20240207110903501"></p>
+<h1 id="打开不了shp文件"><a href="#打开不了shp文件" class="headerlink" title="打开不了shp文件"></a>打开不了shp文件</h1><p>同学们在平常使用arcgis的时候，是否遇到了下面这样的情况。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202401031520846.png" alt="image-20240103152004322"></p>
 <p>这是由于shp文件丢失了部分数据，导致在arcgis打不开。</p>
 <p>1个 Shape文件结构Shape文件的文件构成Shape文件由3 个文件构成: <strong>主文件、索引文件、数据文件</strong>。它们分别是“.shp” , “.shx””.dbf”文件。</p>
 <p>如果数据文件dbf，丢失了部分数据，就会出现上面说的打不开的错误。</p>
 <h1 id="修复Shapefile的Python源代码"><a href="#修复Shapefile的Python源代码" class="headerlink" title="修复Shapefile的Python源代码"></a>修复Shapefile的Python源代码</h1><p>Shapefile实际上是一组几个相关文件的集合，其中最重要的是.shp（包含几何信息）、.dbf（包含属性信息）和.shx（包含索引信息）文件。有时，.shp文件和.dbf文件中的记录数量可能会不一致，这可能会导致GIS软件无法正确读取Shapefile。这个脚本的目的就是修复这种不一致。</p>
+<h2 id="代码详解"><a href="#代码详解" class="headerlink" title="代码详解"></a>代码详解</h2><p>接下来，我将逐段解释这个脚本的代码：</p>
+<ol>
+<li><strong>导入所需的模块</strong>：脚本开始时，导入了需要的Python模块。这包括os、shutil（用于文件操作）、struct（用于处理二进制数据）和dbf（用于处理.dbf文件）。</li>
+<li><strong>定义RestoreShp类</strong>：这个类是脚本的核心，它包含了修复Shapefile的所有功能。<ul>
+<li><code>__init__</code>方法：这个方法是类的初始化方法。它接收两个参数：要修复的Shapefile的路径（<code>file</code>）和输出文件的路径（<code>outpath</code>）。如果<code>outpath</code>没有提供，那么输出文件将被保存在<code>file</code>所在的目录。如果<code>file</code>不存在，那么会抛出一个异常。方法最后设置了<code>self.outfile</code>，这是一个列表，包含了输出的.shp、.dbf和.shx文件的路径。</li>
+<li><code>copyfile</code>方法：这个方法将原始的Shapefile（.shp、.dbf和.shx文件）复制到输出目录。</li>
+<li><code>get_shp_shape_records</code>方法：这个方法读取.shp文件中的几何数据，并返回几何数据的数量。</li>
+<li><code>get_dbf_shape_records</code>方法：这个方法读取.dbf文件中的属性数据，并返回一个dbf.Table对象。</li>
+<li><code>restore_shp</code>方法：这个方法是修复Shapefile的主要方法。它首先获取.shp文件和.dbf文件中的记录数量，然后比较这两个数量。如果.shp文件的记录数量多，那么会在.dbf文件中添加记录；如果.dbf文件的记录数量多，那么会在.dbf文件中删除记录。</li>
+</ul>
+</li>
+<li><strong>主程序</strong>：如果这个脚本被作为主程序运行（而不是被导入到其他脚本中），那么会执行这部分代码。它首先提示用户输入Shapefile的路径和输出文件的路径，然后创建一个<code>RestoreShp</code>对象，并调用其<code>restore_shp</code>方法来修复Shapefile。如果修复成功，那么会输出“complete”；如果文件不存在，那么会输出“File does not exist”。</li>
+</ol>
+<p>这就是这个脚本的全部内容。它提供了一种自动修复Shapefile记录数量不一致问题的方法</p>
 <h2 id="代码概述"><a href="#代码概述" class="headerlink" title="代码概述"></a>代码概述</h2><p>脚本首先定义了一个名为<code>RestoreShp</code>的类，这个类有三个主要的方法：</p>
 <ol>
 <li><code>copyfile</code>：将原始的Shapefile（.shp、.dbf和.shx文件）复制到输出目录。</li>
