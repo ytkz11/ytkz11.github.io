@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-01-03 16:33:52</span>
+        <span class="pc">2024-02-07 10:47:58</span>
     </span>
     
     
@@ -213,7 +213,107 @@
 <p>这是由于shp文件丢失了部分数据，导致在arcgis打不开。</p>
 <p>1个 Shape文件结构Shape文件的文件构成Shape文件由3 个文件构成: <strong>主文件、索引文件、数据文件</strong>。它们分别是“.shp” , “.shx””.dbf”文件。</p>
 <p>如果数据文件dbf，丢失了部分数据，就会出现上面说的打不开的错误。</p>
-<h1 id="用代码修复"><a href="#用代码修复" class="headerlink" title="用代码修复"></a>用代码修复</h1><p>略。</p>
+<h1 id="修复Shapefile的Python源代码"><a href="#修复Shapefile的Python源代码" class="headerlink" title="修复Shapefile的Python源代码"></a>修复Shapefile的Python源代码</h1><p>Shapefile实际上是一组几个相关文件的集合，其中最重要的是.shp（包含几何信息）、.dbf（包含属性信息）和.shx（包含索引信息）文件。有时，.shp文件和.dbf文件中的记录数量可能会不一致，这可能会导致GIS软件无法正确读取Shapefile。这个脚本的目的就是修复这种不一致。</p>
+<h2 id="代码概述"><a href="#代码概述" class="headerlink" title="代码概述"></a>代码概述</h2><p>脚本首先定义了一个名为<code>RestoreShp</code>的类，这个类有三个主要的方法：</p>
+<ol>
+<li><code>copyfile</code>：将原始的Shapefile（.shp、.dbf和.shx文件）复制到输出目录。</li>
+<li><code>get_shp_shape_records</code>：读取.shp文件中的几何数据，并返回几何数据的数量。</li>
+<li><code>get_dbf_shape_records</code>：读取.dbf文件中的属性数据，并返回属性数据的数量。</li>
+</ol>
+<p>最后，<code>restore_shp</code>方法使用上述方法，比较.shp文件和.dbf文件中的记录数量。如果数量不一致，它会相应地添加或删除记录，以使数量一致。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>要使用此脚本，首先需要在命令行中运行它，并按照提示输入Shapefile的路径和输出文件的路径。然后，脚本会自动修复Shapefile，并将修复后的文件保存到指定的输出路径。</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>这个脚本使用了<code>dbf</code>库来处理.dbf文件。在运行脚本之前，需要确保已经安装了这个库。可以使用以下命令进行安装：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> dbfread<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2024/1/3 20:32</span>
+<span class="token comment"># @File : RestoreShp.py</span>
+
+<span class="token comment"># 修复shp文件， shp文件中的几何数据和属性数据不一致</span>
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> shutil
+<span class="token keyword">from</span> struct <span class="token keyword">import</span> unpack
+<span class="token keyword">import</span> dbf
+
+<span class="token keyword">class</span> <span class="token class-name">RestoreShp</span><span class="token punctuation">(</span><span class="token builtin">object</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">,</span> outpath<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">file</span>
+        self<span class="token punctuation">.</span>outpath <span class="token operator">=</span> outpath
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>outpath <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>outpath <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>self<span class="token punctuation">.</span>outpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>self<span class="token punctuation">.</span>outpath<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span> <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">'File does not exist'</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>dbffile <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.dbf'</span>
+
+        self<span class="token punctuation">.</span>outfile <span class="token operator">=</span> <span class="token punctuation">[</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>self<span class="token punctuation">.</span>outpath<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'_restore.shp'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                        os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>self<span class="token punctuation">.</span>outpath<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'_restore.dbf'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                        os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>self<span class="token punctuation">.</span>outpath<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'_restore.shx'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>copyfile
+    <span class="token decorator annotation punctuation">@property</span>
+    <span class="token keyword">def</span> <span class="token function">copyfile</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 读取shp文件</span>
+        shutil<span class="token punctuation">.</span>copyfile<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>outfile<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        shutil<span class="token punctuation">.</span>copyfile<span class="token punctuation">(</span>self<span class="token punctuation">.</span>dbffile<span class="token punctuation">,</span> self<span class="token punctuation">.</span>outfile<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        shutil<span class="token punctuation">.</span>copyfile<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.shx'</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>outfile<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Copy the initial file to the output directory'</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_shp_shape_records</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            <span class="token comment"># First read the geometry data and attribute data of the original file, and return the number of geometric data</span>
+                self<span class="token punctuation">.</span>shx <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"%s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>self<span class="token punctuation">.</span>outfile<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"rb"</span><span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>shx<span class="token punctuation">.</span>seek<span class="token punctuation">(</span><span class="token number">24</span><span class="token punctuation">)</span>
+                shxRecordLength <span class="token operator">=</span> <span class="token punctuation">(</span>unpack<span class="token punctuation">(</span><span class="token string">"&gt;i"</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>shx<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">100</span>
+                self<span class="token punctuation">.</span>numShapes <span class="token operator">=</span> shxRecordLength <span class="token operator">//</span> <span class="token number">8</span>
+                <span class="token keyword">return</span> self<span class="token punctuation">.</span>numShapes
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+    <span class="token keyword">def</span> <span class="token function">get_dbf_shape_records</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># db = dbf.Dbf(self.dbffile)</span>
+        <span class="token keyword">with</span> dbf<span class="token punctuation">.</span>Table<span class="token punctuation">(</span>self<span class="token punctuation">.</span>outfile<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> codepage<span class="token operator">=</span><span class="token string">'utf8'</span><span class="token punctuation">,</span> default_data_types<span class="token operator">=</span><span class="token string">'enhanced'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> table<span class="token punctuation">:</span>
+            <span class="token keyword">pass</span>
+        <span class="token keyword">return</span> table
+    <span class="token keyword">def</span> <span class="token function">restore_shp</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment">#  Number of records read from shp file</span>
+
+        shp_numrecords <span class="token operator">=</span> self<span class="token punctuation">.</span>get_shp_shape_records<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment">#  Number of records read from dbf file</span>
+        table <span class="token operator">=</span> self<span class="token punctuation">.</span>get_dbf_shape_records<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        dbf_numrecords <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>table<span class="token punctuation">)</span>
+        titles <span class="token operator">=</span> dbf<span class="token punctuation">.</span>get_fields<span class="token punctuation">(</span>self<span class="token punctuation">.</span>outfile<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+        <span class="token comment"># Check whether the number of shp and dbf records is equal</span>
+        <span class="token keyword">if</span> shp_numrecords <span class="token operator">!=</span> dbf_numrecords<span class="token punctuation">:</span>
+            num <span class="token operator">=</span> shp_numrecords <span class="token operator">-</span> dbf_numrecords
+            <span class="token keyword">if</span> num <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'The shp file has {} more records than the dbf file'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    table<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>mode<span class="token operator">=</span>dbf<span class="token punctuation">.</span>READ_WRITE<span class="token punctuation">)</span>
+                    table<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                table<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'The dbf file has {} more records than the shp file'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token builtin">abs</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                table<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>mode<span class="token operator">=</span>dbf<span class="token punctuation">.</span>READ_WRITE<span class="token punctuation">)</span>
+                <span class="token keyword">for</span> record <span class="token keyword">in</span> table<span class="token punctuation">[</span>shp_numrecords<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                    dbf<span class="token punctuation">.</span>delete<span class="token punctuation">(</span>record<span class="token punctuation">)</span>
+                table<span class="token punctuation">.</span>pack<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'Please enter the path of the shp file: '</span><span class="token punctuation">)</span>
+    outpath <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'Please enter the path of the output file: '</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span> <span class="token punctuation">:</span>
+        record_num <span class="token operator">=</span> RestoreShp<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span> outpath<span class="token punctuation">)</span><span class="token punctuation">.</span>restore_shp<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'complete'</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'File does not exist'</span><span class="token punctuation">)</span>
+    <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>此外，这个脚本只处理了记录数量不一致的问题。如果Shapefile有其他类型的错误，例如几何数据或属性数据的格式错误，这个脚本可能无法修复。</p>
 <p>开源代码地址在：</p>
 <p><a class="link" target="_blank" rel="noopener" href="https://github.com/ytkz11/RestoreShp">https://github.com/ytkz11/RestoreShp<i class="fas fa-external-link-alt"></i></a></p>
 <p>如果对你有帮助，请点一个star!</p>
