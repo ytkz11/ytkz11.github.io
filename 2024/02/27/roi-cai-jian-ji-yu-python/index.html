@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            ROI裁剪--基于python |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">ROI裁剪--基于python</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-02-27 22:00:10</span>
+        <span class="mobile">2024-02-27 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-02-27 16:48:53</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>从一个大的 TIFF 图像文件中裁剪出一个小的区域，并将该区域保存为新的 TIFF 文件。这个过程通常被称为 “region of interest” (ROI) 裁剪。</p>
+<p>在arcgis可以实现这个功能，但是如何使用代码去实现？</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240227151152418.png" alt="image-20240227151152418"></p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>代码短，实现了ROI裁剪影像。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> tqdm <span class="token keyword">import</span> tqdm
+
+<span class="token keyword">def</span> <span class="token function">saveTif</span><span class="token punctuation">(</span>data<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> band_num<span class="token punctuation">,</span> driver<span class="token punctuation">,</span> proj<span class="token punctuation">,</span> geoTransform<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''
+    @todo 保存tif文件
+
+    @param data: 数据
+    @param cols: 列
+    @param rows: 行
+    @param driver: 驱动
+    @param proj: 坐标系
+    @param geoTransform: 坐标转换
+    @param filename: 文件名
+    @return:
+    '''</span>
+
+    outDs <span class="token operator">=</span> driver<span class="token punctuation">.</span>Create<span class="token punctuation">(</span>filename<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> band_num<span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GDT_UInt16<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> band_num <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>band_num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            outBand <span class="token operator">=</span> outDs<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            outBand<span class="token punctuation">.</span>WriteArray<span class="token punctuation">(</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+            outBand<span class="token punctuation">.</span>FlushCache<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            outBand<span class="token punctuation">.</span>SetNoDataValue<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+
+        outBand <span class="token operator">=</span> outDs<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        outBand<span class="token punctuation">.</span>WriteArray<span class="token punctuation">(</span>data<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        outBand<span class="token punctuation">.</span>FlushCache<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        outBand<span class="token punctuation">.</span>SetNoDataValue<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    outDs<span class="token punctuation">.</span>SetProjection<span class="token punctuation">(</span>proj<span class="token punctuation">)</span>
+    outDs<span class="token punctuation">.</span>SetGeoTransform<span class="token punctuation">(</span>geoTransform<span class="token punctuation">)</span>
+    outBand <span class="token operator">=</span> <span class="token boolean">None</span>
+    outDs <span class="token operator">=</span> <span class="token boolean">None</span>
+<span class="token keyword">class</span> <span class="token class-name">ClipTif</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> tiffile<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>tiffile <span class="token operator">=</span> tiffile
+    <span class="token keyword">def</span> <span class="token function">roi_clip</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> roi<span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">,</span> outpath <span class="token operator">=</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>self<span class="token punctuation">.</span>tiffile<span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+        data <span class="token operator">=</span> ds<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        transform <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        proj <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetProjection<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        originX <span class="token operator">=</span> transform<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        originY <span class="token operator">=</span> transform<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+        pixelWidth <span class="token operator">=</span> transform<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+        pixelHeight <span class="token operator">=</span> transform<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span>
+
+        cols <span class="token operator">=</span> ds<span class="token punctuation">.</span>RasterXSize  <span class="token comment"># 列数</span>
+        rows <span class="token operator">=</span> ds<span class="token punctuation">.</span>RasterYSize  <span class="token comment"># 行数</span>
+        bandnum <span class="token operator">=</span> ds<span class="token punctuation">.</span>RasterCount
+        <span class="token comment"># roi = [2000, 3000, 3000, 3000]  # x1,y1,dx,dy</span>
+        <span class="token keyword">if</span> bandnum <span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">:</span>
+            temp_arr <span class="token operator">=</span> data<span class="token punctuation">[</span>roi<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span>roi<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> roi<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> roi<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>roi<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> roi<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token punctuation">]</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            temp_arr <span class="token operator">=</span> data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span>roi<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span>roi<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> roi<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> roi<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>roi<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> roi<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token punctuation">]</span>
+
+        new_transform <span class="token operator">=</span> <span class="token punctuation">(</span>originX <span class="token operator">+</span> roi<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> pixelWidth<span class="token punctuation">,</span> transform<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> transform<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> originY <span class="token operator">+</span> roi<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> pixelHeight<span class="token punctuation">,</span>
+                         transform<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">,</span> transform<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        driver <span class="token operator">=</span> gdal<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">"GTiff"</span><span class="token punctuation">)</span>
+
+        name <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>self<span class="token punctuation">.</span>tiffile<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'_'</span><span class="token operator">+</span><span class="token builtin">str</span><span class="token punctuation">(</span>roi<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'_'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>roi<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'_'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>roi<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'_'</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>roi<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'.tif'</span>
+        <span class="token keyword">if</span> outpath<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token boolean">False</span><span class="token punctuation">:</span>
+                os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            outpath <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>self<span class="token punctuation">.</span>tiffile<span class="token punctuation">)</span>
+
+        outfile <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>outpath<span class="token punctuation">,</span> name<span class="token punctuation">)</span>
+
+        <span class="token comment"># GDT_Byte = 1, GDT_UInt16 = 2, GDT_UInt32 = 4, GDT_Int32 = 5, GDT_Float32 = 6</span>
+        datatype <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>DataType
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"数据类型："</span><span class="token punctuation">,</span> datatype<span class="token punctuation">)</span>
+        saveTif<span class="token punctuation">(</span>temp_arr<span class="token punctuation">,</span> roi<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> roi<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> bandnum<span class="token punctuation">,</span> driver<span class="token punctuation">,</span> proj<span class="token punctuation">,</span> new_transform<span class="token punctuation">,</span> outfile<span class="token punctuation">,</span> datatype <span class="token operator">=</span> datatype<span class="token punctuation">)</span>
+
+        a <span class="token operator">=</span> <span class="token number">1</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+
+    tiffile <span class="token operator">=</span> <span class="token string">r'image.tif'</span>  <span class="token comment"># 影像的全路径</span>
+
+    roi <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5000</span><span class="token punctuation">,</span> <span class="token number">4000</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">]</span>
+    ClipTif<span class="token punctuation">(</span>tiffile<span class="token punctuation">)</span><span class="token punctuation">.</span>roi_clip<span class="token punctuation">(</span>roi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>以下是代码的详细解读：</p>
+<ol>
+<li>首先，定义了一个名为 <code>ClipTif</code> 的类，它接收一个 TIFF 文件路径作为初始化参数。</li>
+<li>在 <code>ClipTif</code> 类中，定义了一个名为 <code>roi_clip</code> 的方法，它接收一个 ROI 列表和一个输出路径作为参数。ROI 列表定义了裁剪区域的起始行、起始列、行数和列数。如果没有提供输出路径，那么新的 TIFF 文件将会保存在原文件的同一目录下。</li>
+<li><code>roi_clip</code> 方法首先使用 GDAL 库打开 TIFF 文件并读取其数据和元数据，包括地理变换参数和投影信息。</li>
+<li>然后，它根据提供的 ROI 列表裁剪出一个小的区域。</li>
+<li>接下来，它计算新的地理变换参数，这些参数将用于新的 TIFF 文件。</li>
+<li>然后，它创建一个新的 TIFF 文件，并将裁剪的数据保存到其中。数据的类型（例如，字节、无符号短整数、浮点数等）与原始 TIFF 文件中的数据类型相同。</li>
+<li>最后，如果你运行这个脚本（而不是导入它作为模块），那么它将会裁剪一个名为 “GF2.tif” 的 TIFF 文件中的一个区域，并将结果保存为新的 TIFF 文件。裁剪区域的参数通过 <code>roi</code> 列表提供。</li>
+</ol>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/02/28/da-ying-xiang-wei-shen-16bit-zhuan-8bit-de-fang-fa-ji-shi-xian/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">大影像位深16bit转8bit的方法及实现</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/02/20/leetcode-zhi-yi-chu-yuan-su/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">leetcode之移除元素</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

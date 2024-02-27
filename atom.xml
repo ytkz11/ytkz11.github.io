@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-02-17T03:21:50.438Z</updated>
+  <updated>2024-02-27T09:24:49.138Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,83 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>大影像位深16bit转8bit的方法及实现</title>
+    <link href="http://ytkz11@.github.io/2024/02/28/da-ying-xiang-wei-shen-16bit-zhuan-8bit-de-fang-fa-ji-shi-xian/"/>
+    <id>http://ytkz11@.github.io/2024/02/28/da-ying-xiang-wei-shen-16bit-zhuan-8bit-de-fang-fa-ji-shi-xian/</id>
+    <published>2024-02-28T14:00:10.000Z</published>
+    <updated>2024-02-27T09:24:49.138Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;位深&quot;&gt;&lt;a href=&quot;#位深&quot; class=&quot;headerlink&quot; title=&quot;位深&quot;&gt;&lt;/a&gt;位深&lt;/h1&gt;&lt;p&gt;位深（Bit</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ROI裁剪--基于python</title>
+    <link href="http://ytkz11@.github.io/2024/02/27/roi-cai-jian-ji-yu-python/"/>
+    <id>http://ytkz11@.github.io/2024/02/27/roi-cai-jian-ji-yu-python/</id>
+    <published>2024-02-27T14:00:10.000Z</published>
+    <updated>2024-02-27T08:48:53.950Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;从一个大的 TIFF 图像文件中裁剪出一个小的区域，并将该区域保存为新的 TIFF 文件。这个过程通常被称为 “region of interest” (ROI) 裁剪。&lt;/p&gt;
+&lt;p&gt;在arcgis可以实现这个功能，但是如何使用代码去实现？&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode之移除元素</title>
+    <link href="http://ytkz11@.github.io/2024/02/20/leetcode-zhi-yi-chu-yuan-su/"/>
+    <id>http://ytkz11@.github.io/2024/02/20/leetcode-zhi-yi-chu-yuan-su/</id>
+    <published>2024-02-20T14:00:10.000Z</published>
+    <updated>2024-02-20T05:26:08.327Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val</summary>
+        
+      
+    
+    
+    
+    <category term="leetcode" scheme="http://ytkz11@.github.io/categories/leetcode/"/>
+    
+    
+    <category term="leetcode" scheme="http://ytkz11@.github.io/tags/leetcode/"/>
+    
+  </entry>
   
   <entry>
     <title>RPC定位模型的背景和原理</title>
@@ -464,83 +541,6 @@
     
     
     <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何列出 Python 项目中使用的模块</title>
-    <link href="http://ytkz11@.github.io/2023/12/08/ru-he-lie-chu-python-xiang-mu-zhong-shi-yong-de-mo-kuai/"/>
-    <id>http://ytkz11@.github.io/2023/12/08/ru-he-lie-chu-python-xiang-mu-zhong-shi-yong-de-mo-kuai/</id>
-    <published>2023-12-08T15:26:58.000Z</published>
-    <updated>2024-01-31T08:50:27.409Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在项目开发中，我们有时会引入一些包，后续由于种种原因，并没有 import 到项目中。如果在部署到时候使用 pip freeze，则会将这些并未引入到包也列到 requirements 中，而实际这些包是不需要的。&lt;/p&gt;
-&lt;p&gt;pipreqs</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何列出 Python 项目中使用的模块</title>
-    <link href="http://ytkz11@.github.io/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/"/>
-    <id>http://ytkz11@.github.io/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/</id>
-    <published>2023-12-08T15:26:58.000Z</published>
-    <updated>2024-01-31T09:27:55.632Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在项目开发中，我们有时会引入一些包，后续由于种种原因，并没有 import 到项目中。如果在部署到时候使用 pip freeze，则会将这些并未引入到包也列到 requirements 中，而实际这些包是不需要的。&lt;/p&gt;
-&lt;p&gt;pipreqs</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程_不使用gdal读取tif文件</title>
-    <link href="http://ytkz11@.github.io/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/"/>
-    <id>http://ytkz11@.github.io/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/</id>
-    <published>2023-12-08T13:26:58.000Z</published>
-    <updated>2023-12-08T09:07:02.864Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;为什么要使用多个版本的python？&quot;&gt;&lt;a href=&quot;#为什么要使用多个版本的python？&quot; class=&quot;headerlink&quot; title=&quot;为什么要使用多个版本的python？&quot;&gt;&lt;/a&gt;为什么要使用多个版本的python？&lt;/h1&gt;&lt;h1</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
