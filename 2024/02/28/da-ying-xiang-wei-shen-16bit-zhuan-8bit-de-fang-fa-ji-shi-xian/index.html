@@ -9,7 +9,7 @@
     
     <title>
         
-            大影像位深16bit转8bit的方法及实现 |
+            遥感大影像位深转8bit的方法及实现 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">大影像位深16bit转8bit的方法及实现</span>
+                <span class="title-hover-animation">遥感大影像位深转8bit的方法及实现</span>
             </div>
 
             
@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-02-28 16:52:31</span>
+        <span class="pc">2024-03-01 00:04:24</span>
     </span>
     
     
@@ -402,7 +402,7 @@
     compressor <span class="token operator">=</span> ImageCompressor<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
     compressor<span class="token punctuation">.</span>process<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240227163546474.png" alt="image-20240227163546474"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403010002438.png" alt="image-20240227163546474"></p>
 <h1 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h1><p>这段代码是一个名为<code>ImageCompressor</code>的类，主要用于处理大型地理信息系统(GIS)图像数据，并将16位数据压缩为8位数据。它使用了<code>gdal</code>库来读取和写入图像，<code>numpy</code>库来处理图像数据，以及<code>tqdm</code>库来显示处理进度。以下是对这段代码主要部分的解释：</p>
 <ol>
 <li><code>__init__</code>函数：初始化函数，接收一个路径参数。</li>
