@@ -9,7 +9,7 @@
     
     <title>
         
-            分类: GDAL |
+            pycharm编码报错及解决 |
         
         remote sensing
     </title>
@@ -134,42 +134,146 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="category-container">
-        <div class="category-name">
-            <i class="fas fa-folder"></i>&nbsp;GDAL
-        </div>
-        <div class="category-post-list">
-            
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2024</span>
-                <span class="archive-year-post-count">[1]</span>
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">pycharm编码报错及解决</span>
             </div>
-            <ul class="article-list">
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-03-01 22:00:10</span>
+        <span class="mobile">2024-03-01 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-03-01 09:47:30</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2024/02/04/zai-visual-studio-zhong-pei-zhi-gdal-de-ji-ben-bu-zou/"
-                        >在Visual Studio中配置GDAL的基本步骤</a>
-                        <span class="article-date">02-04</span>
+                    <li>
+                        <a href="/categories/python/">python</a>&nbsp;
                     </li>
                 
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h1><p>UnicodeDecodeError: ‘utf-8’ codec can’t decode bytes in position 1022-1023: unexpected end of data</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403010946197.png" alt="image-20240301094129969"></p>
+<p><strong>报错信息内容翻译如下所示</strong>：</p>
+<p>编码解码错误:“utf-8”编解码器无法解码位置1022-1023中的字节：数据意外结束</p>
+<h1 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h1><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403010946462.png" alt="image-20240301094338683"></p>
+<p>点击报错的地方，跳转定位到报错的代码。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403010946151.png" alt="image-20240301094613854"></p>
+<p>把这一行代码改成</p>
+<pre class="line-numbers language-none"><code class="language-none">r = r.decode('utf-8','ignore')<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403010945486.png" alt="image-20240301094500125"></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/python/">#python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/03/06/shi-liang-cai-jian-shi-liang/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">矢量裁剪矢量</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/02/28/da-ying-xiang-wei-shen-16bit-zhuan-8bit-de-fang-fa-ji-shi-xian/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">遥感大影像位深转8bit的方法及实现</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
         </div>
-    </div>
-    <div class="category-paginator">
-        <div class="paginator">
-    
 
-    
-</div>
-
+        
     </div>
 </div>
 
@@ -206,6 +310,19 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -279,6 +396,12 @@
 
 
 <div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
     
 </div>
 

@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-02-29T16:04:24.992Z</updated>
+  <updated>2024-03-06T08:29:16.744Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>矢量裁剪矢量</title>
+    <link href="http://ytkz11@.github.io/2024/03/06/shi-liang-cai-jian-shi-liang/"/>
+    <id>http://ytkz11@.github.io/2024/03/06/shi-liang-cai-jian-shi-liang/</id>
+    <published>2024-03-06T14:00:10.000Z</published>
+    <updated>2024-03-06T08:29:16.744Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在地理信息系统（GIS）中，根据一个矢量范围去裁剪另一个矢量范围是一种常见的操作。这个操作的基本步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;加载矢量数据&lt;/strong&gt;：首先，你需要加载你的矢量数据。在Python中，你可以使用GDAL/OGR库来加载矢量数据。</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pycharm编码报错及解决</title>
+    <link href="http://ytkz11@.github.io/2024/03/01/pycharm-bian-ma-bao-cuo-ji-jie-jue/"/>
+    <id>http://ytkz11@.github.io/2024/03/01/pycharm-bian-ma-bao-cuo-ji-jie-jue/</id>
+    <published>2024-03-01T14:00:10.000Z</published>
+    <updated>2024-03-01T01:47:30.006Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;报错&quot;&gt;&lt;a href=&quot;#报错&quot; class=&quot;headerlink&quot; title=&quot;报错&quot;&gt;&lt;/a&gt;报错&lt;/h1&gt;&lt;p&gt;UnicodeDecodeError: ‘utf-8’ codec can’t decode bytes in position</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>遥感大影像位深转8bit的方法及实现</title>
@@ -177,6 +229,31 @@
   </entry>
   
   <entry>
+    <title>面矢量简化--基于python</title>
+    <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/"/>
+    <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/</id>
+    <published>2024-02-04T14:00:10.000Z</published>
+    <updated>2024-02-06T07:24:50.352Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;面矢量简化&quot;&gt;&lt;a href=&quot;#面矢量简化&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>面矢量简化--基于cpp</title>
     <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/"/>
     <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/</id>
@@ -202,31 +279,6 @@
     <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
     <category term="c++" scheme="http://ytkz11@.github.io/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面矢量简化--基于python</title>
-    <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/"/>
-    <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/</id>
-    <published>2024-02-04T14:00:10.000Z</published>
-    <updated>2024-02-06T07:24:50.352Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;面矢量简化&quot;&gt;&lt;a href=&quot;#面矢量简化&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
   </entry>
   
@@ -489,58 +541,6 @@
     <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pyside6将图片资源转为py格式</title>
-    <link href="http://ytkz11@.github.io/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/"/>
-    <id>http://ytkz11@.github.io/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/</id>
-    <published>2023-12-14T10:26:58.000Z</published>
-    <updated>2023-12-21T02:12:42.461Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;需求&quot;&gt;&lt;a href=&quot;#需求&quot; class=&quot;headerlink&quot; title=&quot;需求&quot;&gt;&lt;/a&gt;需求&lt;/h1&gt;&lt;p&gt;pyside6将图片资源转为py格式， 是为了打包为exe的时候不丢失图片文件&lt;/p&gt;
-&lt;h1 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="pyside6" scheme="http://ytkz11@.github.io/categories/pyside6/"/>
-    
-    
-    <category term="pyside6" scheme="http://ytkz11@.github.io/tags/pyside6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GIS格式和地理空间文件扩展名的汇总</title>
-    <link href="http://ytkz11@.github.io/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/"/>
-    <id>http://ytkz11@.github.io/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/</id>
-    <published>2023-12-10T14:33:58.000Z</published>
-    <updated>2023-12-11T09:05:49.395Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;某些地理空间数据格式很常见。但有些并不常见。笔者汇总 GIS 文件格式：&lt;/p&gt;
-&lt;h1 id=&quot;矢量-GIS-文件格式&quot;&gt;&lt;a href=&quot;#矢量-GIS-文件格式&quot; class=&quot;headerlink&quot; title=&quot;矢量 GIS 文件格式&quot;&gt;&lt;/a&gt;矢量 GIS</summary>
-        
-      
-    
-    
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/categories/GIS/"/>
-    
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
     
   </entry>
   
