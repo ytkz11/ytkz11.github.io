@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-03-06 16:29:16</span>
+        <span class="pc">2024-03-08 14:11:08</span>
     </span>
     
     
@@ -176,6 +176,10 @@
                 
                     <li>
                         <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
                     </li>
                 
             </ul>
@@ -188,6 +192,10 @@
                 
                     <li>
                         <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
                     </li>
                 
             </ul>
@@ -249,7 +257,7 @@ layer_def <span class="token operator">=</span> target_layer<span class="token p
             output_layer<span class="token punctuation">.</span>CreateFeature<span class="token punctuation">(</span>output_feature<span class="token punctuation">)</span>
             output_feature<span class="token punctuation">.</span>Destroy<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="改写代码"><a href="#改写代码" class="headerlink" title="改写代码"></a>改写代码</h1><p>进一步把以上代码改写为类，方便使用和维护。</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240306162111655.png" alt=""></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403081409287.png" alt=""></p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> ogr
 <span class="token comment"># 使用gdal ， 根据矢量范围去裁剪另一个矢量范围</span>
 
@@ -299,12 +307,15 @@ layer_def <span class="token operator">=</span> target_layer<span class="token p
     out_shp_path <span class="token operator">=</span> <span class="token string">r'部分范围clip.shp'</span>
     A <span class="token operator">=</span> ShpClipShp<span class="token punctuation">(</span>shp_path<span class="token punctuation">,</span> clip_shp_path<span class="token punctuation">,</span> out_shp_path<span class="token punctuation">)</span>
     a <span class="token operator">=</span> A<span class="token punctuation">.</span>shp_clip_shp<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="结果示例"><a href="#结果示例" class="headerlink" title="结果示例"></a>结果示例</h1><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403081409632.png" alt="image-20240308140855907"></p>
 <h1 id="打包"><a href="#打包" class="headerlink" title="打包"></a>打包</h1><p>以上代码是使用python编写。改写输入参数形式。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">shp_path <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'待裁剪的矢量：'</span><span class="token punctuation">)</span>
 clip_shp_path <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'裁剪范围的矢量：'</span><span class="token punctuation">)</span>
 out_shp_path <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">'保存的矢量：'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>使用以下命令可以将程序打包为可执行文件，方便使用。</p>
 <pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pyinstaller -i favicon.png -F shp_clip_shp.py <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>shp_clip_shp.exe下载地址</p>
+<p> <a class="link" target="_blank" rel="noopener" href="https://www.alipan.com/s/XNwdfmPp5Ec">https://www.alipan.com/s/XNwdfmPp5Ec<i class="fas fa-external-link-alt"></i></a> 提取码: z9x3 </p>
 
             </div>
 
@@ -315,6 +326,10 @@ out_shp_path <span class="token operator">=</span> <span class="token builtin">i
                     
                         <li class="tag-item">
                             <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%9F%A2%E9%87%8F/">#矢量</a>&nbsp;
                         </li>
                     
                 </ul>

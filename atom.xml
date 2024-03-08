@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-03-06T08:29:16.744Z</updated>
+  <updated>2024-03-08T06:11:08.632Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ytkz11@.github.io/2024/03/06/shi-liang-cai-jian-shi-liang/"/>
     <id>http://ytkz11@.github.io/2024/03/06/shi-liang-cai-jian-shi-liang/</id>
     <published>2024-03-06T14:00:10.000Z</published>
-    <updated>2024-03-06T08:29:16.744Z</updated>
+    <updated>2024-03-08T06:11:08.632Z</updated>
     
     
       
@@ -38,8 +38,12 @@
     
     <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
     
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
   </entry>
   
@@ -229,31 +233,6 @@
   </entry>
   
   <entry>
-    <title>面矢量简化--基于python</title>
-    <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/"/>
-    <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/</id>
-    <published>2024-02-04T14:00:10.000Z</published>
-    <updated>2024-02-06T07:24:50.352Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;面矢量简化&quot;&gt;&lt;a href=&quot;#面矢量简化&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>面矢量简化--基于cpp</title>
     <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/"/>
     <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/</id>
@@ -279,6 +258,31 @@
     <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
     <category term="c++" scheme="http://ytkz11@.github.io/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面矢量简化--基于python</title>
+    <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/"/>
+    <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/</id>
+    <published>2024-02-04T14:00:10.000Z</published>
+    <updated>2024-02-06T07:24:50.352Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;面矢量简化&quot;&gt;&lt;a href=&quot;#面矢量简化&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
   </entry>
   
