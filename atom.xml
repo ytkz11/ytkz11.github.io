@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-03-08T06:11:08.632Z</updated>
+  <updated>2024-04-02T01:53:34.091Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,430 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】GEE下载sentinel2数据遇到的bug及解决</title>
+    <link href="http://ytkz11@.github.io/2024/04/02/dai-ma-gee-xia-zai-sentinel2-shu-ju/"/>
+    <id>http://ytkz11@.github.io/2024/04/02/dai-ma-gee-xia-zai-sentinel2-shu-ju/</id>
+    <published>2024-04-02T14:00:10.000Z</published>
+    <updated>2024-04-02T01:53:34.091Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Google earth engine（GEE）是一个非常好用的数据下载的工具。&lt;/p&gt;
+&lt;p&gt;近日在GEE下载sentinel2影像，遇到问题，现记录并解决改问题。&lt;/p&gt;
+&lt;h2 id=&quot;数据下载脚本&quot;&gt;&lt;a href=&quot;#数据下载脚本&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】DEM生成等高线</title>
+    <link href="http://ytkz11@.github.io/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/"/>
+    <id>http://ytkz11@.github.io/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/</id>
+    <published>2024-03-29T14:00:10.000Z</published>
+    <updated>2024-03-29T08:32:15.232Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本质是输入为高程asc文件，输出为shp文件。&lt;/p&gt;
+&lt;p&gt;直接上代码：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;
+
+from osgeo import gdal,</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】ERS SAR 原始数据提取和成像</title>
+    <link href="http://ytkz11@.github.io/2024/03/29/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/"/>
+    <id>http://ytkz11@.github.io/2024/03/29/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/</id>
+    <published>2024-03-29T14:00:10.000Z</published>
+    <updated>2024-04-07T02:31:24.472Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】水深测量数据可视化及转格式</title>
+    <link href="http://ytkz11@.github.io/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/"/>
+    <id>http://ytkz11@.github.io/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/</id>
+    <published>2024-03-29T14:00:10.000Z</published>
+    <updated>2024-04-01T01:47:03.167Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。&lt;/p&gt;
+&lt;p&gt;这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒效应可以用</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【python】进入python环境的方法</title>
+    <link href="http://ytkz11@.github.io/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/"/>
+    <id>http://ytkz11@.github.io/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/</id>
+    <published>2024-03-28T14:00:10.000Z</published>
+    <updated>2024-03-28T09:02:44.691Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;人在江湖飘，一个电脑里的python版本可能不止一个。比如说我，有两个不一样的python版本。&lt;/p&gt;
+&lt;p&gt;首先都要把python的安装路径添加到系统的环境变量里。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>神经网络拟合真实世界的过程！</title>
+    <link href="http://ytkz11@.github.io/2024/03/28/shen-du-xue-xi-shen-jing-wang-luo-shi-tong-guo-shi-me-lai-ni-he-zhen-shi-shi-jie/"/>
+    <id>http://ytkz11@.github.io/2024/03/28/shen-du-xue-xi-shen-jing-wang-luo-shi-tong-guo-shi-me-lai-ni-he-zhen-shi-shi-jie/</id>
+    <published>2024-03-28T14:00:10.000Z</published>
+    <updated>2024-04-07T05:08:23.976Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;神经网络是一种强大的计算模型，它能够学习并拟合复杂的数据模式，从图像和文本到音频和更多。神经网络通过以下步骤来拟合现实世界的数据：&lt;/p&gt;
+&lt;p&gt;1.数字化。把真实物理世界的内容用数值来表示。&lt;/p&gt;
+&lt;p&gt;2.定义网络结构。通过模拟神经元的形式，构造神经网络。如何定义一个</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】双重循环语句实现分块处理</title>
+    <link href="http://ytkz11@.github.io/2024/03/25/dai-ma-shuang-chong-xun-huan-yu-ju-shi-xian-fen-kuai-chu-li/"/>
+    <id>http://ytkz11@.github.io/2024/03/25/dai-ma-shuang-chong-xun-huan-yu-ju-shi-xian-fen-kuai-chu-li/</id>
+    <published>2024-03-25T14:00:10.000Z</published>
+    <updated>2024-03-27T09:25:33.773Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;遥感影像通常具有极高的分辨率和大量的数据量，这就使得全景处理遥感影像成为一项极具挑战的任务。首要的问题是，大规模的遥感影像可能会超过硬件设备，特别是GPU的内存容量。其次，处理大规模遥感影像的计算复杂度非常高，可能会导致处理速度缓慢，效率低下。&lt;/p&gt;
+&lt;p&gt;在具体的应用中</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】根据经纬度从数字高程模型（DEM）文件获取高度</title>
+    <link href="http://ytkz11@.github.io/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/"/>
+    <id>http://ytkz11@.github.io/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/</id>
+    <published>2024-03-25T14:00:10.000Z</published>
+    <updated>2024-03-25T01:11:00.792Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在地理信息系统（GIS）和遥感中，数字高程模型（Digital Elevation</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】根据矢量裁剪NetCDF 时间序列数据</title>
+    <link href="http://ytkz11@.github.io/2024/03/18/dai-ma-gen-ju-shi-liang-cai-jian-netcdf-shi-jian-xu-lie-shu-ju/"/>
+    <id>http://ytkz11@.github.io/2024/03/18/dai-ma-gen-ju-shi-liang-cai-jian-netcdf-shi-jian-xu-lie-shu-ju/</id>
+    <published>2024-03-18T14:00:10.000Z</published>
+    <updated>2024-03-20T08:33:17.096Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前写了&lt;/p&gt;
+&lt;p&gt;1.矢量裁剪栅格</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】XYZ格式地形(水深)数据转换为ASCIIGrid格式</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/</id>
+    <published>2024-03-17T14:00:10.000Z</published>
+    <updated>2024-03-29T07:06:26.145Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。&lt;/p&gt;
+&lt;p&gt;这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒效应可以用</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】多个shapefile面合并</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</id>
+    <published>2024-03-17T14:00:10.000Z</published>
+    <updated>2024-03-19T09:32:51.170Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是GIS面合并&quot;&gt;&lt;a href=&quot;#什么是GIS面合并&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】多个shapefile面合并</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/</id>
+    <published>2024-03-17T14:00:10.000Z</published>
+    <updated>2024-03-20T08:38:02.833Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;import numpy as np
+from osgeo import gdal
+from osgeo import</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
+    <published>2024-03-17T14:00:10.000Z</published>
+    <updated>2024-03-20T08:35:26.142Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】给定起点位置、距离及姿态角，求另一点位置</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/</id>
+    <published>2024-03-17T14:00:10.000Z</published>
+    <updated>2024-03-27T09:21:44.613Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;如题，这是现实中遇到的问题的简化版。&lt;/p&gt;
+&lt;p&gt;已知一个点的经纬度和离另一个点的球面距离，和无人机飞行时刻姿态角，求另一个点的经纬度。&lt;/p&gt;
+&lt;h2 id=&quot;姿态角&quot;&gt;&lt;a href=&quot;#姿态角&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】遥感影像匀色</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/</id>
+    <published>2024-03-17T14:00:10.000Z</published>
+    <updated>2024-03-27T09:46:19.105Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这里实现的是遥感影像匀色的功能——直方图匹配。&lt;/p&gt;
+&lt;p&gt;直方图匹配是一种用于图像处理的技术，它可以用来调整一幅图像的颜色或灰度分布，使其与另一幅图像的颜色或灰度分布相匹配。这种技术常常用于图像增强，例如改善图像的对比度或者进行颜色校正。&lt;/p&gt;
+&lt;p&gt;首先，让我们解释</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【深度学习】从LeNet学神经网络搭建</title>
+    <link href="http://ytkz11@.github.io/2024/03/13/shen-du-xue-xi-cong-lenet-kan-shen-jing-wang-luo-da-jian/"/>
+    <id>http://ytkz11@.github.io/2024/03/13/shen-du-xue-xi-cong-lenet-kan-shen-jing-wang-luo-da-jian/</id>
+    <published>2024-03-13T14:00:10.000Z</published>
+    <updated>2024-04-07T05:28:44.281Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;LeNet是&lt;strong&gt;最早的卷积神经网络之一&lt;/strong&gt;，其被提出用于识别手写数字和机器印刷字符。 1998年，Yann</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>矢量裁剪矢量</title>
@@ -121,430 +545,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode之移除元素</title>
-    <link href="http://ytkz11@.github.io/2024/02/20/leetcode-zhi-yi-chu-yuan-su/"/>
-    <id>http://ytkz11@.github.io/2024/02/20/leetcode-zhi-yi-chu-yuan-su/</id>
-    <published>2024-02-20T14:00:10.000Z</published>
-    <updated>2024-02-20T05:26:08.327Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;题目&quot;&gt;&lt;a href=&quot;#题目&quot; class=&quot;headerlink&quot; title=&quot;题目&quot;&gt;&lt;/a&gt;题目&lt;/h3&gt;&lt;p&gt;给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val</summary>
-        
-      
-    
-    
-    
-    <category term="leetcode" scheme="http://ytkz11@.github.io/categories/leetcode/"/>
-    
-    
-    <category term="leetcode" scheme="http://ytkz11@.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RPC定位模型的背景和原理</title>
-    <link href="http://ytkz11@.github.io/2024/02/16/rpc-ding-wei-mo-xing-de-bei-jing-he-yuan-li/"/>
-    <id>http://ytkz11@.github.io/2024/02/16/rpc-ding-wei-mo-xing-de-bei-jing-he-yuan-li/</id>
-    <published>2024-02-16T14:10:10.000Z</published>
-    <updated>2024-02-17T03:21:50.438Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;概念区分&quot;&gt;&lt;a href=&quot;#概念区分&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>github star 8k：将copilot转为gpt4（学生党免费使用gpt的教程）</title>
-    <link href="http://ytkz11@.github.io/2024/02/05/github-star-8k-jiang-copilot-zhuan-wei-gpt4-xue-sheng-dang-mian-fei-shi-yong-gpt-de-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/02/05/github-star-8k-jiang-copilot-zhuan-wei-gpt4-xue-sheng-dang-mian-fei-shi-yong-gpt-de-jiao-cheng/</id>
-    <published>2024-02-05T14:00:10.000Z</published>
-    <updated>2024-02-05T14:22:52.714Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在Visual Studio中配置GDAL的基本步骤</title>
-    <link href="http://ytkz11@.github.io/2024/02/04/zai-visual-studio-zhong-pei-zhi-gdal-de-ji-ben-bu-zou/"/>
-    <id>http://ytkz11@.github.io/2024/02/04/zai-visual-studio-zhong-pei-zhi-gdal-de-ji-ben-bu-zou/</id>
-    <published>2024-02-04T14:00:10.000Z</published>
-    <updated>2024-02-05T03:31:59.661Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;以下是在Visual</summary>
-        
-      
-    
-    
-    
-    <category term="GDAL" scheme="http://ytkz11@.github.io/categories/GDAL/"/>
-    
-    <category term="cpp" scheme="http://ytkz11@.github.io/categories/GDAL/cpp/"/>
-    
-    <category term="vs" scheme="http://ytkz11@.github.io/categories/GDAL/cpp/vs/"/>
-    
-    
-    <category term="GDAL" scheme="http://ytkz11@.github.io/tags/GDAL/"/>
-    
-    <category term="cpp" scheme="http://ytkz11@.github.io/tags/cpp/"/>
-    
-    <category term="vs" scheme="http://ytkz11@.github.io/tags/vs/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面矢量简化--基于cpp</title>
-    <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/"/>
-    <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/</id>
-    <published>2024-02-04T14:00:10.000Z</published>
-    <updated>2024-02-17T03:21:50.439Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;使用GDAL库来简化Shapefile多边形特征&quot;&gt;&lt;a href=&quot;#使用GDAL库来简化Shapefile多边形特征&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    <category term="c++" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/c/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-    <category term="c++" scheme="http://ytkz11@.github.io/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>面矢量简化--基于python</title>
-    <link href="http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/"/>
-    <id>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/</id>
-    <published>2024-02-04T14:00:10.000Z</published>
-    <updated>2024-02-06T07:24:50.352Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;面矢量简化&quot;&gt;&lt;a href=&quot;#面矢量简化&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Shapefile 与 GeoJSON 之间的转换：Python 实践</title>
-    <link href="http://ytkz11@.github.io/2024/02/03/shapefile-yu-geojson-zhi-jian-de-zhuan-huan-python-shi-jian/"/>
-    <id>http://ytkz11@.github.io/2024/02/03/shapefile-yu-geojson-zhi-jian-de-zhuan-huan-python-shi-jian/</id>
-    <published>2024-02-03T14:00:10.000Z</published>
-    <updated>2024-02-03T06:30:32.117Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240203142735158.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Leaflet.js 在 Web 应用中可视化 GeoJSON 数据</title>
-    <link href="http://ytkz11@.github.io/2024/02/02/shi-yong-leaflet.js-zai-web-ying-yong-zhong-ke-shi-hua-geojson-shu-ju/"/>
-    <id>http://ytkz11@.github.io/2024/02/02/shi-yong-leaflet.js-zai-web-ying-yong-zhong-ke-shi-hua-geojson-shu-ju/</id>
-    <published>2024-02-02T14:00:10.000Z</published>
-    <updated>2024-02-02T08:06:35.050Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;在本篇博客中，我们将带领您了解如何创建一个允许用户在地图上可视化 GeoJSON 数据的 web</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>预处理之归一化和标准化</title>
-    <link href="http://ytkz11@.github.io/2024/01/26/bu-yao-ba-gui-yi-hua-he-biao-zhun-hua-hun-wei-yi-tan/"/>
-    <id>http://ytkz11@.github.io/2024/01/26/bu-yao-ba-gui-yi-hua-he-biao-zhun-hua-hun-wei-yi-tan/</id>
-    <published>2024-01-26T13:00:10.000Z</published>
-    <updated>2024-01-31T09:32:37.610Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;公式&quot;&gt;&lt;a href=&quot;#公式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>矢量文件的读取和写入</title>
-    <link href="http://ytkz11@.github.io/2024/01/25/shi-liang-wen-jian-de-du-qu-he-xie-ru/"/>
-    <id>http://ytkz11@.github.io/2024/01/25/shi-liang-wen-jian-de-du-qu-he-xie-ru/</id>
-    <published>2024-01-25T14:00:10.000Z</published>
-    <updated>2024-01-31T09:40:16.931Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;矢量的本质是什么&quot;&gt;&lt;a href=&quot;#矢量的本质是什么&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>线矢量分割面矢量</title>
-    <link href="http://ytkz11@.github.io/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/"/>
-    <id>http://ytkz11@.github.io/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/</id>
-    <published>2024-01-15T13:00:10.000Z</published>
-    <updated>2024-01-25T06:25:18.945Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近遇到一个问题：怎么用线矢量去切割面矢量。这个功能看似很简单，其实还是要一定的功夫才能完成它。所以也才有了这篇技术文章的记录。&lt;/p&gt;
-&lt;p&gt;目的：使用线段分割多边形，并将分割后的多边形保存为Shapefile文件&lt;/p&gt;
-&lt;h1 id=&quot;代码&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>合并单个文件内多个重叠的多边形面矢量</title>
-    <link href="http://ytkz11@.github.io/2024/01/10/he-bing-dan-ge-wen-jian-nei-duo-ge-chong-die-de-duo-bian-xing-mian-shi-liang/"/>
-    <id>http://ytkz11@.github.io/2024/01/10/he-bing-dan-ge-wen-jian-nei-duo-ge-chong-die-de-duo-bian-xing-mian-shi-liang/</id>
-    <published>2024-01-10T13:00:10.000Z</published>
-    <updated>2024-02-02T08:03:26.288Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;h1 id=&quot;传统操作&quot;&gt;&lt;a href=&quot;#传统操作&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>shp文件在arcgis打开失败及其修复</title>
-    <link href="http://ytkz11@.github.io/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/"/>
-    <id>http://ytkz11@.github.io/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/</id>
-    <published>2024-01-03T10:00:10.000Z</published>
-    <updated>2024-02-07T03:32:28.472Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编程_矢量转为栅格</title>
-    <link href="http://ytkz11@.github.io/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/"/>
-    <id>http://ytkz11@.github.io/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/</id>
-    <published>2023-12-26T10:26:58.000Z</published>
-    <updated>2023-12-28T00:48:42.496Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312011415129.png&quot; alt=&quot;image-20231201135533280&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;需求&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何将tif格式的文件由30m重采样到100m?</title>
-    <link href="http://ytkz11@.github.io/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/"/>
-    <id>http://ytkz11@.github.io/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/</id>
-    <published>2023-12-22T14:26:58.000Z</published>
-    <updated>2024-01-31T08:45:19.017Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在知乎上看到这个问题，记录一下解决的过程。&lt;/p&gt;
-&lt;h1 id=&quot;命令行的方式&quot;&gt;&lt;a href=&quot;#命令行的方式&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>矢量坐标转换</title>
-    <link href="http://ytkz11@.github.io/2023/12/22/shi-liang-zuo-biao-zhuan-huan/"/>
-    <id>http://ytkz11@.github.io/2023/12/22/shi-liang-zuo-biao-zhuan-huan/</id>
-    <published>2023-12-22T10:26:58.000Z</published>
-    <updated>2023-12-26T01:00:06.941Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202312222030776.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/"/>
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%9F%A2%E9%87%8F/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   

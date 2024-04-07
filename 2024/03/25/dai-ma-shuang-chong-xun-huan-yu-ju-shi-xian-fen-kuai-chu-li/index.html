@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            【代码】双重循环语句实现分块处理 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【代码】双重循环语句实现分块处理</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-03-25 22:00:10</span>
+        <span class="mobile">2024-03-25 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-03-27 17:25:33</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>遥感影像通常具有极高的分辨率和大量的数据量，这就使得全景处理遥感影像成为一项极具挑战的任务。首要的问题是，大规模的遥感影像可能会超过硬件设备，特别是GPU的内存容量。其次，处理大规模遥感影像的计算复杂度非常高，可能会导致处理速度缓慢，效率低下。</p>
+<p>在具体的应用中，例如深度学习的训练过程，我们通常需要将遥感影像切割成较小的样本，如512x512像素的图像块，以适应GPU的内存限制。这样的操作不仅可以有效地避免内存溢出，而且可以提高数据处理的速度，因为小图像块的处理速度通常比大图像快。</p>
+<p>为了实现这样的分块处理，我们通常会采用双重循环的方式。首先，外层循环负责遍历图像的行，然后内层循环遍历每一行的列。这样，我们就可以逐块地访问和处理图像，而不需要一次性加载整个图像到内存中。这种方法既节省了硬件资源，又提高了数据处理的效率，对于处理大规模的遥感影像具有非常重要的意义。</p>
+<h2 id="代码解析"><a href="#代码解析" class="headerlink" title="代码解析"></a>代码解析</h2><p>分块处理的核心部分如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 遍历输入文件的每一个块</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> xsize<span class="token punctuation">,</span> block_ysize<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> x <span class="token operator">+</span> block_xsize <span class="token operator">&lt;</span> xsize<span class="token punctuation">:</span>
+        cols <span class="token operator">=</span> block_xsize
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        cols <span class="token operator">=</span> xsize <span class="token operator">-</span> x
+    <span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> ysize<span class="token punctuation">,</span> block_ysize<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> y <span class="token operator">+</span> block_ysize <span class="token operator">&lt;</span> ysize<span class="token punctuation">:</span>
+            rows <span class="token operator">=</span> block_ysize
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            rows <span class="token operator">=</span> ysize <span class="token operator">-</span> y
+        <span class="token comment"># 读取块的数据</span>
+        data <span class="token operator">=</span> in_band<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>以上代码的运行逻辑是：</p>
+<ol>
+<li>该代码首先通过外层循环遍历图像的列（x轴），并且每次遍历的步长是<code>block_xsize</code>。这意味着图像被分割成了宽度为<code>block_xsize</code>的垂直条带。</li>
+<li>对于每个垂直条带，如果条带的右边界超过了图像的宽度，那么就将条带的宽度设置为从当前位置到图像右边界的距离，否则就使用<code>block_xsize</code>作为条带的宽度。</li>
+<li>然后，内层循环遍历当前垂直条带的行（y轴），并且每次遍历的步长是<code>block_ysize</code>。这意味着垂直条带被进一步分割成了大小为<code>block_xsize</code>x<code>block_ysize</code>的块。</li>
+<li>对于每个块，如果块的下边界超过了图像的高度，那么就将块的高度设置为从当前位置到图像下边界的距离，否则就使用<code>block_ysize</code>作为块的高度。</li>
+<li>最后，使用<code>ReadAsArray</code>函数读取当前块的数据。这个函数的参数是块的左上角坐标（x,y）和块的大小（cols,rows），返回的是一个二维数组，包含了块内的所有像素值。</li>
+</ol>
+<p>我们具体的例子，进一步展示分块处理，以下是我们的Python函数：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+
+<span class="token comment"># 改变当前工作目录到包含输入文件的文件夹</span>
+os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span><span class="token string">r'D:\data1\\dem'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 打开输入的DEM文件</span>
+in_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span><span class="token string">'gt30w.tif'</span><span class="token punctuation">)</span>
+<span class="token comment"># 获取第一波段的数据</span>
+in_band <span class="token operator">=</span> in_ds<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token comment"># 获取栅格的大小（行数和列数）</span>
+xsize <span class="token operator">=</span> in_band<span class="token punctuation">.</span>XSize
+ysize <span class="token operator">=</span> in_band<span class="token punctuation">.</span>YSize
+<span class="token comment"># 获取波段的块大小</span>
+block_xsize<span class="token punctuation">,</span> block_ysize <span class="token operator">=</span> in_band<span class="token punctuation">.</span>GetBlockSize<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 获取无数据值</span>
+nodata <span class="token operator">=</span> in_band<span class="token punctuation">.</span>GetNoDataValue<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建输出的DEM文件，设置其大小、数据类型等与输入文件相同</span>
+out_ds <span class="token operator">=</span> in_ds<span class="token punctuation">.</span>GetDriver<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Create<span class="token punctuation">(</span>
+    <span class="token string">'dem_feet.tif'</span><span class="token punctuation">,</span> xsize<span class="token punctuation">,</span> ysize<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> in_band<span class="token punctuation">.</span>DataType<span class="token punctuation">)</span>
+<span class="token comment"># 设置投影和地理变换参数与输入文件相同</span>
+out_ds<span class="token punctuation">.</span>SetProjection<span class="token punctuation">(</span>in_ds<span class="token punctuation">.</span>GetProjection<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+out_ds<span class="token punctuation">.</span>SetGeoTransform<span class="token punctuation">(</span>in_ds<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># 获取输出文件的第一波段</span>
+out_band <span class="token operator">=</span> out_ds<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 遍历输入文件的每一个块</span>
+<span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> xsize<span class="token punctuation">,</span> block_ysize<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> x <span class="token operator">+</span> block_xsize <span class="token operator">&lt;</span> xsize<span class="token punctuation">:</span>
+        cols <span class="token operator">=</span> block_xsize
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        cols <span class="token operator">=</span> xsize <span class="token operator">-</span> x
+    <span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> ysize<span class="token punctuation">,</span> block_ysize<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> y <span class="token operator">+</span> block_ysize <span class="token operator">&lt;</span> ysize<span class="token punctuation">:</span>
+            rows <span class="token operator">=</span> block_ysize
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            rows <span class="token operator">=</span> ysize <span class="token operator">-</span> y
+        <span class="token comment"># 读取块的数据</span>
+        data <span class="token operator">=</span> in_band<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">)</span>
+        <span class="token comment"># 将米转换为英尺</span>
+        data <span class="token operator">=</span> np<span class="token punctuation">.</span>where<span class="token punctuation">(</span>data <span class="token operator">==</span> nodata<span class="token punctuation">,</span> nodata<span class="token punctuation">,</span> data <span class="token operator">*</span> <span class="token number">3.28084</span><span class="token punctuation">)</span>
+        <span class="token comment"># 写入转换后的数据到输出文件</span>
+        out_band<span class="token punctuation">.</span>WriteArray<span class="token punctuation">(</span>data<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+
+<span class="token comment"># 将缓存的数据写入磁盘</span>
+out_band<span class="token punctuation">.</span>FlushCache<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 设置输出文件的无数据值</span>
+out_band<span class="token punctuation">.</span>SetNoDataValue<span class="token punctuation">(</span>nodata<span class="token punctuation">)</span>
+<span class="token comment"># 计算输出文件的统计信息</span>
+out_band<span class="token punctuation">.</span>ComputeStatistics<span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+<span class="token comment"># 生成输出文件的概览图</span>
+out_ds<span class="token punctuation">.</span>BuildOverviews<span class="token punctuation">(</span><span class="token string">'average'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># 删除输出文件对象，关闭文件</span>
+<span class="token keyword">del</span> out_ds<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这个脚本的主要部分是一个双层的循环，遍历输入文件的每一个块。对于每一个块，它先读取数据，然后将单位从米转换为英尺，然后将转换后的数据写入到输出文件。</p>
+<p>这个过程使用了NumPy的<code>where</code>函数，它可以根据一个条件来选择数组的元素。在这里，它用于保留无数据值不变，而将其他的值乘以3.28084（米到英尺的转换系数）。</p>
+<p>附上同款CPP代码</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;gdal_priv.h&gt;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token function">GDALAllRegister</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 打开输入的DEM文件</span>
+  GDALDataset <span class="token operator">*</span>in_ds <span class="token operator">=</span> <span class="token punctuation">(</span>GDALDataset<span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">GDALOpen</span><span class="token punctuation">(</span><span class="token string">"D:\\data1\\dem\\gt30w.tif"</span><span class="token punctuation">,</span> GA_ReadOnly<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>in_ds <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token operator">::</span>cerr <span class="token operator">&lt;&lt;</span> <span class="token string">"Failed to open input dataset\n"</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 获取第一波段的数据</span>
+  GDALRasterBand <span class="token operator">*</span>in_band <span class="token operator">=</span> in_ds<span class="token operator">-&gt;</span><span class="token function">GetRasterBand</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 获取栅格的大小（列数和行数）</span>
+  <span class="token keyword">int</span> xsize <span class="token operator">=</span> in_band<span class="token operator">-&gt;</span><span class="token function">GetXSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">int</span> ysize <span class="token operator">=</span> in_band<span class="token operator">-&gt;</span><span class="token function">GetYSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 获取波段的块大小</span>
+  <span class="token keyword">int</span> block_xsize<span class="token punctuation">,</span> block_ysize<span class="token punctuation">;</span>
+  in_band<span class="token operator">-&gt;</span><span class="token function">GetBlockSize</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>block_xsize<span class="token punctuation">,</span> <span class="token operator">&amp;</span>block_ysize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 获取无数据值</span>
+  <span class="token keyword">int</span> nodata<span class="token punctuation">;</span>
+  in_band<span class="token operator">-&gt;</span><span class="token function">GetNoDataValue</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>nodata<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 创建输出的DEM文件，设置其大小、数据类型等与输入文件相同</span>
+  GDALDataset <span class="token operator">*</span>out_ds <span class="token operator">=</span> in_ds<span class="token operator">-&gt;</span><span class="token function">GetDriver</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token function">Create</span><span class="token punctuation">(</span><span class="token string">"D:\\data1\\dem\\dem_feet.tif"</span><span class="token punctuation">,</span> xsize<span class="token punctuation">,</span> ysize<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> in_band<span class="token operator">-&gt;</span><span class="token function">GetRasterDataType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>out_ds <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token operator">::</span>cerr <span class="token operator">&lt;&lt;</span> <span class="token string">"Failed to create output dataset\n"</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 设置投影和地理变换参数与输入文件相同</span>
+  out_ds<span class="token operator">-&gt;</span><span class="token function">SetProjection</span><span class="token punctuation">(</span>in_ds<span class="token operator">-&gt;</span><span class="token function">GetProjectionRef</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  out_ds<span class="token operator">-&gt;</span><span class="token function">SetGeoTransform</span><span class="token punctuation">(</span>in_ds<span class="token operator">-&gt;</span><span class="token function">GetGeoTransform</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 获取输出文件的第一波段</span>
+  GDALRasterBand <span class="token operator">*</span>out_band <span class="token operator">=</span> out_ds<span class="token operator">-&gt;</span><span class="token function">GetRasterBand</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 遍历输入文件的每一个块</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> x <span class="token operator">&lt;</span> xsize<span class="token punctuation">;</span> x <span class="token operator">+=</span> block_xsize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> cols <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">+</span> block_xsize <span class="token operator">&lt;</span> xsize<span class="token punctuation">)</span> <span class="token operator">?</span> block_xsize <span class="token operator">:</span> xsize <span class="token operator">-</span> x<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> y <span class="token operator">&lt;</span> ysize<span class="token punctuation">;</span> y <span class="token operator">+=</span> block_ysize<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">int</span> rows <span class="token operator">=</span> <span class="token punctuation">(</span>y <span class="token operator">+</span> block_ysize <span class="token operator">&lt;</span> ysize<span class="token punctuation">)</span> <span class="token operator">?</span> block_ysize <span class="token operator">:</span> ysize <span class="token operator">-</span> y<span class="token punctuation">;</span>
+
+      <span class="token comment">// 读取块的数据</span>
+      <span class="token keyword">float</span> <span class="token operator">*</span>data <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">float</span><span class="token punctuation">[</span>cols <span class="token operator">*</span> rows<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      in_band<span class="token operator">-&gt;</span><span class="token function">RasterIO</span><span class="token punctuation">(</span>GF_Read<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> data<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> GDT_Float32<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 将米转换为英尺</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> cols <span class="token operator">*</span> rows<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> nodata<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*=</span> <span class="token number">3.28084</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// 写入转换后的数据到输出文件</span>
+      out_band<span class="token operator">-&gt;</span><span class="token function">RasterIO</span><span class="token punctuation">(</span>GF_Write<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> data<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> GDT_Float32<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">delete</span><span class="token punctuation">[</span><span class="token punctuation">]</span> data<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 将缓存的数据写入磁盘</span>
+  out_band<span class="token operator">-&gt;</span><span class="token function">FlushCache</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 设置输出文件的无数据值</span>
+  out_band<span class="token operator">-&gt;</span><span class="token function">SetNoDataValue</span><span class="token punctuation">(</span>nodata<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 计算输出文件的统计信息</span>
+  <span class="token keyword">int</span> bApproxOK<span class="token punctuation">;</span>
+  out_band<span class="token operator">-&gt;</span><span class="token function">ComputeStatistics</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>bApproxOK<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// 生成输出文件的概览图</span>
+  out_ds<span class="token operator">-&gt;</span><span class="token function">BuildOverviews</span><span class="token punctuation">(</span><span class="token string">"AVERAGE"</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 关闭文件</span>
+  <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span> in_ds<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">GDALClose</span><span class="token punctuation">(</span><span class="token punctuation">(</span>GDALDatasetH<span class="token punctuation">)</span> out_ds<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>为什么要学cpp的代码呢？cpp的速度比python的运行速度要快得多。python可以作为前期的技术验证，工程化落地的话还是改写为CPP更稳妥。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/03/28/shen-du-xue-xi-shen-jing-wang-luo-shi-tong-guo-shi-me-lai-ni-he-zhen-shi-shi-jie/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">神经网络拟合真实世界的过程！</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】根据经纬度从数字高程模型（DEM）文件获取高度</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

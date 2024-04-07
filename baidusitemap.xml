@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2024/03/13/shen-du-xue-xi-cong-lenet-kan-shen-jing-wang-luo-da-jian/</loc>
+    <lastmod>2024-04-07</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</loc>
+    <lastmod>2024-04-07</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/28/shen-du-xue-xi-shen-jing-wang-luo-shi-tong-guo-shi-me-lai-ni-he-zhen-shi-shi-jie/</loc>
+    <lastmod>2024-04-07</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/</loc>
+    <lastmod>2024-04-07</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/29/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/</loc>
+    <lastmod>2024-04-07</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/02/16/kotlin-zi-xue-ji-lu-2/</loc>
+    <lastmod>2024-04-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/</loc>
+    <lastmod>2024-04-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/</loc>
+    <lastmod>2024-04-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/</loc>
+    <lastmod>2024-04-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
+    <lastmod>2024-04-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/04/02/dai-ma-gee-xia-zai-sentinel2-shu-ju/</loc>
+    <lastmod>2024-04-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/</loc>
+    <lastmod>2024-04-01</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/</loc>
+    <lastmod>2024-03-29</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/</loc>
+    <lastmod>2024-03-29</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/</loc>
+    <lastmod>2024-03-28</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/</loc>
+    <lastmod>2024-03-27</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/25/dai-ma-shuang-chong-xun-huan-yu-ju-shi-xian-fen-kuai-chu-li/</loc>
+    <lastmod>2024-03-27</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/</loc>
+    <lastmod>2024-03-27</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/</loc>
+    <lastmod>2024-03-25</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/</loc>
+    <lastmod>2024-03-20</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</loc>
+    <lastmod>2024-03-20</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/18/dai-ma-gen-ju-shi-liang-cai-jian-netcdf-shi-jian-xu-lie-shu-ju/</loc>
+    <lastmod>2024-03-20</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</loc>
+    <lastmod>2024-03-19</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/02/05/github-star-8k-jiang-copilot-zhuan-wei-gpt4-xue-sheng-dang-mian-fei-shi-yong-gpt-de-jiao-cheng/</loc>
+    <lastmod>2024-03-19</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2024/03/06/shi-liang-cai-jian-shi-liang/</loc>
     <lastmod>2024-03-08</lastmod>
   </url>
@@ -33,16 +129,8 @@
     <lastmod>2024-02-17</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/</loc>
-    <lastmod>2024-02-07</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2024/02/04/mian-shi-liang-jian-hua-ji-yu-python/</loc>
     <lastmod>2024-02-06</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/02/05/github-star-8k-jiang-copilot-zhuan-wei-gpt4-xue-sheng-dang-mian-fei-shi-yong-gpt-de-jiao-cheng/</loc>
-    <lastmod>2024-02-05</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/02/04/zai-visual-studio-zhong-pei-zhi-gdal-de-ji-ben-bu-zou/</loc>
@@ -93,10 +181,6 @@
     <lastmod>2023-12-26</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/03/10/gdal-api-bi-ji/</loc>
-    <lastmod>2023-12-21</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/</loc>
     <lastmod>2023-12-21</lastmod>
   </url>
@@ -117,10 +201,6 @@
     <lastmod>2023-12-11</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/</loc>
-    <lastmod>2023-12-08</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/</loc>
     <lastmod>2023-12-05</lastmod>
   </url>
@@ -131,10 +211,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/</loc>
     <lastmod>2023-11-16</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/</loc>
-    <lastmod>2023-11-06</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/</loc>
@@ -153,35 +229,15 @@
     <lastmod>2023-06-12</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2023/02/27/hello-go/</loc>
-    <lastmod>2023-03-01</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/</loc>
     <lastmod>2023-02-27</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/02/10/torchgeo/</loc>
-    <lastmod>2023-02-24</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/02/21/pyqt-zi-xue-ji-lu/</loc>
-    <lastmod>2023-02-21</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2023/02/16/ji-lu-yi-ci-pa-chong-li-zi/</loc>
     <lastmod>2023-02-20</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2023/02/16/kotlin-zi-xue-ji-lu-2/</loc>
-    <lastmod>2023-02-16</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2022/12/01/sentinel-5p-ke-shi-hua-zhan-shi-kong-qi-wu-ran-cheng-du/</loc>
-    <lastmod>2023-02-16</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/</loc>
     <lastmod>2023-02-16</lastmod>
   </url>
   <url>
@@ -366,10 +422,6 @@
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2021/04/30/za-wen-ge-ren-jiao-du-kan-dai-dang-qian-yi-ji-jin-hou-yao-gan-de-xu-qiu-shi-shi-me/</loc>
-    <lastmod>2021-11-23</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2021/01/15/guang-xue-yao-gan-ying-xiang-rong-he/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>

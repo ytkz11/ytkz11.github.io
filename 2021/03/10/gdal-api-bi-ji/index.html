@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-21 13:38:46</span>
+        <span class="pc">2024-04-07 13:13:38</span>
     </span>
     
     
@@ -339,7 +339,7 @@ all_band_data <span class="token operator">=</span> ds<span class="token punctua
     outBand<span class="token punctuation">.</span>WriteArray<span class="token punctuation">(</span>nmbwi<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
 
 <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
-    <span class="token builtin">file</span> <span class="token operator">=</span> <span class="token string">r'D:\dengkaiyuan\data\test\HAM2_20190125220146_0013_L1_MSS_CCD3_BandStack_6s_orth.tif'</span>
+    <span class="token builtin">file</span> <span class="token operator">=</span> <span class="token string">r'BandStack_6s_orth.tif'</span>
     waterExtractOHS<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p></p>
 <h2 id="将两景配准好的影像重采样到同一分辨率"><a href="#将两景配准好的影像重采样到同一分辨率" class="headerlink" title="将两景配准好的影像重采样到同一分辨率"></a>将两景配准好的影像重采样到同一分辨率</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">resample</span><span class="token punctuation">(</span>sourceDataset<span class="token punctuation">,</span> dstDataset<span class="token punctuation">,</span> outname<span class="token punctuation">,</span> interp<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token triple-quoted-string string">'''

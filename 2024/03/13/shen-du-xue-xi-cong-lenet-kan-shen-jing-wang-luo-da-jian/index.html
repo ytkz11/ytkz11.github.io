@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            【深度学习】从LeNet学神经网络搭建 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【深度学习】从LeNet学神经网络搭建</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-03-13 22:00:10</span>
+        <span class="mobile">2024-03-13 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-04-07 13:28:44</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E9%81%A5%E6%84%9F/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>LeNet是<strong>最早的卷积神经网络之一</strong>，其被提出用于识别手写数字和机器印刷字符。 1998年，Yann LeCun第一次将LeNet卷积神经网络应用到图像分类上，在手写数字识别任务中取得了巨大成功。</p>
+<p>现代的神经网络模型，包括深度学习模型，其底层的数学原理与LeNet等早期的神经网络模型是一致的。这些基础原理包括卷积、池化、激活函数、反向传播等。</p>
+<p>PyTorch等深度学习框架对这些底层库进行了高级的封装，使得我们可以通过调用API来快速、简便地实现这些操作，而不需要关心底层的具体实现。这极大地提高了我们开发和实现深度学习模型的效率。</p>
+<p>然而，尽管我们可以通过调用API来实现各种操作，但是我们仍然需要理解和掌握如何搭建网络模型的结构。这包括如何选择合适的网络结构，如何设置各层的参数，如何设计损失函数和优化策略等。这些都是实现一个有效的神经网络模型所必需的知识和技能。</p>
+<h1 id="LeNet结构"><a href="#LeNet结构" class="headerlink" title="LeNet结构"></a>LeNet结构</h1><p>LeNet的基本结构包括两个卷积层，两个池化层（下采样层），以及两个全连接层。它的结构可以简单地表示为：输入 - 卷积 - 池化 - 卷积 - 池化 - 全连接 - 全连接 - 输出。</p>
+<p>LeNet的设计哲学在今天的深度神经网络中仍然被广泛应用。例如，卷积层用于提取图像的局部特征，池化层用于降低特征的空间大小以及控制过拟合，全连接层则用于对特征进行高级别的推理。</p>
+<h1 id="尺寸计算公式"><a href="#尺寸计算公式" class="headerlink" title="尺寸计算公式"></a>尺寸计算公式</h1><p>尺寸计算公式，是用来计算卷积神经网络中卷积层输出特征图的尺寸的。具体来说，这个公式对应于一个卷积操作，这个通用公式，<strong>经常用得到</strong>。</p>
+<ol>
+<li>输出特征图的高度：</li>
+</ol>
+<script type="math/tex; mode=display">
+H*_{out} = \left\lfloor \frac{ {(H_*{in} + 2 \cdot P - H*_{ker })} }{S} \right\rfloor + 1
+$$ 
+
+2. 输出特征图的宽度：
+
+$$ 
+W_{out} = \left\lfloor \frac{{(W_{in} + 2 \cdot P - W_{ker})}}{S} \right\rfloor + 1
+$$ 
+
+3. 输出特征图的深度：</script><p>CH_{out} = K</p>
+<script type="math/tex; mode=display">
+
+在这里，⌊⋅⌋表示向下取整。
+
+改写为中文版：
+
+1. 输出特征图的高度：
+
+$$ 
+输出宽度 = \left\lfloor \frac{{输入宽度 + 2 \cdot 填充宽度 - 卷积/池化核宽度)}}{步长} \right\rfloor + 1
+$$ 
+
+2. 输出特征图的宽度：
+
+$$ 
+输出高度 = \left\lfloor \frac{{输入高度 + 2 \cdot 填充高度 - 卷积/池化核宽度)}}{步长} \right\rfloor + 1
+$$ 
+
+3. 输出特征图的深度：</script><p>输出通道 = 卷积/池化核数量</p>
+<script type="math/tex; mode=display">
+
+这些公式用于计算卷积神经网络中卷积层的输出维度。参数的含义如下：
+
+-</script><p>  H<em>{in} 和 W</em>{in}：输入特征图的高度和宽度。</p>
+<script type="math/tex; mode=display">
+
+-</script><p>  P：填充（Padding）的大小。填充是在输入特征图的周围添加额外的“像素”或“单元”，</p>
+<script type="math/tex; mode=display">
+
+-</script><p>  H<em>{ker} 和 W</em>{ker}：卷积核（也称为过滤器）的高度和宽度。</p>
+<script type="math/tex; mode=display">
+
+-</script><p>  S：步长（Stride），即卷积核在输入特征图上移动的步数。</p>
+<script type="math/tex; mode=display">
+
+-</script><p>  K：卷积核的数量，也是输出特征图的深度。</p>
+<script type="math/tex; mode=display">
+
+
+
+# 解构LeNet
+
+LeNet的网络结构如下图，请看三次，注意细节，看完三次后继续听我讲解：
+
+![](https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403151613239.jpeg)
+
+文字叙述版如下：
+
+图像经过第一个卷积，大小6x5x5，得到6x28x28的特征图。参数含义解释：6是指卷积核通道数（你也可以理解为遥感中的波段，在英文里是一个概念），5x5是指卷积核的宽、高，是指下面不一一介绍参数含义。
+
+接着，经过池化核，大小是6x2x2，得到6x14x14的特征图。
+
+接着，经过第二个卷积，大小是16x5x5，得到16x10x10的特征图。
+
+接着，经过池化核，大小是16x2x2，得到16x5x5的特征图。
+
+接着，经过第一个全连接层，大小是1
+
+连续经过三次全连接层，最后缩放到10。为什么是10，这里的10是指分类个数，LeNet设计出来时的目的是去识别手写数字，1到10只有10个数，所以分类个数是10。
+
+
+
+现在，用上面的提到的尺寸公式，解构整个的LeNet模型。
+
+输出特征图的高度：
+$$ 
+输出宽度 = \left\lfloor \frac{{输入宽度 + 2 \cdot 填充宽度 - 卷积/池化核宽度)}}{步长} \right\rfloor + 1
+$$ 
+
+输出特征图的宽度：
+$$ 
+输出高度 = \left\lfloor \frac{{输入高度 + 2 \cdot 填充高度 - 卷积/池化核宽度)}}{步长} \right\rfloor + 1
+$$ 
+
+输出特征图的深度：</script><p>输出通道 = 卷积/池化核数量</p>
+<p>$$</p>
+<ol>
+<li><p>输入数据是灰度图，宽高均为32，通道数为1（这里省去不写），所以大小为32x32</p>
+</li>
+<li><p>32x32的数据，经过一个大小为6x5x5的卷积核，无填充，步长为1，下一个特征图大小计算过程如下：</p>
+<p>输出宽度为 (32+2x0-5)/1+1=27+1=28</p>
+<p>输出高度为 (32+2x0-5)/1+1=27+1=28，参数一样，下面不写输出高度的推导过程。</p>
+<p>输出深度为6</p>
+<p>此时，特征图大小为6x28x28。将此特征图进行下一步。</p>
+</li>
+<li><p>6x28x28的数据，经过一个大小为6x2x2的池化核，无填充，步长为2，下一个特征图大小计算过程如下：</p>
+<p>输出宽度为 (28+2x0-2)/2+1=13+1=14</p>
+<p>输出深度为6</p>
+<p>此时，特征图大小为6x14x14。将此特征图进行下一步。</p>
+</li>
+<li><p>6x14x14的数据，经过一个大小为16x5x5的卷积核，无填充，步长为1，下一个特征图大小计算过程如下：</p>
+<p>输出宽度为 (14+2x0-5)/1+1=9.5+1=10.5, 往下取整,为10</p>
+<p>输出深度为16</p>
+<p>此时，特征图大小为16x10x10。将此特征图进行下一步。</p>
+</li>
+<li><p>16x10x10的数据，经过一个大小为16x2x2的卷积核，无填充，步长为2，下一个特征图大小计算过程如下：</p>
+<p>输出宽度为 (10+2x0-2)/2+1=4.5+1=5.5, 往下取整,为5</p>
+<p>输出深度为16</p>
+<p>此时，特征图大小为16x5x5。将此特征图进行下一步。</p>
+</li>
+<li><p>经过第一个全连接层，其输入特征数量为16x5x5=400，输出特征数量为120,得到120的特征图，即长度为120的向量。</p>
+</li>
+<li><p>经过第二个全连接层，其输入特征数量为120，输出特征数量为84,得到84的特征图</p>
+</li>
+<li><p>输出层，其输入特征数量为84，输出特征数量为10,得到长度为10的特征图</p>
+</li>
+</ol>
+<h1 id="LeNet-实战"><a href="#LeNet-实战" class="headerlink" title="LeNet 实战"></a>LeNet 实战</h1><p>90行代码，实现LeNet模型对图像分类。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403151612236.gif" alt="111"></p>
+<p>训练模型代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch
+<span class="token keyword">from</span> torch <span class="token keyword">import</span> nn
+<span class="token keyword">import</span> sys
+<span class="token keyword">import</span> torchvision
+<span class="token keyword">import</span> torchvision<span class="token punctuation">.</span>transforms <span class="token keyword">as</span> transforms
+<span class="token keyword">import</span> time
+
+<span class="token keyword">def</span> <span class="token function">load_data_fashion_mnist</span><span class="token punctuation">(</span>mnist_train<span class="token punctuation">,</span> mnist_test<span class="token punctuation">,</span> batch_size<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> sys<span class="token punctuation">.</span>platform<span class="token punctuation">.</span>startswith<span class="token punctuation">(</span><span class="token string">'win'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        num_workers <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        num_workers <span class="token operator">=</span> <span class="token number">4</span>
+    train_iter <span class="token operator">=</span> torch<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>data<span class="token punctuation">.</span>DataLoader<span class="token punctuation">(</span>mnist_train<span class="token punctuation">,</span> batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">,</span> shuffle<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> num_workers<span class="token operator">=</span>num_workers<span class="token punctuation">)</span>
+    test_iter <span class="token operator">=</span> torch<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>data<span class="token punctuation">.</span>DataLoader<span class="token punctuation">(</span>mnist_test<span class="token punctuation">,</span> batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">,</span> shuffle<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> num_workers<span class="token operator">=</span>num_workers<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> train_iter<span class="token punctuation">,</span> test_iter
+
+<span class="token keyword">class</span> <span class="token class-name">LeNet</span><span class="token punctuation">(</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>LeNet<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>conv <span class="token operator">=</span> nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>
+            nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># in_channels, out_channels, kernel_size</span>
+            nn<span class="token punctuation">.</span>Sigmoid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>MaxPool2d<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># kernel_size, stride</span>
+            nn<span class="token punctuation">.</span>Conv2d<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>Sigmoid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>MaxPool2d<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>fc <span class="token operator">=</span> nn<span class="token punctuation">.</span>Sequential<span class="token punctuation">(</span>
+            nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">16</span> <span class="token operator">*</span> <span class="token number">4</span> <span class="token operator">*</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">120</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  
+            <span class="token comment"># 这里是16x4x4的原因是，数据源大小为28x28，而不是32x32</span>
+            nn<span class="token punctuation">.</span>Sigmoid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">120</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>Sigmoid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            nn<span class="token punctuation">.</span>Linear<span class="token punctuation">(</span><span class="token number">84</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+        <span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">forward</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> img<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        feature <span class="token operator">=</span> self<span class="token punctuation">.</span>conv<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+        output <span class="token operator">=</span> self<span class="token punctuation">.</span>fc<span class="token punctuation">(</span>feature<span class="token punctuation">.</span>view<span class="token punctuation">(</span>img<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> output
+
+<span class="token keyword">def</span> <span class="token function">evaluate_accuracy</span><span class="token punctuation">(</span>data_iter<span class="token punctuation">,</span> net<span class="token punctuation">,</span> device<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> device <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">and</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>net<span class="token punctuation">,</span> torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>Module<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 如果没指定device就使用net的device</span>
+        device <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>net<span class="token punctuation">.</span>parameters<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>device
+    acc_sum<span class="token punctuation">,</span> n <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0</span>
+    <span class="token keyword">with</span> torch<span class="token punctuation">.</span>no_grad<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> X<span class="token punctuation">,</span> y <span class="token keyword">in</span> data_iter<span class="token punctuation">:</span>
+            net<span class="token punctuation">.</span><span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 评估模式, 这会关闭dropout</span>
+            acc_sum <span class="token operator">+=</span> <span class="token punctuation">(</span>net<span class="token punctuation">(</span>X<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>dim<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">float</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>cpu<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            net<span class="token punctuation">.</span>train<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 改回训练模式</span>
+            n <span class="token operator">+=</span> y<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> acc_sum <span class="token operator">/</span> n
+
+<span class="token keyword">def</span> <span class="token function">train</span><span class="token punctuation">(</span>net<span class="token punctuation">,</span> train_iter<span class="token punctuation">,</span> test_iter<span class="token punctuation">,</span> batch_size<span class="token punctuation">,</span> optimizer<span class="token punctuation">,</span> device<span class="token punctuation">,</span> num_epochs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    net <span class="token operator">=</span> net<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"training on "</span><span class="token punctuation">,</span> device<span class="token punctuation">)</span>
+    loss <span class="token operator">=</span> torch<span class="token punctuation">.</span>nn<span class="token punctuation">.</span>CrossEntropyLoss<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> epoch <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>num_epochs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        train_l_sum<span class="token punctuation">,</span> train_acc_sum<span class="token punctuation">,</span> n<span class="token punctuation">,</span> batch_count<span class="token punctuation">,</span> start <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> X<span class="token punctuation">,</span> y <span class="token keyword">in</span> train_iter<span class="token punctuation">:</span>
+            X <span class="token operator">=</span> X<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span>
+            y <span class="token operator">=</span> y<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span>
+            y_hat <span class="token operator">=</span> net<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+            l <span class="token operator">=</span> loss<span class="token punctuation">(</span>y_hat<span class="token punctuation">,</span> y<span class="token punctuation">)</span>
+            optimizer<span class="token punctuation">.</span>zero_grad<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            l<span class="token punctuation">.</span>backward<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            optimizer<span class="token punctuation">.</span>step<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            train_l_sum <span class="token operator">+=</span> l<span class="token punctuation">.</span>cpu<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            train_acc_sum <span class="token operator">+=</span> <span class="token punctuation">(</span>y_hat<span class="token punctuation">.</span>argmax<span class="token punctuation">(</span>dim<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">==</span> y<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>cpu<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>item<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            n <span class="token operator">+=</span> y<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+            batch_count <span class="token operator">+=</span> <span class="token number">1</span>
+        test_acc <span class="token operator">=</span> evaluate_accuracy<span class="token punctuation">(</span>test_iter<span class="token punctuation">,</span> net<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'epoch %d, loss %.4f, train acc %.3f, test acc %.3f, time %.1f sec'</span>
+              <span class="token operator">%</span> <span class="token punctuation">(</span>epoch <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> train_l_sum <span class="token operator">/</span> batch_count<span class="token punctuation">,</span> train_acc_sum <span class="token operator">/</span> n<span class="token punctuation">,</span> test_acc<span class="token punctuation">,</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> start<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    net <span class="token operator">=</span> LeNet<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    mnist_train <span class="token operator">=</span> torchvision<span class="token punctuation">.</span>datasets<span class="token punctuation">.</span>FashionMNIST<span class="token punctuation">(</span>root<span class="token operator">=</span><span class="token string">'~/Datasets/FashionMNIST'</span><span class="token punctuation">,</span> train<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> download<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+                                                    transform<span class="token operator">=</span>transforms<span class="token punctuation">.</span>ToTensor<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    mnist_test <span class="token operator">=</span> torchvision<span class="token punctuation">.</span>datasets<span class="token punctuation">.</span>FashionMNIST<span class="token punctuation">(</span>root<span class="token operator">=</span><span class="token string">'~/Datasets/FashionMNIST'</span><span class="token punctuation">,</span> train<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> download<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+                                                   transform<span class="token operator">=</span>transforms<span class="token punctuation">.</span>ToTensor<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    batch_size <span class="token operator">=</span> <span class="token number">256</span>
+    train_iter<span class="token punctuation">,</span> test_iter <span class="token operator">=</span> load_data_fashion_mnist<span class="token punctuation">(</span>mnist_train<span class="token punctuation">,</span> mnist_test<span class="token punctuation">,</span> batch_size<span class="token punctuation">)</span>
+    device <span class="token operator">=</span> torch<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">'cuda'</span> <span class="token keyword">if</span> torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token string">'cpu'</span><span class="token punctuation">)</span>
+    lr<span class="token punctuation">,</span> num_epochs <span class="token operator">=</span> <span class="token number">0.001</span><span class="token punctuation">,</span> <span class="token number">50</span>
+    optimizer <span class="token operator">=</span> torch<span class="token punctuation">.</span>optim<span class="token punctuation">.</span>Adam<span class="token punctuation">(</span>net<span class="token punctuation">.</span>parameters<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> lr<span class="token operator">=</span>lr<span class="token punctuation">)</span>
+    train<span class="token punctuation">(</span>net<span class="token punctuation">,</span> train_iter<span class="token punctuation">,</span> test_iter<span class="token punctuation">,</span> batch_size<span class="token punctuation">,</span> optimizer<span class="token punctuation">,</span> device<span class="token punctuation">,</span> num_epochs<span class="token punctuation">)</span>
+    save_path <span class="token operator">=</span> <span class="token string">'./Lenet.pth'</span>
+    torch<span class="token punctuation">.</span>save<span class="token punctuation">(</span>net<span class="token punctuation">.</span>state_dict<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> save_path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这段代码实现了一个完整的机器学习过程，包括数据加载、模型定义、模型训练、模型评估和模型保存。具体步骤如下：</p>
+<ol>
+<li><strong>数据加载</strong>：使用<code>torchvision.datasets.FashionMNIST</code>加载FashionMNIST数据集，并使用<code>transforms.ToTensor()</code>将图片转换为张量。然后使用<code>torch.utils.data.DataLoader</code>创建数据加载器，用于在训练过程中批量加载数据。</li>
+<li><strong>模型定义</strong>：定义了一个名为<code>LeNet</code>的类，这个类继承了<code>torch.nn.Module</code>。<code>LeNet</code>类中定义了两个主要的部分：<code>self.conv</code>和<code>self.fc</code>。<code>self.conv</code>包含了两个卷积层和两个最大池化层，用于从输入图片中提取特征；<code>self.fc</code>包含了三个全连接层，用于对提取出的特征进行分类。</li>
+<li><strong>模型训练</strong>：在训练过程中，首先将模型和数据转移到指定的设备（GPU或CPU），然后在每个epoch中，对训练数据进行遍历，计算模型的输出和损失，然后进行反向传播和参数更新。在每个epoch结束后，还会计算并打印出训练损失、训练准确率和测试准确率。</li>
+<li><strong>模型评估</strong>：使用<code>evaluate_accuracy</code>函数在测试数据上评估模型的准确率。这个函数会遍历测试数据，计算模型的输出，然后比较模型的输出和真实的标签，计算出准确率。</li>
+<li><strong>模型保存</strong>：在训练结束后，使用<code>torch.save</code>函数保存模型的参数。</li>
+</ol>
+<p>这段代码的主要目标是训练一个LeNet模型，用于识别FashionMNIST数据集中的服装类别。</p>
+<p>经过以上步骤，得到pt类型的模型。</p>
+<p>60行代码，完成LeNet模型的预测脚本。</p>
+<p>预测代码如下</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> torch
+<span class="token keyword">from</span> torchvision <span class="token keyword">import</span> datasets<span class="token punctuation">,</span> transforms
+<span class="token keyword">from</span> LeNet <span class="token keyword">import</span> LeNet
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token comment"># 预处理</span>
+transform <span class="token operator">=</span> transforms<span class="token punctuation">.</span>Compose<span class="token punctuation">(</span><span class="token punctuation">[</span>
+    transforms<span class="token punctuation">.</span>ToTensor<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    transforms<span class="token punctuation">.</span>Normalize<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">,</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 加载FashionMNIST测试数据集</span>
+test_data <span class="token operator">=</span> datasets<span class="token punctuation">.</span>FashionMNIST<span class="token punctuation">(</span>root<span class="token operator">=</span><span class="token string">'./data'</span><span class="token punctuation">,</span> train<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span> download<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">,</span> transform<span class="token operator">=</span>transform<span class="token punctuation">)</span>
+test_loader <span class="token operator">=</span> torch<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>data<span class="token punctuation">.</span>DataLoader<span class="token punctuation">(</span>test_data<span class="token punctuation">,</span> batch_size<span class="token operator">=</span><span class="token number">64</span><span class="token punctuation">,</span> shuffle<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 选择设备</span>
+device <span class="token operator">=</span> torch<span class="token punctuation">.</span>device<span class="token punctuation">(</span><span class="token string">"cuda"</span> <span class="token keyword">if</span> torch<span class="token punctuation">.</span>cuda<span class="token punctuation">.</span>is_available<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">else</span> <span class="token string">"cpu"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 将模型移动到设备上</span>
+model <span class="token operator">=</span> LeNet<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 加载state_dict</span>
+state_dict <span class="token operator">=</span> torch<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token string">'Lenet.pth'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 将state_dict加载到模型中</span>
+model<span class="token punctuation">.</span>load_state_dict<span class="token punctuation">(</span>state_dict<span class="token punctuation">)</span>
+
+<span class="token comment"># 用于存储预测结果和真实标签</span>
+predicted_labels <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+true_labels <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 预测</span>
+model<span class="token punctuation">.</span><span class="token builtin">eval</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 设置为评估模式</span>
+<span class="token keyword">with</span> torch<span class="token punctuation">.</span>no_grad<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> data<span class="token punctuation">,</span> target <span class="token keyword">in</span> test_loader<span class="token punctuation">:</span>
+        data<span class="token punctuation">,</span> target <span class="token operator">=</span> data<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span><span class="token punctuation">,</span> target<span class="token punctuation">.</span>to<span class="token punctuation">(</span>device<span class="token punctuation">)</span>
+        output <span class="token operator">=</span> model<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        _<span class="token punctuation">,</span> predicted <span class="token operator">=</span> torch<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>output<span class="token punctuation">.</span>data<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        predicted_labels<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>predicted<span class="token punctuation">.</span>cpu<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>numpy<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        true_labels<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>target<span class="token punctuation">.</span>cpu<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>numpy<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 定义FashionMNIST类别</span>
+<span class="token comment"># classes = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']</span>
+
+<span class="token comment"># 选择要可视化的图片数量</span>
+num_images_to_show <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token comment"># 选择一些随机的测试数据</span>
+indices <span class="token operator">=</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>predicted_labels<span class="token punctuation">)</span><span class="token punctuation">,</span> num_images_to_show<span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i<span class="token punctuation">,</span> index <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>indices<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> num_images_to_show<span class="token operator">//</span><span class="token number">2</span><span class="token punctuation">,</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>axis<span class="token punctuation">(</span><span class="token string">'off'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>test_data<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>numpy<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>squeeze<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cmap<span class="token operator">=</span><span class="token string">'gray'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Predicted: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>predicted_labels<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"\nTrue: "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>true_labels<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这段代码的主要目的是加载训练好的LeNet模型，然后使用这个模型对FashionMNIST测试集进行预测，并将预测结果进行可视化。这里是具体的步骤：</p>
+<ol>
+<li><strong>数据预处理和加载</strong>：首先，定义了一个预处理操作，这个操作将图片转换为张量并进行归一化。然后，使用<code>torchvision.datasets.FashionMNIST</code>加载FashionMNIST测试数据集，并使用<code>torch.utils.data.DataLoader</code>创建数据加载器。</li>
+<li><strong>模型加载</strong>：然后，创建一个LeNet模型，并使用<code>torch.load</code>函数加载预训练的模型参数。</li>
+<li><strong>预测</strong>：在预测过程中，首先将模型设置为评估模式，然后遍历测试数据，计算模型的输出，并使用<code>torch.max</code>函数获取预测的类别。预测的类别和真实的类别都被保存下来，以便之后进行可视化。</li>
+<li><strong>可视化</strong>：最后，选择一些随机的测试数据，并将这些数据的图片、预测的类别和真实的类别进行可视化。这可以帮助我们直观地了解模型的预测效果。</li>
+</ol>
+<p>随机选取10张图片进行结果展示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403151612087.png" alt="image-20240312192147624"></p>
+<p>可以看出，模型的精度不高，也有可能是现在只训练了50次。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">#深度学习</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】遥感影像匀色</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/03/06/shi-liang-cai-jian-shi-liang/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">矢量裁剪矢量</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2023-12-08 17:07:02</span>
+        <span class="pc">2024-04-02 13:25:49</span>
     </span>
     
     
@@ -208,7 +208,7 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="为什么要使用多个版本的python？"><a href="#为什么要使用多个版本的python？" class="headerlink" title="为什么要使用多个版本的python？"></a>为什么要使用多个版本的python？</h1><h1 id="读取tif文件"><a href="#读取tif文件" class="headerlink" title="读取tif文件"></a>读取tif文件</h1><p>正常来说，读取tif文件，使用gdal库就能解决了。</p>
+                <h1 id="读取tif文件"><a href="#读取tif文件" class="headerlink" title="读取tif文件"></a>读取tif文件</h1><p>正常来说，读取tif文件，使用gdal库就能解决了。</p>
 <p>gdal库在遥感行业过于强大、简单、易用，以至于很多商业软件的底层也调用了gdal。</p>
 <p>平常在python环境下使用gdal库对tif文件进行读写是很简单的，大佬们都把函数、接口封装得很好，咱们直接调用对应的API就OK了。</p>
 <p>常用的语句如下：</p>
@@ -222,7 +222,7 @@ array <span class="token operator">=</span> ds<span class="token punctuation">.<
 <p>因为…</p>
 <p>我有个朋友，他在linux因为没有linux的权限，安装不了 gdal。</p>
 <p>这个朋友肯定不是我。</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231208163903324.png" alt="image-20231208163903324"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404021325581.png" alt="image-20231208163903324"></p>
 <p>所以只能通过其他方法，把tif文件读取到内存里。</p>
 <p>搜索一番，发现有2种方法可以成功实现这个需求。另外第2种方法只能实现部分需求。</p>
 <ol>
@@ -235,21 +235,21 @@ array <span class="token operator">=</span> ds<span class="token punctuation">.<
 tif_file <span class="token operator">=</span> <span class="token string">r'xxx.tif'</span>    <span class="token comment"># 待读取的tif文件</span>
 img <span class="token operator">=</span> io<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>tif_file<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231208164731482.png" alt="image-20231208164731482"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404021325588.png" alt="image-20231208164731482"></p>
 <p>从上图可以知道，这张TIF影像的长宽为6908x7300，有4个波段。</p>
 <p>这种方法只能读取数值，不能读取坐标信息。但是对我而言是足够了，暂时能满足要求。</p>
 <h1 id="tifffile"><a href="#tifffile" class="headerlink" title="tifffile"></a>tifffile</h1><p>简单例子如下：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> tifffile <span class="token keyword">as</span> tiff
 tif_file <span class="token operator">=</span> <span class="token string">r'xxx.tif'</span>    <span class="token comment"># 待读取的tif文件</span>
 img <span class="token operator">=</span> tiff<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>tif_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231208170318422.png" alt="image-20231208170318422"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404021325113.png" alt="image-20231208170318422"></p>
 <p>显然，这张TIF影像的长宽为6908x7300，有4个波段。</p>
 <p>tifffile库也是只能读取数值，不能读取坐标信息。</p>
 <h1 id="opencv"><a href="#opencv" class="headerlink" title="opencv"></a>opencv</h1><p>简单例子如下：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> cv2
 tif_file <span class="token operator">=</span> <span class="token string">r'xxx.tif'</span>    <span class="token comment"># 待读取的tif文件</span>
 img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>tif_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20231208170428948.png" alt="image-20231208170428948"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404021325896.png" alt="image-20231208170428948"></p>
 <p>显然，opencv不能打开tif文件。</p>
 <h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>综上，对比其他的读取tif的方法，gdal显得格外强大，学地信遥感的人，特别是遥感er，是避不开gdal的。</p>
 

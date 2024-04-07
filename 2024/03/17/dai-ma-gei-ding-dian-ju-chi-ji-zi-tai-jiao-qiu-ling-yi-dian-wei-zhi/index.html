@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            【代码】给定起点位置、距离及姿态角，求另一点位置 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【代码】给定起点位置、距离及姿态角，求另一点位置</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-03-17 22:00:10</span>
+        <span class="mobile">2024-03-17 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-03-27 17:21:44</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>如题，这是现实中遇到的问题的简化版。</p>
+<p>已知一个点的经纬度和离另一个点的球面距离，和无人机飞行时刻姿态角，求另一个点的经纬度。</p>
+<h2 id="姿态角"><a href="#姿态角" class="headerlink" title="姿态角"></a>姿态角</h2><p>首先，得了解什么是姿态角。</p>
+<p><strong>姿态角（Attitude angles）</strong>：这是一个用于描述物体在空间中的方向和姿态的一组三个角度，通常包括滚动角（Roll）、俯仰角（Pitch）和偏航角（Yaw）。</p>
+<ul>
+<li><p>俯仰角：围绕物体的前后轴线（通常被称为X轴）旋转的角度。</p>
+</li>
+<li><p>偏航角：围绕物体的左右轴线（通常被称为Y轴）旋转的角度。</p>
+</li>
+<li><p>滚动角：围绕物体的上下轴线（通常被称为Z轴）旋转的角度。</p>
+<p>下面三张动图形象的表示了欧拉角的旋转方式。第一张是绕x轴旋转pitch，第二张绕y轴旋转yaw，第三张是绕z轴旋转roll。</p>
+<p><img src="https://img-blog.csdn.net/20151125211944990" alt="俯仰角"></p>
+</li>
+</ul>
+<p><img src="https://img-blog.csdn.net/20151125211917940" alt="这里写图片描述"></p>
+<p><img src="https://img-blog.csdn.net/20151125211931073" alt="这里写图片描述"></p>
+<p>简言之，pitch是俯仰角，是“点头“</p>
+<p>yaw是偏航角，是‘摇头’</p>
+<p>roll是旋转角，是“翻滚”</p>
+<p>这里我们要用到的是姿态角中的偏航角。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>无人机从一个已知的经纬度（lat1, lon1）飞行一定的球面距离（d）后，假设飞行方向由偏航角（yaw）决定，得出的目标点的经纬度（lat2, lon2）。请看以下代码。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> math
+
+<span class="token keyword">def</span> <span class="token function">compute_destination_point</span><span class="token punctuation">(</span>lat1<span class="token punctuation">,</span> lon1<span class="token punctuation">,</span> yaw<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 地球半径，单位为千米</span>
+    R <span class="token operator">=</span> <span class="token number">6371.0</span>
+
+    <span class="token comment"># 将输入的角度和距离转为弧度</span>
+    lat1 <span class="token operator">=</span> math<span class="token punctuation">.</span>radians<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span>
+    lon1 <span class="token operator">=</span> math<span class="token punctuation">.</span>radians<span class="token punctuation">(</span>lon1<span class="token punctuation">)</span>
+    yaw <span class="token operator">=</span> math<span class="token punctuation">.</span>radians<span class="token punctuation">(</span>yaw<span class="token punctuation">)</span>
+    d <span class="token operator">=</span> d <span class="token operator">/</span> <span class="token number">1000</span>  <span class="token comment"># 将距离转为千米</span>
+
+    <span class="token comment"># 计算目标点的纬度</span>
+    lat2 <span class="token operator">=</span> math<span class="token punctuation">.</span>asin<span class="token punctuation">(</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>d<span class="token operator">/</span>R<span class="token punctuation">)</span> <span class="token operator">+</span>
+                     math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>d<span class="token operator">/</span>R<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>yaw<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 计算目标点的经度</span>
+    lon2 <span class="token operator">=</span> lon1 <span class="token operator">+</span> math<span class="token punctuation">.</span>atan2<span class="token punctuation">(</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>yaw<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>d<span class="token operator">/</span>R<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                             math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>d<span class="token operator">/</span>R<span class="token punctuation">)</span><span class="token operator">-</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>lat2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 将结果转为度数</span>
+    lat2 <span class="token operator">=</span> math<span class="token punctuation">.</span>degrees<span class="token punctuation">(</span>lat2<span class="token punctuation">)</span>
+    lon2 <span class="token operator">=</span> math<span class="token punctuation">.</span>degrees<span class="token punctuation">(</span>lon2<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> lat2<span class="token punctuation">,</span> lon2
+
+<span class="token comment"># 测试函数</span>
+lat1 <span class="token operator">=</span> <span class="token number">30.0</span>  <span class="token comment"># 初始纬度</span>
+lon1 <span class="token operator">=</span> <span class="token number">120.0</span>  <span class="token comment"># 初始经度</span>
+yaw <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment"># 偏航角，以度为单位</span>
+d <span class="token operator">=</span> <span class="token number">111100</span> <span class="token comment"># 球面距离，以米为单位</span>
+
+lat2<span class="token punctuation">,</span> lon2 <span class="token operator">=</span> compute_destination_point<span class="token punctuation">(</span>lat1<span class="token punctuation">,</span> lon1<span class="token punctuation">,</span> yaw<span class="token punctuation">,</span> d<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"目标点的纬度：</span><span class="token interpolation"><span class="token punctuation">{</span>lat2<span class="token punctuation">}</span></span><span class="token string">, 经度：</span><span class="token interpolation"><span class="token punctuation">{</span>lon2<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>结果展示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403271711184.png" alt="image-20240327171102564"></p>
+<p>定义测试函数中的数值是有讲究的，偏航角为0即无人机向东飞行。</p>
+<p>1度约等于111100米，这里定义球面距离为111100米，所以结果应该是纬度31度，经度为120度。</p>
+<p>程序运行结果符合预期，误差在预期范围内。</p>
+<h1 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h1><p>代码的主要步骤如下：</p>
+<ol>
+<li>将输入的经纬度、偏航角和距离转换为弧度。弧度是角度的另一种表示方式，适用于数学运算。弧度和角度之间的转换关系为：弧度 = 角度 * π / 180。这里使用math.radians函数进行转换。</li>
+<li>计算目标点的纬度（lat2）。这一步使用的是球面三角学的公式，基于当前位置的纬度（lat1）、飞行距离（d）和偏航角（yaw）来计算。</li>
+<li>计算目标点的经度（lon2）。这一步同样使用的是球面三角学的公式，基于当前位置的经度（lon1）、纬度（lat1）、飞行距离（d）和偏航角（yaw）来计算。</li>
+<li>将计算出的目标点的经纬度转换回度数。这里使用math.degrees函数进行转换。</li>
+<li>返回目标点的经纬度。</li>
+</ol>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>需要注意的是，这个代码假设无人机的飞行路径是大圆航线（即地球表面的最短路径），并且偏航角是相对于真北方向的角度。现实中的问题可能会比这里说的问题要更为复杂一些，你可能需要再修改这个代码。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】使用Python的GDAL/OGR库来创建渔网格</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】遥感影像匀色</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

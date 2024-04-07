@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            【代码】根据矢量裁剪NetCDF 时间序列数据 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【代码】根据矢量裁剪NetCDF 时间序列数据</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-03-18 22:00:10</span>
+        <span class="mobile">2024-03-18 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-03-20 16:33:17</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>之前写了</p>
+<p>1.矢量裁剪栅格 </p>
+<p>2.矢量裁剪矢量</p>
+<p>其实还有另一种裁剪数据的类型，那就是矢量裁剪NetCDF，下面简称为NC数据。</p>
+<p>常见的NC数据，就我个人遇到的情况来说，有以下几个：</p>
+<p>1.美国的jason3海洋数据</p>
+<p>2.中国的风云三号、风云四号气象数据</p>
+<p>3.欧空局的哨兵3海洋数据、哨兵5气象数据</p>
+<p>还有很多，只是我还没遇到，暂时不写。</p>
+<p>通俗地来说，nc数据与tif数据对比，nc的特点是多维的。</p>
+<p>一个nc文件可能包含了一份30天的海洋温度数据和60天的海洋高度数据，每一天的海洋温度数据的大小为1000x1000，每一天的海洋高度数据的大小为2000x2000。所以，这份nc文件就是30x1000x1000和60x2000x2000的数据的集合。</p>
+<p>tif文件一般是固定大小，即第一个波段的大小与其他波段的大小是保持一致。如果要把上面的数据保存为tif，此时，tif的大小就变成了90x2000x2000。</p>
+<p>如果要用tif格式去保存这种形式的数据，会使数据量提高，所以nc格式一般是被视为高效率存储的格式。</p>
+<p>除此之外，nc的复杂性与文件内部的不统一性也是处理nc数据的难点。我就觉得是nc文件内部的数据命名简直是，乱七八糟得一塌糊涂！</p>
+<p>反正每次读取不同类型nc都需要打印一下nc内部的名字，比如说，有时候FY4 的经度的名字是lon，有时候Sentinel3的经度用Lon表示，有时候也用longitude。</p>
+<p>别的不多说，下面正式介绍nc文件。</p>
+<h1 id="NetCDF官方定义"><a href="#NetCDF官方定义" class="headerlink" title="NetCDF官方定义"></a>NetCDF官方定义</h1><p>NetCDF（Network Common Data Form）是一种用于存储和分享科学数据的文件格式和库集合。这种格式广泛用于气候科学、地理学、气象学、海洋科学等领域，特别适合于存储大量的多维数组数据。</p>
+<p>NetCDF的主要特点包括自描述性、可扩展性和可移植性。自描述性意味着NetCDF文件包含了数据的元信息，例如数据的单位、坐标轴信息等。可扩展性意味着可以在不影响已有数据和程序的情况下向NetCDF文件中添加新的数据。可移植性意味着NetCDF文件可以在不同的硬件和操作系统之间无缝地共享和传输。</p>
+<p>NetCDF支持多种数据类型，并且可以处理大规模的数据集。它提供了一套简单但强大的接口，使得用户可以方便地创建、访问和共享科学数据。此外，NetCDF还支持无损压缩和分块存储，这使得它可以高效地处理大规模的数据。</p>
+<h1 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h1><p>现有一个 3D 时间序列降水数据 (187 x 1800 x 3600)，存储在 NetCDF 文件中。我需要获取 指定shapefile 范围内的降水数据。即根据shp数据去裁剪nc数据。</p>
+<p>值得说明的是，咱写代码一般是先分析需求，再根据需求去编程。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> geopandas
+<span class="token keyword">import</span> rioxarray
+<span class="token keyword">import</span> xarray
+<span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry <span class="token keyword">import</span> mapping
+
+<span class="token keyword">def</span> <span class="token function">clip_to_shape</span><span class="token punctuation">(</span>nc_file_path<span class="token punctuation">,</span> shp_file_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Load the NetCDF</span>
+    data <span class="token operator">=</span> xarray<span class="token punctuation">.</span>open_dataarray<span class="token punctuation">(</span>nc_file_path<span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>rio<span class="token punctuation">.</span>set_spatial_dims<span class="token punctuation">(</span>x_dim<span class="token operator">=</span><span class="token string">"lon"</span><span class="token punctuation">,</span> y_dim<span class="token operator">=</span><span class="token string">"lat"</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+    data<span class="token punctuation">.</span>rio<span class="token punctuation">.</span>write_crs<span class="token punctuation">(</span><span class="token string">"epsg:4326"</span><span class="token punctuation">,</span> inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># Load the Shapefile</span>
+    shape <span class="token operator">=</span> geopandas<span class="token punctuation">.</span>read_file<span class="token punctuation">(</span>shp_file_path<span class="token punctuation">,</span> crs<span class="token operator">=</span><span class="token string">"epsg:4326"</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># Clip the DataArray to the shape</span>
+    clipped <span class="token operator">=</span> data<span class="token punctuation">.</span>rio<span class="token punctuation">.</span>clip<span class="token punctuation">(</span>shape<span class="token punctuation">.</span>geometry<span class="token punctuation">.</span><span class="token builtin">apply</span><span class="token punctuation">(</span>mapping<span class="token punctuation">)</span><span class="token punctuation">,</span> shape<span class="token punctuation">.</span>crs<span class="token punctuation">,</span> drop<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> clipped<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>上一段代码，我们使用Python的几个主要地理数据处理库（包括geopandas，rioxarray和xarray）来进行一些地理数据的操作。</p>
+<p>让我们逐行解释一下这段代码的作用：</p>
+<ol>
+<li>导入需要的库：geopandas用于处理地理空间数据，rioxarray和xarray用于处理NetCDF数据，shapely.geometry用于处理几何对象。</li>
+<li>定义函数<code>clip_to_shape</code>，它接受两个参数：NetCDF文件路径和Shapefile文件路径。</li>
+<li>加载NetCDF文件：使用xarray的<code>open_dataarray</code>函数打开NetCDF文件，并将结果存储在变量<code>data</code>中。然后，使用rioxarray的<code>set_spatial_dims</code>函数设置空间维度，这里设置的是经度（”lon”）和纬度（”lat”）。最后，使用<code>write_crs</code>函数写入坐标参考系统（CRS），这里设置的是”epsg:4326”，即WGS84地理坐标系统。</li>
+<li>加载Shapefile文件：使用geopandas的<code>read_file</code>函数打开Shapefile文件，并将结果存储在变量<code>shape</code>中。这里也设置了坐标参考系统为”epsg:4326”。</li>
+<li>裁剪：使用rioxarray的<code>clip</code>函数将NetCDF数据裁剪以适应Shapefile的几何形状。<code>shape.geometry.apply(mapping)</code>将Shapefile的每个几何对象转换为可以用于裁剪的格式。<code>shape.crs</code>指定了裁剪操作的坐标参考系统。<code>drop=False</code>表示如果裁剪后的数据为空，仍然保留原始数据的元数据。</li>
+<li>返回裁剪后的数据。</li>
+</ol>
+<p>总的来说，这段代码的主要目的是读取一个NetCDF文件和一个Shapefile文件，然后将NetCDF文件的数据裁剪到Shapefile文件定义的区域。</p>
+<p>今天不吹水，认认真真写代码。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】根据经纬度从数字高程模型（DEM）文件获取高度</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】XYZ格式地形(水深)数据转换为ASCIIGrid格式</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

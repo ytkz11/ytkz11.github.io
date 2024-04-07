@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            【代码】XYZ格式地形(水深)数据转换为ASCIIGrid格式 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【代码】XYZ格式地形(水深)数据转换为ASCIIGrid格式</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-03-17 22:00:10</span>
+        <span class="mobile">2024-03-17 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-03-29 15:06:26</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。</p>
+<p>这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒效应可以用来测量海底的粗糙度和其它特性。这种方法可以生成大面积的高分辨率水深图。</p>
+<p>这次，展示水深测量数据的一般处理过程。</p>
+<h2 id="数据的格式和特点"><a href="#数据的格式和特点" class="headerlink" title="数据的格式和特点"></a>数据的格式和特点</h2><p>本项目处理的数据是XYZ格式的地形数据。XYZ格式是一种常见的地理数据格式，其中每一行包含一个点的X、Y和Z坐标。在地形数据中，X和Y通常代表地理坐标（例如经度和纬度），Z代表地形高度或深度。</p>
+<p>XYZ格式的特点包括：</p>
+<ul>
+<li>简单：每行包含一个数据点，每个数据点包含三个字段（X、Y和Z）。</li>
+<li>灵活：可以表示任何三维空间的数据点。</li>
+<li>通用：被许多地理信息系统（GIS）和数据处理工具所支持。</li>
+</ul>
+<p>然而，XYZ格式的一个缺点是它不直接支持网格数据。在许多应用中，我们需要将散点数据转换为规则的网格，以便进行进一步的分析和可视化。这就是本项目的目的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403291502074.png" alt="image-20240329150243476"></p>
+<h2 id="数据处理过程"><a href="#数据处理过程" class="headerlink" title="数据处理过程"></a>数据处理过程</h2><p>我们的任务是将XYZ格式的地形数据转换为ASCIIGrid格式。ASCIIGrid是一种网格数据格式，它以ASCII文本形式存储规则网格的单元格值。</p>
+<p>转换过程包括以下步骤：</p>
+<ol>
+<li>读取XYZ文件。</li>
+<li>计算数据的最小和最大X和Y坐标。</li>
+<li>根据给定的分辨率，为X和Y坐标创建bins。</li>
+<li>使用numpy的<code>histogram2d</code>函数，根据X和Y的bins创建一个2D直方图（即网格）。这个函数会计算每个网格单元格中的点的数量和Z值的总和。</li>
+<li>在每个网格单元格中，将Z值的总和除以点的数量，得到平均Z值。这就是我们的网格数据。</li>
+<li>将没有数据的网格单元格（即没有点的单元格和只包含NaN值的单元格）的值设置为NoData值（在本例中为-9999）。</li>
+<li>沿Y轴翻转网格，以纠正方向。</li>
+<li>将网格数据写入ASCIIGrid文件。</li>
+</ol>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+<span class="token keyword">def</span> <span class="token function">xyz_to_asciigrid</span><span class="token punctuation">(</span>xyz_file<span class="token punctuation">,</span> asc_file<span class="token punctuation">,</span> resolution<span class="token operator">=</span><span class="token number">1.0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 读取XYZ文件（忽略第四个字段）</span>
+    xyz_data <span class="token operator">=</span> np<span class="token punctuation">.</span>loadtxt<span class="token punctuation">(</span>xyz_file<span class="token punctuation">,</span> usecols<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 获取最小和最大坐标</span>
+    x_min<span class="token punctuation">,</span> y_min <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>xyz_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>xyz_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    x_max<span class="token punctuation">,</span> y_max <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>xyz_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>xyz_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 为x和y创建bins</span>
+    x_bins <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>x_min<span class="token punctuation">,</span> x_max <span class="token operator">+</span> resolution<span class="token punctuation">,</span> resolution<span class="token punctuation">)</span>
+    y_bins <span class="token operator">=</span> np<span class="token punctuation">.</span>arange<span class="token punctuation">(</span>y_min<span class="token punctuation">,</span> y_max <span class="token operator">+</span> resolution<span class="token punctuation">,</span> resolution<span class="token punctuation">)</span>
+
+    <span class="token comment"># 创建一个2D直方图来表示网格</span>
+    grid<span class="token punctuation">,</span> _<span class="token punctuation">,</span> _ <span class="token operator">=</span> np<span class="token punctuation">.</span>histogram2d<span class="token punctuation">(</span>xyz_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> xyz_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> bins<span class="token operator">=</span><span class="token punctuation">(</span>y_bins<span class="token punctuation">,</span> x_bins<span class="token punctuation">)</span><span class="token punctuation">,</span> weights<span class="token operator">=</span>xyz_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    count<span class="token punctuation">,</span> _<span class="token punctuation">,</span> _ <span class="token operator">=</span> np<span class="token punctuation">.</span>histogram2d<span class="token punctuation">(</span>xyz_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> xyz_data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> bins<span class="token operator">=</span><span class="token punctuation">(</span>y_bins<span class="token punctuation">,</span> x_bins<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 在count不为零的地方，将网格除以count</span>
+    grid<span class="token punctuation">[</span>count <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">/=</span> count<span class="token punctuation">[</span>count <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">]</span>
+
+    <span class="token comment"># 用NoData值替换NaN值和count为零的单元格</span>
+    grid<span class="token punctuation">[</span>np<span class="token punctuation">.</span>isnan<span class="token punctuation">(</span>grid<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span>count <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">9999</span>
+
+    <span class="token comment"># 沿Y轴翻转网格以纠正方向</span>
+    grid <span class="token operator">=</span> np<span class="token punctuation">.</span>flipud<span class="token punctuation">(</span>grid<span class="token punctuation">)</span>
+
+    <span class="token comment"># 写入ASCIIGrid文件</span>
+    nrows<span class="token punctuation">,</span> ncols <span class="token operator">=</span> grid<span class="token punctuation">.</span>shape
+    header <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f"ncols </span><span class="token interpolation"><span class="token punctuation">{</span>ncols<span class="token punctuation">}</span></span><span class="token string">\nnrows </span><span class="token interpolation"><span class="token punctuation">{</span>nrows<span class="token punctuation">}</span></span><span class="token string">\nxllcorner </span><span class="token interpolation"><span class="token punctuation">{</span>x_min<span class="token punctuation">}</span></span><span class="token string">\nyllcorner </span><span class="token interpolation"><span class="token punctuation">{</span>y_min<span class="token punctuation">}</span></span><span class="token string">\ncellsize </span><span class="token interpolation"><span class="token punctuation">{</span>resolution<span class="token punctuation">}</span></span><span class="token string">\nNODATA_value -9999\n"</span></span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>asc_file<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+        <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span>header<span class="token punctuation">)</span>
+        np<span class="token punctuation">.</span>savetxt<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">,</span> grid<span class="token punctuation">,</span> fmt<span class="token operator">=</span><span class="token string">"%f"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    xyz_file <span class="token operator">=</span> <span class="token string">r'bathymetry.xyz'</span>
+    asc_file <span class="token operator">=</span> <span class="token string">r'bathymetry.asc'</span>
+    xyz_to_asciigrid<span class="token punctuation">(</span>xyz_file<span class="token punctuation">,</span> asc_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>bathymetry.asc结果展示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403291504275.png" alt="image-20240329150415643"></p>
+<p>打开bathymetry.asc文件，文件前六行是数据的属性，</p>
+<p>从第7行到最后一行，是一个网格数据，代表水深信息。其中-9999是无效值。</p>
+<p>整个工程的文件如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403291503824.png" alt="image-20240329150323872"></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/03/18/dai-ma-gen-ju-shi-liang-cai-jian-netcdf-shi-jian-xu-lie-shu-ju/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】根据矢量裁剪NetCDF 时间序列数据</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】多个shapefile面合并</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

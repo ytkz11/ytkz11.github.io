@@ -139,19 +139,16 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/">
-                        arcgis闪退导致shp文件破损及修复方法
+                    <a href="/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/">
+                        线矢量分割面矢量
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        arcgis闪退再一次出现了正在画矢量时，arcgis软件闪退，导致shp文件不能打开，这次详细的记录下来，解决方法。
-
-普通的修复方法在ENVI软件打开对应的shp文件，把shp拖拽到envi中。
-
-点击Load Data.
-在左侧的Later M...
+                        最近遇到一个问题：怎么用线矢量去切割面矢量。这个功能看似很简单，其实还是要一定的功夫才能完成它。所以也才有了这篇技术文章的记录。
+目的：使用线段分割多边形，并将分割后的多边形保存为Shapefile文件
+代码#!/usr/bin/env python...
                     
                 </div>
 
@@ -159,15 +156,15 @@
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Oct 25 2023 16:13:56 GMT+0800">
-                2023-10-25
+            <span class="home-article-date" data-updated="Thu Jan 25 2024 14:25:18 GMT+0800">
+                2024-01-25
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/01/15/xian-shi-liang-fen-ge-mian-shi-liang/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -177,17 +174,17 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/">
-                        编程 | Landsat9影像转真彩色RGBA缩略图
+                    <a href="/2024/01/10/he-bing-dan-ge-wen-jian-nei-duo-ge-chong-die-de-duo-bian-xing-mian-shi-liang/">
+                        合并单个文件内多个重叠的多边形面矢量
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        Landsat 9从USGS下载Landsat9影像，Landsat9影像和国产影像不一样的地方在于：
-1.Landsat9影像已做好了几何校正，无rpc文件。
-2.Landsat9影像以单波段的形式，将每个波段保存为单独的文件。
-Landsat9 ...
+                        引言传统操作面矢量合并，在arcgis是一个常见的操作。使用ArcGIS合并重叠的多边形的步骤如下：
+
+准备数据：首先需要准备待处理的重叠多边形数据，这可以通过遥感影像解译、野外实地调查等方式获得。
+构建重叠区域图层：使用ArcGIS的”Union”...
                     
                 </div>
 
@@ -195,15 +192,15 @@ Landsat9 ...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Oct 16 2023 17:46:34 GMT+0800">
-                2023-10-16
+            <span class="home-article-date" data-updated="Fri Feb 02 2024 16:03:26 GMT+0800">
+                2024-02-02
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/01/10/he-bing-dan-ge-wen-jian-nei-duo-ge-chong-die-de-duo-bian-xing-mian-shi-liang/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -213,14 +210,18 @@ Landsat9 ...
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/">
-                        编程 | 从RGBA图片格式理解波段
+                    <a href="/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/">
+                        shp文件在arcgis打开失败及其修复
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        RGBA格式RGBA是一种色彩空间的模型，由RGB色彩空间和Alpha通道组成。RGBA代表红、绿、蓝和Alpha通道。 RGB是RGBA采用的颜色，它可以属于任何一种RGB色彩空间。而艾德文·卡特姆和匠白光在1971至1972年间提出的Alpha参...
+                        引言
+打开不了shp文件同学们在平常使用arcgis的时候，是否遇到了下面这样的情况。
+
+这是由于shp文件丢失了部分数据，导致在arcgis打不开。
+1个 Shape文件结构Shape文件的文件构成Shape文件由3 个文件构成: 主文件、索引文件...
                     
                 </div>
 
@@ -228,15 +229,15 @@ Landsat9 ...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Oct 13 2023 19:16:41 GMT+0800">
-                2023-10-13
+            <span class="home-article-date" data-updated="Sun Apr 07 2024 13:08:17 GMT+0800">
+                2024-04-07
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -246,17 +247,18 @@ Landsat9 ...
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/">
-                        GDAL读取HDF、NetCDF数据集
+                    <a href="/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/">
+                        编程_矢量转为栅格
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        HDF5、NetCDF默认HDF5、NetCDF这两类文件是相似，读取文件的步骤也是相似的。
-HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc
-以下用nc文件代指HDF、NetCDF文件。
-对程序员来说，nc文件和zip、jpeg、...
+                        
+需求现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。
+代码#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+# @Time : 2023/11/30 10:...
                     
                 </div>
 
@@ -264,7 +266,43 @@ HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jan 31 2024 17:33:20 GMT+0800">
+            <span class="home-article-date" data-updated="Thu Dec 28 2023 08:48:42 GMT+0800">
+                2023-12-28
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/">
+                        如何将tif格式的文件由30m重采样到100m?
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        在知乎上看到这个问题，记录一下解决的过程。
+命令行的方式如果你安装编译好gdal，可以使用以下命令：
+gdalwarp -tr 100 100 input.tif output.tif
+代码的方式此外，你还可以用python代码的方式进行重采样，把影...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Wed Jan 31 2024 16:45:19 GMT+0800">
                 2024-01-31
             </span>
         </span>
@@ -272,7 +310,7 @@ HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc
         
     </div>
 
-    <a class="read-more" href="/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -282,14 +320,18 @@ HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/06/12/gadm-shi-liang-xia-zai/">
-                        GADM-矢量下载
+                    <a href="/2023/12/22/shi-liang-zuo-biao-zhuan-huan/">
+                        矢量坐标转换
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
                         
+需要把非84坐标的矢量转换为WGS84坐标的矢量。
+方法介绍跟栅格数据投影转换一样，使用GDAL库，我们有两种方法进行矢量数据的重投影：
+1.使用命令工具及其对应的命令行API接口进行转换（简单，准确，实践中一定要用这种方法）
+GDAL提供了ogr...
                     
                 </div>
 
@@ -297,15 +339,15 @@ HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Jun 12 2023 10:46:20 GMT+0800">
-                2023-06-12
+            <span class="home-article-date" data-updated="Tue Dec 26 2023 09:00:06 GMT+0800">
+                2023-12-26
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/06/12/gadm-shi-liang-xia-zai/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/22/shi-liang-zuo-biao-zhuan-huan/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -315,25 +357,18 @@ HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/02/27/hello-go/">
-                        hello go
+                    <a href="/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/">
+                        pyside6将图片资源转为py格式
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        函数package main
-
-import (
-   "fmt"
-   _ "fmt"
-)
-
-func main() {
-   var a int = 5
-   var b int = 5
-   var ret int
-   ret = addd(...
+                        需求pyside6将图片资源转为py格式， 是为了打包为exe的时候不丢失图片文件
+步骤新建img.qrc文件，例子如下：
+&lt;RCC&gt;
+    &lt;qresource prefix="pic"&gt;
+        &lt;file...
                     
                 </div>
 
@@ -341,15 +376,15 @@ func main() {
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Mar 01 2023 08:46:02 GMT+0800">
-                2023-03-01
+            <span class="home-article-date" data-updated="Thu Dec 21 2023 10:12:42 GMT+0800">
+                2023-12-21
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/02/27/hello-go/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -359,15 +394,22 @@ func main() {
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/">
-                        himawari8地球同步卫星影像瓦片下载
+                    <a href="/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/">
+                        GIS格式和地理空间文件扩展名的汇总
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        himawari8地球同步卫星地球静止轨道（或作“地球静止同步轨道”、“地球静止卫星轨道”、“克拉克轨道”）是特别指卫星或人造卫星垂直于地球赤道上方的正圆形地球同步轨道。地球静止轨道属于地球同步轨道的一种。
-人造卫星与地面相对静止，固定在赤道上空。顺...
+                        某些地理空间数据格式很常见。但有些并不常见。笔者汇总 GIS 文件格式：
+矢量 GIS 文件格式
+矢量数据不是由像素网格组成的。相反，矢量图形由顶点和路径组成
+矢量数据的三种基本符号类型是点、线和面（面）。这些GIS文件格式包含矢量数据。
+
+
+
+
+文...
                     
                 </div>
 
@@ -375,15 +417,15 @@ func main() {
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Feb 27 2023 20:46:14 GMT+0800">
-                2023-02-27
+            <span class="home-article-date" data-updated="Mon Dec 11 2023 17:05:49 GMT+0800">
+                2023-12-11
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/02/27/himawari8-di-qiu-tong-bu-wei-xing-ying-xiang-wa-pian-xia-zai/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -393,15 +435,15 @@ func main() {
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/02/21/pyqt-zi-xue-ji-lu/">
-                        自学PyQt-GUI编程
+                    <a href="/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/">
+                        如何列出 Python 项目中使用的模块
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        为什么要学PyQt
-
+                        在项目开发中，我们有时会引入一些包，后续由于种种原因，并没有 import 到项目中。如果在部署到时候使用 pip freeze，则会将这些并未引入到包也列到 requirements 中，而实际这些包是不需要的。
+pipreqs 这个包就可以解决这...
                     
                 </div>
 
@@ -409,15 +451,15 @@ func main() {
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Feb 21 2023 15:30:21 GMT+0800">
-                2023-02-21
+            <span class="home-article-date" data-updated="Mon Feb 19 2024 10:51:54 GMT+0800">
+                2024-02-19
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/02/21/pyqt-zi-xue-ji-lu/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -427,18 +469,16 @@ func main() {
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/02/16/kotlin-zi-xue-ji-lu-2/">
-                        kotlin自学记录2，第二天2023年2月16日
+                    <a href="/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/">
+                        编程_不使用gdal读取tif文件
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                         
-
-OOPObject-Oriented Programming简称OOP，中文叫做面向对象编程。
-和面向对象编程不一样的是另一种编程思想：面向过程编程。
-过程编程是关于编写对数据执行操作的过程或方法，而面向对象编程是关于创建包含数据和方法的对象。...
+                        读取tif文件正常来说，读取tif文件，使用gdal库就能解决了。
+gdal库在遥感行业过于强大、简单、易用，以至于很多商业软件的底层也调用了gdal。
+平常在python环境下使用gdal库对tif文件进行读写是很简单的，大佬们都把函数、接口封装得...
                     
                 </div>
 
@@ -446,51 +486,15 @@ OOPObject-Oriented Programming简称OOP，中文叫做面向对象编程。
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Thu Feb 16 2023 19:31:27 GMT+0800">
-                2023-02-16
+            <span class="home-article-date" data-updated="Tue Apr 02 2024 13:25:49 GMT+0800">
+                2024-04-02
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/02/16/kotlin-zi-xue-ji-lu-2/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/02/16/ji-lu-yi-ci-pa-chong-li-zi/">
-                        记录一次爬虫例子
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        
-爬虫网络爬虫（又被称为网页蜘蛛，网络机器人）就是模拟浏览器发送网络请求，接收请求响应，一种按照一定的规则，自动地抓取互联网信息的程序。原则上,只要是浏览器(客户端)能做的事情，爬虫都能够做。
-准备
-我们平时都说Python爬虫，其实这里可能有个误解...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Feb 20 2023 17:31:48 GMT+0800">
-                2023-02-20
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2023/02/16/ji-lu-yi-ci-pa-chong-li-zi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
