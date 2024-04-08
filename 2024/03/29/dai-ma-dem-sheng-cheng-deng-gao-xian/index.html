@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-03-29 16:32:15</span>
+        <span class="pc">2024-04-08 10:13:35</span>
     </span>
     
     
@@ -210,13 +210,13 @@
 
                 <p>本质是输入为高程asc文件，输出为shp文件。</p>
 <p>直接上代码：</p>
-<pre class="line-numbers language-none"><code class="language-none">
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">
 
-from osgeo import gdal, ogr
-import sys
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> ogr
+<span class="token keyword">import</span> sys
 
-def generate_contour(source, target, contour_interval=400, contour_base=10):
-    """
+<span class="token keyword">def</span> <span class="token function">generate_contour</span><span class="token punctuation">(</span>source<span class="token punctuation">,</span> target<span class="token punctuation">,</span> contour_interval<span class="token operator">=</span><span class="token number">400</span><span class="token punctuation">,</span> contour_base<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
     从给定的DEM生成等高线，并保存为Shapefile格式。
 
     参数:
@@ -231,38 +231,42 @@ def generate_contour(source, target, contour_interval=400, contour_base=10):
 
     返回:
     None
-    """
+    """</span>
 
-    # 创建Shapefile数据源
-    ogr_driver = ogr.GetDriverByName('ESRI Shapefile')
-    ogr_ds = ogr_driver.CreateDataSource(target + ".shp")
+    <span class="token comment"># 创建Shapefile数据源</span>
+    ogr_driver <span class="token operator">=</span> ogr<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">'ESRI Shapefile'</span><span class="token punctuation">)</span>
+    ogr_ds <span class="token operator">=</span> ogr_driver<span class="token punctuation">.</span>CreateDataSource<span class="token punctuation">(</span>target <span class="token operator">+</span> <span class="token string">".shp"</span><span class="token punctuation">)</span>
 
-    # 创建图层并添加字段
-    ogr_lyr = ogr_ds.CreateLayer(target, geom_type=ogr.wkbLineString25D)
-    field_defn = ogr.FieldDefn('ID', ogr.OFTInteger)
-    ogr_lyr.CreateField(field_defn)
-    field_defn = ogr.FieldDefn('ELEV', ogr.OFTReal)
-    ogr_lyr.CreateField(field_defn)
+    <span class="token comment"># 创建图层并添加字段</span>
+    ogr_lyr <span class="token operator">=</span> ogr_ds<span class="token punctuation">.</span>CreateLayer<span class="token punctuation">(</span>target<span class="token punctuation">,</span> geom_type<span class="token operator">=</span>ogr<span class="token punctuation">.</span>wkbLineString25D<span class="token punctuation">)</span>
+    field_defn <span class="token operator">=</span> ogr<span class="token punctuation">.</span>FieldDefn<span class="token punctuation">(</span><span class="token string">'ID'</span><span class="token punctuation">,</span> ogr<span class="token punctuation">.</span>OFTInteger<span class="token punctuation">)</span>
+    ogr_lyr<span class="token punctuation">.</span>CreateField<span class="token punctuation">(</span>field_defn<span class="token punctuation">)</span>
+    field_defn <span class="token operator">=</span> ogr<span class="token punctuation">.</span>FieldDefn<span class="token punctuation">(</span><span class="token string">'ELEV'</span><span class="token punctuation">,</span> ogr<span class="token punctuation">.</span>OFTReal<span class="token punctuation">)</span>
+    ogr_lyr<span class="token punctuation">.</span>CreateField<span class="token punctuation">(</span>field_defn<span class="token punctuation">)</span>
 
-    # 打开DEM文件
-    ds = gdal.Open(source)
-    if ds is None:
-        print(f"打开文件失败: {source}")
-        sys.exit(1)
+    <span class="token comment"># 打开DEM文件</span>
+    ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>source<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> ds <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"打开文件失败: </span><span class="token interpolation"><span class="token punctuation">{</span>source<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 
-    # 生成等高线
-    result = gdal.ContourGenerate(ds.GetRasterBand(1), contour_interval, contour_base, [], 0, 0, ogr_lyr, 0, 1)
-    if result != 0:
-        print(f"等高线生成失败: {gdal.GetLastErrorMsg()}")
-        sys.exit(2)
+    <span class="token comment"># 生成等高线</span>
+    result <span class="token operator">=</span> gdal<span class="token punctuation">.</span>ContourGenerate<span class="token punctuation">(</span>ds<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> contour_interval<span class="token punctuation">,</span> contour_base<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> ogr_lyr<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> result <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"等高线生成失败: </span><span class="token interpolation"><span class="token punctuation">{</span>gdal<span class="token punctuation">.</span>GetLastErrorMsg<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
 
-    # 关闭数据集
-    ds = None
-    ogr_ds = None
-if __name__ == '__main__':
-    generate_contour("dem.asc", "contour")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token comment"># 关闭数据集</span>
+    ds <span class="token operator">=</span> <span class="token boolean">None</span>
+    ogr_ds <span class="token operator">=</span> <span class="token boolean">None</span>
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    generate_contour<span class="token punctuation">(</span><span class="token string">"dem.asc"</span><span class="token punctuation">,</span> <span class="token string">"contour"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>结果展示：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403291625733.png" alt="image-20240329162554372"></p>
+<p>这个函数的主要任务是从地形高程信息文件（DEM文件）生成等高线，并将这些等高线保存到Shapefile文件中。DEM文件是一种栅格数据，其中每个像素的值表示相应位置的高程。Shapefile文件是一种矢量数据格式，可以存储包括点、线或多边形在内的地理元素以及相关的属性信息。</p>
+<p>在函数的执行过程中，首先，函数通过接收DEM文件的路径、输出Shapefile文件的路径以及等高线的间隔和基准作为参数来开始工作。接着，利用GDAL和OGR库，函数打开DEM文件并创建Shapefile数据源。在Shapefile数据源中，函数创建一个新的图层，并在这个图层中添加ID和ELEV字段，用于记录等高线的唯一标识和相应的高程。</p>
+<p>之后，函数调用GDAL库的<code>ContourGenerate</code>函数从DEM数据生成等高线，并将这些等高线添加到Shapefile图层中。在这个过程中，如果遇到任何错误，函数将会打印错误信息并停止执行。</p>
+<p>最后，函数关闭并释放DEM数据和Shapefile数据源，完成等高线的生成和保存工作。这个过程利用了栅格数据和矢量数据的特性，通过对DEM数据的处理和转换，生成了可用于地理信息系统的Shapefile等高线数据。</p>
 <p><strong>数据结构：</strong></p>
 <ol>
 <li>DEM文件：这是一个包含地形高程信息的文件，通常以.asc或.tif等格式保存。在这个函数中，我们将其路径作为<code>source</code>参数传入。</li>
@@ -272,22 +276,6 @@ if __name__ == '__main__':
 <ol>
 <li>DEM数据：它是一种栅格数据，每个像素的值表示那个位置的高程。</li>
 <li>Shapefile数据：它是一种矢量数据，可以包含点、线或多边形等地理元素，每个元素都可以有一个或多个属性。在这个函数中，我们生成的是线类型的元素，即等高线，每条等高线都有一个ID和一个ELEV属性，分别表示等高线的唯一标识和高程。</li>
-</ol>
-<p><strong>数据过程：</strong></p>
-<ol>
-<li>打开DEM文件：使用GDAL库的<code>Open</code>函数打开DEM文件。</li>
-<li>创建Shapefile数据源：使用OGR库的<code>GetDriverByName</code>和<code>CreateDataSource</code>函数创建Shapefile数据源。</li>
-<li>创建图层并添加字段：在Shapefile数据源中创建一个图层，然后在该图层中添加ID和ELEV字段。</li>
-<li>生成等高线：使用GDAL库的<code>ContourGenerate</code>函数从DEM数据生成等高线，并将等高线添加到Shapefile图层中。</li>
-<li>关闭数据源和数据集：使用<code>None</code>来关闭并释放DEM数据和Shapefile数据源。</li>
-</ol>
-<p><strong>代码逻辑：</strong></p>
-<ol>
-<li>首先，函数接受DEM文件的路径、输出Shapefile文件的路径和等高线的间隔和基准作为参数。</li>
-<li>然后，函数创建一个Shapefile数据源和一个图层，并在图层中添加ID和ELEV字段。</li>
-<li>函数打开DEM数据，然后调用<code>gdal.ContourGenerate</code>函数生成等高线，并将等高线添加到Shapefile图层中。</li>
-<li>如果在打开DEM数据或生成等高线的过程中出现错误，函数将打印错误信息并退出。</li>
-<li>最后，函数关闭并释放DEM数据和Shapefile数据源。</li>
 </ol>
 
             </div>

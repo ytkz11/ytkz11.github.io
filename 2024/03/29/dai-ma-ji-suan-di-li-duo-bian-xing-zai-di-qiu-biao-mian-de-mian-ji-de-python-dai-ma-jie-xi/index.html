@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            【代码】计算地理多边形在地球表面的面积的Python代码解析 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【代码】计算地理多边形在地球表面的面积的Python代码解析</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-03-29 22:00:10</span>
+        <span class="mobile">2024-03-29 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-04-08 11:21:03</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>我们现在要探索的是一个名为”area”的Python包。这个包的主要功能是计算地理多边形在地球表面的面积。为了深入理解其工作原理，我们将直接研究这个包的源代码，特别关注它是如何根据给定的经纬度来计算地理多边形的面积。这将是一个深入学习Python编程以及地理信息处理的绝佳机会。</p>
+<p><img src="https://qph.cf2.quoracdn.net/main-qimg-3fec8ff7329d3a79f08237cbf84d41c2-lq" alt="img"></p>
+<p>以下是添加中文注释后的代码：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> division  <span class="token comment"># 使得除法的结果为浮点数，即使两个操作数都是整数</span>
+
+<span class="token keyword">import</span> json  <span class="token comment"># 用于处理JSON格式的数据</span>
+<span class="token keyword">from</span> math <span class="token keyword">import</span> pi<span class="token punctuation">,</span> sin  <span class="token comment"># 导入数学库中的圆周率和正弦函数</span>
+
+__version__ <span class="token operator">=</span> <span class="token string">'1.1.1'</span>  <span class="token comment"># 版本信息</span>
+WGS84_RADIUS <span class="token operator">=</span> <span class="token number">6378137</span>  <span class="token comment"># 定义WGS84椭球体赤道半径，单位是米</span>
+
+
+<span class="token keyword">def</span> <span class="token function">rad</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 定义一个函数，将角度转换为弧度</span>
+    <span class="token keyword">return</span> value <span class="token operator">*</span> pi <span class="token operator">/</span> <span class="token number">180</span>
+
+
+<span class="token keyword">def</span> <span class="token function">ring__area</span><span class="token punctuation">(</span>coordinates<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 计算一个环的面积</span>
+    <span class="token keyword">assert</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>coordinates<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token builtin">tuple</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 断言坐标必须是列表或元组类型</span>
+
+    _area <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 初始化面积为0</span>
+    coordinates_length <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>coordinates<span class="token punctuation">)</span>  <span class="token comment"># 获取坐标的数量</span>
+
+    <span class="token keyword">if</span> coordinates_length <span class="token operator">&gt;</span> <span class="token number">2</span><span class="token punctuation">:</span>  <span class="token comment"># 如果坐标数量大于2，即多边形至少有3个顶点</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> coordinates_length<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 遍历所有的坐标</span>
+            <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token punctuation">(</span>coordinates_length <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 如果当前是倒数第二个坐标</span>
+                lower_index <span class="token operator">=</span> coordinates_length <span class="token operator">-</span> <span class="token number">2</span>
+                middle_index <span class="token operator">=</span> coordinates_length <span class="token operator">-</span> <span class="token number">1</span>
+                upper_index <span class="token operator">=</span> <span class="token number">0</span>
+            <span class="token keyword">elif</span> i <span class="token operator">==</span> <span class="token punctuation">(</span>coordinates_length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 如果当前是最后一个坐标</span>
+                lower_index <span class="token operator">=</span> coordinates_length <span class="token operator">-</span> <span class="token number">1</span>
+                middle_index <span class="token operator">=</span> <span class="token number">0</span>
+                upper_index <span class="token operator">=</span> <span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>  <span class="token comment"># 其他情况</span>
+                lower_index <span class="token operator">=</span> i
+                middle_index <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
+                upper_index <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">2</span>
+
+            p1 <span class="token operator">=</span> coordinates<span class="token punctuation">[</span>lower_index<span class="token punctuation">]</span>  <span class="token comment"># 获取三个坐标点</span>
+            p2 <span class="token operator">=</span> coordinates<span class="token punctuation">[</span>middle_index<span class="token punctuation">]</span>
+            p3 <span class="token operator">=</span> coordinates<span class="token punctuation">[</span>upper_index<span class="token punctuation">]</span>
+
+            _area <span class="token operator">+=</span> <span class="token punctuation">(</span>rad<span class="token punctuation">(</span>p3<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span> rad<span class="token punctuation">(</span>p1<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> sin<span class="token punctuation">(</span>rad<span class="token punctuation">(</span>p2<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 计算面积</span>
+
+        _area <span class="token operator">=</span> _area <span class="token operator">*</span> WGS84_RADIUS <span class="token operator">*</span> WGS84_RADIUS <span class="token operator">/</span> <span class="token number">2</span>  <span class="token comment"># 将面积转换为实际面积</span>
+
+    <span class="token keyword">return</span> _area  <span class="token comment"># 返回面积</span>
+
+
+<span class="token keyword">def</span> <span class="token function">polygon__area</span><span class="token punctuation">(</span>coordinates<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 计算一个多边形的面积</span>
+    <span class="token keyword">assert</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>coordinates<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">,</span> <span class="token builtin">tuple</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 断言坐标必须是列表或元组类型</span>
+
+    _area <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 初始化面积为0</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>coordinates<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>  <span class="token comment"># 如果坐标数量大于0</span>
+        _area <span class="token operator">+=</span> <span class="token builtin">abs</span><span class="token punctuation">(</span>ring__area<span class="token punctuation">(</span>coordinates<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 计算并添加第一个环（通常是外环）的面积</span>
+
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>coordinates<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 遍历剩余的环（通常是内环，即“洞”）</span>
+            _area <span class="token operator">-=</span> <span class="token builtin">abs</span><span class="token punctuation">(</span>ring__area<span class="token punctuation">(</span>coordinates<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 计算并减去每个“洞”的面积</span>
+
+    <span class="token keyword">return</span> _area  <span class="token comment"># 返回面积</span>
+
+
+<span class="token keyword">def</span> <span class="token function">area</span><span class="token punctuation">(</span>geometry<span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 计算一个几何形状的面积</span>
+    <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>geometry<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 如果输入是字符串</span>
+        geometry <span class="token operator">=</span> json<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>geometry<span class="token punctuation">)</span>  <span class="token comment"># 将字符串转换为字典</span>
+
+    <span class="token keyword">assert</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>geometry<span class="token punctuation">,</span> <span class="token builtin">dict</span><span class="token punctuation">)</span>  <span class="token comment"># 断言几何形状必须是字典类型</span>
+
+    _area <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 初始化面积为0</span>
+
+    <span class="token keyword">if</span> geometry<span class="token punctuation">[</span><span class="token string">'type'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'Polygon'</span><span class="token punctuation">:</span>  <span class="token comment"># 如果几何形状是多边形</span>
+        <span class="token keyword">return</span> polygon__area<span class="token punctuation">(</span>geometry<span class="token punctuation">[</span><span class="token string">'coordinates'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 计算并返回多边形的面积</span>
+    <span class="token keyword">elif</span> geometry<span class="token punctuation">[</span><span class="token string">'type'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'MultiPolygon'</span><span class="token punctuation">:</span>  <span class="token comment"># 如果几何形状是多个多边形</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>geometry<span class="token punctuation">[</span><span class="token string">'coordinates'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 遍历每个多边形</span>
+            _area <span class="token operator">+=</span> polygon__area<span class="token punctuation">(</span>geometry<span class="token punctuation">[</span><span class="token string">'coordinates'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 计算并添加每个多边形的面积</span>
+
+    <span class="token comment"># 如果几何形状是几何集合</span>
+    <span class="token keyword">elif</span> geometry<span class="token punctuation">[</span><span class="token string">'type'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'GeometryCollection'</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>geometry<span class="token punctuation">[</span><span class="token string">'geometries'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 遍历每个子形状</span>
+            _area <span class="token operator">+=</span> area<span class="token punctuation">(</span>geometry<span class="token punctuation">[</span><span class="token string">'geometries'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 递归地计算并添加每个子形状的面积</span>
+
+    <span class="token keyword">return</span> _area  <span class="token comment"># 返回面积</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>代码解析</p>
+<p>这段Python代码是用来计算地理多边形（如地图上的国家、省份、城市等区域）在地球表面的面积的。它支持多种地理形状，包括单个多边形（Polygon）、多个多边形（MultiPolygon）和几何集合（GeometryCollection）。</p>
+<p>这段代码的主要工作原理是将地球视为一个球体，并使用球面多边形面积公式来计算面积。这种方法的精度对于大多数应用来说是足够的，但对于需要极高精度的应用，可能需要使用更复杂的模型，如椭球模型。</p>
+<p>具体来说，这段代码包含以下几个函数：</p>
+<ol>
+<li><p><code>rad(value)</code>: 将角度转换为弧度。</p>
+</li>
+<li><p><code>ring__area(coordinates)</code>: 计算一个多边形（由一系列坐标点定义）在地球表面的面积。这个函数使用了Chamberlain和Duquette在2007年的论文中描述的方法。这个方法的基本思想是使用球面三角形的面积公式来近似计算多边形的面积。</p>
+</li>
+<li><p><code>polygon__area(coordinates)</code>: 计算一个多边形或者一个带有孔的多边形（由一系列环定义）在地球表面的面积。对于带有孔的多边形，这个函数会先计算外环的面积，然后减去每个孔的面积。</p>
+</li>
+<li><p><code>area(geometry)</code>: 根据输入的地理形状类型，调用适当的函数来计算面积。这个函数支持多边形（Polygon）、多个多边形（MultiPolygon）和几何集合（GeometryCollection）。对于几何集合，这个函数会递归地计算每个子形状的面积，并将它们相加。</p>
+<p><img src="https://i.stack.imgur.com/fGakG.png" alt="algorithm - Calculate area out of geo-coordinates on non-convex polygons -  Stack Overflow"></p>
+</li>
+</ol>
+<p>如何使用</p>
+<p>安装area</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pip <span class="token function">install</span> area<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>接受一个字典作为输入，该字典表示一个几何形状，其格式符合GeoJSON规范。</p>
+<p>以下是一个简单的使用示例：</p>
+<pre class="line-numbers language-none"><code class="language-none"># 定义一个多边形，其坐标表示一个矩形
+polygon = {
+    "type": "Polygon",
+    "coordinates": [
+        [
+            [100.0, 0.0],
+            [101.0, 0.0],
+            [101.0, 1.0],
+            [100.0, 1.0],
+            [100.0, 0.0]
+        ]
+    ]
+}
+
+# 计算多边形的面积
+polygon_area = area(polygon)
+
+print(f"The area of the polygon is {polygon_area} square meters.")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404081116366.png" alt="image-20240408111601777"></p>
+<p>另外，这个代码还可以处理”MultiPolygon”和”GeometryCollection”类型的几何形状。”MultiPolygon”类型的几何形状包含多个多边形，每个多边形的坐标是一个二维列表，表示多边形的所有顶点，每个顶点是一个长度为2的列表，表示顶点的经度和纬度。”GeometryCollection”类型的几何形状包含多个子形状，每个子形状可以是任何类型的几何形状，包括”Polygon”、”MultiPolygon”和”GeometryCollection”。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】水深测量数据可视化及转格式</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【python】进入python环境的方法</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
