@@ -9,7 +9,7 @@
     
     <title>
         
-            【代码】多个shapefile面合并 |
+            【python】python有指针吗？ |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">【代码】多个shapefile面合并</span>
+                <span class="title-hover-animation">【python】python有指针吗？</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-03-17 22:00:10</span>
-        <span class="mobile">2024-03-17 22:00</span>
+        <span class="pc">2024-04-08 22:30:10</span>
+        <span class="mobile">2024-04-08 22:30</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-03-20 16:38:02</span>
+        <span class="pc">2024-04-08 14:59:53</span>
     </span>
     
     
@@ -175,7 +175,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                        <a href="/categories/python/">python</a>&nbsp;
                     </li>
                 
             </ul>
@@ -187,7 +187,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                        <a href="/tags/python/">python</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,58 +208,26 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <pre class="line-numbers language-none"><code class="language-none">import numpy as np
-from osgeo import gdal
-from osgeo import gdal_array
-from osgeo import osr
-import matplotlib.pylab as plt
-
-# 定义一个二维数组，表示图像数据
-array = np.array(( (0.1, 0.2, 0.3, 0.4),
-                   (0.2, 0.3, 0.4, 0.5),
-                   (0.3, 0.4, 0.5, 0.6),
-                   (0.4, 0.5, 0.6, 0.7),
-                   (0.5, 0.6, 0.7, 0.8) ))
-
-# 定义两个二维数组，分别表示每个像素的纬度和经度
-lat = np.array(( (10.0, 10.0, 10.0, 10.0),
-                 ( 9.5,  9.5,  9.5,  9.5),
-                 ( 9.0,  9.0,  9.0,  9.0),
-                 ( 8.5,  8.5,  8.5,  8.5),
-                 ( 8.0,  8.0,  8.0,  8.0) ))
-lon = np.array(( (20.0, 20.5, 21.0, 21.5),
-                 (20.0, 20.5, 21.0, 21.5),
-                 (20.0, 20.5, 21.0, 21.5),
-                 (20.0, 20.5, 21.0, 21.5),
-                 (20.0, 20.5, 21.0, 21.5) ))
-
-# 根据经纬度数据，计算出地理坐标范围和分辨率
-xmin, ymin, xmax, ymax = [lon.min(), lat.min(), lon.max(), lat.max()]
-nrows, ncols = np.shape(array)
-xres = (xmax - xmin) / float(ncols)
-yres = (ymax - ymin) / float(nrows)
-
-# 定义地理转换参数
-geotransform = (xmin, xres, 0, ymax, 0, -yres)
-
-# 创建一个新的GeoTiff文件
-output_raster = gdal.GetDriverByName('GTiff').Create('myraster.tif', ncols, nrows, 1, gdal.GDT_Float32)
-
-# 设置GeoTiff文件的地理转换参数
-output_raster.SetGeoTransform(geotransform)
-
-# 创建一个空间参考对象，设置其坐标系统为WGS84
-srs = osr.SpatialReference()
-srs.ImportFromEPSG(4326)
-
-# 将空间参考对象的坐标系统信息导出到GeoTiff文件
-output_raster.SetProjection(srs.ExportToWkt())
-
-# 将二维数组写入GeoTiff文件
-output_raster.GetRasterBand(1).WriteArray(array)
-
-# 将所有挂起的写入操作应用到实际文件
-output_raster.FlushCache()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <p>有时候，你可能会听到人们问：”Python有指针吗？”答案取决于你对”指针”的定义。</p>
+<h2 id="指针：经典定义"><a href="#指针：经典定义" class="headerlink" title="指针：经典定义"></a>指针：经典定义</h2><p>在许多编程语言中，指针的经典定义是一个保存其他内容地址的变量，你可以使用它来处理其他内容。在非常广泛的伪代码中，它会是这样的：</p>
+<pre class="line-numbers language-pseudo" data-language="pseudo"><code class="language-pseudo">myvar = xx;
+mypointer = get_address_of(myvar);
+print(get_value_via_pointer(mypointer));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>这种机制非常有用，因为我们可以使用指针来引用数据，在代码的一部分中设置指针，并使用我们需要的任何逻辑来决定它应该指向哪些数据。然后，我们可以在其他地方使用这个指针，而不需要知道它指向的是什么或者如何做出这个决定。指针为我们提供了一种间接方式，使我们能够分离关注点并编写更模块化的代码。</p>
+<p>这里是一个在C语言中的例子：</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">int</span> myvar <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token operator">*</span>mypointer <span class="token operator">=</span> <span class="token operator">&amp;</span>myvar<span class="token punctuation">;</span>
+<span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d\n"</span><span class="token punctuation">,</span> <span class="token operator">*</span>mypointer<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// 输出: 10</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>在这个例子中，<code>myvar</code>是一个整数，<code>mypointer</code>是一个指向<code>myvar</code>的指针。我们使用<code>&amp;</code>运算符获取<code>myvar</code>的地址，并将其赋值给<code>mypointer</code>。然后，我们使用<code>*</code>运算符通过指针获取<code>myvar</code>的值。</p>
+<h2 id="Python中的”指针”"><a href="#Python中的”指针”" class="headerlink" title="Python中的”指针”"></a>Python中的”指针”</h2><p>然而，在Python中，我们不能直接获取或操作内存地址，因为Python的内存管理是由解释器自动处理的。你可以将Python中的变量名视为指向对象的引用，但这并不完全等同于指针。在Python中，你不能获取对象的内存地址，也不能通过内存地址访问或修改对象。这一点与C或C++等支持指针的语言有所不同。</p>
+<p>因此，Python没有能够显式使用指针的经典操作对。但另一方面，Python中的每个变量都可以视为一个指针，因为Python中的变量实际上是引用对象的名称。在Python中，我们的代码示例可能如下所示：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">myvar <span class="token operator">=</span> <span class="token number">10</span>
+mypointer <span class="token operator">=</span> myvar
+<span class="token keyword">print</span><span class="token punctuation">(</span>mypointer<span class="token punctuation">)</span>  <span class="token comment"># 输出: 10</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>在这个例子中，<code>mypointer</code>和<code>myvar</code>都是指向同一个整数对象的引用。当我们改变<code>myvar</code>的值时，<code>mypointer</code>的值不会改变，因为它们指向的是不同的对象。这与C语言中的指针行为有所不同。在C语言中，如果我们通过指针改变了<code>myvar</code>的值，那么打印<code>mypointer</code>将会得到新的值。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>Python语言本身并没有明确的指针概念，这与C或C++等语言有所不同。在C或C++中，指针是一种直接引用内存地址的变量类型，可以用于直接操作内存。这种功能在Python中是不可用的，主要是因为Python是一种更高级的语言，它隐藏了许多底层的细节，如内存管理。</p>
+<p>然而，Python中的变量名实际上是对对象的引用（或者说指向对象的指针）。这种行为有时候会导致一些初学者感到困惑，特别是当他们处理可变对象（如列表或字典）时。例如，如果你有一个列表，将其赋值给另一个变量，然后修改其中一个变量，你会发现另一个变量也被修改了。这是因为这两个变量实际上都指向同一个列表对象。</p>
+<p>总的来说，虽然Python没有真正的指针，但是它的变量名确实在某种程度上表现出了类似指针的行为。这种理解可以帮助我们更好地理解Python的内存管理和变量引用机制。</p>
 
             </div>
 
@@ -269,7 +237,7 @@ output_raster.FlushCache()<span aria-hidden="true" class="line-numbers-rows"><sp
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                            <a href="/tags/python/">#python</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -278,29 +246,14 @@ output_raster.FlushCache()<span aria-hidden="true" class="line-numbers-rows"><sp
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">【代码】使用Python的GDAL/OGR库来创建渔网格</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/"
+                               href="/2024/04/08/dai-ma-ji-suan-di-li-duo-bian-xing-zai-di-qiu-biao-mian-de-mian-ji-de-python-dai-ma-jie-xi/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">【代码】给定起点位置、距离及姿态角，求另一点位置</span>
+                                <span class="post-nav-title-item">【代码】计算地理多边形在地球表面的面积的Python代码解析</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">

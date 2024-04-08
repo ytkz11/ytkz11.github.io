@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-02T01:53:34.091Z</updated>
+  <updated>2024-04-08T06:59:53.818Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【python】python有指针吗？</title>
+    <link href="http://ytkz11@.github.io/2024/04/08/python-python-you-zhi-zhen-ma/"/>
+    <id>http://ytkz11@.github.io/2024/04/08/python-python-you-zhi-zhen-ma/</id>
+    <published>2024-04-08T14:30:10.000Z</published>
+    <updated>2024-04-08T06:59:53.818Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;有时候，你可能会听到人们问：”Python有指针吗？”答案取决于你对”指针”的定义。&lt;/p&gt;
+&lt;h2 id=&quot;指针：经典定义&quot;&gt;&lt;a href=&quot;#指针：经典定义&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】计算地理多边形在地球表面的面积的Python代码解析</title>
+    <link href="http://ytkz11@.github.io/2024/04/08/dai-ma-ji-suan-di-li-duo-bian-xing-zai-di-qiu-biao-mian-de-mian-ji-de-python-dai-ma-jie-xi/"/>
+    <id>http://ytkz11@.github.io/2024/04/08/dai-ma-ji-suan-di-li-duo-bian-xing-zai-di-qiu-biao-mian-de-mian-ji-de-python-dai-ma-jie-xi/</id>
+    <published>2024-04-08T14:00:10.000Z</published>
+    <updated>2024-04-08T03:21:27.396Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我们现在要探索的是一个名为”area”的Python包。这个包的主要功能是计算地理多边形在地球表面的面积。为了深入理解其工作原理，我们将直接研究这个包的源代码，特别关注它是如何根据给定的经纬度来计算地理多边形的面积。这将是一个深入学习Python编程以及地理信息处理的绝佳机</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【代码】GEE下载sentinel2数据遇到的bug及解决</title>
@@ -109,31 +160,6 @@
         
     <summary type="html">&lt;p&gt;水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。&lt;/p&gt;
 &lt;p&gt;这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒效应可以用</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】计算地理多边形在地球表面的面积的Python代码解析</title>
-    <link href="http://ytkz11@.github.io/2024/03/29/dai-ma-ji-suan-di-li-duo-bian-xing-zai-di-qiu-biao-mian-de-mian-ji-de-python-dai-ma-jie-xi/"/>
-    <id>http://ytkz11@.github.io/2024/03/29/dai-ma-ji-suan-di-li-duo-bian-xing-zai-di-qiu-biao-mian-de-mian-ji-de-python-dai-ma-jie-xi/</id>
-    <published>2024-03-29T14:00:10.000Z</published>
-    <updated>2024-04-08T03:21:03.222Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我们现在要探索的是一个名为”area”的Python包。这个包的主要功能是计算地理多边形在地球表面的面积。为了深入理解其工作原理，我们将直接研究这个包的源代码，特别关注它是如何根据给定的经纬度来计算地理多边形的面积。这将是一个深入学习Python编程以及地理信息处理的绝佳机</summary>
         
       
     
@@ -279,19 +305,17 @@
   
   <entry>
     <title>【代码】多个shapefile面合并</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/</id>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</id>
     <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-20T08:38:02.833Z</updated>
+    <updated>2024-03-19T09:32:51.170Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;import numpy as np
-from osgeo import gdal
-from osgeo import</summary>
+    <summary type="html">&lt;h1 id=&quot;什么是GIS面合并&quot;&gt;&lt;a href=&quot;#什么是GIS面合并&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -331,18 +355,18 @@ from osgeo import</summary>
   </entry>
   
   <entry>
-    <title>【代码】多个shapefile面合并</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</id>
+    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
     <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-19T09:32:51.170Z</updated>
+    <updated>2024-03-20T08:35:26.142Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;什么是GIS面合并&quot;&gt;&lt;a href=&quot;#什么是GIS面合并&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -356,18 +380,20 @@ from osgeo import</summary>
   </entry>
   
   <entry>
-    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
+    <title>【代码】多个shapefile面合并</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/</id>
     <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-20T08:35:26.142Z</updated>
+    <updated>2024-03-20T08:38:02.833Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;import numpy as np
+from osgeo import gdal
+from osgeo import</summary>
         
       
     
@@ -516,31 +542,6 @@ from osgeo import</summary>
     
     
     <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>遥感大影像位深转8bit的方法及实现</title>
-    <link href="http://ytkz11@.github.io/2024/02/28/da-ying-xiang-wei-shen-16bit-zhuan-8bit-de-fang-fa-ji-shi-xian/"/>
-    <id>http://ytkz11@.github.io/2024/02/28/da-ying-xiang-wei-shen-16bit-zhuan-8bit-de-fang-fa-ji-shi-xian/</id>
-    <published>2024-02-28T14:00:10.000Z</published>
-    <updated>2024-02-29T16:04:24.992Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;位深&quot;&gt;&lt;a href=&quot;#位深&quot; class=&quot;headerlink&quot; title=&quot;位深&quot;&gt;&lt;/a&gt;位深&lt;/h1&gt;&lt;p&gt;位深（Bit</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
