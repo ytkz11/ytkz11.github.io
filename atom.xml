@@ -308,6 +308,31 @@
   </entry>
   
   <entry>
+    <title>【代码】多个shapefile面合并</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</id>
+    <published>2024-03-17T14:00:10.000Z</published>
+    <updated>2024-03-19T09:32:51.170Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是GIS面合并&quot;&gt;&lt;a href=&quot;#什么是GIS面合并&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【代码】XYZ格式地形(水深)数据转换为ASCIIGrid格式</title>
     <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/"/>
     <id>http://ytkz11@.github.io/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/</id>
@@ -335,17 +360,19 @@
   
   <entry>
     <title>【代码】多个shapefile面合并</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</id>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/</id>
     <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-19T09:32:51.170Z</updated>
+    <updated>2024-03-20T08:38:02.833Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;什么是GIS面合并&quot;&gt;&lt;a href=&quot;#什么是GIS面合并&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;import numpy as np
+from osgeo import gdal
+from osgeo import</summary>
         
       
     
@@ -371,33 +398,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】多个shapefile面合并</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/</id>
-    <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-20T08:38:02.833Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;import numpy as np
-from osgeo import gdal
-from osgeo import</summary>
         
       
     
