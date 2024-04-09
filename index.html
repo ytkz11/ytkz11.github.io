@@ -139,20 +139,16 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2021/03/10/gdal-api-bi-ji/">
-                        gdal api笔记
+                    <a href="/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/">
+                        【代码】ERS SAR 原始数据提取和成像
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        ​        如果你的gdal版本是3.2.2及以上，那么只能：
-from osgeo import gdal 
-
-
-ds = gdal.Open(data)
-rows = ds.RasterYSize
-cols = ds.RasterXSize...
+                        概述本文档阐述了如何从欧洲遥感（ERS）合成孔径雷达（SAR）系统参数和未聚焦的原始数据中提取信息，并使用范围迁移图像形成算法生成聚焦图像。我们将使用NASA的阿拉斯加卫星设施（ASF）发布的ERS数据集进行演示。
+以下代码均为matlab代码。
+数...
                     
                 </div>
 
@@ -160,15 +156,15 @@ cols = ds.RasterXSize...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sun Apr 07 2024 13:13:38 GMT+0800">
-                2024-04-07
+            <span class="home-article-date" data-updated="Tue Apr 09 2024 10:34:56 GMT+0800">
+                2024-04-09
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2021/03/10/gdal-api-bi-ji/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -322,40 +318,6 @@ def generate_contour(source, target, contour_interva...
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/03/29/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/">
-                        【代码】ERS SAR 原始数据提取和成像
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        https://ww2.mathworks.cn/help/radar/ug/ers-sar-raw-data-extraction-and-image-formation.html
-
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sun Apr 07 2024 10:31:24 GMT+0800">
-                2024-04-07
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/03/29/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
                     <a href="/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/">
                         【代码】水深测量数据可视化及转格式
                     </a>
@@ -487,6 +449,42 @@ def generate_contour(source, target, contour_interva...
     </div>
 
     <a class="read-more" href="/2024/03/25/dai-ma-shuang-chong-xun-huan-yu-ju-shi-xian-fen-kuai-chu-li/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/">
+                        【代码】根据经纬度从数字高程模型（DEM）文件获取高度
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        在地理信息系统（GIS）和遥感中，数字高程模型（Digital Elevation Model，简称DEM）是一种表示
+地表或地形高程信息的重要数据。DEM数据通常以栅格（raster）形式存在，其中每个像素的值表示相
+应地理位置的高程。
+之前介绍了...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Mon Mar 25 2024 09:11:00 GMT+0800">
+                2024-03-25
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
