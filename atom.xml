@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-10T08:55:47.996Z</updated>
+  <updated>2024-04-12T02:03:10.474Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】不借助numpy读取tif文件</title>
+    <link href="http://ytkz11@.github.io/2024/04/12/dai-ma-bu-jie-zhu-numpy-du-qu-tif-wen-jian/"/>
+    <id>http://ytkz11@.github.io/2024/04/12/dai-ma-bu-jie-zhu-numpy-du-qu-tif-wen-jian/</id>
+    <published>2024-04-12T14:00:10.000Z</published>
+    <updated>2024-04-12T02:03:10.474Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文将介绍一种 Python</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>坐标系转换 Python 实现</title>
@@ -360,6 +385,31 @@
   </entry>
   
   <entry>
+    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
+    <published>2024-03-17T14:00:10.000Z</published>
+    <updated>2024-03-20T08:35:26.142Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【代码】多个shapefile面合并</title>
     <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"/>
     <id>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</id>
@@ -399,31 +449,6 @@
     <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;import numpy as np
 from osgeo import gdal
 from osgeo import</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
-    <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-20T08:35:26.142Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -516,37 +541,6 @@ from osgeo import</summary>
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>矢量裁剪矢量</title>
-    <link href="http://ytkz11@.github.io/2024/03/06/shi-liang-cai-jian-shi-liang/"/>
-    <id>http://ytkz11@.github.io/2024/03/06/shi-liang-cai-jian-shi-liang/</id>
-    <published>2024-03-06T14:00:10.000Z</published>
-    <updated>2024-03-08T06:11:08.632Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在地理信息系统（GIS）中，根据一个矢量范围去裁剪另一个矢量范围是一种常见的操作。这个操作的基本步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;加载矢量数据&lt;/strong&gt;：首先，你需要加载你的矢量数据。在Python中，你可以使用GDAL/OGR库来加载矢量数据。</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
   </entry>
   

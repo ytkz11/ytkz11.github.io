@@ -9,7 +9,7 @@
     
     <title>
         
-            【代码】给定起点位置、距离及姿态角，求另一点位置 |
+            【代码】不借助numpy读取tif文件 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">【代码】给定起点位置、距离及姿态角，求另一点位置</span>
+                <span class="title-hover-animation">【代码】不借助numpy读取tif文件</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-03-17 22:00:10</span>
-        <span class="mobile">2024-03-17 22:00</span>
+        <span class="pc">2024-04-12 22:00:10</span>
+        <span class="mobile">2024-04-12 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-03-27 17:21:44</span>
+        <span class="pc">2024-04-12 10:03:10</span>
     </span>
     
     
@@ -208,76 +208,72 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>如题，这是现实中遇到的问题的简化版。</p>
-<p>已知一个点的经纬度和离另一个点的球面距离，和无人机飞行时刻姿态角，求另一个点的经纬度。</p>
-<h2 id="姿态角"><a href="#姿态角" class="headerlink" title="姿态角"></a>姿态角</h2><p>首先，得了解什么是姿态角。</p>
-<p><strong>姿态角（Attitude angles）</strong>：这是一个用于描述物体在空间中的方向和姿态的一组三个角度，通常包括滚动角（Roll）、俯仰角（Pitch）和偏航角（Yaw）。</p>
-<ul>
-<li><p>俯仰角：围绕物体的前后轴线（通常被称为X轴）旋转的角度。</p>
-</li>
-<li><p>偏航角：围绕物体的左右轴线（通常被称为Y轴）旋转的角度。</p>
-</li>
-<li><p>滚动角：围绕物体的上下轴线（通常被称为Z轴）旋转的角度。</p>
-<p>下面三张动图形象的表示了欧拉角的旋转方式。第一张是绕x轴旋转pitch，第二张绕y轴旋转yaw，第三张是绕z轴旋转roll。</p>
-<p><img src="https://img-blog.csdn.net/20151125211944990" alt="俯仰角"></p>
-</li>
-</ul>
-<p><img src="https://img-blog.csdn.net/20151125211917940" alt="这里写图片描述"></p>
-<p><img src="https://img-blog.csdn.net/20151125211931073" alt="这里写图片描述"></p>
-<p>简言之，pitch是俯仰角，是“点头“</p>
-<p>yaw是偏航角，是‘摇头’</p>
-<p>roll是旋转角，是“翻滚”</p>
-<p>这里我们要用到的是姿态角中的偏航角。</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>无人机从一个已知的经纬度（lat1, lon1）飞行一定的球面距离（d）后，假设飞行方向由偏航角（yaw）决定，得出的目标点的经纬度（lat2, lon2）。请看以下代码。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> math
+                <p>本文将介绍一种 Python 实现，该实现不借助numpy读取tif文件。</p>
+<p>平常使用gdal和numpy就可以轻松实现读写tif文件。</p>
+<p>假设，在不使用numpy情况下，如何去读取tif的信息呢？</p>
+<p>首先，介绍一下什么是gdal和numpy。</p>
+<h1 id="gdal是什么"><a href="#gdal是什么" class="headerlink" title="gdal是什么"></a>gdal是什么</h1><p>GDAL（Geospatial Data Abstraction Library，地理空间数据抽象库）是一个开源的库，用于读取和写入栅格地理空间数据格式，它提供了一种统一的数据模型来处理这些格式的数据。GDAL支持40多种主流的栅格数据格式，包括GeoTIFF、JPEG、PNG等。</p>
+<p>GDAL还提供了一系列的命令行工具来进行地理空间数据转换和处理。例如，<code>gdal_translate</code>可以用来转换栅格数据格式，<code>gdalwarp</code>可以用来重投影和裁剪栅格数据，<code>gdalinfo</code>可以用来查看栅格数据的元数据信息等。</p>
+<p>除了栅格数据处理，GDAL的子项目OGR提供了对矢量地理空间数据格式的支持，包括ESRI Shapefiles、GeoJSON、KML等。</p>
+<p>行业内的大型软件，如google earth、arcgis的底层都借用了大量的gdal的代码。</p>
+<p>总的来说，GDAL是一个非常强大的库，对于地理空间数据的处理和分析工作有着广泛的应用。</p>
+<h3 id="numpy是什么"><a href="#numpy是什么" class="headerlink" title="numpy是什么"></a>numpy是什么</h3><p>NumPy（Numerical Python的简称）是Python编程语言的一个开源库，用于处理大型多维数组和矩阵，以及一个大集合的高级（数学）函数库。NumPy是SciPy、Pandas等数据处理或科学计算库的基础。</p>
+<p>NumPy的主要对象是同构多维数组。它是一个元素表（通常是数字），所有类型都相同，由非负整数元组索引。在NumPy中维度被称为轴。</p>
+<p>例如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 
-<span class="token keyword">def</span> <span class="token function">compute_destination_point</span><span class="token punctuation">(</span>lat1<span class="token punctuation">,</span> lon1<span class="token punctuation">,</span> yaw<span class="token punctuation">,</span> d<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token comment"># 地球半径，单位为千米</span>
-    R <span class="token operator">=</span> <span class="token number">6371.0</span>
+a <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>   <span class="token comment"># 创建一个一维数组</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>输出：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>NumPy的数组类被称作ndarray。通常被称作数组。注意numpy.array和标准Python库类array.array并不相同，后者只处理一维数组和提供少量功能。而numpy.array是用来处理多维数组的。</p>
+<p>NumPy提供了大量的数学函数库，如：三角函数、指数函数、对数函数、矩阵运算等，这对于科学计算非常有用。</p>
+<h3 id="Python-实现"><a href="#Python-实现" class="headerlink" title="Python 实现"></a>Python 实现</h3><p>具体代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/env python3</span>
+<span class="token comment"># -*- coding:utf-8 -*-</span>
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> ogr
+<span class="token keyword">import</span> struct
 
-    <span class="token comment"># 将输入的角度和距离转为弧度</span>
-    lat1 <span class="token operator">=</span> math<span class="token punctuation">.</span>radians<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span>
-    lon1 <span class="token operator">=</span> math<span class="token punctuation">.</span>radians<span class="token punctuation">(</span>lon1<span class="token punctuation">)</span>
-    yaw <span class="token operator">=</span> math<span class="token punctuation">.</span>radians<span class="token punctuation">(</span>yaw<span class="token punctuation">)</span>
-    d <span class="token operator">=</span> d <span class="token operator">/</span> <span class="token number">1000</span>  <span class="token comment"># 将距离转为千米</span>
+<span class="token keyword">def</span> <span class="token function">read_tif_without_numpy</span><span class="token punctuation">(</span>src_filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 使用GDAL库打开GeoTIFF文件</span>
+    src_ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>src_filename<span class="token punctuation">)</span>
+    <span class="token comment"># 获取GeoTIFF文件的第一个光栅带</span>
+    rb <span class="token operator">=</span> src_ds<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token comment"># 获取光栅带的数据类型</span>
+    data_type <span class="token operator">=</span> rb<span class="token punctuation">.</span>DataType
 
-    <span class="token comment"># 计算目标点的纬度</span>
-    lat2 <span class="token operator">=</span> math<span class="token punctuation">.</span>asin<span class="token punctuation">(</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>d<span class="token operator">/</span>R<span class="token punctuation">)</span> <span class="token operator">+</span>
-                     math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>d<span class="token operator">/</span>R<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>yaw<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-    <span class="token comment"># 计算目标点的经度</span>
-    lon2 <span class="token operator">=</span> lon1 <span class="token operator">+</span> math<span class="token punctuation">.</span>atan2<span class="token punctuation">(</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>yaw<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>d<span class="token operator">/</span>R<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span><span class="token punctuation">,</span>
-                             math<span class="token punctuation">.</span>cos<span class="token punctuation">(</span>d<span class="token operator">/</span>R<span class="token punctuation">)</span><span class="token operator">-</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>lat1<span class="token punctuation">)</span><span class="token operator">*</span>math<span class="token punctuation">.</span>sin<span class="token punctuation">(</span>lat2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># 获取GeoTIFF文件的列数</span>
+    cols <span class="token operator">=</span> src_ds<span class="token punctuation">.</span>RasterXSize
+    <span class="token comment"># 获取GeoTIFF文件的行数</span>
+    rows <span class="token operator">=</span> src_ds<span class="token punctuation">.</span>RasterYSize
 
-    <span class="token comment"># 将结果转为度数</span>
-    lat2 <span class="token operator">=</span> math<span class="token punctuation">.</span>degrees<span class="token punctuation">(</span>lat2<span class="token punctuation">)</span>
-    lon2 <span class="token operator">=</span> math<span class="token punctuation">.</span>degrees<span class="token punctuation">(</span>lon2<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> data_type <span class="token operator">==</span> gdal<span class="token punctuation">.</span>GDT_Byte<span class="token punctuation">:</span>
+        <span class="token comment"># 如果数据类型是8位无符号整数</span>
+        structval <span class="token operator">=</span> rb<span class="token punctuation">.</span>ReadRaster<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> buf_type<span class="token operator">=</span>gdal<span class="token punctuation">.</span>GDT_Byte<span class="token punctuation">)</span>
+        <span class="token comment"># 将读取的数据转换为Python的整数类型</span>
+        intval <span class="token operator">=</span> struct<span class="token punctuation">.</span>unpack<span class="token punctuation">(</span><span class="token string">'B'</span> <span class="token operator">*</span> cols <span class="token operator">*</span> rows<span class="token punctuation">,</span> structval<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"The GeoTIFF is 8-bit."</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> data_type <span class="token operator">==</span> gdal<span class="token punctuation">.</span>GDT_UInt16 <span class="token keyword">or</span> data_type <span class="token operator">==</span> gdal<span class="token punctuation">.</span>GDT_Int16<span class="token punctuation">:</span>
+        <span class="token comment"># 如果数据类型是16位无符号整数或16位有符号整数</span>
+        structval <span class="token operator">=</span> rb<span class="token punctuation">.</span>ReadRaster<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> buf_type<span class="token operator">=</span>gdal<span class="token punctuation">.</span>GDT_Int16<span class="token punctuation">)</span>
+        <span class="token comment"># 将读取的数据转换为Python的整数类型</span>
+        intval <span class="token operator">=</span> struct<span class="token punctuation">.</span>unpack<span class="token punctuation">(</span><span class="token string">'h'</span> <span class="token operator">*</span> cols <span class="token operator">*</span> rows<span class="token punctuation">,</span> structval<span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"The GeoTIFF is 16-bit."</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token comment"># 如果数据类型既不是8位也不是16位</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"The GeoTIFF is neither 8-bit nor 16-bit."</span><span class="token punctuation">)</span>
 
-    <span class="token keyword">return</span> lat2<span class="token punctuation">,</span> lon2
+    <span class="token comment"># 打印第一行第一列的数值</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>intval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
 
-<span class="token comment"># 测试函数</span>
-lat1 <span class="token operator">=</span> <span class="token number">30.0</span>  <span class="token comment"># 初始纬度</span>
-lon1 <span class="token operator">=</span> <span class="token number">120.0</span>  <span class="token comment"># 初始经度</span>
-yaw <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment"># 偏航角，以度为单位</span>
-d <span class="token operator">=</span> <span class="token number">111100</span> <span class="token comment"># 球面距离，以米为单位</span>
-
-lat2<span class="token punctuation">,</span> lon2 <span class="token operator">=</span> compute_destination_point<span class="token punctuation">(</span>lat1<span class="token punctuation">,</span> lon1<span class="token punctuation">,</span> yaw<span class="token punctuation">,</span> d<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"目标点的纬度：</span><span class="token interpolation"><span class="token punctuation">{</span>lat2<span class="token punctuation">}</span></span><span class="token string">, 经度：</span><span class="token interpolation"><span class="token punctuation">{</span>lon2<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>结果展示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202403271711184.png" alt="image-20240327171102564"></p>
-<p>定义测试函数中的数值是有讲究的，偏航角为0即无人机向东飞行。</p>
-<p>1度约等于111100米，这里定义球面距离为111100米，所以结果应该是纬度31度，经度为120度。</p>
-<p>程序运行结果符合预期，误差在预期范围内。</p>
-<h1 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h1><p>代码的主要步骤如下：</p>
-<ol>
-<li>将输入的经纬度、偏航角和距离转换为弧度。弧度是角度的另一种表示方式，适用于数学运算。弧度和角度之间的转换关系为：弧度 = 角度 * π / 180。这里使用math.radians函数进行转换。</li>
-<li>计算目标点的纬度（lat2）。这一步使用的是球面三角学的公式，基于当前位置的纬度（lat1）、飞行距离（d）和偏航角（yaw）来计算。</li>
-<li>计算目标点的经度（lon2）。这一步同样使用的是球面三角学的公式，基于当前位置的经度（lon1）、纬度（lat1）、飞行距离（d）和偏航角（yaw）来计算。</li>
-<li>将计算出的目标点的经纬度转换回度数。这里使用math.degrees函数进行转换。</li>
-<li>返回目标点的经纬度。</li>
-</ol>
-<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>需要注意的是，这个代码假设无人机的飞行路径是大圆航线（即地球表面的最短路径），并且偏航角是相对于真北方向的角度。现实中的问题可能会比这里说的问题要更为复杂一些，你可能需要再修改这个代码。</p>
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    src_filename <span class="token operator">=</span> <span class="token string">r'test_16.tif'</span>
+    read_tif_without_numpy<span class="token punctuation">(</span>src_filename<span class="token punctuation">)</span>
+    
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404120955819.png" alt="image-20240412095506609"></p>
+<p>我们可以使用GDAL库中的Dataset或Band的ReadRaster方法来读取栅格数据。这些方法在GDAL和OGR的API教程中有详细的介绍。ReadRaster并不需要NumPy，它返回的是原始的二进制数据，这就需要我们使用Python的标准struct库来解析这些数据。</p>
 
             </div>
 
@@ -296,29 +292,14 @@ lat2<span class="token punctuation">,</span> lon2 <span class="token operator">=
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">【代码】多个shapefile面合并</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/"
+                               href="/2024/04/10/dai-ma-zuo-biao-xi-zhuan-huan-python-shi-xian/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">【代码】遥感影像匀色</span>
+                                <span class="post-nav-title-item">坐标系转换 Python 实现</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
