@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-04-09 10:34:56</span>
+        <span class="pc">2024-04-16 15:14:03</span>
     </span>
     
     
@@ -216,7 +216,8 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>本文档阐述了如何从欧洲遥感（ERS）合成孔径雷达（SAR）系统参数和未聚焦的原始数据中提取信息，并使用范围迁移图像形成算法生成聚焦图像。我们将使用NASA的阿拉斯加卫星设施（ASF）发布的ERS数据集进行演示。</p>
+                <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>因为高分三号或者其他国产SAR卫星的原始数据获取的难度非常大。所以我们使用国外的ERS影像进行研究。</p>
+<p>本文档阐述了如何从欧洲遥感（ERS）合成孔径雷达（SAR）系统参数和未聚焦的原始数据中提取信息，并使用范围迁移图像形成算法生成聚焦图像。我们将使用NASA的阿拉斯加卫星设施（ASF）发布的ERS数据集进行演示。</p>
 <p>以下代码均为<strong><code>matlab代码</code></strong>。</p>
 <h2 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h2><p>该示例使用的ERS数据集包含地球观测卫星委员会（CEOS）标准文件，包括：ldr文件（.ldr）、零级帧数据文件（.raw）、卷描述符文件（.vol）、处理信息文件（.pi）、元数据文件（.meta）和空文件（.nul）。</p>
 <p>ldr文件包含了处理SAR数据（.raw）所需的相关元数据信息。</p>
@@ -240,6 +241,8 @@ helperDownloadERSData<span class="token punctuation">(</span>outputFolder<span c
 <p>在这个例子中，我们使用辅助函数从输入文件E2_84699_STD_L0_F299.000.raw以及系统参数中提取未聚焦的原始数据。</p>
 <pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token comment">% Extract raw data </span>
 rawData <span class="token operator">=</span> <span class="token function">ERSDataExtractor</span><span class="token punctuation">(</span><span class="token string">'E2_84699_STD_L0_F299.000.raw'</span><span class="token punctuation">,</span>fs<span class="token punctuation">,</span>fc<span class="token punctuation">,</span>prf<span class="token punctuation">,</span>tau<span class="token punctuation">,</span>v<span class="token punctuation">,</span>ro<span class="token punctuation">,</span>fd<span class="token punctuation">)</span><span class="token operator">.'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>在matlab的工作区，可以查看rawData的格式为复数形式，数值类型为浮点型，如下图。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404161042474.png" alt="image-20240416104209154"></p>
 <h2 id="SAR图像形成"><a href="#SAR图像形成" class="headerlink" title="SAR图像形成"></a>SAR图像形成</h2><p>下一步是使用提取的系统参数和未聚焦的原始数据生成单视复杂度（SLC）图像。对于ERS-radar，雷达发射的是线性频率调制脉冲。phased.LinearFMWaveform系统对象使用提取的系统参数创建线性FM脉冲波形。斜向角使用接近于ERS系统的零的Doppler频率计算。范围迁移图像形成算法是一种频域算法，也被称为波数域处理方法。使用rangeMigrationLFM函数将原始数据聚焦到SLC图像。</p>
 <pre class="line-numbers language-matlab" data-language="matlab"><code class="language-matlab"><span class="token comment">% Create LFM waveform</span>
 waveform <span class="token operator">=</span> phased<span class="token punctuation">.</span><span class="token function">LinearFMWaveform</span><span class="token punctuation">(</span><span class="token string">'SampleRate'</span><span class="token punctuation">,</span>fs<span class="token punctuation">,</span><span class="token string">'PRF'</span><span class="token punctuation">,</span>prf<span class="token punctuation">,</span><span class="token string">'PulseWidth'</span><span class="token punctuation">,</span>tau<span class="token punctuation">,</span><span class="token string">'SweepBandwidth'</span><span class="token punctuation">,</span>bw<span class="token punctuation">,</span><span class="token string">'SweepInterval'</span><span class="token punctuation">,</span><span class="token string">'Symmetric'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -256,7 +259,7 @@ axis image
 <span class="token function">title</span><span class="token punctuation">(</span><span class="token string">'SLC Image'</span><span class="token punctuation">)</span>
 <span class="token function">ylabel</span><span class="token punctuation">(</span><span class="token string">'Range bin'</span><span class="token punctuation">)</span>
 <span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'Azimuth bin'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240409101833536.png" alt="image-20240409101833536"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404161033677.png" alt="image-20240416103323603"></p>
 <h2 id="多视处理"><a href="#多视处理" class="headerlink" title="多视处理"></a>多视处理</h2><p>通过进行多视处理来减少斑点的效果，从而在图像分辨率上做出权衡。在范围或方位方向，或者在两个方向上，后续的线路被平均以获得更好的图像并减少斑点。多视可以在范围或方位或两个方向上进行。</p>
 <p>辅助函数multilookProcessing在范围和方位方向上进行平均，分别查看4和20。</p>
 <pre class="line-numbers language-none"><code class="language-none">mlimg = multilookProcessing(abs(slcimg),4,20);
@@ -269,7 +272,7 @@ colormap('gray')
 title('Multi-look Image')
 ylabel('Range bin')
 xlabel('Azimuth bin')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240409101841031.png" alt="image-20240409101841031"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404161033598.png" alt="image-20240416103244143"></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个例子展示了如何提取系统参数如脉冲重复频率、波长、采样率、脉冲宽度、范围门延迟、传感器速度和原始数据。然后使用范围迁移图像形成算法聚焦原始数据。最后，应用多视处理来去除乘性噪声。</p>
 <p><strong>辅助函数</strong></p>
 <p><strong><code>ERSParameterExtractor</code></strong></p>
@@ -461,6 +464,7 @@ axis image
 <span class="token function">xlabel</span><span class="token punctuation">(</span><span class="token string">'Azimuth bin'</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>以上代码适用于是2021a及以后的matlab版本。</p>
+<p>注意：由于以上matlab代码是一次性把数据读到内存中，可能会出现内存不足的报错，所以你的电脑的内存要尽可能的大。</p>
 
             </div>
 

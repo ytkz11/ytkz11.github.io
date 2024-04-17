@@ -9,7 +9,7 @@
     
     <title>
         
-            在Visual Studio中配置GDAL的基本步骤 |
+            【代码】通过在线服务获取经纬度的海拔高度 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">在Visual Studio中配置GDAL的基本步骤</span>
+                <span class="title-hover-animation">【代码】通过在线服务获取经纬度的海拔高度</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-02-04 22:00:10</span>
-        <span class="mobile">2024-02-04 22:00</span>
+        <span class="pc">2024-04-15 22:00:10</span>
+        <span class="mobile">2024-04-15 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-02-05 11:31:59</span>
+        <span class="pc">2024-04-15 15:18:59</span>
     </span>
     
     
@@ -175,15 +175,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/GDAL/">GDAL</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        &gt; <a href="/categories/GDAL/cpp/">cpp</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        &gt; <a href="/categories/GDAL/cpp/vs/">vs</a>&nbsp;
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -195,15 +187,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/GDAL/">GDAL</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/cpp/">cpp</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/vs/">vs</a>&nbsp;
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -224,44 +208,67 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>以下是在Visual Studio中配置GDAL的基本步骤:</p>
-<ol>
-<li><p><strong>安装GDAL</strong>：你可以从GDAL的官方网站下载GDAL的源代码，然后按照官方的指南编译和安装。你也可以查找是否有预编译的GDAL二进制包可供下载。注意，你需要选择与你的Visual Studio版本和系统兼容的GDAL版本。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202402051131397.png" alt="image-20240204145044722"></p>
-</li>
-<li><p><strong>设置包含目录</strong>：在Visual Studio中打开你的项目。然后，右击你的项目，选择”Properties”。在弹出的窗口中，选择”C/C++” -&gt; “General”。在右侧的”Additional Include Directories”中，添加GDAL的头文件目录。这个目录应该是你的GDAL安装目录中的<code>include</code>目录。<img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202402051131504.png" alt="image-20240204153451380"></p>
-</li>
-<li><p><strong>设置库目录</strong>：在项目属性窗口中，选择”Linker” -&gt; “General”。在右侧的”Additional Library Directories”中，添加GDAL的库文件目录。这个目录应该是你的GDAL安装目录中的<code>lib</code>目录。<img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202402051131654.png" alt="image-20240204153110012"></p>
-</li>
-<li><p><strong>设置链接库</strong>：在项目属性窗口中，选择”Linker” -&gt; “Input”。在右侧的”Additional Dependencies”中，添加GDAL的库文件。这个文件应该是<code>gdal_i.lib</code>或者<code>gdal.lib</code>，取决于你的GDAL版本和编译选项。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202402051131355.png" alt="image-20240204153154687"></p>
-</li>
-<li><p><strong>设置环境变量</strong>：在你的系统环境变量中，添加一个新的变量<code>GDAL_DATA</code>，它的值应该是你的GDAL安装目录中的<code>data</code>目录。这个目录包含了GDAL需要的一些数据文件。</p>
-</li>
-</ol>
-<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p><strong>测试 GDAL</strong>：这时，可以写一个小程序来测试 GDAL 是否配置成功。以下是一个简单的测试程序：</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
-#include "gdal_priv.h"
+                <p>一般获取高度数据的方法很简单。打开对应的DEM文件，按照经纬度来查询对应DEM文件的行列号，按照行列号读取DEM数据（即高度）。</p>
+<p>以上方法是通用的获取高度的流程。</p>
+<p>现在有这样的一个场景，我们需要查询多个地点高度。如果这些点都集中在小范围区域的话，那么我们需要下载的DEM文件大小就小。与此相反，如果这些点分布范围很大，这时候我们需要下载的DEM就非常巨大。</p>
+<p>那有没有一种方法：不需要下载DEM直接得到对应经纬度的海拔数据呢？</p>
+<p>答案是有的。</p>
+<p> USGS 国家地图有一个 REST 服务，可用于查询纬度/经度坐标的海拔。</p>
+<p>服务网址： <a class="link" target="_blank" rel="noopener" href="https://apps.nationalmap.gov/epqs/">https://apps.nationalmap.gov/epqs/<i class="fas fa-external-link-alt"></i></a></p>
+<p>打开网址如下图所示</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404151443614.png" alt="image-20240415144348677"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2024/4/15 14:24 </span>
+<span class="token comment"># @File : elevation.py </span>
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
 
-int main()
-{
-    GDALAllRegister();
-    GDALDataset *poDS;
-    poDS = (GDALDataset *) GDALOpen( "xxxxxxxxxxx.tif", GA_ReadOnly );
-    if( poDS == NULL )
-    {
-        std::cout &lt;&lt; "Open failed.\n";
-        exit(1);
-    }
-    else
-    {
-        std::cout &lt;&lt; "Open succeeded.\n";
-    }
-    GDALClose(poDS);
-    return 0;
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://github.com/getActivity/EmojiPackage/blob/master/%E5%AD%A6%E4%B9%A0/%E6%88%91%E7%88%B1%E5%AD%A6%E4%B9%A0.gif?raw=true" alt="我爱学习.gif"></p>
+<span class="token keyword">import</span> requests
+<span class="token keyword">import</span> urllib
+<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+
+<span class="token keyword">def</span> <span class="token function">get_elevation</span><span class="token punctuation">(</span>df<span class="token punctuation">,</span> lat_column<span class="token punctuation">,</span> lon_column<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    使用经度和纬度查询服务，将海拔值作为新列添加。
+    """</span>
+    url <span class="token operator">=</span> <span class="token string">r'https://epqs.nationalmap.gov/v1/json?'</span>
+    elevations <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">for</span> lat<span class="token punctuation">,</span> lon <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>df<span class="token punctuation">[</span>lat_column<span class="token punctuation">]</span><span class="token punctuation">,</span> df<span class="token punctuation">[</span>lon_column<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 定义 REST 查询参数</span>
+        params <span class="token operator">=</span> <span class="token punctuation">{</span>
+            <span class="token string">'output'</span><span class="token punctuation">:</span> <span class="token string">'json'</span><span class="token punctuation">,</span>
+            <span class="token string">'x'</span><span class="token punctuation">:</span> lon<span class="token punctuation">,</span>
+            <span class="token string">'y'</span><span class="token punctuation">:</span> lat<span class="token punctuation">,</span>
+            <span class="token string">'units'</span><span class="token punctuation">:</span> <span class="token string">'Meters'</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment"># 格式化查询字符串并返回查询值</span>
+        result <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">,</span> params<span class="token operator">=</span>params<span class="token punctuation">)</span>
+        <span class="token comment"># 将查询到的海拔值添加到列表中</span>
+        elevations<span class="token punctuation">.</span>append<span class="token punctuation">(</span>result<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token string">'value'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 将海拔值列表添加到数据框作为新列</span>
+    df<span class="token punctuation">[</span><span class="token string">'elev_meters'</span><span class="token punctuation">]</span> <span class="token operator">=</span> elevations
+    <span class="token keyword">return</span> df
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment"># 已知海拔的坐标</span>
+    lat <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">48.633</span><span class="token punctuation">,</span> <span class="token number">48.733</span><span class="token punctuation">,</span> <span class="token number">45.1947</span><span class="token punctuation">,</span> <span class="token number">45.1962</span><span class="token punctuation">]</span>
+    lon <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">93.9667</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">94.6167</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">93.3257</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">93.2755</span><span class="token punctuation">]</span>
+
+    <span class="token comment"># 创建数据框</span>
+    df <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token string">'lat'</span><span class="token punctuation">:</span> lat<span class="token punctuation">,</span>
+        <span class="token string">'lon'</span><span class="token punctuation">:</span> lon
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 调用函数获取海拔并打印数据框</span>
+    get_elevation<span class="token punctuation">(</span>df<span class="token punctuation">,</span> <span class="token string">'lat'</span><span class="token punctuation">,</span> <span class="token string">'lon'</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>df<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>ns</p>
 
             </div>
 
@@ -271,15 +278,7 @@ int main()
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/GDAL/">#GDAL</a>&nbsp;
-                        </li>
-                    
-                        <li class="tag-item">
-                            <a href="/tags/cpp/">#cpp</a>&nbsp;
-                        </li>
-                    
-                        <li class="tag-item">
-                            <a href="/tags/vs/">#vs</a>&nbsp;
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -291,13 +290,13 @@ int main()
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2024/02/05/github-star-8k-jiang-copilot-zhuan-wei-gpt4-xue-sheng-dang-mian-fei-shi-yong-gpt-de-jiao-cheng/"
+                               href="/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">github star 8k：将copilot转为gpt4（学生党免费使用gpt的教程）</span>
+                                <span class="post-nav-title-item">【代码】WGS84坐标转UTM坐标</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
@@ -307,10 +306,10 @@ int main()
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/"
+                               href="/2024/04/12/dai-ma-bu-jie-zhu-numpy-du-qu-tif-wen-jian/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">面矢量简化--基于cpp</span>
+                                <span class="post-nav-title-item">【代码】不借助numpy读取tif文件</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">

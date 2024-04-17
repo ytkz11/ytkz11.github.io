@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-12T02:03:10.474Z</updated>
+  <updated>2024-04-15T07:24:33.745Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】WGS84坐标转UTM坐标</title>
+    <link href="http://ytkz11@.github.io/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/"/>
+    <id>http://ytkz11@.github.io/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/</id>
+    <published>2024-04-15T14:00:10.000Z</published>
+    <updated>2024-04-15T07:24:33.745Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;通用横轴墨卡托（UTM）是一种地图投影方法，它提供了一种为地球上的位置指定坐标的方式。像传统的经纬度系统一样，UTM也是一种水平位置表示法，这意味着它忽略了高度信息，而将地球表面视为一个理想的椭球体。然而，UTM与经纬度系统的主要区别在于，它将地球分割为60个区域，并将每个</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】通过在线服务获取经纬度的海拔高度</title>
+    <link href="http://ytkz11@.github.io/2024/04/15/dai-ma-tong-guo-zai-xian-fu-wu-huo-qu-jing-wei-du-de-hai-ba-gao-du/"/>
+    <id>http://ytkz11@.github.io/2024/04/15/dai-ma-tong-guo-zai-xian-fu-wu-huo-qu-jing-wei-du-de-hai-ba-gao-du/</id>
+    <published>2024-04-15T14:00:10.000Z</published>
+    <updated>2024-04-15T07:18:59.316Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一般获取高度数据的方法很简单。打开对应的DEM文件，按照经纬度来查询对应DEM文件的行列号，按照行列号读取DEM数据（即高度）。&lt;/p&gt;
+&lt;p&gt;以上方法是通用的获取高度的流程。&lt;/p&gt;
+&lt;p&gt;现在有这样的一个场景，我们需要查询多个地点高度。如果这些点都集中在小范围区域的话，</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【代码】不借助numpy读取tif文件</title>
@@ -72,7 +124,7 @@
     <link href="http://ytkz11@.github.io/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/"/>
     <id>http://ytkz11@.github.io/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/</id>
     <published>2024-04-09T14:00:10.000Z</published>
-    <updated>2024-04-09T02:34:56.422Z</updated>
+    <updated>2024-04-16T07:14:03.124Z</updated>
     
     
       
@@ -385,18 +437,18 @@
   </entry>
   
   <entry>
-    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
+    <title>【代码】多个shapefile面合并</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</id>
     <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-20T08:35:26.142Z</updated>
+    <updated>2024-03-19T09:32:51.170Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;什么是GIS面合并&quot;&gt;&lt;a href=&quot;#什么是GIS面合并&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -410,18 +462,18 @@
   </entry>
   
   <entry>
-    <title>【代码】多个shapefile面合并</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</id>
+    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
     <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-19T09:32:51.170Z</updated>
+    <updated>2024-03-20T08:35:26.142Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;什么是GIS面合并&quot;&gt;&lt;a href=&quot;#什么是GIS面合并&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -485,62 +537,6 @@ from osgeo import</summary>
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】遥感影像匀色</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/</id>
-    <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-27T09:46:19.105Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这里实现的是遥感影像匀色的功能——直方图匹配。&lt;/p&gt;
-&lt;p&gt;直方图匹配是一种用于图像处理的技术，它可以用来调整一幅图像的颜色或灰度分布，使其与另一幅图像的颜色或灰度分布相匹配。这种技术常常用于图像增强，例如改善图像的对比度或者进行颜色校正。&lt;/p&gt;
-&lt;p&gt;首先，让我们解释</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【深度学习】从LeNet学神经网络搭建</title>
-    <link href="http://ytkz11@.github.io/2024/03/13/shen-du-xue-xi-cong-lenet-kan-shen-jing-wang-luo-da-jian/"/>
-    <id>http://ytkz11@.github.io/2024/03/13/shen-du-xue-xi-cong-lenet-kan-shen-jing-wang-luo-da-jian/</id>
-    <published>2024-03-13T14:00:10.000Z</published>
-    <updated>2024-04-07T05:28:44.281Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;LeNet是&lt;strong&gt;最早的卷积神经网络之一&lt;/strong&gt;，其被提出用于识别手写数字和机器印刷字符。 1998年，Yann</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   

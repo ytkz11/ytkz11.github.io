@@ -178,6 +178,74 @@ cols = ds.RasterXSize...
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/">
+                        【代码】WGS84坐标转UTM坐标
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        通用横轴墨卡托（UTM）是一种地图投影方法，它提供了一种为地球上的位置指定坐标的方式。像传统的经纬度系统一样，UTM也是一种水平位置表示法，这意味着它忽略了高度信息，而将地球表面视为一个理想的椭球体。然而，UTM与经纬度系统的主要区别在于，它将地球分...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Mon Apr 15 2024 15:24:33 GMT+0800">
+                2024-04-15
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/04/15/dai-ma-tong-guo-zai-xian-fu-wu-huo-qu-jing-wei-du-de-hai-ba-gao-du/">
+                        【代码】通过在线服务获取经纬度的海拔高度
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        一般获取高度数据的方法很简单。打开对应的DEM文件，按照经纬度来查询对应DEM文件的行列号，按照行列号读取DEM数据（即高度）。
+以上方法是通用的获取高度的流程。
+现在有这样的一个场景，我们需要查询多个地点高度。如果这些点都集中在小范围区域的话，那么...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Mon Apr 15 2024 15:18:59 GMT+0800">
+                2024-04-15
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/04/15/dai-ma-tong-guo-zai-xian-fu-wu-huo-qu-jing-wei-du-de-hai-ba-gao-du/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2024/04/12/dai-ma-bu-jie-zhu-numpy-du-qu-tif-wen-jian/">
                         【代码】不借助numpy读取tif文件
                     </a>
@@ -257,9 +325,8 @@ WGS-84 即地球坐标系，国际上通用的坐标系(设备一般包含GPS或
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        概述本文档阐述了如何从欧洲遥感（ERS）合成孔径雷达（SAR）系统参数和未聚焦的原始数据中提取信息，并使用范围迁移图像形成算法生成聚焦图像。我们将使用NASA的阿拉斯加卫星设施（ASF）发布的ERS数据集进行演示。
-以下代码均为matlab代码。
-数...
+                        概述因为高分三号或者其他国产SAR卫星的原始数据获取的难度非常大。所以我们使用国外的ERS影像进行研究。
+本文档阐述了如何从欧洲遥感（ERS）合成孔径雷达（SAR）系统参数和未聚焦的原始数据中提取信息，并使用范围迁移图像形成算法生成聚焦图像。我们将使...
                     
                 </div>
 
@@ -267,8 +334,8 @@ WGS-84 即地球坐标系，国际上通用的坐标系(设备一般包含GPS或
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Apr 09 2024 10:34:56 GMT+0800">
-                2024-04-09
+            <span class="home-article-date" data-updated="Tue Apr 16 2024 15:14:03 GMT+0800">
+                2024-04-16
             </span>
         </span>
         
@@ -420,77 +487,6 @@ def generate_contour(source, target, contour_interva...
     </div>
 
     <a class="read-more" href="/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/">
-                        【代码】水深测量数据可视化及转格式
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。
-这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Apr 01 2024 09:47:03 GMT+0800">
-                2024-04-01
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/">
-                        【python】进入python环境的方法
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        人在江湖飘，一个电脑里的python版本可能不止一个。比如说我，有两个不一样的python版本。
-首先都要把python的安装路径添加到系统的环境变量里。
-
-第一种方法我们可以在命令行（cmd），输入python，就可以进入python环境了。
-是不...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Thu Mar 28 2024 17:02:44 GMT+0800">
-                2024-03-28
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
