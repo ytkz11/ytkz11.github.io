@@ -9,7 +9,7 @@
     
     <title>
         
-            分类: GDAL |
+            【代码】获取道路中心线的代码实现 |
         
         remote sensing
     </title>
@@ -134,42 +134,150 @@
 
                 
                     <div class="fade-in-down-animation">
-    <div class="category-container">
-        <div class="category-name">
-            <i class="fas fa-folder"></i>&nbsp;GDAL
-        </div>
-        <div class="category-post-list">
-            
-<div class="archive-list-container">
-    
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2024</span>
-                <span class="archive-year-post-count">[1]</span>
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【代码】获取道路中心线的代码实现</span>
             </div>
-            <ul class="article-list">
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-04-17 22:00:10</span>
+        <span class="mobile">2024-04-17 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-04-17 10:14:59</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2024/02/04/zai-visual-studio-zhong-pei-zhi-gdal-de-ji-ben-bu-zou/"
-                        >在Visual Studio中配置GDAL的基本步骤</a>
-                        <span class="article-date">02-04</span>
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
-        </section>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
     
 </div>
 
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>本质上是特殊的面矢量转为线矢量的过程。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404171011694.png" alt="image-20240417101016627"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404171014899.png" alt="image-20240417101413797"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2024/4/17 20:48 </span>
+<span class="token comment"># @File : road_centerline.py </span>
+
+<span class="token comment"># 获取代表道路轮廓（红线）的多边形中心线</span>
+
+<span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
+<span class="token keyword">import</span> pygeoops
+
+<span class="token keyword">def</span> <span class="token function">generate_centerline</span><span class="token punctuation">(</span>input_shapefile_path<span class="token punctuation">,</span> output_shapefile_path<span class="token punctuation">,</span> simplifytolerance<span class="token operator">=</span><span class="token operator">-</span><span class="token number">0.4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># Load the polygon representing the road contour as a GeoDataFrame</span>
+    gdf <span class="token operator">=</span> gpd<span class="token punctuation">.</span>read_file<span class="token punctuation">(</span>input_shapefile_path<span class="token punctuation">)</span>
+
+    <span class="token comment"># Calculate centerline of the polygons</span>
+    gdf<span class="token punctuation">.</span>geometry <span class="token operator">=</span> pygeoops<span class="token punctuation">.</span>centerline<span class="token punctuation">(</span>gdf<span class="token punctuation">.</span>geometry<span class="token punctuation">,</span> simplifytolerance<span class="token operator">=</span>simplifytolerance<span class="token punctuation">)</span>
+
+    <span class="token comment"># Save centerlines in a new shapefile.</span>
+    gdf<span class="token punctuation">.</span>to_file<span class="token punctuation">(</span>output_shapefile_path<span class="token punctuation">)</span>
+
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    input_shapefile_path <span class="token operator">=</span> <span class="token string">r'D:\道路clip.shp'</span>
+    output_shapefile_path <span class="token operator">=</span> <span class="token string">r'D:\道路clip_centerline.shp'</span>
+    generate_centerline<span class="token punctuation">(</span>input_shapefile_path<span class="token punctuation">,</span> output_shapefile_path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】WGS84坐标转UTM坐标</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
         </div>
-    </div>
-    <div class="category-paginator">
-        <div class="paginator">
-    
 
-    
-</div>
-
+        
     </div>
 </div>
 
@@ -206,6 +314,19 @@
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-bottom-side-tools">
@@ -280,82 +401,11 @@
 
 <div class="post-scripts">
     
-</div>
-
-
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
-</html>
-s="side-tools-container">
-    <ul class="side-tools-list">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
-        </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
-        </li>
-
-        <li class="tools-item tool-dark-light-toggle flex-center">
-            <i class="fas fa-moon"></i>
-        </li>
-
-        <!-- rss -->
         
+<script src="/js/post-helper.js"></script>
 
         
-            <li class="tools-item tool-scroll-to-top flex-center">
-                <i class="fas fa-arrow-up"></i>
-            </li>
         
-
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list">
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-        
-    </ul>
-</div>
-
-    </div>
-
-    <div class="zoom-in-image-mask">
-    <img class="zoom-in-image">
-</div>
-
-
-    
-
-</main>
-
-
-
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/main.js"></script>
-
-<script src="/js/header-shrink.js"></script>
-
-<script src="/js/back2top.js"></script>
-
-<script src="/js/dark-light-toggle.js"></script>
-
-
-
-
-
-
-
-
-
-
-<div class="post-scripts">
     
 </div>
 

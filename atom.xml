@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-15T07:24:33.745Z</updated>
+  <updated>2024-04-17T02:14:59.974Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】获取道路中心线的代码实现</title>
+    <link href="http://ytkz11@.github.io/2024/04/17/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/"/>
+    <id>http://ytkz11@.github.io/2024/04/17/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/</id>
+    <published>2024-04-17T14:00:10.000Z</published>
+    <updated>2024-04-17T02:14:59.974Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本质上是特殊的面矢量转为线矢量的过程。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404171011694.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【代码】WGS84坐标转UTM坐标</title>
@@ -462,31 +488,6 @@
   </entry>
   
   <entry>
-    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
-    <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-20T08:35:26.142Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>【代码】多个shapefile面合并</title>
     <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/"/>
     <id>http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/</id>
@@ -514,20 +515,18 @@ from osgeo import</summary>
   </entry>
   
   <entry>
-    <title>【代码】给定起点位置、距离及姿态角，求另一点位置</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/</id>
+    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
+    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
+    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
     <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-27T09:21:44.613Z</updated>
+    <updated>2024-03-20T08:35:26.142Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;如题，这是现实中遇到的问题的简化版。&lt;/p&gt;
-&lt;p&gt;已知一个点的经纬度和离另一个点的球面距离，和无人机飞行时刻姿态角，求另一个点的经纬度。&lt;/p&gt;
-&lt;h2 id=&quot;姿态角&quot;&gt;&lt;a href=&quot;#姿态角&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
         
       
     
