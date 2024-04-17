@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            python简易笔记 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">python简易笔记</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-04-18 22:30:10</span>
+        <span class="mobile">2024-04-18 22:30</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-04-17 13:39:48</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><h4 id="列表的切片（slicing）操作："><a href="#列表的切片（slicing）操作：" class="headerlink" title="列表的切片（slicing）操作："></a>列表的切片（slicing）操作：</h4><p><list> = <list>[from_inclusive:to_exclusive:step]</list></list></p>
+<ul>
+<li><code>from_inclusive</code>（包含）是切片开始的索引，如果省略，默认为 0。</li>
+<li><code>to_exclusive</code>（不包含）是切片结束的索引，如果省略，默认为列表的长度。</li>
+<li><code>step</code> 是切片的步长，如果省略，默认为 1。</li>
+</ul>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token comment"># 获取索引为 2 到 5（不包含）的元素</span>
+sub_list <span class="token operator">=</span> my_list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token number">5</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sub_list<span class="token punctuation">)</span>  <span class="token comment"># 输出：[2, 3, 4]</span>
+
+
+<span class="token comment"># 获取索引为 2 到 8（不包含）的元素，步长为 2</span>
+sub_list <span class="token operator">=</span> my_list<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token number">8</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sub_list<span class="token punctuation">)</span>  <span class="token comment"># 输出：[2, 4, 6]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="向列表添加元素"><a href="#向列表添加元素" class="headerlink" title="向列表添加元素"></a>向列表添加元素</h4><p><code>&lt;list&gt;.append(&lt;el&gt;)</code>：这个方法将一个元素 <code>&lt;el&gt;</code> 添加到 <code>&lt;list&gt;</code> 的末尾。这个元素可以是任何类型的数据，包括另一个列表.</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+my_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[1, 2, 3, 4]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>&lt;list&gt;.extend(&lt;collection&gt;)</code>：这个方法将一个集合 <code>&lt;collection&gt;</code> 中的所有元素添加到 <code>&lt;list&gt;</code> 的末尾。这个集合可以是任何可迭代的对象，例如另一个列表、一个元组、一个字典等。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+my_list<span class="token punctuation">.</span>extend<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[1, 2, 3, 4, 5, 6]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="用于排序和反转列表的4种方法"><a href="#用于排序和反转列表的4种方法" class="headerlink" title="用于排序和反转列表的4种方法"></a>用于排序和反转列表的4种方法</h4><p>1.<code>&lt;list&gt;.sort()</code>：这个方法会对 <code>&lt;list&gt;</code> 进行升序排序。这会直接修改原始列表，而不是创建一个新的列表。例如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+my_list<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[1, 1, 3, 4, 5, 9]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2.<code>&lt;list&gt;.reverse()</code>：这个方法会将 <code>&lt;list&gt;</code> 中的元素顺序反转。这会直接修改原始列表，而不是创建一个新的列表。例如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+my_list<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[5, 4, 3, 2, 1]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3.<code>&lt;list&gt; = sorted(&lt;collection&gt;)</code>：<code>sorted()</code> 函数会返回一个新的列表，这个列表包含 <code>&lt;collection&gt;</code> 中的所有元素，并且这些元素已经按升序排序。例如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+sorted_list <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sorted_list<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[1, 1, 3, 4, 5, 9]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>4.<code>&lt;iter&gt; = reversed(&lt;list&gt;)</code>：<code>reversed()</code> 函数会返回一个迭代器，这个迭代器会按逆序生成 <code>&lt;list&gt;</code> 中的元素。例如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">my_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+reversed_iter <span class="token operator">=</span> <span class="token builtin">reversed</span><span class="token punctuation">(</span>my_list<span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> reversed_iter<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">' '</span><span class="token punctuation">)</span>  
+<span class="token comment"># 输出：5 4 3 2 1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="一些常用的列表语法糖"><a href="#一些常用的列表语法糖" class="headerlink" title="一些常用的列表语法糖"></a>一些常用的列表语法糖</h4><p>“语法糖”是一个编程术语，指的是一种编程语法，它并没有增加任何新的功能，但是可以使代码更易读、更易写。这种语法提供了一种更方便、更清晰的方式来表达一种已经存在的编程结构或操作。</p>
+<ol>
+<li><p><code>sum_of_elements = sum(&lt;collection&gt;)</code></p>
+<p>这段代码将计算集合（列表、元组等）中所有元素的总和。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+sum_of_elements <span class="token operator">=</span> <span class="token builtin">sum</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sum_of_elements<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：15</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>elementwise_sum = [sum(pair) for pair in zip(list_a, list_b)]</code></p>
+<p>这段代码将两个列表中的对应元素相加。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">list_a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+list_b <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>
+elementwise_sum <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">sum</span><span class="token punctuation">(</span>pair<span class="token punctuation">)</span> <span class="token keyword">for</span> pair <span class="token keyword">in</span> <span class="token builtin">zip</span><span class="token punctuation">(</span>list_a<span class="token punctuation">,</span> list_b<span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>elementwise_sum<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[5, 7, 9]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>sorted_by_second = sorted(&lt;collection&gt;, key=lambda el: el[1])</code></p>
+<p>这段代码将根据集合中每个元素的第二个值进行排序。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">pairs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+sorted_by_second <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>pairs<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> el<span class="token punctuation">:</span> el<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sorted_by_second<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[(4, 1), (1, 2), (2, 3)]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>sorted_by_both = sorted(&lt;collection&gt;, key=lambda el: (el[1], el[0]))</code></p>
+<p>这段代码将根据集合中每个元素的第二个值和第一个值进行排序。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">pairs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+sorted_by_both <span class="token operator">=</span> <span class="token builtin">sorted</span><span class="token punctuation">(</span>pairs<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> el<span class="token punctuation">:</span> <span class="token punctuation">(</span>el<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> el<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sorted_by_both<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[(4, 1), (1, 2), (3, 2), (2, 3)]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>flatter_list = list(itertools.chain.from_iterable(&lt;list&gt;))</code></p>
+<p>这段代码将一个嵌套的列表（列表的列表）扁平化为一个单一的列表。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> itertools
+nested_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+flatter_list <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>itertools<span class="token punctuation">.</span>chain<span class="token punctuation">.</span>from_iterable<span class="token punctuation">(</span>nested_list<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>flatter_list<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[1, 2, 3, 4, 5, 6, 7, 8, 9]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>product_of_elems = functools.reduce(lambda out, el: out * el, &lt;collection&gt;)</code></p>
+<p>这段代码将计算集合中所有元素的乘积。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> functools
+numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+product_of_elems <span class="token operator">=</span> functools<span class="token punctuation">.</span><span class="token builtin">reduce</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> out<span class="token punctuation">,</span> el<span class="token punctuation">:</span> out <span class="token operator">*</span> el<span class="token punctuation">,</span> numbers<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>product_of_elems<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：120</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>list_of_chars = list(&lt;str&gt;)</code></p>
+<p>这段代码将一个字符串转换为一个字符列表。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">my_string <span class="token operator">=</span> <span class="token string">"Hello"</span>
+list_of_chars <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>my_string<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list_of_chars<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：['H', 'e', 'l', 'l', 'o']</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="列表的增删查改"><a href="#列表的增删查改" class="headerlink" title="列表的增删查改"></a>列表的增删查改</h4><p><list>.insert(<int>, <el>)</el></int></list></p>
+<p>这个方法会在指定的索引位置插入元素，并将剩余的元素向右移动。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+numbers<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">999</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span>  <span class="token comment"># 输出：[1, 2, 999, 3, 4, 5]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><el>  = <list>.pop([<int>]) </int></list></el></p>
+<p>这个方法会删除并返回指定索引位置的元素，如果没有指定索引，则默认删除并返回列表的最后一个元素。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+last_element <span class="token operator">=</span> numbers<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>last_element<span class="token punctuation">)</span>  <span class="token comment"># 输出：5</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[1, 2, 3, 4]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><int> = <list>.count(<el>)</el></list></int></p>
+<p>这个方法会返回指定元素在列表中的出现次数。这个方法也适用于字符串。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+count_of_2 <span class="token operator">=</span> numbers<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>count_of_2<span class="token punctuation">)</span>  <span class="token comment"># 输出：3</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><int> = <list>.index(<el>)</el></list></int></p>
+<p>这个方法会返回指定元素在列表中第一次出现的索引位置。如果元素不存在，则会抛出 ValueError。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+index_of_3 <span class="token operator">=</span> numbers<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>index_of_3<span class="token punctuation">)</span>  <span class="token comment"># 输出：2</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><list>.remove(<el>)</el></list></p>
+<p>这个方法会删除列表中第一次出现的指定元素。如果元素不存在，则会抛出 ValueError。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+numbers<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：[1, 3, 2, 2, 4, 5]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><list>.clear()</list></p>
+<p>这个方法会删除列表中的所有元素。这个方法也适用于字典和集合。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+numbers<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>numbers<span class="token punctuation">)</span>  <span class="token comment"># 输出：[]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h1><h4 id="获取字典信息的方式"><a href="#获取字典信息的方式" class="headerlink" title="获取字典信息的方式"></a>获取字典信息的方式</h4><ol>
+<li><p><code>&lt;view&gt; = &lt;dict&gt;.keys()</code></p>
+<p>这个方法返回一个反映字典键的动态视图。如果字典改变，视图也会改变。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token string">'grade'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">}</span>
+keys <span class="token operator">=</span> student<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>keys<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：dict_keys(['name', 'age', 'grade'])</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ol>
+<li><p><code>&lt;view&gt; = &lt;dict&gt;.values()</code></p>
+<p>这个方法返回一个反映字典值的动态视图。如果字典改变，视图也会改变。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'Han Meimei'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token string">'grade'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">}</span>
+values <span class="token operator">=</span> student<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>values<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：dict_values(['Han Meimei', 18, 'A'])</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ol>
+<li><p><code>&lt;view&gt; = &lt;dict&gt;.items()</code></p>
+<p>这个方法返回一个反映字典键值对的动态视图。每个键值对被表示为一个元组。如果字典改变，视图也会改变。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'Li Ming'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token string">'grade'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">}</span>
+items <span class="token operator">=</span> student<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>items<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：dict_items([('name', 'Li Ming'), ('age', 15), ('grade', 'A')])</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="获取或设置字典的值"><a href="#获取或设置字典的值" class="headerlink" title="获取或设置字典的值"></a>获取或设置字典的值</h4><ol>
+<li><p><code>value = &lt;dict&gt;.get(key, default=None)</code></p>
+<p>这个方法用于获取字典中给定键的值。如果键不存在，那么返回默认值，如果没有指定默认值，则返回None。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">}</span>
+value <span class="token operator">=</span> student<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'grade'</span><span class="token punctuation">,</span> <span class="token string">'A'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>  <span class="token comment"># 输出：'A'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ol>
+<li><p><code>value = &lt;dict&gt;.setdefault(key, default=None)</code></p>
+<p>这个方法用于获取字典中给定键的值。如果键不存在，那么将默认值写入字典，并返回默认值，如果没有指定默认值，则写入并返回None。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">}</span>
+value <span class="token operator">=</span> student<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'grade'</span><span class="token punctuation">,</span> <span class="token string">'A'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>  <span class="token comment"># 输出：'A'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：{'name': 'John', 'age': 15, 'grade': 'A'}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ol>
+<li><p><code>&lt;dict&gt; = collections.defaultdict(&lt;type&gt;)</code></p>
+<p>这个方法返回一个默认字典，如果请求的键不存在，那么返回给定类型的默认值。<code>&lt;type&gt;</code>应该是一个无参数的函数，用于生成默认值。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
+count <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> letter <span class="token keyword">in</span> <span class="token string">'hello'</span><span class="token punctuation">:</span>
+    count<span class="token punctuation">[</span>letter<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：defaultdict(&lt;class 'int'&gt;, {'h': 1, 'e': 1, 'l': 2, 'o': 1})</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ol>
+<li><p><code>&lt;dict&gt; = collections.defaultdict(lambda: 1)</code></p>
+<p>这个方法也返回一个默认字典，但是这次我们使用一个lambda函数来生成默认值，这个lambda函数总是返回1。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
+count <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token keyword">lambda</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> letter <span class="token keyword">in</span> <span class="token string">'hello'</span><span class="token punctuation">:</span>
+    count<span class="token punctuation">[</span>letter<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span>  <span class="token comment"># 输出：defaultdict(&lt;function &lt;lambda&gt; at 0x7f8c0c3d2f70&gt;, {'h': 2, 'e': 2, 'l': 3, 'o</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="创建字典的方法"><a href="#创建字典的方法" class="headerlink" title="创建字典的方法"></a>创建字典的方法</h4><ol>
+<li><p><code>&lt;dict&gt; = dict(&lt;collection&gt;)</code></p>
+<p>这个方法用于从键值对的集合创建一个字典。集合可以是一个列表的列表，也可以是一个元组的列表，只要每个内部列表或元组包含两个元素。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">pairs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'John'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">'grade'</span><span class="token punctuation">,</span> <span class="token string">'A'</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+student <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span>pairs<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：{'name': 'John', 'age': 15, 'grade': 'A'}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>&lt;dict&gt; = dict(zip(keys, values))</code></p>
+<p>这个方法用于从两个集合创建一个字典，一个集合作为键，另一个集合作为值。这两个集合的长度必须相等。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">keys <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token string">'grade'</span><span class="token punctuation">]</span>
+values <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token string">'A'</span><span class="token punctuation">]</span>
+student <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">(</span><span class="token builtin">zip</span><span class="token punctuation">(</span>keys<span class="token punctuation">,</span> values<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：{'name': 'John', 'age': 15, 'grade': 'A'}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>&lt;dict&gt; = dict.fromkeys(keys [, value])</code></p>
+<p>这个方法用于从键的集合创建一个字典。所有的键都有相同的值，如果没有指定值，则默认为None。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">keys <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token string">'grade'</span><span class="token punctuation">]</span>
+student <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">.</span>fromkeys<span class="token punctuation">(</span>keys<span class="token punctuation">,</span> <span class="token string">'unknown'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span>  
+<span class="token comment"># 输出：{'name': 'unknown', 'age': 'unknown', 'grade': 'unknown'}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="对字典进行修改、查询和过滤"><a href="#对字典进行修改、查询和过滤" class="headerlink" title="对字典进行修改、查询和过滤"></a>对字典进行修改、查询和过滤</h4><ol>
+<li><p><code>&lt;dict&gt;.update(&lt;dict&gt;)</code></p>
+<p>这个方法用于添加新的键值对到字典中。如果新的字典中的键在原字典中已经存在，那么它会替换原字典中的键值对。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">}</span>
+student<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">'grade'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">16</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span>  <span class="token comment"># 输出：{'name': 'John', 'age': 16, 'grade': 'A'}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ol>
+<li><p><code>value = &lt;dict&gt;.pop(key)</code></p>
+<p>这个方法用于移除字典中的一个键值对，并返回该键对应的值。如果键不存在，那么会抛出<code>KeyError</code>。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token string">'grade'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">}</span>
+age <span class="token operator">=</span> student<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'age'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span>  <span class="token comment"># 输出：15</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span>  <span class="token comment"># 输出：{'name': 'John', 'grade': 'A'}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ol>
+<li><p><code>{k for k, v in &lt;dict&gt;.items() if v == value}</code></p>
+<p>这是一个字典推导式，用于获取所有值等于给定值的键。结果是一个集合。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token string">'grade'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'level'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">}</span>
+keys <span class="token operator">=</span> <span class="token punctuation">{</span>k <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> student<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> v <span class="token operator">==</span> <span class="token string">'A'</span><span class="token punctuation">}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>keys<span class="token punctuation">)</span>  <span class="token comment"># 输出：{'grade', 'level'}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ol>
+<li><p><code>{k: v for k, v in &lt;dict&gt;.items() if k in keys}</code></p>
+<p>这也是一个字典推导式，用于根据给定的键集合过滤字典。结果是一个新的字典。</p>
+<p>例子：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">student <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'John'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">:</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token string">'grade'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'level'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">}</span>
+keys <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'grade'</span><span class="token punctuation">]</span>
+filtered_student <span class="token operator">=</span> <span class="token punctuation">{</span>k<span class="token punctuation">:</span> v <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> student<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> k <span class="token keyword">in</span> keys<span class="token punctuation">}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>filtered_student<span class="token punctuation">)</span>  <span class="token comment"># 输出：{'name': 'John', 'grade': 'A'}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h4>
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/python/">#python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/04/18/python-dsm-sheng-cheng-de-gong-cheng-hua-shi-xian/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">【python】DSM生成的工程化实现</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/04/17/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】获取道路中心线的代码实现</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

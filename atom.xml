@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-17T02:14:59.974Z</updated>
+  <updated>2024-04-17T08:00:33.580Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【python】DSM生成的工程化实现</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-dsm-sheng-cheng-de-gong-cheng-hua-shi-xian/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-dsm-sheng-cheng-de-gong-cheng-hua-shi-xian/</id>
+    <published>2024-04-18T14:30:10.000Z</published>
+    <updated>2024-04-17T08:00:33.580Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python简易笔记</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji/</id>
+    <published>2024-04-18T14:30:10.000Z</published>
+    <updated>2024-04-17T05:39:48.851Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h1&gt;&lt;h4 id=&quot;列表的切片（slicing）操作：&quot;&gt;&lt;a href=&quot;#列表的切片（slicing）操作：&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>【代码】获取道路中心线的代码实现</title>
@@ -475,58 +525,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;什么是GIS面合并&quot;&gt;&lt;a href=&quot;#什么是GIS面合并&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】多个shapefile面合并</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/</id>
-    <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-20T08:38:02.833Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;import numpy as np
-from osgeo import gdal
-from osgeo import</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】使用Python的GDAL/OGR库来创建渔网格</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/</id>
-    <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-20T08:35:26.142Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;什么是GIS渔网&quot;&gt;&lt;a href=&quot;#什么是GIS渔网&quot; class=&quot;headerlink&quot;</summary>
         
       
     
