@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-17T05:39:48.851Z</updated>
+  <updated>2024-04-18T09:41:27.107Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,27 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>python简易笔记</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji/</id>
-    <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-04-17T05:39:48.851Z</updated>
+    <title>面矢量的数据结构简单解析</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/dai-ma-mian-shi-liang-de-shu-ju-jie-gou-jie-xi/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/dai-ma-mian-shi-liang-de-shu-ju-jie-gou-jie-xi/</id>
+    <published>2024-04-18T15:00:10.000Z</published>
+    <updated>2024-04-18T09:41:27.107Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h1&gt;&lt;h4 id=&quot;列表的切片（slicing）操作：&quot;&gt;&lt;a href=&quot;#列表的切片（slicing）操作：&quot;</summary>
+    <summary type="html">&lt;p&gt;在地理信息系统（GIS）中，矢量数据是最基本的数据类型之一。它们用于表示地理空间中的对象，包括它们的形状、位置和属性。矢量数据的主要类型包括点（Point）、线（LineString）和面（Polygon）。在这个讨论中，我们将重点关注面矢量的数据结构和操作。&lt;/p&gt;
+&lt;p</summary>
         
       
     
     
     
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
     
     
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
@@ -54,6 +55,31 @@
         
         
     <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python简易笔记</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji/</id>
+    <published>2024-04-18T14:30:10.000Z</published>
+    <updated>2024-04-17T05:39:48.851Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h1&gt;&lt;h4 id=&quot;列表的切片（slicing）操作：&quot;&gt;&lt;a href=&quot;#列表的切片（slicing）操作：&quot;</summary>
         
       
     
@@ -500,31 +526,6 @@
         
     <summary type="html">&lt;p&gt;水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。&lt;/p&gt;
 &lt;p&gt;这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒效应可以用</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】多个shapefile面合并</title>
-    <link href="http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/"/>
-    <id>http://ytkz11@.github.io/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/</id>
-    <published>2024-03-17T14:00:10.000Z</published>
-    <updated>2024-03-19T09:32:51.170Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;什么是GIS面合并&quot;&gt;&lt;a href=&quot;#什么是GIS面合并&quot; class=&quot;headerlink&quot;</summary>
         
       
     
