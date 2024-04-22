@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-18T09:41:27.107Z</updated>
+  <updated>2024-04-22T06:20:51.942Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】道路中心线的代码实现</title>
+    <link href="http://ytkz11@.github.io/2024/04/21/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/"/>
+    <id>http://ytkz11@.github.io/2024/04/21/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/</id>
+    <published>2024-04-21T14:00:10.000Z</published>
+    <updated>2024-04-22T06:20:51.942Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在路线规划和高精度地图要素采集的过程中，获取道路的中心线是非常关键的步骤。这个过程本质上是将特殊的面矢量转化为线矢量。深度学习技术，特别是卷积神经网络（CNN），可以用于识别图像中的道路，生成一个道路的面矢量图，其中每个像素都被标记为“道路”或“非道路”。然后，我们需要将这</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>面矢量的数据结构简单解析</title>
@@ -39,31 +64,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【python】从卫星图像中提取数字表面模型DSM</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm/</id>
-    <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-04-17T08:17:44.274Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
@@ -93,28 +93,27 @@
   </entry>
   
   <entry>
-    <title>【代码】获取道路中心线的代码实现</title>
-    <link href="http://ytkz11@.github.io/2024/04/17/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/"/>
-    <id>http://ytkz11@.github.io/2024/04/17/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/</id>
-    <published>2024-04-17T14:00:10.000Z</published>
-    <updated>2024-04-17T02:14:59.974Z</updated>
+    <title>【python】从卫星图像中提取数字表面模型DSM</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm/</id>
+    <published>2024-04-18T14:30:10.000Z</published>
+    <updated>2024-04-17T08:17:44.274Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;本质上是特殊的面矢量转为线矢量的过程。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404171011694.png&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
