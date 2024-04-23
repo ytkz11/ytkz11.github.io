@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-22T06:25:39.472Z</updated>
+  <updated>2024-04-23T09:41:52.405Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【闲聊】为什么一旦用了chatgpt，就再也回不去了？</title>
+    <link href="http://ytkz11@.github.io/2024/04/23/xian-liao-wei-shi-me-yi-dan-yong-liao-copilot-jiu-zai-ye-hui-bu-qu-qiao-dai-ma-liao/"/>
+    <id>http://ytkz11@.github.io/2024/04/23/xian-liao-wei-shi-me-yi-dan-yong-liao-copilot-jiu-zai-ye-hui-bu-qu-qiao-dai-ma-liao/</id>
+    <published>2024-04-23T14:30:10.000Z</published>
+    <updated>2024-04-23T09:41:52.405Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1.在平常，我时常玩chatgpt，它是个好工具。在写代码，我时常玩copilot，它也是个好工具。&lt;/p&gt;
+&lt;p&gt;copilot是微软开发的，而微软是开发chatgpt的openai的股东，所以copilot也就是调用了chatgpt的接口，copilot可以视为类gpt</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>【代码】从道路面矢量到中心线：端到端的道路中心线提取方法</title>
@@ -122,14 +148,14 @@
     <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
     <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
     <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-04-17T05:39:48.851Z</updated>
+    <updated>2024-04-22T08:36:10.187Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;列表&quot;&gt;&lt;a href=&quot;#列表&quot; class=&quot;headerlink&quot; title=&quot;列表&quot;&gt;&lt;/a&gt;列表&lt;/h1&gt;&lt;h4 id=&quot;列表的切片（slicing）操作：&quot;&gt;&lt;a href=&quot;#列表的切片（slicing）操作：&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -498,32 +524,6 @@
         
         
     <summary type="html">&lt;p&gt;在地理信息系统（GIS）和遥感中，数字高程模型（Digital Elevation</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】根据矢量裁剪NetCDF 时间序列数据</title>
-    <link href="http://ytkz11@.github.io/2024/03/18/dai-ma-gen-ju-shi-liang-cai-jian-netcdf-shi-jian-xu-lie-shu-ju/"/>
-    <id>http://ytkz11@.github.io/2024/03/18/dai-ma-gen-ju-shi-liang-cai-jian-netcdf-shi-jian-xu-lie-shu-ju/</id>
-    <published>2024-03-18T14:00:10.000Z</published>
-    <updated>2024-03-20T08:33:17.096Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;之前写了&lt;/p&gt;
-&lt;p&gt;1.矢量裁剪栅格</summary>
         
       
     
