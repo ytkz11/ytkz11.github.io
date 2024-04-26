@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-23T09:41:52.405Z</updated>
+  <updated>2024-04-26T02:53:45.417Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】从十进制度数到度分秒格式与反向转换的Python实现</title>
+    <link href="http://ytkz11@.github.io/2024/04/26/dai-ma-cong-shi-jin-zhi-du-shu-dao-du-fen-miao-ge-shi-yu-fan-xiang-zhuan-huan-de-python-shi-xian/"/>
+    <id>http://ytkz11@.github.io/2024/04/26/dai-ma-cong-shi-jin-zhi-du-shu-dao-du-fen-miao-ge-shi-yu-fan-xiang-zhuan-huan-de-python-shi-xian/</id>
+    <published>2024-04-26T14:30:10.000Z</published>
+    <updated>2024-04-26T02:53:45.417Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在地理和导航领域，我们经常使用度分秒（DMS）和十进制度数（DD）两种格式来表示经纬度。这两种格式各有优缺点，但在某些应用场景下，我们需要将一种格式转换为另一种格式。本文将介绍如何使用Python实现这两种格式之间的转换，并解释其背后的原理。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/python/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>【闲聊】为什么一旦用了chatgpt，就再也回不去了？</title>
@@ -119,18 +149,18 @@
   </entry>
   
   <entry>
-    <title>【python】从卫星图像中提取数字表面模型DSM</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/</id>
+    <title>python简易笔记</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
     <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-04-17T08:17:44.274Z</updated>
+    <updated>2024-04-22T08:36:10.187Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -144,18 +174,18 @@
   </entry>
   
   <entry>
-    <title>python简易笔记</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
+    <title>【python】从卫星图像中提取数字表面模型DSM</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/</id>
     <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-04-22T08:36:10.187Z</updated>
+    <updated>2024-04-17T08:17:44.274Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -499,31 +529,6 @@
         
     <summary type="html">&lt;p&gt;遥感影像通常具有极高的分辨率和大量的数据量，这就使得全景处理遥感影像成为一项极具挑战的任务。首要的问题是，大规模的遥感影像可能会超过硬件设备，特别是GPU的内存容量。其次，处理大规模遥感影像的计算复杂度非常高，可能会导致处理速度缓慢，效率低下。&lt;/p&gt;
 &lt;p&gt;在具体的应用中</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】根据经纬度从数字高程模型（DEM）文件获取高度</title>
-    <link href="http://ytkz11@.github.io/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/"/>
-    <id>http://ytkz11@.github.io/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/</id>
-    <published>2024-03-25T14:00:10.000Z</published>
-    <updated>2024-03-25T01:11:00.792Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在地理信息系统（GIS）和遥感中，数字高程模型（Digital Elevation</summary>
         
       
     
