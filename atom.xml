@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-26T02:53:45.417Z</updated>
+  <updated>2024-04-29T05:13:29.716Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】合并Shapefile文件</title>
+    <link href="http://ytkz11@.github.io/2024/04/29/dai-ma-he-bing-shapefile-wen-jian/"/>
+    <id>http://ytkz11@.github.io/2024/04/29/dai-ma-he-bing-shapefile-wen-jian/</id>
+    <published>2024-04-29T14:00:10.000Z</published>
+    <updated>2024-04-29T05:13:29.716Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在地理信息系统中，Shapefile（.shp）是一种非常常见的矢量数据格式，用于存储地理要素的空间信息和属性数据。在处理大量Shapefile时，有时需要将多个文件合并成一个，以便于统一管理和分析。本文将介绍如何使用Python的GDAL/OGR库实现多个Shapefil</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【代码】从十进制度数到度分秒格式与反向转换的Python实现</title>
@@ -153,7 +178,7 @@
     <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
     <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
     <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-04-22T08:36:10.187Z</updated>
+    <updated>2024-04-29T08:55:19.830Z</updated>
     
     
       
@@ -512,32 +537,6 @@
     
     
     <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】双重循环语句实现分块处理</title>
-    <link href="http://ytkz11@.github.io/2024/03/25/dai-ma-shuang-chong-xun-huan-yu-ju-shi-xian-fen-kuai-chu-li/"/>
-    <id>http://ytkz11@.github.io/2024/03/25/dai-ma-shuang-chong-xun-huan-yu-ju-shi-xian-fen-kuai-chu-li/</id>
-    <published>2024-03-25T14:00:10.000Z</published>
-    <updated>2024-03-27T09:25:33.773Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;遥感影像通常具有极高的分辨率和大量的数据量，这就使得全景处理遥感影像成为一项极具挑战的任务。首要的问题是，大规模的遥感影像可能会超过硬件设备，特别是GPU的内存容量。其次，处理大规模遥感影像的计算复杂度非常高，可能会导致处理速度缓慢，效率低下。&lt;/p&gt;
-&lt;p&gt;在具体的应用中</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
