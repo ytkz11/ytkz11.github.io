@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            【python】你的 Python 包都装到哪了？ |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【python】你的 Python 包都装到哪了？</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-04-30 22:30:10</span>
+        <span class="mobile">2024-04-30 22:30</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-04-30 16:39:28</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><p>终结一切找不到包（第三方库）的问题。</p>
+<p>经常在互联网上看到python的求助问题：</p>
+<ul>
+<li>我安装了 pip 为什么运行报找不到可执行文件？</li>
+<li>import module 为什么报 <code>ModuleNotFound</code>？</li>
+<li>为什么我用 Pycharm 能运行在 cmd 里运行不了？</li>
+</ul>
+<p>授人以鱼不如授人以渔，要解决这类问题，你得知道 Python 是如何找包的。希望看完这篇文章，能有所帮助。</p>
+<h2 id="Python-是如何寻找包的"><a href="#Python-是如何寻找包的" class="headerlink" title="Python 是如何寻找包的"></a>Python 是如何寻找包的</h2><p>现在大家的电脑上很可能不只有一个 Python，还有更多的虚拟环境，导致安装包的时候，一不小心你就忘记注意安装包的路径了。首先我们来解决找包的问题，这个问题回答起来很简单，但很多人不知道这个原理。假如你的 Python 解释器的路径是 <code>$path_prefix/bin/python</code>，那么你启动 Python 交互环境或者用这个解释器运行脚本时，会默认寻找以下位置<a class="link" target="_blank" rel="noopener" href="https://frostming.com/2019/03-13/where-do-your-packages-go/#user-content-fn-1">1<i class="fas fa-external-link-alt"></i></a>：</p>
+<ol>
+<li><code>$path_prefix/lib</code>（标准库路径）</li>
+<li><code>$path_prefix/lib/pythonX.Y/site-packages</code>（三方库路径，X.Y 是对应 Python 的主次版本号，如 3.7, 2.6）</li>
+<li>当前工作目录（<code>pwd</code>命令的返回结果）</li>
+</ol>
+<p>这里如果你用的是 Linux 上的默认 Python，<code>$path_prefix</code> 就是 <code>/usr</code>，如果你是自己使用默认选项编译的，<code>$path_prefix</code> 就是 <code>/usr/local</code>。从上面第二条可以看到不同 Python 版本的三方库路径不同，如果你把 Python 从 3.6 升级到 3.7 那么之前装的三方库都没法用了。当然你可以整个文件夹都拷贝过去，大部分情况不会出问题。</p>
+<h3 id="几个有用的函数"><a href="#几个有用的函数" class="headerlink" title="几个有用的函数"></a>几个有用的函数</h3><ul>
+<li><code>sys.executable</code>：当前使用的 Python 解释器路径</li>
+<li><code>sys.path</code>：当前包的搜索路径列表</li>
+<li><code>sys.prefix</code>：当前使用的 <code>$path_prefix</code></li>
+<li>除此之外，还在以在<em>命令行</em>中运行 <code>python -m site</code>，会打印出当前 Python 的一些信息，包括搜索路径列表。</li>
+</ul>
+<p><strong>例：</strong></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">import</span> sys
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sys<span class="token punctuation">.</span>executable
+<span class="token string">'/home/frostming/.pyenv/versions/3.7.2/bin/python'</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sys<span class="token punctuation">.</span>path
+<span class="token punctuation">[</span><span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">'/home/frostming/.pyenv/versions/3.7.2/lib/python37.zip'</span><span class="token punctuation">,</span> <span class="token string">'/home/frostming/.pyenv/versions/3.7.2/lib/python3.7'</span><span class="token punctuation">,</span> <span class="token string">'/home/frostming/.pyenv/versions/3.7.2/lib/python3.7/lib-dynload'</span><span class="token punctuation">,</span> <span class="token string">'/home/frostming/.local/lib/python3.7/site-packages'</span><span class="token punctuation">,</span> <span class="token string">'/mnt/d/Workspace/pipenv'</span><span class="token punctuation">,</span> <span class="token string">'/home/frostming/.pyenv/versions/3.7.2/lib/python3.7/site-packages'</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> sys<span class="token punctuation">.</span>prefix
+<span class="token string">'/home/frostming/.pyenv/versions/3.7.2'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="使用环境变量添加搜索路径"><a href="#使用环境变量添加搜索路径" class="headerlink" title="使用环境变量添加搜索路径"></a>使用环境变量添加搜索路径</h3><p>如果你的包的路径不存在上面列出的搜索路径列表里，可以把路径加到 <code>PYTHONPATH</code> 环境变量里，多个路径用 <code>:</code> 隔开（Windows 用 <code>;</code>）。</p>
+<p>但需注意，避免把不同 Python 版本包的路径加到 <code>PYTHONPATH</code> 里，比如 <code>PYTHONPATH=/home/frostming/.local/lib/python2.7/site-packages</code>，因为 <code>PYTHONPATH</code> 中的路径是优先于默认搜索路径，如果用 Python 3 的话会有兼容性问题。事实上 <code>PYTHONPATH</code> 里最好不要出现任何带 <code>site-packages</code> 的路径。</p>
+<p>顺便说下 <code>PATH</code> 是用来找<strong>可执行程序</strong>的搜索路径，假如你在终端中运行命令 <code>my_cmd</code>，系统会依次扫描 <code>PATH</code> 中的路径，看 <code>my_cmd</code> 是否存在于该路径下，所以如果提示找不到程序或命令无法识别，那你就要看路径是否加到 <code>PATH</code> 里了。</p>
+<h2 id="Python-是如何安装包的"><a href="#Python-是如何安装包的" class="headerlink" title="Python 是如何安装包的"></a>Python 是如何安装包的</h2><p>现在用安装 Python 包基本是用的 <code>pip</code>，就算你是用 <code>pipenv</code>，<code>poetry</code>，底层依然是 <code>pip</code>，一律适用。 如果你没有安装 <code>pip</code> 请参考<a class="link" target="_blank" rel="noopener" href="https://pip.pypa.io/en/stable/installing/">这里<i class="fas fa-external-link-alt"></i></a>，如果安装了还无法用 <code>pip</code> 命令请参考上一节。</p>
+<p>运行 <code>pip</code> 有两种方式：</p>
+<ul>
+<li><code>pip ...</code></li>
+<li><code>python -m pip ...</code></li>
+</ul>
+<p>第一种方式和第二种方式大同小异，区别是第一种方式使用的 Python 解释器是写在 <code>pip</code> 文件的 shebang 里的，一般情况下，如果你的 <code>pip</code> 路径是 <code>$path_prefix/bin/pip</code>，那么 Python 路径对应的就是 <code>$path_prefix/bin/python</code>。如果你用的是 Unix 系统则 <code>cat $(which pip)</code> 第一行就包含了 Python 解释器的路径。第二种方式则显式地指定了 Python 的位置。这条规则，对于所有 Python 的可执行程序都是适用的。流程如下图所示。<img src="https://static.frostming.com/images/2019-03-pip-flow2.png" alt="img"></p>
+<p>那么，不加任何自定义配置时，使用 <code>pip</code> 安装包就会自动安装到 <code>$path_prefix/lib/pythonX.Y/site-packages</code> 下（<code>$path_prefix</code> 是从上一段里得到的），可执行程序安装到 <code>$path_prefix/bin</code> 下，如果需要在命令行直接使用 <code>my_cmd</code> 运行，记得加到 <code>PATH</code>。</p>
+<h3 id="pip-中更改安装位置的选项"><a href="#pip-中更改安装位置的选项" class="headerlink" title="pip 中更改安装位置的选项"></a>pip 中更改安装位置的选项</h3><ul>
+<li><code>--prefix PATH</code>，替换 <code>$path_prefix</code> 为给定的值</li>
+<li><code>--root ROOT_PATH</code>，在 <code>$path_prefix</code> 前面加上 <code>ROOT_PATH</code>，比如 <code>--root /home/frostming</code>，<code>$path_prefix</code> 就会从 <code>/usr</code> 变成 <code>/home/frostming/usr</code></li>
+<li><code>--target TARGET</code>，直接指定安装位置到 <code>TARGET</code></li>
+</ul>
+<h2 id="虚拟环境"><a href="#虚拟环境" class="headerlink" title="虚拟环境"></a>虚拟环境</h2><p>虚拟环境就是为了隔离不同项目的依赖包，使他们安装到不同的路径下，以防止依赖冲突的问题。理解了 Python 是如何安装包的机制之后就不难理解虚拟环境（<code>virtualenv</code>, <code>venv</code>模块）的原理。其实，运行<code>virtualenv myenv</code>会复制一个新的 Python 解释器到<code>myenv/bin</code>下，并创建好<code>myenv/lib</code>，<code>myenv/lib/pythonX.Y/site-packages</code>等目录（<code>venv</code>模块不是用的复制，但结果基本一样）。执行<code>source myenv/bin/activate</code>以后会把<code>myenv/bin</code>塞到<code>PATH</code>前面，让这个复制出来的 Python 解释器最优先被搜索到。这样，后续安装包时，<code>$path_prefix</code>就会是<code>myenv</code>了，从而实现了安装路径的隔离。</p>
+<h2 id="脚本运行方式对搜索路径的影响"><a href="#脚本运行方式对搜索路径的影响" class="headerlink" title="脚本运行方式对搜索路径的影响"></a>脚本运行方式对搜索路径的影响</h2><blockquote>
+<p>本节于 2021/1/21 新增</p>
+</blockquote>
+<p>从上面的介绍大家可以知道，Python 找不找得到一个包，最直接的原因是 <code>sys.path</code>，而更进一步的原因是 <code>sys.executable</code> 的路径。程序写完了，我们总得需要运行它，不同的运行方法却有可能影响到 <code>sys.path</code> 而造成不同的行为，下面我们就来讨论这个问题。</p>
+<p>假设你的包结构如下</p>
+<pre class="line-numbers language-none"><code class="language-none">.
+├── main.py
+└── my_package
+    ├── __init__.py
+    ├── a.py
+    └── b.py<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>main.py</code> 的内容：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> my_package<span class="token punctuation">.</span>b<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>b.py</code> 的文件内容很简单：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> sys
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"I'm b"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>现在在 <code>main.py</code> 同级的目录下执行</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ python main.py
+I<span class="token string">'m b
+['</span>/home/frostming/test_path<span class="token string">', ...]  # 省略的路径是共同的，与讨论的问题无关
+$ python my_package/b.py
+I'</span>m b
+<span class="token punctuation">[</span><span class="token string">'/home/frostming/test_path/my_package'</span>, <span class="token punctuation">..</span>.<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>python xxx.py</code> 的运行方式叫做<strong>直接运行</strong>，这时该文件中的 <code>__name__</code> 值会指定为 <code>__main__</code>，IDE 中的「 Run File」「 运行脚本」用的就是这种方式。可以看到这时 <code>sys.path</code>的第一个值是<strong>该脚本文件所在的目录</strong>，随脚本路径而变化，记住我们执行测试始终是在 <code>/home/frostming/test_path</code> 这个目录下。</p>
+<p>好，那么如果我们需要在 <code>b.py</code> 中导入 <code>a.py</code>，<code>a.py</code> 包含简单的一行 <code>print("I'm a")</code>，那么 <code>b.py</code> 脚本中应该怎么写呢？</p>
+<ol>
+<li>Easy!, <code>import a</code>，好，再执行一遍上面的测试</li>
+</ol>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ python main.py
+ModuleNotFoundError: No module named <span class="token string">'a'</span>
+$ python my_package/b.py
+I<span class="token string">'m a
+I'</span>m b
+<span class="token punctuation">[</span><span class="token string">'/home/frostming/test_path/my_package'</span>, <span class="token punctuation">..</span>.<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>第一个测试出错了，如果前面的内容你已经看过，这个报错就是意料之中了——<code>sys.path</code> 压根没有 <code>a.py</code> 所在的目录 <code>/home/frostming/test_path/my_package</code>，当然找不到 <code>a</code> 了。</p>
+<ol>
+<li>改成 <code>from my_package import a</code>，测试就不做了，因为基于同样的分析，我们可以预测第一个运行没问题而第二个会报错找不到 <code>my_package</code>。注意由于 <code>b</code> 是在 <code>my_package</code> 包中的，这时可以使用<strong>相对导入</strong>，写 <code>from . import a</code> 和 <code>from my_package import a</code> 的效果是一样的。</li>
+</ol>
+<p>那么我有没有让这两次运行都不报错的方法呢？有。我们要知道，一个项目中的入口是有限的，实际上不会出现可以执行的代码既在顶层有，又在子目录里也有。我们应该把主要的运行逻辑，都放在 <code>main.py</code> 中（不一定是这个名字，比如 Django 项目是 <code>manage.py</code>），如果这时确实需要运行一个子目录中某脚本的代码，应该用 <code>python -m &lt;module_name&gt;</code>，而 <code>b.py</code> 中导入 <code>a</code> 的语句应为 <code>from my_package import a</code>，我们来看一下运行效果：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ python main.py  <span class="token comment"># 和 python -m main 效果一样</span>
+I<span class="token string">'m a
+I'</span>m b
+<span class="token punctuation">[</span><span class="token string">'/home/frostming/test_path'</span>, <span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+$ python -m my_package.b
+I<span class="token string">'m a
+I'</span>m b
+<span class="token punctuation">[</span><span class="token string">'/home/frostming/test_path'</span>, <span class="token punctuation">..</span>.<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以看到这两次运行的 <code>sys.path</code> 内容一致了，它的第一个值是<strong>当前运行所在的目录</strong>。这种运行方式叫做<strong>以模块方式运行</strong>，<code>python -m</code> 后面的参数是（以 <code>.</code> 分隔的）<strong>模块名</strong>，而不是路径名。由于这种统一性，你在项目中的所有导入都可以用相同的定义方式，而不用管是在哪个脚本中。这也是为什么 Django 官方文档中推荐导入名称全部用 <code>myapp.models.users</code> 这种形式。</p>
+<p>除此之外，以模块方式运行的时候，传入模块名的每一级父模块（或包）都会以模块形式运行，这意味着你可以在模块中使用相对导入（以直接运行方式运行不可以），并且传入的模块中<code>__name__</code> 的值会置为 <code>__main__</code>，你依然可以应用 <code>if __name__ == "__main__":</code> 的判断。如果 <code>python -m &lt;module_name&gt;</code> 中传入的模块是个包，那么会执行包目录中的 <code>__main__.py</code> 脚本（如果存在），此时该脚本的 <code>__name__</code> 值为 <code>__main__</code>。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>看到这里大家可以发现，关于包路径搜索最重要的就是这个<code>$path_prefix</code>路径前缀，而这个值又是从使用的 Python 解释器路径推导出来的。所以要找到包的路径，只需要知道解释器的路径就可以了，如果遇到改变包的路径，只需要通过正确的<code>PATH</code>设置，指定你想要的 Python 解释器即可。</p>
+<p>现在回到开头的三个问题，大家会解决了吗？在评论区写出你的排查步骤或解决方法。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/python/">#python</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/04/29/dai-ma-he-bing-shapefile-wen-jian/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】合并Shapefile文件</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
