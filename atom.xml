@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-04-30T08:39:28.567Z</updated>
+  <updated>2024-05-06T01:45:18.548Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】从照片中提取GPS信息并创建Shapefile</title>
+    <link href="http://ytkz11@.github.io/2024/05/06/dai-ma-cong-zhao-pian-zhong-ti-qu-gps-xin-xi-bing-chuang-jian-shapefile/"/>
+    <id>http://ytkz11@.github.io/2024/05/06/dai-ma-cong-zhao-pian-zhong-ti-qu-gps-xin-xi-bing-chuang-jian-shapefile/</id>
+    <published>2024-05-06T14:00:10.000Z</published>
+    <updated>2024-05-06T01:45:18.548Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在地理信息系统中，获取精确的地理位置数据对于各种分析至关重要。随着数码摄影的普及，越来越多的照片包含了EXIF元数据，其中就包含了拍摄地点的GPS信息。本文将介绍如何使用Python编程语言从照片中提取这些GPS信息，并将其转换为Shapefile文件，以便在GIS软件中进</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【python】你的 Python 包都装到哪了？</title>
@@ -502,33 +527,6 @@
         
     <summary type="html">&lt;p&gt;水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。&lt;/p&gt;
 &lt;p&gt;这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒效应可以用</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【python】进入python环境的方法</title>
-    <link href="http://ytkz11@.github.io/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/"/>
-    <id>http://ytkz11@.github.io/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/</id>
-    <published>2024-03-28T14:00:10.000Z</published>
-    <updated>2024-03-28T09:02:44.691Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;人在江湖飘，一个电脑里的python版本可能不止一个。比如说我，有两个不一样的python版本。&lt;/p&gt;
-&lt;p&gt;首先都要把python的安装路径添加到系统的环境变量里。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     

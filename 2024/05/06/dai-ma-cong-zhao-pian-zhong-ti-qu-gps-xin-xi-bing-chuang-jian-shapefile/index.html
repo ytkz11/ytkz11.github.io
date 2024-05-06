@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            【代码】从照片中提取GPS信息并创建Shapefile |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">【代码】从照片中提取GPS信息并创建Shapefile</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv5</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-05-06 22:00:10</span>
+        <span class="mobile">2024-05-06 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-05-06 09:45:18</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>在地理信息系统中，获取精确的地理位置数据对于各种分析至关重要。随着数码摄影的普及，越来越多的照片包含了EXIF元数据，其中就包含了拍摄地点的GPS信息。本文将介绍如何使用Python编程语言从照片中提取这些GPS信息，并将其转换为Shapefile文件，以便在GIS软件中进行进一步的分析和处理。</p>
+<h1 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h1><p>在开始之前，需要确保已经安装了以下Python库：</p>
+<ul>
+<li>PIL（或Pillow）：用于处理图像文件。</li>
+<li>pyshp：用于读写Shapefile文件。</li>
+</ul>
+<p>可以使用pip来安装这些库：</p>
+<pre class="line-numbers language-none"><code class="language-none">pip install pillow pyshp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="二、准备工作"><a href="#二、准备工作" class="headerlink" title="二、准备工作"></a>二、准备工作</h1><p>首先，我们需要编写一个函数来从照片中提取EXIF元数据中的GPS信息。这个函数将打开照片文件，解析EXIF标签，并提取出经度和纬度信息。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image 
+<span class="token keyword">def</span> <span class="token function">exif</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    从图片中返回EXIF元数据
+    """</span>
+    exif_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        i <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>  <span class="token comment"># 使用PIL库打开图片</span>
+        tags <span class="token operator">=</span> i<span class="token punctuation">.</span>_getexif<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 获取图片的EXIF标签</span>
+
+        <span class="token keyword">for</span> tag<span class="token punctuation">,</span> value <span class="token keyword">in</span> tags<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            decoded <span class="token operator">=</span> TAGS<span class="token punctuation">.</span>get<span class="token punctuation">(</span>tag<span class="token punctuation">,</span> tag<span class="token punctuation">)</span>  <span class="token comment"># 尝试从预定义的TAGS字典中获取标签的中文描述，否则使用标签ID</span>
+            exif_data<span class="token punctuation">[</span>decoded<span class="token punctuation">]</span> <span class="token operator">=</span> value  <span class="token comment"># 将标签及其值存储到exif_data字典中</span>
+
+    <span class="token keyword">except</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>  <span class="token comment"># 捕获所有异常并忽略，这通常不是一个好的做法，应该明确指定要捕获的异常</span>
+
+    <span class="token keyword">return</span> exif_data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="三、处理GPS信息"><a href="#三、处理GPS信息" class="headerlink" title="三、处理GPS信息"></a>三、处理GPS信息</h1><p>由于EXIF中的GPS信息是以度、分、秒（DMS）的格式存储的，并且可能包含方向信息（东、西、南、北），我们需要编写一个函数<code>dms2dd()</code>来将这些信息转换为十进制度（DD）的格式。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">dms2dd</span><span class="token punctuation">(</span>d<span class="token punctuation">,</span> m<span class="token punctuation">,</span> s<span class="token punctuation">,</span> direction<span class="token punctuation">)</span><span class="token punctuation">:</span>  
+    <span class="token triple-quoted-string string">"""  
+    将度分秒格式转换为十进制度格式  
+    """</span>  
+    sec <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token punctuation">(</span>m <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token operator">+</span> s<span class="token punctuation">)</span>  
+    dec <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>sec <span class="token operator">/</span> <span class="token number">3600</span><span class="token punctuation">)</span>  
+    deg <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>d <span class="token operator">+</span> dec<span class="token punctuation">)</span>  
+  
+    <span class="token keyword">if</span> direction<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'W'</span> <span class="token keyword">or</span> direction<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'S'</span><span class="token punctuation">:</span>  
+        deg <span class="token operator">=</span> deg <span class="token operator">*</span> <span class="token operator">-</span><span class="token number">1</span>  
+  
+    <span class="token keyword">return</span> <span class="token builtin">float</span><span class="token punctuation">(</span>deg<span class="token punctuation">)</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>接下来，我们需要编写一个函数<code>gps()</code>来解析EXIF元数据中的GPS信息，并返回经度和纬度值。这个函数将首先检查是否存在GPSInfo标签，然后提取度、分、秒和方向信息，并使用<code>dms2dd()</code>函数进行转换。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">gps</span><span class="token punctuation">(</span>exif_data<span class="token punctuation">)</span><span class="token punctuation">:</span>  
+   <span class="token triple-quoted-string string">"""  
+   从EXIF数据中提取GPS信息并转换为十进制度格式  
+   """</span>  
+   lat <span class="token operator">=</span> <span class="token boolean">None</span>  
+   lon <span class="token operator">=</span> <span class="token boolean">None</span>  
+ 
+   <span class="token keyword">if</span> exif_data <span class="token keyword">and</span> <span class="token string">'GPSInfo'</span> <span class="token keyword">in</span> exif_data<span class="token punctuation">:</span>  
+       <span class="token comment"># 这里省略了详细的GPSInfo解析过程，因为它涉及多个EXIF标签的组合  </span>
+       <span class="token comment"># ...  </span>
+       <span class="token comment"># 假设我们已经从exif_data中提取了经纬度信息（度、分、秒和方向）  </span>
+       <span class="token comment"># 这里只是模拟赋值  </span>
+       lat_d<span class="token punctuation">,</span> lat_m<span class="token punctuation">,</span> lat_s<span class="token punctuation">,</span> lat_dir <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token string">'N'</span><span class="token punctuation">)</span>  
+       lon_d<span class="token punctuation">,</span> lon_m<span class="token punctuation">,</span> lon_s<span class="token punctuation">,</span> lon_dir <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">120</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token string">'E'</span><span class="token punctuation">)</span>  
+ 
+       lat <span class="token operator">=</span> dms2dd<span class="token punctuation">(</span>lat_d<span class="token punctuation">,</span> lat_m<span class="token punctuation">,</span> lat_s<span class="token punctuation">,</span> lat_dir<span class="token punctuation">)</span>  
+       lon <span class="token operator">=</span> dms2dd<span class="token punctuation">(</span>lon_d<span class="token punctuation">,</span> lon_m<span class="token punctuation">,</span> lon_s<span class="token punctuation">,</span> lon_dir<span class="token punctuation">)</span>  
+ 
+   <span class="token keyword">return</span> lat<span class="token punctuation">,</span> lon<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="四、将GPS信息转换为Shapefile格式"><a href="#四、将GPS信息转换为Shapefile格式" class="headerlink" title="四、将GPS信息转换为Shapefile格式"></a>四、将GPS信息转换为Shapefile格式</h1><p>一旦我们从照片中提取了GPS信息，就可以将其转换为Shapefile文件，这是一种常用于地理信息系统中的矢量数据格式。我们将使用Python的<code>pyshp</code>库来创建Shapefile文件。</p>
+<p>首先，我们需要编写一个函数<code>gps_to_shapefile()</code>来遍历指定目录下的所有照片文件，提取GPS信息，并创建一个包含这些信息的Shapefile文件。</p>
+<pre class="line-numbers language-none"><code class="language-none">photos = {}
+photo_dir = ".\photos"
+
+# 查找指定目录下的所有JPG照片
+files = glob.glob(os.path.join(photo_dir, "*.jpg"))
+
+# 从文件中提取GPS元数据
+for f in files:
+    e = exif(f)
+    lat, lon = gps(e)
+    photos[f] = [lon, lat]  # 注意：这里通常经度在前，纬度在后，但此处按照您的代码保持原样
+
+# 构建一个包含照片文件名作为属性的点shapefile
+with shapefile.Writer("photos1", shapefile.POINT) as w:
+    w.field("NAME", "C", 80)  # 创建一个名为NAME的字符型字段，最大长度为80
+
+    for f, coords in photos.items():
+        w.point(*coords)  # 使用经度和纬度（注意顺序）创建一个点要素
+        w.record(f)  # 为点要素添加文件名属性<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="五、完整代码"><a href="#五、完整代码" class="headerlink" title="五、完整代码"></a>五、完整代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> glob
+<span class="token keyword">import</span> os
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> Image
+    <span class="token keyword">import</span> ImageDraw
+<span class="token keyword">except</span><span class="token punctuation">:</span>
+    <span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+    <span class="token keyword">from</span> PIL<span class="token punctuation">.</span>ExifTags <span class="token keyword">import</span> TAGS
+<span class="token keyword">import</span> shapefile
+
+
+<span class="token keyword">def</span> <span class="token function">exif</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    从图片中返回EXIF元数据
+    """</span>
+    exif_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        i <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>img<span class="token punctuation">)</span>  <span class="token comment"># 使用PIL库打开图片</span>
+        tags <span class="token operator">=</span> i<span class="token punctuation">.</span>_getexif<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 获取图片的EXIF标签</span>
+
+        <span class="token keyword">for</span> tag<span class="token punctuation">,</span> value <span class="token keyword">in</span> tags<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            decoded <span class="token operator">=</span> TAGS<span class="token punctuation">.</span>get<span class="token punctuation">(</span>tag<span class="token punctuation">,</span> tag<span class="token punctuation">)</span>  <span class="token comment"># 尝试从预定义的TAGS字典中获取标签的中文描述，否则使用标签ID</span>
+            exif_data<span class="token punctuation">[</span>decoded<span class="token punctuation">]</span> <span class="token operator">=</span> value  <span class="token comment"># 将标签及其值存储到exif_data字典中</span>
+
+    <span class="token keyword">except</span><span class="token punctuation">:</span>
+        <span class="token keyword">pass</span>  <span class="token comment"># 捕获所有异常并忽略，这通常不是一个好的做法，应该明确指定要捕获的异常</span>
+
+    <span class="token keyword">return</span> exif_data
+
+
+<span class="token keyword">def</span> <span class="token function">dms2dd</span><span class="token punctuation">(</span>d<span class="token punctuation">,</span> m<span class="token punctuation">,</span> s<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    将度/分/秒转换为十进制度
+    """</span>
+    sec <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token punctuation">(</span>m <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token operator">+</span> s<span class="token punctuation">)</span>  <span class="token comment"># 将分和秒转换为秒</span>
+    dec <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>sec <span class="token operator">/</span> <span class="token number">3600</span><span class="token punctuation">)</span>  <span class="token comment"># 将秒转换为小数度</span>
+    deg <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>d <span class="token operator">+</span> dec<span class="token punctuation">)</span>  <span class="token comment"># 将度和小数度相加</span>
+
+    <span class="token keyword">if</span> i<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'W'</span><span class="token punctuation">:</span>  <span class="token comment"># 如果方向是西</span>
+        deg <span class="token operator">=</span> deg <span class="token operator">*</span> <span class="token operator">-</span><span class="token number">1</span>  <span class="token comment"># 将度数变为负数</span>
+
+    <span class="token keyword">elif</span> i<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'S'</span><span class="token punctuation">:</span>  <span class="token comment"># 如果方向是南</span>
+        deg <span class="token operator">=</span> deg <span class="token operator">*</span> <span class="token operator">-</span><span class="token number">1</span>  <span class="token comment"># 将度数变为负数</span>
+
+    <span class="token keyword">return</span> <span class="token builtin">float</span><span class="token punctuation">(</span>deg<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">gps</span><span class="token punctuation">(</span>exif<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    从EXIF元数据中提取GPS信息
+    """</span>
+    lat <span class="token operator">=</span> <span class="token boolean">None</span>  <span class="token comment"># 纬度</span>
+    lon <span class="token operator">=</span> <span class="token boolean">None</span>  <span class="token comment"># 经度</span>
+
+    <span class="token keyword">if</span> exif<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'GPSInfo'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 如果EXIF中包含GPS信息</span>
+        <span class="token comment"># 纬度</span>
+        coords <span class="token operator">=</span> exif<span class="token punctuation">[</span><span class="token string">'GPSInfo'</span><span class="token punctuation">]</span>
+        i <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 纬度方向（N/S）</span>
+        d <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment"># 纬度度数</span>
+        m <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 纬度分钟</span>
+        s <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>  <span class="token comment"># 纬度秒</span>
+        lat <span class="token operator">=</span> dms2dd<span class="token punctuation">(</span>d<span class="token punctuation">,</span> m<span class="token punctuation">,</span> s<span class="token punctuation">,</span> i<span class="token punctuation">)</span>  <span class="token comment"># 将纬度转换为十进制度</span>
+
+        <span class="token comment"># 经度</span>
+        i <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>  <span class="token comment"># 经度方向（E/W）</span>
+        d <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment"># 经度度数</span>
+        m <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 经度分钟</span>
+        s <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>  <span class="token comment"># 经度秒</span>
+        lon <span class="token operator">=</span> dms2dd<span class="token punctuation">(</span>d<span class="token punctuation">,</span> m<span class="token punctuation">,</span> s<span class="token punctuation">,</span> i<span class="token punctuation">)</span>  <span class="token comment"># 将经度转换为十进制度</span>
+
+    <span class="token keyword">return</span> lat<span class="token punctuation">,</span> lon
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment"># 存储照片文件名和GPS坐标的字典</span>
+    photos <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    photo_dir <span class="token operator">=</span> <span class="token string">".\photos"</span>
+
+    <span class="token comment"># 查找指定目录下的所有JPG照片</span>
+    files <span class="token operator">=</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>photo_dir<span class="token punctuation">,</span> <span class="token string">"*.jpg"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 从文件中提取GPS元数据</span>
+    <span class="token keyword">for</span> f <span class="token keyword">in</span> files<span class="token punctuation">:</span>
+        e <span class="token operator">=</span> exif<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+        lat<span class="token punctuation">,</span> lon <span class="token operator">=</span> gps<span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+        photos<span class="token punctuation">[</span>f<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>lon<span class="token punctuation">,</span> lat<span class="token punctuation">]</span>  <span class="token comment"># 注意：这里通常经度在前，纬度在后，但此处按照您的代码保持原样</span>
+
+    <span class="token comment"># 构建一个包含照片文件名作为属性的点shapefile</span>
+    <span class="token keyword">with</span> shapefile<span class="token punctuation">.</span>Writer<span class="token punctuation">(</span><span class="token string">"photos1"</span><span class="token punctuation">,</span> shapefile<span class="token punctuation">.</span>POINT<span class="token punctuation">)</span> <span class="token keyword">as</span> w<span class="token punctuation">:</span>
+        w<span class="token punctuation">.</span>field<span class="token punctuation">(</span><span class="token string">"NAME"</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">)</span>  <span class="token comment"># 创建一个名为NAME的字符型字段，最大长度为80</span>
+
+        <span class="token keyword">for</span> f<span class="token punctuation">,</span> coords <span class="token keyword">in</span> photos<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            w<span class="token punctuation">.</span>point<span class="token punctuation">(</span><span class="token operator">*</span>coords<span class="token punctuation">)</span>  <span class="token comment"># 使用经度和纬度（注意顺序）创建一个点要素</span>
+            w<span class="token punctuation">.</span>record<span class="token punctuation">(</span>f<span class="token punctuation">)</span>  <span class="token comment"># 为点要素添加文件名属性</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>结果在arcgis打开，如下:</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405060919389.png" alt="image-20240506091924307"></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/04/30/python-ni-de-python-bao-du-zhuang-dao-na-liao/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【python】你的 Python 包都装到哪了？</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
