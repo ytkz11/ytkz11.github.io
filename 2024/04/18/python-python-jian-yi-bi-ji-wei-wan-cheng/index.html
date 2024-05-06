@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-04-29 16:55:19</span>
+        <span class="pc">2024-05-06 11:14:24</span>
     </span>
     
     
@@ -789,7 +789,280 @@ counter <span class="token operator">=</span> count<span class="token punctuatio
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出：12</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">next</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出：14</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>每次调用<code>next(counter)</code>时，生成器都会返回序列中的下一个值，并更新内部的状态，以便下次调用时能返回正确的值。</p>
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1>
+<h1 id="Regex-正则表达式"><a href="#Regex-正则表达式" class="headerlink" title="Regex 正则表达式"></a>Regex 正则表达式</h1><p>1.<code>re.sub(pattern, repl, string, count=0, flags=0)</code></p>
+<p>在字符串中查找与正则表达式模式匹配的所有子串，并用新的字符串替换它们。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+text <span class="token operator">=</span> <span class="token string">"apple apple apple orange"</span>  
+new_text <span class="token operator">=</span> re<span class="token punctuation">.</span>sub<span class="token punctuation">(</span><span class="token string">r'apple'</span><span class="token punctuation">,</span> <span class="token string">'banana'</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span>  
+<span class="token keyword">print</span><span class="token punctuation">(</span>new_text<span class="token punctuation">)</span>  <span class="token comment"># 输出: banana banana banana orange</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2.<code>re.findall(pattern, string, flags=0)</code></p>
+<p>在字符串中查找所有与正则表达式模式匹配的子串，并返回一个列表。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+text <span class="token operator">=</span> <span class="token string">"apple apple apple orange"</span>  
+matches <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'apple'</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span>  
+<span class="token keyword">print</span><span class="token punctuation">(</span>matches<span class="token punctuation">)</span>  <span class="token comment"># 输出: ['apple', 'apple', 'apple']</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3.<code>re.split(pattern, string, maxsplit=0, flags=0)</code></p>
+<p>通过正则表达式模式指定的分隔符来分割字符串。返回分割后的子串列表。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+text <span class="token operator">=</span> <span class="token string">"apple,banana,orange"</span>  
+split_text <span class="token operator">=</span> re<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">r','</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span>  
+<span class="token keyword">print</span><span class="token punctuation">(</span>split_text<span class="token punctuation">)</span>  <span class="token comment"># 输出: ['apple', 'banana', 'orange']  </span>
+  
+<span class="token comment"># 如果要保留分隔符，则需要后处理或使用其他方法</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>4.<code>re.search(pattern, string, flags=0)</code></p>
+<p>在字符串中查找与正则表达式模式匹配的第一个位置，并返回一个相应的匹配对象。如果没有找到匹配项，则返回<code>None</code>。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+text <span class="token operator">=</span> <span class="token string">"apple apple apple orange"</span>  
+match <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">r'orange'</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span>  
+<span class="token keyword">if</span> match<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  
+    <span class="token comment"># 输出: orange</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>5.<code>re.match(pattern, string, flags=0)</code></p>
+<p>从字符串的开头开始匹配正则表达式模式。如果模式在字符串的起始位置匹配，则返回一个相应的匹配对象。否则，返回<code>None</code>。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+text <span class="token operator">=</span> <span class="token string">"apple apple apple orange"</span>  
+match <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">r'apple'</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span>  
+<span class="token keyword">if</span> match<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出: apple  </span>
+  
+match <span class="token operator">=</span> re<span class="token punctuation">.</span>match<span class="token punctuation">(</span><span class="token string">r'orange'</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span>  
+<span class="token keyword">if</span> <span class="token keyword">not</span> match<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"No match at the beginning."</span><span class="token punctuation">)</span>  
+    <span class="token comment"># 输出: No match at the beginning.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>6.<code>re.finditer(pattern, string, flags=0)</code></p>
+<p>在字符串中查找所有与正则表达式模式匹配的子串，并返回一个迭代器，产生匹配对象。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+text <span class="token operator">=</span> <span class="token string">"apple apple apple orange"</span>  
+matches <span class="token operator">=</span> re<span class="token punctuation">.</span>finditer<span class="token punctuation">(</span><span class="token string">r'apple'</span><span class="token punctuation">,</span> text<span class="token punctuation">)</span>  
+<span class="token keyword">for</span> match <span class="token keyword">in</span> matches<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  
+    <span class="token comment"># 输出: apple 三次</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Match"><a href="#Match" class="headerlink" title="Match"></a>Match</h4><p>关于<code>re</code>模块中<code>Match</code>对象的一些常见方法和它们的使用示例。这些方法和属性用于获取匹配的信息，比如整个匹配的内容、分组内容、匹配的开始和结束索引等。</p>
+<p>1.<code>Match.group()</code></p>
+<p>返回整个匹配的子串。<code>group(0)</code>也返回同样的结果，因为<code>0</code>是默认的组号。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+match <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">r'(\d+)-(\d+)'</span><span class="token punctuation">,</span> <span class="token string">'abc123-456def'</span><span class="token punctuation">)</span>  
+<span class="token keyword">if</span> match<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>       
+    <span class="token comment"># 输出: '123-456'  </span>
+    
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      
+    <span class="token comment"># 输出: '123-456' (与group()相同)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>2.<code>Match.group(n)</code></p>
+<p>返回第<code>n</code>个括号中匹配到的内容。如果正则表达式中没有定义任何括号，则<code>group(1)</code>会引发<code>IndexError</code>。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+match <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">r'(\d+)-(\d+)'</span><span class="token punctuation">,</span> <span class="token string">'abc123-456def'</span><span class="token punctuation">)</span>  
+<span class="token keyword">if</span> match<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      
+    <span class="token comment"># 输出: '123'  </span>
+    
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      
+    <span class="token comment"># 输出: '456'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3.<code>Match.groups()</code></p>
+<p>返回一个包含所有括号中匹配到的内容的元组。如果没有括号，则返回一个空元组。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+match <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">r'(\d+)-(\d+)'</span><span class="token punctuation">,</span> <span class="token string">'abc123-456def'</span><span class="token punctuation">)</span>  
+<span class="token keyword">if</span> match<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>groups<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     
+    <span class="token comment"># 输出: ('123', '456')</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>4.<code>Match.start()</code></p>
+<p>返回匹配子串在原始字符串中的起始索引。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+match <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">r'\d+'</span><span class="token punctuation">,</span> <span class="token string">'abc123def'</span><span class="token punctuation">)</span>  
+<span class="token keyword">if</span> match<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      
+    <span class="token comment"># 输出: 3，因为'123'是从索引3开始的</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>5.<code>Match.end()</code></p>
+<p>返回匹配子串在原始字符串中的结束索引（不包括该索引处的字符）。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> re  
+  
+match <span class="token operator">=</span> re<span class="token punctuation">.</span>search<span class="token punctuation">(</span><span class="token string">r'\d+'</span><span class="token punctuation">,</span> <span class="token string">'abc123def'</span><span class="token punctuation">)</span>  
+<span class="token keyword">if</span> match<span class="token punctuation">:</span>  
+    <span class="token keyword">print</span><span class="token punctuation">(</span>match<span class="token punctuation">.</span>end<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>        
+    <span class="token comment"># 输出: 6，因为'123'在索引6处结束</span>
+    <span class="token comment"># 但索引6处的字符'd'不是匹配的一部分</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="特殊字符类的等价表示"><a href="#特殊字符类的等价表示" class="headerlink" title="特殊字符类的等价表示"></a>特殊字符类的等价表示</h4><ul>
+<li><code>\d</code> 等同于 <code>[0-9]</code>，它匹配任何单个数字字符。</li>
+<li><code>\w</code> 等同于 <code>[a-zA-Z0-9_]</code>，它匹配任何单个字母数字字符（无论是大写还是小写）或下划线。</li>
+<li><code>\s</code> 匹配任何空白字符，包括空格、制表符、换行符、回车符、换页符和垂直制表符。它等同于字符类 <code>[ \t\n\r\f\v]</code>。</li>
+</ul>
+<h1 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h1><h4 id="字符串格式化方法"><a href="#字符串格式化方法" class="headerlink" title="字符串格式化方法"></a>字符串格式化方法</h4><p>1.<strong>f-string（格式化字符串字面值）</strong></p>
+<p>从Python 3.6开始，可以使用<code>f-string</code>来格式化字符串。这种方法的优点是它简洁易读，并且支持在字符串内部直接执行表达式。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">el_1 <span class="token operator">=</span> <span class="token string">'hello'</span>  
+el_2 <span class="token operator">=</span> <span class="token string">'world'</span>  
+str_value <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f'</span><span class="token interpolation"><span class="token punctuation">{</span>el_1<span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span>el_2<span class="token punctuation">}</span></span><span class="token string">'</span></span>  <span class="token comment"># 结果是 'hello, world'</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>2.<strong>str.format() 方法</strong>:</p>
+<p><code>str.format()</code> 方法允许您使用花括号 <code>{}</code> 作为占位符，并通过位置参数或关键字参数来填充这些占位符。</p>
+<p>使用位置参数：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">el_1 <span class="token operator">=</span> <span class="token string">'hello'</span>  
+el_2 <span class="token operator">=</span> <span class="token string">'world'</span>  
+str_value <span class="token operator">=</span> <span class="token string">'{}, {}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>el_1<span class="token punctuation">,</span> el_2<span class="token punctuation">)</span>  <span class="token comment"># 结果是 'hello, world'</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>使用关键字参数（命名参数）:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">el_1 <span class="token operator">=</span> <span class="token string">'hello'</span>  
+el_2 <span class="token operator">=</span> <span class="token string">'world'</span>  
+str_value <span class="token operator">=</span> <span class="token string">'{0}, {a}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>el_1<span class="token punctuation">,</span> a<span class="token operator">=</span>el_2<span class="token punctuation">)</span>  <span class="token comment"># 结果是 'hello, world'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>这里，<code>{0}</code> 表示第一个位置参数，而 <code>{a}</code> 表示名为 <code>a</code> 的关键字参数。</p>
+<p>3.<strong>% 运算符</strong>:</p>
+<p><code>%</code> 运算符是Python中较老的字符串格式化方法，现在通常被认为是不如 <code>str.format()</code> 或 f-string 的方法。但是，在某些情况下，特别是当与旧代码兼容时，它仍然很有用。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">el_1 <span class="token operator">=</span> <span class="token string">'hello'</span>  
+el_2 <span class="token operator">=</span> <span class="token string">'world'</span>  
+str_value <span class="token operator">=</span> <span class="token string">'%s, %s'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>el_1<span class="token punctuation">,</span> el_2<span class="token punctuation">)</span>  <span class="token comment"># 结果是 'hello, world'</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>在选择使用哪种方法时，通常推荐使用 f-string，因为它简洁、易读，并且功能强大。然而，在需要向后兼容旧代码或特定库/框架的情况下，可能需要使用 <code>str.format()</code> 或 <code>%</code> 运算符。</p>
+<h1 id="Numbers-数字"><a href="#Numbers-数字" class="headerlink" title="Numbers 数字"></a>Numbers 数字</h1><h4 id="数字类型"><a href="#数字类型" class="headerlink" title="数字类型"></a>数字类型</h4><ol>
+<li><p><strong>整数（<code>&lt;int&gt;</code>）</strong>:<br>整数可以从浮点数、字符串或布尔值转换得到。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">int_from_float <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span>      <span class="token comment"># 结果是 3  </span>
+int_from_str <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token string">'123'</span><span class="token punctuation">)</span>       <span class="token comment"># 结果是 123  </span>
+int_from_bool <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span>       <span class="token comment"># 结果是 1，因为True等价于1，False等价于0  </span>
+int_from_floor <span class="token operator">=</span> math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span><span class="token number">3.14</span><span class="token punctuation">)</span>  <span class="token comment"># 结果是 3，使用math模块的floor函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>浮点数（<code>&lt;float&gt;</code>）</strong>:<br>浮点数可以从整数、字符串或布尔值转换得到。另外，浮点数也可以由整数和指数（e±<int>）表示。</int></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">float_from_int <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>       <span class="token comment"># 结果是 123.0  </span>
+float_from_str <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">'3.14'</span><span class="token punctuation">)</span>    <span class="token comment"># 结果是 3.14  </span>
+float_from_bool <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span>    <span class="token comment"># 结果是 0.0  </span>
+float_from_exp <span class="token operator">=</span> <span class="token number">1.23e4</span>           <span class="token comment"># 结果是 12300.0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>复数（<code>&lt;complex&gt;</code>）</strong>:<br>复数可以由实部和虚部（<code>imag</code>）组成，也可以由整数或浮点数与<code>j</code>（虚数单位）结合表示。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">complex_from_zero <span class="token operator">=</span> <span class="token builtin">complex</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>        <span class="token comment"># 结果是 0j  </span>
+complex_from_ints <span class="token operator">=</span> <span class="token builtin">complex</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>        <span class="token comment"># 结果是 (3+4j)  </span>
+complex_from_floats <span class="token operator">=</span> <span class="token builtin">complex</span><span class="token punctuation">(</span><span class="token number">3.0</span><span class="token punctuation">,</span> <span class="token number">4.0</span><span class="token punctuation">)</span>  <span class="token comment"># 结果是 (3+4j)  </span>
+complex_from_str <span class="token operator">=</span> <span class="token builtin">complex</span><span class="token punctuation">(</span><span class="token string">'3+4j'</span><span class="token punctuation">)</span>        <span class="token comment"># 结果是 (3+4j)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>分数（<code>&lt;Fraction&gt;</code>）</strong>:<br>分数来自<code>fractions</code>模块，可以由分子和分母组成。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> fractions <span class="token keyword">import</span> Fraction  
+fraction_from_zero <span class="token operator">=</span> Fraction<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>         <span class="token comment"># 结果是 0  </span>
+fraction_from_nums <span class="token operator">=</span> Fraction<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>         <span class="token comment"># 结果是 3/4  </span>
+<span class="token comment"># 也可以使用Fraction的命名参数  </span>
+fraction_from_kwargs <span class="token operator">=</span> Fraction<span class="token punctuation">(</span>numerator<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> denominator<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">)</span>  <span class="token comment"># 结果是 3/4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>十进制数（<code>&lt;Decimal&gt;</code>）</strong>:<br>十进制数来自<code>decimal</code>模块，常用于需要精确控制浮点数运算的场合。可以从字符串或整数转换。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> decimal <span class="token keyword">import</span> Decimal  
+decimal_from_str <span class="token operator">=</span> Decimal<span class="token punctuation">(</span><span class="token string">'3.14'</span><span class="token punctuation">)</span>     <span class="token comment"># 结果是 Decimal('3.14')  </span>
+decimal_from_int <span class="token operator">=</span> Decimal<span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span>        <span class="token comment"># 结果是 Decimal('123')  </span>
+<span class="token comment"># 使用tuple表示的方法较少见，通常不这么用  </span>
+<span class="token comment"># decimal_from_tuple = Decimal((1, (1, 2, 3), -2))  # 这表示 1.123</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="数学计算的几个内置函数"><a href="#数学计算的几个内置函数" class="headerlink" title="数学计算的几个内置函数"></a>数学计算的几个内置函数</h4><ol>
+<li><p><strong><code>pow(&lt;num&gt;, &lt;num&gt;)</code> 或 `<number> \</number></strong> <number>`**</number></p>
+<p>这两个表达式都是用于计算幂的。<code>pow</code> 是一个函数，接受两个参数（基数和指数），并返回基数的指数次幂。<code>&lt;number&gt; ** &lt;number&gt;</code> 是幂运算符的语法。</p>
+<p>示例：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">result <span class="token operator">=</span> <span class="token builtin">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>  <span class="token comment"># 相当于 2 ** 3  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>      <span class="token comment"># 输出 8</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong><code>abs(&lt;num&gt;)</code></strong></p>
+<p><code>abs</code> 函数用于计算一个数的绝对值。它接受一个数字（整数或浮点数）作为参数，并返回其绝对值。对于复数，<code>abs</code> 返回的是复数的模（magnitude）。</p>
+<p>示例：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">result <span class="token operator">=</span> <span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">)</span>   <span class="token comment"># 绝对值  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>     <span class="token comment"># 输出 5  </span>
+ 
+result_complex <span class="token operator">=</span> <span class="token builtin">abs</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token operator">+</span><span class="token number">4j</span><span class="token punctuation">)</span>  <span class="token comment"># 复数的模  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result_complex<span class="token punctuation">)</span>      <span class="token comment"># 输出 5.0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong><code>round(&lt;num&gt; [, ±ndigits])</code></strong></p>
+<p><code>round</code> 函数用于四舍五入浮点数。它接受两个参数：要四舍五入的数字和一个可选的位数参数。如果提供了位数参数，它会将数字四舍五入到指定的小数位数。如果位数参数是负数，则会将数字四舍五入到指定的十的整数幂的倍数。</p>
+<p>示例：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">result <span class="token operator">=</span> <span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">3.14159</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment"># 保留两位小数  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>               <span class="token comment"># 输出 3.14  </span>
+ 
+result_negative_digits <span class="token operator">=</span> <span class="token builtin">round</span><span class="token punctuation">(</span><span class="token number">126</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># 四舍五入到最近的十的倍数  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result_negative_digits<span class="token punctuation">)</span>            <span class="token comment"># 输出 130</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h4 id="math模块"><a href="#math模块" class="headerlink" title="math模块"></a>math模块</h4><h3 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h3><ul>
+<li><code>e</code>: 自然对数的底数（约等于2.71828）。</li>
+<li><code>pi</code>: 圆周率（约等于3.14159）。</li>
+<li><code>inf</code>: 表示正无穷大的浮点数。</li>
+<li><code>nan</code>: 表示“不是一个数字”（Not a Number）的特殊浮点数值。</li>
+</ul>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><ul>
+<li><code>isinf(x)</code>: 检查<code>x</code>是否为正无穷大或负无穷大。</li>
+<li><code>isnan(x)</code>: 检查<code>x</code>是否为“不是一个数字”（NaN）。</li>
+</ul>
+<p><strong>注意</strong>：<code>&lt;el&gt; == nan</code> 总是返回<code>False</code>，因为NaN是一个特殊的值，与任何其他值（包括它自身）都不相等。为了检查一个数是否是NaN，应该使用<code>isnan(x)</code>函数。</p>
+<ul>
+<li><code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code>: 分别计算正弦、余弦和正切值。这些函数默认接受弧度作为输入。</li>
+<li><code>asin(x)</code>, <code>acos(x)</code>, <code>atan(x)</code>: 分别是<code>sin</code>, <code>cos</code>, <code>tan</code>的反函数，也称为反正弦、反余弦和反正切。这些函数返回弧度值。</li>
+</ul>
+<p><strong>另外</strong>：<code>math</code>模块还提供了<code>degrees(x)</code>和<code>radians(x)</code>函数，用于在度数和弧度之间进行转换。</p>
+<ul>
+<li><code>log(x[, base])</code>: 计算<code>x</code>的自然对数（以<code>e</code>为底），如果提供了<code>base</code>参数，则计算以<code>base</code>为底的对数。</li>
+<li><code>log10(x)</code>: 计算<code>x</code>的以10为底的对数。</li>
+<li><code>log2(x)</code>: 计算<code>x</code>的以2为底的对数。</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> math <span class="token keyword">import</span> e<span class="token punctuation">,</span> pi<span class="token punctuation">,</span> inf<span class="token punctuation">,</span> nan<span class="token punctuation">,</span> isinf<span class="token punctuation">,</span> isnan<span class="token punctuation">,</span> sin<span class="token punctuation">,</span> cos<span class="token punctuation">,</span> tan<span class="token punctuation">,</span> asin<span class="token punctuation">,</span> acos<span class="token punctuation">,</span> atan<span class="token punctuation">,</span> log<span class="token punctuation">,</span> log10<span class="token punctuation">,</span> log2  
+  
+<span class="token comment"># 常量示例  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>           <span class="token comment"># 输出自然对数的底数  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>pi<span class="token punctuation">)</span>          <span class="token comment"># 输出圆周率  </span>
+  
+<span class="token comment"># 函数示例  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>isinf<span class="token punctuation">(</span>inf<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出True，因为inf是正无穷大  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>isnan<span class="token punctuation">(</span>nan<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出True，因为nan是“不是一个数字”的特殊值  </span>
+  
+<span class="token comment"># 三角函数示例  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>sin<span class="token punctuation">(</span>pi <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出1.0，因为sin(90度)等于1（转换为弧度后）  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>cos<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>       <span class="token comment"># 输出1.0，因为cos(0度)等于1  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>tan<span class="token punctuation">(</span>pi <span class="token operator">/</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 输出1.0，因为tan(45度)等于1（转换为弧度后）  </span>
+  
+<span class="token comment"># 反三角函数示例  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>asin<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token comment"># 输出1.5707963267948966（弧度），相当于90度  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>acos<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token comment"># 输出1.5707963267948966（弧度），相当于90度  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>atan<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token comment"># 输出0.7853981633974483（弧度），相当于45度  </span>
+  
+<span class="token comment"># 对数函数示例  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>log<span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>       <span class="token comment"># 输出1.0，因为ln(e)等于1  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>log10<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment"># 输出2.0，因为log10(100)等于2  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>log2<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token comment"># 输出3.0，因为log2(8)等于3  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>log<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 输出2.0，计算以10为底100的对数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="random模块"><a href="#random模块" class="headerlink" title="random模块"></a>random模块</h4><h3 id="random"><a href="#random" class="headerlink" title="random()"></a><code>random()</code></h3><p><code>random()</code>函数返回一个在[0.0, 1.0)范围内的随机浮点数。也就是说，它包括0.0但不包括1.0。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> random <span class="token keyword">import</span> random  
+  
+random_float <span class="token operator">=</span> random<span class="token punctuation">(</span><span class="token punctuation">)</span>  
+<span class="token keyword">print</span><span class="token punctuation">(</span>random_float<span class="token punctuation">)</span>  <span class="token comment"># 输出类似 0.3456789</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="randint-a-b"><a href="#randint-a-b" class="headerlink" title="randint(a, b)"></a><code>randint(a, b)</code></h3><p><code>randint(a, b)</code>函数返回一个在[a, b]范围内的随机整数，包括a和b。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> random <span class="token keyword">import</span> randint  
+  
+random_int <span class="token operator">=</span> randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment"># 生成1到10之间的随机整数  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>random_int<span class="token punctuation">)</span>  <span class="token comment"># 输出可能是 1, 2, ..., 10 中的任意一个</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="choice-seq"><a href="#choice-seq" class="headerlink" title="choice(seq)"></a><code>choice(seq)</code></h3><p><code>choice(seq)</code>函数从非空序列（例如列表、元组或字符串）中随机选择一个元素并返回。</p>
+<p><strong>示例</strong>：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> random <span class="token keyword">import</span> choice  
+  
+sequence <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>  
+random_element <span class="token operator">=</span> choice<span class="token punctuation">(</span>sequence<span class="token punctuation">)</span>  
+<span class="token keyword">print</span><span class="token punctuation">(</span>random_element<span class="token punctuation">)</span>  <span class="token comment"># 输出可能是 1, 2, 3, 4, 5 中的任意一个</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="其他提到的函数"><a href="#其他提到的函数" class="headerlink" title="其他提到的函数"></a>其他提到的函数</h3><ul>
+<li><code>shuffle(list)</code>：将列表的元素随机打乱。</li>
+<li><code>gauss(mu, sigma)</code>：返回一个具有指定平均值（mu）和标准差（sigma）的正态分布随机数。</li>
+<li><code>triangular(low, high, mode)</code>：返回一个在[low, high]范围内的随机浮点数，其分布是三角形分布，其中<code>mode</code>是众数（即最常见的值）。</li>
+<li><code>seed(a=None, version=2)</code>：为随机数生成器设置种子。如果提供了<code>a</code>，则使用它作为种子；否则，使用系统时间。设置种子可以确保随机数生成器的输出是可重复的。</li>
+</ul>
+<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h3 id="Lambda"><a href="#Lambda" class="headerlink" title="Lambda"></a>Lambda</h3>
             </div>
 
             
