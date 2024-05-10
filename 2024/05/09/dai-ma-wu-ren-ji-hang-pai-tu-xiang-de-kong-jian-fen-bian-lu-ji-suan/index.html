@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-05-09 15:32:05</span>
+        <span class="pc">2024-05-10 15:04:55</span>
     </span>
     
     
@@ -211,14 +211,12 @@
                 <h1 id="遥感图像的空间分辨率"><a href="#遥感图像的空间分辨率" class="headerlink" title="遥感图像的空间分辨率"></a>遥感图像的空间分辨率</h1><p>遥感图像的空间分辨率是衡量图像上可检测到的最小地面单元尺寸的关键指标，它通常用地面采样间距（GSD）或像元大小来表示。</p>
 <p>像元大小直接关联着图像中每个像素所代表的地面面积。例如，在1米空间分辨率的图像中，每个像素对应着实际地面上1米×1米的区域。</p>
 <p>GSD是无人机或遥感卫星拍摄的影像中每个像素所代表的实际空间距离。它可以通过以下公式计算：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">python复制代码
-
-d <span class="token operator">=</span> <span class="token punctuation">(</span>s <span class="token operator">*</span> H<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>f <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment"># 注意单位转换</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">d <span class="token operator">=</span> <span class="token punctuation">(</span>s <span class="token operator">*</span> H<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>f <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment"># 注意单位转换</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>其中：</p>
 <ul>
 <li>d：单位厘米（cm），指空间分辨率。</li>
-<li>s：单位微米（µm），指像元大小（像素间距）。</li>
-<li>H：单位米（m），指飞行高度。</li>
+<li>s：单位微米（µm），指像元尺寸（也叫像素大小、像素间距）。</li>
+<li>H：单位米（m），指飞行高度。（不是绝对高度）</li>
 <li>f：单位毫米（mm），指镜头的焦段（焦距）。</li>
 </ul>
 <p>请注意，在公式中我们进行了单位转换，因为1毫米等于10微米，所以除以10来确保单位的一致性。</p>
@@ -227,12 +225,94 @@ d <span class="token operator">=</span> <span class="token punctuation">(</span>
 <li>1米（m）= 100厘米（cm）</li>
 <li>1毫米（mm）= 10微米（µm）</li>
 </ul>
-<p>通过这个公式，我们可以根据已知的像元大小、飞行高度和焦距来计算GSD，从而了解遥感图像的空间分辨率。这对于遥感数据的分析和应用至关重要，因为它直接影响到图像中地物细节的识别能力。</p>
+<p>通过这个公式，我们可以根据已知的像元尺寸、飞行高度和焦距来计算GSD，从而了解遥感图像的空间分辨率。这对于遥感数据的分析和应用至关重要，因为它直接影响到图像中地物细节的识别能力。</p>
 <h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>以大疆精灵 Phantom 4 RTK 为例，其像元大小为 2.41 微米（µm），而相机焦距设定为 8.8 毫米（mm）。将这两个参数代入地面采样距离（GSD）的计算公式中，我们得到：</p>
 <p>GSD = (2.41µm × 飞行高度H) / 8.8mm<br>= (0.241mm × 飞行高度H) / 8.8mm<br>≈ 飞行高度H / 36.5</p>
 <p>换言之，GSD 近似等于飞行高度（H）除以 36.5。基于这一公式，当客户 A 需要 GSD 为 5 厘米/像素（cm/pixel）的数据时，通过计算，我们得到理论上的飞行高度应为约 182 米。</p>
 <p>然而，在实际飞行作业中，我们需要考虑到环境因素（如风速、天气条件等）对无人机稳定性和数据质量的潜在影响。因此，为了确保数据的准确性和安全性，我们通常会在理论计算值的基础上，选择稍低于 182 米的飞行高度进行作业。这样做不仅可以保证数据的精度，还能为无人机提供更加稳定、安全的飞行环境。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405091528903.png" alt="image-20240509152751237"></p>
+<h1 id="自动获取参数"><a href="#自动获取参数" class="headerlink" title="自动获取参数"></a>自动获取参数</h1><p>经过测试，除了像元尺寸不能自动从文件中获取，飞行高度和焦距都可以从文件提取信息。</p>
+<p>飞行高度可以从航片的元数据信息中查看，用记事本的方式打开航片文件。过程如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405101434030.gif" alt="动画"></p>
+<p>因为每景图片的飞行高度可能不一样，如果每次手动去获取高度信息是很麻烦，所以想办法实现自动获取。</p>
+<p>相关代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_image_info</span><span class="token punctuation">(</span>imgfile<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        :param imgfile: 输入图片路径
+        :return: 图片的偏航角，飞行高度（相对高度）
+        """</span>
+        <span class="token comment"># 获取图片偏航角</span>
+        b <span class="token operator">=</span> <span class="token string">b"\x3c\x2f\x72\x64\x66\x3a\x44\x65\x73\x63\x72\x69\x70\x74\x69\x6f\x6e\x3e"</span>
+        a <span class="token operator">=</span> <span class="token string">b"\x3c\x72\x64\x66\x3a\x44\x65\x73\x63\x72\x69\x70\x74\x69\x6f\x6e\x20"</span>
+        img <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>imgfile<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+        data <span class="token operator">=</span> <span class="token builtin">bytearray</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        dj_data_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        flag <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token keyword">for</span> line <span class="token keyword">in</span> img<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> a <span class="token keyword">in</span> line<span class="token punctuation">:</span>
+                flag <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">if</span> flag<span class="token punctuation">:</span>
+                data <span class="token operator">+=</span> line
+            <span class="token keyword">if</span> b <span class="token keyword">in</span> line<span class="token punctuation">:</span>
+                <span class="token keyword">break</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            data <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'ascii'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            lines <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token string">'drone-dji:'</span> <span class="token keyword">in</span> x<span class="token punctuation">,</span> data<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> d <span class="token keyword">in</span> lines<span class="token punctuation">:</span>
+                d <span class="token operator">=</span> d<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+                key<span class="token punctuation">,</span> value <span class="token operator">=</span> d<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"="</span><span class="token punctuation">)</span>
+                dj_data_dict<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value
+
+        <span class="token keyword">return</span> <span class="token builtin">float</span><span class="token punctuation">(</span>dj_data_dict<span class="token punctuation">[</span><span class="token string">"FlightYawDegree"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span>dj_data_dict<span class="token punctuation">[</span><span class="token string">"RelativeAltitude"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这个函数 <code>get_image_info</code> 的主要目的是从一个图片文件中提取特定的元数据，特别是与大疆无人机（Drone DJI）相关的偏航角（FlightYawDegree）和相对高度（RelativeAltitude）</p>
+<p><strong>函数逻辑</strong>:</p>
+<ul>
+<li>函数首先定义了两个二进制字符串 <code>a</code> 和 <code>b</code>，它们分别是大疆无人机图片元数据的开始和结束标记。</li>
+<li>使用二进制读取模式（’rb’）打开图片文件。</li>
+<li>初始化一个空的 <code>bytearray</code> 来存储从文件中读取的、包含所需元数据的部分。</li>
+<li>使用一个 <code>flag</code> 变量来跟踪是否已经找到了开始标记。</li>
+<li>遍历文件的每一行（这里假设文件内容以换行符分隔，这在图片文件中可能不是标准的，但基于特定的元数据存储格式可能是正确的）。</li>
+<li>当找到开始标记时，将 <code>flag</code> 设置为 <code>True</code>，并开始将后续的行添加到 <code>data</code> 中。</li>
+<li>当找到结束标记时，停止读取并退出循环。</li>
+<li>如果 <code>data</code> 中有数据，则将其解码为 ASCII 字符串，并按行分割。</li>
+<li>使用列表推导式和 <code>filter</code> 函数来提取包含 “drone-dji:” 的行。</li>
+<li>对每一行进行处理，提取键和值，并将它们存储在字典 <code>dj_data_dict</code> 中。</li>
+<li>最后，返回偏航角和相对高度的浮点数表示。注意，这里假设 <code>FlightYawDegree</code> 和 <code>RelativeAltitude</code> 的值被方括号包围（如 <code>"[value]"</code>），因此在提取时要去掉这些方括号。</li>
+</ul>
+<p>同理，焦距可以从图像文件的exif信息获取。</p>
+<p>相关代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image  
+<span class="token keyword">from</span> PIL<span class="token punctuation">.</span>ExifTags <span class="token keyword">import</span> TAGS  
+<span class="token keyword">def</span> <span class="token function">get_focal_length</span><span class="token punctuation">(</span>imgfile<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    :param imgfile: 输入图片路径
+    :return: 图片的镜头焦距
+    """</span>
+
+    exif_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        <span class="token comment"># 使用PIL库打开图片</span>
+        i <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>imgfile<span class="token punctuation">)</span> 
+        <span class="token comment"># 获取图片的EXIF标签</span>
+        tags <span class="token operator">=</span> i<span class="token punctuation">.</span>_getexif<span class="token punctuation">(</span><span class="token punctuation">)</span>  
+       
+        <span class="token keyword">for</span> tag<span class="token punctuation">,</span> value <span class="token keyword">in</span> tags<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># 尝试从预定义的TAGS字典中获取标签的中文描述，否则使用标签ID</span>
+            decoded <span class="token operator">=</span> TAGS<span class="token punctuation">.</span>get<span class="token punctuation">(</span>tag<span class="token punctuation">,</span> tag<span class="token punctuation">)</span>  
+            <span class="token comment"># 将标签及其值存储到exif_data字典中</span>
+            exif_data<span class="token punctuation">[</span>decoded<span class="token punctuation">]</span> <span class="token operator">=</span> value           
+    <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>  
+
+    <span class="token keyword">if</span> exif_data<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'LensSpecification'</span><span class="token punctuation">)</span><span class="token punctuation">:</span> 
+        Lens <span class="token operator">=</span> exif_data<span class="token punctuation">[</span><span class="token string">'LensSpecification'</span><span class="token punctuation">]</span>
+        focal_length <span class="token operator">=</span> Lens<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment"># 焦距</span>
+
+    <span class="token keyword">return</span> focal_length<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>像元尺寸信息则不能自动获取，需要自行根据你的无人机的硬件信息获取。</p>
+<p>大疆的<a class="link" target="_blank" rel="noopener" href="https://enterprise.dji.com/cn/zenmuse-p1">禅思 P1<i class="fas fa-external-link-alt"></i></a>像元尺寸是4.4μm。相关信息可以在其官网获取。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405101434645.png" alt="image-20240510143440278"></p>
 <h1 id="题外话—精度与飞行高度的关系"><a href="#题外话—精度与飞行高度的关系" class="headerlink" title="题外话—精度与飞行高度的关系"></a>题外话—精度与飞行高度的关系</h1><p>例如客户要求的精度不得超过5厘米，这意味着无论采用何种测量方法或技术，生成的数据在精确性方面应满足一个标准：即测量值与实际值之间的差异不应超过5厘米。在遥感与无人机测绘领域，这种精度要求通常涉及两种精度类型：</p>
 <ol>
 <li><strong>相对精度</strong>：这是指通过测量合成模型（如三维地图或模型）中的特征（如道路长度）来评估的精度。相对精度关注的是测量值与实际值之间的相对差异，即模型中的测量数据与实际数据之间的偏差。</li>
