@@ -9,7 +9,7 @@
     
     <title>
         
-            纯新手向——遥感栅格gdal安装步骤 |
+            【代码】无人机航拍图像的空间分辨率计算 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">纯新手向——遥感栅格gdal安装步骤</span>
+                <span class="title-hover-animation">【代码】无人机航拍图像的空间分辨率计算</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2021-02-27 16:58:20</span>
-        <span class="mobile">2021-02-27 16:58</span>
+        <span class="pc">2024-05-09 22:00:10</span>
+        <span class="mobile">2024-05-09 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2021-11-23 17:57:42</span>
+        <span class="pc">2024-05-09 15:32:05</span>
     </span>
     
     
@@ -208,21 +208,38 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一.简介"></a>一.简介</h2><p>​        GDAL(Geospatial Data Abstraction Library)是一个在X/MIT许可协议下的开源栅格空间数据转换库。该项目由Frank Warmerdam教授于1998年发起。 它利用抽象数据模型来表达所支持的各种文件格式。 它还有一系列命令行工具来进行数据转换和处理。</p>
-<p>​        GDAL/OGR使用面向对象的C++语言编写，这令该库在支持百余种格式的同时，还具有很高的执行效率。 GDAL/OGR同时还提供多种主流编程语言的绑定，除了C和C++语言之外， 用户还可以在Perl、python、VB6、Ruby、Java、C#等语言中调用GDAL。</p>
-<p>​        这里介绍一种快速安装gdal（python）的方法。</p>
-<h2 id="二-安装步骤"><a href="#二-安装步骤" class="headerlink" title="二.安装步骤"></a>二.安装步骤</h2><p>​        1.在网址 <a class="link" target="_blank" rel="noopener" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal">https://www.lfd.uci.edu/~gohlke/pythonlibs/#gdal<i class="fas fa-external-link-alt"></i></a> 下载对应python版本的whl文件。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6pZJrn"><img src="https://z3.ax1x.com/2021/02/27/6pZJrn.jpg" alt="6pZJrn.jpg"></a></p>
-<p>​    下载whl文件后，打开命令行。注意：cmd的目录为whl文件的路径。下面介绍一种快速打开cmd的方法：</p>
-<p>1.打开相应的文件夹，在文件夹的地址栏输入cmd，即可快速打开命令行。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6pmMcQ"><img src="https://z3.ax1x.com/2021/02/27/6pmMcQ.png" alt="6pmMcQ.png"></a></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6pmQXj"><img src="https://z3.ax1x.com/2021/02/27/6pmQXj.jpg" alt="6pmQXj.jpg"></a></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6pmJA0"><img src="https://z3.ax1x.com/2021/02/27/6pmJA0.png" alt="6pmJA0.png"></a></p>
-<p>​        在命令行中<code>pip install whl文件完整路径</code>安装（windows方式）。例如：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/6pmXvQ"><img src="https://z3.ax1x.com/2021/02/27/6pmXvQ.png" alt="6pmXvQ.png"></a></p>
-<h2 id="三-小结"><a href="#三-小结" class="headerlink" title="三.小结"></a>三.小结</h2><p>​        由于gdal不是单纯用python编写，而是由C++编写从而再提供python接口，类似于gdal的这样第三方库的安装，推荐使用<a class="link" target="_blank" rel="noopener" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/">加利福尼亚大学<i class="fas fa-external-link-alt"></i></a>提供的windows二进制文件的python扩展包进行安装。</p>
-<p>​    借助gdal的接口，就能顺利地读取遥感影像数据，进而进行下一步操作。</p>
-<p><img src="https://z3.ax1x.com/2021/02/27/6puclD.jpg" alt="avatar"></p>
+                <h1 id="遥感图像的空间分辨率"><a href="#遥感图像的空间分辨率" class="headerlink" title="遥感图像的空间分辨率"></a>遥感图像的空间分辨率</h1><p>遥感图像的空间分辨率是衡量图像上可检测到的最小地面单元尺寸的关键指标，它通常用地面采样间距（GSD）或像元大小来表示。</p>
+<p>像元大小直接关联着图像中每个像素所代表的地面面积。例如，在1米空间分辨率的图像中，每个像素对应着实际地面上1米×1米的区域。</p>
+<p>GSD是无人机或遥感卫星拍摄的影像中每个像素所代表的实际空间距离。它可以通过以下公式计算：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">python复制代码
+
+d <span class="token operator">=</span> <span class="token punctuation">(</span>s <span class="token operator">*</span> H<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>f <span class="token operator">*</span> <span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment"># 注意单位转换</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>其中：</p>
+<ul>
+<li>d：单位厘米（cm），指空间分辨率。</li>
+<li>s：单位微米（µm），指像元大小（像素间距）。</li>
+<li>H：单位米（m），指飞行高度。</li>
+<li>f：单位毫米（mm），指镜头的焦段（焦距）。</li>
+</ul>
+<p>请注意，在公式中我们进行了单位转换，因为1毫米等于10微米，所以除以10来确保单位的一致性。</p>
+<p>单位关系为：</p>
+<ul>
+<li>1米（m）= 100厘米（cm）</li>
+<li>1毫米（mm）= 10微米（µm）</li>
+</ul>
+<p>通过这个公式，我们可以根据已知的像元大小、飞行高度和焦距来计算GSD，从而了解遥感图像的空间分辨率。这对于遥感数据的分析和应用至关重要，因为它直接影响到图像中地物细节的识别能力。</p>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><p>以大疆精灵 Phantom 4 RTK 为例，其像元大小为 2.41 微米（µm），而相机焦距设定为 8.8 毫米（mm）。将这两个参数代入地面采样距离（GSD）的计算公式中，我们得到：</p>
+<p>GSD = (2.41µm × 飞行高度H) / 8.8mm<br>= (0.241mm × 飞行高度H) / 8.8mm<br>≈ 飞行高度H / 36.5</p>
+<p>换言之，GSD 近似等于飞行高度（H）除以 36.5。基于这一公式，当客户 A 需要 GSD 为 5 厘米/像素（cm/pixel）的数据时，通过计算，我们得到理论上的飞行高度应为约 182 米。</p>
+<p>然而，在实际飞行作业中，我们需要考虑到环境因素（如风速、天气条件等）对无人机稳定性和数据质量的潜在影响。因此，为了确保数据的准确性和安全性，我们通常会在理论计算值的基础上，选择稍低于 182 米的飞行高度进行作业。这样做不仅可以保证数据的精度，还能为无人机提供更加稳定、安全的飞行环境。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405091528903.png" alt="image-20240509152751237"></p>
+<h1 id="题外话—精度与飞行高度的关系"><a href="#题外话—精度与飞行高度的关系" class="headerlink" title="题外话—精度与飞行高度的关系"></a>题外话—精度与飞行高度的关系</h1><p>例如客户要求的精度不得超过5厘米，这意味着无论采用何种测量方法或技术，生成的数据在精确性方面应满足一个标准：即测量值与实际值之间的差异不应超过5厘米。在遥感与无人机测绘领域，这种精度要求通常涉及两种精度类型：</p>
+<ol>
+<li><strong>相对精度</strong>：这是指通过测量合成模型（如三维地图或模型）中的特征（如道路长度）来评估的精度。相对精度关注的是测量值与实际值之间的相对差异，即模型中的测量数据与实际数据之间的偏差。</li>
+<li><strong>绝对精度</strong>：这是指合成模型中地物（如路灯）的位置与实际位置之间的直接差异。绝对精度关注的是模型中的位置数据与实际位置之间的直接对应关系。</li>
+</ol>
+<p>以大疆精灵Phantom 4 RTK为例，它在厘米级定位条件下的性能使得其在相对和绝对精度上都能达到较高水平。具体来说，其精度能达到1至2倍的GSD（地面采样距离），即图像上每个像素代表的实际距离。</p>
+<p>当客户要求相对精度为5厘米时，为确保数据的精确性，我们可以选择调整飞行参数，如采用GSD为2厘米/像素的设置，并在约73米的高度进行数据采集。这样的设置将有助于提高数据的分辨率和精度，从而确保满足客户的精度要求。</p>
 
             </div>
 
@@ -241,29 +258,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2021/03/10/gdal-api-bi-ji/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">gdal api笔记</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/"
+                               href="/2024/05/06/dai-ma-cong-zhao-pian-zhong-ti-qu-gps-xin-xi-bing-chuang-jian-shapefile/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">全极化合成孔径雷达可视化之pauli分解</span>
+                                <span class="post-nav-title-item">【代码】从照片中提取GPS信息并创建Shapefile</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">

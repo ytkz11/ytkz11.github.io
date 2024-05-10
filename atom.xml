@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-05-06T01:45:18.548Z</updated>
+  <updated>2024-05-09T07:32:05.186Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】无人机航拍图像的空间分辨率计算</title>
+    <link href="http://ytkz11@.github.io/2024/05/09/dai-ma-wu-ren-ji-hang-pai-tu-xiang-de-kong-jian-fen-bian-lu-ji-suan/"/>
+    <id>http://ytkz11@.github.io/2024/05/09/dai-ma-wu-ren-ji-hang-pai-tu-xiang-de-kong-jian-fen-bian-lu-ji-suan/</id>
+    <published>2024-05-09T14:00:10.000Z</published>
+    <updated>2024-05-09T07:32:05.186Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;遥感图像的空间分辨率&quot;&gt;&lt;a href=&quot;#遥感图像的空间分辨率&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【代码】从照片中提取GPS信息并创建Shapefile</title>
@@ -231,7 +256,7 @@
     <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
     <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
     <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-05-06T03:14:24.783Z</updated>
+    <updated>2024-05-08T02:46:22.054Z</updated>
     
     
       
@@ -501,32 +526,6 @@
     <summary type="html">&lt;p&gt;本质是输入为高程asc文件，输出为shp文件。&lt;/p&gt;
 &lt;p&gt;直接上代码：&lt;/p&gt;
 &lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】水深测量数据可视化及转格式</title>
-    <link href="http://ytkz11@.github.io/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/"/>
-    <id>http://ytkz11@.github.io/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/</id>
-    <published>2024-03-29T14:00:10.000Z</published>
-    <updated>2024-04-01T01:47:03.167Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。&lt;/p&gt;
-&lt;p&gt;这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒效应可以用</summary>
         
       
     

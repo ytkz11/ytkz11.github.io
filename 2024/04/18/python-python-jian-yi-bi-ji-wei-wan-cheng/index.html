@@ -150,7 +150,7 @@
                         <div class="author">
                             <span class="name">ytkz</span>
                             
-                                <span class="author-label">Lv5</span>
+                                <span class="author-label">Lv6</span>
                             
                         </div>
                         <div class="meta-info">
@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-05-06 11:14:24</span>
+        <span class="pc">2024-05-08 10:46:22</span>
     </span>
     
     
@@ -1062,7 +1062,87 @@ random_element <span class="token operator">=</span> choice<span class="token pu
 <li><code>triangular(low, high, mode)</code>：返回一个在[low, high]范围内的随机浮点数，其分布是三角形分布，其中<code>mode</code>是众数（即最常见的值）。</li>
 <li><code>seed(a=None, version=2)</code>：为随机数生成器设置种子。如果提供了<code>a</code>，则使用它作为种子；否则，使用系统时间。设置种子可以确保随机数生成器的输出是可重复的。</li>
 </ul>
-<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h3 id="Lambda"><a href="#Lambda" class="headerlink" title="Lambda"></a>Lambda</h3>
+<h1 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h1><h4 id="Lambda"><a href="#Lambda" class="headerlink" title="Lambda"></a>Lambda</h4><p> 没有参数的lambda函数</p>
+<pre class="line-numbers language-none"><code class="language-none">square_of_five = lambda: 5 ** 2  # 返回一个固定值 25  
+print(square_of_five())  # 输出: 25<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>带有参数的lambda函数</p>
+<pre class="line-numbers language-none"><code class="language-none">add_two_numbers = lambda x, y: x + y  # 接收两个参数并返回它们的和  
+print(add_two_numbers(3, 4))  # 输出: 7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h4 id="推导式"><a href="#推导式" class="headerlink" title="推导式"></a>推导式</h4><pre class="line-numbers language-none"><code class="language-none"># 列表推导：创建一个包含1到10的列表  
+list_comp = [i+1 for i in range(10)]                   # 结果: [1, 2, ..., 10]  
+  
+# 生成器表达式：创建一个生成器，它生成6到9的数字  
+gen_expr = (i for i in range(10) if i &gt; 5)            # 结果: 类似iter([6, 7, 8, 9])，但它是生成器  
+  
+# 集合推导：创建一个包含5到14的集合（注意集合中元素唯一）  
+set_comp = {i+5 for i in range(10)}                   # 结果: {5, 6, ..., 14}，但重复的元素只会出现一次  
+  
+# 字典推导：创建一个字典，其中键是0到9，值是键的两倍  
+dict_comp = {i: i*2 for i in range(10)}    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Map-Filter-Reduce"><a href="#Map-Filter-Reduce" class="headerlink" title="Map, Filter, Reduce"></a>Map, Filter, Reduce</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> functools <span class="token keyword">import</span> <span class="token builtin">reduce</span>  
+  
+<span class="token comment"># 使用map函数将range(10)中的每个元素加1  </span>
+<span class="token comment"># 结果类似于 iter([1, 2, ..., 10])  </span>
+mapped_iter <span class="token operator">=</span> <span class="token builtin">map</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  
+
+
+  
+<span class="token comment"># 使用filter函数过滤出range(10)中大于5的元素  </span>
+<span class="token comment"># 结果类似于 iter([6, 7, 8, 9])  </span>
+filtered_iter <span class="token operator">=</span> <span class="token builtin">filter</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> x <span class="token operator">&gt;</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  
+
+  
+<span class="token comment"># 使用reduce函数将range(10)中的元素累加  </span>
+<span class="token comment"># 结果是 45</span>
+reduced_obj <span class="token operator">=</span> <span class="token builtin">reduce</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> out<span class="token punctuation">,</span> x<span class="token punctuation">:</span> out <span class="token operator">+</span> x<span class="token punctuation">,</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="Any-All"><a href="#Any-All" class="headerlink" title="Any, All"></a>Any, All</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 假设我们有一个集合（collection），比如列表、元组、集合、字典等  </span>
+collection <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">'hello'</span><span class="token punctuation">]</span>  
+  
+<span class="token comment"># 使用any()函数检查集合中是否有任何元素为True（在布尔上下文中）  </span>
+is_any_true <span class="token operator">=</span> <span class="token builtin">any</span><span class="token punctuation">(</span>collection<span class="token punctuation">)</span>  <span class="token comment"># 相当于检查是否有任何元素的bool值为True  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>is_any_true<span class="token punctuation">)</span>  <span class="token comment"># 输出: True，因为集合中包含True和非空字符串'hello'  </span>
+  
+<span class="token comment"># 使用all()函数检查集合中的所有元素是否都为True（在布尔上下文中）  </span>
+are_all_true <span class="token operator">=</span> <span class="token builtin">all</span><span class="token punctuation">(</span>collection<span class="token punctuation">)</span>  <span class="token comment"># 相当于检查所有元素的bool值是否都为True  </span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>are_all_true<span class="token punctuation">)</span>  <span class="token comment"># 输出: False，因为集合中包含0、False和空字符串''，它们的bool值都是False</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="三元操作符（条件操作符）"><a href="#三元操作符（条件操作符）" class="headerlink" title="三元操作符（条件操作符）"></a>三元操作符（条件操作符）</h4><p>简单的例子</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x <span class="token operator">=</span> <span class="token number">10</span>  
+y <span class="token operator">=</span> <span class="token number">20</span>  
+max_value <span class="token operator">=</span> x <span class="token keyword">if</span> x <span class="token operator">&gt;</span> y <span class="token keyword">else</span> y  
+<span class="token keyword">print</span><span class="token punctuation">(</span>max_value<span class="token punctuation">)</span>  
+<span class="token comment"># 输出会是 20，因为 x 不大于 y</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>用传统的 <code>if-else</code> 语句，这段代码会是这样的：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x <span class="token operator">=</span> <span class="token number">10</span>  
+y <span class="token operator">=</span> <span class="token number">20</span>  
+<span class="token keyword">if</span> x <span class="token operator">&gt;</span> y<span class="token punctuation">:</span>  
+    max_value <span class="token operator">=</span> x  
+<span class="token keyword">else</span><span class="token punctuation">:</span>  
+    max_value <span class="token operator">=</span> y  
+<span class="token keyword">print</span><span class="token punctuation">(</span>max_value<span class="token punctuation">)</span>  <span class="token comment"># 输出会是 20</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>条件表达式提供了一种更简洁、更紧凑的方式来执行这种简单的条件判断和赋值。</p>
+<h4 id="导入语句"><a href="#导入语句" class="headerlink" title="导入语句"></a>导入语句</h4><p>1.<strong>导入一个模块</strong>：</p>
+<p>如果你有一个名为 <code>my_function.py</code> 的文件，并且它包含了一些数学函数，你可以这样导入它：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> my_function<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>但是，如果模块名称与内置模块相同，应该重命名该模块或避免使用相同的名称。</p>
+<p><strong>2.导入一个包</strong>：</p>
+<p>一个包是一个包含多个模块的目录，并且该目录有一个名为 <code>__init__.py</code> 的特殊文件（该文件可以为空）。例如，假设有一个名为 <code>my_package</code> 的包，并且它有一个 <code>__init__.py</code> 文件和一个名为 <code>utils.py</code> 的模块。要导入整个包（但通常我们不会这样做，除非包中有一些在 <code>__init__.py</code> 中定义的函数或变量），可以这样做：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> my_package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>但更常见的是，从包中导入特定的模块或函数/变量。</p>
+<p><strong>3.从包中导入一个模块</strong>：</p>
+<p>假设你想从 <code>my_package</code> 包中导入 <code>utils.py</code> 模块，可以这样做：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> my_package <span class="token keyword">import</span> utils<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>之后，可以使用 <code>utils</code> 模块中的函数或变量，但需要使用 <code>utils.</code> 前缀。</p>
+<p><strong>4.从包中的模块导入特定的函数或变量</strong>：</p>
+<p>可以直接从模块中导入特定的函数或变量，而不是整个模块。例如，如果 <code>utils.py</code> 中有一个名为 <code>my_function</code> 的函数，可以这样导入它：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> my_package<span class="token punctuation">.</span>utils <span class="token keyword">import</span> my_function<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>之后，可以直接使用 <code>my_function()</code> 而无需任何前缀。</p>
+<p>另外，如果想从模块中导入所有的内容（这通常不是一个好的做法，因为它可能导致命名空间污染），可以使用 <code>*</code> 符号：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> my_package<span class="token punctuation">.</span>utils <span class="token keyword">import</span> <span class="token operator">*</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1>
             </div>
 
             
