@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-05-10T07:04:55.439Z</updated>
+  <updated>2024-05-14T05:50:16.945Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【代码】大疆航片粗几何校正工具</title>
+    <link href="http://ytkz11@.github.io/2024/05/14/dai-ma-da-jiang-hang-pian-cu-ji-he-xiao-zheng-gong-ju/"/>
+    <id>http://ytkz11@.github.io/2024/05/14/dai-ma-da-jiang-hang-pian-cu-ji-he-xiao-zheng-gong-ju/</id>
+    <published>2024-05-14T14:00:10.000Z</published>
+    <updated>2024-05-14T05:50:16.945Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在上周的空余时间，实现了单景航片的粗几何校正。现在把程序改造为批量处理模式，并打包为exe二进制可执行文件。&lt;/p&gt;
+&lt;p&gt;以下是下载链接，仅供参考学习：&lt;/p&gt;
+&lt;p&gt;AerialCorrection.exe &lt;a class=&quot;link&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【代码】无人机航拍图像的空间分辨率计算</title>
@@ -499,33 +526,6 @@
     <summary type="html">&lt;p&gt;Google earth engine（GEE）是一个非常好用的数据下载的工具。&lt;/p&gt;
 &lt;p&gt;近日在GEE下载sentinel2影像，遇到问题，现记录并解决改问题。&lt;/p&gt;
 &lt;h2 id=&quot;数据下载脚本&quot;&gt;&lt;a href=&quot;#数据下载脚本&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】DEM生成等高线</title>
-    <link href="http://ytkz11@.github.io/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/"/>
-    <id>http://ytkz11@.github.io/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/</id>
-    <published>2024-03-29T14:00:10.000Z</published>
-    <updated>2024-04-08T02:13:35.998Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本质是输入为高程asc文件，输出为shp文件。&lt;/p&gt;
-&lt;p&gt;直接上代码：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
         
       
     
