@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-05-14T05:50:16.945Z</updated>
+  <updated>2024-05-14T05:55:37.880Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://ytkz11@.github.io/2024/05/14/dai-ma-da-jiang-hang-pian-cu-ji-he-xiao-zheng-gong-ju/"/>
     <id>http://ytkz11@.github.io/2024/05/14/dai-ma-da-jiang-hang-pian-cu-ji-he-xiao-zheng-gong-ju/</id>
     <published>2024-05-14T14:00:10.000Z</published>
-    <updated>2024-05-14T05:50:16.945Z</updated>
+    <updated>2024-05-14T05:55:37.880Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;在上周的空余时间，实现了单景航片的粗几何校正。现在把程序改造为批量处理模式，并打包为exe二进制可执行文件。&lt;/p&gt;
+    <summary type="html">&lt;p&gt;在上周的空余时间，实现了单景大疆无人机航片的粗几何校正。现在把程序改造为批量处理模式，并打包为exe二进制可执行文件。&lt;/p&gt;
 &lt;p&gt;以下是下载链接，仅供参考学习：&lt;/p&gt;
 &lt;p&gt;AerialCorrection.exe &lt;a class=&quot;link&quot;</summary>
         
@@ -279,18 +279,18 @@
   </entry>
   
   <entry>
-    <title>【python】从卫星图像中提取数字表面模型DSM</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/</id>
+    <title>python简易笔记</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
     <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-04-17T08:17:44.274Z</updated>
+    <updated>2024-05-08T02:46:22.054Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -304,18 +304,18 @@
   </entry>
   
   <entry>
-    <title>python简易笔记</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
+    <title>【python】从卫星图像中提取数字表面模型DSM</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/</id>
     <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-05-08T02:46:22.054Z</updated>
+    <updated>2024-04-17T08:17:44.274Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
         
       
     
