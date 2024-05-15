@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-05-14T05:55:37.880Z</updated>
+  <updated>2024-05-15T03:21:51.933Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KML、KMZ是什么？</title>
+    <link href="http://ytkz11@.github.io/2024/05/14/dai-ma-kml-shi-shi-me/"/>
+    <id>http://ytkz11@.github.io/2024/05/14/dai-ma-kml-shi-shi-me/</id>
+    <published>2024-05-14T14:00:10.000Z</published>
+    <updated>2024-05-15T03:21:51.933Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;KML 和 KMZ 都是 Google 地球和其他地图程序中用于显示地理数据的文件格式。两者之间的主要区别在于，KML 是一种用于以 XML 格式存储地理数据的文件格式，而 KMZ 是一种压缩文件格式，包含一个或多个 KML</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【代码】大疆航片粗几何校正工具</title>
@@ -499,33 +524,6 @@
         
         
     <summary type="html">&lt;p&gt;我们现在要探索的是一个名为”area”的Python包。这个包的主要功能是计算地理多边形在地球表面的面积。为了深入理解其工作原理，我们将直接研究这个包的源代码，特别关注它是如何根据给定的经纬度来计算地理多边形的面积。这将是一个深入学习Python编程以及地理信息处理的绝佳机</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】GEE下载sentinel2数据遇到的bug及解决</title>
-    <link href="http://ytkz11@.github.io/2024/04/02/dai-ma-gee-xia-zai-sentinel2-shu-ju/"/>
-    <id>http://ytkz11@.github.io/2024/04/02/dai-ma-gee-xia-zai-sentinel2-shu-ju/</id>
-    <published>2024-04-02T14:00:10.000Z</published>
-    <updated>2024-04-02T01:53:34.091Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Google earth engine（GEE）是一个非常好用的数据下载的工具。&lt;/p&gt;
-&lt;p&gt;近日在GEE下载sentinel2影像，遇到问题，现记录并解决改问题。&lt;/p&gt;
-&lt;h2 id=&quot;数据下载脚本&quot;&gt;&lt;a href=&quot;#数据下载脚本&quot;</summary>
         
       
     
