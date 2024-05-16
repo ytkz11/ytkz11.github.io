@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-05-15 11:21:51</span>
+        <span class="pc">2024-05-16 16:15:32</span>
     </span>
     
     
@@ -282,6 +282,108 @@
 </div>
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>简而言之，KML 和 KMZ 都是用于在 Google 地球和其他地图应用程序中显示地理数据的文件格式。 KML 是一种基于 XML 的文件格式，用于存储三维地理数据，而 KMZ 是一种压缩文件格式，包含一个或多个 KML 文件及其关联资源。</p>
 <p>KML 是存储地理数据的最常见文件格式，而 KMZ 是打包 KML 数据并与其资源共享的实用方法。</p>
+<h2 id="20240516"><a href="#20240516" class="headerlink" title="20240516"></a>20240516</h2><p>KML（Keyhole Markup Language）和SHP（Shapefile）都是用于表示地理数据的文件格式，但它们在设计和应用上有一些差异。说KML是SHP的“更先进版本”可能并不完全准确，因为这两种格式各有其优点和适用场景。然而，KML在某些方面确实具有一些独特的优势，这些优势可能使其在某些应用中表现得更为“先进”。</p>
+<p>以下是KML相对于SHP的一些优势：</p>
+<ol>
+<li>跨平台兼容性：KML是一种基于XML的开放标准，因此它可以在各种操作系统和平台上使用，包括Web浏览器、移动设备和桌面应用程序。这使得KML成为一种非常灵活的地理数据格式，可以轻松地在不同的系统和应用程序之间共享和交换数据。</li>
+<li>丰富的可视化功能：KML支持丰富的可视化功能，包括自定义图标、线条颜色、填充颜色、文本标签等。这使得KML可以创建出具有高度可定制性和吸引力的地图和地理可视化效果。</li>
+<li>时间和动画支持：KML支持时间相关的地理信息，可以使用户展示地理位置随时间变化的动画效果。这对于描述历史轨迹、飞行路径等应用非常有用。</li>
+<li>广泛的应用程序支持：KML是Google Earth和其他许多地理信息系统（GIS）应用程序的标准格式之一。这使得KML具有广泛的应用程序支持，并且可以与许多流行的GIS工具无缝集成。</li>
+</ol>
+<p>相比之下，SHP格式在以下方面有一些限制：</p>
+<ol>
+<li>封闭性：SHP是由ESRI公司开发的专有格式，因此其使用可能受到某些限制。例如，它可能不如KML那样易于在不同的系统和应用程序之间共享和交换数据。</li>
+<li>可视化功能有限：虽然SHP格式支持基本的地理数据可视化，但它可能不如KML那样灵活和可定制。</li>
+<li>应用程序支持有限：尽管SHP格式在GIS行业中广泛应用，但它可能不如KML那样受到广泛支持。某些GIS应用程序可能不支持SHP格式，或者可能需要额外的插件或驱动程序才能支持它。</li>
+</ol>
+<p>那SHP格式可以转换到KML格式么？</p>
+<p>答案是可以的，请看以下python代码。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2024/5/16 22:30</span>
+<span class="token comment"># @File : shp2kml.py</span>
+
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> ogr
+<span class="token keyword">import</span> os
+
+<span class="token keyword">def</span> <span class="token function">convert_to_kml</span><span class="token punctuation">(</span>shapefile<span class="token punctuation">,</span>outpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ds <span class="token operator">=</span> ogr<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>shapefile<span class="token punctuation">)</span>
+    shape <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetLayer<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    attribute_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    ldefn <span class="token operator">=</span> shape<span class="token punctuation">.</span>GetLayerDefn<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> n <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>ldefn<span class="token punctuation">.</span>GetFieldCount<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        fdefn <span class="token operator">=</span> ldefn<span class="token punctuation">.</span>GetFieldDefn<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+        attribute_names<span class="token punctuation">.</span>append<span class="token punctuation">(</span>fdefn<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+    boundary <span class="token operator">=</span><span class="token string">''</span>
+    placemark <span class="token operator">=</span> <span class="token string">''</span>
+    i <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> obj <span class="token keyword">in</span> shape<span class="token punctuation">:</span>
+        placemark <span class="token operator">+=</span><span class="token string">'\n&lt;Placemark id="ID_{}"&gt;'</span> \
+                    <span class="token string">'\n&lt;styleUrl&gt;#m_ylw-pushpin&lt;/styleUrl&gt;'</span> \
+                    <span class="token string">'\n{}'</span> \
+                    <span class="token string">'\n&lt;/Placemark&gt;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>obj<span class="token punctuation">.</span>GetGeometryRef<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ExportToKML<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        i<span class="token operator">+=</span><span class="token number">1</span>
+
+
+
+
+    constant <span class="token operator">=</span> <span class="token string">'&lt;?xml version="1.0" encoding="UTF-8"?&gt;'</span> \
+                   <span class="token string">'&lt;kml '</span> \
+                   <span class="token string">'xmlns="http://www.opengis.net/kml/2.2" '</span> \
+                   <span class="token string">'xmlns:atom="http://www.w3.org/2005/Atom" '</span> \
+                   <span class="token string">'xmlns:gx="http://www.google.com/kml/ext/2.2" '</span> \
+                   <span class="token string">'xmlns:kml="http://www.opengis.net/kml/2.2"&gt;'</span> \
+                   <span class="token string">'&lt;name&gt;%s&lt;/name&gt;'</span> \
+                   <span class="token string">'\n&lt;Document&gt;'</span> \
+                   <span class="token string">'\n&lt;Style id="s_ylw-pushpin_hl"&gt;&lt;IconStyle&gt;&lt;scale&gt;1.3&lt;/scale&gt;'</span> \
+                   <span class="token string">'\n&lt;Icon&gt;&lt;href&gt;http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png&lt;/href&gt;&lt;/Icon&gt;'</span> \
+                   <span class="token string">'\n&lt;hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/&gt;&lt;/IconStyle&gt;'</span> \
+                   <span class="token string">'\n&lt;LineStyle&gt;&lt;color&gt;ff0000ff&lt;/color&gt;&lt;width&gt;2&lt;/width&gt;&lt;/LineStyle&gt;'</span> \
+                   <span class="token string">'\n&lt;PolyStyle&gt;&lt;fill&gt;0&lt;/fill&gt;&lt;/PolyStyle&gt;&lt;/Style&gt;'</span> \
+                   <span class="token string">'\n&lt;StyleMap id="m_ylw-pushpin"&gt;&lt;Pair&gt;&lt;key&gt;normal&lt;/key&gt;&lt;styleUrl&gt;#s_ylw-pushpin&lt;/styleUrl&gt;&lt;/Pair&gt;'</span> \
+                   <span class="token string">'\n&lt;Pair&gt;&lt;key&gt;highlight&lt;/key&gt;&lt;styleUrl&gt;#s_ylw-pushpin_hl&lt;/styleUrl&gt;&lt;/Pair&gt;&lt;/StyleMap&gt;'</span> \
+                   <span class="token string">'\n&lt;Style id="s_ylw-pushpin"&gt;&lt;IconStyle&gt;&lt;scale&gt;1.1&lt;/scale&gt;'</span> \
+                   <span class="token string">'\n&lt;Icon&gt;&lt;href&gt;http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png&lt;/href&gt;&lt;/Icon&gt;'</span> \
+                   <span class="token string">'\n&lt;hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/&gt;&lt;/IconStyle&gt;'</span> \
+                   <span class="token string">'\n&lt;LineStyle&gt;&lt;color&gt;ff0000ff&lt;/color&gt;&lt;width&gt;2&lt;/width&gt;&lt;/LineStyle&gt;&lt;PolyStyle&gt;&lt;fill&gt;0&lt;/fill&gt;'</span> \
+                   <span class="token string">'\n&lt;/PolyStyle&gt;&lt;/Style&gt;'</span>
+
+    end_tag <span class="token operator">=</span> <span class="token string">'&lt;/Document&gt;&lt;/kml&gt;'</span>
+
+    kml <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>constant<span class="token punctuation">,</span>  placemark<span class="token punctuation">,</span> end_tag<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># filler = '&lt;Data name="{}"&gt;&lt;value&gt;{}&lt;/value&gt;&lt;/Data&gt;'</span>
+    <span class="token comment"># closing_tag = '&lt;/ExtendedData&gt;'</span>
+    <span class="token comment">#     # constant + filler + closing + end_tag</span>
+    <span class="token comment"># data = []</span>
+    <span class="token comment"># for attribute in attribute_names:</span>
+    <span class="token comment">#             data.append(filler.format(attribute, obj.GetField(attribute)))</span>
+    <span class="token comment"># data = ''.join(data)</span>
+
+    filename <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>shapefile<span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+
+    <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span>
+
+    out_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>outpath<span class="token operator">+</span><span class="token string">'\\'</span><span class="token operator">+</span>filename<span class="token operator">+</span><span class="token string">".kml"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span>
+    out_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span>kml<span class="token punctuation">)</span>
+    out_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+
+    shapefile <span class="token operator">=</span> <span class="token string">r"D:\11.shp"</span>
+    outpath <span class="token operator">=</span> <span class="token string">r'D:\kml'</span>
+    convert_to_kml<span class="token punctuation">(</span>shapefile<span class="token punctuation">,</span> outpath<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>考虑到部分朋友可能不会编程，现在把以上代码打包为exe命令行程序，作为一个特定功能的小工具分享给大家。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pyinstaller -F -i favicon.png shp2kml.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>点要素kml在google earth 可视化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405161610743.png" alt="image-20240516161029967"></p>
+<p>线要素kml在google earth 可视化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405161611661.png" alt="image-20240516161131697"></p>
+<p>面要素kml在google earth 可视化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405161611639.png" alt="image-20240516161111943"></p>
 
             </div>
 
