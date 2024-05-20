@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-05-16T08:15:32.831Z</updated>
+  <updated>2024-05-20T01:15:00.214Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OpenCV、NumPy和GDAL读取数据的差异或矛盾</title>
+    <link href="http://ytkz11@.github.io/2024/05/20/dai-ma-opencv-numpy-he-gdal-du-qu-shu-ju-de-chai-yi-huo-mao-dun/"/>
+    <id>http://ytkz11@.github.io/2024/05/20/dai-ma-opencv-numpy-he-gdal-du-qu-shu-ju-de-chai-yi-huo-mao-dun/</id>
+    <published>2024-05-20T14:00:10.000Z</published>
+    <updated>2024-05-20T01:15:00.214Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在图像处理和地理空间数据处理中，OpenCV、NumPy和GDAL是常用的库。然而，它们在数据读取和坐标引用方式上存在差异，可能导致使用时出现矛盾。以下是对这三者读取数据的行列差异及矛盾的分析：&lt;/p&gt;
+&lt;h4 id=&quot;OpenCV&quot;&gt;&lt;a href=&quot;#OpenCV&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>KML、KMZ是什么？</title>
@@ -508,31 +534,6 @@
     
     
     <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】计算地理多边形在地球表面的面积的Python代码解析</title>
-    <link href="http://ytkz11@.github.io/2024/04/08/dai-ma-ji-suan-di-li-duo-bian-xing-zai-di-qiu-biao-mian-de-mian-ji-de-python-dai-ma-jie-xi/"/>
-    <id>http://ytkz11@.github.io/2024/04/08/dai-ma-ji-suan-di-li-duo-bian-xing-zai-di-qiu-biao-mian-de-mian-ji-de-python-dai-ma-jie-xi/</id>
-    <published>2024-04-08T14:00:10.000Z</published>
-    <updated>2024-04-08T03:21:27.396Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我们现在要探索的是一个名为”area”的Python包。这个包的主要功能是计算地理多边形在地球表面的面积。为了深入理解其工作原理，我们将直接研究这个包的源代码，特别关注它是如何根据给定的经纬度来计算地理多边形的面积。这将是一个深入学习Python编程以及地理信息处理的绝佳机</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   

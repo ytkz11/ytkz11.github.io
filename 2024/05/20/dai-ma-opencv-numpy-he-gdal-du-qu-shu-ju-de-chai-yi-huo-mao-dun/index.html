@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            OpenCV、NumPy和GDAL读取数据的差异或矛盾 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">OpenCV、NumPy和GDAL读取数据的差异或矛盾</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-05-20 22:00:10</span>
+        <span class="mobile">2024-05-20 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-05-20 09:15:00</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>在图像处理和地理空间数据处理中，OpenCV、NumPy和GDAL是常用的库。然而，它们在数据读取和坐标引用方式上存在差异，可能导致使用时出现矛盾。以下是对这三者读取数据的行列差异及矛盾的分析：</p>
+<h4 id="OpenCV"><a href="#OpenCV" class="headerlink" title="OpenCV"></a>OpenCV</h4><ol>
+<li>数据读取方式：<ul>
+<li>OpenCV使用<code>cv2.imread()</code>方法读取图像，返回一个NumPy数组。</li>
+</ul>
+</li>
+<li>数据格式：<ul>
+<li>读取的图像数据格式为<code>(height, width, channels)</code>，即<code>(行数, 列数, 通道数)</code>。</li>
+</ul>
+</li>
+<li>坐标引用方式：<ul>
+<li>在OpenCV中，坐标系统遵循图像处理的惯例，<code>(i, j)</code>表示第<code>i</code>行、第<code>j</code>列的像素。</li>
+</ul>
+</li>
+</ol>
+<h4 id="NumPy"><a href="#NumPy" class="headerlink" title="NumPy"></a>NumPy</h4><ol>
+<li>数据读取方式：<ul>
+<li>NumPy可以通过多种方式读取数据，例如<code>numpy.loadtxt()</code>、<code>numpy.genfromtxt()</code>等。</li>
+</ul>
+</li>
+<li>数据格式：<ul>
+<li>NumPy数组的默认格式为<code>(rows, cols)</code>，即<code>(行数, 列数)</code>。对于多维数组，格式为<code>(depth, rows, cols)</code>。</li>
+</ul>
+</li>
+<li>坐标引用方式：<ul>
+<li>NumPy数组中的元素通过<code>(i, j)</code>访问，即第<code>i</code>行、第<code>j</code>列。</li>
+</ul>
+</li>
+</ol>
+<h4 id="GDAL-Geospatial-Data-Abstraction-Library"><a href="#GDAL-Geospatial-Data-Abstraction-Library" class="headerlink" title="GDAL (Geospatial Data Abstraction Library)"></a>GDAL (Geospatial Data Abstraction Library)</h4><ol>
+<li>数据读取方式：<ul>
+<li>GDAL用于读取和处理地理空间数据，如遥感图像和GIS数据。常用方法是<code>gdal.Open()</code>和<code>ReadAsArray()</code>。</li>
+</ul>
+</li>
+<li>数据格式：<ul>
+<li>GDAL读取的数据格式为<code>(bands, rows, cols)</code>，即<code>(波段数, 行数, 列数)</code>。</li>
+</ul>
+</li>
+<li>坐标引用方式：<ul>
+<li>在GDAL中，坐标引用系统与地理坐标系统相对应，<code>rows</code>通常对应于<code>y</code>坐标（纬度），<code>cols</code>对应于<code>x</code>坐标（经度）。</li>
+</ul>
+</li>
+</ol>
+<h3 id="行列差异与矛盾分析"><a href="#行列差异与矛盾分析" class="headerlink" title="行列差异与矛盾分析"></a>行列差异与矛盾分析</h3><ol>
+<li><strong>坐标系统和数据格式的差异</strong>：<ul>
+<li><strong>OpenCV与NumPy</strong>：在单通道情况下，OpenCV与NumPy的坐标引用方式和数据格式一致，都是<code>(rows, cols)</code>。在多通道情况下，OpenCV的数据格式为<code>(rows, cols, channels)</code>，而NumPy没有特定的多通道格式。</li>
+<li><strong>GDAL</strong>：GDAL的<code>(bands, rows, cols)</code>格式与OpenCV和NumPy的格式存在维度顺序上的差异，特别是在处理多波段地理空间数据时，这种差异需要特别注意。</li>
+</ul>
+</li>
+<li><strong>地理坐标与图像坐标的映射</strong>：<ul>
+<li>在处理地理空间数据时，GDAL的<code>rows</code>和<code>cols</code>与地理坐标系统中的<code>y</code>（纬度）和<code>x</code>（经度）相对应，而OpenCV和NumPy直接使用图像坐标系统。在从GDAL读取数据并与OpenCV或NumPy结合使用时，需要考虑这种地理坐标和图像坐标的映射关系。</li>
+</ul>
+</li>
+</ol>
+<h3 id="解决行列矛盾的方法"><a href="#解决行列矛盾的方法" class="headerlink" title="解决行列矛盾的方法"></a>解决行列矛盾的方法</h3><ol>
+<li><p><strong>数据转换</strong>：</p>
+<ul>
+<li>在不同库之间交换数据时，需要调整数组的形状以确保数据格式的一致性。例如，使用<code>np.transpose()</code>调整GDAL数据的维度顺序。</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">python复制代码<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+
+<span class="token comment"># 使用GDAL读取地理空间数据</span>
+dataset <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span><span class="token string">'image.tif'</span><span class="token punctuation">)</span>
+array_gdal <span class="token operator">=</span> dataset<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'GDAL Array Shape:'</span><span class="token punctuation">,</span> array_gdal<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>  <span class="token comment"># (bands, rows, cols)</span>
+
+<span class="token comment"># 将GDAL数组转换为NumPy数组格式</span>
+array_gdal_transposed <span class="token operator">=</span> np<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>array_gdal<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Transposed GDAL Array Shape:'</span><span class="token punctuation">,</span> array_gdal_transposed<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>  <span class="token comment"># (rows, cols, bands)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>坐标系统转换</strong>：</p>
+<ul>
+<li>当在地理空间数据处理和图像处理之间进行转换时，需要注意地理坐标与图像坐标的关系，确保数据在转换过程中保持正确的地理信息。</li>
+</ul>
+</li>
+<li><p><strong>一致性检查</strong>：</p>
+<ul>
+<li>在进行数据处理前后，确保通过检查和调整数组的形状来保持数据格式的一致性。使用清晰的文档和注释说明数据格式和转换方法也有助于减少错误。</li>
+</ul>
+</li>
+</ol>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><p>以下示例展示了如何在OpenCV、NumPy和GDAL之间进行数据转换和坐标处理：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">python复制代码<span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+
+<span class="token comment"># 使用OpenCV读取图像</span>
+image_cv <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">'image.jpg'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'OpenCV Image Shape:'</span><span class="token punctuation">,</span> image_cv<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>  <span class="token comment"># (height, width, channels)</span>
+
+<span class="token comment"># 将OpenCV图像转换为NumPy数组（已是NumPy数组，但形状一致）</span>
+image_np <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>image_cv<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'NumPy Image Shape:'</span><span class="token punctuation">,</span> image_np<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>  <span class="token comment"># (height, width, channels)</span>
+
+<span class="token comment"># 使用GDAL读取地理空间数据</span>
+dataset <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span><span class="token string">'image.tif'</span><span class="token punctuation">)</span>
+array_gdal <span class="token operator">=</span> dataset<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'GDAL Array Shape:'</span><span class="token punctuation">,</span> array_gdal<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>  <span class="token comment"># (bands, rows, cols)</span>
+
+<span class="token comment"># 将GDAL数组转换为NumPy数组格式</span>
+array_gdal_transposed <span class="token operator">=</span> np<span class="token punctuation">.</span>transpose<span class="token punctuation">(</span>array_gdal<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'Transposed GDAL Array Shape:'</span><span class="token punctuation">,</span> array_gdal_transposed<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>  <span class="token comment"># (rows, cols, bands)</span>
+
+<span class="token comment"># 确保一致性</span>
+<span class="token keyword">assert</span> image_np<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> array_gdal_transposed<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"Shape mismatch!"</span>
+
+<span class="token comment"># 坐标系统转换示例：从地理坐标到图像坐标</span>
+<span class="token comment"># 假设我们有一个地理坐标 (latitude, longitude)</span>
+latitude <span class="token operator">=</span> <span class="token number">40.7128</span>
+longitude <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">74.0060</span>
+
+<span class="token comment"># 获取地理坐标转换参数  </span>
+geotransform <span class="token operator">=</span> dataset<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">(</span><span class="token punctuation">)</span>  
+  
+<span class="token comment"># 将地理坐标转换为图像坐标（注意这里我们直接使用了geotransform）  </span>
+pixel_x <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token punctuation">(</span>longitude <span class="token operator">-</span> geotransform<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> geotransform<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  
+pixel_y <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token punctuation">(</span>geotransform<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">-</span> latitude<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token builtin">abs</span><span class="token punctuation">(</span>geotransform<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 注意这里使用了abs来确保分母为正  </span>
+  
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f'Geographic Coordinates (</span><span class="token interpolation"><span class="token punctuation">{</span>latitude<span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span>longitude<span class="token punctuation">}</span></span><span class="token string">) -&gt; Image Coordinates (</span><span class="token interpolation"><span class="token punctuation">{</span>pixel_x<span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span>pixel_y<span class="token punctuation">}</span></span><span class="token string">)'</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/05/14/dai-ma-kml-shi-shi-me/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">KML、KMZ是什么？</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
