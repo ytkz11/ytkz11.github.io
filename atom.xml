@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-05-20T01:15:00.214Z</updated>
+  <updated>2024-05-27T01:42:53.197Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【闲聊】Landsat系列卫星轨道设计特点</title>
+    <link href="http://ytkz11@.github.io/2024/05/27/xian-liao-landsat-xi-lie-wei-xing-gui-dao-she-ji-te-dian/"/>
+    <id>http://ytkz11@.github.io/2024/05/27/xian-liao-landsat-xi-lie-wei-xing-gui-dao-she-ji-te-dian/</id>
+    <published>2024-05-27T14:00:10.000Z</published>
+    <updated>2024-05-27T01:42:53.197Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在特定的地理区域或形状内生成随机点。这种需求很少，但在上周恰好我需要，在网上的资料又比较少，所以现在对此总结一下。&lt;/p&gt;
+&lt;p&gt;在Python中，我们可以利用&lt;code&gt;numpy&lt;/code&gt;和&lt;code&gt;shapely&lt;/code&gt;库来实现这一功能。&lt;/p&gt;
+&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在多边形内部生成随机点</title>
+    <link href="http://ytkz11@.github.io/2024/05/21/dai-ma-sheng-cheng-zai-zhi-ding-fan-wei-nei-de-dian/"/>
+    <id>http://ytkz11@.github.io/2024/05/21/dai-ma-sheng-cheng-zai-zhi-ding-fan-wei-nei-de-dian/</id>
+    <published>2024-05-21T14:00:10.000Z</published>
+    <updated>2024-05-21T08:27:58.399Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在特定的地理区域或形状内生成随机点。这种需求很少，但在上周恰好我需要，在网上的资料又比较少，所以现在对此总结一下。&lt;/p&gt;
+&lt;p&gt;在Python中，我们可以利用&lt;code&gt;numpy&lt;/code&gt;和&lt;code&gt;shapely&lt;/code&gt;库来实现这一功能。&lt;/p&gt;
+&lt;h4</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenCV、NumPy和GDAL读取数据的差异或矛盾</title>
@@ -330,18 +384,18 @@
   </entry>
   
   <entry>
-    <title>【python】从卫星图像中提取数字表面模型DSM</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/</id>
+    <title>python简易笔记</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
     <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-04-17T08:17:44.274Z</updated>
+    <updated>2024-05-08T02:46:22.054Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -355,18 +409,18 @@
   </entry>
   
   <entry>
-    <title>python简易笔记</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
+    <title>【python】从卫星图像中提取数字表面模型DSM</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/</id>
     <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-05-08T02:46:22.054Z</updated>
+    <updated>2024-04-17T08:17:44.274Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;安装cars库&quot;&gt;&lt;a href=&quot;#安装cars库&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -479,61 +533,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】ERS SAR 原始数据提取和成像</title>
-    <link href="http://ytkz11@.github.io/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/"/>
-    <id>http://ytkz11@.github.io/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/</id>
-    <published>2024-04-09T14:00:10.000Z</published>
-    <updated>2024-04-16T07:14:03.124Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="SAR" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/SAR/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="SAR" scheme="http://ytkz11@.github.io/tags/SAR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【python】python有指针吗？</title>
-    <link href="http://ytkz11@.github.io/2024/04/08/python-python-you-zhi-zhen-ma/"/>
-    <id>http://ytkz11@.github.io/2024/04/08/python-python-you-zhi-zhen-ma/</id>
-    <published>2024-04-08T14:30:10.000Z</published>
-    <updated>2024-04-08T06:59:53.818Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;有时候，你可能会听到人们问：”Python有指针吗？”答案取决于你对”指针”的定义。&lt;/p&gt;
-&lt;h2 id=&quot;指针：经典定义&quot;&gt;&lt;a href=&quot;#指针：经典定义&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   

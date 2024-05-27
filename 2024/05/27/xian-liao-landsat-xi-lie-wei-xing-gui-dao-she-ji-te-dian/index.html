@@ -9,7 +9,7 @@
     
     <title>
         
-            【python】从卫星图像中提取数字表面模型DSM |
+            【闲聊】Landsat系列卫星轨道设计特点 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">【python】从卫星图像中提取数字表面模型DSM</span>
+                <span class="title-hover-animation">【闲聊】Landsat系列卫星轨道设计特点</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-04-18 22:30:10</span>
-        <span class="mobile">2024-04-18 22:30</span>
+        <span class="pc">2024-05-27 22:00:10</span>
+        <span class="mobile">2024-05-27 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-04-17 16:17:44</span>
+        <span class="pc">2024-05-27 09:42:53</span>
     </span>
     
     
@@ -175,7 +175,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/python/">python</a>&nbsp;
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -187,7 +187,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/python/">python</a>&nbsp;
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,16 +208,45 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="安装cars库"><a href="#安装cars库" class="headerlink" title="安装cars库"></a>安装cars库</h1><p>安装cars库，如果你是windows用户，需要安装微软的c++开发工具。地址如下：</p>
-<p><a class="link" target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/<i class="fas fa-external-link-alt"></i></a></p>
-<p>安装过程如下图所示。</p>
-<p><img src="https://user-images.githubusercontent.com/29135514/151630503-d238175e-ea50-4a3b-963d-8c31c465da28.png" alt="img"></p>
-<p>安装已成功。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404171555824.png" alt="image-20240417155232811"></p>
-<p>在命令行输入：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip <span class="token function">install</span> cars<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>cars库已安装成功。如下图所示。</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240417155850606.png" alt="image-20240417155850606"></p>
+                <p>在特定的地理区域或形状内生成随机点。这种需求很少，但在上周恰好我需要，在网上的资料又比较少，所以现在对此总结一下。</p>
+<p>在Python中，我们可以利用<code>numpy</code>和<code>shapely</code>库来实现这一功能。</p>
+<h4 id="一、背景介绍"><a href="#一、背景介绍" class="headerlink" title="一、背景介绍"></a>一、背景介绍</h4><p><code>numpy</code>是Python中用于处理大型多维数组和矩阵的库，而<code>shapely</code>则是一个用于处理几何对象的Python库，支持点、线、多边形等几何类型。</p>
+<h4 id="二、实现方法"><a href="#二、实现方法" class="headerlink" title="二、实现方法"></a>二、实现方法</h4><p>为了实现在多边形内部生成随机点的功能，我们可以定义一个函数<code>random_points_in_polygon</code>，该函数接受一个多边形对象和要生成的随机点数量作为参数，并返回多边形内部的随机点列表。</p>
+<p>网上有一句话关于，大概意思是，如果没有一些国外免费的遥感数据作为支撑，很多遥感地信人毕业难度会增加很多。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405270931244.png" alt="image-20240527093115903"></p>
+<p>如果你没有遥感数据，真的可以先用Landsat数据作为学习，等你工作了遇到国产遥感数据就能顺利过渡，至少大部分光学遥感数据都是相通的。</p>
+<p>比如说今天的主题是Landsat 8 卫星轨道设计特点，咱从轨道设计的特点来探讨为什么大部分光学遥感数据都是相通。</p>
+<p>首先，Landsat 8卫星运行在近极地太阳同步轨道上，这种轨道设计使得卫星能够覆盖全球范围内的中高纬度地区，并且每天在同一地方时、同一方向通过同一地点。这样的设计保证了遥感观测条件的基本一致性，有利于图像的对比分析。太阳同步轨道的特性保证了卫星在不同时间对同一地区进行观测时，能够获得相似的光照条件，从而提高了遥感数据的可比性。</p>
+<p>其次，Landsat 8卫星的重访周期为16天，即卫星大约每16天会重新覆盖地球上的同一地点一次。这种短重访周期提供了比较不同时间点数据的机会，有利于进行时序变化研究。重访周期的设定使得卫星能够及时获取地球表面的动态变化，为环境监测和资源管理提供了可靠数据支持。</p>
+<p>另外，由于轨道的近极性和高倾角，Landsat 8卫星能够覆盖从南纬82.5度到北纬82.5度的全球陆地。这种广泛的地面覆盖使得卫星数据在全球尺度的环境监测、资源管理等领域具有极高的应用价值。</p>
+<p>在探讨Landsat 8卫星的轨道设计与其他光学卫星之间的相似之处时，我们可以从以下几个方面进行归纳和总结：</p>
+<ol>
+<li><p>轨道类型与特点：</p>
+<ul>
+<li><strong>近极地太阳同步轨道</strong>：Landsat 8以及许多其他光学卫星都采用了近极地太阳同步轨道。这种轨道设计允许卫星在相对固定的地方时和光照条件下对地面进行观测，从而提高了数据的可重复性和可比性。</li>
+<li><strong>轨道高度与倾角</strong>：虽然具体的轨道高度和倾角可能因卫星而异，但大多数光学卫星都选择了能够覆盖全球中高纬度地区的轨道设计。这种设计使得卫星能够观测到更广泛的地理区域。</li>
+</ul>
+</li>
+<li><p>观测能力与参数：</p>
+<ul>
+<li><strong>多波段成像</strong>：Landsat 8和其他光学卫星都具备多波段成像能力，能够覆盖从可见光到红外等不同波段的电磁波谱。这种能力使得卫星能够获取更丰富的地面信息，提高数据的解译精度。</li>
+<li><strong>空间分辨率</strong>：虽然具体的空间分辨率可能因卫星而异，但大多数光学卫星都具备较高的空间分辨率，能够识别地面上的细小目标。这种高分辨率成像能力使得卫星数据在环境监测、城市规划等领域具有广泛的应用价值。</li>
+</ul>
+</li>
+<li><p>重访周期与地面覆盖：</p>
+<ul>
+<li><strong>短重访周期</strong>：许多光学卫星都具有较短的重访周期，如Landsat 8的16天重访周期。这种短重访周期使得卫星能够定期覆盖同一地区，获取时间序列数据，从而监测地面目标的动态变化。</li>
+<li><strong>全球覆盖</strong>：由于采用了近极地轨道设计，Landsat 8和其他光学卫星都能够覆盖全球范围内的中高纬度地区。这种全球覆盖能力使得卫星数据在全球尺度的环境监测和资源管理等领域具有广泛的应用前景。</li>
+</ul>
+</li>
+<li><p>数据应用与服务：</p>
+<ul>
+<li><strong>环境监测</strong>：无论是Landsat 8还是其他光学卫星，其数据都被广泛应用于环境监测领域，如森林监测、土地利用变化检测、水质监测等。这些应用有助于人们更好地了解地球环境的变化趋势和规律。</li>
+<li><strong>资源管理</strong>：卫星数据还可以为资源管理提供重要支持，如城市规划、农业管理、灾害应急等。通过对卫星数据的分析和处理，人们可以获取有关地面目标的详细信息，为决策制定提供科学依据。</li>
+</ul>
+</li>
+</ol>
+<p>Landsat 8卫星的轨道设计与其他光学卫星之间存在诸多相似之处，这些相似之处主要体现在轨道类型与特点、观测能力与参数、重访周期与地面覆盖以及数据应用与服务等方面。这些相似之处使得光学卫星在地球观测领域具有广泛的应用前景和重要的价值。</p>
 
             </div>
 
@@ -227,7 +256,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/python/">#python</a>&nbsp;
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -236,29 +265,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">python简易笔记</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/"
+                               href="/2024/05/21/dai-ma-sheng-cheng-zai-zhi-ding-fan-wei-nei-de-dian/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">【代码】WGS84坐标转UTM坐标</span>
+                                <span class="post-nav-title-item">在多边形内部生成随机点</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">

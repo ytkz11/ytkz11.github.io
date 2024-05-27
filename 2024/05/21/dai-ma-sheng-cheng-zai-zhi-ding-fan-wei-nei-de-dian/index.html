@@ -9,7 +9,7 @@
     
     <title>
         
-            【python】从卫星图像中提取数字表面模型DSM |
+            在多边形内部生成随机点 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">【python】从卫星图像中提取数字表面模型DSM</span>
+                <span class="title-hover-animation">在多边形内部生成随机点</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-04-18 22:30:10</span>
-        <span class="mobile">2024-04-18 22:30</span>
+        <span class="pc">2024-05-21 22:00:10</span>
+        <span class="mobile">2024-05-21 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-04-17 16:17:44</span>
+        <span class="pc">2024-05-21 16:27:58</span>
     </span>
     
     
@@ -175,7 +175,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/python/">python</a>&nbsp;
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -187,7 +187,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/python/">python</a>&nbsp;
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,16 +208,73 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="安装cars库"><a href="#安装cars库" class="headerlink" title="安装cars库"></a>安装cars库</h1><p>安装cars库，如果你是windows用户，需要安装微软的c++开发工具。地址如下：</p>
-<p><a class="link" target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/<i class="fas fa-external-link-alt"></i></a></p>
-<p>安装过程如下图所示。</p>
-<p><img src="https://user-images.githubusercontent.com/29135514/151630503-d238175e-ea50-4a3b-963d-8c31c465da28.png" alt="img"></p>
-<p>安装已成功。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404171555824.png" alt="image-20240417155232811"></p>
-<p>在命令行输入：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip <span class="token function">install</span> cars<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>cars库已安装成功。如下图所示。</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240417155850606.png" alt="image-20240417155850606"></p>
+                <p>在特定的地理区域或形状内生成随机点。这种需求很少，但在上周恰好我需要，在网上的资料又比较少，所以现在对此总结一下。</p>
+<p>在Python中，我们可以利用<code>numpy</code>和<code>shapely</code>库来实现这一功能。</p>
+<h4 id="一、背景介绍"><a href="#一、背景介绍" class="headerlink" title="一、背景介绍"></a>一、背景介绍</h4><p><code>numpy</code>是Python中用于处理大型多维数组和矩阵的库，而<code>shapely</code>则是一个用于处理几何对象的Python库，支持点、线、多边形等几何类型。</p>
+<h4 id="二、实现方法"><a href="#二、实现方法" class="headerlink" title="二、实现方法"></a>二、实现方法</h4><p>为了实现在多边形内部生成随机点的功能，我们可以定义一个函数<code>random_points_in_polygon</code>，该函数接受一个多边形对象和要生成的随机点数量作为参数，并返回多边形内部的随机点列表。</p>
+<ol>
+<li><strong>函数定义</strong>：<ul>
+<li>首先，我们定义一个空列表<code>points</code>来存储生成的随机点。</li>
+<li>然后，我们获取多边形的边界坐标（最小x、最小y、最大x、最大y），这些坐标将用于限定随机点的生成范围。</li>
+<li>在一个循环中，我们不断生成随机点，直到生成的随机点数量达到指定的数量。</li>
+<li>对于每个随机点，我们使用<code>Polygon.contains()</code>方法检查它是否位于多边形内部。如果是，则将其添加到<code>points</code>列表中。</li>
+</ul>
+</li>
+<li><strong>创建多边形</strong>：<ul>
+<li>使用给定的顶点坐标创建一个<code>Polygon</code>对象。</li>
+</ul>
+</li>
+<li><strong>调用函数并输出结果</strong>：<ul>
+<li>调用<code>random_points_in_polygon</code>函数，传入多边形和要生成的随机点数量。</li>
+<li>打印生成的随机点。</li>
+</ul>
+</li>
+</ol>
+<h4 id="三、代码实现"><a href="#三、代码实现" class="headerlink" title="三、代码实现"></a>三、代码实现</h4><p>以下是完整的代码实现：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry <span class="token keyword">import</span> Polygon
+<span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry<span class="token punctuation">.</span>point <span class="token keyword">import</span> Point
+
+
+
+<span class="token comment"># 定义函数</span>
+<span class="token keyword">def</span> <span class="token function">random_points_in_polygon</span><span class="token punctuation">(</span>polygon<span class="token punctuation">,</span> number<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    minx<span class="token punctuation">,</span> miny<span class="token punctuation">,</span> maxx<span class="token punctuation">,</span> maxy <span class="token operator">=</span> polygon<span class="token punctuation">.</span>bounds
+    <span class="token keyword">while</span> <span class="token builtin">len</span><span class="token punctuation">(</span>points<span class="token punctuation">)</span> <span class="token operator">&lt;</span> number<span class="token punctuation">:</span>
+        pnt <span class="token operator">=</span> Point<span class="token punctuation">(</span>np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span>minx<span class="token punctuation">,</span> maxx<span class="token punctuation">)</span><span class="token punctuation">,</span> np<span class="token punctuation">.</span>random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span>miny<span class="token punctuation">,</span> maxy<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> polygon<span class="token punctuation">.</span>contains<span class="token punctuation">(</span>pnt<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            points<span class="token punctuation">.</span>append<span class="token punctuation">(</span>pnt<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> points
+
+<span class="token comment"># 定义一个多边形的顶点坐标</span>
+polygon_vertices <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token comment"># 创建多边形对象</span>
+polygon <span class="token operator">=</span> Polygon<span class="token punctuation">(</span>polygon_vertices<span class="token punctuation">)</span>
+
+<span class="token comment"># 定义要生成的随机点的数量</span>
+number_of_points <span class="token operator">=</span> <span class="token number">10</span>
+
+<span class="token comment"># 调用函数并获取结果</span>
+random_points <span class="token operator">=</span> random_points_in_polygon<span class="token punctuation">(</span>polygon<span class="token punctuation">,</span> number_of_points<span class="token punctuation">)</span>
+
+<span class="token comment"># 打印结果</span>
+<span class="token keyword">for</span> point <span class="token keyword">in</span> random_points<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>point<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405211618871.png" alt="image-20240521161807547"></p>
+<h4 id="四、代码实现"><a href="#四、代码实现" class="headerlink" title="四、代码实现"></a>四、代码实现</h4><ul>
+<li><code>random_points_in_polygon(polygon, number)</code>：该函数生成 <code>number</code> 个位于 <code>polygon</code> 内的随机点。</li>
+<li><code>points</code>：用于存储生成的随机点。</li>
+<li><code>minx, miny, maxx, maxy</code>：多边形的边界框，用于确定生成随机点的范围。</li>
+<li><code>while len(points) &lt; number</code>：循环生成点，直到数量达到 <code>number</code>。</li>
+<li><code>np.random.uniform(minx, maxx)</code> 和 <code>np.random.uniform(miny, maxy)</code>：生成在多边形边界框内的随机坐标。</li>
+<li><code>Point()</code>：创建一个点对象。</li>
+<li><code>polygon.contains(pnt)</code>：检查点是否在多边形内。</li>
+<li><code>points.append(pnt)</code>：如果点在多边形内，则将其添加到 <code>points</code> 列表中。</li>
+<li><code>return points</code>：返回生成的随机点列表。</li>
+</ul>
+<p>这次就不打包为exe文件了，因为这个需求应该很少的，俺只是在写代码的时候，恰好遇到问题，也恰好有了这个需求。</p>
+<p>以后的代码分析，如果需求大，就尽量打包为exe，方便大家。如果内容方向比较冷门，则只是单纯地作为技术分享。</p>
 
             </div>
 
@@ -227,7 +284,7 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/python/">#python</a>&nbsp;
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -239,13 +296,13 @@
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"
+                               href="/2024/05/27/xian-liao-landsat-xi-lie-wei-xing-gui-dao-she-ji-te-dian/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">python简易笔记</span>
+                                <span class="post-nav-title-item">【闲聊】Landsat系列卫星轨道设计特点</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
@@ -255,10 +312,10 @@
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/"
+                               href="/2024/05/20/dai-ma-opencv-numpy-he-gdal-du-qu-shu-ju-de-chai-yi-huo-mao-dun/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">【代码】WGS84坐标转UTM坐标</span>
+                                <span class="post-nav-title-item">OpenCV、NumPy和GDAL读取数据的差异或矛盾</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
