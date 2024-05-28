@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>【python】 if __name__ == __main__ 到底是什么鬼？</title>
+      <link href="2024/05/28/python-if-name-main-dao-di-shi-shi-me-gui/"/>
+      <url>2024/05/28/python-if-name-main-dao-di-shi-shi-me-gui/</url>
+      
+        <content type="html"><![CDATA[<p><code>if __name__ == "__main__":</code> 是 Python 中一个常见的用法，它主要用于确定当前脚本是作为主程序执行，还是被导入到其他模块中。</p><p>具体来说，当 Python 解释器执行一个脚本文件时，它会把一个全局变量 <code>__name__</code> 设置为 <code>"__main__"</code>，这样在脚本内部就可以通过 <code>__name__</code> 这个变量来判断当前脚本是否是主程序。如果一个脚本文件被直接执行，则 <code>__name__</code> 的值为 <code>"__main__"</code>，如果一个脚本文件被作为模块导入到其他脚本中，则 <code>__name__</code> 的值为其模块名。</p><p>因此，<code>if __name__ == "__main__":</code> 这个条件语句通常被用来将一些只在当前脚本作为主程序执行时执行的代码块包裹起来，以防止它们在被导入为模块时执行。这样做可以使得一个脚本文件既可以作为独立的程序运行，也可以作为其他程序的模块导入使用，提高了代码的灵活性和可重用性。</p><p>例如，当一个 Python 脚本文件中包含了以下代码：</p><pre class="line-numbers language-none"><code class="language-none">def main():    print("This is the main function.")if __name__ == "__main__":    main()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>那么，当这个脚本文件被直接执行时，<code>main()</code> 函数就会被调用并执行；但如果这个脚本文件被其他脚本文件导入时，<code>main()</code> 函数则不会被执行。</p><p>下面是一个简单的例子来解释这个模式：</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 假设这个文件的名称是 example.py  </span>  <span class="token comment"># 定义一个函数  </span><span class="token keyword">def</span> <span class="token function">print_hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>      <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello from the function!"</span><span class="token punctuation">)</span>    <span class="token comment"># 这是主程序部分的代码  </span><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>      <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Hello from the main program!"</span><span class="token punctuation">)</span>      print_hello<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 调用上面定义的函数</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="情况一：直接运行脚本"><a href="#情况一：直接运行脚本" class="headerlink" title="情况一：直接运行脚本"></a>情况一：直接运行脚本</h3><p>如果你在命令行中直接运行这个脚本（例如，通过 <code>python example.py</code>），那么 <code>__name__</code> 的值会被设置为 <code>"__main__"</code>。因此，<code>if __name__ == "__main__":</code> 下面的代码块会被执行，你会看到以下输出：</p><pre class="line-numbers language-none"><code class="language-none">Hello from the main program!  Hello from the function!<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="情况二：作为模块导入"><a href="#情况二：作为模块导入" class="headerlink" title="情况二：作为模块导入"></a>情况二：作为模块导入</h3><p>但是，如果你从另一个 Python 脚本中导入这个模块（例如，在另一个 Python 文件中使用 <code>import example</code>），那么 <code>__name__</code> 的值会被设置为模块的名称（在这个例子中是 <code>"example"</code>）。因此，<code>if __name__ == "__main__":</code> 下面的代码块不会被执行，你只会看到从导入的模块中定义的函数或变量（在这个例子中，没有直接可见的输出，但你可以在其他脚本中调用 <code>example.print_hello()</code> 来打印 “Hello from the function!”）。</p><p>这种设计模式允许你在同一个 Python 文件中编写可重用的函数和类（这些可以被其他模块导入和使用），同时还能够包含一些仅在直接运行脚本时才需要执行的代码（如命令行参数处理、主程序逻辑等）。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【代码】关爱猪猪健康之yolo物体姿态检测</title>
+      <link href="2024/05/28/dai-ma-guan-ai-zhu-zhu-jian-kang-zhi-yolo-wu-ti-zi-tai-jian-ce/"/>
+      <url>2024/05/28/dai-ma-guan-ai-zhu-zhu-jian-kang-zhi-yolo-wu-ti-zi-tai-jian-ce/</url>
+      
+        <content type="html"><![CDATA[<h4 id="一、背景介绍"><a href="#一、背景介绍" class="headerlink" title="一、背景介绍"></a>一、背景介绍</h4><p><code>numpy</code>是Python中用于处理大型多维数组和矩阵的库，而<code>shapely</code>则是一个用于处理几何对象的Python库，支持点、线、多边形等几何类型。</p><h4 id="二、实现方法"><a href="#二、实现方法" class="headerlink" title="二、实现方法"></a>二、实现方法</h4><p>为了实现在多边形内部生成随机点的功能，我们可以定义一个函数<code>random_points_in_polygon</code>，该函数接受一个多边形对象和要生成的随机点数量作为参数，并返回多边形内部的随机点列表。</p><p>最近看到一个项目：使用YoloV8实例分割识别猪的姿态。</p><p>个人觉得比较有趣，比较好玩。根据介绍，一步一步地使用yolov10对猪猪的姿态进行识别。</p><p>假如数据换成遥感数据，是完全可以实现对某某地物的识别，如飞机、船舶、汽车等等。</p><p>技术的发展常常会经历从理论研究到实际应用的过程。在技术不断演进和完善的过程中，一项新技术可能开始作为研究课题或实验室项目，经过不断的优化和改进，最终成为可以应用于实际场景的成熟技术。</p><h1 id="数据集下载"><a href="#数据集下载" class="headerlink" title="数据集下载"></a>数据集下载</h1><p> 使用的数据集来源于Kokkenborg Aps，下载地址：</p><pre class="line-numbers language-none"><code class="language-none">https://365ucl.sharepoint.com/:f:/s/dataset-oft/Eicf36oizq1DvISOjGEHuwABFA6z1Z22zewM2rPWJzFBWg?e=y88D5Y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405271638194.png" alt="image-20240527163752505"></p><h1 id="标注文件预处理"><a href="#标注文件预处理" class="headerlink" title="标注文件预处理"></a>标注文件预处理</h1><p>数据集是使用LabelMe标注的，是json格式。</p><p>YoloV8使用的是txt格式，这里可以借助labelme2yolo来转换：</p><p>安装labelme2yolo：</p><pre class="line-numbers language-none"><code class="language-none">pip install labelme2yolo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>格式转换：</p><pre class="line-numbers language-none"><code class="language-none">labelme2yolo --json_dir /path/to/labelme_json_dir/<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h1 id="YOLOv10"><a href="#YOLOv10" class="headerlink" title="YOLOv10"></a><a class="link" href="https://arxiv.org/abs/2405.14458">YOLOv10<i class="fas fa-external-link-alt"></i></a></h1><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240527164802085.png" alt="image-20240527164802085"></p><h1 id="项目搭建"><a href="#项目搭建" class="headerlink" title="项目搭建"></a><strong>项目搭建</strong></h1><h1 id="推理"><a href="#推理" class="headerlink" title="推理"></a><strong>推理</strong></h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【闲聊】Landsat系列卫星轨道设计特点</title>
       <link href="2024/05/27/xian-liao-landsat-xi-lie-wei-xing-gui-dao-she-ji-te-dian/"/>
       <url>2024/05/27/xian-liao-landsat-xi-lie-wei-xing-gui-dao-she-ji-te-dian/</url>

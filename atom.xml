@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-05-27T01:42:53.197Z</updated>
+  <updated>2024-05-27T02:01:21.168Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【python】 if __name__ == __main__ 到底是什么鬼？</title>
+    <link href="http://ytkz11@.github.io/2024/05/28/python-if-name-main-dao-di-shi-shi-me-gui/"/>
+    <id>http://ytkz11@.github.io/2024/05/28/python-if-name-main-dao-di-shi-shi-me-gui/</id>
+    <published>2024-05-28T14:30:10.000Z</published>
+    <updated>2024-05-27T02:01:21.168Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;code&gt;if __name__ == &quot;__main__&quot;:&lt;/code&gt; 是 Python 中一个常见的用法，它主要用于确定当前脚本是作为主程序执行，还是被导入到其他模块中。&lt;/p&gt;
+&lt;p&gt;具体来说，当 Python 解释器执行一个脚本文件时，它会把一个全局变量</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【代码】关爱猪猪健康之yolo物体姿态检测</title>
+    <link href="http://ytkz11@.github.io/2024/05/28/dai-ma-guan-ai-zhu-zhu-jian-kang-zhi-yolo-wu-ti-zi-tai-jian-ce/"/>
+    <id>http://ytkz11@.github.io/2024/05/28/dai-ma-guan-ai-zhu-zhu-jian-kang-zhi-yolo-wu-ti-zi-tai-jian-ce/</id>
+    <published>2024-05-28T14:00:10.000Z</published>
+    <updated>2024-05-27T09:42:03.029Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;一、背景介绍&quot;&gt;&lt;a href=&quot;#一、背景介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【闲聊】Landsat系列卫星轨道设计特点</title>
@@ -473,57 +524,6 @@
     <summary type="html">&lt;p&gt;一般获取高度数据的方法很简单。打开对应的DEM文件，按照经纬度来查询对应DEM文件的行列号，按照行列号读取DEM数据（即高度）。&lt;/p&gt;
 &lt;p&gt;以上方法是通用的获取高度的流程。&lt;/p&gt;
 &lt;p&gt;现在有这样的一个场景，我们需要查询多个地点高度。如果这些点都集中在小范围区域的话，</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】不借助numpy读取tif文件</title>
-    <link href="http://ytkz11@.github.io/2024/04/12/dai-ma-bu-jie-zhu-numpy-du-qu-tif-wen-jian/"/>
-    <id>http://ytkz11@.github.io/2024/04/12/dai-ma-bu-jie-zhu-numpy-du-qu-tif-wen-jian/</id>
-    <published>2024-04-12T14:00:10.000Z</published>
-    <updated>2024-04-12T02:03:10.474Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本文将介绍一种 Python</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>坐标系转换 Python 实现</title>
-    <link href="http://ytkz11@.github.io/2024/04/10/dai-ma-zuo-biao-xi-zhuan-huan-python-shi-xian/"/>
-    <id>http://ytkz11@.github.io/2024/04/10/dai-ma-zuo-biao-xi-zhuan-huan-python-shi-xian/</id>
-    <published>2024-04-10T14:00:10.000Z</published>
-    <updated>2024-04-10T08:55:47.996Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本文将介绍一种 Python 实现，该实现可以在 WGS-84，GCJ-02（火星坐标系），以及 BD-09（百度坐标系）之间进行坐标转换。&lt;/p&gt;
-&lt;h2 id=&quot;坐标系简介&quot;&gt;&lt;a href=&quot;#坐标系简介&quot; class=&quot;headerlink&quot;</summary>
         
       
     
