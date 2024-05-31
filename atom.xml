@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-05-27T02:01:21.168Z</updated>
+  <updated>2024-05-31T08:18:14.735Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于PySide2实现影像查看控件：探索GIS软件中的缩放和平移逻辑</title>
+    <link href="http://ytkz11@.github.io/2024/06/01/dai-ma-guan-ai-zhu-zhu-jian-kang-zhi-yolo-wu-ti-zi-tai-jian-ce-fu-ben/"/>
+    <id>http://ytkz11@.github.io/2024/06/01/dai-ma-guan-ai-zhu-zhu-jian-kang-zhi-yolo-wu-ti-zi-tai-jian-ce-fu-ben/</id>
+    <published>2024-06-01T14:00:10.000Z</published>
+    <updated>2024-05-31T08:18:14.735Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上个月有小伙伴留言：怎么实现遥感图像的放大缩小平移操作。&lt;/p&gt;
+&lt;p&gt;很久以前曾经写过相应的控件，该控件具备图片查看、放大、缩小和平移等功能。本文将详细分析代码的功能，并解释如何实现这些功能。&lt;/p&gt;
+&lt;h1 id=&quot;代码实现&quot;&gt;&lt;a href=&quot;#代码实现&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>【python】 if __name__ == __main__ 到底是什么鬼？</title>
@@ -435,31 +462,6 @@
   </entry>
   
   <entry>
-    <title>python简易笔记</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
-    <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-05-08T02:46:22.054Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>【python】从卫星图像中提取数字表面模型DSM</title>
     <link href="http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/"/>
     <id>http://ytkz11@.github.io/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/</id>
@@ -485,6 +487,31 @@
   </entry>
   
   <entry>
+    <title>python简易笔记</title>
+    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
+    <published>2024-04-18T14:30:10.000Z</published>
+    <updated>2024-05-08T02:46:22.054Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>【代码】WGS84坐标转UTM坐标</title>
     <link href="http://ytkz11@.github.io/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/"/>
     <id>http://ytkz11@.github.io/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/</id>
@@ -497,33 +524,6 @@
         
         
     <summary type="html">&lt;p&gt;通用横轴墨卡托（UTM）是一种地图投影方法，它提供了一种为地球上的位置指定坐标的方式。像传统的经纬度系统一样，UTM也是一种水平位置表示法，这意味着它忽略了高度信息，而将地球表面视为一个理想的椭球体。然而，UTM与经纬度系统的主要区别在于，它将地球分割为60个区域，并将每个</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】通过在线服务获取经纬度的海拔高度</title>
-    <link href="http://ytkz11@.github.io/2024/04/15/dai-ma-tong-guo-zai-xian-fu-wu-huo-qu-jing-wei-du-de-hai-ba-gao-du-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/04/15/dai-ma-tong-guo-zai-xian-fu-wu-huo-qu-jing-wei-du-de-hai-ba-gao-du-wei-wan-cheng/</id>
-    <published>2024-04-15T14:00:10.000Z</published>
-    <updated>2024-04-15T07:18:59.316Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;一般获取高度数据的方法很简单。打开对应的DEM文件，按照经纬度来查询对应DEM文件的行列号，按照行列号读取DEM数据（即高度）。&lt;/p&gt;
-&lt;p&gt;以上方法是通用的获取高度的流程。&lt;/p&gt;
-&lt;p&gt;现在有这样的一个场景，我们需要查询多个地点高度。如果这些点都集中在小范围区域的话，</summary>
         
       
     
