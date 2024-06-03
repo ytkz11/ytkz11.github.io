@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            conda教程 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">conda教程</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-06-03 22:00:10</span>
+        <span class="mobile">2024-06-03 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-06-03 15:31:45</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>上个月有小伙伴留言：怎么实现遥感图像的放大缩小平移操作。</p>
+<p>很久以前曾经写过相应的控件，该控件具备图片查看、放大、缩小和平移等功能。本文将详细分析代码的功能，并解释如何实现这些功能。</p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><h3 id="继承-QGraphicsView"><a href="#继承-QGraphicsView" class="headerlink" title="继承 QGraphicsView"></a>继承 <code>QGraphicsView</code></h3><p>首先，我们创建了一个类<code>ImageView</code>，该类继承自<code>QGraphicsView</code>，这是Qt库中用于显示和操作2D图形的视图组件。</p>
+<p>在初始化方法中，我们设置了控件的光标样式、背景颜色、滚动条策略、渲染提示、缓存模式、控件的初始大小和加载初始图像。。这些设置可以提高图片显示的效果和用户体验。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">ImageView</span><span class="token punctuation">(</span>QGraphicsView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""单个影像的图片查看控件"""</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        image <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'image'</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+        background <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'background'</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>ImageView<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setCursor<span class="token punctuation">(</span>Qt<span class="token punctuation">.</span>OpenHandCursor<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setBackground<span class="token punctuation">(</span>background<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setHorizontalScrollBarPolicy<span class="token punctuation">(</span>Qt<span class="token punctuation">.</span>ScrollBarAlwaysOff<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setVerticalScrollBarPolicy<span class="token punctuation">(</span>Qt<span class="token punctuation">.</span>ScrollBarAlwaysOff<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setRenderHints<span class="token punctuation">(</span>QPainter<span class="token punctuation">.</span>Antialiasing <span class="token operator">|</span> QPainter<span class="token punctuation">.</span>HighQualityAntialiasing <span class="token operator">|</span>
+                            QPainter<span class="token punctuation">.</span>SmoothPixmapTransform<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setCacheMode<span class="token punctuation">(</span>self<span class="token punctuation">.</span>CacheBackground<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setViewportUpdateMode<span class="token punctuation">(</span>self<span class="token punctuation">.</span>SmartViewportUpdate<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_item <span class="token operator">=</span> QGraphicsPixmapItem<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 放置图像</span>
+        self<span class="token punctuation">.</span>_item<span class="token punctuation">.</span>setFlags<span class="token punctuation">(</span>QGraphicsPixmapItem<span class="token punctuation">.</span>ItemIsFocusable <span class="token operator">|</span>
+                            QGraphicsPixmapItem<span class="token punctuation">.</span>ItemIsMovable<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_scene <span class="token operator">=</span> QGraphicsScene<span class="token punctuation">(</span>self<span class="token punctuation">)</span>  <span class="token comment"># 场景</span>
+        self<span class="token punctuation">.</span>setScene<span class="token punctuation">(</span>self<span class="token punctuation">.</span>_scene<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_scene<span class="token punctuation">.</span>addItem<span class="token punctuation">(</span>self<span class="token punctuation">.</span>_item<span class="token punctuation">)</span>
+        rect <span class="token operator">=</span> QApplication<span class="token punctuation">.</span>instance<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>desktop<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>availableGeometry<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>rect<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>rect<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>pixmap <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>_delta <span class="token operator">=</span> <span class="token number">0.1</span>  <span class="token comment"># 缩放比例因子</span>
+        self<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>image<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="设置背景颜色方法"><a href="#设置背景颜色方法" class="headerlink" title="设置背景颜色方法"></a>设置背景颜色方法</h3><p>该方法用于设置背景颜色，可以接受多种类型的颜色参数。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">setBackground</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""设置背景颜色"""</span>
+    <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>color<span class="token punctuation">,</span> QColor<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>setBackgroundBrush<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>color<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">,</span> Qt<span class="token punctuation">.</span>GlobalColor<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        color <span class="token operator">=</span> QColor<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> color<span class="token punctuation">.</span>isValid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>setBackgroundBrush<span class="token punctuation">(</span>color<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="加载图片方法"><a href="#加载图片方法" class="headerlink" title="加载图片方法"></a>加载图片方法</h3><p>该方法用于加载图像，可以接受<code>QPixmap</code>、<code>QImage</code>和图像路径等多种类型的图像参数。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">setPixmap</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pixmap<span class="token punctuation">,</span> fitIn<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""加载图片"""</span>
+    <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>pixmap<span class="token punctuation">,</span> QPixmap<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>pixmap <span class="token operator">=</span> pixmap
+    <span class="token keyword">elif</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>pixmap<span class="token punctuation">,</span> QImage<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">.</span>fromImage<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>pixmap<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token keyword">and</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isfile<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+    self<span class="token punctuation">.</span>_item<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>self<span class="token punctuation">.</span>pixmap<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>_item<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>setSceneDims<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> fitIn<span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>fitInView<span class="token punctuation">(</span>QRectF<span class="token punctuation">(</span>self<span class="token punctuation">.</span>_item<span class="token punctuation">.</span>pos<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> QSizeF<span class="token punctuation">(</span>
+            self<span class="token punctuation">.</span>pixmap<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Qt<span class="token punctuation">.</span>KeepAspectRatio<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="设置场景尺寸、适应视图方法"><a href="#设置场景尺寸、适应视图方法" class="headerlink" title="设置场景尺寸、适应视图方法"></a>设置场景尺寸、适应视图方法</h3><p>设置场景的尺寸，使其与图像的尺寸匹配。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">setSceneDims</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>pixmap<span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+    self<span class="token punctuation">.</span>setSceneRect<span class="token punctuation">(</span>QRectF<span class="token punctuation">(</span>QPointF<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> QPointF<span class="token punctuation">(</span>self<span class="token punctuation">.</span>pixmap<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>pixmap<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>使图像适应视图窗口，保持或调整图像的纵横比。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">fitInView</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> rect<span class="token punctuation">,</span> flags<span class="token operator">=</span>Qt<span class="token punctuation">.</span>IgnoreAspectRatio<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""剧中适应"""</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>scene<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">or</span> rect<span class="token punctuation">.</span>isNull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span>
+    unity <span class="token operator">=</span> self<span class="token punctuation">.</span>transform<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mapRect<span class="token punctuation">(</span>QRectF<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>scale<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">/</span> unity<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">/</span> unity<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    viewRect <span class="token operator">=</span> self<span class="token punctuation">.</span>viewport<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    sceneRect <span class="token operator">=</span> self<span class="token punctuation">.</span>transform<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mapRect<span class="token punctuation">(</span>rect<span class="token punctuation">)</span>
+    x_ratio <span class="token operator">=</span> viewRect<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> sceneRect<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    y_ratio <span class="token operator">=</span> viewRect<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> sceneRect<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> flags <span class="token operator">==</span> Qt<span class="token punctuation">.</span>KeepAspectRatio<span class="token punctuation">:</span>
+        x_ratio <span class="token operator">=</span> y_ratio <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>x_ratio<span class="token punctuation">,</span> y_ratio<span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> flags <span class="token operator">==</span> Qt<span class="token punctuation">.</span>KeepAspectRatioByExpanding<span class="token punctuation">:</span>
+        x_ratio <span class="token operator">=</span> y_ratio <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>x_ratio<span class="token punctuation">,</span> y_ratio<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>scale<span class="token punctuation">(</span>x_ratio<span class="token punctuation">,</span> y_ratio<span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>centerOn<span class="token punctuation">(</span>rect<span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="鼠标滚轮事件处理"><a href="#鼠标滚轮事件处理" class="headerlink" title="鼠标滚轮事件处理"></a>鼠标滚轮事件处理</h3><p>处理鼠标滚轮事件，实现图像的放大和缩小。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">wheelEvent</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> event<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> event<span class="token punctuation">.</span>angleDelta<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>y<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>zoomIn<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>zoomOut<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">zoomIn</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""放大"""</span>
+    self<span class="token punctuation">.</span>zoom<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>_delta<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">zoomOut</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""缩小"""</span>
+    self<span class="token punctuation">.</span>zoom<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> self<span class="token punctuation">.</span>_delta<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="限制缩放比例"><a href="#限制缩放比例" class="headerlink" title="限制缩放比例"></a>限制缩放比例</h3><p>实现图像的缩放功能，并限制缩放比例，以防止图像过大或过小。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">zoom</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> factor<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""缩放"""</span>
+    _factor <span class="token operator">=</span> self<span class="token punctuation">.</span>transform<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>scale<span class="token punctuation">(</span>
+        factor<span class="token punctuation">,</span> factor<span class="token punctuation">)</span><span class="token punctuation">.</span>mapRect<span class="token punctuation">(</span>QRectF<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> _factor <span class="token operator">&lt;</span> <span class="token number">0.07</span> <span class="token keyword">or</span> _factor <span class="token operator">&gt;</span> <span class="token number">100</span><span class="token punctuation">:</span>
+        <span class="token comment"># 防止过大过小</span>
+        <span class="token keyword">return</span>
+    self<span class="token punctuation">.</span>scale<span class="token punctuation">(</span>factor<span class="token punctuation">,</span> factor<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="主程序"><a href="#主程序" class="headerlink" title="主程序"></a>主程序</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> sys
+    <span class="token keyword">import</span> cgitb
+    <span class="token keyword">from</span> PySide2<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QApplication
+    tiffile <span class="token operator">=</span>  <span class="token string">r'RPC.tif'</span>
+    img <span class="token operator">=</span> rgb_fuction<span class="token punctuation">.</span>ToRGB<span class="token punctuation">(</span>tiffile<span class="token punctuation">)</span><span class="token punctuation">.</span>torgb<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+    cgitb<span class="token punctuation">.</span>enable<span class="token punctuation">(</span><span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'text'</span><span class="token punctuation">)</span>
+
+    app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+    w <span class="token operator">=</span> ImageView<span class="token punctuation">(</span>image<span class="token operator">=</span>img<span class="token punctuation">,</span> background<span class="token operator">=</span>Qt<span class="token punctuation">.</span>white<span class="token punctuation">)</span>
+    w<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span>app<span class="token punctuation">.</span>exec_<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h1><p>以下的代码是2021年前基于python语言写的,写得很粗糙，但是基本实现了图像放大缩小平移。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">from</span> PySide2<span class="token punctuation">.</span>QtCore <span class="token keyword">import</span> QPointF<span class="token punctuation">,</span> Qt<span class="token punctuation">,</span> QRectF<span class="token punctuation">,</span> QSizeF
+<span class="token keyword">from</span> PySide2<span class="token punctuation">.</span>QtGui <span class="token keyword">import</span> QPainter<span class="token punctuation">,</span> QColor<span class="token punctuation">,</span> QImage<span class="token punctuation">,</span> QPixmap
+<span class="token keyword">from</span> PySide2<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QGraphicsView<span class="token punctuation">,</span> QGraphicsPixmapItem<span class="token punctuation">,</span> QGraphicsScene
+
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+<span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> Chinese_Rs_Image
+<span class="token keyword">import</span> xml<span class="token punctuation">.</span>dom<span class="token punctuation">.</span>minidom  <span class="token comment"># 读取xml格式的影像头文件</span>
+
+<span class="token keyword">class</span> <span class="token class-name">ToRGB</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">file</span>
+        ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>cols <span class="token operator">=</span> ds<span class="token punctuation">.</span>RasterXSize
+        self<span class="token punctuation">.</span>rows <span class="token operator">=</span> ds<span class="token punctuation">.</span>RasterYSize
+        self<span class="token punctuation">.</span>bands <span class="token operator">=</span> ds<span class="token punctuation">.</span>RasterCount
+
+    <span class="token keyword">def</span> <span class="token function">rgb_linear_percent</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data<span class="token punctuation">,</span> number<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'----------------'</span><span class="token punctuation">)</span>
+        x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z <span class="token operator">=</span> np<span class="token punctuation">.</span>shape<span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+        data_new <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> z<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>z<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            data_8bit <span class="token operator">=</span> data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span>
+            <span class="token comment"># 把数据转为 8 bit</span>
+            data_8bit <span class="token operator">=</span> data_8bit <span class="token operator">/</span> <span class="token punctuation">(</span>np<span class="token punctuation">.</span>nanmax<span class="token punctuation">(</span>data_8bit<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">255</span>
+
+            <span class="token comment"># 把数据中的nan转为某个具体数值，例如</span>
+            data_8bit<span class="token punctuation">[</span>np<span class="token punctuation">.</span>isnan<span class="token punctuation">(</span>data_8bit<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+            d2 <span class="token operator">=</span> np<span class="token punctuation">.</span>percentile<span class="token punctuation">(</span>data_8bit<span class="token punctuation">,</span> number<span class="token punctuation">)</span>
+            u98 <span class="token operator">=</span> np<span class="token punctuation">.</span>percentile<span class="token punctuation">(</span>data_8bit<span class="token punctuation">,</span> <span class="token number">100</span> <span class="token operator">-</span> number<span class="token punctuation">)</span>
+
+            maxout <span class="token operator">=</span> <span class="token number">255</span>
+            minout <span class="token operator">=</span> <span class="token number">0</span>
+
+            data_8bit_new <span class="token operator">=</span> minout <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>data_8bit <span class="token operator">-</span> d2<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>u98 <span class="token operator">-</span> d2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>maxout <span class="token operator">-</span> minout<span class="token punctuation">)</span>
+            data_8bit_new<span class="token punctuation">[</span>data_8bit_new <span class="token operator">&lt;</span> minout<span class="token punctuation">]</span> <span class="token operator">=</span> minout
+            data_8bit_new<span class="token punctuation">[</span>data_8bit_new <span class="token operator">&gt;</span> maxout<span class="token punctuation">]</span> <span class="token operator">=</span> maxout
+
+            data_new<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span> <span class="token operator">=</span> data_8bit_new
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'--------完成新缩略图的输出--------'</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> data_new
+    <span class="token keyword">def</span> <span class="token function">linear_process</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+
+
+
+        image <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>rows<span class="token punctuation">,</span> self<span class="token punctuation">.</span>cols<span class="token punctuation">,</span> self<span class="token punctuation">.</span>bands<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> b <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>bands<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            band <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span>b <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            image<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> b<span class="token punctuation">]</span> <span class="token operator">=</span> band<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>cols<span class="token punctuation">,</span> self<span class="token punctuation">.</span>rows<span class="token punctuation">)</span>
+        data <span class="token operator">=</span> self<span class="token punctuation">.</span>rgb_linear_percent<span class="token punctuation">(</span>image<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> data
+    <span class="token keyword">def</span> <span class="token function">get_lat_lon</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+        <span class="token comment"># 获取经纬度</span>
+        <span class="token comment"># 读取影像中自带的经纬度</span>
+        ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+        <span class="token comment"># transform[0] /* top left x 左上角x坐标(经度)*/</span>
+        <span class="token comment"># transform[1] /* w--e pixel resolution 东西方向上的像素分辨率*/</span>
+        <span class="token comment"># transform[2] /* rotation, 0 if image is "north up" 如果北边朝上，地图的旋转角度*/</span>
+        <span class="token comment"># transform[3] /* top left y 左上角y坐标（纬度）*/</span>
+        <span class="token comment"># transform[4] /* rotation, 0 if image is "north up" 如果北边朝上，地图的旋转角度*/</span>
+        <span class="token comment"># transform[5] /* n-s pixel resolution 南北方向上的像素分辨率*/</span>
+        transform <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> transform<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token comment"># 调用Chinese_Rs_Image的方法，得到一个左上、右上、左下、右下的纬度经度的列表</span>
+            lat_lon <span class="token operator">=</span> Chinese_Rs_Image<span class="token punctuation">.</span>Pretreatment<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>from_xml_get_info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            lat_lon <span class="token operator">=</span> transform
+
+
+
+
+        <span class="token keyword">return</span> lat_lon
+
+    <span class="token keyword">def</span> <span class="token function">torgb</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>r<span class="token punctuation">,</span>g<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        rgbfile <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.jpg'</span>
+        rgbfile <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">,</span> rgbfile<span class="token punctuation">)</span>
+
+
+        data <span class="token operator">=</span> self<span class="token punctuation">.</span>linear_process<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        datargb <span class="token operator">=</span> cv2<span class="token punctuation">.</span>merge<span class="token punctuation">(</span><span class="token punctuation">[</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> r<span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span>g<span class="token punctuation">]</span><span class="token punctuation">,</span> data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> b<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+        cv2<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span>rgbfile<span class="token punctuation">,</span> datargb<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> rgbfile<span class="token punctuation">,</span> datargb
+
+<span class="token keyword">class</span> <span class="token class-name">ImageView</span><span class="token punctuation">(</span>QGraphicsView<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""单个影像的图片查看控件"""</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        image <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'image'</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+        background <span class="token operator">=</span> kwargs<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'background'</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span>ImageView<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">,</span> <span class="token operator">**</span>kwargs<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setCursor<span class="token punctuation">(</span>Qt<span class="token punctuation">.</span>OpenHandCursor<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setBackground<span class="token punctuation">(</span>background<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setHorizontalScrollBarPolicy<span class="token punctuation">(</span>Qt<span class="token punctuation">.</span>ScrollBarAlwaysOff<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setVerticalScrollBarPolicy<span class="token punctuation">(</span>Qt<span class="token punctuation">.</span>ScrollBarAlwaysOff<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setRenderHints<span class="token punctuation">(</span>QPainter<span class="token punctuation">.</span>Antialiasing <span class="token operator">|</span> QPainter<span class="token punctuation">.</span>HighQualityAntialiasing <span class="token operator">|</span>
+                            QPainter<span class="token punctuation">.</span>SmoothPixmapTransform<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setCacheMode<span class="token punctuation">(</span>self<span class="token punctuation">.</span>CacheBackground<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setViewportUpdateMode<span class="token punctuation">(</span>self<span class="token punctuation">.</span>SmartViewportUpdate<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_item <span class="token operator">=</span> QGraphicsPixmapItem<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 放置图像</span>
+        self<span class="token punctuation">.</span>_item<span class="token punctuation">.</span>setFlags<span class="token punctuation">(</span>QGraphicsPixmapItem<span class="token punctuation">.</span>ItemIsFocusable <span class="token operator">|</span>
+                            QGraphicsPixmapItem<span class="token punctuation">.</span>ItemIsMovable<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_scene <span class="token operator">=</span> QGraphicsScene<span class="token punctuation">(</span>self<span class="token punctuation">)</span>  <span class="token comment"># 场景</span>
+        self<span class="token punctuation">.</span>setScene<span class="token punctuation">(</span>self<span class="token punctuation">.</span>_scene<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_scene<span class="token punctuation">.</span>addItem<span class="token punctuation">(</span>self<span class="token punctuation">.</span>_item<span class="token punctuation">)</span>
+        rect <span class="token operator">=</span> QApplication<span class="token punctuation">.</span>instance<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>desktop<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>availableGeometry<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>rect<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">int</span><span class="token punctuation">(</span>rect<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        self<span class="token punctuation">.</span>pixmap <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>_delta <span class="token operator">=</span> <span class="token number">0.1</span>  <span class="token comment"># 缩放</span>
+        self<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>image<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">setBackground</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> color<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""设置背景颜色
+        :param color: 背景颜色
+        :type color: QColor or str or GlobalColor
+        """</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>color<span class="token punctuation">,</span> QColor<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>setBackgroundBrush<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>color<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">,</span> Qt<span class="token punctuation">.</span>GlobalColor<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            color <span class="token operator">=</span> QColor<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> color<span class="token punctuation">.</span>isValid<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>setBackgroundBrush<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">setPixmap</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> pixmap<span class="token punctuation">,</span> fitIn<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""加载图片
+        :param pixmap: 图片或者图片路径
+        :param fitIn: 是否适应
+        :type pixmap: QPixmap or QImage or str
+        :type fitIn: bool
+        """</span>
+        <span class="token keyword">if</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>pixmap<span class="token punctuation">,</span> QPixmap<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>pixmap <span class="token operator">=</span> pixmap
+        <span class="token keyword">elif</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>pixmap<span class="token punctuation">,</span> QImage<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">.</span>fromImage<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> <span class="token builtin">isinstance</span><span class="token punctuation">(</span>pixmap<span class="token punctuation">,</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token keyword">and</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isfile<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>pixmap <span class="token operator">=</span> QPixmap<span class="token punctuation">(</span>pixmap<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        self<span class="token punctuation">.</span>_item<span class="token punctuation">.</span>setPixmap<span class="token punctuation">(</span>self<span class="token punctuation">.</span>pixmap<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>_item<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>setSceneDims<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> fitIn<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>fitInView<span class="token punctuation">(</span>QRectF<span class="token punctuation">(</span>self<span class="token punctuation">.</span>_item<span class="token punctuation">.</span>pos<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> QSizeF<span class="token punctuation">(</span>
+                self<span class="token punctuation">.</span>pixmap<span class="token punctuation">.</span>size<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> Qt<span class="token punctuation">.</span>KeepAspectRatio<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">setSceneDims</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>pixmap<span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        self<span class="token punctuation">.</span>setSceneRect<span class="token punctuation">(</span>QRectF<span class="token punctuation">(</span>QPointF<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> QPointF<span class="token punctuation">(</span>self<span class="token punctuation">.</span>pixmap<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> self<span class="token punctuation">.</span>pixmap<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">fitInView</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> rect<span class="token punctuation">,</span> flags<span class="token operator">=</span>Qt<span class="token punctuation">.</span>IgnoreAspectRatio<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""剧中适应
+        :param rect: 矩形范围
+        :param flags:
+        :return:
+        """</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>scene<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">or</span> rect<span class="token punctuation">.</span>isNull<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        unity <span class="token operator">=</span> self<span class="token punctuation">.</span>transform<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mapRect<span class="token punctuation">(</span>QRectF<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>scale<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">/</span> unity<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">/</span> unity<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        viewRect <span class="token operator">=</span> self<span class="token punctuation">.</span>viewport<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>rect<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        sceneRect <span class="token operator">=</span> self<span class="token punctuation">.</span>transform<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>mapRect<span class="token punctuation">(</span>rect<span class="token punctuation">)</span>
+        x_ratio <span class="token operator">=</span> viewRect<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> sceneRect<span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        y_ratio <span class="token operator">=</span> viewRect<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">/</span> sceneRect<span class="token punctuation">.</span>height<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> flags <span class="token operator">==</span> Qt<span class="token punctuation">.</span>KeepAspectRatio<span class="token punctuation">:</span>
+            x_ratio <span class="token operator">=</span> y_ratio <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>x_ratio<span class="token punctuation">,</span> y_ratio<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> flags <span class="token operator">==</span> Qt<span class="token punctuation">.</span>KeepAspectRatioByExpanding<span class="token punctuation">:</span>
+            x_ratio <span class="token operator">=</span> y_ratio <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>x_ratio<span class="token punctuation">,</span> y_ratio<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>scale<span class="token punctuation">(</span>x_ratio<span class="token punctuation">,</span> y_ratio<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>centerOn<span class="token punctuation">(</span>rect<span class="token punctuation">.</span>center<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">wheelEvent</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> event<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> event<span class="token punctuation">.</span>angleDelta<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>y<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>zoomIn<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>zoomOut<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">zoomIn</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""放大"""</span>
+        self<span class="token punctuation">.</span>zoom<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>_delta<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">zoomOut</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""缩小"""</span>
+        self<span class="token punctuation">.</span>zoom<span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> self<span class="token punctuation">.</span>_delta<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">zoom</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> factor<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""缩放
+        :param factor: 缩放的比例因子
+        """</span>
+        _factor <span class="token operator">=</span> self<span class="token punctuation">.</span>transform<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>scale<span class="token punctuation">(</span>
+            factor<span class="token punctuation">,</span> factor<span class="token punctuation">)</span><span class="token punctuation">.</span>mapRect<span class="token punctuation">(</span>QRectF<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>width<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> _factor <span class="token operator">&lt;</span> <span class="token number">0.07</span> <span class="token keyword">or</span> _factor <span class="token operator">&gt;</span> <span class="token number">100</span><span class="token punctuation">:</span>
+            <span class="token comment"># 防止过大过小</span>
+            <span class="token keyword">return</span>
+        self<span class="token punctuation">.</span>scale<span class="token punctuation">(</span>factor<span class="token punctuation">,</span> factor<span class="token punctuation">)</span>
+
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> sys
+    <span class="token keyword">import</span> cgitb
+    <span class="token keyword">from</span> PySide2<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QApplication
+    tiffile <span class="token operator">=</span>  <span class="token string">r'RPC.tif'</span>
+    img <span class="token operator">=</span> rgb_fuction<span class="token punctuation">.</span>ToRGB<span class="token punctuation">(</span>tiffile<span class="token punctuation">)</span><span class="token punctuation">.</span>torgb<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span>
+    cgitb<span class="token punctuation">.</span>enable<span class="token punctuation">(</span><span class="token builtin">format</span><span class="token operator">=</span><span class="token string">'text'</span><span class="token punctuation">)</span>
+    app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>
+    w <span class="token operator">=</span> ImageView<span class="token punctuation">(</span>image<span class="token operator">=</span>img<span class="token punctuation">,</span> background<span class="token operator">=</span>Qt<span class="token punctuation">.</span>white<span class="token punctuation">)</span>
+    w<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span>app<span class="token punctuation">.</span>exec_<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>效果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405311616730.gif" alt="动画"></p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>我们已经成功实现了一个基于PySide2的影像查看控件，该控件能够加载、显示、放大、缩小和平移影像。这种缩放和平移逻辑在ArcGIS、ENVI等GIS和遥感图像处理软件中也有类似的实现。</p>
+<p>只是arcgis这类的商业软件直接读取金字塔文件ovr。ovr格式其实是一种特殊的tif格式。</p>
+<p>而上面的代码是把tif先转为RGB图片，然后再对RGB图片进行可视化。</p>
+<p>现在只是对图片查看、放大、缩小和平移的技术谈论，收工。</p>
+<p>（完）</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/06/03/dai-ma-shapely-de-within-han-shu-shi-fou-shi-bie-duo-bian-xing-de-nei-kong/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【代码】判断某点是否在带孔多边形的内部？</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
