@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-06-03T07:31:45.138Z</updated>
+  <updated>2024-06-04T01:36:25.530Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用Python处理合成孔径雷达（SAR）数据的完整流程</title>
+    <link href="http://ytkz11@.github.io/2024/06/04/dai-ma-li-yong-python-chu-li-he-cheng-kong-jing-lei-da-sar-shu-ju-de-wan-zheng-liu-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/06/04/dai-ma-li-yong-python-chu-li-he-cheng-kong-jing-lei-da-sar-shu-ju-de-wan-zheng-liu-cheng/</id>
+    <published>2024-06-04T14:00:10.000Z</published>
+    <updated>2024-06-04T01:36:25.530Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文介绍了利用Python处理合成孔径雷达（SAR）数据的完整流程，包括数据加载、基本定义、聚焦、多视处理和结果显示等步骤。&lt;/p&gt;
+&lt;p&gt;首先，通过加载包含SAR原始数据的&lt;code&gt;.mat&lt;/code&gt;文件，获取数据矩阵并设置相关的传感器参数。&lt;/p&gt;
+&lt;p&gt;接着，定</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="SAR" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/SAR/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="SAR" scheme="http://ytkz11@.github.io/tags/SAR/"/>
+    
+  </entry>
   
   <entry>
     <title>conda教程</title>
@@ -510,31 +541,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python简易笔记</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
-    <published>2024-04-18T14:30:10.000Z</published>
-    <updated>2024-05-08T02:46:22.054Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
