@@ -9,7 +9,7 @@
     
     <title>
         
-            利用Python处理合成孔径雷达（SAR）数据的完整流程 |
+            利用Python处理合成孔径雷达（SAR）数据的成像过程 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">利用Python处理合成孔径雷达（SAR）数据的完整流程</span>
+                <span class="title-hover-animation">利用Python处理合成孔径雷达（SAR）数据的成像过程</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-06-04 22:00:10</span>
-        <span class="mobile">2024-06-04 22:00</span>
+        <span class="pc">2024-06-05 22:00:10</span>
+        <span class="mobile">2024-06-05 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-06-04 09:36:25</span>
+        <span class="pc">2024-06-05 11:10:54</span>
     </span>
     
     
@@ -419,16 +419,16 @@ mpl<span class="token punctuation">.</span>rcParams<span class="token punctuatio
     processed <span class="token operator">=</span> Focusing<span class="token punctuation">(</span>CON_RANGE_CHIRP<span class="token punctuation">,</span> CON_AZIMUTH_CHIRP<span class="token punctuation">,</span> size_azimuth<span class="token punctuation">,</span> size_range<span class="token punctuation">)</span>
     processed <span class="token operator">=</span> multilooking<span class="token punctuation">(</span>processed<span class="token punctuation">,</span> multilook<span class="token punctuation">)</span>
     displat_result<span class="token punctuation">(</span>processed<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>测试数据下载地址：</p>
 <p>原始数据可视化与结果可视化对比</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202406040932608.png" alt="image-20240604093211266"></p>
 <p>不进行多视处理与进行多视处理的对比：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202406040935223.png" alt="image-20240604093551153"></p>
 <p>结果如下图：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202406040932639.png" alt="image-20240604093241402"></p>
+<p>测试数据下载地址：</p>
 <h1 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h1><p>之前写过基于matlab的合成孔径雷达（SAR）的成像的内容，而现在这篇是关于利用Python处理合成孔径雷达（SAR）数据的完整流程，包括数据加载、基本定义、聚焦、多视处理和结果显示等内容。</p>
-<p>学习SAR是出自于对SAR技术的看好，及拓展自身知识范围。但是隔行如隔山（光学遥感和雷达遥感其实不是同行），SAR成像其实还好，难度大的是INSAR。说的就是你，解缠。解缠的公式是优美的，同时也是令人苦恼的。</p>
-<p>人的精力是有限的，以后短时间内不会再写SAR的内容了，而是把精力更多地放在webgis、深度学习这两个方面上。</p>
+<p>学习SAR是出自于对SAR技术的看好，及拓展自身知识范围。但是隔行如隔山（光学遥感和雷达遥感其实不算是同行），SAR成像其实还好，难度大的是INSAR。说的就是你，解缠。解缠的公式是优美的，同时也是令人苦恼的。</p>
+<p>人的精力是有限的，以后短时间内不会再写关于SAR的内容了，而是把精力更多地放在深度学习这个方面上。</p>
 <p>收工。</p>
 <p>（完）</p>
 
