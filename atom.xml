@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-06-05T03:10:54.996Z</updated>
+  <updated>2024-06-12T06:49:25.987Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TIF转换到KMZ的教程</title>
+    <link href="http://ytkz11@.github.io/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/</id>
+    <published>2024-06-11T14:00:10.000Z</published>
+    <updated>2024-06-12T06:49:25.987Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;KML 和 KMZ 都是 Google 地球和其他地图程序中用于显示地理数据的文件格式。两者之间的主要区别在于，KML 是一种用于以 XML 格式存储地理数据的文件格式，而 KMZ 是一种压缩文件格式，包含一个或多个 KML</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>利用Python处理合成孔径雷达（SAR）数据的成像过程</title>
@@ -506,32 +531,6 @@
         
         
     <summary type="html">&lt;p&gt;在路线规划和高精度地图要素采集的过程中，获取道路的中心线是非常关键的步骤。这个过程本质上是将特殊的面矢量转化为线矢量。深度学习技术，特别是卷积神经网络（CNN），可以用于识别图像中的道路，生成一个道路的面矢量图，其中每个像素都被标记为“道路”或“非道路”。然后，我们需要将这</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深入理解地理信息系统（GIS）中的面矢量：使用Python的shapely库操作Polygon对象</title>
-    <link href="http://ytkz11@.github.io/2024/04/18/dai-ma-shen-ru-li-jie-di-li-xin-xi-xi-tong-gis-zhong-de-mian-shi-liang-shi-yong-python-de-shapely-ku-cao-zuo-polygon-dui-xiang/"/>
-    <id>http://ytkz11@.github.io/2024/04/18/dai-ma-shen-ru-li-jie-di-li-xin-xi-xi-tong-gis-zhong-de-mian-shi-liang-shi-yong-python-de-shapely-ku-cao-zuo-polygon-dui-xiang/</id>
-    <published>2024-04-18T15:00:10.000Z</published>
-    <updated>2024-04-22T06:40:30.790Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在地理信息系统（GIS）中，矢量数据是最基本的数据类型之一。它们用于表示地理空间中的对象，包括它们的形状、位置和属性。矢量数据的主要类型包括点（Point）、线（LineString）和面（Polygon）。在这个讨论中，我们将重点关注面矢量的数据结构和操作。&lt;/p&gt;
-&lt;p</summary>
         
       
     

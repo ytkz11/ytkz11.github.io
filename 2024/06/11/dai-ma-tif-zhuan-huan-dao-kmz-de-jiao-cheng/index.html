@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            TIF转换到KMZ的教程 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">TIF转换到KMZ的教程</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-06-11 22:00:10</span>
+        <span class="mobile">2024-06-11 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-06-12 14:49:25</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>KML 和 KMZ 都是 Google 地球和其他地图程序中用于显示地理数据的文件格式。两者之间的主要区别在于，KML 是一种用于以 XML 格式存储地理数据的文件格式，而 KMZ 是一种压缩文件格式，包含一个或多个 KML 文件及其关联资源。</p>
+<p>阅读本文，了解有关 KML 和 KMZ 的更多信息以及它们之间的区别。</p>
+<h2 id="什么是-KML？"><a href="#什么是-KML？" class="headerlink" title="什么是 KML？"></a>什么是 KML？</h2><p>KML（Keyhole 标记语言）是一种用于在三维空间中显示地理数据的文件格式，通常在 Google 地球等虚拟地球仪上显示。它是一种基于 XML 的语言，允许您构建和显示结构化地理信息。</p>
+<p>例如，点由其纬度、经度和（可选）高度定义，并指示地图上的特定位置。地图上的线条和多边形描绘路径或区域，并由一组定义其形状的坐标定义。使用“扩展数据”元素，可以将名称、描述和 URL 等描述性信息链接到这些地理元素。</p>
+<p>以下是 KML 的一些关键功能和组件 -</p>
+<ul>
+<li><strong>地理特征</strong>- KML 可以定义众多地理元素，例如点、线、多边形和 3D 模型。这些功能可以显示在虚拟地球上，您可以使用名称、描述和照片对其进行自定义。</li>
+<li><strong>样式</strong>- 在 KML 中，您还可以设置地理特征的样式。您可以更改线条的颜色和粗细，以及多边形的不透明度和纹理。这使您的数据更具视觉吸引力且易于理解。</li>
+<li><strong>叠加图像</strong>- 您还可以使用 KML 将图像叠加在地理数据之上。这非常适合添加上下文或视觉信息，例如卫星照片或历史地图。</li>
+<li><strong>基于时间的数据</strong>- KML 还允许基于时间的数据，因此您可以看到事物如何随时间变化。每个功能都可以分配一个时间段并按时间顺序显示。这可以用来描述天气模式、人口扩张或物品移动的变化。</li>
+<li><strong>网络链接</strong>- KML 还支持网络链接，即指向外部 KML 文件或互联网资源的链接。这使您能够创建不断更新的动态和交互式地图。要显示当前天气状况，您可以建立指向在线天气服务的网络链接。</li>
+</ul>
+<p>KML 是一种复杂的文件格式，用于以结构化且具有视觉吸引力的方式创建和显示地理数据。 KML 经常用于环境监测、城市规划和旅游等应用，因为它支持不同的地理元素、风格选项、叠加图像、基于时间的数据和网络链接。</p>
+<h2 id="KMZ是什么？"><a href="#KMZ是什么？" class="headerlink" title="KMZ是什么？"></a>KMZ是什么？</h2><p>KMZ（Keyhole 标记语言压缩）是一种压缩文件格式，用于存储地理数据，包括 KML 文件以及与其相关的资源，例如照片、图标和其他文件。 Keyhole Inc.（2004 年被 Google 收购）将其创建为一种在单个文件中捆绑和传输大量地理数据的机制。</p>
+<p>KMZ 文件是通过将一个或多个 KML 文件及其相关资源压缩到一个扩展名为“.kmz”的文件中而形成的。压缩可以减小文件大小，从而更容易通过互联网共享和下载。当您在地图应用程序中打开 KMZ 文件时，KML 文件和关联资源将被提取并显示在地图上。</p>
+<p>KMZ 文件可以包含与 KML 文件相同类型的地理数据，例如点、线、多边形和其他形状，以及描述性数据，例如名称、描述和 URL。区别在于，KMZ 文件包含显示数据所需的任何附带资源，例如图像和图标，从而形成一个可以轻松共享的独立包。</p>
+<p>除了地理数据之外，KMZ 文件还可以包含样式、屏幕覆盖和网络链接等功能。样式允许您自定义地理数据的外观，而屏幕覆盖允许您在地图上显示图像或文本。其他 KML 或 KMZ 文件以及在线数据源可以通过网络链接引用。</p>
+<p>总体而言，KMZ是一种实用且有效的打包和共享海量地理数据的方法，广泛应用于测绘、GIS和环境监测等一系列应用中。</p>
+<h2 id="KML-和-KMZ-之间的区别"><a href="#KML-和-KMZ-之间的区别" class="headerlink" title="KML 和 KMZ 之间的区别"></a>KML 和 KMZ 之间的区别</h2><p>下表强调了 KML 和 KMZ 之间的主要区别 -</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">特征</th>
+<th style="text-align:left">克米勒</th>
+<th style="text-align:left">克麦兹</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">定义</td>
+<td style="text-align:left">KML 是一种用于以 XML 格式存储地理数据的文件格式。</td>
+<td style="text-align:left">KMZ 是一种压缩文件格式，包含一个或多个 KML 文件及其关联资源。</td>
+</tr>
+<tr>
+<td style="text-align:left">文件格式</td>
+<td style="text-align:left">它是一种基于 XML 的文件格式。</td>
+<td style="text-align:left">它是一种压缩 (Zip) 文件格式。</td>
+</tr>
+<tr>
+<td style="text-align:left">数据内容</td>
+<td style="text-align:left">地理数据</td>
+<td style="text-align:left">地理数据和资源</td>
+</tr>
+<tr>
+<td style="text-align:left">文件扩展名</td>
+<td style="text-align:left">.kml</td>
+<td style="text-align:left">.kmz</td>
+</tr>
+<tr>
+<td style="text-align:left">文件大小</td>
+<td style="text-align:left">由于包含资源，KML 文件大小较大。</td>
+<td style="text-align:left">由于压缩，KMZ 文件大小很小。</td>
+</tr>
+<tr>
+<td style="text-align:left">分享</td>
+<td style="text-align:left">在 KML 中，共享是通过电子邮件、文件共享平台或直接下载完成的。</td>
+<td style="text-align:left">在 KMZ 中，共享是通过电子邮件、文件共享平台或直接下载来完成的。</td>
+</tr>
+<tr>
+<td style="text-align:left">代表</td>
+<td style="text-align:left">锁孔标记语言 (KML)</td>
+<td style="text-align:left">压缩锁孔标记语言 (KMZ)</td>
+</tr>
+<tr>
+<td style="text-align:left">用法</td>
+<td style="text-align:left">KML 用于存储地理数据。</td>
+<td style="text-align:left">KMZ 文件用于打包 KML 文件并与关联资源共享。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="20240516"><a href="#20240516" class="headerlink" title="20240516"></a>20240516</h1><p>KML（Keyhole Markup Language）和SHP（Shapefile）都是用于表示地理数据的文件格式，但它们在设计和应用上有一些差异。说KML是SHP的“更先进版本”可能并不完全准确，因为这两种格式各有其优点和适用场景。然而，KML在某些方面确实具有一些独特的优势，这些优势可能使其在某些应用中表现得更为“先进”。</p>
+<p>以下是KML相对于SHP的一些优势：</p>
+<ol>
+<li>跨平台兼容性：KML是一种基于XML的开放标准，因此它可以在各种操作系统和平台上使用，包括Web浏览器、移动设备和桌面应用程序。这使得KML成为一种非常灵活的地理数据格式，可以轻松地在不同的系统和应用程序之间共享和交换数据。</li>
+<li>丰富的可视化功能：KML支持丰富的可视化功能，包括自定义图标、线条颜色、填充颜色、文本标签等。这使得KML可以创建出具有高度可定制性和吸引力的地图和地理可视化效果。</li>
+<li>时间和动画支持：KML支持时间相关的地理信息，可以使用户展示地理位置随时间变化的动画效果。这对于描述历史轨迹、飞行路径等应用非常有用。</li>
+<li>广泛的应用程序支持：KML是Google Earth和其他许多地理信息系统（GIS）应用程序的标准格式之一。这使得KML具有广泛的应用程序支持，并且可以与许多流行的GIS工具无缝集成。</li>
+</ol>
+<p>相比之下，SHP格式在以下方面有一些限制：</p>
+<ol>
+<li>封闭性：SHP是由ESRI公司开发的专有格式，因此其使用可能受到某些限制。例如，它可能不如KML那样易于在不同的系统和应用程序之间共享和交换数据。</li>
+<li>可视化功能有限：虽然SHP格式支持基本的地理数据可视化，但它可能不如KML那样灵活和可定制。</li>
+<li>应用程序支持有限：尽管SHP格式在GIS行业中广泛应用，但它可能不如KML那样受到广泛支持。某些GIS应用程序可能不支持SHP格式，或者可能需要额外的插件或驱动程序才能支持它。</li>
+</ol>
+<p>那SHP格式可以转换到KML格式么？</p>
+<p>答案是可以的，请看以下python代码。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2024/5/16 22:30</span>
+<span class="token comment"># @File : shp2kml.py</span>
+
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> ogr
+<span class="token keyword">import</span> os
+
+<span class="token keyword">def</span> <span class="token function">convert_to_kml</span><span class="token punctuation">(</span>shapefile<span class="token punctuation">,</span>outpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ds <span class="token operator">=</span> ogr<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>shapefile<span class="token punctuation">)</span>
+    shape <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetLayer<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+    attribute_names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    ldefn <span class="token operator">=</span> shape<span class="token punctuation">.</span>GetLayerDefn<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> n <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>ldefn<span class="token punctuation">.</span>GetFieldCount<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        fdefn <span class="token operator">=</span> ldefn<span class="token punctuation">.</span>GetFieldDefn<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+        attribute_names<span class="token punctuation">.</span>append<span class="token punctuation">(</span>fdefn<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+    boundary <span class="token operator">=</span><span class="token string">''</span>
+    placemark <span class="token operator">=</span> <span class="token string">''</span>
+    i <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">for</span> obj <span class="token keyword">in</span> shape<span class="token punctuation">:</span>
+        placemark <span class="token operator">+=</span><span class="token string">'\n&lt;Placemark id="ID_{}"&gt;'</span> \
+                    <span class="token string">'\n&lt;styleUrl&gt;#m_ylw-pushpin&lt;/styleUrl&gt;'</span> \
+                    <span class="token string">'\n{}'</span> \
+                    <span class="token string">'\n&lt;/Placemark&gt;'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">,</span>obj<span class="token punctuation">.</span>GetGeometryRef<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ExportToKML<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        i<span class="token operator">+=</span><span class="token number">1</span>
+
+
+
+
+    constant <span class="token operator">=</span> <span class="token string">'&lt;?xml version="1.0" encoding="UTF-8"?&gt;'</span> \
+                   <span class="token string">'&lt;kml '</span> \
+                   <span class="token string">'xmlns="http://www.opengis.net/kml/2.2" '</span> \
+                   <span class="token string">'xmlns:atom="http://www.w3.org/2005/Atom" '</span> \
+                   <span class="token string">'xmlns:gx="http://www.google.com/kml/ext/2.2" '</span> \
+                   <span class="token string">'xmlns:kml="http://www.opengis.net/kml/2.2"&gt;'</span> \
+                   <span class="token string">'&lt;name&gt;%s&lt;/name&gt;'</span> \
+                   <span class="token string">'\n&lt;Document&gt;'</span> \
+                   <span class="token string">'\n&lt;Style id="s_ylw-pushpin_hl"&gt;&lt;IconStyle&gt;&lt;scale&gt;1.3&lt;/scale&gt;'</span> \
+                   <span class="token string">'\n&lt;Icon&gt;&lt;href&gt;http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png&lt;/href&gt;&lt;/Icon&gt;'</span> \
+                   <span class="token string">'\n&lt;hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/&gt;&lt;/IconStyle&gt;'</span> \
+                   <span class="token string">'\n&lt;LineStyle&gt;&lt;color&gt;ff0000ff&lt;/color&gt;&lt;width&gt;2&lt;/width&gt;&lt;/LineStyle&gt;'</span> \
+                   <span class="token string">'\n&lt;PolyStyle&gt;&lt;fill&gt;0&lt;/fill&gt;&lt;/PolyStyle&gt;&lt;/Style&gt;'</span> \
+                   <span class="token string">'\n&lt;StyleMap id="m_ylw-pushpin"&gt;&lt;Pair&gt;&lt;key&gt;normal&lt;/key&gt;&lt;styleUrl&gt;#s_ylw-pushpin&lt;/styleUrl&gt;&lt;/Pair&gt;'</span> \
+                   <span class="token string">'\n&lt;Pair&gt;&lt;key&gt;highlight&lt;/key&gt;&lt;styleUrl&gt;#s_ylw-pushpin_hl&lt;/styleUrl&gt;&lt;/Pair&gt;&lt;/StyleMap&gt;'</span> \
+                   <span class="token string">'\n&lt;Style id="s_ylw-pushpin"&gt;&lt;IconStyle&gt;&lt;scale&gt;1.1&lt;/scale&gt;'</span> \
+                   <span class="token string">'\n&lt;Icon&gt;&lt;href&gt;http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png&lt;/href&gt;&lt;/Icon&gt;'</span> \
+                   <span class="token string">'\n&lt;hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/&gt;&lt;/IconStyle&gt;'</span> \
+                   <span class="token string">'\n&lt;LineStyle&gt;&lt;color&gt;ff0000ff&lt;/color&gt;&lt;width&gt;2&lt;/width&gt;&lt;/LineStyle&gt;&lt;PolyStyle&gt;&lt;fill&gt;0&lt;/fill&gt;'</span> \
+                   <span class="token string">'\n&lt;/PolyStyle&gt;&lt;/Style&gt;'</span>
+
+    end_tag <span class="token operator">=</span> <span class="token string">'&lt;/Document&gt;&lt;/kml&gt;'</span>
+
+    kml <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token punctuation">[</span>constant<span class="token punctuation">,</span>  placemark<span class="token punctuation">,</span> end_tag<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># filler = '&lt;Data name="{}"&gt;&lt;value&gt;{}&lt;/value&gt;&lt;/Data&gt;'</span>
+    <span class="token comment"># closing_tag = '&lt;/ExtendedData&gt;'</span>
+    <span class="token comment">#     # constant + filler + closing + end_tag</span>
+    <span class="token comment"># data = []</span>
+    <span class="token comment"># for attribute in attribute_names:</span>
+    <span class="token comment">#             data.append(filler.format(attribute, obj.GetField(attribute)))</span>
+    <span class="token comment"># data = ''.join(data)</span>
+
+    filename <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>shapefile<span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+
+    <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span>
+
+    out_file <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>outpath<span class="token operator">+</span><span class="token string">'\\'</span><span class="token operator">+</span>filename<span class="token operator">+</span><span class="token string">".kml"</span><span class="token punctuation">,</span> <span class="token string">"w"</span><span class="token punctuation">)</span>
+    out_file<span class="token punctuation">.</span>write<span class="token punctuation">(</span>kml<span class="token punctuation">)</span>
+    out_file<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+
+    shapefile <span class="token operator">=</span> <span class="token string">r"D:\11.shp"</span>
+    outpath <span class="token operator">=</span> <span class="token string">r'D:\kml'</span>
+    convert_to_kml<span class="token punctuation">(</span>shapefile<span class="token punctuation">,</span> outpath<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>考虑到部分朋友可能不会编程，现在把以上代码打包为exe命令行程序，作为一个特定功能的小工具分享给大家。</p>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pyinstaller -F -i favicon.png shp2kml.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>点要素kml在google earth 可视化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405161610743.png" alt="image-20240516161029967"></p>
+<p>线要素kml在google earth 可视化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405161611661.png" alt="image-20240516161131697"></p>
+<p>面要素kml在google earth 可视化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405161611639.png" alt="image-20240516161111943"></p>
+<h1 id="20240612-ChatGPT"><a href="#20240612-ChatGPT" class="headerlink" title="20240612 ChatGPT"></a>20240612 ChatGPT</h1><h1 id="使用Python将GeoTIFF转换为KMZ文件"><a href="#使用Python将GeoTIFF转换为KMZ文件" class="headerlink" title="使用Python将GeoTIFF转换为KMZ文件"></a>使用Python将GeoTIFF转换为KMZ文件</h1><p>在地理信息系统（GIS）领域，GeoTIFF是一种常见的栅格数据格式，而KMZ是Google Earth使用的压缩KML格式。本文将介绍如何使用Python将GeoTIFF文件转换为KMZ文件。具体实现中，我们将使用<code>GDAL</code>库处理GeoTIFF文件，并利用<code>Pillow</code>库生成PNG图片，最后通过<code>zipfile</code>库将生成的KML和PNG文件打包成KMZ文件。</p>
+<h4 id="所需依赖库"><a href="#所需依赖库" class="headerlink" title="所需依赖库"></a>所需依赖库</h4><p>首先，需要确保安装了以下Python库：</p>
+<ul>
+<li><code>gdal</code>：用于读取和处理GeoTIFF文件。</li>
+<li><code>numpy</code>：用于数组操作和数据处理。</li>
+<li><code>Pillow</code>：用于图像处理。</li>
+<li><code>zipfile</code>：用于创建和管理ZIP文件。</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">pip install gdal numpy Pillow<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h4><h4 id="1-创建类tif2kmz"><a href="#1-创建类tif2kmz" class="headerlink" title="1. 创建类tif2kmz"></a>1. 创建类<code>tif2kmz</code></h4><p>创建一个<code>tif2kmz</code>类，它包含所有转换过程的步骤。</p>
+<pre class="line-numbers language-none"><code class="language-none">from zipfile import ZipFile
+from osgeo import gdal
+import codecs
+import numpy as np
+import PIL.Image as Image
+
+class tif2kmz:
+    def __init__(self, tif_file, kmz_file):
+        self.tif_file = tif_file
+        self.kmz_file = kmz_file<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="2-获取GeoTIFF文件的属性"><a href="#2-获取GeoTIFF文件的属性" class="headerlink" title="2.获取GeoTIFF文件的属性"></a>2.获取GeoTIFF文件的属性</h4><p>定义一个方法<code>get_attribute</code>，用于获取GeoTIFF文件的地理属性，这些属性将在生成KML文件时使用。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_attribute</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>self<span class="token punctuation">.</span>tif_file<span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+    gt <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>east_longitude <span class="token operator">=</span> gt<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    self<span class="token punctuation">.</span>west_longitude <span class="token operator">=</span> self<span class="token punctuation">.</span>east_longitude <span class="token operator">+</span> <span class="token punctuation">(</span>ds<span class="token punctuation">.</span>RasterXSize <span class="token operator">*</span> gt<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>north_latitude <span class="token operator">=</span> gt<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+    self<span class="token punctuation">.</span>south_latitude <span class="token operator">=</span> self<span class="token punctuation">.</span>north_latitude <span class="token operator">+</span> <span class="token punctuation">(</span>ds<span class="token punctuation">.</span>RasterYSize <span class="token operator">*</span> gt<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="3-图像线性拉伸"><a href="#3-图像线性拉伸" class="headerlink" title="3.图像线性拉伸"></a>3.图像线性拉伸</h4><p>定义一个方法<code>linear_stretch</code>，对图像数据进行线性拉伸，以增强图像对比度。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">linear_stretch</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data<span class="token punctuation">,</span> num<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    data_8bit <span class="token operator">=</span> data
+    data_8bit<span class="token punctuation">[</span>data_8bit <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">9999</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+
+    d2 <span class="token operator">=</span> np<span class="token punctuation">.</span>percentile<span class="token punctuation">(</span>data_8bit<span class="token punctuation">,</span> num<span class="token punctuation">)</span>
+    u98 <span class="token operator">=</span> np<span class="token punctuation">.</span>percentile<span class="token punctuation">(</span>data_8bit<span class="token punctuation">,</span> <span class="token number">100</span> <span class="token operator">-</span> num<span class="token punctuation">)</span>
+
+    maxout <span class="token operator">=</span> <span class="token number">255</span>
+    minout <span class="token operator">=</span> <span class="token number">0</span>
+    data_8bit_new <span class="token operator">=</span> minout <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>data_8bit <span class="token operator">-</span> d2<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>u98 <span class="token operator">-</span> d2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>maxout <span class="token operator">-</span> minout<span class="token punctuation">)</span>
+    data_8bit_new<span class="token punctuation">[</span>data_8bit_new <span class="token operator">&lt;</span> minout<span class="token punctuation">]</span> <span class="token operator">=</span> minout
+    data_8bit_new<span class="token punctuation">[</span>data_8bit_new <span class="token operator">&gt;</span> maxout<span class="token punctuation">]</span> <span class="token operator">=</span> maxout
+    data_8bit_new <span class="token operator">=</span> data_8bit_new<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>int32<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> data_8bit_new<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="4-创建临时PNG文件"><a href="#4-创建临时PNG文件" class="headerlink" title="4.创建临时PNG文件"></a>4.创建临时PNG文件</h4><p>定义一个方法<code>create_temp_png</code>，将GeoTIFF文件转换为PNG格式的图片。</p>
+<pre class="line-numbers language-none"><code class="language-none">def create_temp_png(self):
+    ds = gdal.Open(self.tif_file, gdal.GA_ReadOnly)
+    png_file = 'overlay.png'
+    data = ds.ReadAsArray()
+    z, x, y = data.shape
+    temp_arr = np.zeros(shape=(x, y, 3))
+    for i in range(3):
+        temp_arr[:, :, i] = self.linear_stretch(data[i, :, :], 2)
+    temp_arr = temp_arr.astype(np.uint8)
+    img = Image.fromarray(temp_arr)
+    img.save(png_file)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="5-创建KML文件"><a href="#5-创建KML文件" class="headerlink" title="5. 创建KML文件"></a>5. 创建KML文件</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">create_kml</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>get_attribute<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    overlay_name <span class="token operator">=</span> <span class="token string">"KML overlay"</span>
+    kml <span class="token operator">=</span> <span class="token punctuation">(</span>
+        <span class="token string">'&lt;?xml version="1.0" encoding="UTF-8"?&gt;\n'</span>
+        <span class="token string">'&lt;kml xmlns="http://www.opengis.net/kml/2.2"&gt;\n'</span>
+        <span class="token string">'  &lt;Folder&gt;\n'</span>
+        <span class="token string">'    &lt;name&gt;Ground Overlays&lt;/name&gt;\n'</span>
+        <span class="token string">'    &lt;description&gt;Examples of ground overlays&lt;/description&gt;\n'</span>
+        <span class="token string">'    &lt;GroundOverlay&gt;\n'</span>
+        <span class="token string">'      &lt;name&gt;%s&lt;/name&gt;\n'</span>
+        <span class="token string">'      &lt;Icon&gt;\n'</span>
+        <span class="token string">'        &lt;href&gt;overlay.png&lt;/href&gt;\n'</span>
+        <span class="token string">'      &lt;/Icon&gt;\n'</span>
+        <span class="token string">'      &lt;LatLonBox&gt;\n'</span>
+        <span class="token string">'        &lt;north&gt;%f&lt;/north&gt;\n'</span>
+        <span class="token string">'        &lt;south&gt;%f&lt;/south&gt;\n'</span>
+        <span class="token string">'        &lt;east&gt;%f&lt;/east&gt;\n'</span>
+        <span class="token string">'        &lt;west&gt;%f&lt;/west&gt;\n'</span>
+        <span class="token string">'      &lt;/LatLonBox&gt;\n'</span>
+        <span class="token string">'    &lt;/GroundOverlay&gt;\n'</span>
+        <span class="token string">'  &lt;/Folder&gt;\n'</span>
+        <span class="token string">'&lt;/kml&gt;\n'</span>
+    <span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token punctuation">(</span>overlay_name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>north_latitude<span class="token punctuation">,</span> self<span class="token punctuation">.</span>south_latitude<span class="token punctuation">,</span> self<span class="token punctuation">.</span>east_longitude<span class="token punctuation">,</span> self<span class="token punctuation">.</span>west_longitude<span class="token punctuation">)</span>
+
+    <span class="token keyword">with</span> codecs<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'overlay.kml'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">'w+'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> kmlFile<span class="token punctuation">:</span>
+        kmlFile<span class="token punctuation">.</span>write<span class="token punctuation">(</span>kml<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="6-创建KMZ文件"><a href="#6-创建KMZ文件" class="headerlink" title="6.创建KMZ文件"></a>6.创建KMZ文件</h4><p>定义一个方法<code>create_kmz</code>，将生成的KML文件和PNG文件压缩成KMZ文件。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">create_kmz</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    self<span class="token punctuation">.</span>create_temp_png<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    self<span class="token punctuation">.</span>create_kml<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">with</span> ZipFile<span class="token punctuation">(</span>self<span class="token punctuation">.</span>kmz_file<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> zipObj<span class="token punctuation">:</span>
+        zipObj<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'overlay.kml'</span><span class="token punctuation">)</span>
+        zipObj<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'overlay.png'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="7-主函数"><a href="#7-主函数" class="headerlink" title="7. 主函数"></a>7. 主函数</h4><p>最后，在主函数中实例化<code>tif2kmz</code>类，并调用<code>create_kmz</code>方法。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    ql_image_filename <span class="token operator">=</span> <span class="token string">r'D:\test\DJI_20230410091240_0035.tif'</span>
+    kml_output_filename <span class="token operator">=</span> <span class="token string">r'D:\test\DJI_20230410091240_0035.kmz'</span>
+    tif2kmz <span class="token operator">=</span> tif2kmz<span class="token punctuation">(</span>ql_image_filename<span class="token punctuation">,</span> kml_output_filename<span class="token punctuation">)</span><span class="token punctuation">.</span>create_kmz<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> zipfile <span class="token keyword">import</span> ZipFile
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+<span class="token keyword">import</span> codecs
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> PIL<span class="token punctuation">.</span>Image <span class="token keyword">as</span> Image
+
+
+<span class="token keyword">class</span> <span class="token class-name">tif2kmz</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> tif_file<span class="token punctuation">,</span> kmz_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>tif_file <span class="token operator">=</span> tif_file
+        self<span class="token punctuation">.</span>kmz_file <span class="token operator">=</span> kmz_file
+
+    <span class="token keyword">def</span> <span class="token function">get_arrtibute</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 获取tif文件的属性, 用于生成kml文件</span>
+        ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>self<span class="token punctuation">.</span>tif_file<span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+        gt <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetGeoTransform<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>east_longitude <span class="token operator">=</span> gt<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>west_longitude <span class="token operator">=</span> self<span class="token punctuation">.</span>east_longitude <span class="token operator">+</span> <span class="token punctuation">(</span>ds<span class="token punctuation">.</span>RasterXSize <span class="token operator">*</span> gt<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>north_latitude <span class="token operator">=</span> gt<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>south_latitude <span class="token operator">=</span> self<span class="token punctuation">.</span>north_latitude <span class="token operator">+</span> <span class="token punctuation">(</span>ds<span class="token punctuation">.</span>RasterYSize <span class="token operator">*</span> gt<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">linear_stretch</span><span class="token punctuation">(</span>seld<span class="token punctuation">,</span> data<span class="token punctuation">,</span> num<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">'''
+
+        @param data: 待拉伸的矩阵
+        @param num: 拉伸系数，一般为1-5
+        @return: 拉伸后的矩阵
+        '''</span>
+        data_8bit <span class="token operator">=</span> data
+        data_8bit<span class="token punctuation">[</span>data_8bit <span class="token operator">==</span> <span class="token operator">-</span><span class="token number">9999</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+
+        <span class="token comment"># 把数据中的nan转为某个具体数值，例如</span>
+        <span class="token comment"># data_8bit[np.isnan(data_8bit)] = 0</span>
+        d2 <span class="token operator">=</span> np<span class="token punctuation">.</span>percentile<span class="token punctuation">(</span>data_8bit<span class="token punctuation">,</span> num<span class="token punctuation">)</span>
+        u98 <span class="token operator">=</span> np<span class="token punctuation">.</span>percentile<span class="token punctuation">(</span>data_8bit<span class="token punctuation">,</span> <span class="token number">100</span> <span class="token operator">-</span> num<span class="token punctuation">)</span>
+
+        maxout <span class="token operator">=</span> <span class="token number">255</span>
+        minout <span class="token operator">=</span> <span class="token number">0</span>
+        data_8bit_new <span class="token operator">=</span> minout <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>data_8bit <span class="token operator">-</span> d2<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>u98 <span class="token operator">-</span> d2<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>maxout <span class="token operator">-</span> minout<span class="token punctuation">)</span>
+        data_8bit_new<span class="token punctuation">[</span>data_8bit_new <span class="token operator">&lt;</span> minout<span class="token punctuation">]</span> <span class="token operator">=</span> minout
+        data_8bit_new<span class="token punctuation">[</span>data_8bit_new <span class="token operator">&gt;</span> maxout<span class="token punctuation">]</span> <span class="token operator">=</span> maxout
+        data_8bit_new <span class="token operator">=</span> data_8bit_new<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>int32<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> data_8bit_new
+    <span class="token keyword">def</span> <span class="token function">create_temp_png</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>self<span class="token punctuation">.</span>tif_file<span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GA_ReadOnly<span class="token punctuation">)</span>
+        png_file <span class="token operator">=</span> <span class="token string">'overlay.png'</span>
+        data <span class="token operator">=</span> ds<span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        z<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y <span class="token operator">=</span> data<span class="token punctuation">.</span>shape
+        temp_arr <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span>shape<span class="token operator">=</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            temp_arr<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> i<span class="token punctuation">]</span> <span class="token operator">=</span> self<span class="token punctuation">.</span>linear_stretch<span class="token punctuation">(</span>data<span class="token punctuation">[</span>i<span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+        temp_arr <span class="token operator">=</span> temp_arr<span class="token punctuation">.</span>astype<span class="token punctuation">(</span>np<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span>
+        img <span class="token operator">=</span> Image<span class="token punctuation">.</span>fromarray<span class="token punctuation">(</span>temp_arr<span class="token punctuation">)</span>
+        img<span class="token punctuation">.</span>save<span class="token punctuation">(</span>png_file<span class="token punctuation">)</span>
+
+
+    <span class="token keyword">def</span> <span class="token function">create_kml</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>get_arrtibute<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        overlay_name <span class="token operator">=</span> <span class="token string">"KML overlay"</span>
+        kml <span class="token operator">=</span> <span class="token punctuation">(</span>
+                  <span class="token string">'&lt;?xml version="1.0" encoding="UTF-8"?&gt;\n'</span>
+                  <span class="token string">'&lt;kml xmlns="http://www.opengis.net/kml/2.2"&gt;\n'</span>
+                  <span class="token string">'  &lt;Folder&gt;\n'</span>
+                  <span class="token string">'    &lt;name&gt;Ground Overlays&lt;/name&gt;\n'</span>
+                  <span class="token string">'    &lt;description&gt;Examples of ground overlays&lt;/description&gt;\n'</span>
+                  <span class="token string">'    &lt;GroundOverlay&gt;\n'</span>
+                  <span class="token string">'      &lt;name&gt;%s&lt;/name&gt;\n'</span>
+                  <span class="token string">'      &lt;Icon&gt;\n'</span>
+                  <span class="token string">'        &lt;href&gt;overlay.png&lt;/href&gt;\n'</span>
+                  <span class="token string">'      &lt;/Icon&gt;\n'</span>
+                  <span class="token string">'      &lt;LatLonBox&gt;\n'</span>
+                  <span class="token string">'        &lt;north&gt;%f&lt;/north&gt;\n'</span>
+                  <span class="token string">'        &lt;south&gt;%f&lt;/south&gt;\n'</span>
+                  <span class="token string">'        &lt;east&gt;%f&lt;/east&gt;\n'</span>
+                  <span class="token string">'        &lt;west&gt;%f&lt;/west&gt;\n'</span>
+                  <span class="token string">'      &lt;/LatLonBox&gt;\n'</span>
+                  <span class="token string">'    &lt;/GroundOverlay&gt;\n'</span>
+                  <span class="token string">'  &lt;/Folder&gt;\n'</span>
+                  <span class="token string">'&lt;/kml&gt;\n'</span>
+              <span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token punctuation">(</span>overlay_name<span class="token punctuation">,</span> self<span class="token punctuation">.</span>north_latitude<span class="token punctuation">,</span> self<span class="token punctuation">.</span>south_latitude<span class="token punctuation">,</span> self<span class="token punctuation">.</span>east_longitude<span class="token punctuation">,</span> self<span class="token punctuation">.</span>west_longitude<span class="token punctuation">)</span>
+
+        <span class="token keyword">with</span> codecs<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'overlay.kml'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">'w+'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> kmlFile<span class="token punctuation">:</span>
+            kmlFile<span class="token punctuation">.</span>write<span class="token punctuation">(</span>kml<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">create_kmz</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>create_temp_png<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>create_kml<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">with</span> ZipFile<span class="token punctuation">(</span>self<span class="token punctuation">.</span>kmz_file<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> zipObj<span class="token punctuation">:</span>
+            <span class="token comment"># zipObj.writestr(kml_output_filename, kml)  # Add doc.kml entry</span>
+            zipObj<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'overlay.kml'</span><span class="token punctuation">)</span>
+            zipObj<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'overlay.png'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    ql_image_filename <span class="token operator">=</span> <span class="token string">r'D:\test\DJI_20230410091240_0035.tif'</span>
+    kml_output_filename <span class="token operator">=</span> <span class="token string">r'D:\test\DJI_20230410091240_0035.kmz'</span>
+    tif2kmz <span class="token operator">=</span> tif2kmz<span class="token punctuation">(</span>ql_image_filename<span class="token punctuation">,</span> kml_output_filename<span class="token punctuation">)</span><span class="token punctuation">.</span>create_kmz<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="代码解释"><a href="#代码解释" class="headerlink" title="代码解释"></a>代码解释</h2><h3 id="tif2kmz类"><a href="#tif2kmz类" class="headerlink" title="tif2kmz类"></a><code>tif2kmz</code>类</h3><p>这个类主要用于处理GeoTIFF文件并将其转换为KMZ文件。初始化方法接受两个参数：GeoTIFF文件路径和输出KMZ文件路径。</p>
+<h3 id="get-attribute方法"><a href="#get-attribute方法" class="headerlink" title="get_attribute方法"></a><code>get_attribute</code>方法</h3><p>该方法读取GeoTIFF文件并获取其地理位置信息。这些信息将用于生成KML文件，以便在Google Earth中正确显示图像。</p>
+<h3 id="linear-stretch方法"><a href="#linear-stretch方法" class="headerlink" title="linear_stretch方法"></a><code>linear_stretch</code>方法</h3><p>该方法对图像数据进行线性拉伸，以增强对比度。线性拉伸是一种图像增强技术，通过将像素值映射到新的范围来提高图像的可见性。</p>
+<h3 id="create-temp-png方法"><a href="#create-temp-png方法" class="headerlink" title="create_temp_png方法"></a><code>create_temp_png</code>方法</h3><p>该方法将GeoTIFF文件转换为PNG格式的图片。首先读取GeoTIFF文件中的数据，然后对每个通道（红、绿、蓝）应用线性拉伸，最后将处理后的数据保存为PNG文件。</p>
+<h3 id="create-kml方法"><a href="#create-kml方法" class="headerlink" title="create_kml方法"></a><code>create_kml</code>方法</h3><p>该方法生成一个KML文件，该文件包含了PNG图片的地理位置信息。KML文件将描述PNG图片如何覆盖在地图上，以便在Google Earth中正确显示。</p>
+<h3 id="create-kmz方法"><a href="#create-kmz方法" class="headerlink" title="create_kmz方法"></a><code>create_kmz</code>方法</h3><p>该方法将生成的KML文件和PNG文件打包成KMZ文件。KMZ文件是KML文件的压缩版本，可以更方便地在Google Earth中使用。</p>
+<h3 id="主函数"><a href="#主函数" class="headerlink" title="主函数"></a>主函数</h3><p>主函数中，我们实例化<code>tif2kmz</code>类并调用<code>create_kmz</code>方法，将指定的GeoTIFF文件转换为KMZ文件。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过上述步骤，我们成功地将GeoTIFF文件转换为KMZ文件。这个过程利用了GDAL库读取GeoTIFF数据，Pillow库处理图像数据，以及zipfile库创建KMZ文件。这个转换过程可以帮助我们更方便地在Google Earth中查看和分析地理信息数据。</p>
+<p>后续会把tif转为kzm的功能添加到大疆粗校正小工具里。</p>
+<p>下一步计划是，去除无人机照片里的黑边。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/06/05/dai-ma-li-yong-python-chu-li-he-cheng-kong-jing-lei-da-sar-shu-ju-de-wan-zheng-liu-cheng/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">利用Python处理合成孔径雷达（SAR）数据的成像过程</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
