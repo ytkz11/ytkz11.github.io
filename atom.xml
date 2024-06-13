@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-06-12T06:49:25.987Z</updated>
+  <updated>2024-06-13T08:49:47.182Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【下载】部分常用的变化监测数据集下载地址汇总</title>
+    <link href="http://ytkz11@.github.io/2024/06/13/xia-zai-bu-fen-chang-yong-de-bian-hua-jian-ce-shu-ju-ji-xia-zai-di-zhi-hui-zong/"/>
+    <id>http://ytkz11@.github.io/2024/06/13/xia-zai-bu-fen-chang-yong-de-bian-hua-jian-ce-shu-ju-ji-xia-zai-di-zhi-hui-zong/</id>
+    <published>2024-06-13T14:00:10.000Z</published>
+    <updated>2024-06-13T08:49:47.182Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hi-CNA&quot;&gt;&lt;a href=&quot;#Hi-CNA&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>TIF转换到KMZ的教程</title>
@@ -499,31 +524,6 @@
     <id>http://ytkz11@.github.io/2024/04/21/dai-ma-cong-dao-lu-mian-shi-liang-dao-zhong-xin-xian-duan-dao-duan-de-dao-lu-zhong-xin-xian-ti-qu-fang-fa/</id>
     <published>2024-04-21T14:00:10.000Z</published>
     <updated>2024-04-22T06:25:39.472Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在路线规划和高精度地图要素采集的过程中，获取道路的中心线是非常关键的步骤。这个过程本质上是将特殊的面矢量转化为线矢量。深度学习技术，特别是卷积神经网络（CNN），可以用于识别图像中的道路，生成一个道路的面矢量图，其中每个像素都被标记为“道路”或“非道路”。然后，我们需要将这</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】从道路面矢量到中心线：端到端的道路中心线提取方法</title>
-    <link href="http://ytkz11@.github.io/2024/04/21/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/"/>
-    <id>http://ytkz11@.github.io/2024/04/21/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/</id>
-    <published>2024-04-21T14:00:10.000Z</published>
-    <updated>2024-04-22T06:25:55.745Z</updated>
     
     
       

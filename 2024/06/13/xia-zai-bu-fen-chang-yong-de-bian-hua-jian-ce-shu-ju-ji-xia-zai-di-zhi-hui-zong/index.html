@@ -9,7 +9,7 @@
     
     <title>
         
-            【代码】WGS84坐标转UTM坐标 |
+            【下载】部分常用的变化监测数据集下载地址汇总 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">【代码】WGS84坐标转UTM坐标</span>
+                <span class="title-hover-animation">【下载】部分常用的变化监测数据集下载地址汇总</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-04-15 22:00:10</span>
-        <span class="mobile">2024-04-15 22:00</span>
+        <span class="pc">2024-06-13 22:00:10</span>
+        <span class="mobile">2024-06-13 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-04-15 15:24:33</span>
+        <span class="pc">2024-06-13 16:49:47</span>
     </span>
     
     
@@ -208,42 +208,61 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>通用横轴墨卡托（UTM）是一种地图投影方法，它提供了一种为地球上的位置指定坐标的方式。像传统的经纬度系统一样，UTM也是一种水平位置表示法，这意味着它忽略了高度信息，而将地球表面视为一个理想的椭球体。然而，UTM与经纬度系统的主要区别在于，它将地球分割为60个区域，并将每个区域投影到一个平面上，作为坐标的基础。在这个系统中，位置的指定需要明确其所在的UTM区域以及在该区域内的x和y坐标。从椭球体到UTM区域的投影基于横向墨卡托投影的一系列参数，这些参数可能会因国家、地区或地图系统的不同而有所差异。</p>
-<p>UTM系统将地球划分为60个区域，每个区域的经度跨度为6°。第一区覆盖了从西经180°到174°的地区，然后区域编号向东递增，直到第60区，覆盖东经174°到180°的地区。值得注意的是，南纬80°以南和北纬84°以北的极地区域并未纳入这个系统中。</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Modified_UTM_Zones.png/1024px-Modified_UTM_Zones.png" alt="undefined"></p>
-<p>随着接近UTM区域的边界，尺度的失真会逐渐增大。然而，在实际操作中，我们常常需要在两个相邻的区域内对一系列位置进行测量，这时使用单一的网格进行测量就显得尤为方便和必要。在大比例尺地图（如1:100,000或更大）的边界区域，制图者通常会在距离区域边界40公里的范围内标注出两个相邻UTM区域的坐标。理想情况下，我们应该在位置所在的区域网格上测量其坐标，但由于在靠近区域边界的地方，比例因子仍然相对较小，因此在必要时，我们可以将测量结果适当地延伸到相邻区域的一定范围内。</p>
-<p>WGS84与UTM的区别</p>
-<ol>
-<li>WGS84：这是一种全球定位系统使用的坐标系统，它使用经度和纬度来表示地理位置。WGS84是一个基于地心的坐标系统，即它的原点是地球的质心。</li>
-<li>UTM：这是一种使用二维笛卡尔坐标系统表示地理位置的系统，它将地球表面（除了近北极和南极的地区）划分为多个区域，每个区域都使用自己的平面直角坐标系。UTM是一个基于地表的坐标系统，即它的原点是地球表面的某一点。</li>
-</ol>
-<p>简单点来说，WGS84是球面坐标，包括经纬度，单位是度。UTM是平面坐标，包括x和y坐标，单位是米。</p>
-<p>怎么把WGS84转为UTM</p>
-<p>在python有一个库叫做utm，别人已经帮我们写好了。</p>
-<p>安装：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip <span class="token function">install</span> utm<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>使用例子：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> utm
-
-<span class="token keyword">def</span> <span class="token function">latlon_to_utm</span><span class="token punctuation">(</span>lat<span class="token punctuation">,</span> lon<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    将经纬度转换为UTM坐标
-    """</span>
-    utm_result <span class="token operator">=</span> utm<span class="token punctuation">.</span>from_latlon<span class="token punctuation">(</span>lat<span class="token punctuation">,</span> lon<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> utm_result
-
-<span class="token comment"># 测试代码</span>
-lat <span class="token operator">=</span> <span class="token number">48.633</span>
-lon <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">93.9667</span>
-
-utm_result <span class="token operator">=</span> latlon_to_utm<span class="token punctuation">(</span>lat<span class="token punctuation">,</span> lon<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"UTM coordinates: (</span><span class="token interpolation"><span class="token punctuation">{</span>utm_result<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">, </span><span class="token interpolation"><span class="token punctuation">{</span>utm_result<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">)"</span></span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"UTM zone: </span><span class="token interpolation"><span class="token punctuation">{</span>utm_result<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token interpolation"><span class="token punctuation">{</span>utm_result<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404151519063.png" alt="image-20240415151911015"></p>
-<p>是不是很简单？我们觉得简单是因为我们直接使用别人给我们写好的接口。</p>
-<p>WGS84转UTM的原理和细节是很难的，不信你看一眼下面的公式。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404151522307.png" alt="image-20240415152203624"></p>
-<p>这里就不细嗦了，建议感兴趣的小伙伴一边细看python的utm库的源码，一边去看相关的资源。</p>
+                <h1 id="Hi-CNA"><a href="#Hi-CNA" class="headerlink" title="Hi-CNA"></a>Hi-CNA</h1><p>Hi-CNA是一个专用于农田非农化（CNA）任务的高分辨率遥感数据集，具有高质量的农田语义和变化标注。</p>
+<p>研究区域覆盖中国保定、咸阳、西安、泰安、兖州部分地区，总面积超过1100平方公里。</p>
+<p>这些区域作物种植变化明显，保证了农田形态的多样性。第一时间相为2015年至2017年，第二时间相为2020年至2022年，涵盖作物多个物候期。</p>
+<p>这些特点为CNA任务提供了丰富的样本。该数据集来源于多光谱GF-2融合影像，空间分辨率为0.8m，涵盖可见光、近红外等四个波段。所有图像均裁剪为512*512，共得到6797对双时相图像及相应的注释。</p>
+<p><img src="http://rsidea.whu.edu.cn/image/dataset/Hi-CNA/Hi-CNA.png" alt="img"></p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1xkmlyNYU-LLrvX1_cZeqLg&amp;pwd=1234">https://pan.baidu.com/s/1xkmlyNYU-LLrvX1_cZeqLg&amp;pwd=1234<i class="fas fa-external-link-alt"></i></a> </p>
+<h1 id="ChangeNet"><a href="#ChangeNet" class="headerlink" title="ChangeNet"></a>ChangeNet</h1><p>ChangeNet 数据集包含 31,000 对多时相图像，每幅图像的分辨率为 0.3 米。</p>
+<p>它涵盖了来自 100 个不同城市的多种复杂场景。此外，该数据集包括六个像素级注释类别，包括“建筑物”、“农田”、“裸地”、“水”、“道路”和“未改变”等类别。</p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/s/12X2sjiWPaOrtBceNBoVdrQ&amp;pwd=dikc">https://pan.baidu.com/s/12X2sjiWPaOrtBceNBoVdrQ&amp;pwd=dikc<i class="fas fa-external-link-alt"></i></a> </p>
+<h1 id="SMARS"><a href="#SMARS" class="headerlink" title="SMARS"></a>SMARS</h1><p>SMARS （模拟多模态航空遥感）是一个大规模合成数据集，包含模拟城市变化的场景对，旨在训练和验证变化检测应用程序以及城市分割和建筑物提取任务。</p>
+<p><img src="https://www.dlr.de/en/eoc/about-us/remote-sensing-technology-institute/photogrammetry-and-image-analysis/public-datasets/smars/smars-a_fig1.jpg/@@images/image/huge" alt="img"></p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pba-freesoftware.eoc.dlr.de/SMARS_Release.zip">https://pba-freesoftware.eoc.dlr.de/SMARS_Release.zip<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="HRCUS-CD"><a href="#HRCUS-CD" class="headerlink" title="HRCUS-CD"></a>HRCUS-CD</h1><p>HRCUS-CD数据集由11,388对裁剪的高分辨率遥感影像组成。图像大小为256×256像素，分辨率为0.5米。数据集包含超过12,000个带注释的变化实例。数据收集于中国珠海。它包含来自两个图像源的两个主要采集区域：第一个区域主要是城市建成区，时间跨度为2019年至2022年。考虑到时间间隔短且该区域大多为建成区，因此建筑物变化区域较小。第二个区域跨度为2010年至2018年，包含农田和山地，早期有少量旧民用房屋和建筑，后期建筑物变化面积较大。这两类高分辨率RSI重点关注建成区和新城区。</p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=UME_38pWJr8GN59MTC42NA&amp;pwd=msu2">https://pan.baidu.com/share/init?surl=UME_38pWJr8GN59MTC42NA&amp;pwd=msu2<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="GVLM"><a href="#GVLM" class="headerlink" title="GVLM"></a>GVLM</h1><p>全球超高分辨率滑坡测绘 (GVLM) 数据集是第一个大规模开源 VHR 滑坡测绘数据集。</p>
+<p>它包括通过 Google Earth 服务获取的 17 个双时态超高分辨率影像对，空间分辨率为 0.59 米。</p>
+<p>每个子数据集包含一对双时态图像和相应的地面实况地图。</p>
+<p>不同地理位置的滑坡地点具有不同的大小、形状、发生时间、空间分布、物候状态和土地覆盖类型，导致遥感图像的光谱异质性和强度变化很大。</p>
+<p>GVLM 数据集可用于开发和评估用于变化检测、语义分割和滑坡提取的机器/深度学习模型。</p>
+<p><img src="https://github.com/ZXK-RS/GVLM/raw/main/samples.png" alt="位置"></p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=GYlY16k1zIEf07puGl8l_w&amp;pwd=wsss">https://pan.baidu.com/share/init?surl=GYlY16k1zIEf07puGl8l_w&amp;pwd=wsss<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="EGY-BCD"><a href="#EGY-BCD" class="headerlink" title="EGY-BCD"></a>EGY-BCD</h1><p>EGY-BCD 数据集旨在从分辨率为 0.25 米/像素（19 级）的高分辨率卫星图像中检测建筑物变化。该数据集包括埃及的四个城市和沿海地区，这些地区是在 2015 年至 2022 年之间的两个不同时期从 Google Earth 收集的。</p>
+<p><img src="https://github.com/oshholail/EGY-BCD/raw/main/img/MansouraTiba.png" alt="image-20230201153142126"></p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=UREv4F0DBHgabJW2VScgCA&amp;pwd=EGYD">https://pan.baidu.com/share/init?surl=UREv4F0DBHgabJW2VScgCA&amp;pwd=EGYD<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="SI-BU"><a href="#SI-BU" class="headerlink" title="SI-BU"></a>SI-BU</h1><p>SI-BU 数据集包括 2021 年从中国贵州省贵阳市拍摄的的 Google Earth卫星图像以及相应的标签。</p>
+<p>该数据集覆盖约 172 平方公里的面积，包含不同高度、规模和外观的建筑物。图像和标签被裁剪成 512 × 512 像素的不重叠对。</p>
+<p>标签表示四个类别：背景、未改变的建筑物、新建的建筑物和已拆除的建筑物，分别分配 0、1、2 和 3 的值。</p>
+<p><img src="https://github.com/liaochengcsu/BCE-Net/raw/main/pics/figure9.png" alt="img"></p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=kC7QEAJRSwU-KZv-sUlG7g&amp;pwd=2024">https://pan.baidu.com/share/init?surl=kC7QEAJRSwU-KZv-sUlG7g&amp;pwd=2024<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="CNAM-CD"><a href="#CNAM-CD" class="headerlink" title="CNAM-CD"></a>CNAM-CD</h1><p>CNAM-CD 是一个多类变化检测数据集，收集了近十年来 12 个不同城市场景的图像。</p>
+<p>该数据集选择了中国 12 个国家级新区作为研究区域，包含 2503 对 GeoTiff 格式图像，像素大小为 512×512。</p>
+<p>图像是在 2013 年至 2022 年的不同时间拍摄的。数据来源为 Google Earth，分辨率为 0.5m。</p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1w6tDfE-F4o3Q4KGh1jzzIRpIlIUIXXrx/view?usp=sharing">https://drive.google.com/file/d/1w6tDfE-F4o3Q4KGh1jzzIRpIlIUIXXrx/view?usp=sharing<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="Cropland-CD"><a href="#Cropland-CD" class="headerlink" title="Cropland-CD"></a>Cropland-CD</h1><p>CLCD 数据集包含 600 对耕地变化样本影像。</p>
+<p>CLCD 中的双时相影像分别由高分二号于 2017 年和 2019 年在中国广东省上空拍摄。</p>
+<p>空间分辨率范围为 0.5 至 2 m。</p>
+<p>每组样本由两幅 512×512 影像和相应的耕地变化二元标签组成。</p>
+<p>CLCD 中标注的变化类型主要包括建筑物、道路、湖泊和裸土地等。</p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=Un-bVxUm1N9IHiDOXLLHlgmiu2">https://pan.baidu.com/share/init?surl=Un-bVxUm1N9IHiDOXLLHlgmiu2<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="HTCD"><a href="#HTCD" class="headerlink" title="HTCD"></a>HTCD</h1><p>HTCD 数据集是一个新的卫星-无人机异构影像数据集，由Google Earth的卫星影像和Open Aerial Map的无人机影像构建而成。</p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/s/1cwlbQo5fAmlKkU1eMcGHww&amp;pwd=n854">https://pan.baidu.com/s/1cwlbQo5fAmlKkU1eMcGHww&amp;pwd=n854<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="S2Looking"><a href="#S2Looking" class="headerlink" title="S2Looking"></a>S2Looking</h1><p>S2Looking是一个建筑物变化检测数据集，包含以不同离地平面角度拍摄的大规模侧视卫星图像。</p>
+<p>它由 5000 个的双时相图像对（大小为 1024*1024，0.5 ~ 0.8 米/像素）组成。</p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/s/101wSo-uQu-ovxRTqNbCgMA&amp;pwd=25Ao">https://pan.baidu.com/s/101wSo-uQu-ovxRTqNbCgMA&amp;pwd=25Ao<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="SYSU-CD"><a href="#SYSU-CD" class="headerlink" title="SYSU-CD"></a>SYSU-CD</h1><p>数据集包含 20000 对 2007 年至 2014 年间在香港拍摄的 256×256 大小的 0.5 米d 航拍图像。</p>
+<p>数据集中的主要变化类型包括：(a) 新建城市建筑；(b) 郊区扩张；(c) 施工前的地基工作；(d) 植被变化；(e) 道路扩建；(f) 海上建设。</p>
+<p><img src="https://github.com/liumency/SYSU-CD/raw/master/images/dataset.jpg" alt="dataset"></p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=5lQPG_hXZbLp91VywwcT7Q&amp;pwd=mlls">https://pan.baidu.com/share/init?surl=5lQPG_hXZbLp91VywwcT7Q&amp;pwd=mlls<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="S2MTCP"><a href="#S2MTCP" class="headerlink" title="S2MTCP"></a>S2MTCP</h1><p>S2MTCP 数据集的数据源是Sentinel-2,包含 1520 个图像对，空间分辨率小于 10 m 的波段被重新采样为 10 m，图像被裁剪大约为 600x600 像素。</p>
+<h1 id="LEVIR-CD"><a href="#LEVIR-CD" class="headerlink" title="LEVIR-CD"></a>LEVIR-CD</h1><p>LEVIR-CD 由 637 个高分辨率 (VHR，0.5 米/像素) 的 Google Earth (GE) 图像块对组成，大小为 1024 × 1024 像素。</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240613155120058.png" alt="image-20240613155120058"></p>
+<p>下载地址：<a class="link" target="_blank" rel="noopener" href="https://pan.baidu.com/share/init?surl=fzNiOE7elGRmIo2h6MIhZw&amp;pwd=l7iv">https://pan.baidu.com/share/init?surl=fzNiOE7elGRmIo2h6MIhZw&amp;pwd=l7iv<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="WHU-CD"><a href="#WHU-CD" class="headerlink" title="WHU-CD"></a>WHU-CD</h1><p>该数据集包含两张航拍图像（0.2m/像素，15354×32507），并提供这两张航拍图像的变化矢量、变化栅格图和两个对应的建筑物矢量。</p>
+<p>下载地址：</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://www.dropbox.com/scl/fi/ci39uxbzwmxr3asxs5h1s/WHU-CD-256.zip?rlkey=fl82nzgzsw0wc6gi7botjuapu&amp;e=2&amp;dl=0">https://www.dropbox.com/scl/fi/ci39uxbzwmxr3asxs5h1s/WHU-CD-256.zip?rlkey=fl82nzgzsw0wc6gi7botjuapu&amp;e=2&amp;dl=0<i class="fas fa-external-link-alt"></i></a></p>
 
             </div>
 
@@ -262,29 +281,14 @@ utm_result <span class="token operator">=</span> latlon_to_utm<span class="token
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/04/18/python-python-jian-yi-bi-ji-wei-wan-cheng/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">python简易笔记</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/04/15/dai-ma-tong-guo-zai-xian-fu-wu-huo-qu-jing-wei-du-de-hai-ba-gao-du-wei-wan-cheng/"
+                               href="/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">【代码】通过在线服务获取经纬度的海拔高度</span>
+                                <span class="post-nav-title-item">TIF转换到KMZ的教程</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
