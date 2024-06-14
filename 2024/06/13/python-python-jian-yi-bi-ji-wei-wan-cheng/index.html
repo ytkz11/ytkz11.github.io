@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-04-18 22:30:10</span>
-        <span class="mobile">2024-04-18 22:30</span>
+        <span class="pc">2024-06-13 22:30:10</span>
+        <span class="mobile">2024-06-13 22:30</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-05-08 10:46:22</span>
+        <span class="pc">2024-06-14 17:43:49</span>
     </span>
     
     
@@ -1096,7 +1096,7 @@ filtered_iter <span class="token operator">=</span> <span class="token builtin">
 <span class="token comment"># 结果是 45</span>
 reduced_obj <span class="token operator">=</span> <span class="token builtin">reduce</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> out<span class="token punctuation">,</span> x<span class="token punctuation">:</span> out <span class="token operator">+</span> x<span class="token punctuation">,</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span> 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Any-All"><a href="#Any-All" class="headerlink" title="Any, All"></a>Any, All</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 假设我们有一个集合（collection），比如列表、元组、集合、字典等  </span>
+<h4 id="Any-All"><a href="#Any-All" class="headerlink" title="Any, All"></a>Any, All</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python">
 collection <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token boolean">False</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">,</span> <span class="token string">'hello'</span><span class="token punctuation">]</span>  
   
 <span class="token comment"># 使用any()函数检查集合中是否有任何元素为True（在布尔上下文中）  </span>
@@ -1142,7 +1142,81 @@ y <span class="token operator">=</span> <span class="token number">20</span>
 <p>之后，可以直接使用 <code>my_function()</code> 而无需任何前缀。</p>
 <p>另外，如果想从模块中导入所有的内容（这通常不是一个好的做法，因为它可能导致命名空间污染），可以使用 <code>*</code> 符号：</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> my_package<span class="token punctuation">.</span>utils <span class="token keyword">import</span> <span class="token operator">*</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1>
+<h1 id="类"><a href="#类" class="headerlink" title="类"></a>类</h1><p>面向对象语言的核心：类。</p>
+<p>类具有可继承的特性，也是这样的特性解决了第二次软件危机。</p>
+<p>面向对象的方法将代码组织成模块化的类和对象，使得代码更加清晰、易于维护和扩展。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Person</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>name <span class="token operator">=</span> name
+
+<span class="token keyword">class</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span>Person<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> name<span class="token punctuation">,</span> staff_num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>staff_num <span class="token operator">=</span> staff_num<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong><code>Person</code>类</strong>：</p>
+<ul>
+<li>这是一个基本类，表示一个人。</li>
+<li>它有一个构造方法（<code>__init__</code>），接受一个参数<code>name</code>，并将其赋值给实例属性<code>self.name</code>。</li>
+</ul>
+<p><strong><code>Employee</code>类</strong>：</p>
+<ul>
+<li>这是一个继承自<code>Person</code>类的子类，表示一个雇员。</li>
+<li>它有自己的构造方法（<code>__init__</code>），接受两个参数：<code>name</code>和<code>staff_num</code>。</li>
+<li>使用<code>super()</code>函数调用父类<code>Person</code>的构造方法，并将<code>name</code>传递给父类的构造方法，以初始化从父类继承的属性<code>self.name</code>。</li>
+<li>另外，它还初始化了自己的实例属性<code>self.staff_num</code>。</li>
+</ul>
+<h3 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h3><pre class="line-numbers language-none"><code class="language-none">python复制代码p = Person("Alice")
+print(p.name)  # 输出: Alice
+
+e = Employee("Bob", "E123")
+print(e.name)      # 输出: Bob
+print(e.staff_num) # 输出: E123<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>需要在实际中去使用才能深刻理解什么是类，什么是面向对象。</p>
+<h4 id="多重继承："><a href="#多重继承：" class="headerlink" title="多重继承："></a>多重继承：</h4><p>类还可以多重继承，模板如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">A</span><span class="token punctuation">:</span> <span class="token keyword">pass</span>
+<span class="token keyword">class</span> <span class="token class-name">B</span><span class="token punctuation">:</span> <span class="token keyword">pass</span>
+<span class="token keyword">class</span> <span class="token class-name">C</span><span class="token punctuation">(</span>A<span class="token punctuation">,</span> B<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">pass</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h1><pre class="line-numbers language-none"><code class="language-none">try:
+	&lt;代码块&gt;
+except Exception as e:
+    print(e)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="open"><a href="#open" class="headerlink" title="open"></a>open</h1><p>数据写入到文本中</p>
+<pre class="line-numbers language-none"><code class="language-none">with open(filename, mode='w', encoding='utf-8') as file:
+        file.write(text)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="模式mode"><a href="#模式mode" class="headerlink" title="模式mode"></a>模式mode</h3><ul>
+<li><strong><code>'r'</code> - 读取（默认）。</strong></li>
+<li><strong><code>'w'</code> - 写入（截断）。</strong></li>
+<li><strong><code>'x'</code> - 如果文件已经存在，则写入或失败。</strong></li>
+<li><strong><code>'a'</code> - 附加。</strong></li>
+<li><strong><code>'w+'</code>- 读取和写入（截断）。</strong></li>
+<li><strong><code>'r+'</code>- 从头开始阅读和写作。</strong></li>
+<li><strong><code>'a+'</code>- 从末尾开始读、写。</strong></li>
+<li><strong><code>'b'</code> - 二进制模式</strong></li>
+</ul>
+<h1 id="命令行参数"><a href="#命令行参数" class="headerlink" title="命令行参数"></a>命令行参数</h1><h4 id="方法一：内置函数input"><a href="#方法一：内置函数input" class="headerlink" title="方法一：内置函数input"></a>方法一：内置函数input</h4><pre class="line-numbers language-none"><code class="language-none">xx = input(prompt=None)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>从命令行获取输入的字符串。</p>
+<p>在与用户交互时使用。</p>
+<h4 id="方法二：官方标准库sys"><a href="#方法二：官方标准库sys" class="headerlink" title="方法二：官方标准库sys"></a>方法二：官方标准库sys</h4><pre class="line-numbers language-none"><code class="language-none">import sys
+scripts_path = sys.argv[0]
+arguments    = sys.argv[1:]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h4 id="方法三：官方标准库argparse"><a href="#方法三：官方标准库argparse" class="headerlink" title="方法三：官方标准库argparse"></a>方法三：官方标准库argparse</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> argparse  <span class="token comment"># 1、导入argpase包</span>
+
+
+<span class="token keyword">def</span> <span class="token function">parse_args</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token comment"># 2、创建参数对象</span>
+    parse <span class="token operator">=</span> argparse<span class="token punctuation">.</span>ArgumentParser<span class="token punctuation">(</span>description<span class="token operator">=</span><span class="token string">'xxx'</span><span class="token punctuation">)</span>  	  
+    <span class="token comment"># 3、往参数对象添加参数</span>
+    parse<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">'radius'</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'Radius'</span><span class="token punctuation">)</span>  
+    <span class="token comment"># 4、解析参数对象获得解析对象</span>
+    parse<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">'height'</span><span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">,</span> <span class="token builtin">help</span><span class="token operator">=</span><span class="token string">'height'</span><span class="token punctuation">)</span>
+    args <span class="token operator">=</span> parse<span class="token punctuation">.</span>parse_args<span class="token punctuation">(</span><span class="token punctuation">)</span>  
+    <span class="token keyword">return</span> args
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    args <span class="token operator">=</span> parse_args<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># 5、使用解析对象.参数获取使用命令行参数</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>cal_vol<span class="token punctuation">(</span>args<span class="token punctuation">.</span>radius<span class="token punctuation">,</span> args<span class="token punctuation">.</span>height<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>没有涉及鸭子类型的内容</p>
+
             </div>
 
             
@@ -1160,29 +1234,14 @@ y <span class="token operator">=</span> <span class="token number">20</span>
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/04/18/dai-ma-shen-ru-li-jie-di-li-xin-xi-xi-tong-gis-zhong-de-mian-shi-liang-shi-yong-python-de-shapely-ku-cao-zuo-polygon-dui-xiang/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">深入理解地理信息系统（GIS）中的面矢量：使用Python的shapely库操作Polygon对象</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/"
+                               href="/2024/06/13/xia-zai-bu-fen-chang-yong-de-bian-hua-jian-ce-shu-ju-ji-xia-zai-di-zhi-hui-zong/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">【python】从卫星图像中提取数字表面模型DSM</span>
+                                <span class="post-nav-title-item">【下载】部分常用的变化监测数据集下载地址汇总</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
