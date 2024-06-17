@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-06-14T09:43:49.458Z</updated>
+  <updated>2024-06-17T07:41:28.113Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,62 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在 Python 中使用 GeoJSON：点、线和多边形</title>
+    <link href="http://ytkz11@.github.io/2024/06/17/dai-ma-zai-python-zhong-shi-yong-geojson-dian-xian-he-duo-bian-xing/"/>
+    <id>http://ytkz11@.github.io/2024/06/17/dai-ma-zai-python-zhong-shi-yong-geojson-dian-xian-he-duo-bian-xing/</id>
+    <published>2024-06-17T14:00:10.000Z</published>
+    <updated>2024-06-17T07:41:28.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;GeoJSON 是一种使用 JavaScript 对象表示法（JSON）编码各种地理数据结构的格式。本技术文档概述了如何在 Python</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装geo-sam的教程.md</title>
+    <link href="http://ytkz11@.github.io/2024/06/17/dai-ma-an-zhuang-geo-sam-de-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/06/17/dai-ma-an-zhuang-geo-sam-de-jiao-cheng/</id>
+    <published>2024-06-17T14:00:10.000Z</published>
+    <updated>2024-06-17T02:04:51.066Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;安装教程地址：&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;link&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python简易笔记</title>
     <link href="http://ytkz11@.github.io/2024/06/13/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
     <id>http://ytkz11@.github.io/2024/06/13/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
     <published>2024-06-13T14:30:10.000Z</published>
-    <updated>2024-06-14T09:43:49.458Z</updated>
+    <updated>2024-06-17T09:49:56.099Z</updated>
     
     
       
@@ -72,6 +123,31 @@
     <title>TIF转换到KMZ的教程</title>
     <link href="http://ytkz11@.github.io/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/"/>
     <id>http://ytkz11@.github.io/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/</id>
+    <published>2024-06-11T14:00:10.000Z</published>
+    <updated>2024-06-12T06:49:25.987Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;KML 和 KMZ 都是 Google 地球和其他地图程序中用于显示地理数据的文件格式。两者之间的主要区别在于，KML 是一种用于以 XML 格式存储地理数据的文件格式，而 KMZ 是一种压缩文件格式，包含一个或多个 KML</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TIF转换到KMZ的教程</title>
+    <link href="http://ytkz11@.github.io/2024/06/11/gong-ju-an-zhuang-geo-sam-de-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/06/11/gong-ju-an-zhuang-geo-sam-de-jiao-cheng/</id>
     <published>2024-06-11T14:00:10.000Z</published>
     <updated>2024-06-12T06:49:25.987Z</updated>
     
@@ -461,87 +537,6 @@
     
     
     <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】合并Shapefile文件</title>
-    <link href="http://ytkz11@.github.io/2024/04/29/dai-ma-he-bing-shapefile-wen-jian/"/>
-    <id>http://ytkz11@.github.io/2024/04/29/dai-ma-he-bing-shapefile-wen-jian/</id>
-    <published>2024-04-29T14:00:10.000Z</published>
-    <updated>2024-04-29T05:13:29.716Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在地理信息系统中，Shapefile（.shp）是一种非常常见的矢量数据格式，用于存储地理要素的空间信息和属性数据。在处理大量Shapefile时，有时需要将多个文件合并成一个，以便于统一管理和分析。本文将介绍如何使用Python的GDAL/OGR库实现多个Shapefil</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】从十进制度数到度分秒格式与反向转换的Python实现</title>
-    <link href="http://ytkz11@.github.io/2024/04/26/dai-ma-cong-shi-jin-zhi-du-shu-dao-du-fen-miao-ge-shi-yu-fan-xiang-zhuan-huan-de-python-shi-xian/"/>
-    <id>http://ytkz11@.github.io/2024/04/26/dai-ma-cong-shi-jin-zhi-du-shu-dao-du-fen-miao-ge-shi-yu-fan-xiang-zhuan-huan-de-python-shi-xian/</id>
-    <published>2024-04-26T14:30:10.000Z</published>
-    <updated>2024-04-26T02:53:45.417Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在地理和导航领域，我们经常使用度分秒（DMS）和十进制度数（DD）两种格式来表示经纬度。这两种格式各有优缺点，但在某些应用场景下，我们需要将一种格式转换为另一种格式。本文将介绍如何使用Python实现这两种格式之间的转换，并解释其背后的原理。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/python/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【闲聊】为什么一旦用了chatgpt，就再也回不去了？</title>
-    <link href="http://ytkz11@.github.io/2024/04/23/xian-liao-wei-shi-me-yi-dan-yong-liao-copilot-jiu-zai-ye-hui-bu-qu-qiao-dai-ma-liao/"/>
-    <id>http://ytkz11@.github.io/2024/04/23/xian-liao-wei-shi-me-yi-dan-yong-liao-copilot-jiu-zai-ye-hui-bu-qu-qiao-dai-ma-liao/</id>
-    <published>2024-04-23T14:30:10.000Z</published>
-    <updated>2024-04-23T09:41:52.405Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.在平常，我时常玩chatgpt，它是个好工具。在写代码，我时常玩copilot，它也是个好工具。&lt;/p&gt;
-&lt;p&gt;copilot是微软开发的，而微软是开发chatgpt的openai的股东，所以copilot也就是调用了chatgpt的接口，copilot可以视为类gpt</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
     
   </entry>
   
