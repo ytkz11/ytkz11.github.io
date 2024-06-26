@@ -4,6 +4,85 @@
   
     
     <entry>
+      <title>Geopackage 、shapefile 、GeoJSON三种地理信息文件的优劣</title>
+      <link href="2024/06/26/gis-geopackage-shapefile-geojson-san-chong-di-li-xin-xi-wen-jian-de-you-lie/"/>
+      <url>2024/06/26/gis-geopackage-shapefile-geojson-san-chong-di-li-xin-xi-wen-jian-de-you-lie/</url>
+      
+        <content type="html"><![CDATA[<p>目前，被广泛使用的地理信息数据格式之一是shapefile。arcgis</p><p>Shapefiles 已经存在很长时间了。ESRI 在 1990 年代初期开发了这种格式，从那时起，它已成为广泛采用的标准格式之一，用于在人们之间处理和共享矢量数据。Shapefile 将非拓扑矢量数据与相关属性数据一起存储。虽然被广泛使用，但对于现代用例来说，它有很多明显的缺点；</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+          <category> GIS </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+            <tag> GIS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>什么是rtree及其应用</title>
+      <link href="2024/06/25/dai-ma-shi-me-shi-rtree-ji-qi-ying-yong/"/>
+      <url>2024/06/25/dai-ma-shi-me-shi-rtree-ji-qi-ying-yong/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>pip换为国内镜像源的办法</title>
+      <link href="2024/06/24/python-pip-huan-yuan-de-bi-yao-xing-ji-bu-zou/"/>
+      <url>2024/06/24/python-pip-huan-yuan-de-bi-yao-xing-ji-bu-zou/</url>
+      
+        <content type="html"><![CDATA[<p>最近换了一台新电脑，需要重新安装python及python库。</p><p>这时候必须做的一件事情。</p><p>建议所有在国内的、使用python的人，都进行这个操作：给 pip 换国内源。</p><p>讲解pip 换国内源的必要性前，得了解一个概念：什么是pip源。</p><h2 id="什么是pip源"><a href="#什么是pip源" class="headerlink" title="什么是pip源"></a>什么是pip源</h2><p><code>pip</code> 是 Python 的包管理器，用于安装、升级和卸载 Python 软件包。在使用 <code>pip</code> 安装软件包时，它会从指定的源（repository 或 index）下载包的文件。这个源通常被称为“pip源”。</p><p>默认情况下，<code>pip</code> 使用 Python Package Index (PyPI) 作为源，这是 Python 社区维护的一个公开的软件包仓库，包含了大量可用的 Python 软件包。然而，由于网络问题，如速度慢、连接不稳定或者地域限制，用户可能无法高效地从 PyPI 下载包。</p><p>为了解决这些问题，可以使用“镜像源”（mirror sources）。镜像源是复制了 PyPI 数据的服务器，通常由不同的组织或个人维护，目的是提供更快的下载速度和更稳定的连接。</p><p>常见的镜像源包括：</p><ul><li>豆瓣镜像：<code>https://pypi.douban.com/simple</code></li><li>阿里云镜像：<code>https://mirrors.aliyun.com/pypi/simple</code></li><li>清华大学镜像：<code>https://pypi.tuna.tsinghua.edu.cn/simple</code></li></ul><h2 id="换国内源的必要性"><a href="#换国内源的必要性" class="headerlink" title="换国内源的必要性"></a>换国内源的必要性</h2><p>更换为国内源对于在中国大陆及其附近区域的用户来说是非常必要的。为什么呢？有一点也是主要的一点原因是：速度。</p><ul><li>国外源的服务器通常位于海外，距离中国用户较远，这会导致数据传输速度慢，下载时间长。</li><li>国内源的服务器位于中国大陆境内，物理距离近，能够提供更快的数据传输速度，大大缩短下载时间。</li></ul><h2 id="永久替换，使用国内镜像源"><a href="#永久替换，使用国内镜像源" class="headerlink" title="永久替换，使用国内镜像源"></a>永久替换，使用国内镜像源</h2><p>去指定的文件夹下，添加一个全名叫做pip.ini的文件。以下是具体步骤：</p><ol><li>打开文件资源管理器，导航至你的用户主目录，通常是<code>C:\Users\[username]</code>，这里<code>[username]</code>应替换为你的用户名，如<code>admin</code>。也有些电脑是Users是中文，则是<code>C:\用户\[username]</code></li><li>在<code>admin</code>文件夹内右键点击空白处，选择“新建” &gt; “文件夹”，输入“pip”作为文件夹名称。</li><li>右键点击刚刚创建的“pip”文件夹，选择“新建” &gt; “文本文档”，然后将文本文档重命名为<code>pip.ini</code>。</li><li>打开<code>pip.ini</code>文件，输入你的<code>pip</code>配置信息。我通常使用清华的镜像源。</li></ol><pre class="line-numbers language-none"><code class="language-none"># conding: GBK[global]index-url = https://pypi.tuna.tsinghua.edu.cn/simple[install]trusted-host = https://pypi.tuna.tsinghua.edu.cn<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>通过以上简单的四步，即可实现永久替换为清华大学镜像源。</p><p>在使用pip安装第三方库的时候，自动从清华大学镜像源检索、下载。速度从此起飞！</p><p>今天先到这里了。</p><p>（完）</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>在 Python 中使用 GeoJSON：点、线和多边形</title>
       <link href="2024/06/17/dai-ma-zai-python-zhong-shi-yong-geojson-dian-xian-he-duo-bian-xing/"/>
       <url>2024/06/17/dai-ma-zai-python-zhong-shi-yong-geojson-dian-xian-he-duo-bian-xing/</url>

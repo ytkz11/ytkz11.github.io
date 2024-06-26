@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-06-17T07:41:28.113Z</updated>
+  <updated>2024-06-26T09:47:40.089Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Geopackage 、shapefile 、GeoJSON三种地理信息文件的优劣</title>
+    <link href="http://ytkz11@.github.io/2024/06/26/gis-geopackage-shapefile-geojson-san-chong-di-li-xin-xi-wen-jian-de-you-lie/"/>
+    <id>http://ytkz11@.github.io/2024/06/26/gis-geopackage-shapefile-geojson-san-chong-di-li-xin-xi-wen-jian-de-you-lie/</id>
+    <published>2024-06-26T14:00:10.000Z</published>
+    <updated>2024-06-26T09:47:40.089Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;目前，被广泛使用的地理信息数据格式之一是shapefile。arcgis&lt;/p&gt;
+&lt;p&gt;Shapefiles 已经存在很长时间了。ESRI 在 1990 年代初期开发了这种格式，从那时起，它已成为广泛采用的标准格式之一，用于在人们之间处理和共享矢量数据。Shapefile</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是rtree及其应用</title>
+    <link href="http://ytkz11@.github.io/2024/06/25/dai-ma-shi-me-shi-rtree-ji-qi-ying-yong/"/>
+    <id>http://ytkz11@.github.io/2024/06/25/dai-ma-shi-me-shi-rtree-ji-qi-ying-yong/</id>
+    <published>2024-06-25T14:00:10.000Z</published>
+    <updated>2024-06-26T09:05:43.578Z</updated>
+    
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pip换为国内镜像源的办法</title>
+    <link href="http://ytkz11@.github.io/2024/06/24/python-pip-huan-yuan-de-bi-yao-xing-ji-bu-zou/"/>
+    <id>http://ytkz11@.github.io/2024/06/24/python-pip-huan-yuan-de-bi-yao-xing-ji-bu-zou/</id>
+    <published>2024-06-24T14:00:10.000Z</published>
+    <updated>2024-06-26T09:04:40.306Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近换了一台新电脑，需要重新安装python及python库。&lt;/p&gt;
+&lt;p&gt;这时候必须做的一件事情。&lt;/p&gt;
+&lt;p&gt;建议所有在国内的、使用python的人，都进行这个操作：给 pip 换国内源。&lt;/p&gt;
+&lt;p&gt;讲解pip</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>在 Python 中使用 GeoJSON：点、线和多边形</title>
@@ -459,84 +534,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】无人机航拍图像的空间分辨率计算</title>
-    <link href="http://ytkz11@.github.io/2024/05/09/dai-ma-wu-ren-ji-hang-pai-tu-xiang-de-kong-jian-fen-bian-lu-ji-suan/"/>
-    <id>http://ytkz11@.github.io/2024/05/09/dai-ma-wu-ren-ji-hang-pai-tu-xiang-de-kong-jian-fen-bian-lu-ji-suan/</id>
-    <published>2024-05-09T14:00:10.000Z</published>
-    <updated>2024-05-10T07:04:55.439Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;遥感图像的空间分辨率&quot;&gt;&lt;a href=&quot;#遥感图像的空间分辨率&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】从照片中提取GPS信息并创建Shapefile</title>
-    <link href="http://ytkz11@.github.io/2024/05/06/dai-ma-cong-zhao-pian-zhong-ti-qu-gps-xin-xi-bing-chuang-jian-shapefile/"/>
-    <id>http://ytkz11@.github.io/2024/05/06/dai-ma-cong-zhao-pian-zhong-ti-qu-gps-xin-xi-bing-chuang-jian-shapefile/</id>
-    <published>2024-05-06T14:00:10.000Z</published>
-    <updated>2024-05-06T01:45:18.548Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在地理信息系统中，获取精确的地理位置数据对于各种分析至关重要。随着数码摄影的普及，越来越多的照片包含了EXIF元数据，其中就包含了拍摄地点的GPS信息。本文将介绍如何使用Python编程语言从照片中提取这些GPS信息，并将其转换为Shapefile文件，以便在GIS软件中进</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【python】你的 Python 包都装到哪了？</title>
-    <link href="http://ytkz11@.github.io/2024/04/30/python-ni-de-python-bao-du-zhuang-dao-na-liao/"/>
-    <id>http://ytkz11@.github.io/2024/04/30/python-ni-de-python-bao-du-zhuang-dao-na-liao/</id>
-    <published>2024-04-30T14:30:10.000Z</published>
-    <updated>2024-04-30T08:39:28.567Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h2&gt;&lt;p&gt;终结一切找不到包（第三方库）的问题。&lt;/p&gt;
-&lt;p&gt;经常在互联网上看到python的求助问题：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;我安装了 pip</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
