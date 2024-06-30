@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>Geopackage 、shapefile 、GeoJSON三种地理信息文件的优劣</title>
-      <link href="2024/06/26/gis-geopackage-shapefile-geojson-san-chong-di-li-xin-xi-wen-jian-de-you-lie/"/>
-      <url>2024/06/26/gis-geopackage-shapefile-geojson-san-chong-di-li-xin-xi-wen-jian-de-you-lie/</url>
+      <title>为什么看好Geopackage而不是shapefile或Geojson</title>
+      <link href="2024/06/28/gis-wei-shi-me-kan-hao-geopackage-er-bu-shi-shapefile-huo-geojson/"/>
+      <url>2024/06/28/gis-wei-shi-me-kan-hao-geopackage-er-bu-shi-shapefile-huo-geojson/</url>
       
-        <content type="html"><![CDATA[<p>目前，被广泛使用的地理信息数据格式之一是shapefile。arcgis</p><p>Shapefiles 已经存在很长时间了。ESRI 在 1990 年代初期开发了这种格式，从那时起，它已成为广泛采用的标准格式之一，用于在人们之间处理和共享矢量数据。Shapefile 将非拓扑矢量数据与相关属性数据一起存储。虽然被广泛使用，但对于现代用例来说，它有很多明显的缺点；</p>]]></content>
+        <content type="html"><![CDATA[<p>如果你在GIS这个圈子，你肯定知道 shapefile。如果你从事webgis开发，你肯定也知道GeoJSON。但是你了解Geopackage么？</p><p>这篇文章谈谈为什么我会看好Geopackage而不是shapefile\GeoJSON。</p><h2 id="shapefile的不足"><a href="#shapefile的不足" class="headerlink" title="shapefile的不足"></a>shapefile的不足</h2><p>老实说，shapefile很好用，我经常使用shp文件。我对shp的文件结构很熟悉！但是老实说，这种文件是有不足的。有一次在acrgis编辑图斑，突然arcgis闪退导致文件再也打不开了。针对这个问题，我记录是怎么解决这个问题了。后面慢慢地对shp文件熟悉，发现是shp文件和dbf文件的图像个数对应不上，导致shp文件不能在arcgis打开。</p><p>除此之外，shagefile的不足还在于，shapefile 的最大大小为 2GB。随着 shapefile 的大小增加，shapefile 的性能会急剧下降。</p><h2 id="GeoJSON的不足"><a href="#GeoJSON的不足" class="headerlink" title="GeoJSON的不足"></a>GeoJSON的不足</h2>]]></content>
       
       
       <categories>
@@ -741,7 +741,7 @@
     
     
     <entry>
-      <title>【python】从卫星图像中提取数字表面模型DSM</title>
+      <title>【python】从卫星图像中提取数字表面模型DSM——未完成</title>
       <link href="2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/"/>
       <url>2024/04/18/python-cong-wei-xing-tu-xiang-zhong-ti-qu-shu-zi-biao-mian-mo-xing-dsm-wei-wan-cheng/</url>
       
@@ -2602,9 +2602,9 @@
       
         <tags>
             
-            <tag> 遥感 </tag>
-            
             <tag> matlab </tag>
+            
+            <tag> 遥感 </tag>
             
         </tags>
       
@@ -2656,9 +2656,9 @@
       
         <tags>
             
-            <tag> 遥感 </tag>
-            
             <tag> matlab </tag>
+            
+            <tag> 遥感 </tag>
             
         </tags>
       

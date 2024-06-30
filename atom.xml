@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-06-26T09:47:40.089Z</updated>
+  <updated>2024-06-28T09:29:32.978Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,19 +17,20 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Geopackage 、shapefile 、GeoJSON三种地理信息文件的优劣</title>
-    <link href="http://ytkz11@.github.io/2024/06/26/gis-geopackage-shapefile-geojson-san-chong-di-li-xin-xi-wen-jian-de-you-lie/"/>
-    <id>http://ytkz11@.github.io/2024/06/26/gis-geopackage-shapefile-geojson-san-chong-di-li-xin-xi-wen-jian-de-you-lie/</id>
-    <published>2024-06-26T14:00:10.000Z</published>
-    <updated>2024-06-26T09:47:40.089Z</updated>
+    <title>为什么看好Geopackage而不是shapefile或Geojson</title>
+    <link href="http://ytkz11@.github.io/2024/06/28/gis-wei-shi-me-kan-hao-geopackage-er-bu-shi-shapefile-huo-geojson/"/>
+    <id>http://ytkz11@.github.io/2024/06/28/gis-wei-shi-me-kan-hao-geopackage-er-bu-shi-shapefile-huo-geojson/</id>
+    <published>2024-06-28T14:00:10.000Z</published>
+    <updated>2024-06-28T09:29:32.978Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;目前，被广泛使用的地理信息数据格式之一是shapefile。arcgis&lt;/p&gt;
-&lt;p&gt;Shapefiles 已经存在很长时间了。ESRI 在 1990 年代初期开发了这种格式，从那时起，它已成为广泛采用的标准格式之一，用于在人们之间处理和共享矢量数据。Shapefile</summary>
+    <summary type="html">&lt;p&gt;如果你在GIS这个圈子，你肯定知道 shapefile。如果你从事webgis开发，你肯定也知道GeoJSON。但是你了解Geopackage么？&lt;/p&gt;
+&lt;p&gt;这篇文章谈谈为什么我会看好Geopackage而不是shapefile\GeoJSON。&lt;/p&gt;
+&lt;h2</summary>
         
       
     
