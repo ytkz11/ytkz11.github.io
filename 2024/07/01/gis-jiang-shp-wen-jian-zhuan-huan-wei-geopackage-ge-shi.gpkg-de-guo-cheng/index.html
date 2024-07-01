@@ -9,7 +9,7 @@
     
     <title>
         
-            为什么看好Geopackage而不是shapefile或Geojson |
+            将shp文件转换为GeoPackage格式（.gpkg）的过程 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">为什么看好Geopackage而不是shapefile或Geojson</span>
+                <span class="title-hover-animation">将shp文件转换为GeoPackage格式（.gpkg）的过程</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-06-28 22:00:10</span>
-        <span class="mobile">2024-06-28 22:00</span>
+        <span class="pc">2024-07-01 22:00:10</span>
+        <span class="mobile">2024-07-01 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-06-28 17:29:32</span>
+        <span class="pc">2024-07-01 10:35:12</span>
     </span>
     
     
@@ -216,11 +216,61 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>如果你在GIS这个圈子，你肯定知道 shapefile。如果你从事webgis开发，你肯定也知道GeoJSON。但是你了解Geopackage么？</p>
-<p>这篇文章谈谈为什么我会看好Geopackage而不是shapefile\GeoJSON。</p>
-<h2 id="shapefile的不足"><a href="#shapefile的不足" class="headerlink" title="shapefile的不足"></a>shapefile的不足</h2><p>老实说，shapefile很好用，我经常使用shp文件。我对shp的文件结构很熟悉！但是老实说，这种文件是有不足的。有一次在acrgis编辑图斑，突然arcgis闪退导致文件再也打不开了。针对这个问题，我记录是怎么解决这个问题了。后面慢慢地对shp文件熟悉，发现是shp文件和dbf文件的图像个数对应不上，导致shp文件不能在arcgis打开。</p>
-<p>除此之外，shagefile的不足还在于，shapefile 的最大大小为 2GB。随着 shapefile 的大小增加，shapefile 的性能会急剧下降。</p>
-<h2 id="GeoJSON的不足"><a href="#GeoJSON的不足" class="headerlink" title="GeoJSON的不足"></a>GeoJSON的不足</h2>
+                <h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><p>将shp文件转换为GeoPackage格式（.gpkg）的过程，可以使用QGIS软件来完成。以下是详细的步骤：</p>
+<ol>
+<li><p>创建GeoPackage数据库文件：</p>
+<ul>
+<li>打开QGIS软件。</li>
+<li>在浏览面板的GeoPackage上右键，点击“创建数据库…”。</li>
+<li>在新建窗口的数据库项输入.gpkg文件的保存路径，直接点击确定即可创建一个后缀为.gpkg的GeoPackage数据库文件。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407011026096.png" alt="image-20240701102531831"></p>
+</li>
+<li><p>把shp文件添加到图层面板：</p>
+<ul>
+<li>打开资源管理器，在左侧选择“矢量”&gt;“矢量数据集”。</li>
+<li>浏览并打开shp文件（仅添加后缀为.shp的文件）。</li>
+<li>点击“添加”，即可将shp文件添加到图层面板。</li>
+</ul>
+</li>
+<li><p>导出到GeoPackage数据库：</p>
+<ul>
+<li>在想导出的shp图层上右击。</li>
+<li>选择“导出”&gt;“另存要素为…”。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407011031870.JPG" alt="112"></p>
+<ul>
+<li>在弹出的窗口中，选择格式为GeoPackage。</li>
+<li>选择上面创建的后缀为.gpkg的文件。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407011030759.png" alt="image-20240701103018599"></p>
+<ul>
+<li>填写图层名称，点击“OK”即可将shp文件导入到GeoPackage数据库。</li>
+</ul>
+</li>
+</ol>
+<h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><p>如何通过代码实现shp文件转换为gkpg文件呢？请看下面代码。</p>
+<pre class="line-numbers language-none"><code class="language-none">#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+# @File : shp2gpkg.py 
+import time
+import geopandas as gpd
+
+def shp2gpkg(shpfile,outfile):
+    # 读取SHP文件
+    gdf = gpd.read_file(shpfile)
+
+    # 将GeoDataFrame写入GeoPackage文件
+    gdf.to_file(outfile, driver='GPKG')
+
+if __name__ == '__main__':
+    t1 = time.time()
+    shpfile = r'polygon.shp'
+    outfile = r'polygon.gpkg'
+    shp2gpkg(shpfile, outfile)
+    t2 = time.time()
+    print(t2-t1)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
             </div>
 
             

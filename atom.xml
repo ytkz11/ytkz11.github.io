@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-06-28T09:29:32.978Z</updated>
+  <updated>2024-07-01T02:35:12.979Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,20 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>为什么看好Geopackage而不是shapefile或Geojson</title>
-    <link href="http://ytkz11@.github.io/2024/06/28/gis-wei-shi-me-kan-hao-geopackage-er-bu-shi-shapefile-huo-geojson/"/>
-    <id>http://ytkz11@.github.io/2024/06/28/gis-wei-shi-me-kan-hao-geopackage-er-bu-shi-shapefile-huo-geojson/</id>
-    <published>2024-06-28T14:00:10.000Z</published>
-    <updated>2024-06-28T09:29:32.978Z</updated>
+    <title>将shp文件转换为GeoPackage格式（.gpkg）的过程</title>
+    <link href="http://ytkz11@.github.io/2024/07/01/gis-jiang-shp-wen-jian-zhuan-huan-wei-geopackage-ge-shi.gpkg-de-guo-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/07/01/gis-jiang-shp-wen-jian-zhuan-huan-wei-geopackage-ge-shi.gpkg-de-guo-cheng/</id>
+    <published>2024-07-01T14:00:10.000Z</published>
+    <updated>2024-07-01T02:35:12.979Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;如果你在GIS这个圈子，你肯定知道 shapefile。如果你从事webgis开发，你肯定也知道GeoJSON。但是你了解Geopackage么？&lt;/p&gt;
-&lt;p&gt;这篇文章谈谈为什么我会看好Geopackage而不是shapefile\GeoJSON。&lt;/p&gt;
-&lt;h2</summary>
+    <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt;</summary>
         
       
     
