@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-07-01T02:35:12.979Z</updated>
+  <updated>2024-07-02T09:48:04.355Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pyqgis二次开发教程</title>
+    <link href="http://ytkz11@.github.io/2024/07/02/dai-ma-pyqgis-er-ci-kai-fa-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/07/02/dai-ma-pyqgis-er-ci-kai-fa-jiao-cheng/</id>
+    <published>2024-07-02T14:00:10.000Z</published>
+    <updated>2024-07-02T09:48:04.355Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot; href=&quot;https://zhuanlan.zhihu.com/p/629483254&quot;&gt;https://zhuanlan.zhihu.com/p/629483254&lt;i class=&quot;fas</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sentinel-2影像的独特之处与数据存储策略</title>
+    <link href="http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/"/>
+    <id>http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/</id>
+    <published>2024-07-02T14:00:10.000Z</published>
+    <updated>2024-07-02T06:52:43.097Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在遥感技术的广阔领域中，Sentinel-2卫星以其独特的多波段和高分辨率成像能力脱颖而出，成为环境监测、农业评估、城市规划等多个领域的重要数据来源。然而，Sentinel-2影像的一个显著特点——其拥有三种不同的空间分辨率，使得其数据存储和处理方式与传统遥感影像存在显著差</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
+    
+  </entry>
   
   <entry>
     <title>将shp文件转换为GeoPackage格式（.gpkg）的过程</title>
@@ -143,8 +201,8 @@
   
   <entry>
     <title>python简易笔记</title>
-    <link href="http://ytkz11@.github.io/2024/06/13/python-python-jian-yi-bi-ji-wei-wan-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/06/13/python-python-jian-yi-bi-ji-wei-wan-cheng/</id>
+    <link href="http://ytkz11@.github.io/2024/06/13/python-python-jian-yi-bi-ji/"/>
+    <id>http://ytkz11@.github.io/2024/06/13/python-python-jian-yi-bi-ji/</id>
     <published>2024-06-13T14:30:10.000Z</published>
     <updated>2024-06-17T09:49:56.099Z</updated>
     
@@ -472,58 +530,6 @@
         
     <summary type="html">&lt;p&gt;在图像处理和地理空间数据处理中，OpenCV、NumPy和GDAL是常用的库。然而，它们在数据读取和坐标引用方式上存在差异，可能导致使用时出现矛盾。以下是对这三者读取数据的行列差异及矛盾的分析：&lt;/p&gt;
 &lt;h4 id=&quot;OpenCV&quot;&gt;&lt;a href=&quot;#OpenCV&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>KML、KMZ是什么？</title>
-    <link href="http://ytkz11@.github.io/2024/05/14/dai-ma-kml-shi-shi-me/"/>
-    <id>http://ytkz11@.github.io/2024/05/14/dai-ma-kml-shi-shi-me/</id>
-    <published>2024-05-14T14:00:10.000Z</published>
-    <updated>2024-05-16T08:15:32.831Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;KML 和 KMZ 都是 Google 地球和其他地图程序中用于显示地理数据的文件格式。两者之间的主要区别在于，KML 是一种用于以 XML 格式存储地理数据的文件格式，而 KMZ 是一种压缩文件格式，包含一个或多个 KML</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】大疆航片粗几何校正工具</title>
-    <link href="http://ytkz11@.github.io/2024/05/14/dai-ma-da-jiang-hang-pian-cu-ji-he-xiao-zheng-gong-ju/"/>
-    <id>http://ytkz11@.github.io/2024/05/14/dai-ma-da-jiang-hang-pian-cu-ji-he-xiao-zheng-gong-ju/</id>
-    <published>2024-05-14T14:00:10.000Z</published>
-    <updated>2024-05-14T05:55:37.880Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在上周的空余时间，实现了单景大疆无人机航片的粗几何校正。现在把程序改造为批量处理模式，并打包为exe二进制可执行文件。&lt;/p&gt;
-&lt;p&gt;以下是下载链接，仅供参考学习：&lt;/p&gt;
-&lt;p&gt;AerialCorrection.exe &lt;a class=&quot;link&quot;</summary>
         
       
     

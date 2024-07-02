@@ -9,7 +9,7 @@
     
     <title>
         
-            安装geo-sam的教程.md |
+            pyqgis二次开发教程 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">安装geo-sam的教程.md</span>
+                <span class="title-hover-animation">pyqgis二次开发教程</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-06-17 22:00:10</span>
-        <span class="mobile">2024-06-17 22:00</span>
+        <span class="pc">2024-07-02 22:00:10</span>
+        <span class="mobile">2024-07-02 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-06-17 10:04:51</span>
+        <span class="pc">2024-07-02 17:48:04</span>
     </span>
     
     
@@ -176,6 +176,10 @@
                 
                     <li>
                         <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E9%81%A5%E6%84%9F/GIS/">GIS</a>&nbsp;
                     </li>
                 
             </ul>
@@ -188,6 +192,10 @@
                 
                     <li>
                         <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/GIS/">GIS</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,10 +216,135 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>安装教程地址：</p>
-<p><a class="link" target="_blank" rel="noopener" href="https://geo-sam.readthedocs.io/en/latest/installation.html#install-the-geo-sam-plugin">https://geo-sam.readthedocs.io/en/latest/installation.html#install-the-geo-sam-plugin<i class="fas fa-external-link-alt"></i></a></p>
-<p><strong>从开始菜单以管理员身份</strong>打开<strong>OSGeo4W Shell</strong> <img src="https://geo-sam.readthedocs.io/en/latest/_images/OsGeo4WShell.png" alt="OsGeo4WShell">应用程序，它是 QGIS 的专用 shell。</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip3 <span class="token function">install</span> torch torchvision torchgeo segment-anything rasterio<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <p><a class="link" target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/629483254">https://zhuanlan.zhihu.com/p/629483254<i class="fas fa-external-link-alt"></i></a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021617427.png" alt="image-20240702161739949"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021618828.png" alt="image-20240702161843596"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021620492.png" alt="image-20240702161957468"></p>
+<p>坑：</p>
+<p>报错1：</p>
+<p>用pyuic5将.ui文件转化为.py文件出现报错，如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021634680.png" alt="image-20240702163443420"></p>
+<p>最终解决办法是：.ui文件名不能有空格。路径名称当中的文件夹名称也不能有空格；<br>比如你的.ui文件在 project program文件夹下面就不能实现转化，得把文件夹名称改为projectprogram</p>
+<p>报错2：</p>
+<p>不知道为什么由ui文件生成的py文件会带有C++的语法</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021645318.png" alt="image-20240702164538022"></p>
+<p>报错3：</p>
+<p>第一次运行python qt时显示：<br>This application failed to start because no Qt platform plugin could beinitialized Reinstalling the application may fix this problem<br>Available platform plugins are: direct2d, minimal, offscreen, windows。</p>
+<pre class="line-numbers language-none"><code class="language-none">from qgis.core import *
+from qgis.gui import *
+from qgis.PyQt.QtWidgets import *
+from qgis.PyQt.QtGui import *
+from qgis.PyQt.QtCore import *
+
+from os.path import *
+import sys
+
+
+class MyWnd(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.resize(1200, 800)
+        self.setWindowTitle("GIS软件")
+        self.canvas = QgsMapCanvas()
+        self.canvas.setCanvasColor(Qt.white)
+        self.canvas.setVisible(True)
+        self.canvas.xyCoordinates.connect(self.showXY)
+
+        self.actionZoomIn = QAction("放大工具", self)
+        self.actionZoomOut = QAction("缩小工具", self)
+        self.actionPan = QAction("平移工具", self)
+        self.actionOpenRas = QAction("打开影像", self)
+
+        self.actionZoomIn.setCheckable(True)
+        self.actionZoomOut.setCheckable(True)
+        self.actionPan.setCheckable(True)
+
+        self.actionZoomIn.triggered.connect(self.zoomIn)
+        self.actionZoomOut.triggered.connect(self.zoomOut)
+        self.actionPan.triggered.connect(self.pan)
+        self.actionOpenRas.triggered.connect(self.openDialogRas)
+
+        self.toolbar = QToolBar("Canvas actions")
+        self.addToolBar(self.toolbar)
+        self.toolbar.addAction(self.actionZoomIn)
+        self.toolbar.addAction(self.actionZoomOut)
+        self.toolbar.addAction(self.actionPan)
+        self.toolbar.addAction(self.actionOpenRas)
+
+        self.root = QgsProject.instance().layerTreeRoot()
+        self.model = QgsLayerTreeModel(self.root, self)
+        self.model.setFlag(QgsLayerTreeModel.AllowNodeReorder)
+        self.model.setFlag(QgsLayerTreeModel.AllowNodeChangeVisibility)
+        self.tocView = QgsLayerTreeView()
+        self.tocView.setModel(self.model)
+        self.tocView.setFixedWidth(200)
+        self.bridge = QgsLayerTreeMapCanvasBridge(self.root, self.canvas, self)
+
+        # create the map tools
+        self.toolPan = QgsMapToolPan(self.canvas)
+        self.toolPan.setAction(self.actionPan)
+        self.toolZoomIn = QgsMapToolZoom(self.canvas, False)  # false = in
+        self.toolZoomIn.setAction(self.actionZoomIn)
+        self.toolZoomOut = QgsMapToolZoom(self.canvas, True)  # true = out
+        self.toolZoomOut.setAction(self.actionZoomOut)
+
+        centralWidget = QWidget()
+        hLayout = QHBoxLayout()
+        hLayout.addWidget(self.canvas)
+        hLayout.addWidget(self.tocView)
+        centralWidget.setLayout(hLayout)
+        self.setCentralWidget(centralWidget)
+
+        self.pan()
+
+    def zoomIn(self):
+        self.canvas.setMapTool(self.toolZoomIn)
+
+    def zoomOut(self):
+        self.canvas.setMapTool(self.toolZoomOut)
+
+    def pan(self):
+        self.canvas.setMapTool(self.toolPan)
+
+    def openDialogRas(self):
+        path_to_tif = QFileDialog.getOpenFileName()[0]
+        if path_to_tif == "":
+            return
+        self.addRaster(path_to_tif)
+
+    def openDialogVec(self):
+        path_to_vec = QFileDialog.getOpenFileName()[0]
+        if path_to_vec == "":
+            return
+        self.addVector(path_to_vec)
+
+    def addRaster(self, path):
+        layer = QgsRasterLayer(path, basename(path))
+        if not layer.isValid():
+            QMessageBox.information(self, '提示', '文件打开失败', QMessageBox.Ok)
+            return
+        layer.dataProvider().setNoDataValue(1, 0)
+        QgsProject.instance().addMapLayers([layer])
+        self.canvas.setLayers([layer])
+        self.canvas.setExtent(layer.extent())
+        self.canvas.refresh()
+
+    def showXY(self, point):
+        m_statusBar = self.statusBar()
+        m_statusBar.showMessage("Coordinate:" + str(point.x()) + "," + str(point.y()))
+
+
+if __name__ == "__main__":
+    QgsApplication.setPrefixPath("./qgis_init", True)
+    qgs = QgsApplication([], False)
+    qgs.initQgis()
+
+    w = MyWnd()
+    w.show()
+    sys.exit(qgs.exec_())
+
+    qgs.exitQgis()
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
 
@@ -224,35 +357,24 @@
                             <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
                         </li>
                     
+                        <li class="tag-item">
+                            <a href="/tags/GIS/">#GIS</a>&nbsp;
+                        </li>
+                    
                 </ul>
             
 
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/06/17/dai-ma-zai-python-zhong-shi-yong-geojson-dian-xian-he-duo-bian-xing/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">在 Python 中使用 GeoJSON：点、线和多边形</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/06/13/python-python-jian-yi-bi-ji/"
+                               href="/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">python简易笔记</span>
+                                <span class="post-nav-title-item">Sentinel-2影像的独特之处与数据存储策略</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
