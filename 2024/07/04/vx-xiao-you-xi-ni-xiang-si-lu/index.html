@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation"></span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-07-04 15:47:45</span>
+        <span class="mobile">2024-07-04 15:47</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-07-04 15:48:32</span>
+    </span>
+    
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="本文章仅用于学习交流，请勿用于非法用途"><a href="#本文章仅用于学习交流，请勿用于非法用途" class="headerlink" title="本文章仅用于学习交流，请勿用于非法用途"></a>本文章仅用于学习交流，请勿用于非法用途</h1><p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRqcyOKia5s36IrKHFCOA0dGU0v6CicQuj2xD3Wwfn4ZHGmnibIQxicpkr6g/640?wx_fmt=png&amp;from=appmsg&amp;wxfrom=13" alt="图片"></p>
+<h1 id="浅谈逆向Unity导出的vx小游戏的思路"><a href="#浅谈逆向Unity导出的vx小游戏的思路" class="headerlink" title="浅谈逆向Unity导出的vx小游戏的思路"></a>浅谈逆向Unity导出的vx小游戏的思路</h1><ul>
+<li><strong>用到的工具比较多，我把全部链接都放文末</strong></li>
+</ul>
+<blockquote>
+<p>背景：<br>刷抖音时突然蹦出个广告，还不小心点进去了<br>就试玩了一下，发现还挺有趣的，嗯<br>可是玩了一小会后发现打不过了，还得充钱才能变得更强？？？<br>于是直接忍不了了 <strong>直接开机，上号!!!</strong></p>
+</blockquote>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRN9QgZIwu0sNicQ9qOOzCC5zZsYrbWjNf9iaTG5y4NCBxgyEVAOS2AJFg/640?wx_fmt=png&amp;from=appmsg&amp;wxfrom=13" alt="图片"><br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRCZzpylDCX5ib2bNUW83siaparrcv8hAuIibbQvyYeZicobAtqWLzMXeLbA/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+<h2 id="初步分析小游戏"><a href="#初步分析小游戏" class="headerlink" title="初步分析小游戏"></a>初步分析小游戏</h2><ul>
+<li><p>打开对应的<code>wxapkg</code>目录<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlREHszjRRAAbOObNP2QsRslQoVRyGhemOGToWFyo68PboTrYbWAL4Kqg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+</li>
+<li><p>解包</p>
+<pre class="line-numbers language-none"><code class="language-none"> 复制代码 隐藏代码
+unveilr wx -f  "D:\WeChat Files\WeChat Files\Applet\wxxxxxxx\34"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>到这一步可以确定是<code>unity</code>项目转成的小游戏了<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRIp3D5IC5KhWDbUPhWAzVIGUFA1111wicsRdWCvP3L7gic0vagibMqbAUg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+</li>
+<li><p>当然你通过解包出来的目录也是可以看出来的<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRw14Bpuqa8DelibYgibv4j4MDR5aS7TCQwMOOH2KTgrn2LTcFmr9iaGO4g/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+</li>
+<li><p>稍微翻了下代码，可以确定小游戏逻辑都在 <code>wasmcode</code> 和 <code>wasmcode1</code><br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlR1QlDMrsRbEI691YhJ6Y1mswcZC3EeJEibqIYzUGWdMIYNrgy0HSfInQ/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"><br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRWyiaxxYMyOujr6tY54icQN0hZqB3nnvEUyGQzibWHE5dibUzFOxE2KkLyQ/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+</li>
+</ul>
+<h2 id="初步分析unity相关文件"><a href="#初步分析unity相关文件" class="headerlink" title="初步分析unity相关文件"></a>初步分析unity相关文件</h2><ul>
+<li><p>可以看到这里都是 br 为后缀，这是使用brotli压缩的文件</p>
+</li>
+<li><p>使用<code>brotli.exe</code>解压缩<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRlbciaDhL5F8Lv2CDNVUcUh6wYicibe5AH1gicibSKeMQwNcGHPfPdIqCmIw/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+</li>
+<li><p>另一个文件夹同理</p>
+</li>
+<li><p>这样我们就得到了wasm文件了</p>
+</li>
+<li><p>这里可以直接拖进 <code>ida</code> 或者 <code>Ghidra</code></p>
+</li>
+<li><p>我这里使用 <code>Ghidra</code>，因为 ida 的 wasm 插件好像有点问题</p>
+</li>
+<li><p>怎么安装wasm插件这里我就不赘述了</p>
+</li>
+<li><p>这里我把解包得到的wasm改个名：</p>
+<pre class="line-numbers language-none"><code class="language-none"> 复制代码 隐藏代码
+xxx.code.import.unityweb.wasm -&gt; import.wasm
+xxx.code.unityweb.wasm -&gt; main.wasm
+wasmcode1/xxx.code.unityweb.wasm -&gt; sub.wasm<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>然后一并拖入 <code>Ghidra</code><br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRfkVkD66F9BgqdW8xTvFRx5GdwwoxE63ibyq3qAmDWMTfqVhFo7q14mg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+</li>
+<li><p>等他分析好（<em>这里可能要一些时间</em>），出现一堆 jxxx 的函数，这根本没法看啊<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRgg9V7sjCNuw34uTMMP0kggxbRwhHwCWVCDuibeTXBM2tEb2YezxAxyQ/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+</li>
+<li><p>接下来尝试恢复wasm的符号信息</p>
+</li>
+</ul>
+<h2 id="尝试恢复wasm的符号信息"><a href="#尝试恢复wasm的符号信息" class="headerlink" title="尝试恢复wasm的符号信息"></a>尝试恢复wasm的符号信息</h2><ul>
+<li><p>一般现在的unity都是用 <code>IL2cpp</code>导出了，<code>Mono</code> 估计很少用了吧</p>
+</li>
+<li><p><code>Il2CppDumper</code> 能将使用 <code>IL2cpp</code>打包的文件还原出 <code>script.json</code>，这里面存着符号信息</p>
+</li>
+<li><p>所以我们直接使用 <code>Il2CppDumper</code> 尝试导出</p>
+<pre class="line-numbers language-none"><code class="language-none"> 复制代码 隐藏代码
+Il2CppDumper.exe &lt;executable-file&gt; &lt;global-metadata&gt; &lt;output-directory&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>Il2CppDumper</code> 需要 <code>global-metadata.dat</code> 文件</p>
+</li>
+<li><p>那这个文件哪里找呢？小游戏的<code>wxapkg</code>包内没有</p>
+</li>
+<li><p>那应该是远程下载的，只能是找缓存路径了</p>
+</li>
+<li><p>经过研究，发现可疑文件<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRiaO1rhaCCykHj77nEfibJC4aKqNGcebhbuDXwx3zLNaKtbuMWZddwHvA/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+</li>
+<li><p>这又是个二进制文件，需要解析出来</p>
+</li>
+<li><p>这里使用 <code>unityweb</code> 将他导出来<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlR48XGe9LmokPh3SjEa1Sia3XmyK9C6kLicXhnnu3mCcjapnC4lygic4iaug/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"><br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRqVbHoZlav9BZptTyWElI6lTfvqCxw6calzlH76q56LVSStgEv3xanA/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+</li>
+<li><p>有了 <code>global-metadata.dat</code>就能导出<code>script.json</code> 等文件了</p>
+</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRH5UZxRhdpZ5lkW5aAodZTBHdxUWPnajb7MhYursbC8GYqicPn8GV3UQ/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+<ul>
+<li>然后怎么恢复到 <code>Ghidra</code> 可以看下面这篇文章，讲的很好</li>
+<li><a class="link" target="_blank" rel="noopener" href="https://www.cnblogs.com/algonote/p/15596459.html">https://www.cnblogs.com/algonote/p/15596459.html<i class="fas fa-external-link-alt"></i></a><br><strong>但是</strong><br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRRH4VVbRnkIwFWlVRY0SKvn8Tic5N1icPiaRqIupDaaFGoettDy6VXekcg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></li>
+<li>这里并不太适合导出成vx小游戏的项目</li>
+<li>这里需要魔改 <code>ghidra_wasm.py</code></li>
+<li>经过分析，问题出在，他的动态调用的偏移是存在 <code>import.wasm</code> 里面的</li>
+<li>所以我们先把它的偏移转换出来</li>
+<li>这里我直接贴我的脚本</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none"> 复制代码 隐藏代码
+// restore.js
+const fs = require('fs')
+const http = require('http')
+
+const Scripts = JSON.parse(fs.readFileSync('./script.json', 'utf8'))
+const splitWasmBytes = fs.readFileSync('./import.wasm')
+
+async function main() {
+  const {instance} = await WebAssembly.instantiate(splitWasmBytes);
+  const getRedirIndex = a =&gt; instance.exports['wasm_split.__wasm_split_getRedirIndex'](a) &amp; 268435455
+  Scripts.ScriptMethod.forEach(item =&gt; {
+    item.FuntionName = `j${getRedirIndex(item.Address)}`
+  })
+  fs.writeFileSync('./script2.json', JSON.stringify(Scripts), 'utf8')
+}
+
+main()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>我先把对应的偏移函数名写到 <code>script2.json</code></li>
+<li>然后魔改 <code>ghidra_wasm.py</code></li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none"> 复制代码 隐藏代码
+# -*- coding: utf-8 -*-
+
+import json
+import re
+
+currentProgram = getCurrentProgram()
+symbolTable = currentProgram.getSymbolTable()
+functionManager = currentProgram.getFunctionManager()
+USER_DEFINED = ghidra.program.model.symbol.SourceType.USER_DEFINED
+progspace = currentProgram.addressFactory.getAddressSpace("ram")
+scripts_json_path = askFile("script2.json from Il2cppdumper", "Open").absolutePath
+fd = open(scripts_json_path, 'rb')
+Scripts = json.loads(fd.read().decode('utf8'))
+fd.close()
+
+processFields = [
+    "ScriptMethod",
+    "ScriptString",
+    "ScriptMetadata",
+    "ScriptMetadataMethod",
+    "Addresses",
+]
+
+def extract_parameters(signature):
+    # 匹配函数签名中的参数部分
+    params_match = re.search(r'\((.*?)\)', signature)
+    if not params_match:
+        return {"types": [], "labels": [], "len": 0}
+    # 提取参数部分的内容
+    params_str = params_match.group(1)
+    # 分割参数部分的内容
+    params = params_str.split(',')
+    # 分离参数类型和参数名
+    types = []
+    labels = []
+    name_counter = {}
+    for param in params:
+        param = param.strip()
+        # 查找最后一个空格以分隔类型和名称
+        last_space_index = param.rfind(' ')
+        if last_space_index != -1:
+            types.append(param[:last_space_index].strip())
+            label = param[last_space_index + 1:].strip()
+            if label in name_counter:
+                name_counter[label] += 1
+                new_label = label + str(name_counter[label])
+                labels.append(new_label)
+            else:
+                name_counter[label] = 1
+                labels.append(label)
+
+    return {"types": types, "labels": labels, "len": len(labels)}
+
+def get_addr(addr):
+    return progspace.getAddress(addr)
+
+def set_name(addr, name):
+    name = name.replace(' ', '-')
+    createLabel(addr, name, True, USER_DEFINED)
+
+def restore_params(func, signature):
+    params = extract_parameters(signature)
+    length = params['len']
+    if length != func.getParameterCount():
+        # print 'Warning: Mismatch function signature: ' + signature
+        return
+    parameters = func.getParameters()
+    for index in xrange(length):
+        p = parameters[index]
+        # print length, params['labels']
+        label = params['labels'][index]
+        p.setName(label, USER_DEFINED)
+
+if "ScriptMethod" in Scripts and "ScriptMethod" in processFields:
+    scriptMethods = Scripts["ScriptMethod"]
+    monitor.initialize(len(scriptMethods))
+    monitor.setMessage("Methods")
+    for scriptMethod in scriptMethods:
+        monitor.incrementProgress(1)
+        addr = scriptMethod["Address"]
+        name = scriptMethod["Name"]
+        fn_name = scriptMethod['FuntionName']
+        signature = scriptMethod['Signature']
+        for symbol in symbolTable.getSymbols(fn_name):
+            addr = symbol.getAddress()
+            # 表示已经改过了
+            if getPlateComment(addr): continue
+            set_name(addr, name)
+            setPlateComment(addr, '\n'.join([str(addr), fn_name, name, signature]))
+            restore_params(functionManager.getFunctionAt(addr), signature)
+
+if "ScriptString" in Scripts and "ScriptString" in processFields:
+    index = 1
+    scriptStrings = Scripts["ScriptString"]
+    monitor.initialize(len(scriptStrings))
+    monitor.setMessage("Strings")
+    for scriptString in scriptStrings:
+        addr = get_addr(scriptString["Address"])
+        value = scriptString["Value"].encode("utf-8")
+        name = "StringLiteral_" + str(index)
+        createLabel(addr, name, True, USER_DEFINED)
+        setEOLComment(addr, value)
+        index += 1
+        monitor.incrementProgress(1)
+
+if "ScriptMetadata" in Scripts and "ScriptMetadata" in processFields:
+    scriptMetadatas = Scripts["ScriptMetadata"]
+    monitor.initialize(len(scriptMetadatas))
+    monitor.setMessage("Metadata")
+    for scriptMetadata in scriptMetadatas:
+        addr = get_addr(scriptMetadata["Address"])
+        name = scriptMetadata["Name"].encode("utf-8")
+        set_name(addr, name)
+        setEOLComment(addr, name)
+        monitor.incrementProgress(1)
+
+if "ScriptMetadataMethod" in Scripts and "ScriptMetadataMethod" in processFields:
+    scriptMetadataMethods = Scripts["ScriptMetadataMethod"]
+    monitor.initialize(len(scriptMetadataMethods))
+    monitor.setMessage("Metadata Methods")
+    for scriptMetadataMethod in scriptMetadataMethods:
+        addr = get_addr(scriptMetadataMethod["Address"])
+        name = scriptMetadataMethod["Name"].encode("utf-8")
+        methodAddr = get_addr(scriptMetadataMethod["MethodAddress"])
+        set_name(addr, name)
+        setEOLComment(addr, name)
+        monitor.incrementProgress(1)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>当然这么搞也不能完全正确，但是大致是没问题的，大大提升我们分析效率</li>
+<li>这是脚本执行之后的效果<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlR1emyVZqd0LExKgjljhUJBXgVq1ZEPGhf79XYUJicXTlftIjG6kIt6Gg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></li>
+<li>是不是清晰多了</li>
+<li>还没完<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRRzlPdLsGt4EwylkPDqT03ib8IFDPdUbWIUE1Ph6TA773CoavDAY3jUg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></li>
+<li>我们还可以通过<code>Il2CppDumper</code>导出得到的 <code>dll</code> 来获取它对应的数据结果，这在调试<code>wasm</code>时很有帮助</li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRCe0nDVn2RwMwLQyLYqR0sQibJr1hNSywR4xHsiamkwWj5iaMzysMGq7jg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+<ul>
+<li>直接拖进<code>ILSpy</code><br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlR9icGf5olAPInG942zM9yH9ibo4BW3x014OcgQa4Z5iaW112W1g0O2eFDw/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></li>
+<li>这些结构信息和字段偏移很有用的</li>
+</ul>
+<h2 id="开始调试wasm"><a href="#开始调试wasm" class="headerlink" title="开始调试wasm"></a>开始调试wasm</h2><ul>
+<li>假设我现在要找个释放技能的函数 <code>PlaySkill</code></li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRg8Qeicp7jaarIdcfz6FwT1NWzBuweY4SLK7Vus0EvK0ic8SvOfP4u3ew/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"><br>找到了对应的函数，然后我们到 <code>Ghidra</code> 搜索 <code>SkillCaster$$PlaySkill</code> （类名$$方法)</p>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRRM0FuupWGEDcbaibrt4NPxkapReC53dsutG094hXS0CHGUsqXThJXlg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+<ul>
+<li>然后通过上面注释中的 <code>j2174</code> 直接在 <code>wasm</code>中搜索即可 (这里需要开启小程序的<code>devtools</code>)<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRGiaGtKOow14wWZeasknLMhKZeAj0FictdW2HnQZkMIZLuQpLyddpN5EA/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></li>
+<li>我这里截图的时候，游戏更新了… 定位变掉了， 这里只做个示例</li>
+<li>怎么破解游戏这个就只是时间问题了</li>
+<li>随便下个日志断点，实时修改响应的内存数就行了，当然又能会有内存检查，小心封号哦<br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRHzavZ6Dtcuh3hvic3kFsj19viakCvEodwrcaT61H6gSGVqVTjINyzIHA/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></li>
+</ul>
+<h2 id="如何持久化改动呢-我还没测试，但是我感觉可行"><a href="#如何持久化改动呢-我还没测试，但是我感觉可行" class="headerlink" title="如何持久化改动呢 (我还没测试，但是我感觉可行)"></a>如何持久化改动呢 (我还没测试，但是我感觉可行)</h2><ul>
+<li>这里我们可以用 <code>wasm2wat</code> 先转成 wat 再修改，改完再 <code>wat2wasm</code></li>
+</ul>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRuWYbW843bZo18HM8StfTO5owjLzpoYha5FBIVnvQOWn3couhDqxdtA/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+<ul>
+<li><p>写个示例：</p>
+<pre class="line-numbers language-none"><code class="language-none"> 复制代码 隐藏代码
+(module
+(func (export "isAdmin") (result i32)
+    i32.const 0 ;;  永远返回 0
+)
+)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>编译成 wasm <code>wat2wasm test.wat -o test.wasm</code></p>
+</li>
+<li><p>写个<code>JS</code>跑一下</p>
+</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none"> 复制代码 隐藏代码
+const fs = require('fs')
+;(async () =&gt; {
+  const {instance} = await WebAssembly.instantiate(fs.readFileSync('./aa.wasm'))
+  // console.log(instance.exports)
+  console.log(instance.exports['isAdmin']())
+})()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>打印 0</li>
+<li>然后 <code>wasm2wat test.wam -o test2.wat</code></li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none"> 复制代码 隐藏代码
+(module
+  (type (;0;) (func (result i32)))
+  (func (;0;) (type 0) (result i32)
+    i32.const 0) ;;  把这里 const 0  改成 1
+  (export "isAdmin" (func 0)))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>重新编译成 wasm <code>wat2wasm test.wat -o test.wasm</code></li>
+<li>再跑一下上面的测试代码</li>
+<li>打印1了<br><strong>但是</strong><br><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRRH4VVbRnkIwFWlVRY0SKvn8Tic5N1icPiaRqIupDaaFGoettDy6VXekcg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></li>
+<li>这里要注意，他里面可能有 <code>md5</code> 校验</li>
+<li>好了我写完了，下面贴出相关工具的链接</li>
+</ul>
+<h2 id="相关工具"><a href="#相关工具" class="headerlink" title="相关工具"></a>相关工具</h2><ol>
+<li>unveilr</li>
+<li>brotli.exe</li>
+<li>ghidra</li>
+<li>ghidra-wasm-plugin</li>
+<li>Il2CppDumper</li>
+<li>ILSpy</li>
+<li>watb</li>
+<li>unityweb.exe</li>
+</ol>
+<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_gif/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRgREs9OI663LvaZFab3uaYiapIdsjIB3xB4fPULCmepXn0kXKFOTGUbw/640?wx_fmt=gif&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p>
+
+            </div>
+
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/07/04/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-er/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">使用GDAL进行遥感影像植被真彩色增强 （二）</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/07/02/dai-ma-pyqgis-er-ci-kai-fa-jiao-cheng/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">pyqgis二次开发教程</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
