@@ -2481,7 +2481,7 @@
     
     
     <entry>
-      <title>用git提交代码到github的完整步骤</title>
+      <title>使用 Python 将 NetCDF 转换为 GeoTiff 文件</title>
       <link href="2023/01/30/shi-yong-python-jiang-netcdf-zhuan-huan-wei-geotiff-wen-jian/"/>
       <url>2023/01/30/shi-yong-python-jiang-netcdf-zhuan-huan-wei-geotiff-wen-jian/</url>
       
@@ -2490,14 +2490,14 @@
       
       <categories>
           
-          <category> git </category>
+          <category> python,遥感 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> git </tag>
+            <tag> python,遥感 </tag>
             
         </tags>
       
@@ -2731,9 +2731,9 @@
       
         <tags>
             
-            <tag> matlab </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> matlab </tag>
             
         </tags>
       
@@ -2785,9 +2785,9 @@
       
         <tags>
             
-            <tag> matlab </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> matlab </tag>
             
         </tags>
       
