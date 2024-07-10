@@ -5,8 +5,8 @@
     
     <entry>
       <title>使用GDAL进行遥感影像植被真彩色增强 （一）</title>
-      <link href="2024/07/04/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-yi/"/>
-      <url>2024/07/04/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-yi/</url>
+      <link href="2024/07/09/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-yi/"/>
+      <url>2024/07/09/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-yi/</url>
       
         <content type="html"><![CDATA[<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>在遥感影像处理和分析中，色彩增强是一个常见的任务。通过色彩增强，我们可以更清晰地展示影像中的某些特征，如植被、水体等。本篇博客将介绍如何使用GDAL（地理空间数据抽象库）和Python进行影像植被色彩增强处理，并实现批量处理功能。</p><p>遥感影像自然真彩色合成可分为以下几种方法：1、直接用多光谱影像的红、绿、蓝通道合成，一般用于高分辨率影像；2、利用其它波段加权处理，重新生成红、绿、蓝波段，一般用于增强某种地物颜色层次，如植被、水体等；3、利用其它波段信息重新生成某一波段，一般用于缺少波段的传感器，如SPOT、Aster等。</p><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>这个操作的主要目的是为了影像在视觉上更好看。</p><h3 id="植被色彩增强方法"><a href="#植被色彩增强方法" class="headerlink" title="植被色彩增强方法"></a>植被色彩增强方法</h3><p>这里输入数据可以是原始的L1级数据，也可以是经过大气校正、几何RPC校正后的L2级数据。</p><p>输出数据为4波段的8bit的数据。</p><p>简单地说一下方法流程：</p><p>1.依次读取输入数据的第一、第三、第四波段，对这些波段数据进行线性拉伸，把数据拉伸到8bit。再保存为输出数据的第一、第三、第四波段。</p><p>2.读取输入数据的第二波段、第四波段，利用第二波段、第四波段计算NDVI。</p><p>3.对NDVI进行二维掩膜，NDVI大于0.2的像素赋值为1，NDVI小于0.2的像素赋值为0，该掩膜记为mask。</p><p>4.在输入数据的第二波段，令符合mask=1的像素，根据以下公式进行赋值：</p><p>new_data = band2 <em> a + band4 </em> (1-a)</p><p>这里的band2指绿波段、band4指近红外波段、a是增强数值</p><p>5.在输入数据的第二波段，令符合mask=0的像素,进行线性拉伸，把数据拉伸到8bit。与步骤4的结果进行合并，保存为输出数据的第二波段。</p><h3 id="结果对比"><a href="#结果对比" class="headerlink" title="结果对比"></a>结果对比</h3><p>原始数据在ENVI以线性拉伸的可视化结果</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407041750413.png" alt="image-20240704175052006"></p><p>植被增强后，无需拉伸，在ENVI可视化的结果</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407041752083.png" alt="image-20240704175108226"></p><p>局部放大对比</p><p>原始数据在ENVI以百分之二线性拉伸的可视化结果</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407041753410.png" alt="image-20240704175332343"></p><p>植被增强后，无需拉伸，在ENVI可视化的结果</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407041753478.png" alt="image-20240704175351644"></p><p>原始数据在ENVI以百分之一线性拉伸的可视化结果</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407041758378.png" alt="image-20240704175829559"></p><p>植被增强后，无需拉伸，在ENVI可视化的结果：</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407041758486.png" alt="image-20240704175839427"></p><h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>这种色彩增强的目的是为了某种地物更加鲜艳。</p><p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/LFPriaSjBUZKtt2RBibtkN5YCW22Pl5RlRRH4VVbRnkIwFWlVRY0SKvn8Tic5N1icPiaRqIupDaaFGoettDy6VXekcg/640?wx_fmt=png&amp;from=appmsg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="图片"></p><p>但是，这样做法会破坏光谱信息，后续不能作于遥感反演。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>通过使用GDAL和Python，我们可以轻松实现影像的色彩增强处理，并且支持批量处理。这种方法可以帮助我们更好地分析和展示遥感影像中的重要特征。</p><p>明晚把植被色彩增强的写成一个简易软件，然后通过云盘的方法进行分享、学习。</p>]]></content>
       
@@ -2731,9 +2731,9 @@
       
         <tags>
             
-            <tag> 遥感 </tag>
-            
             <tag> matlab </tag>
+            
+            <tag> 遥感 </tag>
             
         </tags>
       
@@ -2785,9 +2785,9 @@
       
         <tags>
             
-            <tag> 遥感 </tag>
-            
             <tag> matlab </tag>
+            
+            <tag> 遥感 </tag>
             
         </tags>
       
