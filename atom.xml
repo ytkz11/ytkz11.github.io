@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-07-09T08:19:38.767Z</updated>
+  <updated>2024-07-15T02:52:42.219Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,140 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用Python计算和可视化温度植被干旱指数（TVDI）</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-ji-suan-he-ke-shi-hua-wen-du-zhi-bei-gan-han-zhi-shu-tvdi/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-ji-suan-he-ke-shi-hua-wen-du-zhi-bei-gan-han-zhi-shu-tvdi/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-15T02:52:42.219Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在地理空间分析领域，&lt;strong&gt;温度植被干旱指数（TVDI）&lt;/strong&gt;是一种广泛采用的遥感指标，用于评估区域干旱状态。它结合了地表温度（Land Surface Temperature, LST）和归一化植被指数（Normalized Difference</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用Python获取PDF文件的文本</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-15T03:14:44.463Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;虽然PDF文件对文本布局非常好，容易打印并阅读，但软件要将它们解析为纯文本并不容易，Python目前解析PDF的扩展包有很多。&lt;/p&gt;
+&lt;p&gt;通过查询资料，建议使用pdfplumber扩展包来解析PDF文档的文本和表格。本文介绍如何通过pdfplumber获取PDF的文本。</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师资料整理2011年真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-15T06:06:58.789Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2 D.N(N-1)/2&lt;br&gt;答案：B&lt;br&gt;2.我国现行的大地原点、水准原点分别位于（</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师资料整理2012</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-15T06:07:10.561Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;以下为单项选择题：&lt;br&gt;1.选取GPS连续运行参考站时，视场内障碍物的高度角一般不超过（ ）。&lt;br&gt;A、5° B、10° C、15° D、20°&lt;br&gt;答案：B&lt;br&gt;2.某GPS网同步观测一个时段，共得到6条基线边，则使用的GPS接收机台数为（ ）台。&lt;br&gt;A．3</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师资料整理2011</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-zi-liao-zheng-li-2011-nian-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-zi-liao-zheng-li-2011-nian-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-15T02:36:43.779Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
+    
+  </entry>
   
   <entry>
     <title>使用GDAL进行遥感影像植被真彩色增强 （一）</title>
@@ -50,7 +184,7 @@
     <link href="http://ytkz11@.github.io/2024/07/04/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-er/"/>
     <id>http://ytkz11@.github.io/2024/07/04/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-er/</id>
     <published>2024-07-04T14:00:10.000Z</published>
-    <updated>2024-07-04T07:10:32.498Z</updated>
+    <updated>2024-07-10T09:29:05.598Z</updated>
     
     
       
@@ -409,136 +543,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="SAR" scheme="http://ytkz11@.github.io/tags/SAR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>conda教程</title>
-    <link href="http://ytkz11@.github.io/2024/06/03/conda-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/06/03/conda-jiao-cheng/</id>
-    <published>2024-06-03T14:00:10.000Z</published>
-    <updated>2024-06-03T07:31:45.138Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;上个月有小伙伴留言：怎么实现遥感图像的放大缩小平移操作。&lt;/p&gt;
-&lt;p&gt;很久以前曾经写过相应的控件，该控件具备图片查看、放大、缩小和平移等功能。本文将详细分析代码的功能，并解释如何实现这些功能。&lt;/p&gt;
-&lt;h1 id=&quot;代码实现&quot;&gt;&lt;a href=&quot;#代码实现&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】判断某点是否在带孔多边形的内部？</title>
-    <link href="http://ytkz11@.github.io/2024/06/03/dai-ma-shapely-de-within-han-shu-shi-fou-shi-bie-duo-bian-xing-de-nei-kong/"/>
-    <id>http://ytkz11@.github.io/2024/06/03/dai-ma-shapely-de-within-han-shu-shi-fou-shi-bie-duo-bian-xing-de-nei-kong/</id>
-    <published>2024-06-03T14:00:10.000Z</published>
-    <updated>2024-06-03T02:33:21.638Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;遥感图像的空间分辨率&quot;&gt;&lt;a href=&quot;#遥感图像的空间分辨率&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于PySide2实现影像查看控件：探索GIS软件中的缩放和平移逻辑</title>
-    <link href="http://ytkz11@.github.io/2024/06/01/dai-ma-ji-yu-pyside2-shi-xian-ying-xiang-cha-kan-kong-jian-tan-suo-gis-ruan-jian-zhong-de-suo-fang-he-ping-yi-luo-ji/"/>
-    <id>http://ytkz11@.github.io/2024/06/01/dai-ma-ji-yu-pyside2-shi-xian-ying-xiang-cha-kan-kong-jian-tan-suo-gis-ruan-jian-zhong-de-suo-fang-he-ping-yi-luo-ji/</id>
-    <published>2024-06-01T14:00:10.000Z</published>
-    <updated>2024-05-31T08:18:14.735Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;上个月有小伙伴留言：怎么实现遥感图像的放大缩小平移操作。&lt;/p&gt;
-&lt;p&gt;很久以前曾经写过相应的控件，该控件具备图片查看、放大、缩小和平移等功能。本文将详细分析代码的功能，并解释如何实现这些功能。&lt;/p&gt;
-&lt;h1 id=&quot;代码实现&quot;&gt;&lt;a href=&quot;#代码实现&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【python】 if __name__ == __main__ 到底是什么鬼？</title>
-    <link href="http://ytkz11@.github.io/2024/05/28/python-if-name-main-dao-di-shi-shi-me-gui/"/>
-    <id>http://ytkz11@.github.io/2024/05/28/python-if-name-main-dao-di-shi-shi-me-gui/</id>
-    <published>2024-05-28T14:30:10.000Z</published>
-    <updated>2024-05-27T02:01:21.168Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;code&gt;if __name__ == &quot;__main__&quot;:&lt;/code&gt; 是 Python 中一个常见的用法，它主要用于确定当前脚本是作为主程序执行，还是被导入到其他模块中。&lt;/p&gt;
-&lt;p&gt;具体来说，当 Python 解释器执行一个脚本文件时，它会把一个全局变量</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【代码】关爱猪猪健康之yolo物体姿态检测</title>
-    <link href="http://ytkz11@.github.io/2024/05/28/dai-ma-guan-ai-zhu-zhu-jian-kang-zhi-yolo-wu-ti-zi-tai-jian-ce/"/>
-    <id>http://ytkz11@.github.io/2024/05/28/dai-ma-guan-ai-zhu-zhu-jian-kang-zhi-yolo-wu-ti-zi-tai-jian-ce/</id>
-    <published>2024-05-28T14:00:10.000Z</published>
-    <updated>2024-05-27T09:42:03.029Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;一、背景介绍&quot;&gt;&lt;a href=&quot;#一、背景介绍&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
