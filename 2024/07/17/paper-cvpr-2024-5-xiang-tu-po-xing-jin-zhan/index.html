@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            探索CVPR 2024中视觉提示领域的5项突破性进展 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">探索CVPR 2024中视觉提示领域的5项突破性进展</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-07-17 22:00:10</span>
+        <span class="mobile">2024-07-17 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-07-17 10:33:24</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h3 id="计算机视觉领域视觉提示的五大进展"><a href="#计算机视觉领域视觉提示的五大进展" class="headerlink" title="计算机视觉领域视觉提示的五大进展"></a>计算机视觉领域视觉提示的五大进展</h3><ol>
+<li><strong>图像理解</strong>：简单的视觉标记能够帮助基础模型更好地理解图像中的特定部分。</li>
+<li><strong>MLLMs（多模态大型语言模型）</strong>：利用场景图使多模态大型语言模型能够更精准地描述图像，无需额外的训练数据。</li>
+<li><strong>基础模型改进</strong>：通过策略性的视觉提示改进视觉基础模型（如SAM），提升其性能。</li>
+<li><strong>增强泛化能力</strong>：训练人工智能快速识别新（未知）对象，同时保留对旧（已知）对象的记忆。</li>
+<li><strong>视觉提示与主动学习结合</strong>：AI能够智能地学习新的视觉任务，使用更少的例子，且不会忘记已学的知识。</li>
+</ol>
+<p>本文探讨了视觉提示技术，这是一种使大型视觉模型能够适应新任务的方法。</p>
+<p>除了定义这种方法并从系统角度阐述提示可调模型如何革新这一领域，我们还着重介绍了CVPR 2024上提出的五个最具影响力的视觉提示进展。</p>
+<h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><ul>
+<li>什么是视觉提示Visual Prompting</li>
+<li>视觉提示：一种系统视角</li>
+<li>CVPR 2024上抢尽风头的视觉提示进展</li>
+<li>接下来会发生什么</li>
+</ul>
+<h1 id="1-什么是视觉提示？"><a href="#1-什么是视觉提示？" class="headerlink" title="1.什么是视觉提示？"></a>1.什么是视觉提示？</h1><p>What is Visual Prompting?</p>
+<h2 id="1-1-视觉提示的起源"><a href="#1-1-视觉提示的起源" class="headerlink" title="1.1 视觉提示的起源"></a>1.1 视觉提示的起源</h2><p>视觉提示可以追溯到 2001 年发表的《Image Analogies》，其中研究人员开发了一种通过示例处理图像的策略，其中需要提示和查询才能检索响应。</p>
+<p>在生成式人工智能时代，这类的提示方法有什么新变化？</p>
+<p>1.提示是指调整模型去做他们没有经过专门训练的事情。用技术术语来说，提示可以使预先训练的模型适应看不见的分布。</p>
+<p>2.提示在语言模型中得到了普及，其中大型预训练模型（即 GPT-4、文心一言、通义千问等）适应新任务。</p>
+<p>3.视觉提示是指采用视觉大模型来执行（看不见的）视觉任务的过程。</p>
+<h2 id="1-2-理解视觉提示"><a href="#1-2-理解视觉提示" class="headerlink" title="1.2 理解视觉提示"></a>1.2 理解视觉提示</h2><p>为了理解视觉领域的提示，确定提示和微调（标准适应方法）之间的差异可能会很有用。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407170953042.png" alt="image-20240717095353420"></p>
+<p>说明了计算机视觉基础模型背景下视觉提示和微调之间的主要区别。视觉提示采用特征来指导模型而不修改其参数。这种方法提供了灵活性，并且计算要求较低。另一方面，微调涉及在特定数据集上重新训练模型，修改其参数，以牺牲更高的计算资源为代价实现更好的特定于任务的性能。</p>
+<p>然而，这两种方法并不是二元选择。它们都代表了基础模型的一系列潜在适应策略。如下图所示。</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240717100613998.png" alt="image-20240717100613998"></p>
+<p>上图显示，当需要灵活性和速度时，视觉提示可能是针对某些应用程序（例如视觉搜索和检索或快速原型设计和实验）利用大规模视觉模型的最佳方法。</p>
+<h1 id="2-视觉提示：系统视角"><a href="#2-视觉提示：系统视角" class="headerlink" title="2.视觉提示：系统视角"></a>2.视觉提示：系统视角</h1><p>可提示的模型可以与其他系统无缝集成，使其能够在推理过程中作为更大的人工智能系统的一部分执行特定任务。</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:630/1*3ysayHkf_miZUtLSkm5Y3A.png" alt="img"></p>
+<p>上图显示了一个采用即时基础模型作为较大系统组件的系统：</p>
+<p>1.输入图像：系统从输入图像开始，在本例中显示了一群在田野里奔跑的马。</p>
+<p>2.对象检测：输入图像由对象检测器（例如 YOLO-World [6]）处理。此步骤识别并定位图像中的对象，在检测到的对象周围生成边界框。输出显示每匹马周围的边界框，以及天空中云的较小框。</p>
+<p>3.分割：然后将检测到的框用作可提示分割模型的视觉提示（例如，Segment Anything）。该模型为每个检测到的对象生成精确的掩模，从而对图像进行更详细的分割。</p>
+<h1 id="3-视觉提示的进步在-CVPR-2024-上大出风头"><a href="#3-视觉提示的进步在-CVPR-2024-上大出风头" class="headerlink" title="3. 视觉提示的进步在 CVPR 2024 上大出风头"></a>3. 视觉提示的进步在 CVPR 2024 上大出风头</h1><h2 id="3-1-大型多模态模型的直观视觉提示"><a href="#3-1-大型多模态模型的直观视觉提示" class="headerlink" title="3.1 大型多模态模型的直观视觉提示"></a>3.1 大型多模态模型的直观视觉提示</h2><p><img src="https://miro.medium.com/v2/resize:fit:630/0*pfSM2gmNRgcXeZAn" alt="img"></p>
+<p><strong>论文</strong>地址: <a class="link" target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2024/papers/Cai_ViP-LLaVA_Making_Large_Multimodal_Models_Understand_Arbitrary_Visual_Prompts_CVPR_2024_paper.pdf">cvpr open access<i class="fas fa-external-link-alt"></i></a> </p>
+<p>代码地址： : <a class="link" target="_blank" rel="noopener" href="https://vip-llava.github.io/">https://vip-llava.github.io/<i class="fas fa-external-link-alt"></i></a></p>
+<p>创新点：引入了能够解码任意（自由形式）视觉提示的多模态模型，允许用户通过使用“红色边界框”或“指向箭头”等自然提示标记图像来直观地与模型交互，而无需复杂的操作区域编码。</p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 医疗保健成像：允许医疗专业人员突出显示医学图像（例如 X 射线、MRI）中的特定区域，以进行更准确的诊断和分析。</p>
+<p>b) 电子商务产品搜索：使用户能够标记产品图像的特定部分（例如突出显示鞋跟）以查找相似的商品或详细的产品信息。</p>
+<h2 id="3-2-零样本视觉提示增强AI对图像的理解"><a href="#3-2-零样本视觉提示增强AI对图像的理解" class="headerlink" title="3.2 零样本视觉提示增强AI对图像的理解"></a>3.2 零样本视觉提示增强AI对图像的理解</h2><p><img src="https://miro.medium.com/v2/resize:fit:630/0*DLNqfL69WTk767nk.png" alt="img"></p>
+<p>论文地址：<a class="link" target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.17076">https://arxiv.org/pdf/2311.17076<i class="fas fa-external-link-alt"></i></a></p>
+<p>代码地址： <a class="link" target="_blank" rel="noopener" href="https://github.com/chancharikmitra/CCoT">https://github.com/chancharikmitra/CCoT<i class="fas fa-external-link-alt"></i></a></p>
+<p>创新点：组合思想链（CCoT）方法的发展，其中涉及两步零样本提示过程。首先，多模态大语言模型 (MLLM) 根据任务提示从图像生成场景图。然后，该场景图用于提供上下文以生成详细且准确的响应，利用成分信息，而无需注释数据或微调。</p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 视觉问答：通过全面理解视觉内容及其构成，对有关图像的问题提供精确的答案。</p>
+<p>b) 监视：识别图像中的对象并理解它们之间的关系，这对于监视这类应用很有用。</p>
+<h2 id="3-3-基础模型中有效的分割（低成本）"><a href="#3-3-基础模型中有效的分割（低成本）" class="headerlink" title="3.3 基础模型中有效的分割（低成本）"></a>3.3 基础模型中有效的分割（低成本）</h2><p><img src="https://miro.medium.com/v2/resize:fit:630/0*osYnr00wDxrQ3Xwa" alt="img"></p>
+<p>论文地址：<a class="link" target="_blank" rel="noopener" href="https://arxiv.org/abs/2312.15895">https://arxiv.org/abs/2312.15895<i class="fas fa-external-link-alt"></i></a></p>
+<p>代码地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/zhaoyangwei123/SAPNet">https://github.com/zhaoyangwei123/SAPNet<i class="fas fa-external-link-alt"></i></a></p>
+<p>创新点：语义感知实例分割网络 (SAPNet) 的开发，它使用点提示将多实例学习 (MIL) 与 SAM 等视觉基础模型集成在一起。 SAPNet 通过战略性地选择代表性掩模提案并通过点距离指导和框挖掘策略解决分割挑战来增强特定于类别的分割。</p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 自动驾驶：改进自动驾驶车辆系统中的物体检测和分类，从而提高决策和安全性。</p>
+<p>b) 农业监测：通过航空或卫星图像对特定作物或植物进行精确分割，以实现更好的农业管理和产量预测。</p>
+<h2 id="3-4-在基础模型中使用视觉提示以实现更好的图像分割"><a href="#3-4-在基础模型中使用视觉提示以实现更好的图像分割" class="headerlink" title="3.4 在基础模型中使用视觉提示以实现更好的图像分割"></a>3.4 在基础模型中使用视觉提示以实现更好的图像分割</h2><p><img src="https://miro.medium.com/v2/resize:fit:630/0*RILcmIO31pZbCwWO" alt="img"></p>
+<p>论文地址：<a class="link" target="_blank" rel="noopener" href="https://arxiv.org/pdf/2404.11732">https://arxiv.org/pdf/2404.11732<i class="fas fa-external-link-alt"></i></a></p>
+<p>代码地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/rayat137/VisualPromptGFSS">https://github.com/rayat137/VisualPromptGFSS<i class="fas fa-external-link-alt"></i></a></p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 自动驾驶车辆：通过最少的示例快速适应识别和分割新物体或路况，同时保留常见道路元素。</p>
+<p>b) 卫星图像分析：通过少量示例识别和分割新类型的土地利用或环境变化，同时保持地理特征。</p>
+<h2 id="3-5-主动学习与视觉语言模型（VLM）提示的结合"><a href="#3-5-主动学习与视觉语言模型（VLM）提示的结合" class="headerlink" title="3.5 主动学习与视觉语言模型（VLM）提示的结合"></a>3.5 主动学习与视觉语言模型（VLM）提示的结合</h2><p><img src="https://miro.medium.com/v2/resize:fit:630/0*Og3RCSRfW0B0aOZd" alt="img"></p>
+<p>论文地址：<a class="link" target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.11178">https://arxiv.org/pdf/2311.11178<i class="fas fa-external-link-alt"></i></a></p>
+<p>代码地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/kaist-dmlab/pcb">https://github.com/kaist-dmlab/pcb<i class="fas fa-external-link-alt"></i></a></p>
+<p>创新点：开发了一种名为 PCB 的新型主动学习框架，专门为预训练的视觉语言模型 (VLM) 设计。这种方法解决了使 VLM 适应新任务的挑战，同时最大限度地减少对标签的需求。</p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 医学成像：快速调整 VLM，以最少的专家标记来识别新的疾病模式或异常。</p>
+<p>b) 电子商务：通过使用有限的手动输入使 VLM 适应新产品线，提高产品分类和搜索能力。</p>
+<h1 id="4-下一步是什么"><a href="#4-下一步是什么" class="headerlink" title="4. 下一步是什么"></a>4. 下一步是什么</h1><p>正如我们在本文中讨论的，视觉提示使得在输入空间中调整基础模型成为可能。这一点至关重要，因为这一输入充当了人类与模型之间的通用接口。在视觉领域，可提示模型很可能重塑传统计算机视觉流程的运作方式。许多这类模型可以被视为构建模块，它们将取代传统流程中的一些常见阶段（例如，标注）。</p>
+<p>换句话说，通过视觉提示技术，我们现在能够在输入层面灵活地调整基础模型，这对于连接人机交互至关重要。在视觉模型领域，具备提示能力的模型正引领着计算机视觉传统处理流程的变革。这些模型就像是新的基石，它们有望替代传统流水线中诸如图像标注等常规步骤，从而简化和优化整个视觉处理流程。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/07/17/python-wo-hen-yi-han-mei-you-zao-dian-zhi-dao-python-zi-dian-de-8-ge-gong-neng/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【python】我很遗憾没有早点知道 Python 字典的 8 个功能</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

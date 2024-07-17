@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-07-15T02:52:42.219Z</updated>
+  <updated>2024-07-17T02:33:24.410Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>探索CVPR 2024中视觉提示领域的5项突破性进展</title>
+    <link href="http://ytkz11@.github.io/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/"/>
+    <id>http://ytkz11@.github.io/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/</id>
+    <published>2024-07-17T14:00:10.000Z</published>
+    <updated>2024-07-17T02:33:24.410Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;计算机视觉领域视觉提示的五大进展&quot;&gt;&lt;a href=&quot;#计算机视觉领域视觉提示的五大进展&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【python】我很遗憾没有早点知道 Python 字典的 8 个功能</title>
+    <link href="http://ytkz11@.github.io/2024/07/17/python-wo-hen-yi-han-mei-you-zao-dian-zhi-dao-python-zi-dian-de-8-ge-gong-neng/"/>
+    <id>http://ytkz11@.github.io/2024/07/17/python-wo-hen-yi-han-mei-you-zao-dian-zhi-dao-python-zi-dian-de-8-ge-gong-neng/</id>
+    <published>2024-07-17T14:00:10.000Z</published>
+    <updated>2024-07-17T05:19:40.021Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这些技巧使得处理 Python 中的字典变得更加愉快和优雅。&lt;/p&gt;
+&lt;h1 id=&quot;1）使用-dict-key-value-创建字典&quot;&gt;&lt;a href=&quot;#1）使用-dict-key-value-创建字典&quot; class=&quot;headerlink&quot; title=&quot;1）使用</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>利用Python计算和可视化温度植被干旱指数（TVDI）</title>
@@ -50,7 +105,7 @@
     <link href="http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/"/>
     <id>http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-15T03:14:44.463Z</updated>
+    <updated>2024-07-16T02:54:33.990Z</updated>
     
     
       
@@ -72,43 +127,20 @@
   </entry>
   
   <entry>
-    <title>注册测绘师资料整理2011年真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/</id>
-    <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-15T06:06:58.789Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2 D.N(N-1)/2&lt;br&gt;答案：B&lt;br&gt;2.我国现行的大地原点、水准原点分别位于（</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
     <title>注册测绘师资料整理2012</title>
     <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zhen-ti/"/>
     <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-15T06:07:10.561Z</updated>
+    <updated>2024-07-16T07:06:07.806Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;以下为单项选择题：&lt;br&gt;1.选取GPS连续运行参考站时，视场内障碍物的高度角一般不超过（ ）。&lt;br&gt;A、5° B、10° C、15° D、20°&lt;br&gt;答案：B&lt;br&gt;2.某GPS网同步观测一个时段，共得到6条基线边，则使用的GPS接收机台数为（ ）台。&lt;br&gt;A．3</summary>
+    <summary type="html">&lt;p&gt;以下为单项选择题：&lt;br&gt;1.选取GPS连续运行参考站时，视场内障碍物的高度角一般不超过（ ）。&lt;br&gt;A、5° B、10° C、15° D、20°&lt;/p&gt;
+&lt;p&gt;答案：B&lt;/p&gt;
+&lt;p&gt;2.某GPS网同步观测一个时段，共得到6条基线边，则使用的GPS接收机台数为（</summary>
         
       
     
@@ -123,30 +155,28 @@
   
   <entry>
     <title>注册测绘师资料整理2011</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-zi-liao-zheng-li-2011-nian-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-zi-liao-zheng-li-2011-nian-zhen-ti/</id>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-15T02:36:43.779Z</updated>
+    <updated>2024-07-16T07:34:05.179Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;以下为单项选择题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
     
   </entry>
   
@@ -512,37 +542,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>利用Python处理合成孔径雷达（SAR）数据的成像过程</title>
-    <link href="http://ytkz11@.github.io/2024/06/05/dai-ma-li-yong-python-chu-li-he-cheng-kong-jing-lei-da-sar-shu-ju-de-wan-zheng-liu-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/06/05/dai-ma-li-yong-python-chu-li-he-cheng-kong-jing-lei-da-sar-shu-ju-de-wan-zheng-liu-cheng/</id>
-    <published>2024-06-05T14:00:10.000Z</published>
-    <updated>2024-06-05T03:10:54.996Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;本文介绍了利用Python处理合成孔径雷达（SAR）数据的完整流程，包括数据加载、基本定义、聚焦、多视处理和结果显示等步骤。&lt;/p&gt;
-&lt;p&gt;首先，通过加载包含SAR原始数据的&lt;code&gt;.mat&lt;/code&gt;文件，获取数据矩阵并设置相关的传感器参数。&lt;/p&gt;
-&lt;p&gt;接着，定</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="SAR" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/SAR/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="SAR" scheme="http://ytkz11@.github.io/tags/SAR/"/>
     
   </entry>
   
