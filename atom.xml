@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-07-17T02:33:24.410Z</updated>
+  <updated>2024-07-18T01:31:42.108Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2011年-2022年摄影测量地图制图GIS相关真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/18/zhu-ce-ce-hui-shi-2011-nian-2022-nian-she-ying-ce-liang-di-tu-zhi-tu-gis-xiang-guan-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/18/zhu-ce-ce-hui-shi-2011-nian-2022-nian-she-ying-ce-liang-di-tu-zhi-tu-gis-xiang-guan-zhen-ti/</id>
+    <published>2024-07-18T14:00:10.000Z</published>
+    <updated>2024-07-18T01:31:42.108Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;39.多源遥感影像数据融合的主要优点是（ ）。&lt;br&gt;A、可以自动确定多种传感器影像的外方位元素 B、可以充分发挥各种传感器影像自身的特点 C、可以提高影像匹配的速度</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
   
   <entry>
     <title>探索CVPR 2024中视觉提示领域的5项突破性进展</title>
@@ -72,6 +98,32 @@
   </entry>
   
   <entry>
+    <title>利用Python获取PDF文件的文本</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-16T02:54:33.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;虽然PDF文件对文本布局非常好，容易打印并阅读，但软件要将它们解析为纯文本并不容易，Python目前解析PDF的扩展包有很多。&lt;/p&gt;
+&lt;p&gt;通过查询资料，建议使用pdfplumber扩展包来解析PDF文档的文本和表格。本文介绍如何通过pdfplumber获取PDF的文本。</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>利用Python计算和可视化温度植被干旱指数（TVDI）</title>
     <link href="http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-ji-suan-he-ke-shi-hua-wen-du-zhi-bei-gan-han-zhi-shu-tvdi/"/>
     <id>http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-ji-suan-he-ke-shi-hua-wen-du-zhi-bei-gan-han-zhi-shu-tvdi/</id>
@@ -101,28 +153,29 @@
   </entry>
   
   <entry>
-    <title>利用Python获取PDF文件的文本</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/</id>
+    <title>注册测绘师资料整理2011</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-16T02:54:33.990Z</updated>
+    <updated>2024-07-16T07:34:05.179Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;虽然PDF文件对文本布局非常好，容易打印并阅读，但软件要将它们解析为纯文本并不容易，Python目前解析PDF的扩展包有很多。&lt;/p&gt;
-&lt;p&gt;通过查询资料，建议使用pdfplumber扩展包来解析PDF文档的文本和表格。本文介绍如何通过pdfplumber获取PDF的文本。</summary>
+    <summary type="html">&lt;p&gt;以下为单项选择题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
         
       
     
     
     
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
     
     
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
     
   </entry>
   
@@ -141,33 +194,6 @@
     <summary type="html">&lt;p&gt;以下为单项选择题：&lt;br&gt;1.选取GPS连续运行参考站时，视场内障碍物的高度角一般不超过（ ）。&lt;br&gt;A、5° B、10° C、15° D、20°&lt;/p&gt;
 &lt;p&gt;答案：B&lt;/p&gt;
 &lt;p&gt;2.某GPS网同步观测一个时段，共得到6条基线边，则使用的GPS接收机台数为（</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师资料整理2011</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/</id>
-    <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-16T07:34:05.179Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;以下为单项选择题：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
         
       
     
@@ -499,31 +525,6 @@
     <title>TIF转换到KMZ的教程</title>
     <link href="http://ytkz11@.github.io/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/"/>
     <id>http://ytkz11@.github.io/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/</id>
-    <published>2024-06-11T14:00:10.000Z</published>
-    <updated>2024-06-12T06:49:25.987Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;KML 和 KMZ 都是 Google 地球和其他地图程序中用于显示地理数据的文件格式。两者之间的主要区别在于，KML 是一种用于以 XML 格式存储地理数据的文件格式，而 KMZ 是一种压缩文件格式，包含一个或多个 KML</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TIF转换到KMZ的教程</title>
-    <link href="http://ytkz11@.github.io/2024/06/11/gong-ju-an-zhuang-geo-sam-de-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/06/11/gong-ju-an-zhuang-geo-sam-de-jiao-cheng/</id>
     <published>2024-06-11T14:00:10.000Z</published>
     <updated>2024-06-12T06:49:25.987Z</updated>
     
