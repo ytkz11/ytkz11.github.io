@@ -139,20 +139,17 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/">
-                        【代码】多个shapefile面合并
+                    <a href="/2024/04/02/dai-ma-gee-xia-zai-sentinel2-shu-ju/">
+                        【代码】GEE下载sentinel2数据遇到的bug及解决
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        import numpy as np
-from osgeo import gdal
-from osgeo import gdal_array
-from osgeo import osr
-import matplotlib.pylab as plt
-
-...
+                        Google earth engine（GEE）是一个非常好用的数据下载的工具。
+近日在GEE下载sentinel2影像，遇到问题，现记录并解决改问题。
+数据下载脚本2024年3月1日之前,下载sentinel2的脚本如下：
+Map.centerOb...
                     
                 </div>
 
@@ -160,15 +157,15 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Mar 20 2024 16:38:02 GMT+0800">
-                2024-03-20
+            <span class="home-article-date" data-updated="Tue Apr 02 2024 09:53:34 GMT+0800">
+                2024-04-02
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2024/03/17/dai-ma-ru-he-jiang-er-wei-shu-zu-shu-ju-xie-ru-dao-geotiff-wen-jian-zhong/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/04/02/dai-ma-gee-xia-zai-sentinel2-shu-ju/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -178,16 +175,21 @@ import matplotlib.pylab as plt
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/">
-                        【代码】使用Python的GDAL/OGR库来创建渔网格
+                    <a href="/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/">
+                        【代码】DEM生成等高线
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        什么是GIS渔网在GIS里，渔网格是一种常见的地理空间数据分析和可视化工具，它可以将地理空间数据划分为规则的网格，便于进行进一步的统计和分析。
-在arcgis中很容易实现这个功能。
-在搜索框搜索“fishnet”，如果你的版本是中文，则搜索‘’渔网‘...
+                        本质是输入为高程asc文件，输出为shp文件。
+直接上代码：
+
+
+from osgeo import gdal, ogr
+import sys
+
+def generate_contour(source, target, contour_interva...
                     
                 </div>
 
@@ -195,15 +197,15 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Mar 20 2024 16:35:26 GMT+0800">
-                2024-03-20
+            <span class="home-article-date" data-updated="Mon Apr 08 2024 10:13:35 GMT+0800">
+                2024-04-08
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2024/03/17/dai-ma-shi-xian-yu-wang-de-chuang-jian/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -213,17 +215,15 @@ import matplotlib.pylab as plt
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/">
-                        【代码】给定起点位置、距离及姿态角，求另一点位置
+                    <a href="/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/">
+                        【代码】水深测量数据可视化及转格式
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        如题，这是现实中遇到的问题的简化版。
-已知一个点的经纬度和离另一个点的球面距离，和无人机飞行时刻姿态角，求另一个点的经纬度。
-姿态角首先，得了解什么是姿态角。
-姿态角（Attitude angles）：这是一个用于描述物体在空间中的方向和姿态的一组三...
+                        水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。
+这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒...
                     
                 </div>
 
@@ -231,15 +231,15 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Mar 27 2024 17:21:44 GMT+0800">
-                2024-03-27
+            <span class="home-article-date" data-updated="Mon Apr 01 2024 09:47:03 GMT+0800">
+                2024-04-01
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/03/29/dai-ma-shui-shen-ce-liang-shu-ju-ke-shi-hua-ji-zhuan-ge-shi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -249,16 +249,18 @@ import matplotlib.pylab as plt
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/">
-                        【代码】遥感影像匀色
+                    <a href="/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/">
+                        【python】进入python环境的方法
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        这里实现的是遥感影像匀色的功能——直方图匹配。
-直方图匹配是一种用于图像处理的技术，它可以用来调整一幅图像的颜色或灰度分布，使其与另一幅图像的颜色或灰度分布相匹配。这种技术常常用于图像增强，例如改善图像的对比度或者进行颜色校正。
-首先，让我们解释一下...
+                        人在江湖飘，一个电脑里的python版本可能不止一个。比如说我，有两个不一样的python版本。
+首先都要把python的安装路径添加到系统的环境变量里。
+
+第一种方法我们可以在命令行（cmd），输入python，就可以进入python环境了。
+是不...
                     
                 </div>
 
@@ -266,15 +268,15 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Mar 27 2024 17:46:19 GMT+0800">
-                2024-03-27
+            <span class="home-article-date" data-updated="Thu Mar 28 2024 17:02:44 GMT+0800">
+                2024-03-28
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2024/03/17/dai-ma-yao-gan-ying-xiang-yun-se/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/03/28/python-san-chong-jin-ru-python-huan-jing-de-fang-fa/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -284,15 +286,16 @@ import matplotlib.pylab as plt
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/03/13/shen-du-xue-xi-cong-lenet-kan-shen-jing-wang-luo-da-jian/">
-                        【深度学习】从LeNet学神经网络搭建
+                    <a href="/2024/03/28/shen-du-xue-xi-shen-jing-wang-luo-shi-tong-guo-shi-me-lai-ni-he-zhen-shi-shi-jie/">
+                        神经网络拟合真实世界的过程！
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        LeNet是最早的卷积神经网络之一，其被提出用于识别手写数字和机器印刷字符。 1998年，Yann LeCun第一次将LeNet卷积神经网络应用到图像分类上，在手写数字识别任务中取得了巨大成功。
-现代的神经网络模型，包括深度学习模型，其底层的数学原理...
+                        神经网络是一种强大的计算模型，它能够学习并拟合复杂的数据模式，从图像和文本到音频和更多。神经网络通过以下步骤来拟合现实世界的数据：
+1.数字化。把真实物理世界的内容用数值来表示。
+2.定义网络结构。通过模拟神经元的形式，构造神经网络。如何定义一个神经...
                     
                 </div>
 
@@ -300,7 +303,7 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sun Apr 07 2024 13:28:44 GMT+0800">
+            <span class="home-article-date" data-updated="Sun Apr 07 2024 13:08:23 GMT+0800">
                 2024-04-07
             </span>
         </span>
@@ -308,7 +311,7 @@ import matplotlib.pylab as plt
         
     </div>
 
-    <a class="read-more" href="/2024/03/13/shen-du-xue-xi-cong-lenet-kan-shen-jing-wang-luo-da-jian/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/03/28/shen-du-xue-xi-shen-jing-wang-luo-shi-tong-guo-shi-me-lai-ni-he-zhen-shi-shi-jie/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -318,16 +321,15 @@ import matplotlib.pylab as plt
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/03/06/shi-liang-cai-jian-shi-liang/">
-                        矢量裁剪矢量
+                    <a href="/2024/03/25/dai-ma-shuang-chong-xun-huan-yu-ju-shi-xian-fen-kuai-chu-li/">
+                        【代码】双重循环语句实现分块处理
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        在地理信息系统（GIS）中，根据一个矢量范围去裁剪另一个矢量范围是一种常见的操作。这个操作的基本步骤如下：
-
-加载矢量数据：首先，你需要加载你的矢量数据。在Python中，你可以使用GDAL/OGR库来加载矢量数据。加载矢量数据后，你可以获取到数据的...
+                        遥感影像通常具有极高的分辨率和大量的数据量，这就使得全景处理遥感影像成为一项极具挑战的任务。首要的问题是，大规模的遥感影像可能会超过硬件设备，特别是GPU的内存容量。其次，处理大规模遥感影像的计算复杂度非常高，可能会导致处理速度缓慢，效率低下。
+在具...
                     
                 </div>
 
@@ -335,15 +337,15 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Mar 08 2024 14:11:08 GMT+0800">
-                2024-03-08
+            <span class="home-article-date" data-updated="Wed Mar 27 2024 17:25:33 GMT+0800">
+                2024-03-27
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2024/03/06/shi-liang-cai-jian-shi-liang/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/03/25/dai-ma-shuang-chong-xun-huan-yu-ju-shi-xian-fen-kuai-chu-li/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -353,17 +355,17 @@ import matplotlib.pylab as plt
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/03/01/pycharm-bian-ma-bao-cuo-ji-jie-jue/">
-                        pycharm编码报错及解决
+                    <a href="/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/">
+                        【代码】根据经纬度从数字高程模型（DEM）文件获取高度
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        报错UnicodeDecodeError: ‘utf-8’ codec can’t decode bytes in position 1022-1023: unexpected end of data
-
-报错信息内容翻译如下所示：
-编码解码错误:“u...
+                        在地理信息系统（GIS）和遥感中，数字高程模型（Digital Elevation Model，简称DEM）是一种表示
+地表或地形高程信息的重要数据。DEM数据通常以栅格（raster）形式存在，其中每个像素的值表示相
+应地理位置的高程。
+之前介绍了...
                     
                 </div>
 
@@ -371,15 +373,15 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Mar 01 2024 09:47:30 GMT+0800">
-                2024-03-01
+            <span class="home-article-date" data-updated="Mon Mar 25 2024 09:11:00 GMT+0800">
+                2024-03-25
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2024/03/01/pycharm-bian-ma-bao-cuo-ji-jie-jue/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/03/25/dai-ma-gen-ju-jing-wei-du-cong-shu-zi-gao-cheng-mo-xing-dem-wen-jian-huo-qu-gao-du/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -389,15 +391,20 @@ import matplotlib.pylab as plt
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/02/28/da-ying-xiang-wei-shen-16bit-zhuan-8bit-de-fang-fa-ji-shi-xian/">
-                        遥感大影像位深转8bit的方法及实现
+                    <a href="/2024/03/18/dai-ma-gen-ju-shi-liang-cai-jian-netcdf-shi-jian-xu-lie-shu-ju/">
+                        【代码】根据矢量裁剪NetCDF 时间序列数据
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        位深位深（Bit Depth）是指数字图像中每个像素用于记录颜色信息的位数。位深越高，可用于表示颜色的信息就越丰富，图像的颜色就越真实且细腻。然而，位深越高，图像文件的大小也就越大。
-在数字图像中，常见的位深有8位、16位、24位和32位等。下面我们...
+                        之前写了
+1.矢量裁剪栅格 
+2.矢量裁剪矢量
+其实还有另一种裁剪数据的类型，那就是矢量裁剪NetCDF，下面简称为NC数据。
+常见的NC数据，就我个人遇到的情况来说，有以下几个：
+1.美国的jason3海洋数据
+2.中国的风云三号、风云四号气象数据...
                     
                 </div>
 
@@ -405,15 +412,15 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Mar 01 2024 00:04:24 GMT+0800">
-                2024-03-01
+            <span class="home-article-date" data-updated="Wed Mar 20 2024 16:33:17 GMT+0800">
+                2024-03-20
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2024/02/28/da-ying-xiang-wei-shen-16bit-zhuan-8bit-de-fang-fa-ji-shi-xian/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/03/18/dai-ma-gen-ju-shi-liang-cai-jian-netcdf-shi-jian-xu-lie-shu-ju/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -423,17 +430,15 @@ import matplotlib.pylab as plt
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/02/27/roi-cai-jian-ji-yu-python/">
-                        ROI裁剪--基于python
+                    <a href="/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/">
+                        【代码】XYZ格式地形(水深)数据转换为ASCIIGrid格式
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        从一个大的 TIFF 图像文件中裁剪出一个小的区域，并将该区域保存为新的 TIFF 文件。这个过程通常被称为 “region of interest” (ROI) 裁剪。
-在arcgis可以实现这个功能，但是如何使用代码去实现？
-
-代码代码短，实现了...
+                        水深测量数据，算是一种遥感数据，只是与平常的航天航空影像数据数据的格式、形式不一样。
+这是最常用的水深测量方法，特别是在大型水体（如海洋和大湖）中。声纳（SONAR）是一种利用声波在水中传播和反射的技术，通过发送声波并测量其返回时间来计算水深。多普勒...
                     
                 </div>
 
@@ -441,15 +446,15 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Feb 27 2024 16:48:53 GMT+0800">
-                2024-02-27
+            <span class="home-article-date" data-updated="Fri Mar 29 2024 15:06:26 GMT+0800">
+                2024-03-29
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2024/02/27/roi-cai-jian-ji-yu-python/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -459,16 +464,14 @@ import matplotlib.pylab as plt
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2024/02/20/leetcode-zhi-yi-chu-yuan-su/">
-                        leetcode之移除元素
+                    <a href="/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/">
+                        【代码】多个shapefile面合并
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        题目给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。
-不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并原地修改输入数组。
-元素的顺序可以改变。你不需要考虑数组中超出新长度后...
+                        什么是GIS面合并GIS（地理信息系统）中的面合并是一个处理地理空间数据的常见操作。它涉及到将两个或者更多的相邻或者重叠的多边形（也被称为“面”）合并为一个单一的多边形。这个操作通常在处理地理数据时用来简化数据集，例如将多个相邻的行政区域合并为一个更...
                     
                 </div>
 
@@ -476,15 +479,15 @@ import matplotlib.pylab as plt
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Feb 20 2024 13:26:08 GMT+0800">
-                2024-02-20
+            <span class="home-article-date" data-updated="Tue Mar 19 2024 17:32:51 GMT+0800">
+                2024-03-19
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2024/02/20/leetcode-zhi-yi-chu-yuan-su/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

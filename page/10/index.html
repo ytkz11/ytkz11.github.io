@@ -139,17 +139,17 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/">
-                        编程_栅格进行裁剪
+                    <a href="/2024/01/10/he-bing-dan-ge-wen-jian-nei-duo-ge-chong-die-de-duo-bian-xing-mian-shi-liang/">
+                        合并单个文件内多个重叠的多边形面矢量
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        需求现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。
-代码#!/usr/bin/env python
-# -*- coding: utf-8 -*- 
-# @Time : 2023/11/27 10:1...
+                        引言传统操作面矢量合并，在arcgis是一个常见的操作。使用ArcGIS合并重叠的多边形的步骤如下：
+
+准备数据：首先需要准备待处理的重叠多边形数据，这可以通过遥感影像解译、野外实地调查等方式获得。
+构建重叠区域图层：使用ArcGIS的”Union”...
                     
                 </div>
 
@@ -157,15 +157,15 @@
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Dec 01 2023 13:51:30 GMT+0800">
-                2023-12-01
+            <span class="home-article-date" data-updated="Fri Feb 02 2024 16:03:26 GMT+0800">
+                2024-02-02
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/12/01/bian-cheng-zha-ge-jin-xing-cai-jian/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/01/10/he-bing-dan-ge-wen-jian-nei-duo-ge-chong-die-de-duo-bian-xing-mian-shi-liang/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -175,15 +175,18 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/">
-                        python多版本与虚拟环境
+                    <a href="/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/">
+                        shp文件在arcgis打开失败及其修复
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        为什么要使用多个版本的python？前几天想研究insar,发现了有个第三方库pygmtsar。在pip insatll pygmtsar 完成后，测试一下import pygmtsar 语句，竟然报错。
-搜索一遍后，发现是 distributed这...
+                        引言
+打开不了shp文件同学们在平常使用arcgis的时候，是否遇到了下面这样的情况。
+
+这是由于shp文件丢失了部分数据，导致在arcgis打不开。
+1个 Shape文件结构Shape文件的文件构成Shape文件由3 个文件构成: 主文件、索引文件...
                     
                 </div>
 
@@ -191,7 +194,80 @@
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jan 31 2024 17:33:35 GMT+0800">
+            <span class="home-article-date" data-updated="Sun Apr 07 2024 13:08:17 GMT+0800">
+                2024-04-07
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/01/03/shp-wen-jian-zai-arcgis-da-kai-shi-bai-ji-qi-xiu-fu/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/">
+                        编程_矢量转为栅格
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        
+需求现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。
+代码#!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+# @Time : 2023/11/30 10:...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Thu Dec 28 2023 08:48:42 GMT+0800">
+                2023-12-28
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2023/12/26/bian-cheng-shi-liang-zhuan-wei-zha-ge/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/">
+                        如何将tif格式的文件由30m重采样到100m?
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        在知乎上看到这个问题，记录一下解决的过程。
+命令行的方式如果你安装编译好gdal，可以使用以下命令：
+gdalwarp -tr 100 100 input.tif output.tif
+代码的方式此外，你还可以用python代码的方式进行重采样，把影...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Wed Jan 31 2024 16:45:19 GMT+0800">
                 2024-01-31
             </span>
         </span>
@@ -199,7 +275,7 @@
         
     </div>
 
-    <a class="read-more" href="/2023/11/14/shi-yong-duo-ge-python-ban-ben-de-jie-jue-ban-fa/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -209,15 +285,18 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/11/14/cong-gadm-xia-zai-shi-jie-ge-guo-de-xing-zheng-bian-jie/">
-                        从gadm下载世界各国的行政边界
+                    <a href="/2023/12/22/shi-liang-zuo-biao-zhuan-huan/">
+                        矢量坐标转换
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        GADM: 全球行政区划数据库GADM主页：https://gadm.org/
-GADM，全称Database of Global Administrative Areas，是一个高精度的全球行政区划数据库。其包含了全球所有国家和地区的国界、省界、市...
+                        
+需要把非84坐标的矢量转换为WGS84坐标的矢量。
+方法介绍跟栅格数据投影转换一样，使用GDAL库，我们有两种方法进行矢量数据的重投影：
+1.使用命令工具及其对应的命令行API接口进行转换（简单，准确，实践中一定要用这种方法）
+GDAL提供了ogr...
                     
                 </div>
 
@@ -225,15 +304,15 @@ GADM，全称Database of Global Administrative Areas，是一个高精度的全�
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Dec 18 2023 08:46:24 GMT+0800">
-                2023-12-18
+            <span class="home-article-date" data-updated="Tue Dec 26 2023 09:00:06 GMT+0800">
+                2023-12-26
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/11/14/cong-gadm-xia-zai-shi-jie-ge-guo-de-xing-zheng-bian-jie/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/22/shi-liang-zuo-biao-zhuan-huan/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -243,21 +322,18 @@ GADM，全称Database of Global Administrative Areas，是一个高精度的全�
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/">
-                        maven编译snap-engine过程遇到的问题及解决方法
+                    <a href="/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/">
+                        pyside6将图片资源转为py格式
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        1问题
-
-java的版本、编译的环境
-解决办法
-
-
-Maven &gt;= v3.2.5, recommended 3.9.2
-Java JDK  = v11 (Any of the available OpenJDK distributions s...
+                        需求pyside6将图片资源转为py格式， 是为了打包为exe的时候不丢失图片文件
+步骤新建img.qrc文件，例子如下：
+&lt;RCC&gt;
+    &lt;qresource prefix="pic"&gt;
+        &lt;file...
                     
                 </div>
 
@@ -265,15 +341,15 @@ Java JDK  = v11 (Any of the available OpenJDK distributions s...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Thu Nov 16 2023 10:03:23 GMT+0800">
-                2023-11-16
+            <span class="home-article-date" data-updated="Thu Dec 21 2023 10:12:42 GMT+0800">
+                2023-12-21
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -283,15 +359,22 @@ Java JDK  = v11 (Any of the available OpenJDK distributions s...
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/">
-                        借助ogr2ogr工具实现shp文件转换kml格式
+                    <a href="/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/">
+                        GIS格式和地理空间文件扩展名的汇总
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        kml格式是一种在GOOGLE地图浏览器中用于交换地理数据的文件。它基于XML，并定义了一些TAG用于规定地理数据的显示方式。KML可用于定义的地理特征包括地点、描述、叠层、路径和多边形等。
-实际工作中我们拿到的矢量数据格式大部分是shp格式的文件，...
+                        某些地理空间数据格式很常见。但有些并不常见。笔者汇总 GIS 文件格式：
+矢量 GIS 文件格式
+矢量数据不是由像素网格组成的。相反，矢量图形由顶点和路径组成
+矢量数据的三种基本符号类型是点、线和面（面）。这些GIS文件格式包含矢量数据。
+
+
+
+
+文...
                     
                 </div>
 
@@ -299,7 +382,76 @@ Java JDK  = v11 (Any of the available OpenJDK distributions s...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Apr 02 2024 13:26:54 GMT+0800">
+            <span class="home-article-date" data-updated="Mon Dec 11 2023 17:05:49 GMT+0800">
+                2023-12-11
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/">
+                        如何列出 Python 项目中使用的模块
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        在项目开发中，我们有时会引入一些包，后续由于种种原因，并没有 import 到项目中。如果在部署到时候使用 pip freeze，则会将这些并未引入到包也列到 requirements 中，而实际这些包是不需要的。
+pipreqs 这个包就可以解决这...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Mon Feb 19 2024 10:51:54 GMT+0800">
+                2024-02-19
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2023/12/08/bian-cheng-ru-he-lie-chu-python-xiang-mu-zhong-wei-shi-yong-de-bao/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/">
+                        编程_不使用gdal读取tif文件
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        读取tif文件正常来说，读取tif文件，使用gdal库就能解决了。
+gdal库在遥感行业过于强大、简单、易用，以至于很多商业软件的底层也调用了gdal。
+平常在python环境下使用gdal库对tif文件进行读写是很简单的，大佬们都把函数、接口封装得...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Apr 02 2024 13:25:49 GMT+0800">
                 2024-04-02
             </span>
         </span>
@@ -307,7 +459,7 @@ Java JDK  = v11 (Any of the available OpenJDK distributions s...
         
     </div>
 
-    <a class="read-more" href="/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -317,157 +469,16 @@ Java JDK  = v11 (Any of the available OpenJDK distributions s...
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/">
-                        arcgis闪退导致shp文件破损及修复方法
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        arcgis闪退再一次出现了正在画矢量时，arcgis软件闪退，导致shp文件不能打开，这次详细的记录下来，解决方法。
-
-普通的修复方法在ENVI软件打开对应的shp文件，把shp拖拽到envi中。
-
-点击Load Data.
-在左侧的Later M...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Oct 25 2023 16:13:56 GMT+0800">
-                2023-10-25
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/">
-                        编程 | Landsat9影像转真彩色RGBA缩略图
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        Landsat 9从USGS下载Landsat9影像，Landsat9影像和国产影像不一样的地方在于：
-1.Landsat9影像已做好了几何校正，无rpc文件。
-2.Landsat9影像以单波段的形式，将每个波段保存为单独的文件。
-Landsat9 ...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Oct 16 2023 17:46:34 GMT+0800">
-                2023-10-16
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/">
-                        编程 | 从RGBA图片格式理解波段
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        RGBA格式RGBA是一种色彩空间的模型，由RGB色彩空间和Alpha通道组成。RGBA代表红、绿、蓝和Alpha通道。 RGB是RGBA采用的颜色，它可以属于任何一种RGB色彩空间。而艾德文·卡特姆和匠白光在1971至1972年间提出的Alpha参...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Oct 13 2023 19:16:41 GMT+0800">
-                2023-10-13
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2023/10/10/bian-cheng-cong-rgba-tu-pian-ge-shi-li-jie-bo-duan/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/">
-                        GDAL读取HDF、NetCDF数据集
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        HDF5、NetCDF默认HDF5、NetCDF这两类文件是相似，读取文件的步骤也是相似的。
-HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc
-以下用nc文件代指HDF、NetCDF文件。
-对程序员来说，nc文件和zip、jpeg、...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jan 31 2024 17:33:20 GMT+0800">
-                2024-01-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/06/12/gadm-shi-liang-xia-zai/">
-                        GADM-矢量下载
+                    <a href="/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/">
+                        编程_栅格影像去除投影
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
                         
+地理坐标系一般是指由经度、纬度和相对高度组成的坐标系，能够标示地球上的任何一个位置。经度和纬度常合称为经纬度，把球面上的经纬度显示在平面地图上需要采用某种地图投影
+地理坐标系由于地面高低的不同和地球形状的不正规，天体测量所得的信息不足用于明确地计算...
                     
                 </div>
 
@@ -475,15 +486,15 @@ HDF5的文件后缀一般是.h5，NetCDF的文件后缀一般是.nc
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Jun 12 2023 10:46:20 GMT+0800">
-                2023-06-12
+            <span class="home-article-date" data-updated="Tue Dec 05 2023 19:57:53 GMT+0800">
+                2023-12-05
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2023/06/12/gadm-shi-liang-xia-zai/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2023/12/05/bian-cheng-zha-ge-ying-xiang-qu-chu-tou-ying/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

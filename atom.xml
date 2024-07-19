@@ -98,32 +98,6 @@
   </entry>
   
   <entry>
-    <title>利用Python获取PDF文件的文本</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/</id>
-    <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-16T02:54:33.990Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;虽然PDF文件对文本布局非常好，容易打印并阅读，但软件要将它们解析为纯文本并不容易，Python目前解析PDF的扩展包有很多。&lt;/p&gt;
-&lt;p&gt;通过查询资料，建议使用pdfplumber扩展包来解析PDF文档的文本和表格。本文介绍如何通过pdfplumber获取PDF的文本。</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
     <title>利用Python计算和可视化温度植被干旱指数（TVDI）</title>
     <link href="http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-ji-suan-he-ke-shi-hua-wen-du-zhi-bei-gan-han-zhi-shu-tvdi/"/>
     <id>http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-ji-suan-he-ke-shi-hua-wen-du-zhi-bei-gan-han-zhi-shu-tvdi/</id>
@@ -153,20 +127,71 @@
   </entry>
   
   <entry>
-    <title>注册测绘师资料整理2011</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zhen-ti/</id>
+    <title>利用Python获取PDF文件的文本</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-16T07:34:05.179Z</updated>
+    <updated>2024-07-16T02:54:33.990Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;以下为单项选择题：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;虽然PDF文件对文本布局非常好，容易打印并阅读，但软件要将它们解析为纯文本并不容易，Python目前解析PDF的扩展包有很多。&lt;/p&gt;
+&lt;p&gt;通过查询资料，建议使用pdfplumber扩展包来解析PDF文档的文本和表格。本文介绍如何通过pdfplumber获取PDF的文本。</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
         
       
     
@@ -181,8 +206,8 @@
   
   <entry>
     <title>注册测绘师资料整理2012</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zhen-ti/</id>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
     <updated>2024-07-16T07:06:07.806Z</updated>
     
@@ -194,6 +219,240 @@
     <summary type="html">&lt;p&gt;以下为单项选择题：&lt;br&gt;1.选取GPS连续运行参考站时，视场内障碍物的高度角一般不超过（ ）。&lt;br&gt;A、5° B、10° C、15° D、20°&lt;/p&gt;
 &lt;p&gt;答案：B&lt;/p&gt;
 &lt;p&gt;2.某GPS网同步观测一个时段，共得到6条基线边，则使用的GPS接收机台数为（</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2020-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2020-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2021-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2021-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T02:03:52.428Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
         
       
     
@@ -283,266 +542,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>pyqgis二次开发教程</title>
-    <link href="http://ytkz11@.github.io/2024/07/02/dai-ma-pyqgis-er-ci-kai-fa-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/07/02/dai-ma-pyqgis-er-ci-kai-fa-jiao-cheng/</id>
-    <published>2024-07-02T14:00:10.000Z</published>
-    <updated>2024-07-04T07:23:35.471Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot; href=&quot;https://zhuanlan.zhihu.com/p/629483254&quot;&gt;https://zhuanlan.zhihu.com/p/629483254&lt;i class=&quot;fas</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sentinel-2影像的独特之处与数据存储策略</title>
-    <link href="http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/"/>
-    <id>http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/</id>
-    <published>2024-07-02T14:00:10.000Z</published>
-    <updated>2024-07-02T06:52:43.097Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在遥感技术的广阔领域中，Sentinel-2卫星以其独特的多波段和高分辨率成像能力脱颖而出，成为环境监测、农业评估、城市规划等多个领域的重要数据来源。然而，Sentinel-2影像的一个显著特点——其拥有三种不同的空间分辨率，使得其数据存储和处理方式与传统遥感影像存在显著差</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>将shp文件转换为GeoPackage格式（.gpkg）的过程</title>
-    <link href="http://ytkz11@.github.io/2024/07/01/gis-jiang-shp-wen-jian-zhuan-huan-wei-geopackage-ge-shi.gpkg-de-guo-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/07/01/gis-jiang-shp-wen-jian-zhuan-huan-wei-geopackage-ge-shi.gpkg-de-guo-cheng/</id>
-    <published>2024-07-01T14:00:10.000Z</published>
-    <updated>2024-07-01T02:35:12.979Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>什么是rtree及其应用</title>
-    <link href="http://ytkz11@.github.io/2024/06/25/dai-ma-shi-me-shi-rtree-ji-qi-ying-yong/"/>
-    <id>http://ytkz11@.github.io/2024/06/25/dai-ma-shi-me-shi-rtree-ji-qi-ying-yong/</id>
-    <published>2024-06-25T14:00:10.000Z</published>
-    <updated>2024-06-26T09:05:43.578Z</updated>
-    
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pip换为国内镜像源的办法</title>
-    <link href="http://ytkz11@.github.io/2024/06/24/python-pip-huan-yuan-de-bi-yao-xing-ji-bu-zou/"/>
-    <id>http://ytkz11@.github.io/2024/06/24/python-pip-huan-yuan-de-bi-yao-xing-ji-bu-zou/</id>
-    <published>2024-06-24T14:00:10.000Z</published>
-    <updated>2024-06-26T09:04:40.306Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近换了一台新电脑，需要重新安装python及python库。&lt;/p&gt;
-&lt;p&gt;这时候必须做的一件事情。&lt;/p&gt;
-&lt;p&gt;建议所有在国内的、使用python的人，都进行这个操作：给 pip 换国内源。&lt;/p&gt;
-&lt;p&gt;讲解pip</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在 Python 中使用 GeoJSON：点、线和多边形</title>
-    <link href="http://ytkz11@.github.io/2024/06/17/dai-ma-zai-python-zhong-shi-yong-geojson-dian-xian-he-duo-bian-xing/"/>
-    <id>http://ytkz11@.github.io/2024/06/17/dai-ma-zai-python-zhong-shi-yong-geojson-dian-xian-he-duo-bian-xing/</id>
-    <published>2024-06-17T14:00:10.000Z</published>
-    <updated>2024-06-17T07:41:28.113Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;GeoJSON 是一种使用 JavaScript 对象表示法（JSON）编码各种地理数据结构的格式。本技术文档概述了如何在 Python</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装geo-sam的教程.md</title>
-    <link href="http://ytkz11@.github.io/2024/06/17/dai-ma-an-zhuang-geo-sam-de-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/06/17/dai-ma-an-zhuang-geo-sam-de-jiao-cheng/</id>
-    <published>2024-06-17T14:00:10.000Z</published>
-    <updated>2024-06-17T02:04:51.066Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;安装教程地址：&lt;/p&gt;
-&lt;p&gt;&lt;a class=&quot;link&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python简易笔记</title>
-    <link href="http://ytkz11@.github.io/2024/06/13/python-python-jian-yi-bi-ji/"/>
-    <id>http://ytkz11@.github.io/2024/06/13/python-python-jian-yi-bi-ji/</id>
-    <published>2024-06-13T14:30:10.000Z</published>
-    <updated>2024-06-17T09:49:56.099Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;类型&quot;&gt;&lt;a href=&quot;#类型&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【下载】部分常用的变化监测数据集下载地址汇总</title>
-    <link href="http://ytkz11@.github.io/2024/06/13/xia-zai-bu-fen-chang-yong-de-bian-hua-jian-ce-shu-ju-ji-xia-zai-di-zhi-hui-zong/"/>
-    <id>http://ytkz11@.github.io/2024/06/13/xia-zai-bu-fen-chang-yong-de-bian-hua-jian-ce-shu-ju-ji-xia-zai-di-zhi-hui-zong/</id>
-    <published>2024-06-13T14:00:10.000Z</published>
-    <updated>2024-06-13T08:55:50.908Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;变化监测， Change Detection，简称CD。是遥感中的重要的研究方向和落地应用。我们有理由及有必要去学习、掌握它。&lt;/p&gt;
-&lt;p&gt;其中，数据获取、样本的制作是非常重要的一环。以下是部分变化监测数据集下载地址汇总。&lt;/p&gt;
-&lt;h1 id=&quot;Hi-CNA&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TIF转换到KMZ的教程</title>
-    <link href="http://ytkz11@.github.io/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/</id>
-    <published>2024-06-11T14:00:10.000Z</published>
-    <updated>2024-06-12T06:49:25.987Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;KML 和 KMZ 都是 Google 地球和其他地图程序中用于显示地理数据的文件格式。两者之间的主要区别在于，KML 是一种用于以 XML 格式存储地理数据的文件格式，而 KMZ 是一种压缩文件格式，包含一个或多个 KML</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
