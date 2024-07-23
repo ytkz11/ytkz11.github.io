@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            如何使用Python从PDF中提取文本并转换为Markdown文本的实操 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">如何使用Python从PDF中提取文本并转换为Markdown文本的实操</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-07-23 22:00:10</span>
+        <span class="mobile">2024-07-23 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-07-23 16:57:42</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p> 之前介绍如何通过pdfplumber获取PDF的文本。</p>
+<p>基于上次所写的内容，继续深挖。现在使用Python从PDF中提取文本并转换为Markdown的实际操作。</p>
+<p><img src="data:image/png;base64,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" alt="A Step-by-Step Guide to Parsing PDFs using the pdfplumber Library In Python  | by Azhar Sayyad | Medium"></p>
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>现在有12个注册测绘师综合真题的PDF，但是里面很多广告，个人希望把这些广告消除了。如果是少量pdf，那么用WPS然后花钱开会员的应该能把广告清理掉。但是这12个PDF对应着12年的注册测绘师综合真题，每个PDF有100页，一页一道真题。如果手动清理广告，这个工作量是很大的。</p>
+<p>先把PDF转为文本，然后对这些文本进行数据清理，这个是对单个PDF的转纯净文本的思路。</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240723153521945.png" alt="image-20240723153521945"></p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>这个编程思路，也是我平常写代码去解决问题的思路。</p>
+<p>先解决简单的问题，提取共性，再解决复杂的问题，在这过程中把握好输入输出。</p>
+<p>这句话有很多种角度去理解。</p>
+<p>就具体事情来说，先解决单个PDF格式转换文本，再进行数据清洗。进而解决批量PDF格式转换文本且数据清洗。</p>
+<h1 id="单个PDF格式转换文本"><a href="#单个PDF格式转换文本" class="headerlink" title="单个PDF格式转换文本"></a>单个PDF格式转换文本</h1><p>相关实现代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">read_pdf</span><span class="token punctuation">(</span>pdf_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> pdfplumber<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>pdf_path<span class="token punctuation">)</span> <span class="token keyword">as</span> pdf<span class="token punctuation">:</span>
+            content <span class="token operator">=</span> <span class="token string">''</span>
+            table <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            image <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>pdf<span class="token punctuation">.</span>pages<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token comment"># 读取PDF文档第i+1页</span>
+                page <span class="token operator">=</span> pdf<span class="token punctuation">.</span>pages<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">9</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token comment"># page.extract_text()函数即读取文本内容</span>
+                page_content <span class="token operator">=</span> <span class="token string">'\n'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>page<span class="token punctuation">.</span>extract_text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                content <span class="token operator">=</span> content <span class="token operator">+</span> page_content <span class="token operator">+</span> <span class="token string">'\n'</span>
+
+
+    modified_string <span class="token operator">=</span> content<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"\nB"</span><span class="token punctuation">,</span> <span class="token string">" B"</span><span class="token punctuation">)</span>
+    <span class="token comment"># 然后，替换\nC为 C</span>
+    modified_string <span class="token operator">=</span> modified_string<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"\nC"</span><span class="token punctuation">,</span> <span class="token string">" C"</span><span class="token punctuation">)</span>
+    <span class="token comment"># 最后，替换\nD为 D</span>
+    modified_string <span class="token operator">=</span> modified_string<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"\nD"</span><span class="token punctuation">,</span> <span class="token string">" D"</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> modified_string<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h1><p>因为这次的PDF的广告是有规律的，而且是一成不变，所以从技术层面来说，数据清洗是很简单的事情。在python中使用  字符串自带的方法就可以实现了。</p>
+<pre class="line-numbers language-none"><code class="language-none">original_pdf_text = read_pdf(pdf_file)  # 转为文本
+modified_string = original_pdf_text.replace(
+r'仅允许加其中一个群！！','')  数据清洗<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="批量处理"><a href="#批量处理" class="headerlink" title="批量处理"></a>批量处理</h1><p>以上已经实现了单文件的处理。这时，控制好输入参数就可以很容易地实现批量处理。</p>
+<p>相关代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">get_file_name</span><span class="token punctuation">(</span>file_dir<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    搜索 后缀名为type的文件  不包括子目录的文件
+    #
+    """</span>
+    corretion_file <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    filelist <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>file_dir<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> filelist<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token builtin">type</span><span class="token punctuation">:</span>
+            corretion_file<span class="token punctuation">.</span>append<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>file_dir<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> corretion_file <span class="token operator">==</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> filelist<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'.'</span><span class="token operator">+</span><span class="token builtin">type</span><span class="token punctuation">:</span>
+                corretion_file<span class="token punctuation">.</span>append<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>file_dir<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">return</span> corretion_file
+pdf_files_list <span class="token operator">=</span> get_file_name<span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token string">'.pdf'</span><span class="token punctuation">)</span>
+
+i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> pdf_file <span class="token keyword">in</span> pdf_files_list<span class="token punctuation">:</span>
+	单文件处理模块
+	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这个get_file_name函数，实现对指定文件夹下的指定文件的检索，返回一个符合文件后缀的文件名字列表，进而实现批量处理。基本上每次需要批量处理时，这个函数就要被复制粘贴，被拿出来使用。</p>
+<p>函数是自己写的，改进了一两个版本，所以现在它很好用，且用了好几年了。以后再细细说这个函数。</p>
+<h1 id="全部代码"><a href="#全部代码" class="headerlink" title="全部代码"></a>全部代码</h1><p>整合以上所有代码，如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pdfplumber
+<span class="token keyword">import</span> os
+
+<span class="token keyword">def</span> <span class="token function">get_file_name</span><span class="token punctuation">(</span>file_dir<span class="token punctuation">,</span> <span class="token builtin">type</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    搜索 后缀名为type的文件  不包括子目录的文件
+    #
+    """</span>
+    corretion_file <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    filelist <span class="token operator">=</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>file_dir<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> filelist<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token builtin">type</span><span class="token punctuation">:</span>
+            corretion_file<span class="token punctuation">.</span>append<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>file_dir<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> corretion_file <span class="token operator">==</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> filelist<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'.'</span><span class="token operator">+</span><span class="token builtin">type</span><span class="token punctuation">:</span>
+                corretion_file<span class="token punctuation">.</span>append<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>file_dir<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> corretion_file
+<span class="token keyword">def</span> <span class="token function">read_pdf</span><span class="token punctuation">(</span>pdf_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">with</span> pdfplumber<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>pdf_path<span class="token punctuation">)</span> <span class="token keyword">as</span> pdf<span class="token punctuation">:</span>
+            content <span class="token operator">=</span> <span class="token string">''</span>
+            table <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            image <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>pdf<span class="token punctuation">.</span>pages<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                <span class="token comment"># 读取PDF文档第i+1页</span>
+                page <span class="token operator">=</span> pdf<span class="token punctuation">.</span>pages<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">9</span><span class="token punctuation">:</span>
+                    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token comment"># page.extract_text()函数即读取文本内容</span>
+                page_content <span class="token operator">=</span> <span class="token string">'\n'</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>page<span class="token punctuation">.</span>extract_text<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                content <span class="token operator">=</span> content <span class="token operator">+</span> page_content <span class="token operator">+</span> <span class="token string">'\n'</span>
+
+
+    modified_string <span class="token operator">=</span> content<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"\nB"</span><span class="token punctuation">,</span> <span class="token string">" B"</span><span class="token punctuation">)</span>
+    <span class="token comment"># 然后，替换\nC为 C</span>
+    modified_string <span class="token operator">=</span> modified_string<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"\nC"</span><span class="token punctuation">,</span> <span class="token string">" C"</span><span class="token punctuation">)</span>
+    <span class="token comment"># 最后，替换\nD为 D</span>
+    modified_string <span class="token operator">=</span> modified_string<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">"\nD"</span><span class="token punctuation">,</span> <span class="token string">" D"</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> modified_string
+<span class="token comment">#</span>
+<span class="token keyword">def</span> <span class="token function">comprehensive_cleaning</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> outpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    综合真题_数据清洗_批量处理
+    """</span>
+    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span><span class="token operator">==</span><span class="token boolean">False</span><span class="token punctuation">:</span>
+        os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span>
+    pdf_files_list <span class="token operator">=</span> get_file_name<span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token string">'.pdf'</span><span class="token punctuation">)</span>
+
+    i <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> pdf_file <span class="token keyword">in</span> pdf_files_list<span class="token punctuation">:</span>
+        original_pdf_text <span class="token operator">=</span> read_pdf<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span>
+        modified_string <span class="token operator">=</span> original_pdf_text<span class="token punctuation">.</span>replace<span class="token punctuation">(</span>
+        <span class="token string">r'【路过讲堂测绘QQ群】 1群：517983234 2群：542530736 3群：397037429 4群：581154049 5群：158463229 注意：仅允许加其中一个群！！'</span><span class="token punctuation">,</span>
+        <span class="token string">''</span><span class="token punctuation">)</span>
+        <span class="token comment"># 写</span>
+        outfile <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>outpath <span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>pdf_file<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.md'</span><span class="token punctuation">)</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>outfile<span class="token punctuation">,</span> <span class="token string">'w'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+            f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>modified_string<span class="token punctuation">)</span>
+            f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        i <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\r进行PDF to markdown转换: [{0:50s}] {1:.1f}%"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'#'</span> <span class="token operator">*</span> <span class="token builtin">int</span><span class="token punctuation">(</span>i <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>pdf_files_list<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                                                 i <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>pdf_files_list<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">,</span>
+              flush<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    path <span class="token operator">=</span> <span class="token string">r'D:\Registered_Surveyor\pdf'</span>
+    outpath <span class="token operator">=</span> <span class="token string">r'D:\Registered_Surveyor\markdown\test2022'</span>
+    comprehensive_cleaning<span class="token punctuation">(</span>path<span class="token punctuation">,</span> outpath<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>已全部转换为markdown文本。如下图所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231630575.png" alt="image-20240723163038270"></p>
+<p>打开其中一个文件，如下所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231629072.png" alt="image-20240723162931897"></p>
+<h1 id="缺陷"><a href="#缺陷" class="headerlink" title="缺陷"></a>缺陷</h1><p>实际上，以上代码存在着致命的缺陷。即无法提取PDF中的表格、图像信息。</p>
+<p>本意只是想清除PDF的广告，保留有用信息。但是经过实操发现，从PDF提取文本很容易，而同时提取文本、表格、图片比较难。</p>
+<p>所幸的是，注册测绘师综合真题涉及的图片不多，所以暂且实现PDF转文本的功能。</p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>通过这次的实际操作，把较为详细地讲清楚：如何使用Python从PDF中提取文本并转换为Markdown文本。</p>
+<p>最近懒惰了，很少写技术文章了。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/07/22/python-python-zhong-mei-ge-nei-zhi-han-shu-de-jian-ming-jie-shi/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Python 中每个内置函数的简明解释</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

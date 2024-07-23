@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            Python 中每个内置函数的简明解释 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">Python 中每个内置函数的简明解释</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-07-22 22:00:10</span>
+        <span class="mobile">2024-07-22 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-07-23 17:12:38</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/%E7%BC%96%E7%A8%8B/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <h1 id="abs"><a href="#abs" class="headerlink" title="abs()"></a>abs()</h1><p>负数变为正数。正数仍然是正数。</p>
+<pre class="line-numbers language-none"><code class="language-none">print(abs(-10))  # 10
+print(abs(10))   # 10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231710898.png" alt="image-20240722154731468"></p>
+<h1 id="aiter-和-anext"><a href="#aiter-和-anext" class="headerlink" title="aiter() 和 anext()"></a>aiter() 和 anext()</h1><p>aiter 是 async iter 的缩写，anext 是 async next 的缩写</p>
+<p>aiter() 是 iter() 的异步等价函数</p>
+<p>anext() 是 next() 的异步等价函数</p>
+<p>aiter() 调用对象的 <strong>aiter</strong>() 方法，而 anext() 调用对象的 <strong>anext</strong>() 方法。</p>
+<h1 id="all"><a href="#all" class="headerlink" title="all()"></a>all()</h1><p>接收某些序列，如列表、元组等</p>
+<p>如果序列中的所有内容都为 True，则返回 True</p>
+<p>如果序列中至少有一个元素为 False，则返回 False</p>
+<pre class="line-numbers language-none"><code class="language-none">print(all([True, True, True]))    # True
+print(all([True, False, False]))   # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231710850.png" alt="image-20240722154748052"></p>
+<h1 id="any"><a href="#any" class="headerlink" title="any()"></a>any()</h1><p>接收某些序列，如列表、元组等</p>
+<p>如果序列中至少有一个元素为 True，则返回 True</p>
+<p>如果序列中的所有内容均为 False，则返回 False</p>
+<pre class="line-numbers language-none"><code class="language-none">print(any([False, False, False]))   # False
+print(any([True, False, False]))    # True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231710445.png" alt="image-20240722154808168"></p>
+<h1 id="ascii"><a href="#ascii" class="headerlink" title="ascii()"></a>ascii()</h1><p>将字符转换为统一码</p>
+<pre class="line-numbers language-none"><code class="language-none">x = ascii("Symbols: δ Ω α β")
+print(x) # "'Symbols: \\u03b4 \\u03a9 \\u03b1 \\u03b2'"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231710639.png" alt="image-20240722154827924"></p>
+<h1 id="bin"><a href="#bin" class="headerlink" title="bin()"></a>bin()</h1><p>将数字转换为二进制</p>
+<pre class="line-numbers language-none"><code class="language-none">print(bin(1))    # 0b10
+print(bin(2))    # 0b100
+print(bin(10))    # 0b1010<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231710632.png" alt="image-20240722153913684"></p>
+<h1 id="bool"><a href="#bool" class="headerlink" title="bool()"></a>bool()</h1><p>将对象转换为 True 或 False</p>
+<ul>
+<li>将  0 或空列表/空元组   变为 False</li>
+<li>将非零或非空序列     变为 True</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">print(bool(0))    # False
+print(bool(''))    # False
+print(bool([]))   # False
+print(bool(()))   # False
+
+print(bool(10))  # True
+print(bool([1]))  # True
+print(bool('x'))  # True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711076.png" alt="image-20240722153410892"></p>
+<h1 id="bytearray"><a href="#bytearray" class="headerlink" title="bytearray()"></a>bytearray()</h1><p>将对象转换为可变字节数组</p>
+<pre class="line-numbers language-none"><code class="language-none">print(bytearray(0))    # bytearray(b'')
+print(bytearray(1))    # bytearray(b'\x00')
+print(bytearray(10))    <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711706.png" alt="image-20240722153808336"></p>
+<h1 id="bytes"><a href="#bytes" class="headerlink" title="bytes()"></a>bytes()</h1><p>将对象转换为不可变的字节</p>
+<pre class="line-numbers language-none"><code class="language-none">print(bytes(0))    # b''
+print(bytes(1))    # b'\x00'
+print(bytes(10))   <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711950.png" alt="image-20240722154655845"></p>
+<h1 id="callable"><a href="#callable" class="headerlink" title="callable()"></a>callable()</h1><p>如果对象是可调用的，则返回 True，否则返回 False。如果对象是一个函数，或者实现了其 <strong>call</strong> 方法，则该对象是可调用的。</p>
+<pre class="line-numbers language-none"><code class="language-none">a = 1
+
+def b():
+    print()
+
+print(callable(a))    # False
+print(callable(b))    # True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711823.png" alt="image-20240722154640269"></p>
+<h1 id="chr"><a href="#chr" class="headerlink" title="chr()"></a>chr()</h1><p><em>character</em>的简称。每个字符都有一定的统一编码。</p>
+<p>chr(unicode) 输入 unicode 数字并返回字符。</p>
+<pre class="line-numbers language-none"><code class="language-none">print(chr(65))    # A
+print(chr(66))    # B
+
+print(chr(97))    # a
+print(chr(98))    # b
+
+print(chr(49))   # 1
+print(chr(50))   # 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711409.png" alt="image-20240722154611053"></p>
+<h1 id="classmethod"><a href="#classmethod" class="headerlink" title="classmethod()"></a>classmethod()</h1><p>我不是很懂这个内置函数，也难理解它，平常用它较少甚至没用过。</p>
+<pre class="line-numbers language-none"><code class="language-none">class Dog:
+    breeds = ['german shepherd', 'mongrel', 'retriver']
+
+    @classmethod
+    def get_breeds(cls):
+        return cls.breeds
+
+print(Dog.get_breeds())
+# ['german shepherd', 'mongrel', 'retriver']<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="compile"><a href="#compile" class="headerlink" title="compile()"></a>compile()</h1><p>接收代表 Python 代码的字符串，并将其编译以便稍后执行。</p>
+<pre class="line-numbers language-none"><code class="language-none">code = 'a = 4\nb = 5\nprint(a + b)'
+code = compile(code, 'test.py', 'exec')
+&lt;code object &lt;module&gt; at 0x000001B5E92CBC90, file "test.py", line 1&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">exec(code)
+# 9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711173.png" alt="image-20240722155519274"></p>
+<h1 id="complex"><a href="#complex" class="headerlink" title="complex()"></a>complex()</h1><p>用它来创建复数</p>
+<pre class="line-numbers language-none"><code class="language-none">x = complex(1, 2)
+
+print(x)  # (1+2j)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711051.png" alt="image-20240722155609656"></p>
+<h1 id="delattr"><a href="#delattr" class="headerlink" title="delattr()"></a>delattr()</h1><p>删除对象的一个属性。</p>
+<pre class="line-numbers language-none"><code class="language-none">class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+dog = Dog('gogo', 2)
+
+print(dog.__dict__) # {'name': 'gogo', 'age': 2}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">delattr(dog, 'age')   # 删除 'age' 属性
+
+print(dog.__dict__)   # {'name': 'gogo'}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="dict"><a href="#dict" class="headerlink" title="dict()"></a>dict()</h1><p>创建字典</p>
+<pre class="line-numbers language-none"><code class="language-none">d = dict(a=4, b=5, c=6)
+
+print(d)
+
+# {'a': 4, 'b': 5, 'c': 6}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711888.png" alt="image-20240722161621599"></p>
+<h1 id="dir"><a href="#dir" class="headerlink" title="dir()"></a>dir()</h1><p>在python里，一切都是对象。</p>
+<p>dir()以 list[str] 形式返回对象的所有属性/方法</p>
+<pre class="line-numbers language-none"><code class="language-none">n = 1
+
+print(dir(n))
+
+def a():
+	print()
+
+print(dir(a))
+	<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711935.png" alt="image-20240722161822338"></p>
+<h1 id="divmod"><a href="#divmod" class="headerlink" title="divmod()"></a>divmod()</h1><p>地板除与取模</p>
+<pre class="line-numbers language-none"><code class="language-none">quotient, remainder = divmod(59, 10)
+
+print(quotient)    # 5
+print(remainder)   # 9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711214.png" alt="image-20240722162142296"></p>
+<h1 id="enumerate"><a href="#enumerate" class="headerlink" title="enumerate()"></a>enumerate()</h1><p>可以代替for循环</p>
+<p>生成某个序列/迭代器的索引和值</p>
+<pre class="line-numbers language-none"><code class="language-none">letters = ['a', 'b', 'c']
+
+for index, letter in enumerate(letters):
+    print(f'{index=} {letter=}')
+
+'''
+index=0 letter='a'
+index=1 letter='b'
+index=2 letter='c'
+'''<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231711650.png" alt="image-20240722162350283"></p>
+<h1 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h1><p>接收字符串，并以 Python 代码形式对字符串进行求值，然后返回求得的值。</p>
+<pre class="line-numbers language-none"><code class="language-none">print(eval('1 + 10 + 100 + 1000 + 10000')) # 11111<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231712147.png" alt="image-20240722162444116"></p>
+<h1 id="exec"><a href="#exec" class="headerlink" title="exec()"></a>exec()</h1><p>接收字符串，以 Python 代码执行该字符串，返回 None。</p>
+<pre class="line-numbers language-none"><code class="language-none">x = 5
+
+exec('x = 100')
+
+print(x) # 100<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231712078.png" alt="image-20240722162522176"></p>
+<h1 id="exit"><a href="#exit" class="headerlink" title="exit()"></a>exit()</h1><p>完全停止 Python 程序。</p>
+<pre class="line-numbers language-none"><code class="language-none">x = 10
+print(x + 1)
+
+exit()  # Python程序在这里退出。不会运行后续的代码。
+
+print(x + 2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231712270.png" alt="image-20240722162709833"></p>
+<h1 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h1><p>filter(condition,iterable)接收一个条件condition和一个interable。</p>
+<p>它只输出满足条件的元素。</p>
+<p>下面是一个只保留 [1,2,3,4,5,6,7] 中奇数的例子</p>
+<pre class="line-numbers language-none"><code class="language-none">mylist = [1, 2, 3, 4, 5, 6, 7]
+
+def condition(n: int) -&gt; bool:
+    return n % 2 == 1
+
+for i in filter(condition, mylist):
+    print(i, end=' ')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407231712208.png" alt="image-20240722162945244"></p>
+<h1 id="float"><a href="#float" class="headerlink" title="float()"></a>float()</h1><p>将对象转换为浮点数。</p>
+<pre class="line-numbers language-none"><code class="language-none">n = float('3.14')
+
+print(n) # 3.14<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="format"><a href="#format" class="headerlink" title="format()"></a>format()</h1><p>根据对象的 <strong>format</strong> 方法，以某种方式格式化某个对象。</p>
+<pre class="line-numbers language-none"><code class="language-none">n = 20
+
+x = format(n, 'b')
+
+print(x)  # 10100<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="getattr"><a href="#getattr" class="headerlink" title="getattr()"></a>getattr()</h1><p>访问对象的属性</p>
+<pre class="line-numbers language-none"><code class="language-none">class Person:
+    def __init__(self, name):
+        self.name = name
+
+person = Person('Hanmeimei')
+
+print(person.name)  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="globals"><a href="#globals" class="headerlink" title="globals()"></a>globals()</h1><p>返回包含所有全局变量的字典</p>
+<pre class="line-numbers language-none"><code class="language-none">a = 4
+b = 5
+
+print(globals())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们也可以使用 globals() 动态设置变量</p>
+<pre class="line-numbers language-none"><code class="language-none">globals()['a'] = 100
+
+print(a) # 100<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="hasattr"><a href="#hasattr" class="headerlink" title="hasattr()"></a>hasattr()</h1><p>如果对象有属性，则返回 True，否则返回 False</p>
+<pre class="line-numbers language-none"><code class="language-none">class Person:
+    def __init__(self, name):
+        self.name = name
+
+person = Person('Hanmeimei')
+
+print(hasattr(person, 'name'))      # True
+print(hasattr(person, 'nickname'))  # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="hash"><a href="#hash" class="headerlink" title="hash()"></a>hash()</h1><p>返回不可变对象的哈希值。 hash() 对可变对象不起作用，因此可用于检查对象是否可变。</p>
+<pre class="line-numbers language-none"><code class="language-none">print(hash(5))        # 5
+print(hash(100))      # 100
+print(hash('apple'))  # 6125743690088875441<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="help"><a href="#help" class="headerlink" title="help()"></a>help()</h1><p>打印我们传入的对象的文档。</p>
+<pre class="line-numbers language-none"><code class="language-none">help(print)
+
+'''
+Help on built-in function print in module builtins:
+
+print(*args, sep=' ', end='\n', file=None, flush=False)
+    Prints the values to a stream, or to sys.stdout by default.
+
+    sep
+      string inserted between values, default a space.
+    end
+      string appended after the last value, default a newline.
+      ...
+'''<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="hex"><a href="#hex" class="headerlink" title="hex()"></a>hex()</h1><p>将数字转换为十六进制</p>
+<pre class="line-numbers language-none"><code class="language-none">print(hex(8))    # 0x8
+print(hex(9))    # 0x9
+
+print(hex(10))   # 0xa
+print(hex(11))   # 0xb
+
+print(hex(15))   # 0xf
+print(hex(16))   # 0x10
+
+print(hex(17))   # 0x11
+print(hex(18))   # 0x12<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>对于不熟悉十六进制的人来说，十六进制就是以 16 为基数计数。基本上就像我们有 16 个手指而不是 10 个手指一样。</p>
+<h1 id="id"><a href="#id" class="headerlink" title="id()"></a>id()</h1><p>所有 Python 对象都有自己唯一的 id。</p>
+<pre class="line-numbers language-none"><code class="language-none">a = 'HanMeimei'
+b = 'LiMing'
+
+print(id(a))    # 1906439904176
+print(id(b))    # 1906439911152<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="input"><a href="#input" class="headerlink" title="input()"></a>input()</h1><p>允许用户向我们的 Python 程序输入输入内容</p>
+<pre class="line-numbers language-none"><code class="language-none">name = input('enter your name &gt;&gt;&gt; ')
+
+print('your name is', name)
+
+# enter your name &gt;&gt;&gt; HanMeimei
+# your name is HanMeimei<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>有时候在打包程序时用到。</p>
+<h1 id="int"><a href="#int" class="headerlink" title="int()"></a>int()</h1><p>将对象转换为整数</p>
+<pre class="line-numbers language-none"><code class="language-none">n = int('100')
+
+print(n)      # 100
+print(n + 1)  # 101<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="isinstance"><a href="#isinstance" class="headerlink" title="isinstance()"></a>isinstance()</h1><p>isinstance(o, type) 检查 o 是否是 type 的实例</p>
+<pre class="line-numbers language-none"><code class="language-none">a = 'apple'
+
+print(isinstance(a, str))  # True
+
+print(isinstance(a, int))  # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这也适用于类：</p>
+<pre class="line-numbers language-none"><code class="language-none">class Animal:
+    ...
+
+class Dog(Animal):
+    ...
+
+dog = Dog()
+
+print(isinstance(dog, Dog))      # True
+
+print(isinstance(dog, Animal))   # True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="issubclass"><a href="#issubclass" class="headerlink" title="issubclass()"></a>issubclass()</h1><p>检查某个类是否为子类</p>
+<pre class="line-numbers language-none"><code class="language-none">class Animal:
+    ...
+
+class Dog(Animal):
+    ...
+
+print(issubclass(Dog, Animal))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="iter-和-next"><a href="#iter-和-next" class="headerlink" title="iter() 和 next()"></a>iter() 和 next()</h1><p>iter(mylist) 返回一个迭代器对象。</p>
+<p>next(iterator_object) 返回迭代器对象中的下一个元素。</p>
+<pre class="line-numbers language-none"><code class="language-none">fruits = ['apple', 'orange', 'pear']
+
+for fruit in fruits:
+    print(fruit)
+
+# apple orange pear<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">fruits = ['apple', 'orange', 'pear']
+
+iterator = iter(fruits)
+
+a = next(iterator)
+print(a)  # apple
+
+b = next(iterator)
+print(b)  # orange
+
+c = next(iterator)
+print(c)  # pear<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>iter() 和 next() 可以让我们在迭代过程中进行更大程度的控制，因此非常有用。</p>
+<h1 id="len"><a href="#len" class="headerlink" title="len()"></a>len()</h1><p>len(object) 查找对象的长度。</p>
+<p>字符串长度：</p>
+<pre class="line-numbers language-none"><code class="language-none">mystring = 'applepie'
+
+print(len(mystring)) # 8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>列表长度：</p>
+<pre class="line-numbers language-none"><code class="language-none">mylist = [1, 2, 3, 4, 5]
+
+print(len(mylist))  # 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>字典长度：</p>
+<pre class="line-numbers language-none"><code class="language-none">mydict = {'apple':1, 'orange':2}
+
+print(len(mydict))  # 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="list"><a href="#list" class="headerlink" title="list()"></a>list()</h1><p>列表数据类型。还可将其他可迭代数据类型转换为列表。</p>
+<pre class="line-numbers language-none"><code class="language-none">s = 'apple'
+
+ls = list(s)
+
+print(ls)  # ['a', 'p', 'p', 'l', 'e']<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="locals"><a href="#locals" class="headerlink" title="locals()"></a>locals()</h1><p>返回包含本地变量的字典。</p>
+<pre class="line-numbers language-none"><code class="language-none">a = 1
+b = 2
+
+def test():
+    c = 3
+    d = 4
+    print(locals())
+
+test()
+
+# {'c': 3, 'd': 4}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h1><p>map(func, iterable) 将 func 应用于 iterable 中的每个元素</p>
+<pre class="line-numbers language-none"><code class="language-none">def add10(n :int) -&gt; int:
+    return n + 10
+
+numbers = [1, 2, 3, 4, 5]
+
+new = map(add10, numbers)
+new = list(new)
+
+print(new)    # [11, 12, 13, 14, 15]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="max"><a href="#max" class="headerlink" title="max()"></a>max()</h1><p>查找序列中的最大值</p>
+<pre class="line-numbers language-none"><code class="language-none">numbers = [1, 5, 3, 9, 2]
+
+n = max(numbers)
+
+print(n) # 9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="min"><a href="#min" class="headerlink" title="min()"></a>min()</h1><p>查找序列中的最小值</p>
+<pre class="line-numbers language-none"><code class="language-none">numbers = [1, 5, 3, 9, 2]
+
+n = min(numbers)
+
+print(n) # 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="oct"><a href="#oct" class="headerlink" title="oct()"></a>oct()</h1><p>oct(n) 输入一个数字，并返回其八进制值。</p>
+<pre class="line-numbers language-none"><code class="language-none">print(oct(6))   # 0o6
+print(oct(7))   # 0o7 
+print(oct(8))   # 0o10
+print(oct(9))   # 0o11
+print(oct(10))  # 0o12<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="open"><a href="#open" class="headerlink" title="open()"></a>open()</h1><p>用于打开文件进行读写</p>
+<pre class="line-numbers language-none"><code class="language-none">with open('fruits.txt') as f:
+    # read text inside fruits.txt
+    text = f.read()
+
+print(text)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="ord"><a href="#ord" class="headerlink" title="ord()"></a>ord()</h1><p>ord(chr) 返回字符 chr 的顺序</p>
+<pre class="line-numbers language-none"><code class="language-none">print(ord('A'))  # 65
+print(ord('B'))  # 66
+
+print(ord('a'))  # 97
+print(ord('b'))  # 98
+print(ord('c'))  # 99<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="pow"><a href="#pow" class="headerlink" title="pow()"></a>pow()</h1><p>pow(a,b)接收 2 个数字，并返回 a 到 b 的幂次</p>
+<pre class="line-numbers language-none"><code class="language-none">print(pow(2, 2))  # 4
+print(pow(2, 3))  # 8
+print(pow(2, 4))  # 16<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="print"><a href="#print" class="headerlink" title="print()"></a>print()</h1><p>将内容打印到终端</p>
+<h1 id="property"><a href="#property" class="headerlink" title="property()"></a>property()</h1><p>在类中用于将属性转化为属性的装饰器</p>
+<pre class="line-numbers language-none"><code class="language-none">class Dog:
+    def __init__(self, name):
+        self.__name = name
+
+    @property
+    def name(self):
+        return self.__name
+
+    @name.setter
+    def name(self, new_name):
+        self.__name = new_name
+
+dog = Dog('name')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们可以直接调用 dog.name 来获取它的名字</p>
+<pre class="line-numbers language-none"><code class="language-none">print(dog.name)    # rocky<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>由于我们定义了一个 setter 方法，因此也可以直接更改 dog.name</p>
+<pre class="line-numbers language-none"><code class="language-none">dog.name = 'fifi'
+
+print(dog.name)    # fifi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="quit"><a href="#quit" class="headerlink" title="quit()"></a>quit()</h1><p>和 exit() 一样，它会完全停止 Python 程序。</p>
+<h1 id="range"><a href="#range" class="headerlink" title="range()"></a>range()</h1><p>经常在循环语句中使用。</p>
+<pre class="line-numbers language-none"><code class="language-none">for i in range(5):
+    print(i)
+
+# 0 1 2 3 4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">for i in range(2, 6):
+    print(i)
+
+# 2 3 4 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">for i in range(3, 10, 3):
+    print(i)
+
+# 3 6 9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="repr"><a href="#repr" class="headerlink" title="repr()"></a>repr()</h1><p>返回表示对象的字符串。常用于开发和调试。</p>
+<pre class="line-numbers language-none"><code class="language-none">from datetime import datetime
+
+dt = datetime(2024, 7, 25)
+
+print(str(dt))   # 2024-07-25 00:00:00
+
+print(repr(dt))  # datetime.datetime(2024, 7, 25, 0, 0)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="reversed"><a href="#reversed" class="headerlink" title="reversed()"></a>reversed()</h1><p>字面意思，反转。</p>
+<pre class="line-numbers language-none"><code class="language-none">ls = [1, 2, 3, 4, 5]
+
+ls = list(reversed(ls))
+
+print(ls)   # [5, 4, 3, 2, 1]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="round"><a href="#round" class="headerlink" title="round()"></a>round()</h1><p>将数字舍入到最接近的小数点。</p>
+<pre class="line-numbers language-none"><code class="language-none">pi = 3.14159265
+
+print(round(pi))      # 3
+print(round(pi, 2))   # 3.14
+print(round(pi, 5))   # 3.14159<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>也可用于将数字四舍五入到最接近的十位百位千位。</p>
+<pre class="line-numbers language-none"><code class="language-none">num = 987654321
+
+print(round(num))      # 987654321
+print(round(num, -1))  # 987654320
+print(round(num, -2))  # 987654300
+print(round(num, -3))  # 987654000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="set"><a href="#set" class="headerlink" title="set()"></a>set()</h1><p>集合</p>
+<ul>
+<li>不能包含重复值</li>
+<li>让我们可以在 O(1) 时间内检查元素是否在内部</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">s = set()
+
+s.add(1)
+s.add(2)
+s.add(3)
+
+print(s)  # {1, 2, 3}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>集合可以有效减少某些循环的处理时间</p>
+<h1 id="sorted"><a href="#sorted" class="headerlink" title="sorted()"></a>sorted()</h1><p>返回序列（如列表）的排序副本</p>
+<pre class="line-numbers language-none"><code class="language-none">ls = [1, 5, 3, 4, 2]
+
+new = sorted(ls)
+
+print(new)
+# [1, 2, 3, 4, 5]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="str"><a href="#str" class="headerlink" title="str()"></a>str()</h1><p>内置字符串类型。还可将其他对象转换为字符串。</p>
+<pre class="line-numbers language-none"><code class="language-none">a = 5
+b = 3.14
+
+print(str(a))    # 5
+print(str(b))    # 3.14
+
+new = str(a) + str(b)
+
+print(new)       # 53.14<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="sum"><a href="#sum" class="headerlink" title="sum()"></a>sum()</h1><p>sum(sequence) 将 sequence 中的元素相加，并返回总和。</p>
+<pre class="line-numbers language-none"><code class="language-none">numbers = [1, 2, 3, 4, 5]
+
+total = sum(numbers)
+
+print(total)    # 15<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="tuple"><a href="#tuple" class="headerlink" title="tuple()"></a>tuple()</h1><p>内置的元组数据类型。还可将对象转换为元组。</p>
+<p>对于不熟悉的人来说，元组只是不可变的列表，创建后不能更改。优点：元组可以是 dict key，也可以添加到集合中。</p>
+<pre class="line-numbers language-none"><code class="language-none">ls = [1, 2, 3]
+
+t = tuple(ls)
+
+print(t)    # (1, 2, 3)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="type"><a href="#type" class="headerlink" title="type()"></a>type()</h1><p>type(object) 返回object的类型。</p>
+<pre class="line-numbers language-none"><code class="language-none">print(type(1))        # &lt;class 'int'&gt;
+
+print(type(3.14))     # &lt;class 'float'&gt;
+
+print(type('apple'))  # &lt;class 'str'&gt;
+
+print(type([]))       # &lt;class 'list'&gt;
+
+print(type({}))       # &lt;class 'dict'&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="zip"><a href="#zip" class="headerlink" title="zip()"></a>zip()</h1><p>允许我们同时遍历多个序列</p>
+<pre class="line-numbers language-none"><code class="language-none">fruits = ['apple', 'orange', 'pear']
+prices = [4, 5, 6]
+
+for fruit, prices in zip(fruits, prices):
+    print(fruit, price)
+
+# apple 4
+# orange 5
+# pear 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们可以在 zip() 中传递任意数量的参数</p>
+<pre class="line-numbers language-none"><code class="language-none">a = [1, 2, 3]
+b = [2, 4, 6]
+c = [3, 6, 9]
+d = [4, 8, 12]
+
+for i,j,k,l in zip(a, b, c, d):
+    print(i, j, k, l)
+
+# 1 2 3 4
+# 2 4 6 8
+# 3 6 9 12<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/python/">#python</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/07/23/dai-ma-ru-he-shi-yong-python-cong-pdf-zhong-ti-qu-wen-ben-bing-zhuan-huan-wei-markdown-shi-cao/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">如何使用Python从PDF中提取文本并转换为Markdown文本的实操</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/07/22/shen-du-xue-xi-yolo-zhi-guan-er-xiang-xi-de-jie-shi/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">【深度学习】yolo直观而详细的解释</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

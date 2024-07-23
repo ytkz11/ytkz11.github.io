@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-07-18T01:31:42.108Z</updated>
+  <updated>2024-07-23T08:57:42.111Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,92 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何使用Python从PDF中提取文本并转换为Markdown文本的实操</title>
+    <link href="http://ytkz11@.github.io/2024/07/23/dai-ma-ru-he-shi-yong-python-cong-pdf-zhong-ti-qu-wen-ben-bing-zhuan-huan-wei-markdown-shi-cao/"/>
+    <id>http://ytkz11@.github.io/2024/07/23/dai-ma-ru-he-shi-yong-python-cong-pdf-zhong-ti-qu-wen-ben-bing-zhuan-huan-wei-markdown-shi-cao/</id>
+    <published>2024-07-23T14:00:10.000Z</published>
+    <updated>2024-07-23T08:57:42.111Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 之前介绍如何通过pdfplumber获取PDF的文本。&lt;/p&gt;
+&lt;p&gt;基于上次所写的内容，继续深挖。现在使用Python从PDF中提取文本并转换为Markdown的实际操作。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python 中每个内置函数的简明解释</title>
+    <link href="http://ytkz11@.github.io/2024/07/22/python-python-zhong-mei-ge-nei-zhi-han-shu-de-jian-ming-jie-shi/"/>
+    <id>http://ytkz11@.github.io/2024/07/22/python-python-zhong-mei-ge-nei-zhi-han-shu-de-jian-ming-jie-shi/</id>
+    <published>2024-07-22T14:00:10.000Z</published>
+    <updated>2024-07-23T09:12:38.976Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;abs&quot;&gt;&lt;a href=&quot;#abs&quot; class=&quot;headerlink&quot; title=&quot;abs()&quot;&gt;&lt;/a&gt;abs()&lt;/h1&gt;&lt;p&gt;负数变为正数。正数仍然是正数。&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【深度学习】yolo直观而详细的解释</title>
+    <link href="http://ytkz11@.github.io/2024/07/22/shen-du-xue-xi-yolo-zhi-guan-er-xiang-xi-de-jie-shi/"/>
+    <id>http://ytkz11@.github.io/2024/07/22/shen-du-xue-xi-yolo-zhi-guan-er-xiang-xi-de-jie-shi/</id>
+    <published>2024-07-22T14:00:10.000Z</published>
+    <updated>2024-07-22T02:40:27.329Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>2011年-2022年摄影测量地图制图GIS相关真题</title>
@@ -179,19 +265,19 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <title>注册测绘师2013年《综合能力》考试真题</title>
     <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
     <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
+    <updated>2024-07-19T09:11:36.173Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;2013年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2013年综合真题，以下为单项选择题：&lt;br&gt;1.一等重力点联测路线的测段数最多不应超过（ ）个。&lt;br&gt;A. 4 B. 5 C. 6 D.</summary>
         
       
     
@@ -232,71 +318,19 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <title>注册测绘师2015年《综合能力》考试真题</title>
     <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
     <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
+    <updated>2024-07-19T09:24:18.911Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;2015年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2015年综合真题，以下为单项选择题：&lt;br&gt;1.LCR—G型相对重力仪必须锁摆的状态是（ ）。&lt;br&gt;A.运输过程中 B.仪器检查 C.观测读数</summary>
         
       
     
@@ -310,19 +344,19 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <title>注册测绘师2017年《综合能力》考试真题</title>
     <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
     <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
+    <updated>2024-07-19T09:27:47.061Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;2017年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2017年综合真题，以下为单项选择题：&lt;br&gt;1.地球表面重力的方向是指（ ）。&lt;br&gt;A.地球引力方向 B.地球离心力相反方向 C.铅垂线方向</summary>
         
       
     
@@ -336,19 +370,71 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <title>注册测绘师2016年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T09:27:35.631Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2016年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2016年综合真题，以下为单项选择题：&lt;br&gt;1.在一、二等水准路线上加测重力，主要目的是为了对水准测量进行（ ）。&lt;br&gt;A.地面倾斜改正 B.归心改正 C.重力异常改正</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2014年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T09:13:18.518Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2014年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2014年综合真题，以下为单项选择题：&lt;br&gt;1.FG5绝对重力仪的观测值是重力点的（ ）。&lt;br&gt;A.重力差值 B.重力垂线偏差 C.重力加速度</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2018年《综合能力》考试真题</title>
     <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
     <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
+    <updated>2024-07-19T09:27:58.228Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;2018年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2018年综合真题，以下为单项选择题：&lt;br&gt;1.水准测量中，在连续各测站上安置水准仪的三脚架时，应使其中两脚与水准路线方向平&lt;br&gt;行，而第三脚轮换置路线的左侧与右侧，可以减弱因（ ）引起的误差。&lt;br&gt;A.竖轴不垂直</summary>
         
       
     
@@ -362,19 +448,19 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <title>注册测绘师2019年《综合能力》考试真题</title>
     <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
     <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
+    <updated>2024-07-19T09:28:07.720Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;2019年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2019年综合真题，以下为单项选择题：&lt;br&gt;一、单项选择题（每题1分，每题的备选选项中，只有1项符合题意。)&lt;br&gt;1.与大地水准面处处垂直的线是（ ）。&lt;br&gt;A.地球引力线 B.椭球面法线 C.铅垂线</summary>
         
       
     
@@ -388,45 +474,19 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <title>注册测绘师2020年《综合能力》考试真题</title>
     <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2020-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
     <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2020-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
+    <updated>2024-07-19T09:28:19.549Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;2020年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2020年综合真题，以下为单项选择题：&lt;br&gt;一、单项选择题（每题1分，每题的备选选项中，只有1项符合题意。)&lt;br&gt;1.高程异常是指（ ）至参考椭球面的垂直距离。&lt;br&gt;A.大地水准面 B.似大地水准面 C.地球自然表面</summary>
         
       
     
@@ -440,19 +500,19 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <title>注册测绘师2021年《综合能力》考试真题</title>
     <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2021-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
     <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2021-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-19T02:03:52.428Z</updated>
+    <updated>2024-07-19T09:28:32.100Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2011年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;以下为单项选择题：&lt;br&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是&lt;br&gt;（ ）。&lt;br&gt;A.N B.N-1 C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;2021年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2021年综合真题，以下为单项选择题：&lt;br&gt;1.下列坐标系中，所釆用的地球椭球长半径为6378140米的是（ ）。&lt;br&gt;A.1954北京坐标系 B.1980西安坐标系 C.WGS-84坐标系</summary>
         
       
     
@@ -466,82 +526,28 @@
   </entry>
   
   <entry>
-    <title>使用GDAL进行遥感影像植被真彩色增强 （一）</title>
-    <link href="http://ytkz11@.github.io/2024/07/09/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-yi/"/>
-    <id>http://ytkz11@.github.io/2024/07/09/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-yi/</id>
-    <published>2024-07-09T14:00:10.000Z</published>
-    <updated>2024-07-09T08:19:38.767Z</updated>
+    <title>注册测绘师2022年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-19T09:28:47.781Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;2022年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1、地球椭球的真子午线与中央子午线的差值，被称为（ ）。&lt;br&gt;A磁偏角 B垂线偏差 C子午线收敛角</summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用GDAL进行遥感影像植被真彩色增强 （二）</title>
-    <link href="http://ytkz11@.github.io/2024/07/04/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-er/"/>
-    <id>http://ytkz11@.github.io/2024/07/04/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-er/</id>
-    <published>2024-07-04T14:00:10.000Z</published>
-    <updated>2024-07-10T09:29:05.598Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在本篇推文中，我们将深入探讨如何使用Python的PyQt5库和GDAL库构建一个图形用户界面（GUI）应用程序，该程序旨在对遥感影像进行色彩增强处理。此应用程序不仅能够处理单个图像文件，还能批量处理文件夹中的多个TIFF文件，同时允许用户自定义色彩增强的程度。&lt;/p&gt;
-&lt;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://ytkz11@.github.io/2024/07/04/vx-xiao-you-xi-ni-xiang-si-lu/"/>
-    <id>http://ytkz11@.github.io/2024/07/04/vx-xiao-you-xi-ni-xiang-si-lu/</id>
-    <published>2024-07-04T07:47:45.611Z</published>
-    <updated>2024-07-04T07:48:32.108Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;本文章仅用于学习交流，请勿用于非法用途&quot;&gt;&lt;a href=&quot;#本文章仅用于学习交流，请勿用于非法用途&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
     
   </entry>
   
