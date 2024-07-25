@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-07-25 17:53:26</span>
+        <span class="pc">2024-07-25 17:55:05</span>
     </span>
     
     
@@ -355,7 +355,40 @@ cities_uk = {'London': 'UK', 'Birmingham': 'UK'}
 
 cities_us |= cities_uk
 print(cities_us)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="8-F-Strings-Pythonic-字符串格式化技术"><a href="#8-F-Strings-Pythonic-字符串格式化技术" class="headerlink" title="8.F-Strings:Pythonic 字符串格式化技术"></a>8.F-Strings:Pythonic 字符串格式化技术</h1><p><a class="link" target="_blank" rel="noopener" href="https://readmedium.com/zh/9-fabulous-python-tricks-that-make-your-code-more-elegant-bf01a6294908">https://readmedium.com/zh/9-fabulous-python-tricks-that-make-your-code-more-elegant-bf01a6294908<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="8-F-Strings-Pythonic-字符串格式化技术"><a href="#8-F-Strings-Pythonic-字符串格式化技术" class="headerlink" title="8.F-Strings:Pythonic 字符串格式化技术"></a>8.F-Strings:Pythonic 字符串格式化技术</h1><p>几乎所有编程语言都支持字符串格式化语法。但并不是每一种都能像 Python 的 f-string 技术一样优雅。</p>
+<pre class="line-numbers language-none"><code class="language-none">pi = 3.1415926
+print(f'Pi is approximately equal to {pi:.2f}')
+# Pi is approximately equal to 3.14
+
+id = 1  # need to print a 3-digit number
+print(f"The id is {id:03d}")
+# The id is 001
+
+N = 1000000000  # need to add separator
+print(f'His networth is ${N:,d}')
+# His networth is $1,000,000,000<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>正如上面的程序所示，使用 f-string 技巧，我们可以应用一个 Python 变量，并在 f-string 中定义其格式规范。</p>
+<p>下面的示例将借助 f 字符串打印今天的时间：</p>
+<pre class="line-numbers language-none"><code class="language-none">
+from datetime import datetime
+
+print(f"Today is {datetime.today()}")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="9-使用星号解包迭代表和重构赋值"><a href="#9-使用星号解包迭代表和重构赋值" class="headerlink" title="9.使用星号解包迭代表和重构赋值"></a>9.使用星号解包迭代表和重构赋值</h1><p>如何将列表、元组和集合合并为一个列表？</p>
+<p>最优雅的方法是使用星号：</p>
+<pre class="line-numbers language-none"><code class="language-none">A = [1, 2, 3]
+B = (4, 5, 6)
+C = {7, 8, 9}
+L = [*A, *B, *C]
+print(L)
+# [1, 2, 3, 4, 5, 6, 8, 9, 7]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如上所述，星号可用作迭代表的前缀，以解压缩其项目。</p>
+<p>除了解包迭代表，星号还可用于 Python 中的重构赋值：</p>
+<pre class="line-numbers language-none"><code class="language-none">a, *mid, b = [1, 2, 3, 4, 5, 6]
+print(a, mid, b)
+# 1 [2, 3, 4, 5] 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>如上图所示，在一个星号的帮助下，mid 变量以列表的形式接收中间的项目。</p>
+<p>感谢您的阅读。❤️</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://readmedium.com/zh/9-fabulous-python-tricks-that-make-your-code-more-elegant-bf01a6294908">https://readmedium.com/zh/9-fabulous-python-tricks-that-make-your-code-more-elegant-bf01a6294908<i class="fas fa-external-link-alt"></i></a></p>
 
             </div>
 
