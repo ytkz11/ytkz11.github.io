@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            让代码更优雅的9种python技巧 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">让代码更优雅的9种python技巧</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-07-25 22:00:10</span>
+        <span class="mobile">2024-07-25 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-07-25 17:53:26</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/python/">python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/python/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>这篇文章介绍了9个Python技巧，帮助编写更优雅的Python代码。</p>
+<h2 id="Pythonic-是优雅的同义词"><a href="#Pythonic-是优雅的同义词" class="headerlink" title="Pythonic 是优雅的同义词"></a>Pythonic 是优雅的同义词</h2><p><strong>Python之禅</strong>最早由 Tim Peters在Python邮件列表中发表，它包含了影响[Python编程语言设计的19条软件编写原则。</p>
+<p>Python之禅的内容:</p>
+<pre class="line-numbers language-none"><code class="language-none">优美优于丑陋，
+
+明了优于隐晦；
+
+简单优于复杂，
+
+复杂优于繁杂，
+
+扁平优于嵌套，
+
+稀疏优于稠密，
+
+可读性很重要！
+
+特例亦不可违背原则，
+
+即使实用比纯粹更优。
+
+错误绝不能悄悄忽略，
+
+除非它明确需要如此。
+
+面对不确定性，
+
+拒绝妄加猜测。
+
+任何问题应有一种，
+
+且最好只有一种，
+
+显而易见的解决方法。
+
+尽管这方法一开始并非如此直观，
+
+除非你是荷兰人。
+
+做优于不做，
+
+然而不假思索还不如不做。
+
+很难解释的，必然是坏方法。
+
+很好解释的，可能是好方法。
+
+命名空间是个绝妙的主意，
+
+我们应好好利用它。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>优美优于丑陋,这不仅是《Python 禅》的第一句话，也是所有 Python 开发者的信条。</p>
+<p>但如何区分代码的美丑呢？更重要的是，如何编写漂亮的 Python 代码？</p>
+<p>空谈误国。将以初学者易懂的示例演示 9 个 Python 绝妙技巧，帮助你在日常工作中编写更多 Python 程序。</p>
+<h1 id="1-使用-product-函数避免嵌套的-Python-循环"><a href="#1-使用-product-函数避免嵌套的-Python-循环" class="headerlink" title="1.使用 product() 函数避免嵌套的 Python 循环"></a>1.使用 product() 函数避免嵌套的 Python 循环</h1><p>当程序变得复杂时，就不可避免地要编写嵌套循环。然而，嵌套循环会增加程序的阅读和维护难度。</p>
+<p>幸运的是，在 Python 中，可以通过product() 函数避免嵌套循环。</p>
+<p>例如，我们有一个包含 3 层嵌套 for 循环的程序如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">
+list_a = [1, 2020, 70]
+list_b = [2, 4, 7, 2000]
+list_c = [3, 70, 7]
+
+for a in list_a:
+    for b in list_b:
+        for c in list_c:
+            if a + b + c == 2077:
+                print(a, b, c)
+# 70 2000 7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>为了使代码更简洁明了，我们可以使用 itertools 模块中的 product() 函数来优化代码：</p>
+<pre class="line-numbers language-none"><code class="language-none">from itertools import product
+
+list_a = [1, 2020, 70]
+list_b = [2, 4, 7, 2000]
+list_c = [3, 70, 7]
+
+for a, b, c in product(list_a, list_b, list_c):
+    if a + b + c == 2077:
+        print(a, b, c)
+# 70 2000 7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="2-海象操作符赋值表达式"><a href="#2-海象操作符赋值表达式" class="headerlink" title="2.海象操作符赋值表达式"></a>2.海象操作符赋值表达式</h1><p>自 Python 3.8 起，有了一种名为 “walrus 操作符 “的新语法,中文翻译过来就是海象操作符，它可以作为较大表达式的一部分为变量赋值。它的表达式由一个冒号和一个等于号组成，如下</p>
+<p> :=  </p>
+<p>由于它和海象有一些相似，所以就把它叫做海象操作符。</p>
+<p><img src="https://cdn-images-1.readmedium.com/v2/resize:fit:800/1*KEutmHlQAn9EBcYQd1R9ow.jpeg" alt="img"></p>
+<p>这种语法非常容易理解。例如，如果我们想用一行代码写出下面两行 Python 代码，该怎么做呢？</p>
+<pre class="line-numbers language-none"><code class="language-none">student = "HanMeimei"
+print(student)
+# HanMeimei<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>遗憾的是，我们不能直接在 print() 函数中进行赋值。如果我们尝试这样做，将会出现 TypeError：</p>
+<pre class="line-numbers language-none"><code class="language-none">print(student = "HanMeimei")
+# TypeError: 'author' is an invalid keyword argument for print()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>多亏了海象操作符，我们真的可以在一行中完成这些操作：</p>
+<pre class="line-numbers language-none"><code class="language-none">print(student := "HanMeimei")<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="3-三元条件操作符在一行中编写简单的-If-Else-结构"><a href="#3-三元条件操作符在一行中编写简单的-If-Else-结构" class="headerlink" title="3.三元条件操作符在一行中编写简单的 If-Else 结构"></a>3.三元条件操作符在一行中编写简单的 If-Else 结构</h1><p>在编程世界中，if-else 条件无处不在。为了让简单的逻辑表达变得容易，Python 为我们提供了三元运算符。简单地说，它允许在一行中写入 if-else 条件：</p>
+<pre class="line-numbers language-none"><code class="language-none">min = a if a &lt; b else b<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>显然，上面的代码要比下面的整洁得多：</p>
+<pre class="line-numbers language-none"><code class="language-none">if a&lt;b:
+  min = a
+else:
+  min = b<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="4-使用-Lambda-函数定义简单函数"><a href="#4-使用-Lambda-函数定义简单函数" class="headerlink" title="4.使用 Lambda 函数定义简单函数"></a>4.使用 Lambda 函数定义简单函数</h1><p>如果只想定义一个简单的函数，那么可能不需要使用传统的语法。lambda 函数是一种更优雅的选择。</p>
+<p>例如，以下函数用于计算斐波那契数字：</p>
+<pre class="line-numbers language-none"><code class="language-none">def fib(x):
+    if x&lt;=1:
+        return x
+    else:
+        return fib(x-1) + fib(x-2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>它可以完美运行，但代码本身有点难看。让我们编写一个单行代码来实现同样的功能：</p>
+<pre class="line-numbers language-none"><code class="language-none">fib = lambda x: x if x &lt;= 1 else fib(x - 1) + fib(x - 2)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="5-列表推导式"><a href="#5-列表推导式" class="headerlink" title="5.列表推导式"></a>5.列表推导式</h1><p>如果说列表推导式能让代码变得优雅，还可以为节省大量的键入和时间，同时保持代码的可读性。很少有编程语言能做到这一点。</p>
+<pre class="line-numbers language-none"><code class="language-none">student = ["LiXiao", "LiHua", "LiMing", "HanMeimei"]
+L1 = [name if name.startswith('H') else 'Not student' for name in student]
+print(L1)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407251751467.png" alt="image-20240725174624873"></p>
+<h1 id="利用-Python-中的高阶函数"><a href="#利用-Python-中的高阶函数" class="headerlink" title="利用 Python 中的高阶函数"></a>利用 Python 中的高阶函数</h1><p>Python 有一些内置的高阶函数，为我们编写一些常用逻辑提供了方便。</p>
+<p>例如，map() 函数是一个著名的、经常使用的高阶函数。它接收两个参数，一个是函数，另一个是可迭代元素。执行 map 函数将对可迭代的每个元素应用该函数。</p>
+<pre class="line-numbers language-none"><code class="language-none">names = ["liXiao", "liHua", "liMing", "HanMeimei"]
+names = map(str.capitalize, names)
+print(list(names))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407251750717.png" alt="image-20240725174835593"></p>
+<p>如上例所示，在 map() 函数的帮助下，我们可以避免编写 for 循环来对姓名列表中的每个单词进行大写。</p>
+<p>另一个著名的高阶函数是 reduce()。顾名思义，它将一个函数应用到一个可迭代函数中，并对其进行累加操作。</p>
+<p>例如，下面的示例将一个列表转换为一个字符串：</p>
+<pre class="line-numbers language-none"><code class="language-none">from functools import reduce
+city = ['P', 'a', 'r', 'i', 's', 2, 0, 2, 4]
+city_to_str = reduce(lambda x, y: str(x) + str(y), city)
+print(city_to_str)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407251750157.png" alt="image-20240725175047040"></p>
+<h1 id="7-联合运算符：合并词典的最简单方法"><a href="#7-联合运算符：合并词典的最简单方法" class="headerlink" title="7.联合运算符：合并词典的最简单方法"></a>7.联合运算符：合并词典的最简单方法</h1><p>合并字典是日常 Python 编程中的常见需求。有很多方法可以做到这一点。但在 Python 3.9 之前，所有这些方法都很难看。</p>
+<p>从 Python 3.9 开始，我们终于有了最优雅的字典合并方式—使用 union 操作符。</p>
+<pre class="line-numbers language-none"><code class="language-none">cities_us = {'New York City': 'US', 'Los Angeles': 'US'}
+cities_uk = {'London': 'UK', 'Birmingham': 'UK'}
+
+cities = cities_us|cities_uk
+print(cities)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如上例所示，我们只需使用 | 操作符即可合并两个不同的字典。此外，它还支持就地合并：</p>
+<pre class="line-numbers language-none"><code class="language-none">cities_us = {'New York City': 'US', 'Los Angeles': 'US'}
+cities_uk = {'London': 'UK', 'Birmingham': 'UK'}
+
+cities_us |= cities_uk
+print(cities_us)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="8-F-Strings-Pythonic-字符串格式化技术"><a href="#8-F-Strings-Pythonic-字符串格式化技术" class="headerlink" title="8.F-Strings:Pythonic 字符串格式化技术"></a>8.F-Strings:Pythonic 字符串格式化技术</h1><p><a class="link" target="_blank" rel="noopener" href="https://readmedium.com/zh/9-fabulous-python-tricks-that-make-your-code-more-elegant-bf01a6294908">https://readmedium.com/zh/9-fabulous-python-tricks-that-make-your-code-more-elegant-bf01a6294908<i class="fas fa-external-link-alt"></i></a></p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/python/">#python</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/07/25/san-wei-chong-jian-de-lun-wen/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">三维重建的论文</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/07/23/dai-ma-ru-he-shi-yong-python-cong-pdf-zhong-ti-qu-wen-ben-bing-zhuan-huan-wei-markdown-shi-cao/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">如何使用Python从PDF中提取文本并转换为Markdown文本的实操</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

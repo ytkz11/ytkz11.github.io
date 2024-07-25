@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-06-21 18:26:58</span>
-        <span class="mobile">2024-06-21 18:26</span>
+        <span class="pc">2024-07-25 18:26:58</span>
+        <span class="mobile">2024-07-25 18:26</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-06-21 11:25:16</span>
+        <span class="pc">2024-07-25 15:25:19</span>
     </span>
     
     
@@ -175,11 +175,7 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        &gt; <a href="/categories/%E7%9F%A2%E9%87%8F/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                        <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
                     </li>
                 
             </ul>
@@ -191,11 +187,7 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
-                    </li>
-                
-                    <li>
-                        | <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                        <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
                     </li>
                 
             </ul>
@@ -219,58 +211,64 @@
                 <p>因为经常使用pycharm，对Jetbrains家的产品有一些莫名的好感。</p>
 <p>所以在写C++想使用一下他们家的clion ide 软件。</p>
 <p>首先遇到的第一个问题就是，怎么在clion使用gdal。</p>
-<p>这篇文章是记录clion配置gdal遇到的问题及解决办法。</p>
-<h3 id="步骤1-安装Vcpkg"><a href="#步骤1-安装Vcpkg" class="headerlink" title="步骤1: 安装Vcpkg"></a>步骤1: 安装Vcpkg</h3><ol>
-<li><p><strong>下载Vcpkg</strong>: 首先，从GitHub上克隆Vcpkg仓库到你的本地机器上。打开终端或命令提示符，执行以下命令:</p>
-<p>Bash</p>
-<pre class="line-numbers language-none"><code class="language-none">1git clone https://github.com/microsoft/vcpkg.git<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li><p><strong>初始化Vcpkg</strong>: 进入vcpkg目录并初始化vcpkg环境。</p>
-<p>Bash</p>
-<pre class="line-numbers language-none"><code class="language-none">1cd vcpkg
-2./bootstrap-vcpkg.sh  # 对于Linux/macOS
-3./bootstrap-vcpkg.bat  # 对于Windows<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-</li>
-</ol>
-<h3 id="步骤2-安装GDAL"><a href="#步骤2-安装GDAL" class="headerlink" title="步骤2: 安装GDAL"></a>步骤2: 安装GDAL</h3><ol>
-<li><p><strong>安装GDAL</strong>: 使用Vcpkg安装GDAL库。你可以指定特定的版本或者使用默认的最新版本。</p>
-<p>Bash</p>
-<pre class="line-numbers language-none"><code class="language-none">vcpkg install gdal  # 安装默认版本<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果你需要指定版本，可以查阅Vcpkg的列表以确定可用版本号，然后像这样安装：</p>
-<p>Bash</p>
-<pre class="line-numbers language-none"><code class="language-none">vcpkg install gdal:x64-windows  # Windows平台，指定架构<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-</ol>
-<p>可能遇到的错误：</p>
-<p>vcpkg安装libpq失败。libpq是postgresql是别名。</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240621111823533.png" alt="image-20240621111823533"></p>
-<p>解决办法。</p>
-<p>在visual studio 的语音包选项中，去除中文，只保留英语。</p>
-<p>然后重新安装libpq。</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240621111747660.png" alt="image-20240621111747660"></p>
-<h3 id=""><a href="#" class="headerlink" title=" "></a> </h3><p>步骤3: 配置CLion</p>
-<ol>
-<li><p><strong>创建或打开项目</strong>: 在CLion中创建一个新的C++项目或打开现有的项目。</p>
-</li>
-<li><p><strong>CMakeLists.txt配置</strong>: 在项目的<code>CMakeLists.txt</code>文件中，添加以下内容来指定使用Vcpkg安装的GDAL库。确保路径正确指向你的Vcpkg安装目录。</p>
-<p>Cmake</p>
-<pre class="line-numbers language-none"><code class="language-none">1set(CMAKE_TOOLCHAIN_FILE "{path_to_vcpkg}/scripts/buildsystems/vcpkg.cmake" CACHE STRING "" FORCE)
-2find_package(GDAL REQUIRED)
-3include_directories(${GDAL_INCLUDE_DIRS})
-4target_link_libraries(your_target_name ${GDAL_LIBRARIES})<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>替换<code>{path_to_vcpkg}</code>为你的Vcpkg实际安装路径，<code>your_target_name</code>为你的CMake目标名称。</p>
-</li>
-<li><p><strong>刷新CMake</strong>: 在CLion中，点击”File” -&gt; “Reload CMake Project”或者使用快捷键，让CLion重新加载CMake配置。</p>
-</li>
-<li><p><strong>编译与运行</strong>: 现在，你应该能够在代码中包含GDAL头文件并链接到GDAL库进行编译和运行了。</p>
-</li>
-</ol>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>确保你的CLion版本与你的操作系统兼容，并且支持CMake项目。</li>
-<li>如果你的CLion安装路径含有空格，可能导致Vcpkg使用时出现问题，根据之前的提示，可能需要单独安装CMake并配置CLion使用该独立安装的CMake。</li>
-<li>如果遇到编译问题或找不到库，请检查GDAL是否正确安装，以及CMakeLists.txt中的路径是否正确。</li>
-<li>保持Vcpkg更新，以获取GDAL的最新版本和支持。</li>
-</ul>
+<p>这篇文章是记录clion配置gdal的步骤。</p>
+<h3 id="安装WSL和配置号ubantu"><a href="#安装WSL和配置号ubantu" class="headerlink" title="安装WSL和配置号ubantu"></a>安装WSL和配置号ubantu</h3><p>教程：<a class="link" target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_57367513/article/details/135001273">https://blog.csdn.net/weixin_57367513/article/details/135001273<i class="fas fa-external-link-alt"></i></a></p>
+<h3 id="安装-GDAL"><a href="#安装-GDAL" class="headerlink" title="安装 GDAL"></a>安装 GDAL</h3><pre class="line-numbers language-none"><code class="language-none">sudo add-apt-repository ppa:ubuntugis/ppa &amp;&amp; sudo apt-get update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get update<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install gdal-bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install libgdal-dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果一切正确，已成功安装 GDAL！</p>
+<p>在 CLion 上开始使用 GDAL 之前，需要完成以下两个步骤。</p>
+<h3 id="安装-CMake"><a href="#安装-CMake" class="headerlink" title="安装 CMake"></a>安装 CMake</h3><p>要安装 CMake，请在 Ubuntu 终端上运行以下命令。</p>
+<p>安装CMake所依赖的库：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get install build-essential libssl-dev<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>进入 tmp 目录：</p>
+<pre class="line-numbers language-none"><code class="language-none">cd /tmp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>下载源代码（将路径改为最新版本的路径）：</p>
+<pre class="line-numbers language-none"><code class="language-none">wget https://github.com/Kitware/CMake/releases/download/v3.28.3/cmake-3.28.3.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>完成后，提取文件：</p>
+<pre class="line-numbers language-none"><code class="language-none">tar -zxvf cmake-3.28.3.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>进入解压的文件夹：</p>
+<pre class="line-numbers language-none"><code class="language-none">cd cmake-3.28.3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>编译并安装CMake：</p>
+<pre class="line-numbers language-none"><code class="language-none">./bootstrap<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这可能需要一些时间，完成后您将看到以下内容。</p>
+<p><img src="https://tudelft3d.github.io/geogeeks/cpp/img/bootstrap.png" alt="图像"></p>
+<p>现在运行以下命令来实现：</p>
+<pre class="line-numbers language-none"><code class="language-none">make<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这一步也需要一些时间。完成后，你终于可以安装它了：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo make install<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>最后，为了检查安装是否成功，您可以查看 CMake 版本：</p>
+<pre class="line-numbers language-none"><code class="language-none">cmake --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://tudelft3d.github.io/geogeeks/cpp/img/cmake_version.jpg" alt="图像"></p>
+<h3 id="安装-GDB¶"><a href="#安装-GDB¶" class="headerlink" title="安装 GDB¶"></a>安装 GDB<a class="link" target="_blank" rel="noopener" href="https://tudelft3d.github.io/geogeeks/cpp/wslclion/#install-gdb">¶<i class="fas fa-external-link-alt"></i></a></h3><p>GDB 是 C++ 的调试器，您将需要它在 CLion 中连接到 WSL。</p>
+<p>如果您在 CMake 之后立即安装 GDB，则可能仍位于<code>cmake-3.20.0</code>Ubuntu 终端上的文件夹中。首先，返回主目录：</p>
+<pre class="line-numbers language-none"><code class="language-none">cd ../..<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://tudelft3d.github.io/geogeeks/cpp/img/go_home_dir.jpg" alt="图像"></p>
+<p>使用以下两个命令安装GDB：</p>
+<pre class="line-numbers language-none"><code class="language-none">sudo apt-get update
+sudo apt-get install gdb<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>如果此方法对您不起作用，您也可以按照本[页面]上第二个选项的说明通过源代码进行安装。</p>
+<p>您可以通过检查 GDB 版本来验证安装：</p>
+<pre class="line-numbers language-none"><code class="language-none">gdb --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://tudelft3d.github.io/geogeeks/cpp/img/gdb_version.jpg" alt="图像"></p>
+<p>一旦安装了 GDB，就拥有了在 CLion 中连接 WSL 所需的一切！</p>
+<h3 id="偏门技巧"><a href="#偏门技巧" class="headerlink" title="偏门技巧"></a>偏门技巧</h3><p>wsl 控制台与 win10 之间复制粘贴的实现</p>
+<p>ubuntu 控制台内部<br>复制：按住鼠标左键选择，松开选定<br>粘贴：点击鼠标右键</p>
+<p>win 复制到 ubuntu 粘贴<br>win 复制：Ctrl + C<br>ubuntu粘贴：点击鼠标右键</p>
+<p>ubuntu 复制到 win 粘贴<br>ubuntu 复制：Shift + Ctrl + C<br>win 粘贴：Ctrl + V</p>
+<h3 id="连接到CLion"><a href="#连接到CLion" class="headerlink" title="连接到CLion"></a>连接到CLion</h3><p><em>从file</em>转到setting或直接按 Ctrl+Alt+S。</p>
+<p><img src="https://tudelft3d.github.io/geogeeks/cpp/img/settings.jpg" alt="图像"></p>
+<p><em>在Build、Execution、Deployment</em>下，转到<em>Toolchains</em>。然后，单击 + 号添加新工具链并选择 WSL。</p>
+<p><img src="https://tudelft3d.github.io/geogeeks/cpp/img/clion_settings.jpg" alt="图像"></p>
+<p>它应该会自动检测所有文件（Toolset、CMake、Debugger 等）。但是，如果您看到无法找到 CMake 的错误，请单击 CMake 右侧的“浏览”并选择正确的文件。您可以在 下找到它<code>/usr/local/bin/cmake</code>。</p>
+<p><img src="https://tudelft3d.github.io/geogeeks/cpp/img/cmake_location.jpg" alt="图像"></p>
+<p>完成此步骤后，你可能会在 C++ 编译器下看到以下警告：<em>测试 cmake 运行已完成并出现错误</em>。<br>在这种情况下，请在 Ubuntu 终端上输入以下命令重新启动 WSL：</p>
+<pre class="line-numbers language-none"><code class="language-none">wsl.exe -t Ubuntu<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这将关闭终端。只需在您的设备上搜索 Ubuntu 即可再次打开它。现在，如果您再次检查 CLion，您应该不会再看到警告。</p>
+<p>最后，不要忘记将 WSL 置于列出的工具链顶部，使其成为默认工具链。您可以通过将 WSL 拖到顶部或使用箭头来执行此操作。</p>
+<p><img src="https://tudelft3d.github.io/geogeeks/cpp/img/wsl_default.jpg" alt="图像"></p>
+<p>现在可以在 Windows 上使用 CLion 的 GDAL了！</p>
 <!-- flag of hidden posts -->
             </div>
 
@@ -278,10 +276,6 @@
 
             
                 <ul class="post-tags-box">
-                    
-                        <li class="tag-item">
-                            <a href="/tags/%E7%9F%A2%E9%87%8F/">#矢量</a>&nbsp;
-                        </li>
                     
                         <li class="tag-item">
                             <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>&nbsp;
