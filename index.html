@@ -139,20 +139,22 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2021/03/10/gdal-api-bi-ji/">
-                        gdal api笔记
+                    <a href="/2024/07/26/dai-ma-geohash-kong-jian-suo-yin/">
+                        geohash空间索引
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        ​        如果你的gdal版本是3.2.2及以上，那么只能：
-from osgeo import gdal 
+                        geohash空间索引
+代码以下代码仅供参考
+'''
+geohash空间索引
+'''
 
 
-ds = gdal.Open(data)
-rows = ds.RasterYSize
-cols = ds.RasterXSize...
+def geohash_encode(latitude, longitude, precision=12):
+    lat_interval, lon_int...
                     
                 </div>
 
@@ -160,15 +162,50 @@ cols = ds.RasterXSize...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sun Apr 07 2024 13:13:38 GMT+0800">
-                2024-04-07
+            <span class="home-article-date" data-updated="Fri Jul 26 2024 14:27:03 GMT+0800">
+                2024-07-26
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2021/03/10/gdal-api-bi-ji/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/07/26/dai-ma-geohash-kong-jian-suo-yin/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/07/26/dai-ma-cong-zhu-ce-ce-hui-shi-zhen-ti-wen-ben-chu-li-yu-da-an-gao-liang/">
+                        如何使用Python从PDF中提取文本并转换为Markdown文本的实操
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                         之前实现了对注册测绘师综合真题PDF转换为文本数据。但是这些文本数据，不能直接导入到数据库中的。
+而本文针对这个问题，进行展开。最终实现注册测绘师真题文本处理与答案高亮。
+
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Fri Jul 26 2024 16:38:20 GMT+0800">
+                2024-07-26
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/07/26/dai-ma-cong-zhu-ce-ce-hui-shi-zhen-ti-wen-ben-chu-li-yu-da-an-gao-liang/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -301,8 +338,8 @@ Pytho...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 24 2024 13:46:42 GMT+0800">
-                2024-07-24
+            <span class="home-article-date" data-updated="Fri Jul 26 2024 21:02:08 GMT+0800">
+                2024-07-26
             </span>
         </span>
         
@@ -482,43 +519,6 @@ MLLMs（多模态大型语言模型）：利用场景图使多模态大型语言
     </div>
 
     <a class="read-more" href="/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/17/python-wo-hen-yi-han-mei-you-zao-dian-zhi-dao-python-zi-dian-de-8-ge-gong-neng/">
-                        【python】我很遗憾没有早点知道 Python 字典的 8 个功能
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        这些技巧使得处理 Python 中的字典变得更加愉快和优雅。
-1）使用 dict(key=value) 创建字典# 正常的方式创建字典，使用字典推导式的语法
-normal_dict = {
-    'red': 'apple',
-    'orang...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 17 2024 13:19:40 GMT+0800">
-                2024-07-17
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/17/python-wo-hen-yi-han-mei-you-zao-dian-zhi-dao-python-zi-dian-de-8-ge-gong-neng/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

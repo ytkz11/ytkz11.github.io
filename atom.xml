@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-07-25T02:41:11.565Z</updated>
+  <updated>2024-07-26T06:27:03.022Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>geohash空间索引</title>
+    <link href="http://ytkz11@.github.io/2024/07/26/dai-ma-geohash-kong-jian-suo-yin/"/>
+    <id>http://ytkz11@.github.io/2024/07/26/dai-ma-geohash-kong-jian-suo-yin/</id>
+    <published>2024-07-26T14:00:10.000Z</published>
+    <updated>2024-07-26T06:27:03.022Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;geohash空间索引&lt;/p&gt;
+&lt;h1 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h1&gt;&lt;p&gt;以下代码仅供参考&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何使用Python从PDF中提取文本并转换为Markdown文本的实操</title>
+    <link href="http://ytkz11@.github.io/2024/07/26/dai-ma-cong-zhu-ce-ce-hui-shi-zhen-ti-wen-ben-chu-li-yu-da-an-gao-liang/"/>
+    <id>http://ytkz11@.github.io/2024/07/26/dai-ma-cong-zhu-ce-ce-hui-shi-zhen-ti-wen-ben-chu-li-yu-da-an-gao-liang/</id>
+    <published>2024-07-26T14:00:10.000Z</published>
+    <updated>2024-07-26T08:38:20.954Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>三维重建的论文</title>
@@ -104,7 +156,7 @@
     <link href="http://ytkz11@.github.io/2024/07/23/dai-ma-hang-pian-xiao-zheng-de-yi-xie-si-kao/"/>
     <id>http://ytkz11@.github.io/2024/07/23/dai-ma-hang-pian-xiao-zheng-de-yi-xie-si-kao/</id>
     <published>2024-07-23T14:00:10.000Z</published>
-    <updated>2024-07-24T05:46:42.130Z</updated>
+    <updated>2024-07-26T13:02:08.615Z</updated>
     
     
       
@@ -320,18 +372,18 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <title>注册测绘师2012年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-23T09:42:24.122Z</updated>
+    <updated>2024-07-23T09:42:32.416Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是（ ）。&lt;br&gt;A.N &lt;strong&gt;&lt;span style=&quot;color:#2f9272;&quot;&gt;B.N-1&lt;/span&gt;&lt;/strong&gt; C.N(N+1)/2</summary>
+    <summary type="html">&lt;p&gt;1.选取GPS连续运行参考站时，视场内障碍物的高度角一般不超过（ ）。&lt;br&gt;A.5° &lt;strong&gt;&lt;span style=&quot;color:#0d3387;&quot;&gt;B.10°&lt;/span&gt;&lt;/strong&gt; C.15°</summary>
         
       
     
@@ -345,18 +397,18 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2012年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2012-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <title>注册测绘师2011年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2011-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
     <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-23T09:42:32.416Z</updated>
+    <updated>2024-07-23T09:42:24.122Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1.选取GPS连续运行参考站时，视场内障碍物的高度角一般不超过（ ）。&lt;br&gt;A.5° &lt;strong&gt;&lt;span style=&quot;color:#0d3387;&quot;&gt;B.10°&lt;/span&gt;&lt;/strong&gt; C.15°</summary>
+    <summary type="html">&lt;p&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是（ ）。&lt;br&gt;A.N &lt;strong&gt;&lt;span style=&quot;color:#2f9272;&quot;&gt;B.N-1&lt;/span&gt;&lt;/strong&gt; C.N(N+1)/2</summary>
         
       
     
@@ -395,32 +447,6 @@
   </entry>
   
   <entry>
-    <title>注册测绘师2015年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-23T09:27:44.577Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2015年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;1.LCR—G型相对重力仪必须锁摆的状态是（ ）。&lt;br&gt;&lt;strong&gt;&lt;span style=&quot;color:#7fdf82;&quot;&gt;A.运输过程中&lt;/span&gt;&lt;/strong&gt; B.仪器检查 C.观测读数</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
     <title>注册测绘师2014年《综合能力》考试真题</title>
     <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
     <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
@@ -434,6 +460,32 @@
         
     <summary type="html">&lt;p&gt;2014年《综合能力》考试真题&lt;/p&gt;
 &lt;p&gt;1.FG5绝对重力仪的观测值是重力点的（ ）。&lt;br&gt;A.重力差值 B.重力垂线偏差 &lt;strong&gt;&lt;span style=&quot;color:#38086f;&quot;&gt;C.重力加速度&lt;/span&gt;&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+    
+    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>注册测绘师2015年《综合能力》考试真题</title>
+    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
+    <published>2024-07-15T14:00:10.000Z</published>
+    <updated>2024-07-23T09:27:44.577Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2015年《综合能力》考试真题&lt;/p&gt;
+&lt;p&gt;1.LCR—G型相对重力仪必须锁摆的状态是（ ）。&lt;br&gt;&lt;strong&gt;&lt;span style=&quot;color:#7fdf82;&quot;&gt;A.运输过程中&lt;/span&gt;&lt;/strong&gt; B.仪器检查 C.观测读数</summary>
         
       
     
@@ -486,58 +538,6 @@
         
     <summary type="html">&lt;p&gt;2017年《综合能力》考试真题&lt;/p&gt;
 &lt;p&gt;1.地球表面重力的方向是指（ ）。&lt;br&gt;A.地球引力方向 B.地球离心力相反方向 &lt;strong&gt;&lt;span style=&quot;color:#00a667;&quot;&gt;C.铅垂线方向&lt;/span&gt;&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2018年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-23T09:28:14.731Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2018年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;1.水准测量中，在连续各测站上安置水准仪的三脚架时，应使其中两脚与水准路线方向平行，而第三脚轮换置路线的左侧与右侧，可以减弱因（ ）引起的误差。&lt;br&gt;&lt;strong&gt;&lt;span</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2019年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/15/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-15T14:00:10.000Z</published>
-    <updated>2024-07-23T09:28:51.049Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2019年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;1.与大地水准面处处垂直的线是（ ）。&lt;br&gt;A.地球引力线 B.椭球面法线 &lt;strong&gt;&lt;span style=&quot;color:#8d4707;&quot;&gt;C.铅垂线&lt;/span&gt;&lt;/strong&gt;</summary>
         
       
     
