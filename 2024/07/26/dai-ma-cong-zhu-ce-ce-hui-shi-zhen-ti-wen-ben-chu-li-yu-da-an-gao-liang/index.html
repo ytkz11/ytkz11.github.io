@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-07-26 16:38:20</span>
+        <span class="pc">2024-07-30 17:22:01</span>
     </span>
     
     
@@ -210,7 +210,286 @@
 
                 <p> 之前实现了对注册测绘师综合真题PDF转换为文本数据。但是这些文本数据，不能直接导入到数据库中的。</p>
 <p>而本文针对这个问题，进行展开。最终实现注册测绘师真题文本处理与答案高亮。</p>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>首先理清楚数据结构。比如以下这3道题：</p>
+<pre class="line-numbers language-none"><code class="language-none">1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是
+（ ）。
+A、N B、N-1 C、N(N+1)/2 D、N(N-1)/2
+答案：B
 
+2.我国现行的大地原点、水准原点分别位于（ ）。
+A、北京、浙江坎门 B、北京、山东青岛 C、山西泾阳、浙江坎门 D、陕西泾阳、山东青岛
+答案：D
+
+3.大地水准面精化工作中，A、B级GPS观测应采用（ ）定位模式。
+A、静态相对 B、快速静态相对 C、准动态相对 D、绝对
+答案：A
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>需要把以上的文本分为</p>
+<p>1.题目</p>
+<p>2.选项</p>
+<p>3.答案</p>
+<p>对于文字的处理，我们通常用到正则式re。re是一个非常强大的库，它又简单又困难。简单是指它容易使用；困难是指如果要实现指定功能，它就变得很困难。</p>
+<p>反正通过re，我们可以实现以上需求。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">parse_text</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''
+    用于2011年到2021年测绘真题
+    :param text: 文本
+    :return: 题目选项答案的列表
+    '''</span>
+    text <span class="token operator">=</span> text<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'、'</span><span class="token punctuation">,</span> <span class="token string">'.'</span><span class="token punctuation">)</span>
+    <span class="token comment"># 正则表达式，用于分割每个问题的段落</span>
+    problem_pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'(\d+\..*?(?=^(\d+\.|$)))'</span><span class="token punctuation">,</span> re<span class="token punctuation">.</span>MULTILINE <span class="token operator">|</span> re<span class="token punctuation">.</span>DOTALL<span class="token punctuation">)</span>
+
+    <span class="token comment"># 正则表达式，用于在每个问题的段落中提取题目、选项、答案和解析</span>
+    all_pattern <span class="token operator">=</span>            re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'^(.*?)\s*(A[.,\、]*.*?E[.,\、]*.*?)(答案：[\w, ]+)(解析：.*)'</span><span class="token punctuation">,</span> re<span class="token punctuation">.</span>DOTALL<span class="token punctuation">)</span>
+    no_explanation_pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'^(.*?)\s*(A[.,\、]*.*?D[.,\、]*.*?)(答案：[\w, ]+)'</span><span class="token punctuation">,</span> re<span class="token punctuation">.</span>DOTALL<span class="token punctuation">)</span>
+
+    problems <span class="token operator">=</span> problem_pattern<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+    parsed_problems <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    i <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> problem <span class="token keyword">in</span> problems<span class="token punctuation">:</span>
+        problem <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>problem<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        match_all <span class="token operator">=</span> all_pattern<span class="token punctuation">.</span>match<span class="token punctuation">(</span>problem<span class="token punctuation">)</span>
+        match_no_explanation <span class="token operator">=</span> no_explanation_pattern<span class="token punctuation">.</span>match<span class="token punctuation">(</span>problem<span class="token punctuation">)</span>
+
+        match <span class="token operator">=</span> match_all <span class="token keyword">if</span> match_all <span class="token keyword">else</span> match_no_explanation
+        i<span class="token operator">+=</span><span class="token number">1</span>
+        <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">30</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> match<span class="token punctuation">:</span>
+            question <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+            <span class="token comment">#  修改后的正则表达式，确保选项前有空格或\n，并且紧跟一个大写字母和“、”</span>
+            origin_option <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            options_pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'(?&lt;=\s|\n)[A-F][.,\、]*\s*[^答案]+'</span><span class="token punctuation">)</span>
+            options_pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'(?&lt;=\s|\n)[A-F][.,\、]\s*\S.*?(?= [A-F]|$)'</span><span class="token punctuation">)</span>
+            options_pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'[A-F][.,\、]*\s*\S.*?(?=\S[A-F]|$)'</span><span class="token punctuation">)</span>
+
+            options_matches <span class="token operator">=</span> options_pattern<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>origin_option<span class="token punctuation">)</span>
+
+            options <span class="token operator">=</span> <span class="token punctuation">[</span>option<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> option_match <span class="token keyword">in</span> options_matches <span class="token keyword">for</span> option <span class="token keyword">in</span> option_match<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+            answer <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'答案：'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+            explanation <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> match_all <span class="token keyword">else</span> <span class="token string">''</span>
+
+            parsed_problems<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span>
+                <span class="token string">'question'</span><span class="token punctuation">:</span> question<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token string">'options'</span><span class="token punctuation">:</span> options<span class="token punctuation">,</span>
+                <span class="token string">'answer'</span><span class="token punctuation">:</span> answer<span class="token punctuation">,</span>
+                <span class="token string">'explanation'</span><span class="token punctuation">:</span> explanation
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> parsed_problems<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>测试如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token string">'question'</span><span class="token punctuation">:</span> <span class="token string">'1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是（ ）。'</span><span class="token punctuation">,</span> <span class="token string">'options'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'A.N'</span><span class="token punctuation">,</span> <span class="token string">'B.N-1'</span><span class="token punctuation">,</span> <span class="token string">'C.N(N+1)/2'</span><span class="token punctuation">,</span> <span class="token string">'D.N(N-1)/2'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'answer'</span><span class="token punctuation">:</span> <span class="token string">'B'</span><span class="token punctuation">,</span> <span class="token string">'explanation'</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 
+ <span class="token punctuation">{</span><span class="token string">'question'</span><span class="token punctuation">:</span> <span class="token string">'2.我国现行的大地原点.水准原点分别位于（ ）。'</span><span class="token punctuation">,</span> <span class="token string">'options'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'A.北京.浙江坎门'</span><span class="token punctuation">,</span> <span class="token string">'B.北京.山东青岛'</span><span class="token punctuation">,</span> <span class="token string">'C.山西泾阳.浙江坎门'</span><span class="token punctuation">,</span> <span class="token string">'D.陕西泾阳.山东青岛'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'answer'</span><span class="token punctuation">:</span> <span class="token string">'D'</span><span class="token punctuation">,</span> <span class="token string">'explanation'</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token punctuation">{</span><span class="token string">'question'</span><span class="token punctuation">:</span> <span class="token string">'3.大地水准面精化工作中，'</span><span class="token punctuation">,</span> <span class="token string">'options'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'A.B级GPS观测应采用（'</span><span class="token punctuation">,</span> <span class="token string">'）定位模式。'</span><span class="token punctuation">,</span> <span class="token string">'A.静态相对'</span><span class="token punctuation">,</span> <span class="token string">'B.快速静态相对'</span><span class="token punctuation">,</span> <span class="token string">'C.准动态相对'</span><span class="token punctuation">,</span> <span class="token string">'D.绝对'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'answer'</span><span class="token punctuation">:</span> <span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'explanation'</span><span class="token punctuation">:</span> <span class="token string">''</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240730162608408.png" alt="image-20240730162608408"></p>
+<h1 id="给选项附上颜色"><a href="#给选项附上颜色" class="headerlink" title="给选项附上颜色"></a>给选项附上颜色</h1><p>没附上颜色前的文本如下：</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240730163112081.png" alt="image-20240730163112081"></p>
+<p>附上颜色前的文本如下</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240730163139814.png" alt="image-20240730163139814"></p>
+<h1 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h1><p>1.把纯文本进行数据分类</p>
+<p>2.按照正确答案，给选项附上颜色</p>
+<p>3.批量处理2011年到2022年的注册测绘师综合真题</p>
+<p>下面附上python代码，对相关知识点感兴趣的话，自行看下面的代码。</p>
+<h1 id="全部代码"><a href="#全部代码" class="headerlink" title="全部代码"></a>全部代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @File : highlight_correct_answers.py </span>
+<span class="token triple-quoted-string string">'''
+
+'''</span>
+<span class="token keyword">import</span> os
+<span class="token keyword">from</span> read_pdf <span class="token keyword">import</span> get_file_name
+<span class="token keyword">import</span> time
+<span class="token keyword">import</span> re
+<span class="token keyword">import</span>  random
+
+index <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'A'</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token string">'B'</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token string">'C'</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token string">'D'</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token string">'E'</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token string">'F'</span><span class="token punctuation">:</span> <span class="token number">8</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">def</span> <span class="token function">generate_random_color</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    r <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span>
+    g <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span>
+    b <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token string-interpolation"><span class="token string">f'#</span><span class="token interpolation"><span class="token punctuation">{</span>r<span class="token punctuation">:</span><span class="token format-spec">02x</span><span class="token punctuation">}</span></span><span class="token interpolation"><span class="token punctuation">{</span>g<span class="token punctuation">:</span><span class="token format-spec">02x</span><span class="token punctuation">}</span></span><span class="token interpolation"><span class="token punctuation">{</span>b<span class="token punctuation">:</span><span class="token format-spec">02x</span><span class="token punctuation">}</span></span><span class="token string">'</span></span>
+
+
+colors <span class="token operator">=</span> <span class="token punctuation">[</span>generate_random_color<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">]</span>  <span class="token comment"># 生成100种随机颜色</span>
+<span class="token keyword">def</span> <span class="token function">extract_options</span><span class="token punctuation">(</span>options_str<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 假设options_str的格式为'A.N,B.N-1,C.N(N+1)/2,D.N(N-1)/2,E.其他内容'</span>
+    <span class="token comment"># 如果没有E，则只处理到D</span>
+    options_list <span class="token operator">=</span> options_str<span class="token punctuation">.</span>rstrip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 初始化一个字典来存储选项</span>
+    options_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+    <span class="token comment"># 遍历选项列表</span>
+    <span class="token keyword">for</span> option <span class="token keyword">in</span> options_list<span class="token punctuation">:</span>
+        <span class="token comment"># 分割选项为字母和内容</span>
+        letter<span class="token punctuation">,</span> content <span class="token operator">=</span> option<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">'.'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        options_dict<span class="token punctuation">[</span>letter<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> content<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># 如果没有E，则只取A, B, C, D</span>
+    <span class="token comment"># 如果有E，则直接返回所有选项</span>
+    <span class="token keyword">if</span> <span class="token string">'E'</span> <span class="token keyword">in</span> options_dict<span class="token punctuation">:</span>
+        <span class="token comment"># 如果需要，可以在这里对options_dict进行进一步处理或返回</span>
+        <span class="token keyword">return</span> options_dict
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token comment"># 提取A, B, C, D</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>k<span class="token punctuation">:</span> v <span class="token keyword">for</span> k<span class="token punctuation">,</span> v <span class="token keyword">in</span> options_dict<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> k <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token string">'A'</span><span class="token punctuation">,</span> <span class="token string">'B'</span><span class="token punctuation">,</span> <span class="token string">'C'</span><span class="token punctuation">,</span> <span class="token string">'D'</span><span class="token punctuation">]</span><span class="token punctuation">}</span>
+
+<span class="token keyword">def</span> <span class="token function">read_md_file</span><span class="token punctuation">(</span>file_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>file_path<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+            content <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> content
+    <span class="token keyword">except</span> FileNotFoundError<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"文件 </span><span class="token interpolation"><span class="token punctuation">{</span>file_path<span class="token punctuation">}</span></span><span class="token string"> 未找到。"</span></span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">None</span>
+<span class="token keyword">def</span> <span class="token function">split_text</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># 正则表达式用于匹配题目、选项、答案和解析</span>
+    pattern <span class="token operator">=</span> <span class="token string">r'(?P&lt;question&gt;\d+\..*?\n(?:A|B|C|D).*\n)答案：(?P&lt;answer&gt;[A-D])\n解析：(?P&lt;explanation&gt;.*?(?=\n\d+\.|$))'</span>
+    questions <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token comment"># 使用re.finditer来查找所有匹配项</span>
+    <span class="token keyword">for</span> match <span class="token keyword">in</span> re<span class="token punctuation">.</span>finditer<span class="token punctuation">(</span>pattern<span class="token punctuation">,</span> text<span class="token punctuation">,</span> re<span class="token punctuation">.</span>MULTILINE <span class="token operator">|</span> re<span class="token punctuation">.</span>DOTALL<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        question <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token string">'question'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        options <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">r'(A|B|C|D)\..*'</span><span class="token punctuation">,</span> question<span class="token punctuation">)</span>  <span class="token comment"># 提取选项（简化处理，可能需要根据实际情况调整）</span>
+        answer <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token string">'answer'</span><span class="token punctuation">)</span>
+        explanation <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token string">'explanation'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># 将题目、选项、答案和解析添加到列表中（这里为了简单起见，只添加了题目和答案，但可以扩展为包含选项和解析的字典）</span>
+        questions<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token string">'question'</span><span class="token punctuation">:</span> question<span class="token punctuation">,</span>
+            <span class="token string">'options'</span><span class="token punctuation">:</span> options<span class="token punctuation">,</span>
+            <span class="token string">'answer'</span><span class="token punctuation">:</span> answer<span class="token punctuation">,</span>
+            <span class="token string">'explanation'</span><span class="token punctuation">:</span> explanation
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> questions
+
+<span class="token keyword">def</span> <span class="token function">parse_text</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''
+    用于2011年到2021年测绘真题
+    :param text: 文本
+    :return: 题目选项答案的列表
+    '''</span>
+    text <span class="token operator">=</span> text<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'、'</span><span class="token punctuation">,</span> <span class="token string">'.'</span><span class="token punctuation">)</span>
+    <span class="token comment"># 正则表达式，用于分割每个问题的段落</span>
+    problem_pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'(\d+\..*?(?=^(\d+\.|$)))'</span><span class="token punctuation">,</span> re<span class="token punctuation">.</span>MULTILINE <span class="token operator">|</span> re<span class="token punctuation">.</span>DOTALL<span class="token punctuation">)</span>
+
+    <span class="token comment"># 正则表达式，用于在每个问题的段落中提取题目、选项、答案和解析</span>
+    all_pattern <span class="token operator">=</span>            re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'^(.*?)\s*(A[.,\、]*.*?E[.,\、]*.*?)(答案：[\w, ]+)(解析：.*)'</span><span class="token punctuation">,</span> re<span class="token punctuation">.</span>DOTALL<span class="token punctuation">)</span>
+    no_explanation_pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'^(.*?)\s*(A[.,\、]*.*?D[.,\、]*.*?)(答案：[\w, ]+)'</span><span class="token punctuation">,</span> re<span class="token punctuation">.</span>DOTALL<span class="token punctuation">)</span>
+
+    problems <span class="token operator">=</span> problem_pattern<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+    parsed_problems <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    i <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> problem <span class="token keyword">in</span> problems<span class="token punctuation">:</span>
+        problem <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>problem<span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        match_all <span class="token operator">=</span> all_pattern<span class="token punctuation">.</span>match<span class="token punctuation">(</span>problem<span class="token punctuation">)</span>
+        match_no_explanation <span class="token operator">=</span> no_explanation_pattern<span class="token punctuation">.</span>match<span class="token punctuation">(</span>problem<span class="token punctuation">)</span>
+
+        match <span class="token operator">=</span> match_all <span class="token keyword">if</span> match_all <span class="token keyword">else</span> match_no_explanation
+        i<span class="token operator">+=</span><span class="token number">1</span>
+        <span class="token keyword">if</span> i <span class="token operator">==</span> <span class="token number">26</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> match<span class="token punctuation">:</span>
+            question <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+            <span class="token comment">#  修改后的正则表达式，确保选项前有空格或\n，并且紧跟一个大写字母和“、”</span>
+            origin_option <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">,</span> <span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            options_pattern <span class="token operator">=</span> re<span class="token punctuation">.</span><span class="token builtin">compile</span><span class="token punctuation">(</span><span class="token string">r'[A-F][.,\、]*\s*\S.*?(?=\S[A-F]|$)'</span><span class="token punctuation">)</span>
+
+            options_matches <span class="token operator">=</span> options_pattern<span class="token punctuation">.</span>findall<span class="token punctuation">(</span>origin_option<span class="token punctuation">)</span>
+
+            options <span class="token operator">=</span> <span class="token punctuation">[</span>option<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> option_match <span class="token keyword">in</span> options_matches <span class="token keyword">for</span> option <span class="token keyword">in</span> option_match<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+            answer <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'答案：'</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">,</span> <span class="token string">''</span><span class="token punctuation">)</span>
+            explanation <span class="token operator">=</span> match<span class="token punctuation">.</span>group<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> match_all <span class="token keyword">else</span> <span class="token string">''</span>
+
+            parsed_problems<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">{</span>
+                <span class="token string">'question'</span><span class="token punctuation">:</span> question<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'\n'</span><span class="token punctuation">,</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token string">'options'</span><span class="token punctuation">:</span> options<span class="token punctuation">,</span>
+                <span class="token string">'answer'</span><span class="token punctuation">:</span> answer<span class="token punctuation">,</span>
+                <span class="token string">'explanation'</span><span class="token punctuation">:</span> explanation
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> parsed_problems
+<span class="token keyword">def</span> <span class="token function">partition_topic</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">'''
+    用于2011年到2021年测绘真题
+    :param text: 文本
+    :return: 题目选项答案的列表
+    '''</span>
+    questions <span class="token operator">=</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span> <span class="token string">r'(\d+\..*?答案：.*?解析：.*?)(?=^\d+\.|$)'</span><span class="token punctuation">,</span> text<span class="token punctuation">,</span> re<span class="token punctuation">.</span>DOTALL <span class="token operator">|</span> re<span class="token punctuation">.</span>MULTILINE<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> questions
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> outpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        os<span class="token punctuation">.</span>makedirs<span class="token punctuation">(</span>outpath<span class="token punctuation">)</span>
+    mdfile <span class="token operator">=</span> get_file_name<span class="token punctuation">(</span>path<span class="token punctuation">,</span> <span class="token string">'.md'</span><span class="token punctuation">)</span>
+
+    i <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> md <span class="token keyword">in</span> mdfile<span class="token punctuation">:</span>
+        outfile <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>outpath<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>md<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.md'</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>outfile<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>outfile<span class="token punctuation">)</span>  <span class="token comment"># 如果存在，则删除，再生成新的outfile</span>
+
+        md_content <span class="token operator">=</span> read_md_file<span class="token punctuation">(</span>md<span class="token punctuation">)</span>  <span class="token comment"># 读取</span>
+        parsed_text <span class="token operator">=</span> parse_text<span class="token punctuation">(</span>md_content<span class="token punctuation">)</span>  <span class="token comment"># 2011-2022</span>
+        <span class="token comment"># parsed_text = parse_text2022(md_content)</span>
+
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> text <span class="token keyword">in</span> parsed_text<span class="token punctuation">:</span>
+                questions <span class="token operator">=</span> text<span class="token punctuation">[</span><span class="token string">'question'</span><span class="token punctuation">]</span>
+                options <span class="token operator">=</span> text<span class="token punctuation">[</span><span class="token string">'options'</span><span class="token punctuation">]</span>
+                answers <span class="token operator">=</span> text<span class="token punctuation">[</span><span class="token string">'answer'</span><span class="token punctuation">]</span>
+                explanation <span class="token operator">=</span> text<span class="token punctuation">[</span><span class="token string">'explanation'</span><span class="token punctuation">]</span>
+                <span class="token keyword">for</span> answer <span class="token keyword">in</span> answers<span class="token punctuation">:</span>
+                    options<span class="token punctuation">[</span>index<span class="token punctuation">[</span>
+                        answer<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string-interpolation"><span class="token string">f'**&lt;span style="color:</span><span class="token interpolation"><span class="token punctuation">{</span>random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>colors<span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">;"&gt;</span><span class="token interpolation"><span class="token punctuation">{</span>options<span class="token punctuation">[</span>index<span class="token punctuation">[</span>answer<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">&lt;/span&gt;**'</span></span>
+
+                <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>outfile<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">'utf-8'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+
+                    new_options <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+                    <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span>questions<span class="token punctuation">)</span>
+                    <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'&lt;br /&gt;'</span><span class="token punctuation">)</span>
+                    <span class="token keyword">for</span> option <span class="token keyword">in</span> options<span class="token punctuation">:</span>
+                        <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span>option<span class="token punctuation">)</span>
+                        <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span>
+                    <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'&lt;br /&gt;'</span><span class="token punctuation">)</span>
+                    <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'答案:{}'</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>answers<span class="token punctuation">)</span><span class="token punctuation">)</span>
+                    <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'&lt;br /&gt;'</span><span class="token punctuation">)</span>
+                    <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'&lt;br /&gt;'</span><span class="token punctuation">)</span>
+                    <span class="token builtin">file</span><span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">'&lt;br /&gt;'</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span>  Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+
+        i <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\r答案加粗加颜色: [{0:50s}] {1:.1f}% {2}"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token string">'#'</span> <span class="token operator">*</span> <span class="token builtin">int</span><span class="token punctuation">(</span>i <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>mdfile<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                                                                i <span class="token operator">/</span> <span class="token builtin">len</span><span class="token punctuation">(</span>mdfile<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">100</span><span class="token punctuation">,</span>
+                                                                os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>outfile<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">""</span><span class="token punctuation">,</span>
+              flush<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    path <span class="token operator">=</span> <span class="token string">r'D:\Registered_Surveyor\markdown\test2022'</span>
+    outpath <span class="token operator">=</span> <span class="token string">r'D:\Registered_Surveyor\markdown\color1'</span>
+    main<span class="token punctuation">(</span>path<span class="token punctuation">,</span> outpath<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>是有瑕疵的，比如上图中的第三题就有提取信息的瑕疵。</p>
+<p>为什么会那样呢？因为第三题的题干出现了A、B的字眼，把我们拟定的re规则打乱了。</p>
+<p>但是这样的错误是少数的，我不想再debug上面的代码了。。。。</p>
+<h1 id="资料分享"><a href="#资料分享" class="headerlink" title="资料分享"></a>资料分享</h1>
             </div>
 
             
