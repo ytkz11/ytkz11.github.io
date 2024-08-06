@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-07-31T00:49:47.837Z</updated>
+  <updated>2024-08-06T06:24:02.314Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2000坐标系转换为wgs84坐标系</title>
+    <link href="http://ytkz11@.github.io/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/"/>
+    <id>http://ytkz11@.github.io/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/</id>
+    <published>2024-08-06T14:00:10.000Z</published>
+    <updated>2024-08-06T06:24:02.314Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图像特征点匹配</title>
+    <link href="http://ytkz11@.github.io/2024/08/06/tu-xiang-te-zheng-dian-pi-pei/"/>
+    <id>http://ytkz11@.github.io/2024/08/06/tu-xiang-te-zheng-dian-pi-pei/</id>
+    <published>2024-08-06T14:00:10.000Z</published>
+    <updated>2024-08-06T09:52:59.797Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文主要介绍图像特征点匹配众多方法中的sift算法。这是几年前写的代码，现在再回看发现很多内容我不记得了，记忆被删除了一样。但是，当时记录好了，也把代码、数据备份了，现在一边运行、一边查资料，很快就把这段代码捡起来了。话不多说，直接进入今天主题。&lt;/p&gt;
+&lt;p&gt;航片拼接、点</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解决ERROR 1 PROJ proj create from database Cannot find proj.db</title>
+    <link href="http://ytkz11@.github.io/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/"/>
+    <id>http://ytkz11@.github.io/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/</id>
+    <published>2024-08-01T14:00:10.000Z</published>
+    <updated>2024-08-05T05:48:52.013Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;python -m nuitka --standalone --onefile --follow-imports</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>2011年-2022年摄影测量地图制图GIS相关真题</title>
@@ -446,92 +522,9 @@
     <category term="编程" scheme="http://ytkz11@.github.io/categories/python/%E7%BC%96%E7%A8%8B/"/>
     
     
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何使用Python从PDF中提取文本并转换为Markdown文本的实操</title>
-    <link href="http://ytkz11@.github.io/2024/07/23/dai-ma-ru-he-shi-yong-python-cong-pdf-zhong-ti-qu-wen-ben-bing-zhuan-huan-wei-markdown-shi-cao/"/>
-    <id>http://ytkz11@.github.io/2024/07/23/dai-ma-ru-he-shi-yong-python-cong-pdf-zhong-ti-qu-wen-ben-bing-zhuan-huan-wei-markdown-shi-cao/</id>
-    <published>2024-07-23T14:00:10.000Z</published>
-    <updated>2024-07-23T14:06:07.446Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 之前介绍如何通过pdfplumber获取PDF的文本。&lt;/p&gt;
-&lt;p&gt;基于上次所写的内容，继续深挖。现在使用Python从PDF中提取文本并转换为Markdown的实际操作。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于《基于Google影像的大数据几何校正思考》的思考</title>
-    <link href="http://ytkz11@.github.io/2024/07/23/dai-ma-hang-pian-xiao-zheng-de-yi-xie-si-kao/"/>
-    <id>http://ytkz11@.github.io/2024/07/23/dai-ma-hang-pian-xiao-zheng-de-yi-xie-si-kao/</id>
-    <published>2024-07-23T14:00:10.000Z</published>
-    <updated>2024-07-26T13:02:08.615Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 今天读到了一个行业前辈在他博客写文章：基于Google影像的大数据几何校正思考&lt;/p&gt;
-&lt;p&gt;基于这篇文章，写一写我的思考。&lt;/p&gt;
-&lt;h1 id=&quot;前辈的文章&quot;&gt;&lt;a href=&quot;#前辈的文章&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python 中每个内置函数的简明解释</title>
-    <link href="http://ytkz11@.github.io/2024/07/22/python-python-zhong-mei-ge-nei-zhi-han-shu-de-jian-ming-jie-shi/"/>
-    <id>http://ytkz11@.github.io/2024/07/22/python-python-zhong-mei-ge-nei-zhi-han-shu-de-jian-ming-jie-shi/</id>
-    <published>2024-07-22T14:00:10.000Z</published>
-    <updated>2024-07-23T14:05:47.850Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;categories: [编程,python]  &lt;span aria-hidden=&quot;true&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/python/"/>
-    
     
     <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            图像特征点匹配 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">图像特征点匹配</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-08-06 22:00:10</span>
+        <span class="mobile">2024-08-06 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-08-06 17:52:59</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E7%BC%96%E7%A8%8B/">编程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>本文主要介绍图像特征点匹配众多方法中的sift算法。这是几年前写的代码，现在再回看发现很多内容我不记得了，记忆被删除了一样。但是，当时记录好了，也把代码、数据备份了，现在一边运行、一边查资料，很快就把这段代码捡起来了。话不多说，直接进入今天主题。</p>
+<p>航片拼接、点云生成、SFM不可绕过的是特征点匹配。而特征点匹配中最经典、有效、稳定的方法是sift算法。我们有必要去学习一下这个sift算法。</p>
+<p>下面是一个利用python语言调用opencv中的算法的示例。</p>
+<p>输入图像1：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408061752038.jpg" alt="2"></p>
+<p>输入图像2：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408061750869.jpg" alt="1"></p>
+<p>具体代码如下：</p>
+<pre class="line-numbers language-none"><code class="language-none"># -*- coding: utf-8 -*-
+# @Time    : 2021/3/10 20:11
+import numpy as np
+import cv2
+
+'''
+sift practice code 1
+'''
+
+class SIFT():
+    def img_sift(self, file1, file2):
+        sift = cv2.xfeatures2d.SIFT_create()
+
+        img1 = cv2.imread(file1)
+        gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)  # 灰度处理图像
+
+        img2 = cv2.imread(file2)
+        gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)  # 灰度处理图像
+
+        data1 = self.match_2d(gray1, gray2)
+        gray1 = data1[:, :, 0] / 255
+        gray2 = data1[:, :, 1] / 255
+
+        hmerge = np.hstack((gray1, gray2))  # 水平拼接
+        cv2.imshow("gray", hmerge)  # 拼接显示为gray
+        cv2.waitKey(0)
+
+        data2 = self.match_3d(img1, img2)
+        img1 = np.array(data2[:, :, :, 0]).astype('uint8')
+        img2 = np.array(data2[:, :, :, 1]).astype('uint8')
+
+        kp1, des1 = sift.detectAndCompute(img1, None)  # des是描述子
+        kp2, des2 = sift.detectAndCompute(img2, None)  # des是描述子
+
+        img3 = cv2.drawKeypoints(img1, kp1, img1, color=(255, 0, 255))  # 画出特征点，并显示为红色圆圈
+        img4 = cv2.drawKeypoints(img2, kp2, img2, color=(255, 0, 255))  # 画出特征点，并显示为红色圆圈
+        hmerge = np.hstack((img3, img4))  # 水平拼接
+        cv2.imshow("point", hmerge)  # 拼接显示为gray
+        cv2.waitKey(0)
+        # BFMatcher解决匹配
+        bf = cv2.BFMatcher()
+        matches = bf.knnMatch(des1, des2, k=2)
+        # 调整ratio
+        good = []
+        for m, n in matches:
+            if m.distance &lt; 0.75 * n.distance:
+                good.append([m])
+
+        img5 = cv2.drawMatchesKnn(img1, kp1, img2, kp2, good, None, flags=2)
+        cv2.imshow("BFmatch", img5)
+        cv2.waitKey(0)
+        cv2.destroyAllWindows()
+
+    def match_2d(self, d1, d2):
+        x1, y1 = np.shape(d1)
+        x2, y2 = np.shape(d2)
+        if x1 &gt; x2 and y1 &gt; y2:
+
+            d3 = np.zeros((x1, y1))
+            d3[d3 == 0] = 255
+            d3[5:5 + x2, 5:5 + y2] = d2
+            x3, y3 = np.shape(d3)
+
+
+
+        else:
+            if y1 &lt; y2:
+                d3 = np.zeros((x2, y2))
+                d3[d3 == 0] = 255
+                d3[5:5 + x1, 5:5 + y1] = d1
+                x3, y3 = np.shape(d3)
+
+        d = []
+        x3, y3 = np.shape(d3)
+        datagray = np.zeros(shape=(x3, y3, 2))
+        datagray[:, :, 0] = d3
+        if x3 == x1:
+            datagray[:, :, 1] = d1
+        elif x3 == x2:
+            datagray[:, :, 1] = d2
+
+        return datagray
+
+    def match_3d(self, d1, d2):
+        x1, y1, z1 = np.shape(d1)
+        x2, y2, z2 = np.shape(d2)
+
+        if x1 &gt; x2 and y1 &gt; y2:
+                d3 = np.zeros((x1, y1, 3))
+                for i in range(z1):
+                    print(i)
+                    d3[5:5 + x2, 5:5 + y2, i] = d2[:, :, i]
+        else:
+
+                if y1 &lt; y2:
+                    d3 = np.zeros((x2, y2, 3))
+
+                    for i in range(z1):
+                        d3[5:5 + x1, 5:5 + y1,i] = d1[:, :, i]
+
+        d=[]
+        x3, y3, z3 = np.shape(d3)
+        datagray = np.zeros(shape=(x3, y3, z3, 2))
+        datagray[:, :, :, 0] = d3
+        if x3 == x1:
+            datagray[:, :, :, 1] = d1
+        elif x3 == x2:
+            datagray[:, :, :, 1] = d2
+
+        return datagray
+
+
+if __name__ == '__main__':
+    imgname2 = r'.\1.jpg'
+    imgname1 = r'.\2.jpg'
+    a = SIFT()
+    a.img_sift(imgname1, imgname2)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>图像1和图像2的尺寸不一样，match_3d函数的目的是为了让这两张图像的尺寸一样。</p>
+<p>尺寸一样才能顺利地进行可视化。小图使用零值进行填充，最终小图的尺寸与大图保持一种。实际上，在图像特征点匹配中不需要对图像进行尺寸一致处理，这样的处理只是为了图像可视化而已。</p>
+<p>代码中结果可视化如下，零值在图像中显示为黑色。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408061751855.png" alt="image-20240806144317483"></p>
+<p>下一步就是查找特征点，通过opencv的sift算法，我们轻松找到这两幅图像的特征点，可视化结果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408061750430.png" alt="image-20240806144812507"></p>
+<p>此时，特征点是无序的，需要给它们配对起来。下一步是特征点匹配。</p>
+<p>每个特征点是128维的向量，目标的识别是通过两点集内特征点描述子的比对来完成。具有128维的特征点描述子的相似性度量采用欧式距离。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408061751482.png" alt="image-20240806145209624"></p>
+<p>特征点匹配结果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408061750351.png" alt="image-20240806145304438"></p>
+<p>以上具体操作请看代码，在运行代码的时候，多打断点，多debug，多查看变量的数据结构。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E7%BC%96%E7%A8%8B/">#编程</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">2000坐标系转换为wgs84坐标系</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">解决ERROR 1 PROJ proj create from database Cannot find proj.db</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
