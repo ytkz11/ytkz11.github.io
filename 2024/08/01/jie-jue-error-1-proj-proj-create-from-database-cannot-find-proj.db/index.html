@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-08-05 13:48:52</span>
+        <span class="pc">2024-08-07 14:47:21</span>
     </span>
     
     
@@ -208,7 +208,61 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <pre class="line-numbers language-none"><code class="language-none">python -m nuitka --standalone --onefile --follow-imports --windows-icon-from-ico=favicon.png AerialCorrection.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+                <p>针对部分小工具用户反馈：由于Cannot find proj.db，导致小工具闪退。</p>
+<p>这个问题困扰了我许久，debug的第一步是复现bug，而我的电脑不存在这个bug。</p>
+<p>造成这个闪退问题的根本原因是，打包后的EXE文件找不到proj.db的位置。</p>
+<p>也就是说在你的电脑的环境变量里没有这个proj.db的文件。</p>
+<p>经过几番测试，我选择最保险的一个方法，即外挂proj.db，通过将proj的包放在exe文件的同级目录下的方式，进行补救。在运行exe时，自动把当前的路径设置为环境变量。</p>
+<h1 id="打包操作"><a href="#打包操作" class="headerlink" title="打包操作"></a>打包操作</h1><p>首先在主程序的同文件夹下，新建一个hook.py文件：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
+<span class="token keyword">import</span> sys
+os<span class="token punctuation">.</span>environ<span class="token punctuation">[</span><span class="token string">'PROJ_LIB'</span><span class="token punctuation">]</span> <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>dirname<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>然后运行以下语句：</p>
+<pre class="line-numbers language-none"><code class="language-none">pyinstaller -F AerialCorrection.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>运行完成后，会生成一个AerialCorrection.spec文件。</p>
+<p>修改AerialCorrection.spec文件，把hook.py添加到runtime_hooks。如下：</p>
+<pre class="line-numbers language-none"><code class="language-none"># -*- mode: python ; coding: utf-8 -*-
+
+
+a = Analysis(
+    ['AerialCorrection.py'],
+    pathex=[],
+    binaries=[],
+    datas=[],
+    hiddenimports=[],
+    hookspath=[],
+    hooksconfig={},
+    runtime_hooks=['hook.py'],
+    excludes=[],
+    noarchive=False,
+    optimize=0,
+)
+pyz = PYZ(a.pure)
+
+exe = EXE(
+    pyz,
+    a.scripts,
+    a.binaries,
+    a.datas,
+    [],
+    name='AerialCorrection',
+    debug=False,
+    bootloader_ignore_signals=False,
+    strip=False,
+    upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
+    console=True,
+    disable_windowed_traceback=False,
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon=[],
+)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>最后使用pyinstaller打包，语句如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">pyinstaller AerialCorrection.py<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
             </div>
 

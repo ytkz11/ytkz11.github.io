@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-08-06T06:24:02.314Z</updated>
+  <updated>2024-08-09T02:42:48.080Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,85 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>建立遥感影像金字塔</title>
+    <link href="http://ytkz11@.github.io/2024/08/08/jian-li-yao-gan-ying-xiang-jin-zi-ta-de-fang-fa/"/>
+    <id>http://ytkz11@.github.io/2024/08/08/jian-li-yao-gan-ying-xiang-jin-zi-ta-de-fang-fa/</id>
+    <published>2024-08-08T14:30:10.000Z</published>
+    <updated>2024-08-09T02:42:48.080Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;对于大的遥感影像文件，在QGIS或ArcGIS中，都可以通过建金字塔的方式，提供其加载速度。通常情况，将遥感影像加载到ArcGIS中，软件会提示是否构建金字塔，同意构建金字塔后，影像的对应文件夹下会生成一个ovr类型的影像金字塔文件，提高影像加载速度。&lt;/p&gt;
+&lt;p&gt;什么是</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>矩阵太大了内存不够导致numpy报错</title>
+    <link href="http://ytkz11@.github.io/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/"/>
+    <id>http://ytkz11@.github.io/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/</id>
+    <published>2024-08-08T14:30:10.000Z</published>
+    <updated>2024-08-09T13:23:08.045Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前写过分块进行16位转8位的程序。今天使用一景大影像进行处理，发现程序报错了。&lt;/p&gt;
+&lt;p&gt;原因是，影像太大了,numpy一下子不能读取到矩阵的百分之二最小值和百分之98最大值。报错的代码如下：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pyinstaller打包中的大坑geopandas</title>
+    <link href="http://ytkz11@.github.io/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/"/>
+    <id>http://ytkz11@.github.io/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/</id>
+    <published>2024-08-08T14:00:10.000Z</published>
+    <updated>2024-08-08T02:40:37.331Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一开始使用以下语句打包：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;pyinstaller -F simplify.py&lt;span aria-hidden=&quot;true&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>2000坐标系转换为wgs84坐标系</title>
@@ -72,14 +151,14 @@
     <link href="http://ytkz11@.github.io/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/"/>
     <id>http://ytkz11@.github.io/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/</id>
     <published>2024-08-01T14:00:10.000Z</published>
-    <updated>2024-08-05T05:48:52.013Z</updated>
+    <updated>2024-08-07T06:47:21.040Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;python -m nuitka --standalone --onefile --follow-imports</summary>
+    <summary type="html">&lt;p&gt;针对部分小工具用户反馈：由于Cannot find</summary>
         
       
     
@@ -442,89 +521,6 @@
     
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何使用Python从PDF中提取文本并转换为Markdown文本的实操</title>
-    <link href="http://ytkz11@.github.io/2024/07/26/dai-ma-cong-zhu-ce-ce-hui-shi-zhen-ti-wen-ben-chu-li-yu-da-an-gao-liang/"/>
-    <id>http://ytkz11@.github.io/2024/07/26/dai-ma-cong-zhu-ce-ce-hui-shi-zhen-ti-wen-ben-chu-li-yu-da-an-gao-liang/</id>
-    <published>2024-07-26T14:00:10.000Z</published>
-    <updated>2024-07-30T09:22:01.498Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 之前实现了对注册测绘师综合真题PDF转换为文本数据。但是这些文本数据，不能直接导入到数据库中的。&lt;/p&gt;
-&lt;p&gt;而本文针对这个问题，进行展开。最终实现注册测绘师真题文本处理与答案高亮。&lt;/p&gt;
-&lt;h1 id=&quot;数据结构&quot;&gt;&lt;a href=&quot;#数据结构&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三维重建的论文</title>
-    <link href="http://ytkz11@.github.io/2024/07/25/san-wei-chong-jian-de-lun-wen/"/>
-    <id>http://ytkz11@.github.io/2024/07/25/san-wei-chong-jian-de-lun-wen/</id>
-    <published>2024-07-25T14:00:10.000Z</published>
-    <updated>2024-07-25T02:41:11.565Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;基于无人机倾斜摄影的三维重建方法研究&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>让代码更优雅的9种python技巧</title>
-    <link href="http://ytkz11@.github.io/2024/07/25/rang-dai-ma-geng-you-ya-de-9-chong-python-ji-qiao/"/>
-    <id>http://ytkz11@.github.io/2024/07/25/rang-dai-ma-geng-you-ya-de-9-chong-python-ji-qiao/</id>
-    <published>2024-07-25T14:00:10.000Z</published>
-    <updated>2024-07-25T09:55:05.779Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这篇文章介绍了9个Python技巧，帮助编写更优雅的Python代码。&lt;/p&gt;
-&lt;h2 id=&quot;Pythonic-是优雅的同义词&quot;&gt;&lt;a href=&quot;#Pythonic-是优雅的同义词&quot; class=&quot;headerlink&quot; title=&quot;Pythonic</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/python/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   

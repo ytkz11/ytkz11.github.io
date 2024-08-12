@@ -178,6 +178,111 @@ cols = ds.RasterXSize...
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2024/08/08/jian-li-yao-gan-ying-xiang-jin-zi-ta-de-fang-fa/">
+                        建立遥感影像金字塔
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        对于大的遥感影像文件，在QGIS或ArcGIS中，都可以通过建金字塔的方式，提供其加载速度。通常情况，将遥感影像加载到ArcGIS中，软件会提示是否构建金字塔，同意构建金字塔后，影像的对应文件夹下会生成一个ovr类型的影像金字塔文件，提高影像加载速度...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Fri Aug 09 2024 10:42:48 GMT+0800">
+                2024-08-09
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/08/jian-li-yao-gan-ying-xiang-jin-zi-ta-de-fang-fa/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/">
+                        矩阵太大了内存不够导致numpy报错
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        之前写过分块进行16位转8位的程序。今天使用一景大影像进行处理，发现程序报错了。
+原因是，影像太大了,numpy一下子不能读取到矩阵的百分之二最小值和百分之98最大值。报错的代码如下：
+global_min = np.percentile(array...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Fri Aug 09 2024 21:23:08 GMT+0800">
+                2024-08-09
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/">
+                        pyinstaller打包中的大坑geopandas
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        一开始使用以下语句打包：
+pyinstaller -F simplify.py
+运行打包后的exe闪退，报错信息如下：
+Traceback (most recent call last):
+  File "vector_simplify.py", l...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Thu Aug 08 2024 10:40:37 GMT+0800">
+                2024-08-08
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/">
                         2000坐标系转换为wgs84坐标系
                     </a>
@@ -255,8 +360,10 @@ cols = ds.RasterXSize...
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        python -m nuitka --standalone --onefile --follow-imports --windows-icon-from-ico=favicon.png AerialCorrection.py
-
+                        针对部分小工具用户反馈：由于Cannot find proj.db，导致小工具闪退。
+这个问题困扰了我许久，debug的第一步是复现bug，而我的电脑不存在这个bug。
+造成这个闪退问题的根本原因是，打包后的EXE文件找不到proj.db的位置。
+也...
                     
                 </div>
 
@@ -264,8 +371,8 @@ cols = ds.RasterXSize...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Aug 05 2024 13:48:52 GMT+0800">
-                2024-08-05
+            <span class="home-article-date" data-updated="Wed Aug 07 2024 14:47:21 GMT+0800">
+                2024-08-07
             </span>
         </span>
         
@@ -375,110 +482,6 @@ cols = ds.RasterXSize...
     </div>
 
     <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2021-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2020-nian-zong-he-neng-li-kao-shi-zhen-ti/">
-                        注册测绘师2020年《综合能力》考试真题
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        1.高程异常是指（ ）至参考椭球面的垂直距离。A.大地水准面 B.似大地水准面 C.地球自然表面 D.理论最低潮面答案: B
-2.在椭球面上两点间距离最短的线是（ ）。A.直线 B.大圆弧 C.大地线 D.法截线答案: C
-3.已知某点横轴坐标Y=1...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:48:29 GMT+0800">
-                2024-07-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2020-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/">
-                        注册测绘师2019年《综合能力》考试真题
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        1.与大地水准面处处垂直的线是（ ）。A.地球引力线 B.椭球面法线 C.铅垂线 D.离心力方向线答案: C
-2.假设地球是一个标准质量均匀的椭球体，重力值最小的位置是（ ）。A.南北极 B.南北回归线 C.南北纬45°线 D.赤道答案: D
-3.大...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:48:05 GMT+0800">
-                2024-07-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/">
-                        注册测绘师2018年《综合能力》考试真题
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        1.水准测量中，在连续各测站上安置水准仪的三脚架时，应使其中两脚与水准路线方向平行，而第三脚轮换置路线的左侧与右侧，可以减弱因（ ）引起的误差。A.竖轴不垂直 B.大气折光 C.i角 D.调焦镜运行答案: A
-2.已知某点大地坐标为（B.L)，天文坐...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:47:46 GMT+0800">
-                2024-07-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

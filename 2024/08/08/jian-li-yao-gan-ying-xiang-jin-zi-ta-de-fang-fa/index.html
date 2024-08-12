@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            建立遥感影像金字塔 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">建立遥感影像金字塔</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-08-08 22:30:10</span>
+        <span class="mobile">2024-08-08 22:30</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-08-09 10:42:48</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>对于大的遥感影像文件，在QGIS或ArcGIS中，都可以通过建金字塔的方式，提供其加载速度。通常情况，将遥感影像加载到ArcGIS中，软件会提示是否构建金字塔，同意构建金字塔后，影像的对应文件夹下会生成一个ovr类型的影像金字塔文件，提高影像加载速度。</p>
+<p>什么是遥感影像金字塔文件呢？如何通过代码建立金字塔文件呢？</p>
+<p><img src="https://desktop.arcgis.com/zh-cn/arcmap/latest/manage-data/raster-and-images/GUID-C0C7AE57-89F4-4F71-82C4-062E67CF2349-web.png" alt="金字塔压缩类型"></p>
+<h1 id="什么是影像金字塔"><a href="#什么是影像金字塔" class="headerlink" title="什么是影像金字塔"></a>什么是影像金字塔</h1><p>在GDAL中，金字塔（Pyramids）是一种用于栅格数据的方法，它通过创建原始影像数据的缩略图来加快显示和分析速度。每个金字塔层级都是原始影像的一个较小版本，具有更少的像素和较低的分辨率。</p>
+<p>金字塔的主要用途包括：</p>
+<ol>
+<li><strong>快速浏览</strong>：在查看大尺寸影像时，金字塔允许用户快速浏览而不需要加载整个高分辨率影像。</li>
+<li><strong>地理空间分析</strong>：在进行某些地理空间分析时，可能不需要最高分辨率的数据，金字塔可以提供足够用的数据而减少计算量。</li>
+<li>改善性能：使用金字塔可以改善地图渲染和地理信息系统（GIS）软件的性能。</li>
+</ol>
+<p>对于未经压缩的栅格数据，.ovr 文件大小约为原始栅格数据集大小的 8%。</p>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>可以用GDAL中的gdaladdo方法，内建金字塔，或者建外部金字塔。</p>
+<p><img src="https://developers.arcgis.com/documentation/tiled-elevation-service/image1.png" alt="Tiled Elevation Service | ArcGIS Developer"></p>
+<h2 id="内建金字塔"><a href="#内建金字塔" class="headerlink" title="内建金字塔"></a>内建金字塔</h2><pre class="line-numbers language-none"><code class="language-none">gdaladdo -r average image.tif 2 4 8 16<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这个方法会改变源文件，会增大源文件的大小。</p>
+<p><img src="https://documentation.maptiler.com/hc/article_attachments/4411207924625" alt="img"></p>
+<p>2 4 8 16是指金字塔文件每一层的缩小倍速，这个是自定义的，你可以改为你喜欢的自增的序列，如2 4 8 12 16 32 均可。</p>
+<h2 id="删除内建金字塔"><a href="#删除内建金字塔" class="headerlink" title="删除内建金字塔"></a>删除内建金字塔</h2><p>删除内建金字塔的方法</p>
+<pre class="line-numbers language-none"><code class="language-none">gdaladdo image.tif -clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="建立ovr类型外部金字塔的方法"><a href="#建立ovr类型外部金字塔的方法" class="headerlink" title="建立ovr类型外部金字塔的方法"></a>建立ovr类型外部金字塔的方法</h2><p>已经有内部金字塔的，不能建外部金字塔，会报错：</p>
+<pre class="line-numbers language-none"><code class="language-none">Cannot add external overviews when there are already internal overviews<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>建立建立ovr类型外部金字塔，需要在gdaladdo方法上加上-ro参数：</p>
+<pre class="line-numbers language-none"><code class="language-none">gdaladdo -r average image.tif -ro 2 4 8 16<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408081710266.png" alt="Terrain-Forest-Dataset-Showing-a-Surface-Level-of-Detail-for-Different-Pyramid-Levels"></p>
+<h2 id="建立aux类型外部金字塔的方法"><a href="#建立aux类型外部金字塔的方法" class="headerlink" title="建立aux类型外部金字塔的方法"></a>建立aux类型外部金字塔的方法</h2><p>在QGIS中，可以看到，外建金字塔还有另外一种方式，是aux类型，</p>
+<pre class="line-numbers language-none"><code class="language-none">gdaladdo -r average image.tif --config USE_RRD YES 4 8 12 14 16<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="python实现"><a href="#python实现" class="headerlink" title="python实现"></a>python实现</h2><p><img src="https://desktop.arcgis.com/zh-cn/arcmap/latest/tools/data-management-toolbox/GUID-14C093C8-2F10-4515-8C72-C5372CB8C947-web.gif" alt="构建金字塔"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
+<span class="token keyword">def</span> <span class="token function">build_pyramid</span><span class="token punctuation">(</span>image_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    内置金字塔
+    :param image_path:
+    :return:
+    """</span>
+    Image <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>image_path<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    gdal<span class="token punctuation">.</span>SetConfigOption<span class="token punctuation">(</span><span class="token string">"COMPRESS_OVERVIEW"</span><span class="token punctuation">,</span> <span class="token string">"DEFLATE"</span><span class="token punctuation">)</span> <span class="token comment"># 注释此行生成外部金字塔</span>
+    
+    Image<span class="token punctuation">.</span>BuildOverviews<span class="token punctuation">(</span><span class="token string">"AVERAGE"</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">矩阵太大了内存不够导致numpy报错</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
