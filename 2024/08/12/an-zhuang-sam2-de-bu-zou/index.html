@@ -9,7 +9,7 @@
     
     <title>
         
-            建立遥感影像金字塔 |
+            安装SAM2的步骤 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">建立遥感影像金字塔</span>
+                <span class="title-hover-animation">安装SAM2的步骤</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-08-08 22:30:10</span>
-        <span class="mobile">2024-08-08 22:30</span>
+        <span class="pc">2024-08-12 22:30:10</span>
+        <span class="mobile">2024-08-12 22:30</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-08-09 10:42:48</span>
+        <span class="pc">2024-08-12 16:28:39</span>
     </span>
     
     
@@ -208,44 +208,105 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>对于大的遥感影像文件，在QGIS或ArcGIS中，都可以通过建金字塔的方式，提供其加载速度。通常情况，将遥感影像加载到ArcGIS中，软件会提示是否构建金字塔，同意构建金字塔后，影像的对应文件夹下会生成一个ovr类型的影像金字塔文件，提高影像加载速度。</p>
-<p>什么是遥感影像金字塔文件呢？如何通过代码建立金字塔文件呢？</p>
-<p><img src="https://desktop.arcgis.com/zh-cn/arcmap/latest/manage-data/raster-and-images/GUID-C0C7AE57-89F4-4F71-82C4-062E67CF2349-web.png" alt="金字塔压缩类型"></p>
-<h1 id="什么是影像金字塔"><a href="#什么是影像金字塔" class="headerlink" title="什么是影像金字塔"></a>什么是影像金字塔</h1><p>在GDAL中，金字塔（Pyramids）是一种用于栅格数据的方法，它通过创建原始影像数据的缩略图来加快显示和分析速度。每个金字塔层级都是原始影像的一个较小版本，具有更少的像素和较低的分辨率。</p>
-<p>金字塔的主要用途包括：</p>
-<ol>
-<li><strong>快速浏览</strong>：在查看大尺寸影像时，金字塔允许用户快速浏览而不需要加载整个高分辨率影像。</li>
-<li><strong>地理空间分析</strong>：在进行某些地理空间分析时，可能不需要最高分辨率的数据，金字塔可以提供足够用的数据而减少计算量。</li>
-<li>改善性能：使用金字塔可以改善地图渲染和地理信息系统（GIS）软件的性能。</li>
-</ol>
-<p>对于未经压缩的栅格数据，.ovr 文件大小约为原始栅格数据集大小的 8%。</p>
-<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>可以用GDAL中的gdaladdo方法，内建金字塔，或者建外部金字塔。</p>
-<p><img src="https://developers.arcgis.com/documentation/tiled-elevation-service/image1.png" alt="Tiled Elevation Service | ArcGIS Developer"></p>
-<h2 id="内建金字塔"><a href="#内建金字塔" class="headerlink" title="内建金字塔"></a>内建金字塔</h2><pre class="line-numbers language-none"><code class="language-none">gdaladdo -r average image.tif 2 4 8 16<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这个方法会改变源文件，会增大源文件的大小。</p>
-<p><img src="https://documentation.maptiler.com/hc/article_attachments/4411207924625" alt="img"></p>
-<p>2 4 8 16是指金字塔文件每一层的缩小倍速，这个是自定义的，你可以改为你喜欢的自增的序列，如2 4 8 12 16 32 均可。</p>
-<h2 id="删除内建金字塔"><a href="#删除内建金字塔" class="headerlink" title="删除内建金字塔"></a>删除内建金字塔</h2><p>删除内建金字塔的方法</p>
-<pre class="line-numbers language-none"><code class="language-none">gdaladdo image.tif -clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="建立ovr类型外部金字塔的方法"><a href="#建立ovr类型外部金字塔的方法" class="headerlink" title="建立ovr类型外部金字塔的方法"></a>建立ovr类型外部金字塔的方法</h2><p>已经有内部金字塔的，不能建外部金字塔，会报错：</p>
-<pre class="line-numbers language-none"><code class="language-none">Cannot add external overviews when there are already internal overviews<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>建立建立ovr类型外部金字塔，需要在gdaladdo方法上加上-ro参数：</p>
-<pre class="line-numbers language-none"><code class="language-none">gdaladdo -r average image.tif -ro 2 4 8 16<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408081710266.png" alt="Terrain-Forest-Dataset-Showing-a-Surface-Level-of-Detail-for-Different-Pyramid-Levels"></p>
-<h2 id="建立aux类型外部金字塔的方法"><a href="#建立aux类型外部金字塔的方法" class="headerlink" title="建立aux类型外部金字塔的方法"></a>建立aux类型外部金字塔的方法</h2><p>在QGIS中，可以看到，外建金字塔还有另外一种方式，是aux类型，</p>
-<pre class="line-numbers language-none"><code class="language-none">gdaladdo -r average image.tif --config USE_RRD YES 4 8 12 14 16<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="python实现"><a href="#python实现" class="headerlink" title="python实现"></a>python实现</h2><p><img src="https://desktop.arcgis.com/zh-cn/arcmap/latest/tools/data-management-toolbox/GUID-14C093C8-2F10-4515-8C72-C5372CB8C947-web.gif" alt="构建金字塔"></p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal
-<span class="token keyword">def</span> <span class="token function">build_pyramid</span><span class="token punctuation">(</span>image_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    内置金字塔
-    :param image_path:
-    :return:
-    """</span>
-    Image <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>image_path<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-    gdal<span class="token punctuation">.</span>SetConfigOption<span class="token punctuation">(</span><span class="token string">"COMPRESS_OVERVIEW"</span><span class="token punctuation">,</span> <span class="token string">"DEFLATE"</span><span class="token punctuation">)</span> <span class="token comment"># 注释此行生成外部金字塔</span>
+                <p>最新的<code>SAM2分割大模型（Segment Anything Model 2）</code>是由Meta开发的一个先进的<code>图像和视频分割模型</code>。相比于第一代SAM模型，SAM2在多个方面实现了显著的改进。</p>
+<p>下面记录一下我是怎么安装sam的，在这个过程中遇到的问题及解决方案。我已经安装好了conda。</p>
+<h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><p>系统安装有 Python ≥ 3.10、PyTorch ≥ 2.3.1 和与PyTorch 安装相匹配的torchvision。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>下载sam2的文件，要么是git下载，要么在github下载zip</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812142514746.png" alt="image-20240812142514746"></p>
+<p>我是直接在github下载的，因为这台电脑没有安装git，也懒得安装。</p>
+<p>下载好之后，对这个压缩进行解压，激活项目环境。</p>
+<p>使用conda建立一个python版本大于3.10的虚拟环境。sam2要求python版本大于等于3.10.0</p>
+<p>不然会报错：</p>
+<pre class="line-numbers language-none"><code class="language-none">ERROR: Package 'sam-2' requires a different Python: 3.9.19 not in '&gt;=3.10.0'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>所以我们建立一个3.11版本的python虚拟环境就好。</p>
+<pre class="line-numbers language-none"><code class="language-none">conda create --name sam2 python=3.11<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>完成虚拟环境的搭建后,此时，进入新创建的虚拟环境，运行以下语句：</p>
+<pre class="line-numbers language-none"><code class="language-none">conda activate sam2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>不要关闭这个conda命令行，继续下一步。</p>
+<p>安装torch。在命令行输入<code>nvidia-smi</code></p>
+<p>查看你的电脑cuda的版本是什么型号。显示如下：</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812144438941.png" alt="image-20240812144438941"></p>
+<p>我的是12.4版本cuda。</p>
+<p>然后去torch官网 <a class="link" target="_blank" rel="noopener" href="https://pytorch.org/">https://pytorch.org/<i class="fas fa-external-link-alt"></i></a> 查看我们应该下载哪个版本的torch。</p>
+<p>进入官网后，往下拉，如下图</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812144705889.png" alt="image-20240812144705889"></p>
+<p>图中显示这条安装torch的语句，</p>
+<pre class="line-numbers language-none"><code class="language-none">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>但是，我们一般是在国内，使用国内的镜像源得到更快的下载速度。我们使用华为源提高安装速度。</p>
+<p>运行以下语句：</p>
+<pre class="line-numbers language-none"><code class="language-none">pip3 install torch==2.3.1 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124 -i https://repo.huaweicloud.com/repository/pypi/simple some-package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>测试一下是否成功安装torch。</p>
+<p>输入<code>python</code>，进入python环境，再输入<code>import torch</code></p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812155004048.png" alt="image-20240812155004048"></p>
+<p>完成torch安装。</p>
+<p>在conda命令行，进入你的解压后的Sam2所在的文件夹。格式如下</p>
+<pre class="line-numbers language-none"><code class="language-none">cd/d 你的解压后的Sam2所在的文件夹<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>假设我的解压后的Sam2所在的文件夹是D:\code\sam2\segment-anything-2</p>
+<p>则这条语句变为：</p>
+<pre class="line-numbers language-none"><code class="language-none">cd/d D:\code\sam2\segment-anything-2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812155142015.png" alt="image-20240812155142015"></p>
+<p>先输入,防止报错：</p>
+<pre class="line-numbers language-none"><code class="language-none">set PYTHONUTF8=1 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>再输入，安装sam2</p>
+<pre class="line-numbers language-none"><code class="language-none">pip install --no-build-isolation -e .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812155344361.png" alt="image-20240812155344361"></p>
+<p>编写一个python，调用sam2进行图像分割。</p>
+<pre class="line-numbers language-none"><code class="language-none">import torch
+import numpy as np
+from PIL import Image
+import matplotlib.pyplot as plt
+from sam2.build_sam import build_sam2
+from sam2.automatic_mask_generator import SAM2AutomaticMaskGenerator
+
+
+ 
+# use bfloat16 for the entire notebook
+torch.autocast(device_type="cuda", dtype=torch.bfloat16).__enter__()
+ 
+if torch.cuda.get_device_properties(0).major &gt;= 8:
+    # turn on tfloat32 for Ampere GPUs (https://pytorch.org/docs/stable/notes/cuda.html#tensorfloat-32-tf32-on-ampere-devices)
+    torch.backends.cuda.matmul.allow_tf32 = True
+    torch.backends.cudnn.allow_tf32 = True
     
-    Image<span class="token punctuation">.</span>BuildOverviews<span class="token punctuation">(</span><span class="token string">"AVERAGE"</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">16</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    
+def show_anns(anns, borders=True):
+    if len(anns) == 0:
+        return
+    sorted_anns = sorted(anns, key=(lambda x: x['area']), reverse=True)
+    ax = plt.gca()
+    ax.set_autoscale_on(False)
+ 
+    img = np.ones((sorted_anns[0]['segmentation'].shape[0], sorted_anns[0]['segmentation'].shape[1], 4))
+    img[:,:,3] = 0
+    for ann in sorted_anns:
+        m = ann['segmentation']
+        color_mask = np.concatenate([np.random.random(3), [0.5]])
+        img[m] = color_mask 
+        if borders:
+            import cv2
+            contours, _ = cv2.findContours(m.astype(np.uint8),cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE) 
+            # Try to smooth contours
+            contours = [cv2.approxPolyDP(contour, epsilon=0.01, closed=True) for contour in contours]
+            cv2.drawContours(img, contours, -1, (0,0,1,0.4), thickness=1) 
+ 
+    ax.imshow(img)
+
+checkpoint = "./checkpoints/sam2_hiera_large.pt"
+model_cfg = "sam2_hiera_l.yaml"
+sam2 = build_sam2(model_cfg, sam2_checkpoint, device ='cuda', apply_postprocessing=False)
+ 
+mask_generator = SAM2AutomaticMaskGenerator(sam2)
+imagefile = r'1.jpg'
+image = Image.open(imagefile)
+image = np.array(image.convert("RGB"))
+
+masks = mask_generator.generate(image)
+plt.figure(figsize=(20,20))
+plt.imshow(image)
+show_anns(masks)
+plt.axis('off')
+plt.show() 
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
 
@@ -267,13 +328,13 @@
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2024/08/12/an-zhuang-sam2-de-bu-zou/"
+                               href="/2024/08/12/shi-yong-python-ku-manim-chuang-jian-dong-tai-di-li-kong-jian-ke-shi-hua/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">安装SAM2的步骤</span>
+                                <span class="post-nav-title-item">使用 Python 库 Manim 创建动态地理空间可视化</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
@@ -283,10 +344,10 @@
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/"
+                               href="/2024/08/08/jian-li-yao-gan-ying-xiang-jin-zi-ta-de-fang-fa/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">矩阵太大了内存不够导致numpy报错</span>
+                                <span class="post-nav-title-item">建立遥感影像金字塔</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">

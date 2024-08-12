@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-08-09T02:42:48.080Z</updated>
+  <updated>2024-08-12T08:48:08.283Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微调Segment Anything 2 (SAM 2)</title>
+    <link href="http://ytkz11@.github.io/2024/08/12/jin-yong-60-xing-dai-ma-ji-ke-xun-lian-wei-diao-segment-anything-2-sam-2/"/>
+    <id>http://ytkz11@.github.io/2024/08/12/jin-yong-60-xing-dai-ma-ji-ke-xun-lian-wei-diao-segment-anything-2-sam-2/</id>
+    <published>2024-08-12T14:30:10.000Z</published>
+    <updated>2024-08-12T08:48:08.283Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot; href=&quot;https://ai.meta.com/blog/segment-anything-2/&quot;&gt;SAM2（Segment Anything 2）&lt;i class=&quot;fas</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Python 库 Manim 创建动态地理空间可视化</title>
+    <link href="http://ytkz11@.github.io/2024/08/12/shi-yong-python-ku-manim-chuang-jian-dong-tai-di-li-kong-jian-ke-shi-hua/"/>
+    <id>http://ytkz11@.github.io/2024/08/12/shi-yong-python-ku-manim-chuang-jian-dong-tai-di-li-kong-jian-ke-shi-hua/</id>
+    <published>2024-08-12T14:30:10.000Z</published>
+    <updated>2024-08-12T07:48:13.791Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装SAM2的步骤</title>
+    <link href="http://ytkz11@.github.io/2024/08/12/an-zhuang-sam2-de-bu-zou/"/>
+    <id>http://ytkz11@.github.io/2024/08/12/an-zhuang-sam2-de-bu-zou/</id>
+    <published>2024-08-12T14:30:10.000Z</published>
+    <updated>2024-08-12T08:28:39.674Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最新的&lt;code&gt;SAM2分割大模型（Segment Anything Model</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>建立遥感影像金字塔</title>
@@ -444,83 +519,6 @@
     
     
     <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2012年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2012-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2012-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:02:10.000Z</published>
-    <updated>2024-07-31T00:45:37.493Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.选取GPS连续运行参考站时，视场内障碍物的高度角一般不超过（ ）。&lt;br&gt;A.5° &lt;strong&gt;&lt;span style=&quot;color:#ef717b;&quot;&gt;B.10°&lt;/span&gt;&lt;/strong&gt; C.15° D.20°&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2011年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2011-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2011-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:01:10.000Z</published>
-    <updated>2024-07-31T00:45:03.688Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.使用N台（N＞3）GPS接收机进行同步观测所获得的GPS边中，独立的GPS边的数量是（ ）。&lt;br&gt;A.N &lt;strong&gt;&lt;span style=&quot;color:#5f84dc;&quot;&gt;B.N-1&lt;/span&gt;&lt;/strong&gt; C.N(N+1)/2</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>geohash空间索引</title>
-    <link href="http://ytkz11@.github.io/2024/07/26/dai-ma-geohash-kong-jian-suo-yin/"/>
-    <id>http://ytkz11@.github.io/2024/07/26/dai-ma-geohash-kong-jian-suo-yin/</id>
-    <published>2024-07-26T14:00:10.000Z</published>
-    <updated>2024-07-26T06:27:03.022Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;geohash空间索引&lt;/p&gt;
-&lt;h1 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h1&gt;&lt;p&gt;以下代码仅供参考&lt;/p&gt;
-&lt;pre class=&quot;line-numbers</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   

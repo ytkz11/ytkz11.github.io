@@ -139,6 +139,80 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2023/12/22/shi-liang-zuo-biao-zhuan-huan/">
+                        矢量坐标转换
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        
+需要把非84坐标的矢量转换为WGS84坐标的矢量。
+方法介绍跟栅格数据投影转换一样，使用GDAL库，我们有两种方法进行矢量数据的重投影：
+1.使用命令工具及其对应的命令行API接口进行转换（简单，准确，实践中一定要用这种方法）
+GDAL提供了ogr...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Dec 26 2023 09:00:06 GMT+0800">
+                2023-12-26
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2023/12/22/shi-liang-zuo-biao-zhuan-huan/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/">
+                        pyside6将图片资源转为py格式
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        需求pyside6将图片资源转为py格式， 是为了打包为exe的时候不丢失图片文件
+步骤新建img.qrc文件，例子如下：
+&lt;RCC&gt;
+    &lt;qresource prefix="pic"&gt;
+        &lt;file...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Thu Dec 21 2023 10:12:42 GMT+0800">
+                2023-12-21
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2023/12/14/pyside6-jiang-tu-pian-zi-yuan-zhuan-wei-py-ge-shi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/">
                         GIS格式和地理空间文件扩展名的汇总
                     </a>
@@ -419,78 +493,6 @@ Java JDK  = v11 (Any of the available OpenJDK distributions s...
     </div>
 
     <a class="read-more" href="/2023/11/09/maven-bian-yi-snap-engine-guo-cheng-yu-dao-de-wen-ti-ji-jie-jue-fang-fa/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/">
-                        借助ogr2ogr工具实现shp文件转换kml格式
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        kml格式是一种在GOOGLE地图浏览器中用于交换地理数据的文件。它基于XML，并定义了一些TAG用于规定地理数据的显示方式。KML可用于定义的地理特征包括地点、描述、叠层、路径和多边形等。
-实际工作中我们拿到的矢量数据格式大部分是shp格式的文件，...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Apr 02 2024 13:26:54 GMT+0800">
-                2024-04-02
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2023/11/06/jie-zhu-ogr2ogr-gong-ju-shi-xian-shp-wen-jian-zhuan-huan-kml-ge-shi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/">
-                        arcgis闪退导致shp文件破损及修复方法
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        arcgis闪退再一次出现了正在画矢量时，arcgis软件闪退，导致shp文件不能打开，这次详细的记录下来，解决方法。
-
-普通的修复方法在ENVI软件打开对应的shp文件，把shp拖拽到envi中。
-
-点击Load Data.
-在左侧的Later M...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Oct 25 2023 16:13:56 GMT+0800">
-                2023-10-25
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
