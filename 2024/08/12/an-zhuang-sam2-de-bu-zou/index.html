@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-08-12 16:28:39</span>
+        <span class="pc">2024-08-13 11:15:43</span>
     </span>
     
     
@@ -212,7 +212,7 @@
 <p>下面记录一下我是怎么安装sam的，在这个过程中遇到的问题及解决方案。我已经安装好了conda。</p>
 <h3 id="要求"><a href="#要求" class="headerlink" title="要求"></a>要求</h3><p>系统安装有 Python ≥ 3.10、PyTorch ≥ 2.3.1 和与PyTorch 安装相匹配的torchvision。</p>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>下载sam2的文件，要么是git下载，要么在github下载zip</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812142514746.png" alt="image-20240812142514746"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408131110298.png" alt="image-20240812142514746"></p>
 <p>我是直接在github下载的，因为这台电脑没有安装git，也懒得安装。</p>
 <p>下载好之后，对这个压缩进行解压，激活项目环境。</p>
 <p>使用conda建立一个python版本大于3.10的虚拟环境。sam2要求python版本大于等于3.10.0</p>
@@ -225,11 +225,11 @@
 <p>不要关闭这个conda命令行，继续下一步。</p>
 <p>安装torch。在命令行输入<code>nvidia-smi</code></p>
 <p>查看你的电脑cuda的版本是什么型号。显示如下：</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812144438941.png" alt="image-20240812144438941"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408131110557.png" alt="image-20240812144438941"></p>
 <p>我的是12.4版本cuda。</p>
 <p>然后去torch官网 <a class="link" target="_blank" rel="noopener" href="https://pytorch.org/">https://pytorch.org/<i class="fas fa-external-link-alt"></i></a> 查看我们应该下载哪个版本的torch。</p>
 <p>进入官网后，往下拉，如下图</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812144705889.png" alt="image-20240812144705889"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408131110130.png" alt="image-20240812144705889"></p>
 <p>图中显示这条安装torch的语句，</p>
 <pre class="line-numbers language-none"><code class="language-none">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>但是，我们一般是在国内，使用国内的镜像源得到更快的下载速度。我们使用华为源提高安装速度。</p>
@@ -237,19 +237,19 @@
 <pre class="line-numbers language-none"><code class="language-none">pip3 install torch==2.3.1 torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124 -i https://repo.huaweicloud.com/repository/pypi/simple some-package<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>测试一下是否成功安装torch。</p>
 <p>输入<code>python</code>，进入python环境，再输入<code>import torch</code></p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812155004048.png" alt="image-20240812155004048"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408131110911.png" alt="image-20240812155004048"></p>
 <p>完成torch安装。</p>
 <p>在conda命令行，进入你的解压后的Sam2所在的文件夹。格式如下</p>
 <pre class="line-numbers language-none"><code class="language-none">cd/d 你的解压后的Sam2所在的文件夹<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>假设我的解压后的Sam2所在的文件夹是D:\code\sam2\segment-anything-2</p>
 <p>则这条语句变为：</p>
 <pre class="line-numbers language-none"><code class="language-none">cd/d D:\code\sam2\segment-anything-2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812155142015.png" alt="image-20240812155142015"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408131110087.png" alt="image-20240812155142015"></p>
 <p>先输入,防止报错：</p>
 <pre class="line-numbers language-none"><code class="language-none">set PYTHONUTF8=1 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>再输入，安装sam2</p>
 <pre class="line-numbers language-none"><code class="language-none">pip install --no-build-isolation -e .<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240812155344361.png" alt="image-20240812155344361"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408131110686.png" alt="image-20240812155344361"></p>
 <p>编写一个python，调用sam2进行图像分割。</p>
 <pre class="line-numbers language-none"><code class="language-none">import torch
 import numpy as np

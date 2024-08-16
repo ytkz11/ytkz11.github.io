@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-08-12T08:48:08.283Z</updated>
+  <updated>2024-08-16T06:11:50.039Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,135 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>加载torch报错及如何解决</title>
+    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/"/>
+    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</id>
+    <published>2024-08-16T14:30:10.000Z</published>
+    <updated>2024-08-16T06:11:50.039Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>加载torch报错及如何解决，Failed to import pytorch fbgemm.dll or one of its dependencies is missing</title>
+    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/"/>
+    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</id>
+    <published>2024-08-16T14:30:10.000Z</published>
+    <updated>2024-08-16T06:10:28.735Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Python实现RLE格式分割标注文件的格式转换-未完成</title>
+    <link href="http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/"/>
+    <id>http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/</id>
+    <published>2024-08-16T12:30:10.000Z</published>
+    <updated>2024-08-16T08:49:53.762Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;RLE (Run-Length Encoding) 是一种简单的无损数据压缩算法，常用于压缩图像数据。在图像处理中，特别是位图图像的存储和传输方面，RLE 可以有效地减少存储空间或带宽需求。&lt;/p&gt;
+&lt;p&gt;RLE</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于《基于无人机影像序列的三维重建方法综述》的思考</title>
+    <link href="http://ytkz11@.github.io/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/"/>
+    <id>http://ytkz11@.github.io/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/</id>
+    <published>2024-08-14T14:30:10.000Z</published>
+    <updated>2024-08-14T05:29:49.421Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天读到一篇2017年的综述文章，虽然至今有7年之久，但这篇文章的一些内容值得参考、思考。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="无人机" scheme="http://ytkz11@.github.io/categories/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    
+    <category term="无人机" scheme="http://ytkz11@.github.io/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装torch gpu版（不走弯路）</title>
+    <link href="http://ytkz11@.github.io/2024/08/13/an-zhuang-torch-gpu-ban-bu-zou-wan-lu/"/>
+    <id>http://ytkz11@.github.io/2024/08/13/an-zhuang-torch-gpu-ban-bu-zou-wan-lu/</id>
+    <published>2024-08-13T14:30:10.000Z</published>
+    <updated>2024-08-13T03:10:02.559Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一、查看cuda版本&lt;/p&gt;
+&lt;p&gt;在命令行中输入nvidia-smi&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;nvidia-smi&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>微调Segment Anything 2 (SAM 2)</title>
@@ -71,7 +200,7 @@
     <link href="http://ytkz11@.github.io/2024/08/12/an-zhuang-sam2-de-bu-zou/"/>
     <id>http://ytkz11@.github.io/2024/08/12/an-zhuang-sam2-de-bu-zou/</id>
     <published>2024-08-12T14:30:10.000Z</published>
-    <updated>2024-08-12T08:28:39.674Z</updated>
+    <updated>2024-08-13T03:15:43.754Z</updated>
     
     
       
@@ -384,132 +513,6 @@
         
         
     <summary type="html">&lt;p&gt;1.水准测量中，在连续各测站上安置水准仪的三脚架时，应使其中两脚与水准路线方向平行，而第三脚轮换置路线的左侧与右侧，可以减弱因（ ）引起的误差。&lt;br&gt;&lt;strong&gt;&lt;span style=&quot;color:#77555d;&quot;&gt;A.竖轴不垂直&lt;/span&gt;&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2017年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:07:10.000Z</published>
-    <updated>2024-07-31T00:47:29.550Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.地球表面重力的方向是指（ ）。&lt;br&gt;A.地球引力方向 B.地球离心力相反方向 &lt;strong&gt;&lt;span style=&quot;color:#8963a6;&quot;&gt;C.铅垂线方向&lt;/span&gt;&lt;/strong&gt; D.椭球法线方向&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2016年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:06:10.000Z</published>
-    <updated>2024-07-31T00:47:11.136Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.在一.二等水准路线上加测重力，主要目的是为了对水准测量进行（ ）。&lt;br&gt;A.地面倾斜改正 B.归心改正 &lt;strong&gt;&lt;span style=&quot;color:#794628;&quot;&gt;C.重力异常改正&lt;/span&gt;&lt;/strong&gt; D.i角误差改正&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2015年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:05:10.000Z</published>
-    <updated>2024-07-31T00:46:53.134Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.LCR—G型相对重力仪必须锁摆的状态是（ ）。&lt;br&gt;&lt;strong&gt;&lt;span style=&quot;color:#afbdd2;&quot;&gt;A.运输过程中&lt;/span&gt;&lt;/strong&gt; B.仪器检查 C.观测读数 D.静置&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2014年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:04:10.000Z</published>
-    <updated>2024-07-31T00:46:27.746Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2014年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;1.FG5绝对重力仪的观测值是重力点的（ ）。&lt;br&gt;A.重力差值 B.重力垂线偏差 &lt;strong&gt;&lt;span style=&quot;color:#f7dafc;&quot;&gt;C.重力加速度&lt;/span&gt;&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2013年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:03:10.000Z</published>
-    <updated>2024-07-31T00:46:01.277Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.一等重力点联测路线的测段数最多不应超过（ ）个。&lt;br&gt;A. &lt;strong&gt;&lt;span style=&quot;color:#82967f;&quot;&gt;4&lt;/span&gt;&lt;/strong&gt; B. 5 C. 6 D. 7&lt;br&gt;答案:</summary>
         
       
     

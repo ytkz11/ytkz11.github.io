@@ -9,7 +9,7 @@
     
     <title>
         
-            geohash空间索引 |
+            高效的多维空间点索引算法-Geohash算法原理及实现 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">geohash空间索引</span>
+                <span class="title-hover-animation">高效的多维空间点索引算法-Geohash算法原理及实现</span>
             </div>
 
             
@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-07-26 14:27:03</span>
+        <span class="pc">2024-08-16 17:29:31</span>
     </span>
     
     
@@ -208,79 +208,175 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p>geohash空间索引</p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p>以下代码仅供参考</p>
-<pre class="line-numbers language-none"><code class="language-none">'''
-geohash空间索引
-'''
+                <p>每天我们晚上加班回家，可能都会用到滴滴或者共享单车。打开 app 会看到如下的界面：</p>
+<p><img src="https://img.halfrost.com/Blog/ArticleImage/56_1.png" alt="img"></p>
+<p>app 界面上会显示出自己附近一个范围内可用的出租车或者共享单车。假设地图上会显示以自己为圆心，5公里为半径，这个范围内的车。如何实现呢？最直观的想法就是去数据库里面查表，计算并查询车距离用户小于等于5公里的，筛选出来，把数据返回给客户端。</p>
+<p>这种做法比较笨，一般也不会这么做。为什么呢？因为这种做法需要对整个表里面的每一项都计算一次相对距离。太耗时了。既然数据量太大，我们就需要分而治之。那么就会想到把地图分块。这样即使每一块里面的每条数据都计算一次相对距离，也比之前全表都计算一次要快很多。</p>
+<p>问题就来了，地图上的点是二维的，有经度和纬度，这如何索引呢？如果只针对其中的一个维度，经度或者纬度进行搜索，那搜出来一遍以后还要进行二次搜索。那要是更高维度呢？三维。可能有人会说可以设置维度的优先级，比如拼接一个联合键，那在三维空间中，x，y，z 谁的优先级高呢？设置优先级好像并不是很合理。</p>
+<p>本篇文章就来介绍1种比较通用的空间点索引算法——GeoHash 。</p>
+<p>在最基本的层面上，GeoHash 将二维地理坐标编码成字母和数字字符串。每个字符串代表一个特定的地理矩形区域，并由该矩形区域内的所有坐标共享。因此，字符串越长，相应的矩形区域就越小、越精确。</p>
+<p>在对地理位置进行编码时，要计算目标经纬度，以确定它们是位于原始区间的左侧还是右侧，纬度区间为[-90,90]，经度区间为[-180,180]。</p>
+<p>位于左段的点记录为 0，位于右段的点记录为 1。然后将上一步得到的区间对折，执行进一步的搜索功能，进而返回一个新的二进制编码。</p>
+<p>当这一过程产生的二进制代码长度达到所需的精度时，再根据经度值置于偶数位、纬度值置于奇数位的规则对代码进行交错，从而产生一个新的二进制字符串。最后一步，根据 Base32 表将二进制字符串转换为字符串，从而得到精确的地理坐标 GeoHash 字符串。</p>
+<p>通过将地球看成一个<strong>二维的平面图</strong>，然后将平面递归切分成更小的模块，然后将空间经纬度数据进行编码生成一个二进制的字符串，再通过base32将其转换为一个字符串。最终是通过比较geohash的值的相似程度查询附近目标元素。</p>
+<p>我们知道，经度范围是东经180到西经180，纬度范围是南纬90到北纬90，我们设定西经为负，南纬为负，所以地球上的经度范围就是[-180， 180]，纬度范围就是[-90，90]。如果以本初子午线、赤道为界，地球可以分成4个部分。</p>
+<p>如果纬度范围[-90°, 0°)用二进制0代表，（0°, 90°]用二进制1代表，经度范围[-180°, 0°)用二进制0代表，（0°, 180°]用二进制1代表，那么地球可以分成如下4个部分。</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/7ec7eef26b4d7dbc3b31a13e1a660636.png" alt="Geohash算法原理及实现"></p>
+<p>下面讲讲这个算法的实现。</p>
+<h1 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h1><p>geohash分为编码、解码，我们先从 编码的步骤说起，即是经纬度转为geohash码。Geohash算法一共有三步。</p>
+<p><strong>第1步，首先将经纬度变成二进制。</strong></p>
+<p>经度按照左、右半区，如果经度在左半区，则为当前码为0；如果经度在左半区，则为当前码为1。更新左、右半区的范围。</p>
+<p>纬度按照上、下半区，如果经度在下半区，则为当前码为0；如果纬度在上半区，则为当前码为1。更新上、下半区的范围。</p>
+<p>下面以坐标 “30.280245, 120.027162 “为例说明 GeoHash 字符串的计算。首先，纬度为二进制，已按以下步骤编码：</p>
+<p>1.将 [-90,90] 分成相等的两半。”30.280245 “位于右半部分（0,90），因此第一位为 1。</p>
+<p>2.将 [0,90] 分成相等的两半。”30.280245 “位于左半部分（0,45），因此第二位为 0。</p>
+<p>3.不断重复这一过程，使结果区间越来越小，两个端点越来越接近 “30.280245”。</p>
+<p>迭代详见下图：</p>
+<p><img src="https://cdn-images-1.readmedium.com/v2/resize:fit:800/1*fsYZu77LclVgBFq5iRREEQ.png" alt="img"></p>
+<p>这些迭代一直持续到代码长度达到所需的精度为止。15 位二进制代码的完整迭代表如下：</p>
+<p><img src="https://cdn-images-1.readmedium.com/v2/resize:fit:800/1*I2Ll1FkiPs7fj9iQjqpeIA.png" alt="img"></p>
+<p>由此得到的纬度二进制代码为 10101 01100 01000。</p>
+<p>再比如这样一个点（39.923201, 116.390705） ，纬度的范围是（-90，90），其中间值为0。对于纬度39.923201，在上半区间（0，90）中，因此得到一个1；（0，90）区间的中间值为45度，纬度39.923201小于45，在下半区间（0，45）中，因此得到一个0，依次计算下去，即可得到纬度的二进制表示，如下表：</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/012bfc9d1f77020d50472277e23c3136.png" alt="Geohash算法原理及实现"></p>
+<p>最后得到纬度的二进制表示为：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token number">10111000110001111001</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>同理可以得到经度116.390705的二进制表示为：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token number">11010010110001000100</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>第2步，就是将经纬度合并。</strong></p>
+<p>算出经纬度编码后，从高到低，<strong>奇数为经度，偶数为纬度，</strong>合并经纬度编码。</p>
+<p><strong>lng:</strong>  10111000110001111001</p>
+<p><strong>lat:</strong>  11010010110001000100</p>
+<p>合并后：</p>
+<pre class="line-numbers language-none"><code class="language-none">11100 11101 00100 01111 00000 01101 01011 00001<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>图解如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161122012.png" alt="image-20240816103126373"></p>
+<p><strong>第3步，按照Base32进行编码</strong></p>
+<p>Base32编码表的其中一种如下，是用0-9、b-z（去掉a, i, l, o）这32个字母进行编码。具体操作是先将上一步得到的合并后二进制转换为10进制数据，然后对应生成Base32码。需要注意的是，将5个二进制位转换成一个base32码。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161054734.jpeg" alt="img"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161122702.png" alt="image-20240816104146941"></p>
+<p> 经纬度（39.923201, 116.390705）就转为了wx4g0ec1。</p>
+<p>Geohash比直接用经纬度的高效很多，而且使用者可以发布地址编码，既能表明自己位于某个地方附近，又不至于暴露自己的精确坐标，有助于隐私保护。</p>
+<ul>
+<li>GeoHash用一个字符串表示经度和纬度两个坐标。在数据库中可以实现在一列上应用索引（某些情况下无法在两列上同时应用索引）</li>
+<li>GeoHash表示的并不是一个点，而是一个矩形区域</li>
+<li>GeoHash编码的前缀可以表示更大的区域。例如wx4g0ec1，它的前缀wx4g0e表示包含编码wx4g0ec1在内的更大范围。 这个特性可以用于附近地点搜索</li>
+</ul>
+<p>编码越长，表示的范围越小，位置也越精确。因此我们就可以通过比较GeoHash匹配的位数来判断两个点之间的大概距离。</p>
+<p><img src="https://ask.qcloudimg.com/http-save/yehe-8223537/0ca0bbe716a68b4039a59095ae48b8fc.png" alt="Geohash算法原理及实现"></p>
+<h4 id="Geohash能实现什么功能？"><a href="#Geohash能实现什么功能？" class="headerlink" title="Geohash能实现什么功能？"></a><strong>Geohash能实现什么功能？</strong></h4><ul>
+<li>地图导航； 高德地图、百度地图、腾讯地图</li>
+<li>附近人功能；微信附近人、游戏附近人、滴滴打车附近的司机、美团外卖附近的商家等等</li>
+</ul>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">binary_to_decimal</span><span class="token punctuation">(</span>binary_str<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    decimal <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token comment"># 遍历二进制字符串中的每一位</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> digit <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span><span class="token builtin">reversed</span><span class="token punctuation">(</span>binary_str<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> digit <span class="token operator">==</span> <span class="token string">'1'</span><span class="token punctuation">:</span>
+            <span class="token comment"># 如果这一位是1，则加上对应的2的幂次</span>
+            decimal <span class="token operator">+=</span> <span class="token number">2</span> <span class="token operator">**</span> i
+    <span class="token keyword">return</span> decimal
+
+<span class="token keyword">def</span> <span class="token function">decimal_to_binary</span><span class="token punctuation">(</span>decimal<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    binary <span class="token operator">=</span> <span class="token string">""</span>
+    <span class="token keyword">while</span> decimal <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        remainder <span class="token operator">=</span> decimal <span class="token operator">%</span> <span class="token number">2</span>
+        binary <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>remainder<span class="token punctuation">)</span> <span class="token operator">+</span> binary
+        decimal <span class="token operator">=</span> decimal <span class="token operator">//</span> <span class="token number">2</span>
+    <span class="token comment"># 若不够五位，则补全五位</span>
+    <span class="token keyword">while</span> <span class="token builtin">len</span><span class="token punctuation">(</span>binary<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
+        binary <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> binary
+    <span class="token keyword">return</span> binary
+
+<span class="token keyword">def</span> <span class="token function">geohash_encode</span><span class="token punctuation">(</span>latitude<span class="token punctuation">,</span> longitude<span class="token punctuation">,</span> precision<span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 编码</span>
+    lat_interval<span class="token punctuation">,</span> lon_interval <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">90.0</span><span class="token punctuation">,</span> <span class="token number">90.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">180.0</span><span class="token punctuation">,</span> <span class="token number">180.0</span><span class="token punctuation">)</span>
+    geohash <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token comment"># bits = [16, 8, 4, 2, 1]</span>
+    bit <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token comment"># ch = 0</span>
+    even <span class="token operator">=</span> <span class="token boolean">True</span>
+    tempstr<span class="token operator">=</span><span class="token string">''</span>
+    allstr <span class="token operator">=</span> <span class="token string">''</span>
+    <span class="token keyword">while</span> <span class="token builtin">len</span><span class="token punctuation">(</span>geohash<span class="token punctuation">)</span> <span class="token operator">&lt;</span> precision<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> even<span class="token punctuation">:</span>
+            mid <span class="token operator">=</span> <span class="token punctuation">(</span>lon_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> lon_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+            <span class="token keyword">if</span> longitude <span class="token operator">&gt;</span> mid<span class="token punctuation">:</span>
+                <span class="token comment"># ch |= bits[bit]</span>
+                lon_interval <span class="token operator">=</span> <span class="token punctuation">(</span>mid<span class="token punctuation">,</span> lon_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                tempstr <span class="token operator">=</span> tempstr <span class="token operator">+</span> <span class="token string">'1'</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                lon_interval <span class="token operator">=</span> <span class="token punctuation">(</span>lon_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> mid<span class="token punctuation">)</span>
+                tempstr <span class="token operator">=</span> tempstr <span class="token operator">+</span> <span class="token string">'0'</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            mid <span class="token operator">=</span> <span class="token punctuation">(</span>lat_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> lat_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+            <span class="token keyword">if</span> latitude <span class="token operator">&gt;</span> mid<span class="token punctuation">:</span>
+                <span class="token comment"># ch |= bits[bit]</span>
+                lat_interval <span class="token operator">=</span> <span class="token punctuation">(</span>mid<span class="token punctuation">,</span> lat_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                tempstr <span class="token operator">=</span> tempstr <span class="token operator">+</span> <span class="token string">'1'</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                lat_interval <span class="token operator">=</span> <span class="token punctuation">(</span>lat_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> mid<span class="token punctuation">)</span>
+                tempstr <span class="token operator">=</span> tempstr <span class="token operator">+</span> <span class="token string">'0'</span>
+        even <span class="token operator">=</span> <span class="token keyword">not</span> even
+        <span class="token keyword">if</span> bit <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">:</span>
+            bit <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            allstr <span class="token operator">+=</span> tempstr
+            ch <span class="token operator">=</span> binary_to_decimal<span class="token punctuation">(</span>tempstr<span class="token punctuation">)</span>
+            geohash<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'0123456789bcdefghjkmnpqrstuvwxyz'</span><span class="token punctuation">[</span>ch<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            tempstr <span class="token operator">=</span> <span class="token string">''</span>
+            bit <span class="token operator">=</span> <span class="token number">0</span>
+            ch <span class="token operator">=</span> <span class="token number">0</span>
+
+    <span class="token keyword">return</span> <span class="token string">''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>geohash<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">geohash_decode</span><span class="token punctuation">(</span><span class="token builtin">hash</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 解码</span>
+    lat_interval<span class="token punctuation">,</span> lon_interval <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">90.0</span><span class="token punctuation">,</span> <span class="token number">90.0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">180.0</span><span class="token punctuation">,</span> <span class="token number">180.0</span><span class="token punctuation">)</span>
+    lat_err<span class="token punctuation">,</span> lon_err <span class="token operator">=</span> <span class="token number">90.0</span><span class="token punctuation">,</span> <span class="token number">180.0</span>
+    is_longitude <span class="token operator">=</span> <span class="token boolean">True</span>  <span class="token comment"># Ture for lon , Fasle for lat</span>
+    mask_ <span class="token operator">=</span> <span class="token string">''</span>
+
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> c <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span><span class="token builtin">hash</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        cd <span class="token operator">=</span> <span class="token string">'0123456789bcdefghjkmnpqrstuvwxyz'</span><span class="token punctuation">.</span>index<span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+        mask_ <span class="token operator">+=</span> decimal_to_binary<span class="token punctuation">(</span> cd<span class="token punctuation">)</span>
+    <span class="token comment"># for i in mask_:</span>
+
+    <span class="token keyword">for</span> j<span class="token punctuation">,</span> mask <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>mask_<span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+            <span class="token keyword">if</span> is_longitude <span class="token punctuation">:</span>
+                <span class="token keyword">if</span> mask <span class="token operator">==</span><span class="token string">'1'</span><span class="token punctuation">:</span>
+                    lon_interval <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>lon_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> lon_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> lon_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    lon_interval <span class="token operator">=</span> <span class="token punctuation">(</span>lon_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>lon_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> lon_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
+                lon_err <span class="token operator">/=</span> <span class="token number">2</span>
+
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">if</span> mask <span class="token operator">==</span><span class="token string">'1'</span><span class="token punctuation">:</span>
+
+                    lat_interval <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>lat_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> lat_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> lat_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    lat_interval <span class="token operator">=</span> <span class="token punctuation">(</span>lat_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>lat_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> lat_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
+                lat_err <span class="token operator">/=</span> <span class="token number">2</span>
+
+            is_longitude <span class="token operator">=</span> <span class="token keyword">not</span> is_longitude
+    lat <span class="token operator">=</span> <span class="token punctuation">(</span>lat_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> lat_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+    lon <span class="token operator">=</span> <span class="token punctuation">(</span>lon_interval<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> lon_interval<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>lat<span class="token punctuation">,</span> lon<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>lat_err<span class="token punctuation">,</span> lon_err<span class="token punctuation">)</span>
+    
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+
+    <span class="token comment"># 示例</span>
+    <span class="token builtin">hash</span> <span class="token operator">=</span> geohash_encode<span class="token punctuation">(</span><span class="token number">23.2296756</span><span class="token punctuation">,</span> <span class="token number">110.0122287</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Geohash:"</span><span class="token punctuation">,</span> <span class="token builtin">hash</span><span class="token punctuation">)</span>
+
+    decoded<span class="token punctuation">,</span> error <span class="token operator">=</span> geohash_decode<span class="token punctuation">(</span><span class="token builtin">hash</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Decoded:"</span><span class="token punctuation">,</span> decoded<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Error:"</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span>
 
 
-def geohash_encode(latitude, longitude, precision=12):
-    lat_interval, lon_interval = (-90.0, 90.0), (-180.0, 180.0)
-    geohash = []
-    bits = [16, 8, 4, 2, 1]
-    bit = 0
-    ch = 0
-    even = True
-    while len(geohash) &lt; precision:
-        if even:
-            mid = (lon_interval[0] + lon_interval[1]) / 2
-            if longitude &gt; mid:
-                ch |= bits[bit]
-                lon_interval = (mid, lon_interval[1])
-            else:
-                lon_interval = (lon_interval[0], mid)
-        else:
-            mid = (lat_interval[0] + lat_interval[1]) / 2
-            if latitude &gt; mid:
-                ch |= bits[bit]
-                lat_interval = (mid, lat_interval[1])
-            else:
-                lat_interval = (lat_interval[0], mid)
-        even = not even
-        if bit &lt; 4:
-            bit += 1
-        else:
-            geohash.append('0123456789bcdefghjkmnpqrstuvwxyz'[ch])
-            bit = 0
-            ch = 0
-    return ''.join(geohash)
-
-def geohash_decode(hash):
-    lat_interval, lon_interval = (-90.0, 90.0), (-180.0, 180.0)
-    lat_err, lon_err = 90.0, 180.0
-    is_even = True
-    for c in hash:
-        cd = '0123456789bcdefghjkmnpqrstuvwxyz'.index(c)
-        for mask in [16, 8, 4, 2, 1]:
-            if is_even:  # 如果当前位是经度
-                if cd &amp; mask:
-                    lon_interval = ((lon_interval[0] + lon_interval[1]) / 2, lon_interval[1])
-                else:
-                    lon_interval = (lon_interval[0], (lon_interval[0] + lon_interval[1]) / 2)
-                lon_err /= 2
-            else:  # 如果当前位是纬度
-                if cd &amp; mask:
-                    lat_interval = ((lat_interval[0] + lat_interval[1]) / 2, lat_interval[1])
-                else:
-                    lat_interval = (lat_interval[0], (lat_interval[0] + lat_interval[1]) / 2)
-                lat_err /= 2
-            is_even = not is_even
-    lat = (lat_interval[0] + lat_interval[1]) / 2
-    lon = (lon_interval[0] + lon_interval[1]) / 2
-    return (lat, lon), (lat_err, lon_err)
-
-if __name__ == '__main__':
-    # 示例
-    hash = geohash_encode(23.2296756, 110.0122287)
-    print("Geohash:", hash)
-
-    decoded, error = geohash_decode(hash)
-    print("Decoded:", decoded)
-    print("Error:", error)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>输出为：</p>
 <pre class="line-numbers language-none"><code class="language-none">wknhpku6wtrk<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240726142410726.png" alt="image-20240726142410726"></p>
 <h1 id="验证以上代码的准确性"><a href="#验证以上代码的准确性" class="headerlink" title="验证以上代码的准确性"></a>验证以上代码的准确性</h1><p>通过第三方python库进行验证,安装python-geohash。</p>
 <pre class="line-numbers language-none"><code class="language-none">pip install python-geohash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>完成安装后进行下一步。</p>
@@ -292,8 +388,25 @@ p = 12
 geohash_str = geohash.encode(lat, lon, p)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>输出为：</p>
 <pre class="line-numbers language-none"><code class="language-none">'wknhpku6wtrk'<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240726142204944.png" alt="image-20240726142204944"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161121893.png" alt="image-20240726142204944"></p>
 <p>二者结果保持一致，从侧面说明了我们写的代码的准确性。</p>
+<h1 id="Geohash-的优缺点"><a href="#Geohash-的优缺点" class="headerlink" title="Geohash 的优缺点"></a>Geohash 的优缺点</h1><p>Geohash 的优点很明显，它利用 Z 阶曲线进行编码。而 Z 阶曲线可以将二维或者多维空间里的所有点都转换成一维曲线。在数学上成为分形维。并且 Z 阶曲线还具有局部保序性。</p>
+<p>Z 阶曲线通过交织点的坐标值的二进制表示来简单地计算多维度中的点的z值。一旦将数据被加到该排序中，任何一维数据结构，例如二叉搜索树，B树，跳跃表或（具有低有效位被截断）哈希表 都可以用来处理数据。通过 Z 阶曲线所得到的顺序可以等同地被描述为从四叉树的深度优先遍历得到的顺序。</p>
+<p>这也是 Geohash 的另外一个优点，搜索查找邻近点比较快。</p>
+<p>Geohash 的缺点之一也来自 Z 阶曲线。</p>
+<p>Z 阶曲线有一个比较严重的问题，虽然有局部保序性，但是它也有突变性。在每个 Z 字母的拐角，都有可能出现顺序的突变。</p>
+<p><img src="https://img.halfrost.com/Blog/ArticleImage/56_9.png" alt="img"></p>
+<p>看上图中标注出来的蓝色的点点。每两个点虽然是相邻的，但是距离相隔很远。看右下角的图，两个数值邻近红色的点两者距离几乎达到了整个正方形的边长。两个数值邻近绿色的点也达到了正方形的一半的长度。</p>
+<p>Geohash 的另外一个缺点是，如果选择不好合适的网格大小，判断邻近点可能会比较麻烦。</p>
+<p><img src="https://img.halfrost.com/Blog/ArticleImage/56_10.png" alt="img"></p>
+<p>看上图，如果选择 Geohash 字符串为6的话，就是蓝色的大格子。红星是美罗城，紫色的圆点是搜索出来的目标点。如果用 Geohash 算法查询的话，距离比较近的可能是 wtw37p，wtw37r，wtw37w，wtw37m。但是其实距离最近的点就在 wtw37q。如果选择这么大的网格，就需要再查找周围的8个格子。</p>
+<p>如果选择 Geohash 字符串为7的话，那变成黄色的小格子。这样距离红星星最近的点就只有一个了。就是 wtw37qw。</p>
+<p>如果网格大小，精度选择的不好，那么查询最近点还需要再次查询周围8个点。</p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>geohash 是一种简化大量点数据与面数据间空间关系计算的方法，本质上属于空间索引技术。在地理信息系统 (GIS) 领域中，存在多种高效的空间索引技术，如 R 树及其变体（R+树、R*树）、四叉树、K-D 树和网格索引等，每种技术都有其独特的应用场景和优势。</p>
+<p>除了 geohash，还有一些先进的空间索引方法被广泛采用，例如谷歌的 S2 算法以及 Uber 的 H3 算法。尽管 geohash 在处理空间点数据方面表现出色，但在性能上通常不如谷歌的 S2 算法。因此，许多大型系统倾向于使用 S2 算法进行空间数据索引。</p>
+<p>对于更复杂的空间数据结构，如多维空间中的线、面或多边形，这些对象由多个空间点组成，如街道、建筑物、铁路或河流等，我们需要考虑如何高效地存储和检索这类信息。在这种情况下，传统的 B+树可能不再适用，而需要采用专门针对多维空间数据设计的数据结构，如 R 树及其变体。</p>
+<p>R 树能够有效处理多维空间数据，支持复杂的查询类型，如范围查询和最近邻查询。通过使用 R 树，我们可以在保持较高查询效率的同时，对多维空间对象进行有效的管理和检索。</p>
+<p>由于这部分内容涉及较为复杂的理论和技术细节，这里先不深入探讨。未来有机会时，我们可以详细分享一篇关于“多维空间多边形索引算法”的文章，探讨如何有效地处理和搜索这些复杂的空间数据结构。</p>
 
             </div>
 

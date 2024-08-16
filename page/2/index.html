@@ -139,6 +139,218 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/">
+                        矩阵太大了内存不够导致numpy报错
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        之前写过分块进行16位转8位的程序。今天使用一景大影像进行处理，发现程序报错了。
+原因是，影像太大了,numpy一下子不能读取到矩阵的百分之二最小值和百分之98最大值。报错的代码如下：
+global_min = np.percentile(array...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Fri Aug 09 2024 21:23:08 GMT+0800">
+                2024-08-09
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/">
+                        pyinstaller打包中的大坑geopandas
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        一开始使用以下语句打包：
+pyinstaller -F simplify.py
+运行打包后的exe闪退，报错信息如下：
+Traceback (most recent call last):
+  File "vector_simplify.py", l...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Thu Aug 08 2024 10:40:37 GMT+0800">
+                2024-08-08
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/">
+                        2000坐标系转换为wgs84坐标系
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                         记录一下如何进行2000坐标系转化为wgs84坐标系的过程。
+在处理矢量数据转换的过程中，有几个关键步骤确保了数据的有效性和可用性。
+首先，在转换之前，通过检查并创建目标保存目录，保证了正确的目录结构，这对于避免转换失败或产生错误输出至关重要。
+接...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Aug 06 2024 14:24:02 GMT+0800">
+                2024-08-06
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/08/06/tu-xiang-te-zheng-dian-pi-pei/">
+                        图像特征点匹配
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        本文主要介绍图像特征点匹配众多方法中的sift算法。这是几年前写的代码，现在再回看发现很多内容我不记得了，记忆被删除了一样。但是，当时记录好了，也把代码、数据备份了，现在一边运行、一边查资料，很快就把这段代码捡起来了。话不多说，直接进入今天主题。
+航...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Tue Aug 06 2024 17:52:59 GMT+0800">
+                2024-08-06
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/06/tu-xiang-te-zheng-dian-pi-pei/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/">
+                        解决ERROR 1 PROJ proj create from database Cannot find proj.db
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        针对部分小工具用户反馈：由于Cannot find proj.db，导致小工具闪退。
+这个问题困扰了我许久，debug的第一步是复现bug，而我的电脑不存在这个bug。
+造成这个闪退问题的根本原因是，打包后的EXE文件找不到proj.db的位置。
+也...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Wed Aug 07 2024 14:47:21 GMT+0800">
+                2024-08-07
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2011-nian-2022-nian-she-ying-ce-liang-di-tu-zhi-tu-gis-xiang-guan-zhen-ti/">
+                        2011年-2022年摄影测量地图制图GIS相关真题
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        39.多源遥感影像数据融合的主要优点是（ ）。A.可以自动确定多种传感器影像的外方位元素 B.可以充分发挥各种传感器影像自身的特点 C.可以提高影像匹配的速度 D.可以自动发现地物的变化规律答案: B
+40.推扫式线阵列传感器的成像特点是（ ）。A....
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:49:47 GMT+0800">
+                2024-07-31
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2011-nian-2022-nian-she-ying-ce-liang-di-tu-zhi-tu-gis-xiang-guan-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2024/07/31/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/">
                         注册测绘师2022年《综合能力》考试真题
                     </a>
@@ -268,212 +480,6 @@
     </div>
 
     <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/">
-                        注册测绘师2018年《综合能力》考试真题
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        1.水准测量中，在连续各测站上安置水准仪的三脚架时，应使其中两脚与水准路线方向平行，而第三脚轮换置路线的左侧与右侧，可以减弱因（ ）引起的误差。A.竖轴不垂直 B.大气折光 C.i角 D.调焦镜运行答案: A
-2.已知某点大地坐标为（B.L)，天文坐...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:47:46 GMT+0800">
-                2024-07-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/">
-                        注册测绘师2017年《综合能力》考试真题
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        1.地球表面重力的方向是指（ ）。A.地球引力方向 B.地球离心力相反方向 C.铅垂线方向 D.椭球法线方向答案: C
-2.下列关于大地水准面的描述中，错误的是（ ）。A.大地水准面是一个参考椭球面 B.大地水准面是一个重力等位面 C.大地水准面是一...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:47:29 GMT+0800">
-                2024-07-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/">
-                        注册测绘师2016年《综合能力》考试真题
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        1.在一.二等水准路线上加测重力，主要目的是为了对水准测量进行（ ）。A.地面倾斜改正 B.归心改正 C.重力异常改正 D.i角误差改正答案: C
-2.GPS观测中记录的UTC时间是指（ ）。A.协调世界时 B.世界时 C.北京时间 D.原子时答案:...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:47:11 GMT+0800">
-                2024-07-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/">
-                        注册测绘师2015年《综合能力》考试真题
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        1.LCR—G型相对重力仪必须锁摆的状态是（ ）。A.运输过程中 B.仪器检查 C.观测读数 D.静置答案: A
-2.三角高程垂直角观测的最佳时间段为（ ）。A.日出日落 B.日落前 C.上午10点至11点 D.中午前后答案: C
-3.海拔高的起算面...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:46:53 GMT+0800">
-                2024-07-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/">
-                        注册测绘师2014年《综合能力》考试真题
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        2014年《综合能力》考试真题
-1.FG5绝对重力仪的观测值是重力点的（ ）。A.重力差值 B.重力垂线偏差 C.重力加速度 D.重力垂直梯度答案: C
-2.使用全站仪等精度观测三角形的3个角，观测值分别为29°59’54”，60°00’06”，90...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:46:27 GMT+0800">
-                2024-07-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/07/31/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/">
-                        注册测绘师2013年《综合能力》考试真题
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        1.一等重力点联测路线的测段数最多不应超过（ ）个。A. 4 B. 5 C. 6 D. 7答案: B
-2.布测C.D.E级GPS网时，可视测区范围的大小实行分区观测，分区观测时，相邻分区的公共点至少应有（ ）个。A. 2 B. 3 C. 4 D. 5...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Jul 31 2024 08:46:01 GMT+0800">
-                2024-07-31
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/07/31/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

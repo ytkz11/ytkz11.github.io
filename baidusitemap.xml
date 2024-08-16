@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://ytkz11@.github.io/2024/08/12/jin-yong-60-xing-dai-ma-ji-ke-xun-lian-wei-diao-segment-anything-2-sam-2/</loc>
-    <lastmod>2024-08-12</lastmod>
+    <loc>http://ytkz11@.github.io/2024/07/26/dai-ma-geohash-kong-jian-suo-yin/</loc>
+    <lastmod>2024-08-16</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/</loc>
+    <lastmod>2024-08-16</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</loc>
+    <lastmod>2024-08-16</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</loc>
+    <lastmod>2024-08-16</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/</loc>
+    <lastmod>2024-08-14</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/08/12/an-zhuang-sam2-de-bu-zou/</loc>
+    <lastmod>2024-08-13</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/13/an-zhuang-torch-gpu-ban-bu-zou-wan-lu/</loc>
+    <lastmod>2024-08-13</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/12/jin-yong-60-xing-dai-ma-ji-ke-xun-lian-wei-diao-segment-anything-2-sam-2/</loc>
     <lastmod>2024-08-12</lastmod>
   </url>
   <url>
@@ -94,10 +118,6 @@
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/07/23/dai-ma-ji-yu-ji-yu-google-ying-xiang-de-da-shu-ju-ji-he-xiao-zheng-si-kao-de-si-kao/</loc>
-    <lastmod>2024-07-26</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/07/26/dai-ma-geohash-kong-jian-suo-yin/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
