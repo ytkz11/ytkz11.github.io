@@ -4,6 +4,89 @@
   
     
     <entry>
+      <title>Linux 下安装miniconda</title>
+      <link href="2024/08/19/linux-xia-an-zhuang-miniconda/"/>
+      <url>2024/08/19/linux-xia-an-zhuang-miniconda/</url>
+      
+        <content type="html"><![CDATA[<p>Miniconda 和 Conda 都是用于管理 Python（及其他语言）环境和包的工具。</p><p>conda对于我来说是太臃肿了，很多的包我不会使用，所以选择安装miniconda是一个较好的选择。</p><p>下面是linux安装miniconda的实际操作。</p><p>在以下的网站，选择你要安装的Miniconda的版本。</p><p><a class="link" href="https://docs.conda.io/en/latest/miniconda.html#linux-installers">https://docs.conda.io/en/latest/miniconda.html#linux-installers<i class="fas fa-external-link-alt"></i></a></p><p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240820174737486.png" alt="image-20240820174737486"></p><p>1、下载安装包Miniconda3-latest-Linux-x86_64.sh</p><p>2、把安装包上传到服务器上，这里放在 /home/software</p><p>3、安装</p><pre class="line-numbers language-none"><code class="language-none">bash Miniconda3-latest-Linux-x86_64.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>4、按回车</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408201754625.png" alt="image-20240820175434688"></p><p>5、按空格跳到最下面，输入yes</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408201755607.png" alt="image-20240820175516660"></p><p>6、选择安装位置，这里选择默认，直接回车，有需要可以自己输入改掉</p><pre class="line-numbers language-none"><code class="language-none">Miniconda3 will now be installed into this location:/root/miniconda3  - Press ENTER to confirm the location  - Press CTRL-C to abort the installation  - Or specify a different location below[/root/miniconda3] &gt;&gt;&gt; PREFIX=/root/miniconda3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>7、初始化 miniconda，输入 yes</p><pre class="line-numbers language-none"><code class="language-none">installation finished. Do you wish the installer to initialize Miniconda3 by running conda init? [yes|no] [no] &gt;&gt;&gt; yes<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>8、现在 conda 命令是找不到的，需要激活</p><pre class="line-numbers language-none"><code class="language-none">source ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>激活后可以看到启动了 base 环境，conda 命令也可以用了，下一节会介绍常用 conda 命令。</p><p>9、可以设置启动时，不自动激活 base 环境</p><pre class="line-numbers language-none"><code class="language-none">conda config --set auto_activate_base false<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>10、设置 conda 镜像源</p><pre class="line-numbers language-none"><code class="language-none">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>11、设置 pip 镜像</p><pre class="line-numbers language-none"><code class="language-none">pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/pip config set install.trusted-host mirrors.aliyun.com<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>12、查看 python 环境</p><pre class="line-numbers language-none"><code class="language-none">(base) root@aa:/home/software# pythonPython 3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:12:24) [GCC 11.2.0] on linuxType "help", "copyright", "credits" or "license" for more information.&gt;&gt;&gt; print('hello,rs')hello,rs&gt;&gt;&gt; exit()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>可以看到默认的 python 环境是 3.12，也就是我们安装的 miniconda 的 python 版本。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>怎么在windows 10 安装gmtsar</title>
+      <link href="2024/08/19/dinsar-di-yi-bu/"/>
+      <url>2024/08/19/dinsar-di-yi-bu/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://hidayatpanuntun.staff.ugm.ac.id/files/2020/03/WEBA-e1585056702410-1429x500.png" alt="img"></p><p>在本教程中，我将向您展示如何在 Windows 10 环境中安装 GMTSAR。在尝试在 Windows 10 中安装此软件之前，您需要激活 WSL。有许多教程解释了如何执行此操作，或者您可以按照<a class="link" href="https://hidayatpanuntun.staff.ugm.ac.id/linux-bash-shell-in-windows-environment/">此处的<i class="fas fa-external-link-alt"></i></a>教程进行操作。</p><h1 id="ubuntu换国内源"><a href="#ubuntu换国内源" class="headerlink" title="ubuntu换国内源"></a>ubuntu换国内源</h1><p><a class="link" href="https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/">https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/<i class="fas fa-external-link-alt"></i></a></p><h1 id="安装gmtsar"><a href="#安装gmtsar" class="headerlink" title="安装gmtsar"></a>安装gmtsar</h1><p>以下是如何在 Windows 10 中安装 GMTSAR 的分步说明</p><pre class="line-numbers language-none"><code class="language-none">sudo apt install subversion ghostscript build-essential cmake libnetcdf-dev libfftw3-dev libpcre3-dev libgdal-dev gdal-bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>下载gmt:</p><pre class="line-numbers language-none"><code class="language-none">git clone https://github.com/GenericMappingTools/gmt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>下载<a class="link" href="https://simpan.ugm.ac.id/s/zaDfZ92BsDVf4G3">GSHHG<i class="fas fa-external-link-alt"></i></a>和<a class="link" href="https://simpan.ugm.ac.id/s/ggLPEAe6W6stDnY">DCW<i class="fas fa-external-link-alt"></i></a>文件。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408191618762.png" alt="image-20240819134703522"></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408191618261.png" alt="image-20240819134713215"></p><p>GSHHG 是 GMT 的附加文件，用于绘制海岸线、河流和政治边界，而 DCW 是 GMT 的附加文件，用于绘制国家多边形。</p><p>转到 CMAKE 文件夹，在您之前下载的 GMT 文件夹中，复制<strong>ConfigUserTemplate.cmake</strong>并将其重命名为<strong>ConfigUser.cmake</strong></p><pre class="line-numbers language-none"><code class="language-none">cp ConfigUserTemplate.cmake ConfigUser.cmake<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>编辑 ConfigUser.cmake</p><pre class="line-numbers language-none"><code class="language-none">vim ConfigUser.cmake<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="http://hidayatpanuntun.staff.ugm.ac.id/files/2020/03/web4.png" alt="img"></p><p>连续执行以下命令，</p><p>cd <path to="">/gmt<br>mkdir build<br>cd build<br>cmake ..</path></p><p><img src="http://hidayatpanuntun.staff.ugm.ac.id/files/2020/03/web5.png" alt="img"></p><p>执行以下命令:</p><p>make</p><p>sudo make install</p><ul><li>在终端中输入以下命令，确保 GMT 已成功安装</li></ul><p>gmt</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408191619165.png" alt="image-20240819140307383"></p><ul><li>我们刚刚安装完 GMT。以下是 GMTSAR 安装部分：</li><li><p>下载<a class="link" href="http://topex.ucsd.edu/gmtsar/tar/ORBITS.tar">ORBITS<i class="fas fa-external-link-alt"></i></a>文件</p></li><li><p>在终端中输入以下命令</p></li></ul><p>sudo -i<br>cd /usr/local<br>mkdir orbits<br>cd orbits<br>tar -xvf /home/hidayat/ORBITS.tar</p><p>sudo apt install csh subversion autoconf libtiff5-dev libhdf5-dev wget<br>sudo apt install liblapack-dev<br>sudo apt install gfortran<br>sudo apt install g++<br>sudo apt install libgmt-dev</p><h1 id="wsl无网络"><a href="#wsl无网络" class="headerlink" title="wsl无网络"></a>wsl无网络</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">wsl --import Ubuntu_new <span class="token variable">$env</span>:USERPROFILE<span class="token punctuation">\</span>Ubuntu_new D:<span class="token punctuation">\</span>wsl-vpnkit.tar.gz --version <span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> sar </category>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+            <tag> sar </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ubuntu22.04安装gmtsar</title>
+      <link href="2024/08/19/ubuntu22.04-an-zhuang-gmtsar/"/>
+      <url>2024/08/19/ubuntu22.04-an-zhuang-gmtsar/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://hidayatpanuntun.staff.ugm.ac.id/files/2020/03/WEBA-e1585056702410-1429x500.png" alt="img"></p><p>GMTSAR 是一款出色的工具，可让您在使用 GMT 的同时分析 SAR 卫星图像。<br>不过，我仍在学习如何使用它。今天我只介绍一下安装方法。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>官方安装教程：<a class="link" href="https://github.com/gmtsar/gmtsar/wiki">https://github.com/gmtsar/gmtsar/wiki<i class="fas fa-external-link-alt"></i></a></p><p>以下是如何在 <strong>Ubuntu22.04</strong>安装 GMTSAR 的分步说明</p><h2 id="安装依赖包"><a href="#安装依赖包" class="headerlink" title="安装依赖包"></a>安装依赖包</h2><p>安装GMT</p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token shebang important">#!/bin/bash</span><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> -y csh subversion autoconf libtiff5-dev libhdf5-dev <span class="token function">wget</span> liblapack-dev gfortran g++ libgmt-dev gmt-dcw gmt-gshhg gmt<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="下载-ENIVSAT-的轨道文件"><a href="#下载-ENIVSAT-的轨道文件" class="headerlink" title="下载 ENIVSAT 的轨道文件"></a>下载 ENIVSAT 的轨道文件</h2><p>需要下载 ENVISAT 的轨道数据。</p><pre class="line-numbers language-none"><code class="language-none">#!/bin/bashsudo mkdir /usr/local/orbitswget http://topex.ucsd.edu/gmtsar/tar/ORBITS.tarsudo mv /usr/local/orbitscd /usr/local/orbitssudo tar -xvf ORBITS.tarsudo rm ORBITS.tar<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这个数据总共有5.8G，非常大！</p><h2 id="GMTSAR源码下载"><a href="#GMTSAR源码下载" class="headerlink" title="GMTSAR源码下载"></a>GMTSAR源码下载</h2><p>这次，我们将其安装到<strong>/usr/local/GMTSAR 。</strong></p><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token shebang important">#!/bin/bash</span><span class="token builtin class-name">cd</span> /usr/local/<span class="token function">sudo</span> <span class="token function">git</span> clone --branch <span class="token number">6.3</span> https://github.com/gmtsar/gmtsar GMTSAR<span class="token builtin class-name">cd</span> GMTSARautoconfautoupdate./configure --with-orbits-dir<span class="token operator">=</span>/usr/local/orbits<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h4 id="GMTSAR-构建"><a href="#GMTSAR-构建" class="headerlink" title="GMTSAR 构建"></a>GMTSAR 构建</h4><p><strong>配置完成</strong>后，在构建前进行拼写检查。<br>在 GMTSAR 中编辑<strong>config.mk 。</strong></p><p>分别在第 75 行和第 76 行将“ <strong>-z muldefs</strong> ”添加到<strong>CFLAGS</strong>和<strong>LDFLAGS 。</strong></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408201546054.jpeg" alt="img"></p><p>完成后，只需运行<strong>make</strong>即可正常构建。</p><pre class="line-numbers language-none"><code class="language-none">sudo make -j4sudo make install<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h4 id="更新环境变量"><a href="#更新环境变量" class="headerlink" title="更新环境变量"></a>更新环境变量</h4><p>最后，直接进入.bashrc文件加入环境变量，</p><p>先进入~路径</p><pre class="line-numbers language-none"><code class="language-none">cd ~<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>直接进入编辑.bashrc文件</p><p>vim .bashrc</p><pre class="line-numbers language-none"><code class="language-none">export GMTSAR=/usr/local/GMTSARexport GMTSAR_csh=/usr/local/GMTSAR/gmtsar/cshexport PATH=$GMTSAR/bin:"$PATH":$GMTSAR_csh <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408201734266.png" alt="image-20240820173429972"></p><p>然后更新一下环境变量。</p><pre class="line-numbers language-none"><code class="language-none">source ~/.bashrc<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="测试GMTSAR安装是否成功"><a href="#测试GMTSAR安装是否成功" class="headerlink" title="测试GMTSAR安装是否成功"></a>测试GMTSAR安装是否成功</h3><p>输入以下两个代码测试.</p><pre class="line-numbers language-none"><code class="language-none">p2p_ERS.cshmake_slc_s1a<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> sar </category>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+            <tag> sar </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>加载torch报错及如何解决</title>
       <link href="2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/"/>
       <url>2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</url>
