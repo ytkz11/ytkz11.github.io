@@ -9,7 +9,7 @@
     
     <title>
         
-            Shapefile 与 GeoJSON 之间的转换：Python 实践 |
+            GMTSAR的D-InSAR基本处理过程（少走弯路） |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">Shapefile 与 GeoJSON 之间的转换：Python 实践</span>
+                <span class="title-hover-animation">GMTSAR的D-InSAR基本处理过程（少走弯路）</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-02-03 22:00:10</span>
-        <span class="mobile">2024-02-03 22:00</span>
+        <span class="pc">2024-08-20 22:00:10</span>
+        <span class="mobile">2024-08-20 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-02-03 14:30:32</span>
+        <span class="pc">2024-08-21 17:26:56</span>
     </span>
     
     
@@ -175,7 +175,11 @@
             <ul>
                 
                     <li>
-                        <a href="/categories/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
+                        <a href="/categories/sar/">sar</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/sar/linux/">linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -187,7 +191,11 @@
             <ul>
                 
                     <li>
-                        <a href="/tags/%E7%9F%A2%E9%87%8F/">矢量</a>&nbsp;
+                        <a href="/tags/sar/">sar</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/linux/">linux</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,59 +216,88 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240203142735158.png" alt="image-20240203142735158"></p>
-<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在处理地理信息系统（GIS）数据时，我们经常会遇到各种数据格式。其中，Shapefile 和 GeoJSON 是两种常见的地理数据格式。Shapefile 是一种广泛使用的地理数据格式，由 ESRI 开发。GeoJSON 是一种基于 JSON 的地理数据格式，适合在网络中传输和存储。</p>
-<p>在本文中，我们将介绍如何使用 Python 的 geopandas 和 GDAL 库将 Shapefile 格式的文件转换为 GeoJSON 格式，以及如何将 GeoJSON 格式的文件转换为 Shapefile 格式。</p>
-<p><img src="https://github.com/getActivity/EmojiPackage/blob/master/%E5%8A%A8%E5%9B%BE/QQ%E5%9B%BE%E7%89%8720171201145659.gif?raw=true" alt="我爱学习.gif"></p>
-<h2 id="Shapefile-转-GeoJSON"><a href="#Shapefile-转-GeoJSON" class="headerlink" title="Shapefile 转 GeoJSON"></a>Shapefile 转 GeoJSON</h2><p>以下是一个使用 geopandas 库将 Shapefile 文件转换为 GeoJSON 文件的函数：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> os
-<span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
+                <p>之前成功地在linux安装了GMTSAR，我这个linux是指win10系统的WSL。</p>
+<p>安装了GMTSAR，就要用起来，现在来讲讲如何使用GMTSAR进行D-Insar处理。</p>
+<p>以下均为实际操作。</p>
+<p>首先在wsl创建新文件夹insar_test，记住这文件夹，后面一切的数据数据都在这个文件夹，或该文件夹的子文件夹下处理。</p>
+<pre class="line-numbers language-none"><code class="language-none">mkdir /home/insar_test<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>进入该文件夹</p>
+<pre class="line-numbers language-none"><code class="language-none">cd /home/insar_test<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="1-raw文件夹"><a href="#1-raw文件夹" class="headerlink" title="1.raw文件夹"></a>1.raw文件夹</h3><p>在/home/insar_test创建raw文件夹</p>
+<pre class="line-numbers language-none"><code class="language-none">mkdir /home/insar_test/raw<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>raw文件夹存放SENTINEL1影像和对应的精准轨道文件。</p>
+<p>在ASF官网下载<a class="link" target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=哨兵&amp;spm=1001.2101.3001.7020">哨兵<i class="fas fa-external-link-alt"></i></a>数据和哥白尼官网下载轨道数据。</p>
+<p><a class="link" target="_blank" rel="noopener" href="https://search.asf.alaska.edu/#/">ASF下载哨兵数据官网<i class="fas fa-external-link-alt"></i></a></p>
+<p><a class="link" target="_blank" rel="noopener" href="https://dataspace.copernicus.eu/browser/?zoom=8&amp;lat=7.72188&amp;lng=127.04315&amp;themeId=DEFAULT-THEME&amp;visualizationUrl=https%3A%2F%2Fsh.dataspace.copernicus.eu%2Fogc%2Fwms%2Fea820656-1f43-408b-9554-afc79eea489a&amp;datasetId=S1_CDAS_IW_VVVH">esa下载数据官网<i class="fas fa-external-link-alt"></i></a></p>
+<p>我的影像数据存放如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408211404627.png" alt="image-20240821140446578"></p>
+<p>精准轨道文件的下载可以参考这篇文章：</p>
+<p>一定要看一下上面的文章，不然分不清该下载哪个轨道数据。</p>
+<p>貌似<a class="link" target="_blank" rel="noopener" href="https://s1qc.asf.alaska.edu/aux_poeorb/的轨道数据没有2023年和2024年，所以我去欧空局下载对应的哨兵1轨道数据。">https://s1qc.asf.alaska.edu/aux_poeorb/的轨道数据没有2023年和2024年，所以我去欧空局下载对应的哨兵1轨道数据。<i class="fas fa-external-link-alt"></i></a></p>
+<p>tips：其实GMTSAR提供了自动下载轨道数据的方法，但是我在测试的时候发现一直不成功，这可能是以前欧空局不需要登陆账号可以下载数据，但现在下载数据需要登陆账号。所以为了稳定使用GMTSAR，建议先手动下载轨道数据，等后面有批量下载的需求再研究如何自动下载。</p>
+<h3 id="2-topo文件"><a href="#2-topo文件" class="headerlink" title="2.topo文件"></a>2.topo文件</h3><p>在/home/insar_test创建raw文件夹</p>
+<pre class="line-numbers language-none"><code class="language-none">mkdir /home/insar_test/topo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>进入该文件夹</p>
+<pre class="line-numbers language-none"><code class="language-none">cd /home/insar_test<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>topo文件存放对应区域的dem数据。已知区域为 1</p>
+<p>有两种方法下载。</p>
+<p>dem数据下载方法1：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408211407843.png" alt="image-20240821140700845"></p>
+<p>格式: make_dem.csh W E S N [mode]</p>
+<p>例如我要下载经度为110 -111，纬度为22-23的区域的SRTM-1s格式的dem数据。</p>
+<p>则在wsl中输入：</p>
+<pre class="line-numbers language-none"><code class="language-none">make_dem.csh 110 111 22 23 1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>dem数据下载方法1：</p>
+<p>在gmtsar官网下载对应的dem数据（4度以内）</p>
+<p> <a class="link" target="_blank" rel="noopener" href="https://topex.ucsd.edu/gmtsar/demgen/">gmtsar官网dem<i class="fas fa-external-link-alt"></i></a></p>
+<p><img src="https://i-blog.csdnimg.cn/blog_migrate/4fba9d8c3783c460486a5784602f5183.png" alt="img"></p>
+<p>我的dem数据存放如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408211403138.png" alt="image-20240821140221979"></p>
+<h3 id="3-准备配置文件"><a href="#3-准备配置文件" class="headerlink" title="3.准备配置文件"></a>3.准备配置文件</h3><p>进入/home/insar_test文件夹</p>
+<pre class="line-numbers language-none"><code class="language-none">cd /home/insar_test<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>再输入 ：</p>
+<pre class="line-numbers language-none"><code class="language-none">pop_config.csh S1_TOPS &gt; config.s1a.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>此时在/home/insar_test文件夹中生成一个config.s1a.txt文件，编辑该文件。至于怎么用vim编辑文件大家自己去网上搜，这里不做介绍。</p>
+<pre class="line-numbers language-none"><code class="language-none">vim config.s1a.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>修改config.s1a.txt中的threshold_snaphu = 0，把0改为0.1</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408211412365.png" alt="image-20240821141248406"></p>
+<h3 id="4-运行p2p-S1-TOPS-Frame-csh命令"><a href="#4-运行p2p-S1-TOPS-Frame-csh命令" class="headerlink" title="4.运行p2p_S1_TOPS_Frame.csh命令"></a>4.运行p2p_S1_TOPS_Frame.csh命令</h3><p>此时说明一下数据准备的情况。</p>
+<p>在/home/insar_test有一个文件config.s1a.txt</p>
+<p>在/home/insar_test有两个文件夹raw、topo</p>
+<p>在/home/insar_test/raw文件夹 有两景S1影像和对应的轨道文件</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408211420554.png" alt="image-20240821142015854"></p>
+<p>在/home/insar_test/topo文件夹  有一景dem影像</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240821142104254.png" alt="image-20240821142104254"></p>
+<p>在终端进入/home/insar_test</p>
+<pre class="line-numbers language-none"><code class="language-none">cd /home/insar_test<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在终端运行这个命令：</p>
+<pre class="line-numbers language-none"><code class="language-none">p2p_S1_TOPS_Frame.csh S1A_IW_SLC__1SDV_20231005T105411_20231005T105433_050629_06196B_87AB.SAFE S1A_OPER_AUX_POEORB_OPOD_20231025T080724_V20231004T225942_20231006T005942.EOF S1A_IW_SLC__1SDV_20240109T105408_20240109T105430_052029_06499F_4C45.SAFE S1A_OPER_AUX_POEORB_OPOD_20240129T070738_V20240108T225942_20240110T005942.EOF config.s1a.txt vv 1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>上面命令的格式说明如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">Usage: p2p_S1_TOPS_Frame.csh Master.SAFE Master.EOF Aligned.SAFE Aligned.EOF config.s1a.txt polarization parallel
 
-<span class="token keyword">def</span> <span class="token function">shp2geojson_gpd</span><span class="token punctuation">(</span>shp_file<span class="token punctuation">,</span> geojson_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token triple-quoted-string string">"""
-    将shapefile格式的文件转化为geojson
-    :param shp_file: 需要转换的shapefile文件名，投影信息可以缺失，也可以指定
-    :param geojson_file: 转换输出的geojson文件名
-    """</span>
+Example: p2p_S1_TOPS_Frame.csh S1A_IW_SLC__1SDV_20150607T014936_20150607T015003_006261_00832E_3626.SAFE S1A_OPER_AUX_POEORB_OPOD_20150615T155109_V20150525T225944_20150527T005944.EOF S1A_IW_SLC__1SSV_20150526T014935_20150526T015002_006086_007E23_679A.SAFE S1A_OPER_AUX_POEORB_OPOD_20150627T155155_V20150606T225944_20150608T005944.EOF config.s1a.txt vv 1
 
-    <span class="token keyword">if</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>geojson_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>geojson_file<span class="token punctuation">)</span>
+    Place the .SAFE file in the raw folder, DEM in the topo folder
+    During processing, F1, F2, F3 and merge folder will be generated
+    Final results will be placed in the merge folder, with phase
+    corr [unwrapped phase].
+    polarization = vv vh hh or hv
+    parallel = 0-sequential  1-parallel
 
-    out_data <span class="token operator">=</span> gpd<span class="token punctuation">.</span>read_file<span class="token punctuation">(</span>shp_file<span class="token punctuation">)</span>
-    crs <span class="token operator">=</span> out_data<span class="token punctuation">.</span>crs
-    out_data <span class="token operator">=</span> gpd<span class="token punctuation">.</span>GeoSeries<span class="token punctuation">(</span>out_data<span class="token punctuation">.</span>geometry<span class="token punctuation">,</span> crs<span class="token operator">=</span>crs<span class="token punctuation">)</span>
-    out_data<span class="token punctuation">.</span>to_file<span class="token punctuation">(</span>geojson_file<span class="token punctuation">,</span> driver<span class="token operator">=</span><span class="token string">'GeoJSON'</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"utf-8"</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"successfully convert shapefile to geojson"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这个函数首先检查输出的 GeoJSON 文件是否已经存在，如果存在则删除。然后，使用 geopandas 的 <code>read_file</code> 函数读取 Shapefile 文件，并保留其坐标参考系统（CRS）。最后，使用 <code>to_file</code> 函数将数据写入 GeoJSON 文件。</p>
-<h2 id="GeoJSON-转-Shapefile"><a href="#GeoJSON-转-Shapefile" class="headerlink" title="GeoJSON 转 Shapefile"></a>GeoJSON 转 Shapefile</h2><p>以下是一个使用 GDAL 库将 GeoJSON 文件转换为 Shapefile 文件的函数：</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> ogr
-
-<span class="token keyword">def</span> <span class="token function">geojson2shp</span><span class="token punctuation">(</span>geojson<span class="token punctuation">,</span> shp_path<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    gdal<span class="token punctuation">.</span>SetConfigOption<span class="token punctuation">(</span><span class="token string">"SHAPE_ENCODING"</span><span class="token punctuation">,</span> <span class="token string">"GBK"</span><span class="token punctuation">)</span>
-    geoj_driver <span class="token operator">=</span> ogr<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">"GeoJSON"</span><span class="token punctuation">)</span>
-    g_ds <span class="token operator">=</span> geoj_driver<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>geojson<span class="token punctuation">)</span>
-    dv <span class="token operator">=</span> ogr<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">"ESRI Shapefile"</span><span class="token punctuation">)</span>
-    dv<span class="token punctuation">.</span>CopyDataSource<span class="token punctuation">(</span>g_ds<span class="token punctuation">,</span> shp_path<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>这个函数首先设置 Shapefile 的编码为 GBK，然后使用 GDAL 的 <code>GetDriverByName</code> 函数获取 GeoJSON 和 ESRI Shapefile 的驱动。接着，打开 GeoJSON 文件，并使用 <code>CopyDataSource</code> 函数将数据复制到 Shapefile 文件。</p>
-<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><p>以下是使用上述两个函数（<code>shp2geojson_gpd</code>和<code>geojson2shp</code>）进行Shapefile和GeoJSON之间转换的步骤流程：</p>
-<h2 id="Shapefile-转-GeoJSON-1"><a href="#Shapefile-转-GeoJSON-1" class="headerlink" title="Shapefile 转 GeoJSON"></a>Shapefile 转 GeoJSON</h2><ol>
-<li><strong>指定输入和输出文件</strong>：确定你需要转换的Shapefile文件（<code>shp_file</code>）和转换后GeoJSON文件的存放路径（<code>geojson_file</code>）。</li>
-<li><strong>检查输出文件是否存在</strong>：如果输出文件已经存在，那么删除它以准备写入新的GeoJSON数据。</li>
-<li><strong>读取Shapefile文件</strong>：使用geopandas库的<code>read_file</code>函数来读取Shapefile文件。</li>
-<li><strong>获取坐标参考系统（CRS）</strong>：获取Shapefile文件的坐标参考系统。</li>
-<li><strong>转换数据</strong>：将读取的Shapefile数据转换为GeoSeries对象，并保持原始的坐标参考系统。</li>
-<li><strong>写入GeoJSON文件</strong>：将转换后的GeoSeries对象写入GeoJSON文件。</li>
-<li><strong>确认转换成功</strong>：输出成功的消息。</li>
-</ol>
-<h2 id="GeoJSON-转-Shapefile-1"><a href="#GeoJSON-转-Shapefile-1" class="headerlink" title="GeoJSON 转 Shapefile"></a>GeoJSON 转 Shapefile</h2><ol>
-<li><strong>指定输入和输出文件</strong>：确定你需要转换的GeoJSON文件（<code>geojson</code>）和转换后Shapefile文件的存放路径（<code>shp_path</code>）。</li>
-<li><strong>设置编码</strong>：通过GDAL的<code>SetConfigOption</code>函数，设置Shapefile的编码为GBK。</li>
-<li><strong>获取驱动</strong>：获取GeoJSON和ESRI Shapefile的驱动。</li>
-<li><strong>打开GeoJSON文件</strong>：使用驱动打开GeoJSON文件。</li>
-<li><strong>复制数据源</strong>：将GeoJSON文件的数据源复制到新的Shapefile文件中。</li>
-</ol>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>以上就是如何在 Python 中进行 Shapefile 和 GeoJSON 数据格式之间的转换。希望这篇文章对你的 GIS 数据处理工作有所帮助！如果你有任何问题或者建议，欢迎留言。</p>
-<p><img src="https://github.com/getActivity/EmojiPackage/blob/master/%E5%AD%A6%E4%B9%A0/%E6%88%91%E7%88%B1%E5%AD%A6%E4%B9%A0.gif?raw=true" alt="我爱学习.gif"></p>
+Reference: Xu, X., Sandwell, D.T., Tymofyeyeva, E., González-Ortega, A. and Tong, X.,
+    2017. Tectonic and Anthropogenic Deformation at the Cerro Prieto Geothermal
+    Step-Over Revealed by Sentinel-1A InSAR. IEEE Transactions on Geoscience and Remote Sensing.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408211424824.png" alt="image-20240821142357131"></p>
+<h3 id="5-输出结果主要在merge文件夹"><a href="#5-输出结果主要在merge文件夹" class="headerlink" title="5.输出结果主要在merge文件夹"></a>5.输出结果主要在merge文件夹</h3><p>处理结果输出在/home/insar_test/merge文件夹，如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408211556379.png" alt="image-20240821155612916"></p>
+<p>主要看以下几个文件 ，后缀带ll的为地理编码以后的经纬度坐标，不带ll的是在雷达坐标系下的坐标</p>
+<p><strong>corr_ll.grd 相干性文件</strong></p>
+<p><strong>phasefilt_mask_ll.grd 缠绕图</strong></p>
+<p><strong>unwrap_ll.grd 解缠图</strong></p>
+<p><strong>los_ll.grd los向位移图</strong> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408211601149.png" alt="image-20240821160153910"></p>
+<p>至此，完成了D-insar的基本处理。</p>
+<p>参考网站：<a class="link" target="_blank" rel="noopener" href="https://topex.ucsd.edu/gmtsar/">GMTSAR<i class="fas fa-external-link-alt"></i></a></p>
 
             </div>
 
@@ -270,7 +307,11 @@
                 <ul class="post-tags-box">
                     
                         <li class="tag-item">
-                            <a href="/tags/%E7%9F%A2%E9%87%8F/">#矢量</a>&nbsp;
+                            <a href="/tags/sar/">#sar</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/linux/">#linux</a>&nbsp;
                         </li>
                     
                 </ul>
@@ -279,29 +320,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/02/04/mian-shi-liang-jian-hua-ji-yu-c/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item">面矢量简化--基于cpp</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/02/02/shi-yong-leaflet.js-zai-web-ying-yong-zhong-ke-shi-hua-geojson-shu-ju/"
+                               href="/2024/08/19/linux-xia-an-zhuang-miniconda/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">使用 Leaflet.js 在 Web 应用中可视化 GeoJSON 数据</span>
+                                <span class="post-nav-title-item">Linux 下安装miniconda</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">

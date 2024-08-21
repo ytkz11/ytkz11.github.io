@@ -139,20 +139,17 @@
                 
 
                 <h3 class="home-article-title">
-                    <a href="/2021/03/10/gdal-api-bi-ji/">
-                        gdal api笔记
+                    <a href="/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/">
+                        GMTSAR的D-InSAR基本处理过程（少走弯路）
                     </a>
                 </h3>
 
                 <div class="home-article-content keep-markdown-body">
                     
-                        ​        如果你的gdal版本是3.2.2及以上，那么只能：
-from osgeo import gdal 
-
-
-ds = gdal.Open(data)
-rows = ds.RasterYSize
-cols = ds.RasterXSize...
+                        之前成功地在linux安装了GMTSAR，我这个linux是指win10系统的WSL。
+安装了GMTSAR，就要用起来，现在来讲讲如何使用GMTSAR进行D-Insar处理。
+以下均为实际操作。
+首先在wsl创建新文件夹insar_test，记住这文...
                     
                 </div>
 
@@ -160,15 +157,15 @@ cols = ds.RasterXSize...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Sun Apr 07 2024 13:13:38 GMT+0800">
-                2024-04-07
+            <span class="home-article-date" data-updated="Wed Aug 21 2024 17:26:56 GMT+0800">
+                2024-08-21
             </span>
         </span>
         
         
     </div>
 
-    <a class="read-more" href="/2021/03/10/gdal-api-bi-ji/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+    <a class="read-more" href="/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -276,6 +273,39 @@ GMTSAR 是一款出色的工具，可让您在使用 GMT 的同时分析 SAR 卫
     </div>
 
     <a class="read-more" href="/2024/08/19/ubuntu22.04-an-zhuang-gmtsar/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/08/19/shou-dong-xia-zai-sentinel-1-wei-xing-jing-mi-gui-dao-shu-ju/">
+                        手动下载Sentinel-1卫星精密轨道数据
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        轨道信息对于InSAR（干涉合成孔径雷达）数据处理至关重要，因为它影响从初始图像配准到最终形变图像生成的整个过程。不准确的轨道信息会导致基线误差，这些误差会以残差条纹的形式出现在干涉图中。为了消除由轨道误差引起的系统性误差，使用高精度的卫星轨道数据进...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Wed Aug 21 2024 14:59:52 GMT+0800">
+                2024-08-21
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/19/shou-dong-xia-zai-sentinel-1-wei-xing-jing-mi-gui-dao-shu-ju/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -456,39 +486,6 @@ nvidia-smi
     </div>
 
     <a class="read-more" href="/2024/08/13/an-zhuang-torch-gpu-ban-bu-zou-wan-lu/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/08/12/jin-yong-60-xing-dai-ma-ji-ke-xun-lian-wei-diao-segment-anything-2-sam-2/">
-                        微调Segment Anything 2 (SAM 2)
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        SAM2（Segment Anything 2）是 Meta 推出的一款新模型，旨在分割图像中的任何内容，而不局限于特定的类别或领域。该模型的独特之处在于其训练数据规模：1100 万张图像和 110 亿个掩码。这种广泛的训练使 SAM2 成为训练新图...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Aug 12 2024 16:48:08 GMT+0800">
-                2024-08-12
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/08/12/jin-yong-60-xing-dai-ma-ji-ke-xun-lian-wei-diao-segment-anything-2-sam-2/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

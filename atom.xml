@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-08-20T09:59:46.197Z</updated>
+  <updated>2024-08-21T09:26:56.688Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GMTSAR的D-InSAR基本处理过程（少走弯路）</title>
+    <link href="http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/</id>
+    <published>2024-08-20T14:00:10.000Z</published>
+    <updated>2024-08-21T09:26:56.688Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前成功地在linux安装了GMTSAR，我这个linux是指win10系统的WSL。&lt;/p&gt;
+&lt;p&gt;安装了GMTSAR，就要用起来，现在来讲讲如何使用GMTSAR进行D-Insar处理。&lt;/p&gt;
+&lt;p&gt;以下均为实际操作。&lt;/p&gt;
+&lt;p&gt;首先在wsl创建新文件夹insar_</summary>
+        
+      
+    
+    
+    
+    <category term="sar" scheme="http://ytkz11@.github.io/categories/sar/"/>
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/categories/sar/linux/"/>
+    
+    
+    <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux 下安装miniconda</title>
@@ -98,6 +130,31 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>手动下载Sentinel-1卫星精密轨道数据</title>
+    <link href="http://ytkz11@.github.io/2024/08/19/shou-dong-xia-zai-sentinel-1-wei-xing-jing-mi-gui-dao-shu-ju/"/>
+    <id>http://ytkz11@.github.io/2024/08/19/shou-dong-xia-zai-sentinel-1-wei-xing-jing-mi-gui-dao-shu-ju/</id>
+    <published>2024-08-19T14:00:10.000Z</published>
+    <updated>2024-08-21T06:59:52.665Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;轨道信息对于InSAR（干涉合成孔径雷达）数据处理至关重要，因为它影响从初始图像配准到最终形变图像生成的整个过程。不准确的轨道信息会导致基线误差，这些误差会以残差条纹的形式出现在干涉图中。为了消除由轨道误差引起的系统性误差，使用高精度的卫星轨道数据进行校正是非常必要的。在使</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
     
   </entry>
   
@@ -473,56 +530,6 @@
         
         
     <summary type="html">&lt;p&gt;39.多源遥感影像数据融合的主要优点是（ ）。&lt;br&gt;A.可以自动确定多种传感器影像的外方位元素 &lt;strong&gt;&lt;span style=&quot;color:#03decd;&quot;&gt;B.可以充分发挥各种传感器影像自身的特点&lt;/span&gt;&lt;/strong&gt; C.可以提高影像匹配的速度</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2022年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T14:22:10.000Z</published>
-    <updated>2024-07-31T00:49:13.222Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.地球椭球的真子午线与中央子午线的差值，被称为（ ）。&lt;br&gt;A磁偏角 B垂线偏差 &lt;strong&gt;&lt;span style=&quot;color:#2cae77;&quot;&gt;C子午线收敛角&lt;/span&gt;&lt;/strong&gt; D真北方位角&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2021年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2021-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2021-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T14:21:10.000Z</published>
-    <updated>2024-07-31T00:48:55.219Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.下列坐标系中，所釆用的地球椭球长半径为6378140米的是（ ）。&lt;br&gt;A.1954北京坐标系 &lt;strong&gt;&lt;span style=&quot;color:#cc5b38;&quot;&gt;B.1980西安坐标系&lt;/span&gt;&lt;/strong&gt; C.WGS-84坐标系</summary>
         
       
     
