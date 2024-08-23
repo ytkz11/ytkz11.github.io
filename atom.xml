@@ -49,6 +49,41 @@
   </entry>
   
   <entry>
+    <title>对GMTSAR的D-InSAR得到数据进行简单的分析</title>
+    <link href="http://ytkz11@.github.io/2024/08/20/dui-gmtsar-de-d-insar-de-dao-shu-ju-jin-xing-fen-xi/"/>
+    <id>http://ytkz11@.github.io/2024/08/20/dui-gmtsar-de-d-insar-de-dao-shu-ju-jin-xing-fen-xi/</id>
+    <published>2024-08-20T14:00:10.000Z</published>
+    <updated>2024-08-23T10:09:04.140Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;对GMTSAR的D-InSAR得到的结果数据有很多，其中栅格数据类型为grd。&lt;/p&gt;
+&lt;p&gt;grd数据其实本质上是一种HDF数据（NC数据），在envi或者arcgis是无法打开直接这种的数据。&lt;/p&gt;
+&lt;h2 id=&quot;怎么在python读取grd&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="sar" scheme="http://ytkz11@.github.io/categories/sar/"/>
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/categories/sar/linux/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/sar/linux/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux 下安装miniconda</title>
     <link href="http://ytkz11@.github.io/2024/08/19/linux-xia-an-zhuang-miniconda/"/>
     <id>http://ytkz11@.github.io/2024/08/19/linux-xia-an-zhuang-miniconda/</id>
@@ -514,31 +549,6 @@
     
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2011年-2022年摄影测量地图制图GIS相关真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2011-nian-2022-nian-she-ying-ce-liang-di-tu-zhi-tu-gis-xiang-guan-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2011-nian-2022-nian-she-ying-ce-liang-di-tu-zhi-tu-gis-xiang-guan-zhen-ti/</id>
-    <published>2024-07-31T14:30:10.000Z</published>
-    <updated>2024-07-31T00:49:47.837Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;39.多源遥感影像数据融合的主要优点是（ ）。&lt;br&gt;A.可以自动确定多种传感器影像的外方位元素 &lt;strong&gt;&lt;span style=&quot;color:#03decd;&quot;&gt;B.可以充分发挥各种传感器影像自身的特点&lt;/span&gt;&lt;/strong&gt; C.可以提高影像匹配的速度</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
     
   </entry>
   

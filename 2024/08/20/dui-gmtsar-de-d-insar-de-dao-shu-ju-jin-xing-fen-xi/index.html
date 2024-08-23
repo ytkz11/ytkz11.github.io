@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            对GMTSAR的D-InSAR得到数据进行简单的分析 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">对GMTSAR的D-InSAR得到数据进行简单的分析</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-08-20 22:00:10</span>
+        <span class="mobile">2024-08-20 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-08-23 18:09:04</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/sar/">sar</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/sar/linux/">linux</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/sar/linux/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/sar/">sar</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/linux/">linux</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>对GMTSAR的D-InSAR得到的结果数据有很多，其中栅格数据类型为grd。</p>
+<p>grd数据其实本质上是一种HDF数据（NC数据），在envi或者arcgis是无法打开直接这种的数据。</p>
+<h2 id="怎么在python读取grd"><a href="#怎么在python读取grd" class="headerlink" title="怎么在python读取grd"></a>怎么在python读取grd</h2><p>使用gdal可以轻松读取grd，请看下面的代码。</p>
+<pre class="line-numbers language-none"><code class="language-none">from osgeo import gdal, osr
+file = r'los_ll.grd'
+ds = gdal.Open(file)
+data = ds.GetRasterBand(1).ReadAsArray()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>grd的数据就读取到电脑内存中，而<code>data</code> 是从栅格文件 <code>los_ll.grd</code> 读取的数据数组。它是一个 NumPy 数组，代表了栅格文件中的数值数据。</p>
+<p>在pycharm中，data数据如下所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408231621455.png" alt="image-20240823155911946"></p>
+<p>data数据的大小为2620x3480,说明data数据的高有2620行，data数据的宽有3480列。</p>
+<p>换句话说，<code>2620</code> 表示栅格数据集在垂直方向上有 2620 个像素。这意味着如果你把这个数据集想象成一张图像，那么它的高度是 2620 像素。同样地，<code>3480</code> 表示栅格数据集在水平方向上的宽度，即从左到右的像素数量。</p>
+<p>记住这个2620x3480，后面要用到。</p>
+<p>我们可以用matplotlib把这个los_ll.grd文件可视化出来。</p>
+<pre class="line-numbers language-none"><code class="language-none">import matplotlib.pyplot as plt
+from osgeo import gdal, osr
+file = r'los_ll.grd'
+ds = gdal.Open(file)
+data = ds.GetRasterBand(1).ReadAsArray()
+plt.imshow(data),plt.show()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>data数据可视化如下所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408231559843.png" alt="image-20240823155952620"></p>
+<h2 id="读取grd的元信息"><a href="#读取grd的元信息" class="headerlink" title="读取grd的元信息"></a>读取grd的元信息</h2><p>通过gdald的GetMetadata接口，获取grd的元信息。</p>
+<pre class="line-numbers language-none"><code class="language-none">from osgeo import gdal, osr
+file = r'los_ll.grd'
+ds = gdal.Open(file)
+info = ds.GetMetadata()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>grd的元信息如下所示：</p>
+<pre class="line-numbers language-none"><code class="language-none">{'lat#actual_range': '{34.9208333333,36.0125}',
+ 'lat#axis': 'Y',
+ 'lat#long_name': 'latitude',
+ 'lat#standard_name': 'latitude',
+ 'lat#units': 'degrees_north',
+ 'lon#actual_range': '{-254.005555556,-252.072222222}',
+ 'lon#axis': 'X',
+ 'lon#long_name': 'longitude',
+ 'lon#standard_name': 'longitude',
+ 'lon#units': 'degrees_east',
+ 'NC_GLOBAL#Conventions': 'CF-1.7',
+ 'NC_GLOBAL#description': '',
+ 'NC_GLOBAL#GMT_version': '6.6.0 [64-bit]',
+ 'NC_GLOBAL#history': 'gmt xyz2grd llpb -R-254.005555556/-252.072222222/34.9208333333/36.0125 -I2s/1.5s -r -fg -Glos_ll.grd -bi3f',
+ 'NC_GLOBAL#node_offset': '1',
+ 'NC_GLOBAL#title': '',
+ 'z#actual_range': '{-88.73101806640625,51.03330993652344}',
+ 'z#long_name': 'z',
+ 'z#_FillValue': 'nan'}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408231621490.png" alt="image-20240823162120875"></p>
+<p>从上图可以知道grd的经纬度的范围。</p>
+<p>有意思的是grd的经度范围是-254.005555556,-252.072222222，这明显不符合gdal中的对经度定义的范围。</p>
+<p>我们需要对这个小于-180的经度进行改正，即加上360°。让经度范围在-180°到180°之间。</p>
+<p>即改正后的经度范围是 105.99444444400001，107.927777778</p>
+<p>此外，我们还可以通过经纬度的范围、数据的行列大小，推算出该X 、Y方向上的像素大小(空间分辨率)</p>
+<p>X空间分辨率= (107.927777778 -105.99444444400001)/3840 = 0.0005034722223958325</p>
+<p>Y空间分辨率= (36.0125-34.9208333333)/2640=  0.0004135101010227273</p>
+<h2 id="地理变换矩阵"><a href="#地理变换矩阵" class="headerlink" title="地理变换矩阵"></a>地理变换矩阵</h2><p>我们可以构建栅格数据集的地理变换矩阵，这个矩阵提供了栅格数据集与其地理坐标系统之间的空间关系。具体来说，这六个元素按照以下顺序定义：</p>
+<pre class="line-numbers language-none"><code class="language-none">Transform = (x_origin, x_scale, x_rotation, y_rotation, y_origin, y_scale)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>其中：</p>
+<ul>
+<li><code>x_origin</code> 表示栅格左上角像素中心的 X 坐标。</li>
+<li><code>y_origin</code> 表示栅格左上角像素中心的 Y 坐标。</li>
+<li><code>x_scale</code> 表示 X 方向上的像素大小（也称为分辨率）。</li>
+<li><code>y_scale</code> 表示 Y 方向上的像素大小（负数是因为 Y 值随着向下增加而减小）。</li>
+<li><code>x_rotation</code> 和 <code>y_rotation</code> 通常为 0，除非栅格被旋转。</li>
+</ul>
+<p>现在我们知道了影像的经纬度范围。</p>
+<p>我画了一张草图，不用算就可以知道左上角像素中心的 X Y坐标。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408231647099.png" alt="image-20240823164715619"></p>
+<p>x1最小，y1最大。即左上角经度最小、左上角纬度最大</p>
+<p>在上面的例子中，los_ll.grd的地理变换矩阵是 </p>
+<p>（105.99444444400001，0.0005034722223958325，0，36.0125，0，0.0004135101010227273）</p>
+<h2 id="grd转换为tif"><a href="#grd转换为tif" class="headerlink" title="grd转换为tif"></a>grd转换为tif</h2><p>整合以上内容，一步一步地编写代码，实现grd转换为tif。</p>
+<p>暂时把无效值设置为0，全部代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @File : grd2tiff.py </span>
+<span class="token triple-quoted-string string">'''
+
+'''</span>
+<span class="token comment"># todo</span>
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> osr
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> os
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">class</span> <span class="token class-name">grd2tiff</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span><span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">file</span>
+        self<span class="token punctuation">.</span>outfile <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.tif'</span>
+
+    <span class="token keyword">def</span> <span class="token function">grd2tiff</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">&gt;</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        Do not return anything, modify nums in-place instead.
+        """</span>
+        ds <span class="token operator">=</span> gdal<span class="token punctuation">.</span>Open<span class="token punctuation">(</span>self<span class="token punctuation">.</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+        info <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetMetadata<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        data <span class="token operator">=</span> ds<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>ReadAsArray<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># 把nan改成0</span>
+        data<span class="token punctuation">[</span>np<span class="token punctuation">.</span>isnan<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
+
+        <span class="token comment"># 84坐标</span>
+        spatialref <span class="token operator">=</span> osr<span class="token punctuation">.</span>SpatialReference<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        spatialref<span class="token punctuation">.</span>ImportFromEPSG<span class="token punctuation">(</span><span class="token number">4326</span><span class="token punctuation">)</span>
+        proj <span class="token operator">=</span> spatialref<span class="token punctuation">.</span>ExportToWkt<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        cols <span class="token operator">=</span> ds<span class="token punctuation">.</span>RasterXSize
+        rows <span class="token operator">=</span> ds<span class="token punctuation">.</span>RasterYSize
+
+        y_range <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">float</span><span class="token punctuation">(</span>info<span class="token punctuation">[</span><span class="token string">'lat#actual_range'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span>info<span class="token punctuation">[</span><span class="token string">'lat#actual_range'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+        x_range <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">float</span><span class="token punctuation">(</span>info<span class="token punctuation">[</span><span class="token string">'lon#actual_range'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span>info<span class="token punctuation">[</span><span class="token string">'lon#actual_range'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">','</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+        <span class="token keyword">if</span> x_range<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token operator">-</span><span class="token number">180</span><span class="token punctuation">:</span>
+            x_range<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">360</span>
+            x_range<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">360</span>
+        x_res<span class="token punctuation">,</span> y_res <span class="token operator">=</span> <span class="token punctuation">(</span>x_range<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> x_range<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span>cols<span class="token punctuation">,</span> <span class="token punctuation">(</span>y_range<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> y_range<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span>rows
+
+        left_x <span class="token operator">=</span> x_range<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+        left_y <span class="token operator">=</span> y_range<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+        Transform <span class="token operator">=</span> <span class="token punctuation">(</span>left_x<span class="token punctuation">,</span>x_res<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>left_y<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token operator">*</span>y_res<span class="token punctuation">)</span>
+        driver <span class="token operator">=</span> gdal<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">'GTiff'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>saveTif<span class="token punctuation">(</span> data<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> driver<span class="token punctuation">,</span> proj<span class="token punctuation">,</span> Transform<span class="token punctuation">)</span>
+        a <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">def</span> <span class="token function">saveTif</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> array<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> driver<span class="token punctuation">,</span> proj<span class="token punctuation">,</span> Transform<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">'''
+        @todo single band tif file to save
+
+        @param array: data array
+        @param cols: cols of data array
+        @param rows: rows of data array
+        @param driver:
+        @param proj: projection
+        @param Transform: coordinate transform
+        @param filename: output filename
+        @return: None
+        '''</span>
+
+        indexset <span class="token operator">=</span> driver<span class="token punctuation">.</span>Create<span class="token punctuation">(</span>self<span class="token punctuation">.</span>outfile<span class="token punctuation">,</span> cols<span class="token punctuation">,</span> rows<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> gdal<span class="token punctuation">.</span>GDT_Float32<span class="token punctuation">)</span>
+        indexset<span class="token punctuation">.</span>SetGeoTransform<span class="token punctuation">(</span>Transform<span class="token punctuation">)</span>
+        indexset<span class="token punctuation">.</span>SetProjection<span class="token punctuation">(</span>proj<span class="token punctuation">)</span>
+        Band <span class="token operator">=</span> indexset<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        Band<span class="token punctuation">.</span>WriteArray<span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token builtin">file</span> <span class="token operator">=</span> <span class="token string">r'los_ll.grd'</span>
+    a <span class="token operator">=</span> grd2tiff<span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">.</span>grd2tiff<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>结果可视化如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408231807510.png" alt="image-20240823180725536"></p>
+<h1 id="使用qgis转换grd"><a href="#使用qgis转换grd" class="headerlink" title="使用qgis转换grd"></a>使用qgis转换grd</h1><p>可以直接使用qgis软件把 grd转换为tif，但是qgis不会把影像的经度范围改正为-180°到180°</p>
+<p>所以后续使用矢量去裁剪影像的时候会出错。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408231801242.png" alt="屏幕截图 2024-08-23 180018"></p>
+<p>把qgis转换的tif，和我们代码转换的tif，放在arcgis可视化如下：</p>
+<p>二者相差了360°，所以比例尺很大很大！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408231756471.png" alt="image-20240823175632270"></p>
+<p>自此，完成了对GMTSAR的D-InSAR得到数据进行简单的分析。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/python/">#python</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/sar/">#sar</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/linux/">#linux</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">GMTSAR的D-InSAR基本处理过程（少走弯路）</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/08/19/linux-xia-an-zhuang-miniconda/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Linux 下安装miniconda</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>

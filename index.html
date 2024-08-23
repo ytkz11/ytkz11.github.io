@@ -139,6 +139,45 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2021/03/10/gdal-api-bi-ji/">
+                        gdal api笔记
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        ​        如果你的gdal版本是3.2.2及以上，那么只能：
+from osgeo import gdal 
+
+
+ds = gdal.Open(data)
+rows = ds.RasterYSize
+cols = ds.RasterXSize...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Sun Apr 07 2024 13:13:38 GMT+0800">
+                2024-04-07
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2021/03/10/gdal-api-bi-ji/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/">
                         GMTSAR的D-InSAR基本处理过程（少走弯路）
                     </a>
@@ -166,6 +205,41 @@
     </div>
 
     <a class="read-more" href="/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2024/08/20/dui-gmtsar-de-d-insar-de-dao-shu-ju-jin-xing-fen-xi/">
+                        对GMTSAR的D-InSAR得到数据进行简单的分析
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        对GMTSAR的D-InSAR得到的结果数据有很多，其中栅格数据类型为grd。
+grd数据其实本质上是一种HDF数据（NC数据），在envi或者arcgis是无法打开直接这种的数据。
+怎么在python读取grd使用gdal可以轻松读取grd，请看下...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Fri Aug 23 2024 18:09:04 GMT+0800">
+                2024-08-23
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/08/20/dui-gmtsar-de-d-insar-de-dao-shu-ju-jin-xing-fen-xi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
@@ -412,80 +486,6 @@ RLE 的基本思想是将连续出现的相同数据用一个计数和该值来.
     </div>
 
     <a class="read-more" href="/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/">
-                        基于《基于无人机影像序列的三维重建方法综述》的思考
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        今天读到一篇2017年的综述文章，虽然至今有7年之久，但这篇文章的一些内容值得参考、思考。
-
-
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Aug 14 2024 13:29:49 GMT+0800">
-                2024-08-14
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/08/13/an-zhuang-torch-gpu-ban-bu-zou-wan-lu/">
-                        安装torch gpu版（不走弯路）
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        一、查看cuda版本
-在命令行中输入nvidia-smi
-nvidia-smi
-
-得到cuda版本为12.4，主要关注该版本是否大于10.2即可。
-二、安装torch、torchvision、torchaudio三个组件
-以python3.11为例，...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Aug 13 2024 11:10:02 GMT+0800">
-                2024-08-13
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/08/13/an-zhuang-torch-gpu-ban-bu-zou-wan-lu/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>
