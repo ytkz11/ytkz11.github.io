@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="ytkz">
+    
+    <title>
+        
+            通过python创建矢量文件 |
+        
+        remote sensing
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/favicon.png">
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":".github.io","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":false,"number":false,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066cc","logo":"/images/favicon.png","favicon":"/images/favicon.png","avatar":"/images/favicon.png","font_size":null,"font_family":null,"hover":{"shadow":false,"scale":false},"first_screen":{"enable":false,"header_transparent":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":false,"percent":false}},"local_search":{"enable":false,"preload":false},"code_copy":{},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"side_tools":{},"pjax":{"enable":false},"lazyload":{"enable":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2}},"post":{"author_label":{"enable":true,"auto":true,"custom_label_list":["Trainee","Engineer","Architect"]},"word_count":{"enable":false,"wordcount":false,"min2read":false},"img_align":"left","copyright_info":false},"version":"3.6.1"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="/images/favicon.png">
+                </a>
+            
+            <a class="logo-title" href="/">
+               remote sensing
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
+
+            <div class="article-title">
+                <span class="title-hover-animation">通过python创建矢量文件</span>
+            </div>
+
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="/images/favicon.png">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">ytkz</span>
+                            
+                                <span class="author-label">Lv6</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            
+<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        
+            <i class="fa-regular fa-calendar-plus"></i>&nbsp;
+        
+        <span class="pc">2024-08-27 22:00:10</span>
+        <span class="mobile">2024-08-27 22:00</span>
+    </span>
+    
+        <span class="article-update-date article-meta-item">
+        <i class="fas fa-file-pen"></i>&nbsp;
+        <span class="pc">2024-08-27 14:58:42</span>
+    </span>
+    
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/gis/">gis</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/gis/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/gis/%E9%81%A5%E6%84%9F/python/">python</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E9%81%A5%E6%84%9F/">遥感</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/gis/">gis</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+    
+    
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            
+
+            <div class="article-content keep-markdown-body">
+                
+
+                <p>现有四个点：(1, 1), (2, 2), (3, 3), (4, 4)</p>
+<p>以这四个点围起来就是一个面。</p>
+<p>如何通过python创建矢量文件。</p>
+<p>我们以创建一个面矢量文件为例子，进行阐释。</p>
+<p>我们可以使用geopandas、gdal库完成矢量创建。</p>
+<h1 id="geopandas"><a href="#geopandas" class="headerlink" title="geopandas"></a>geopandas</h1><p> 假设我们创建的矢量文件格式为 shp格式，代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
+<span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry <span class="token keyword">import</span> Polygon
+<span class="token keyword">def</span> <span class="token function">write_points_as_polygons_to_shp</span><span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    将一系列点坐标转换为以这些点为中心的小正方形多边形，并写入Shapefile文件。
+
+    参数:
+    - points: 一个包含点坐标的列表，每个点是一个元组或列表，如[(1, 1), (2, 2), ...]
+    - output_file: 输出的Shapefile文件名
+    返回:
+    - 无，但会生成一个Shapefile文件
+    """</span>
+
+    <span class="token comment"># 创建多边形对象</span>
+    simplify_poly_geoms <span class="token operator">=</span> <span class="token punctuation">[</span>Polygon<span class="token punctuation">(</span>points<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    gdf_poly <span class="token operator">=</span> gpd<span class="token punctuation">.</span>GeoDataFrame<span class="token punctuation">(</span>geometry<span class="token operator">=</span>simplify_poly_geoms<span class="token punctuation">,</span> crs<span class="token operator">=</span>CRS<span class="token punctuation">(</span><span class="token string">"epsg:4326"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># 保存为 Shapefile</span>
+    gdf_poly<span class="token punctuation">.</span>to_file<span class="token punctuation">(</span>output_file<span class="token punctuation">,</span> driver<span class="token operator">=</span><span class="token string">'ESRI Shapefile'</span><span class="token punctuation">)</span>
+    
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment"># 示例用法</span>
+    points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    output_file <span class="token operator">=</span> <span class="token string">r'd://temp/create_shp_by_geopandas.shp'</span>
+    write_points_as_polygons_to_shp<span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>矢量在Qgis打开如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408270957223.png" alt="image-20240827095721260"></p>
+<p> <code>gdf.to_file()</code> 实际上是在背后调用 <code>Fiona</code> 来读取和写入 Shapefile 文件。</p>
+<p>常见的矢量文件格式除了shp之外，还有geojson、GPKG。其实，只要对上述代码中的driver进行修改就可以保存为其他的shp格式。</p>
+<p>JSON矢量创建如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
+<span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry <span class="token keyword">import</span> Polygon
+<span class="token keyword">def</span> <span class="token function">write_points_as_polygons_to_geojson</span><span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    将一系列点坐标转换为以这些点为中心的小正方形多边形，并写入Shapefile文件。
+
+    参数:
+    - points: 一个包含点坐标的列表，每个点是一个元组或列表，如[(1, 1), (2, 2), ...]
+    - output_file: 输出的Shapefile文件名
+    返回:
+    - 无，但会生成一个Shapefile文件
+    """</span>
+
+    <span class="token comment"># 创建多边形对象</span>
+    simplify_poly_geoms <span class="token operator">=</span> <span class="token punctuation">[</span>Polygon<span class="token punctuation">(</span>points<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    gdf_poly <span class="token operator">=</span> gpd<span class="token punctuation">.</span>GeoDataFrame<span class="token punctuation">(</span>geometry<span class="token operator">=</span>simplify_poly_geoms<span class="token punctuation">,</span> crs<span class="token operator">=</span>CRS<span class="token punctuation">(</span><span class="token string">"epsg:4326"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># 保存为 Shapefile</span>
+    gdf_poly<span class="token punctuation">.</span>to_file<span class="token punctuation">(</span>output_file<span class="token punctuation">,</span> driver<span class="token operator">=</span><span class="token string">'GeoJSON'</span><span class="token punctuation">)</span>
+    
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment"># 示例用法</span>
+    points <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    output_file <span class="token operator">=</span> <span class="token string">r'd://temp/create_shp_by_geopandas.geojson'</span>
+    write_points_as_polygons_to_geojson<span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>矢量在Qgis打开如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408270956123.png" alt="image-20240827095645848"></p>
+<p>gpkg矢量创建如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
+<span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry <span class="token keyword">import</span> Polygon
+<span class="token keyword">def</span> <span class="token function">write_points_as_polygons_to_gpkg</span><span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_file<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    将一系列点坐标转换为以这些点为中心的小正方形多边形，并写入Shapefile文件。
+
+    参数:
+    - points: 一个包含点坐标的列表，每个点是一个元组或列表，如[(1, 1), (2, 2), ...]
+    - output_file: 输出的Shapefile文件名
+    - crs_epsg: 坐标参考系统的EPSG代码，默认为4326（WGS 84）
+    - square_size: 正方形的边长，默认为0.1单位
+
+    返回:
+    - 无，但会生成一个Shapefile文件
+    """</span>
+
+    <span class="token comment"># 创建多边形对象</span>
+    simplify_poly_geoms <span class="token operator">=</span> <span class="token punctuation">[</span>Polygon<span class="token punctuation">(</span>points<span class="token punctuation">)</span><span class="token punctuation">]</span>
+    gdf_poly <span class="token operator">=</span> gpd<span class="token punctuation">.</span>GeoDataFrame<span class="token punctuation">(</span>geometry<span class="token operator">=</span>simplify_poly_geoms<span class="token punctuation">,</span> crs<span class="token operator">=</span>CRS<span class="token punctuation">(</span><span class="token string">"epsg:4326"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># 保存为 Shapefile</span>
+    gdf_poly<span class="token punctuation">.</span>to_file<span class="token punctuation">(</span>output_file<span class="token punctuation">,</span> driver<span class="token operator">=</span><span class="token string">'GPKG'</span><span class="token punctuation">)</span>
+    
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>    
+        <span class="token comment"># 示例用法</span>
+    points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    output_file <span class="token operator">=</span> <span class="token string">r'd://temp/create_shp_by_geopandas.gpkg'</span>
+    write_points_as_polygons_to_gpkg<span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_file<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>矢量在Qgis打开如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408270957989.png" alt="image-20240827095703990"></p>
+<p>geopandas很强大也很好用，但是它有个严重的问题，比如说是在程序打包的过程中往往出现打包错误，现不再展开，因为这个问题属于另一个故事了。</p>
+<h1 id="fiona"><a href="#fiona" class="headerlink" title="fiona"></a>fiona</h1><p>上面说到geopandas使用了fiona进行对矢量文件的读写，那么我们完全可以直接使用fiona读写矢量文件。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> fiona
+<span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry <span class="token keyword">import</span> Polygon
+<span class="token keyword">def</span> <span class="token function">create_polygon_shapefile_by_fiona</span><span class="token punctuation">(</span>coords<span class="token punctuation">,</span> output_path<span class="token punctuation">,</span> crs<span class="token operator">=</span><span class="token string">'EPSG:4326'</span><span class="token punctuation">,</span> filetype<span class="token operator">=</span><span class="token string">'ESRI Shapefile'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    创建一个包含单个多边形的 Shapefile 数据集。
+
+    参数:
+    - output_path: 输出 Shapefile 的文件路径。
+    - coords: 一个列表，包含多边形的坐标，格式为 [(x1, y1), (x2, y2), ..., (xn, yn)]。
+    - crs: 字符串，表示坐标参考系统，默认为 WGS84 (EPSG:4326)。
+    """</span>
+    
+    <span class="token comment"># 创建 Polygon 几何对象</span>
+    polygon <span class="token operator">=</span> Polygon<span class="token punctuation">(</span>coords<span class="token punctuation">)</span>
+
+    <span class="token comment"># 设置输出文件的模式、驱动器、模式、CRS 和模式</span>
+    schema <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'geometry'</span><span class="token punctuation">:</span> <span class="token string">'Polygon'</span><span class="token punctuation">}</span>
+
+    <span class="token comment"># 创建新的 Shapefile 数据集</span>
+    <span class="token keyword">with</span> fiona<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>
+        output_path<span class="token punctuation">,</span>
+        mode<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">,</span>
+        driver<span class="token operator">=</span> filetype<span class="token punctuation">,</span>
+        schema<span class="token operator">=</span>schema<span class="token punctuation">,</span>
+        crs<span class="token operator">=</span>crs
+    <span class="token punctuation">)</span> <span class="token keyword">as</span> dst<span class="token punctuation">:</span>
+        <span class="token comment"># 将 Polygon 写入 Shapefile</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+
+                dst<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"geometry"</span><span class="token punctuation">:</span> polygon<span class="token punctuation">.</span>__geo_interface__<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Polygon data has been saved to </span><span class="token interpolation"><span class="token punctuation">{</span>output_path<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment"># 示例用法</span>
+    points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    output_file <span class="token operator">=</span> <span class="token string">r'd://temp/create_shp_by_fiona.shp'</span>
+    create_polygon_shapefile_by_fiona<span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408271458721.png" alt="image-20240827144527271"></p>
+<p>上面的函数中，我们把filetype设置为默认参数，这个函数还可以生成geojson、gpkg格式的矢量文件。</p>
+<p>完整例子如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">create_polygon_shapefile_by_fiona</span><span class="token punctuation">(</span>coords<span class="token punctuation">,</span> output_path<span class="token punctuation">,</span> crs<span class="token operator">=</span><span class="token string">'EPSG:4326'</span><span class="token punctuation">,</span> filetype<span class="token operator">=</span><span class="token string">'ESRI Shapefile'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    创建一个包含单个多边形的 Shapefile 数据集。
+
+    参数:
+    - output_path: 输出 Shapefile 的文件路径。
+    - coords: 一个列表，包含多边形的坐标，格式为 [(x1, y1), (x2, y2), ..., (xn, yn)]。
+    - crs: 字符串，表示坐标参考系统，默认为 WGS84 (EPSG:4326)。
+    """</span>
+    <span class="token keyword">from</span> shapely<span class="token punctuation">.</span>geometry <span class="token keyword">import</span> mapping
+    <span class="token comment"># 创建 Polygon 几何对象</span>
+    polygon <span class="token operator">=</span> Polygon<span class="token punctuation">(</span>coords<span class="token punctuation">)</span>
+
+    <span class="token comment"># 设置输出文件的模式、驱动器、模式、CRS 和模式</span>
+    schema <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token string">'geometry'</span><span class="token punctuation">:</span> <span class="token string">'Polygon'</span><span class="token punctuation">}</span>
+
+    <span class="token comment"># 创建新的 Shapefile 数据集</span>
+    <span class="token keyword">with</span> fiona<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>
+        output_path<span class="token punctuation">,</span>
+        mode<span class="token operator">=</span><span class="token string">'w'</span><span class="token punctuation">,</span>
+        driver<span class="token operator">=</span> filetype<span class="token punctuation">,</span>
+        schema<span class="token operator">=</span>schema<span class="token punctuation">,</span>
+        crs<span class="token operator">=</span>crs
+    <span class="token punctuation">)</span> <span class="token keyword">as</span> dst<span class="token punctuation">:</span>
+        <span class="token comment"># 将 Polygon 写入 Shapefile</span>
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+
+                dst<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">"geometry"</span><span class="token punctuation">:</span> polygon<span class="token punctuation">.</span>__geo_interface__<span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Polygon data has been saved to </span><span class="token interpolation"><span class="token punctuation">{</span>output_path<span class="token punctuation">}</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token comment"># 示例用法</span>
+    points <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    output_file <span class="token operator">=</span> <span class="token string">r'd://temp/create_shp_by_fiona.shp'</span>
+    create_polygon_shapefile_by_fiona<span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_file<span class="token punctuation">)</span>
+
+    output_json_file <span class="token operator">=</span> <span class="token string">r'd://temp/create_shp_by_fiona.geojson'</span>
+    create_polygon_shapefile_by_fiona<span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_json_file<span class="token punctuation">,</span> filetype<span class="token operator">=</span> <span class="token string">"GeoJSON"</span><span class="token punctuation">)</span>
+
+    output_gpkg_file <span class="token operator">=</span> <span class="token string">r'd://temp/create_shp_by_fiona.gpkg'</span>
+    create_polygon_shapefile_by_fiona<span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_gpkg_file<span class="token punctuation">,</span> filetype<span class="token operator">=</span> <span class="token string">"GPKG"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="osgeo"><a href="#osgeo" class="headerlink" title="osgeo"></a>osgeo</h1><p>GDAL（Geospatial Data Abstraction Library，地理空间数据抽象库）是一个在GIS（地理信息系统）领域广泛使用的开源库，它主要用于读取和写入栅格地理空间数据格式。GDAL提供了一种统一的数据模型来处理这些格式的数据，支持多种主流的栅格数据格式，如GeoTIFF、JPEG、PNG等。</p>
+<p>OGR（OpenGIS Simple Features Reference Implementation）是GDAL的一个子项目，专门用于处理矢量地理空间数据格式。OGR支持多种矢量数据格式，包括ESRI Shapefiles、GeoJSON、KML等，使得用户可以在不同的矢量数据格式之间进行转换和处理。</p>
+<p>OSR模块允许用户查询、创建和修改空间参考系统，这对于确保地理空间数据在不同坐标系统之间的一致性和准确性至关重要。例如，在进行地理空间数据的投影转换或重采样时，就需要正确地设置和处理空间参考系统。</p>
+<p>简单来说，GDAL主要针对栅格地理空间数据，OGR针对矢量地理空间数据，而OSR在GDAL/OGR中则负责空间参考系统的处理。这三者共同构成了强大的地理空间数据处理和分析工具集。</p>
+<p> 假设我们创建的矢量文件格式为 shp格式，代码如下：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> ogr<span class="token punctuation">,</span> osr
+
+
+<span class="token keyword">def</span> <span class="token function">create_polygon_shp</span><span class="token punctuation">(</span>longitude_latitude_list<span class="token punctuation">,</span> filename<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    driver <span class="token operator">=</span> ogr<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">"ESRI Shapefile"</span><span class="token punctuation">)</span>
+    data_source <span class="token operator">=</span> driver<span class="token punctuation">.</span>CreateDataSource<span class="token punctuation">(</span>filename<span class="token punctuation">)</span>
+
+    srs <span class="token operator">=</span> osr<span class="token punctuation">.</span>SpatialReference<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    srs<span class="token punctuation">.</span>ImportFromEPSG<span class="token punctuation">(</span><span class="token number">4326</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 创建一个多边形层</span>
+    layer <span class="token operator">=</span> data_source<span class="token punctuation">.</span>CreateLayer<span class="token punctuation">(</span><span class="token string">"Polygon"</span><span class="token punctuation">,</span> srs<span class="token punctuation">,</span> ogr<span class="token punctuation">.</span>wkbPolygon<span class="token punctuation">)</span>
+    field_name <span class="token operator">=</span> ogr<span class="token punctuation">.</span>FieldDefn<span class="token punctuation">(</span><span class="token string">"data"</span><span class="token punctuation">,</span> ogr<span class="token punctuation">.</span>OFTString<span class="token punctuation">)</span>
+    field_name<span class="token punctuation">.</span>SetWidth<span class="token punctuation">(</span><span class="token number">14</span><span class="token punctuation">)</span>
+    layer<span class="token punctuation">.</span>CreateField<span class="token punctuation">(</span>field_name<span class="token punctuation">)</span>
+
+    <span class="token comment"># 确保列表中的点数量至少为3，以形成一个多边形</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>longitude_latitude_list<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
+        <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">"需要至少3个点来形成一个多边形"</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># 创建一个多边形几何对象</span>
+    polygon <span class="token operator">=</span> ogr<span class="token punctuation">.</span>Geometry<span class="token punctuation">(</span>ogr<span class="token punctuation">.</span>wkbPolygon<span class="token punctuation">)</span>
+    <span class="token comment"># 创建一个线性环（外环）</span>
+    ring <span class="token operator">=</span> ogr<span class="token punctuation">.</span>Geometry<span class="token punctuation">(</span>ogr<span class="token punctuation">.</span>wkbLinearRing<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> point <span class="token keyword">in</span> longitude_latitude_list<span class="token punctuation">:</span>
+        <span class="token comment"># 向线性环中添加点</span>
+        ring<span class="token punctuation">.</span>AddPoint<span class="token punctuation">(</span><span class="token builtin">float</span><span class="token punctuation">(</span>point<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span>point<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token comment"># 将线性环添加到多边形中</span>
+    polygon<span class="token punctuation">.</span>AddGeometry<span class="token punctuation">(</span>ring<span class="token punctuation">)</span>
+
+    <span class="token comment"># 创建一个要素，并设置其几何形状和属性</span>
+    feature <span class="token operator">=</span> ogr<span class="token punctuation">.</span>Feature<span class="token punctuation">(</span>layer<span class="token punctuation">.</span>GetLayerDefn<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    feature<span class="token punctuation">.</span>SetGeometry<span class="token punctuation">(</span>polygon<span class="token punctuation">)</span>
+    feature<span class="token punctuation">.</span>SetField<span class="token punctuation">(</span><span class="token string">"data"</span><span class="token punctuation">,</span> <span class="token string">"Example Polygon"</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 将要素添加到层中</span>
+    layer<span class="token punctuation">.</span>CreateFeature<span class="token punctuation">(</span>feature<span class="token punctuation">)</span>
+
+    <span class="token comment"># 清理资源</span>
+    feature <span class="token operator">=</span> <span class="token boolean">None</span>
+    data_source <span class="token operator">=</span> <span class="token boolean">None</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"Shapefile </span><span class="token interpolation"><span class="token punctuation">{</span>filename<span class="token punctuation">}</span></span><span class="token string"> has been created with a polygon feature."</span></span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    output_file <span class="token operator">=</span> <span class="token string">r'd://temp/create_shp_by_ogr.shp'</span>
+    create_point_shp<span class="token punctuation">(</span>points<span class="token punctuation">,</span> output_file<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>矢量在Qgis打开如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408271014396.png" alt="image-20240827100252891"></p>
+<p>如果要生成其他格式的矢量，修改上述代码这一行：</p>
+<pre class="line-numbers language-none"><code class="language-none">driver = ogr.GetDriverByName("ESRI Shapefile")<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>把ESRI Shapefile 改成你想要的格式，其格式不仅限于GPKG、JSON、KML等等</p>
+<p>ogr支持的矢量格式共有82种：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408271014068.png" alt="image-20240827101423689"></p>
+<p>0 ESRIC<br>1 FITS<br>2 PCIDSK<br>3 netCDF<br>4 PDS4<br>5 VICAR<br>6 JP2OpenJPEG<br>7 JPEG2000<br>8 PDF<br>9 MBTiles<br>10 BAG<br>11 EEDA<br>12 OGCAPI<br>13 DB2ODBC<br>14 ESRI Shapefile<br>15 MapInfo File<br>16 UK .NTF<br>17 LVBAG<br>18 OGR_SDTS<br>19 S57<br>20 DGN<br>21 OGR_VRT<br>22 REC<br>23 Memory<br>24 CSV<br>25 GML<br>26 GPX<br>27 LIBKML<br>28 KML<br>29 GeoJSON<br>30 GeoJSONSeq<br>31 ESRIJSON<br>32 TopoJSON<br>33 OGR_GMT<br>34 GPKG<br>35 SQLite<br>36 ODBC<br>37 WAsP<br>38 PGeo<br>39 MSSQLSpatial<br>40 PostgreSQL<br>41 OpenFileGDB<br>42 DXF<br>43 CAD<br>44 FlatGeobuf<br>45 Geoconcept<br>46 GeoRSS<br>47 GPSTrackMaker<br>48 VFK<br>49 PGDUMP<br>50 OSM<br>51 GPSBabel<br>52 OGR_PDS<br>53 WFS<br>54 OAPIF<br>55 Geomedia<br>56 EDIGEO<br>57 SVG<br>58 CouchDB<br>59 Cloudant<br>60 Idrisi<br>61 ARCGEN<br>62 XLS<br>63 ODS<br>64 XLSX<br>65 Elasticsearch<br>66 Walk<br>67 Carto<br>68 AmigoCloud<br>69 SXF<br>70 Selafin<br>71 JML<br>72 PLSCENES<br>73 CSW<br>74 VDV<br>75 MVT<br>76 NGW<br>77 MapML<br>78 TIGER<br>79 AVCBin<br>80 AVCE00<br>81 HTTP</p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>以上例子都是生成wgs-84坐标系的矢量，如果要生成其他坐标系的矢量需要更改EPSG的数值。</p>
+<p>同时，以上例子都是单个面矢量的创建，至于是多个面矢量、多个孔洞面矢量该如何去创建，这里不再细说。</p>
+<p>可以参考这篇文件。</p>
+
+            </div>
+
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E9%81%A5%E6%84%9F/">#遥感</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/python/">#python</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/gis/">#gis</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+                <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                               rel="prev"
+                               href="/2024/08/27/yolov3-zhu-gan-wang-luo-de-gai-shu/"
+                            >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                                <span class="title flex-center">
+                                <span class="post-nav-title-item">用于目标检测的YOLO v3 （一）</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                            </a>
+                        </div>
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                               rel="next"
+                               href="/2024/08/26/pygmtsar-de-an-zhuang-he-shi-yong/"
+                            >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">pygmtsar的安装和使用</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                                <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+            
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            
+<footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+                <span>2020</span> -
+            
+            2024
+            
+                &nbsp;<i class="fas fa-heart icon-animate"></i>
+                &nbsp;<a href="/">ytkz</a>
+            
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.6.1</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+
+
+
+
+
+
+
+<div class="post-scripts">
+    
+        
+<script src="/js/post-helper.js"></script>
+
+        
+        
+    
+</div>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
+</html>
