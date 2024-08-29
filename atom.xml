@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-08-27T10:02:20.011Z</updated>
+  <updated>2024-08-28T01:24:30.574Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>无人机照片空间分布及排序</title>
+    <link href="http://ytkz11@.github.io/2024/08/28/wu-ren-ji-zhao-pian-kong-jian-fen-bu-ji-pai-xu/"/>
+    <id>http://ytkz11@.github.io/2024/08/28/wu-ren-ji-zhao-pian-kong-jian-fen-bu-ji-pai-xu/</id>
+    <published>2024-08-28T14:00:10.000Z</published>
+    <updated>2024-08-28T01:24:30.574Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;从直觉上来说，照片拼接必然是在两张有重叠的照片拼接开始，慢慢递进循环到所有照片。&lt;/p&gt;
+&lt;p&gt;在原先的预想中，需要对照片进行排序。但是现在再细想一下，大疆无人机在拍摄照片时就做好了照片的排序。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="无人机" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/python/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="无人机" scheme="http://ytkz11@.github.io/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>用于目标检测的YOLO v3 （一）</title>
@@ -327,11 +363,11 @@
   </entry>
   
   <entry>
-    <title>基于Python实现RLE格式分割标注文件的格式转换-未完成</title>
+    <title>基于Python实现RLE格式分割标注文件的格式转换-深度学习数据处理</title>
     <link href="http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/"/>
     <id>http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/</id>
     <published>2024-08-16T12:30:10.000Z</published>
-    <updated>2024-08-16T08:49:53.762Z</updated>
+    <updated>2024-08-29T09:46:45.281Z</updated>
     
     
       
@@ -530,32 +566,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pyinstaller打包中的大坑geopandas</title>
-    <link href="http://ytkz11@.github.io/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/"/>
-    <id>http://ytkz11@.github.io/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/</id>
-    <published>2024-08-08T14:00:10.000Z</published>
-    <updated>2024-08-08T02:40:37.331Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;一开始使用以下语句打包：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;pyinstaller -F simplify.py&lt;span aria-hidden=&quot;true&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   

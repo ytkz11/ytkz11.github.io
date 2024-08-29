@@ -9,7 +9,7 @@
     
     <title>
         
-            基于Python实现RLE格式分割标注文件的格式转换-未完成 |
+            基于Python实现RLE格式分割标注文件的格式转换-深度学习数据处理 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">基于Python实现RLE格式分割标注文件的格式转换-未完成</span>
+                <span class="title-hover-animation">基于Python实现RLE格式分割标注文件的格式转换-深度学习数据处理</span>
             </div>
 
             
@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-08-16 16:49:53</span>
+        <span class="pc">2024-08-29 17:46:45</span>
     </span>
     
     
@@ -260,39 +260,39 @@ plt<span class="token punctuation">.</span>axis<span class="token punctuation">(
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161649368.png" alt="image-20240816164910646"></p>
 <h1 id="airbus-ship实战"><a href="#airbus-ship实战" class="headerlink" title="airbus-ship实战"></a>airbus-ship实战</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">rle2bbox</span><span class="token punctuation">(</span>rle<span class="token punctuation">,</span> shape<span class="token punctuation">)</span><span class="token punctuation">:</span>
-   
-   a <span class="token operator">=</span> np<span class="token punctuation">.</span>fromiter<span class="token punctuation">(</span>rle<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>np<span class="token punctuation">.</span>uint<span class="token punctuation">)</span>
-   a <span class="token operator">=</span> a<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># an array of (start, length) pairs</span>
-   a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span>  <span class="token comment"># 因为 RLE 编码中的起始位置通常是以 1 为索引的，所以这里减去 1 以适应从 0 开始的索引系统。</span>
-   
-   y0 <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">%</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-   y1 <span class="token operator">=</span> y0 <span class="token operator">+</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span>
-   <span class="token keyword">if</span> np<span class="token punctuation">.</span><span class="token builtin">any</span><span class="token punctuation">(</span>y1 <span class="token operator">&gt;</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-       <span class="token comment"># got `y` overrun, meaning that there are a pixels in mask on 0 and shape[0] position</span>
-       y0 <span class="token operator">=</span> <span class="token number">0</span>
-       y1 <span class="token operator">=</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-   <span class="token keyword">else</span><span class="token punctuation">:</span>
-       y0 <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>y0<span class="token punctuation">)</span>
-       y1 <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>y1<span class="token punctuation">)</span>
-   
-   x0 <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">//</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-   x1 <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">//</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-   x0 <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>x0<span class="token punctuation">)</span>
-   x1 <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>x1<span class="token punctuation">)</span>
-   
-   <span class="token keyword">if</span> x1 <span class="token operator">&gt;</span> shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-       <span class="token comment"># just went out of the image dimensions</span>
-       <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">"invalid RLE or image dimensions: x1=%d &gt; shape[1]=%d"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>
-           x1<span class="token punctuation">,</span> shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
-       <span class="token punctuation">)</span><span class="token punctuation">)</span>
-    
-   xC <span class="token operator">=</span> <span class="token punctuation">(</span>x1<span class="token operator">+</span>x0<span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span><span class="token number">768</span><span class="token punctuation">)</span>
-   yC <span class="token operator">=</span> <span class="token punctuation">(</span>y1<span class="token operator">+</span>y0<span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span><span class="token number">768</span><span class="token punctuation">)</span>
-   h <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">abs</span><span class="token punctuation">(</span>y1<span class="token operator">-</span>y0<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">768</span>
-   w <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">abs</span><span class="token punctuation">(</span>x1<span class="token operator">-</span>x0<span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">768</span>
+    <span class="token comment"># 假设RLE字符串中的元素由空格分隔</span>
+    a <span class="token operator">=</span> np<span class="token punctuation">.</span>fromiter<span class="token punctuation">(</span>rle<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>np<span class="token punctuation">.</span>uint32<span class="token punctuation">)</span>  <span class="token comment"># 根据实际情况选择合适的整数类型</span>
+    a <span class="token operator">=</span> a<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 转换为(start, length)对</span>
+    a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span>  <span class="token comment"># 将1-indexed转换为0-indexed</span>
 
-   <span class="token keyword">return</span> <span class="token punctuation">[</span>xC<span class="token punctuation">,</span> yC<span class="token punctuation">,</span> h<span class="token punctuation">,</span> w<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token comment"># 计算y坐标</span>
+    y0 <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">%</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    y1 <span class="token operator">=</span> np<span class="token punctuation">.</span>minimum<span class="token punctuation">(</span>y0 <span class="token operator">+</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># 防止y1超出图像高度</span>
+    y0 <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>y0<span class="token punctuation">)</span>
+    y1 <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>y1<span class="token punctuation">)</span>
+
+    <span class="token comment"># 计算x坐标</span>
+    x0 <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">//</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    x1 <span class="token operator">=</span> np<span class="token punctuation">.</span>minimum<span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">//</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># 防止x1超出图像宽度</span>
+    x0 <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">min</span><span class="token punctuation">(</span>x0<span class="token punctuation">)</span>
+    x1 <span class="token operator">=</span> np<span class="token punctuation">.</span><span class="token builtin">max</span><span class="token punctuation">(</span>x1<span class="token punctuation">)</span>
+
+    <span class="token comment"># 计算边界框的中心和尺寸（不归一化）</span>
+    xC <span class="token operator">=</span> <span class="token punctuation">(</span>x0 <span class="token operator">+</span> x1<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+    yC <span class="token operator">=</span> <span class="token punctuation">(</span>y0 <span class="token operator">+</span> y1<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span>
+    h <span class="token operator">=</span> y1 <span class="token operator">-</span> y0 <span class="token operator">+</span> <span class="token number">1</span>
+    w <span class="token operator">=</span> x1 <span class="token operator">-</span> x0 <span class="token operator">+</span> <span class="token number">1</span>
+
+    <span class="token comment"># 如果需要归一化，可以使用以下方式：</span>
+    xC <span class="token operator">/=</span> shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    yC <span class="token operator">/=</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    h <span class="token operator">/=</span> shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    w <span class="token operator">/=</span> shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>xC<span class="token punctuation">,</span> yC<span class="token punctuation">,</span> h<span class="token punctuation">,</span> w<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161649431.png" alt="image-20240816163917411"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408291746996.png" alt="image-20240829153839750"></p>
+<p>参考地址：<a class="link" target="_blank" rel="noopener" href="https://github.com/debasis-dotcom/Ship-Detection-from-Satellite-Images-using-YOLOV4/blob/master/Python%20Notebook/EDA%20%26%20Data%20preparation.ipynb">https://github.com/debasis-dotcom/Ship-Detection-from-Satellite-Images-using-YOLOV4/blob/master/Python%20Notebook/EDA%20%26%20Data%20preparation.ipynb<i class="fas fa-external-link-alt"></i></a></p>
 
             </div>
 
