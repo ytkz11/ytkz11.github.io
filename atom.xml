@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-08-28T01:24:30.574Z</updated>
+  <updated>2024-09-03T01:35:32.159Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,96 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用于目标检测的YOLO v3 （二） 未完成</title>
+    <link href="http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/"/>
+    <id>http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/</id>
+    <published>2024-09-03T14:00:10.000Z</published>
+    <updated>2024-09-03T01:35:32.159Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;em&gt;YOLO v3&lt;/em&gt;是一种流行的用于实时物体检测的卷积神经网络(CNN) ，由Redmon等人于 2018</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>py_rust_cpp_速度比较</title>
+    <link href="http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao/"/>
+    <id>http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao/</id>
+    <published>2024-09-02T14:00:10.000Z</published>
+    <updated>2024-09-02T01:51:05.217Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;TIobe指数依据向主要搜索引擎提交编程语言名称时返回的网页数量来衡量编程语言的流行程度。该指数每月更新一次，并提供了自2002年以来的历史数据。&lt;/p&gt;
+&lt;p&gt;其官网是&lt;a class=&quot;link&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    <category term="rust" scheme="http://ytkz11@.github.io/categories/python/rust/"/>
+    
+    <category term="cpp" scheme="http://ytkz11@.github.io/categories/python/rust/cpp/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="rust" scheme="http://ytkz11@.github.io/tags/rust/"/>
+    
+    <category term="cpp" scheme="http://ytkz11@.github.io/tags/cpp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows电脑定时关机</title>
+    <link href="http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/"/>
+    <id>http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/</id>
+    <published>2024-08-31T17:54:10.000Z</published>
+    <updated>2024-09-02T00:46:22.039Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天聊一聊其他的。我时不时的有一个需求，是关于在windows电脑上定时关机。&lt;/p&gt;
+&lt;p&gt;不知道怎么地，我好几次都忘了这个自动定时关机的终端命令，于是每一次都要去网上查。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="http://ytkz11@.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E5%B7%A5%E5%85%B7/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="工具" scheme="http://ytkz11@.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>无人机照片空间分布及排序</title>
@@ -54,10 +144,10 @@
   
   <entry>
     <title>用于目标检测的YOLO v3 （一）</title>
-    <link href="http://ytkz11@.github.io/2024/08/27/yolov3-zhu-gan-wang-luo-de-gai-shu/"/>
-    <id>http://ytkz11@.github.io/2024/08/27/yolov3-zhu-gan-wang-luo-de-gai-shu/</id>
+    <link href="http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/"/>
+    <id>http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/</id>
     <published>2024-08-27T14:00:10.000Z</published>
-    <updated>2024-08-27T10:02:20.011Z</updated>
+    <updated>2024-09-02T09:35:06.416Z</updated>
     
     
       
@@ -479,84 +569,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装SAM2的步骤</title>
-    <link href="http://ytkz11@.github.io/2024/08/12/an-zhuang-sam2-de-bu-zou/"/>
-    <id>http://ytkz11@.github.io/2024/08/12/an-zhuang-sam2-de-bu-zou/</id>
-    <published>2024-08-12T14:30:10.000Z</published>
-    <updated>2024-08-13T03:15:43.754Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最新的&lt;code&gt;SAM2分割大模型（Segment Anything Model</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建立遥感影像金字塔</title>
-    <link href="http://ytkz11@.github.io/2024/08/08/jian-li-yao-gan-ying-xiang-jin-zi-ta-de-fang-fa/"/>
-    <id>http://ytkz11@.github.io/2024/08/08/jian-li-yao-gan-ying-xiang-jin-zi-ta-de-fang-fa/</id>
-    <published>2024-08-08T14:30:10.000Z</published>
-    <updated>2024-08-09T02:42:48.080Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;对于大的遥感影像文件，在QGIS或ArcGIS中，都可以通过建金字塔的方式，提供其加载速度。通常情况，将遥感影像加载到ArcGIS中，软件会提示是否构建金字塔，同意构建金字塔后，影像的对应文件夹下会生成一个ovr类型的影像金字塔文件，提高影像加载速度。&lt;/p&gt;
-&lt;p&gt;什么是</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>矩阵太大了内存不够导致numpy报错</title>
-    <link href="http://ytkz11@.github.io/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/"/>
-    <id>http://ytkz11@.github.io/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/</id>
-    <published>2024-08-08T14:30:10.000Z</published>
-    <updated>2024-08-09T13:23:08.045Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;之前写过分块进行16位转8位的程序。今天使用一景大影像进行处理，发现程序报错了。&lt;/p&gt;
-&lt;p&gt;原因是，影像太大了,numpy一下子不能读取到矩阵的百分之二最小值和百分之98最大值。报错的代码如下：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers</summary>
         
       
     

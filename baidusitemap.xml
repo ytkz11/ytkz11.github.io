@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/</loc>
+    <lastmod>2024-09-03</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/03/15/shen-du-xue-xi-shi-yong-shen-jing-wang-luo-ni-he-zhen-shi-shi-jie/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/05/12/dai-ma-wu-ren-ji-hang-pai-tu-xiang-ji-he-xiao-zheng/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/06/24/python-pip-geng-huan-jing-xiang-yuan-de-bu-zou/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/</loc>
+    <lastmod>2024-09-02</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/</loc>
     <lastmod>2024-08-29</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/08/28/wu-ren-ji-zhao-pian-kong-jian-fen-bu-ji-pai-xu/</loc>
     <lastmod>2024-08-28</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/08/27/yolov3-zhu-gan-wang-luo-de-gai-shu/</loc>
-    <lastmod>2024-08-27</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/08/27/tong-guo-python-chuang-jian-shi-liang-wen-jian/</loc>
@@ -87,10 +115,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/</loc>
     <lastmod>2024-08-08</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/</loc>
-    <lastmod>2024-08-07</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/08/06/tu-xiang-te-zheng-dian-pi-pei/</loc>
