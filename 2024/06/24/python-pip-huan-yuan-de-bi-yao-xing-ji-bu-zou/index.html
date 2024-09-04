@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-06-26 17:04:40</span>
+        <span class="pc">2024-09-04 11:04:10</span>
     </span>
     
     
@@ -242,6 +242,37 @@ trusted-host = https://pypi.tuna.tsinghua.edu.cn<span aria-hidden="true" class="
 <p>在使用pip安装第三方库的时候，自动从清华大学镜像源检索、下载。速度从此起飞！</p>
 <p>今天先到这里了。</p>
 <p>（完）</p>
+<p>20240904更新</p>
+<h4 id="conda换源（清华源）"><a href="#conda换源（清华源）" class="headerlink" title="conda换源（清华源）"></a>conda换源（清华源）</h4><h5 id="Windows系统："><a href="#Windows系统：" class="headerlink" title="Windows系统："></a>Windows系统：</h5><p>TUNA 提供了 Anaconda 仓库与第三方源的镜像，各系统都可以通过修改用户目录下的 <code>.condarc</code> 文件。Windows 用户无法直接创建名为 <code>.condarc</code> 的文件，可先执行<code>conda config --set show_channel_urls yes</code>生成该文件之后再修改。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409041055772.png" alt="image-20240904105505623"></p>
+<p>完成这一步后，我们需要修改<code>C:\Users\User_name\.condarc</code>这个文件，</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409041059117.png" alt="image-20240904105901014"></p>
+<p>打开后将文件里原始内容删除，将下面的内容复制进去并保存。</p>
+<pre class="line-numbers language-none"><code class="language-none">channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409041059946.png" alt="image-20240904105931346"></p>
+<p>这一步完成后，我们需要打开<code>Anaconda Prompt</code> 运行 <code>conda clean -i</code> 清除索引缓存，保证用的是镜像站提供的索引。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409041100383.png" alt="image-20240904110055347"></p>
+<p>在win10下的conda换源大功告成。</p>
+<h5 id="Linux系统："><a href="#Linux系统：" class="headerlink" title="Linux系统："></a>Linux系统：</h5><p>在Linux系统下，我们还是需要修改<code>.condarc</code>来进行换源</p>
+<pre class="line-numbers language-none"><code class="language-none">cd ~
+vim .condarc<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>在<code>vim</code>下，我们需要输入<code>i</code>进入编辑模式，将上方内容粘贴进去，按<code>ESC</code>退出编辑模式，输入<code>:wq</code>保存并退出</p>
+<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20240904110314549.png" alt="image-20240904110314549"></p>
+<p>我们可以通过<code>conda config --show default_channels</code>检查下是否换源成功，如果出现下图内容，即代表我们换源成功。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409041104946.png" alt="image-20240904110354081"></p>
 
             </div>
 

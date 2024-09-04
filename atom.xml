@@ -76,6 +76,40 @@
   </entry>
   
   <entry>
+    <title>py_rust_cpp_速度比较</title>
+    <link href="http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao-copy/"/>
+    <id>http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao-copy/</id>
+    <published>2024-09-02T14:00:10.000Z</published>
+    <updated>2024-09-02T01:51:05.217Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;TIobe指数依据向主要搜索引擎提交编程语言名称时返回的网页数量来衡量编程语言的流行程度。该指数每月更新一次，并提供了自2002年以来的历史数据。&lt;/p&gt;
+&lt;p&gt;其官网是&lt;a class=&quot;link&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    <category term="rust" scheme="http://ytkz11@.github.io/categories/python/rust/"/>
+    
+    <category term="cpp" scheme="http://ytkz11@.github.io/categories/python/rust/cpp/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="rust" scheme="http://ytkz11@.github.io/tags/rust/"/>
+    
+    <category term="cpp" scheme="http://ytkz11@.github.io/tags/cpp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>windows电脑定时关机</title>
     <link href="http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/"/>
     <id>http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/</id>
@@ -111,7 +145,7 @@
     <link href="http://ytkz11@.github.io/2024/08/28/wu-ren-ji-zhao-pian-kong-jian-fen-bu-ji-pai-xu/"/>
     <id>http://ytkz11@.github.io/2024/08/28/wu-ren-ji-zhao-pian-kong-jian-fen-bu-ji-pai-xu/</id>
     <published>2024-08-28T14:00:10.000Z</published>
-    <updated>2024-08-28T01:24:30.574Z</updated>
+    <updated>2024-09-04T01:29:25.423Z</updated>
     
     
       
@@ -147,7 +181,7 @@
     <link href="http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/"/>
     <id>http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/</id>
     <published>2024-08-27T14:00:10.000Z</published>
-    <updated>2024-09-02T09:35:06.416Z</updated>
+    <updated>2024-09-04T09:46:52.578Z</updated>
     
     
       
@@ -230,7 +264,7 @@
     <link href="http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/"/>
     <id>http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/</id>
     <published>2024-08-20T14:00:10.000Z</published>
-    <updated>2024-08-21T09:26:56.688Z</updated>
+    <updated>2024-09-04T01:23:31.901Z</updated>
     
     
       
@@ -297,7 +331,7 @@
     <link href="http://ytkz11@.github.io/2024/08/19/linux-xia-an-zhuang-miniconda/"/>
     <id>http://ytkz11@.github.io/2024/08/19/linux-xia-an-zhuang-miniconda/</id>
     <published>2024-08-19T14:00:10.000Z</published>
-    <updated>2024-08-20T09:59:46.197Z</updated>
+    <updated>2024-09-04T01:23:49.827Z</updated>
     
     
       
@@ -483,7 +517,7 @@
     <link href="http://ytkz11@.github.io/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/"/>
     <id>http://ytkz11@.github.io/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/</id>
     <published>2024-08-14T14:30:10.000Z</published>
-    <updated>2024-08-14T05:29:49.421Z</updated>
+    <updated>2024-09-04T01:29:08.436Z</updated>
     
     
       
@@ -491,7 +525,7 @@
         
         
     <summary type="html">&lt;p&gt;今天读到一篇2017年的综述文章，虽然至今有7年之久，但这篇文章的一些内容值得参考、思考。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409040928674.png&quot;</summary>
         
       
     
@@ -544,31 +578,6 @@
         
         
     <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot; href=&quot;https://ai.meta.com/blog/segment-anything-2/&quot;&gt;SAM2（Segment Anything 2）&lt;i class=&quot;fas</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Python 库 Manim 创建动态地理空间可视化</title>
-    <link href="http://ytkz11@.github.io/2024/08/12/shi-yong-python-ku-manim-chuang-jian-dong-tai-di-li-kong-jian-ke-shi-hua/"/>
-    <id>http://ytkz11@.github.io/2024/08/12/shi-yong-python-ku-manim-chuang-jian-dong-tai-di-li-kong-jian-ke-shi-hua/</id>
-    <published>2024-08-12T14:30:10.000Z</published>
-    <updated>2024-08-12T07:48:13.791Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a class=&quot;link&quot;</summary>
         
       
     

@@ -139,6 +139,45 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2021/03/10/gdal-api-bi-ji/">
+                        gdal api笔记
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        ​        如果你的gdal版本是3.2.2及以上，那么只能：
+from osgeo import gdal 
+
+
+ds = gdal.Open(data)
+rows = ds.RasterYSize
+cols = ds.RasterXSize...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Sun Apr 07 2024 13:13:38 GMT+0800">
+                2024-04-07
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2021/03/10/gdal-api-bi-ji/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/">
                         用于目标检测的YOLO v3 （二） 未完成
                     </a>
@@ -207,6 +246,41 @@
                 
 
                 <h3 class="home-article-title">
+                    <a href="/2024/09/02/py-rust-cpp-su-du-bi-jiao-copy/">
+                        py_rust_cpp_速度比较
+                    </a>
+                </h3>
+
+                <div class="home-article-content keep-markdown-body">
+                    
+                        TIobe指数依据向主要搜索引擎提交编程语言名称时返回的网页数量来衡量编程语言的流行程度。该指数每月更新一次，并提供了自2002年以来的历史数据。
+其官网是https://www.tiobe.com/tiobe-index/
+有意思的事情来了，看下图...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span>
+            <i class="fas fa-history"></i>&nbsp;
+            <span class="home-article-date" data-updated="Mon Sep 02 2024 09:51:05 GMT+0800">
+                2024-09-02
+            </span>
+        </span>
+        
+        
+    </div>
+
+    <a class="read-more" href="/2024/09/02/py-rust-cpp-su-du-bi-jiao-copy/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
                     <a href="/2024/09/01/windows-dian-nao-ding-shi-guan-ji/">
                         windows电脑定时关机
                     </a>
@@ -263,8 +337,8 @@
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Aug 28 2024 09:24:30 GMT+0800">
-                2024-08-28
+            <span class="home-article-date" data-updated="Wed Sep 04 2024 09:29:25 GMT+0800">
+                2024-09-04
             </span>
         </span>
         
@@ -296,8 +370,8 @@
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Mon Sep 02 2024 17:35:06 GMT+0800">
-                2024-09-02
+            <span class="home-article-date" data-updated="Wed Sep 04 2024 17:46:52 GMT+0800">
+                2024-09-04
             </span>
         </span>
         
@@ -403,8 +477,8 @@ geop...
     <div class="home-article-meta-info">
         <span>
             <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Wed Aug 21 2024 17:26:56 GMT+0800">
-                2024-08-21
+            <span class="home-article-date" data-updated="Wed Sep 04 2024 09:23:31 GMT+0800">
+                2024-09-04
             </span>
         </span>
         
@@ -412,77 +486,6 @@ geop...
     </div>
 
     <a class="read-more" href="/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/08/20/dui-gmtsar-de-d-insar-de-dao-shu-ju-jin-xing-fen-xi/">
-                        对GMTSAR的D-InSAR得到数据进行简单的分析
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        对GMTSAR的D-InSAR得到的结果数据有很多，其中栅格数据类型为grd。
-grd数据其实本质上是一种HDF数据（NC数据），在envi或者arcgis是无法打开直接这种的数据。
-怎么在python读取grd使用gdal可以轻松读取grd，请看下...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Fri Aug 23 2024 18:09:04 GMT+0800">
-                2024-08-23
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/08/20/dui-gmtsar-de-d-insar-de-dao-shu-ju-jin-xing-fen-xi/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2024/08/19/linux-xia-an-zhuang-miniconda/">
-                        Linux 下安装miniconda
-                    </a>
-                </h3>
-
-                <div class="home-article-content keep-markdown-body">
-                    
-                        Miniconda 和 Conda 都是用于管理 Python（及其他语言）环境和包的工具。
-conda对于我来说是太臃肿了，很多的包我不会使用，所以选择安装miniconda是一个较好的选择。
-下面是linux安装miniconda的实际操作。
-在...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span>
-            <i class="fas fa-history"></i>&nbsp;
-            <span class="home-article-date" data-updated="Tue Aug 20 2024 17:59:46 GMT+0800">
-                2024-08-20
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a class="read-more" href="/2024/08/19/linux-xia-an-zhuang-miniconda/">阅读全文&nbsp;<i class="fas fa-angle-right"></i></a>
 </div>
 
             </li>

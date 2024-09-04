@@ -9,7 +9,7 @@
     
     <title>
         
-            【python】从卫星图像中提取数字表面模型DSM——未完成 |
+            py_rust_cpp_速度比较 |
         
         remote sensing
     </title>
@@ -138,7 +138,7 @@
         <div class="article-content-container">
 
             <div class="article-title">
-                <span class="title-hover-animation">【python】从卫星图像中提取数字表面模型DSM——未完成</span>
+                <span class="title-hover-animation">py_rust_cpp_速度比较</span>
             </div>
 
             
@@ -160,13 +160,13 @@
         
             <i class="fa-regular fa-calendar-plus"></i>&nbsp;
         
-        <span class="pc">2024-04-18 22:30:10</span>
-        <span class="mobile">2024-04-18 22:30</span>
+        <span class="pc">2024-09-02 22:00:10</span>
+        <span class="mobile">2024-09-02 22:00</span>
     </span>
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2024-09-04 09:25:47</span>
+        <span class="pc">2024-09-02 09:51:05</span>
     </span>
     
     
@@ -176,6 +176,14 @@
                 
                     <li>
                         <a href="/categories/python/">python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/python/rust/">rust</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        &gt; <a href="/categories/python/rust/cpp/">cpp</a>&nbsp;
                     </li>
                 
             </ul>
@@ -188,6 +196,14 @@
                 
                     <li>
                         <a href="/tags/python/">python</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/rust/">rust</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/cpp/">cpp</a>&nbsp;
                     </li>
                 
             </ul>
@@ -208,16 +224,76 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <h1 id="安装cars库"><a href="#安装cars库" class="headerlink" title="安装cars库"></a>安装cars库</h1><p>安装cars库，如果你是windows用户，需要安装微软的c++开发工具。地址如下：</p>
-<p><a class="link" target="_blank" rel="noopener" href="https://visualstudio.microsoft.com/visual-cpp-build-tools/">https://visualstudio.microsoft.com/visual-cpp-build-tools/<i class="fas fa-external-link-alt"></i></a></p>
-<p>安装过程如下图所示。</p>
-<p><img src="https://user-images.githubusercontent.com/29135514/151630503-d238175e-ea50-4a3b-963d-8c31c465da28.png" alt="img"></p>
-<p>安装已成功。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404171555824.png" alt="image-20240417155232811"></p>
-<p>在命令行输入：</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">pip <span class="token function">install</span> cars<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>cars库已安装成功。如下图所示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409040925779.png" alt="image-20240417155850606"></p>
+                <p>TIobe指数依据向主要搜索引擎提交编程语言名称时返回的网页数量来衡量编程语言的流行程度。该指数每月更新一次，并提供了自2002年以来的历史数据。</p>
+<p>其官网是<a class="link" target="_blank" rel="noopener" href="https://www.tiobe.com/tiobe-index/">https://www.tiobe.com/tiobe-index/<i class="fas fa-external-link-alt"></i></a></p>
+<p>有意思的事情来了，看下图。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409020915363.png" alt="image-20240902091558246"></p>
+<p>这是编程语言排名的tiobe网站首页的截图。</p>
+<p>原话是：</p>
+<pre class="line-numbers language-none"><code class="language-none">This month, Python has a ranking of more than 18% for the first time in its history. The last time a language hit more than 18% was Java in November 2016. Java is also the language with the highest ranking ever: 26.49% in June 2001. Runner up C++ is now exactly 8% behind Python, and that difference between position #1 and position #2 is also almost a record. The highest difference ever between position #1 and position #2 was in November 2016 when Java was 9.55% ahead of C. In summary, Python's hegemony is now undeniable. It is likely that it is Python's next step to become the most popular programming language ever. Is there any new language expected to come close to Python soon? Possible contenders Rust and Kotlin are approaching the TIOBE index top 10 fast, but it will take a lot of time before they become a real threat to Python. <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>我简单机翻一下，快速看看这讲了个啥。</p>
+<pre class="line-numbers language-none"><code class="language-none">2024年8月，Python的排名历史上首次超过了18%。上次有语言超过18%还是在2016年11月的Java。Java也是史上排名最高的语言：在2001年6月达到了26.49%。位列第二的C++目前落后Python正好8%，而这一第一名与第二名之间的差距也几乎是历史纪录。历史上第一名与第二名的最大差距是在2016年11月，当时Java领先C语言9.55%。总而言之，Python的主导地位现在无可否认。Python下一步很可能成为有史以来最受欢迎的编程语言。近期是否有新的语言可能接近Python的地位？潜在的竞争者Rust和Kotlin正在快速接近TIOBE指数前十，但要成为对Python的真实威胁还需要很长时间。<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409020922966.png" alt="image-20240902092211740"></p>
+<p>Python之所以流行，主要有以下五点原因：</p>
+<ol>
+<li><strong>易学性</strong>：Python语法简单清晰，适合编程初学者快速入门。</li>
+<li><strong>强大的生态系统</strong>：拥有丰富的库和框架，覆盖多个应用领域。</li>
+<li><strong>跨平台性</strong>：可在多种操作系统上运行，提高了灵活性。</li>
+<li><strong>广泛应用</strong>：适用于Web开发、数据分析、AI等多个领域。</li>
+<li><strong>活跃社区</strong>：有大量教程和支持资源，便于解决问题。</li>
+</ol>
+<p>但是python的缺点也非常突出，即运行速度相对较慢，尤其是涉及到CPU密集型任务时！</p>
+<p>因此，在本文中，我尝试用python、cpp、rust编写相同的代码并运行它，以便一次性看到这三种语言的速度。</p>
+<h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> time
+a <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+counter <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>counter <span class="token operator">&lt;</span> <span class="token number">1000000000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+  counter<span class="token operator">+=</span><span class="token number">1</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>counter<span class="token punctuation">)</span>
+
+b <span class="token operator">=</span> time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"use time:%d"</span><span class="token operator">%</span><span class="token punctuation">(</span>b<span class="token operator">-</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这是一个简单的“while 循环”，现在让我们看看达到 10 亿并将其打印出来所需的时间。</p>
+<p>这是终端的实际屏幕截图，显示了打印<em>1000,000,000 所需的全部时间。</em></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409020932809.png" alt="image-20240902093106729"></p>
+<p>对于Python来说，<strong>花费了83秒</strong>,将10亿并打印到终端。</p>
+<h1 id="cpp"><a href="#cpp" class="headerlink" title="cpp"></a>cpp</h1><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+#include &lt;chrono&gt;
+
+int main() {
+    size_t counter = 0;
+    auto start = std::chrono::high_resolution_clock::now();
+    while (counter &lt; 1000000000) {
+        counter++;
+    }
+    auto end = std::chrono::high_resolution_clock::now();
+    auto duration = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(end - start);
+    std::cout &lt;&lt; "Counter: " &lt;&lt; counter &lt;&lt; ", Time taken: " &lt;&lt; duration.count() &lt;&lt; " milliseconds" &lt;&lt; std::endl;
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>将以上cpp代码用g++编译为exe，并运行，结果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409020941542.png" alt="image-20240902094119251"></p>
+<p>对于cpp来说，<strong>花费了1461毫秒</strong>,将10亿并打印到终端。</p>
+<h1 id="rust"><a href="#rust" class="headerlink" title="rust"></a>rust</h1><pre class="line-numbers language-rust" data-language="rust"><code class="language-rust"><span class="token keyword">use</span> <span class="token namespace">std<span class="token punctuation">::</span>time<span class="token punctuation">::</span></span><span class="token class-name">Instant</span><span class="token punctuation">;</span>
+
+<span class="token keyword">fn</span> <span class="token function-definition function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> <span class="token keyword">mut</span> counter <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> start <span class="token operator">=</span> <span class="token class-name">Instant</span><span class="token punctuation">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">while</span> counter <span class="token operator">&lt;</span> <span class="token number">1_000_000_000</span> <span class="token punctuation">{</span>
+        counter <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword">let</span> end <span class="token operator">=</span> <span class="token class-name">Instant</span><span class="token punctuation">::</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> duration <span class="token operator">=</span> end<span class="token punctuation">.</span><span class="token function">duration_since</span><span class="token punctuation">(</span>start<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> duration_ns <span class="token operator">=</span> duration<span class="token punctuation">.</span><span class="token function">as_nanos</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"Counter: {}, Time taken: {} nanoseconds"</span><span class="token punctuation">,</span> counter<span class="token punctuation">,</span> duration_ns<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>将以上rust代码用cargo编译为exe，并运行，结果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409020949019.png" alt="image-20240902094926799"></p>
+<p>对于rust来说，<strong>花费了100纳秒</strong>,将10亿并打印到终端。</p>
 
             </div>
 
@@ -230,6 +306,14 @@
                             <a href="/tags/python/">#python</a>&nbsp;
                         </li>
                     
+                        <li class="tag-item">
+                            <a href="/tags/rust/">#rust</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/cpp/">#cpp</a>&nbsp;
+                        </li>
+                    
                 </ul>
             
 
@@ -239,13 +323,13 @@
                         <div class="article-prev">
                             <a class="prev"
                                rel="prev"
-                               href="/2024/04/18/dai-ma-shen-ru-li-jie-di-li-xin-xi-xi-tong-gis-zhong-de-mian-shi-liang-shi-yong-python-de-shapely-ku-cao-zuo-polygon-dui-xiang/"
+                               href="/2024/09/02/py-rust-cpp-su-du-bi-jiao/"
                             >
                             <span class="left arrow-icon flex-center">
                               <i class="fas fa-chevron-left"></i>
                             </span>
                                 <span class="title flex-center">
-                                <span class="post-nav-title-item">深入理解地理信息系统（GIS）中的面矢量：使用Python的shapely库操作Polygon对象</span>
+                                <span class="post-nav-title-item">py_rust_cpp_速度比较</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                             </a>
@@ -255,10 +339,10 @@
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/"
+                               href="/2024/09/01/windows-dian-nao-ding-shi-guan-ji/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">【代码】WGS84坐标转UTM坐标</span>
+                                <span class="post-nav-title-item">windows电脑定时关机</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">

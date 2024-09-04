@@ -166,7 +166,7 @@
     
         <span class="article-update-date article-meta-item">
         <i class="fas fa-file-pen"></i>&nbsp;
-        <span class="pc">2022-12-02 18:26:14</span>
+        <span class="pc">2024-09-04 09:30:47</span>
     </span>
     
     
@@ -219,14 +219,13 @@
                 <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>Sentinel-5P任务旨在在 2017 年至至少 2023 年之间提供有关空气质量和气候的信息和服务。通过机载 TROPOMI 传感器，它每天对主要大气成分进行全球观测，包括臭氧、二氧化氮、二氧化硫、一氧化碳、甲烷、甲醛以及云和气溶胶特性。该任务旨在确保 Envisat 卫星退役和 NASA 的 Aura 任务与 Sentinel-5 发射之间的数据连续性</p>
 <h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><p>上一篇是介绍怎么使用程序下载sentinel5p数据，这篇是讲怎么对其进行可视化。因为下载的是L2级数据了，无需再进行预处理。</p>
 <p>数据范围是覆盖大陆陆地区域，这里仅作为展示使用。时间是2021年6月（这个代码就是那时候写的）</p>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20221201095121332.png" alt="image-20221201095121332"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409040930536.png" alt="image-20221201095121332"></p>
 <h2 id="第三方库"><a href="#第三方库" class="headerlink" title="第三方库"></a>第三方库</h2><pre class="line-numbers language-none"><code class="language-none">from scipy.interpolate import griddata    #插值
 from netCDF4 import Dataset				  #读取nc文件
 import numpy as np
 from matplotlib.colors import LogNorm     #画图
 import matplotlib.pyplot as plt           #画图
 from mpl_toolkits.basemap import Basemap  #画图<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20221202174135638.png" alt="image-20221202174135638"></p>
 <p>解决No module named ‘mpl_toolkits.basemap’问题：</p>
 <p>进入<a class="link" target="_blank" rel="noopener" href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#basemap">https://www.lfd.uci.edu/~gohlke/pythonlibs/#basemap<i class="fas fa-external-link-alt"></i></a> ctrl + F 搜索 basemap，下载</p>
 <p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202212011006903.png" alt="image-20221201100650869"></p>
