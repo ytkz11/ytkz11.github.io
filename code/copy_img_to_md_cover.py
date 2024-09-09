@@ -12,6 +12,8 @@ if __name__ == '__main__':
     file_list = os.listdir(path)
     file_nohttp_list = []
     md_list = [os.path.join(path, x) for x in file_list if x.endswith('.md')]
+
+
     for j, md_file in enumerate(md_list):
         # md_file = md_list[56]
         with open(md_file, 'r', encoding='utf-8') as f:
@@ -21,6 +23,8 @@ if __name__ == '__main__':
         for i, t in enumerate(text[:10]):
             if 'cover: h' in t:
                 cover_stytle = 1
+            if t == 'cover: \n':
+                del text[i]
         newtext = text
         if cover_stytle == 0:
             for t in text:
@@ -30,11 +34,13 @@ if __name__ == '__main__':
                     if m != []:
                         https_list.append(m[-1][1:-1])
                         print(https_list[-1])
+       
 
         if https_list ==[]:
             file_nohttp_list.append(md_file)
         else:
-            newtext.insert(3, 'cover: {}'.format(https_list[-1]))
+            newtext.insert(3, 'cover: {}\n'.format(https_list[-1]))
+            del newtext[4]
             os.makedirs(os.path.join(path, 'cover'), exist_ok=True)
             with open(os.path.join(os.path.join(path, 'cover'), os.path.basename(md_file)), 'w', encoding='utf-8') as f:
                 f.writelines(newtext)

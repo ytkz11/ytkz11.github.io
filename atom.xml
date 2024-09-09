@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-09-09T09:33:45.515Z</updated>
+  <updated>2024-09-09T09:50:33.114Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://ytkz11@.github.io/2024/09/09/vx-xiao-you-xi-ni-xiang-si-lu/"/>
     <id>http://ytkz11@.github.io/2024/09/09/vx-xiao-you-xi-ni-xiang-si-lu/</id>
     <published>2024-09-09T09:33:45.515Z</published>
-    <updated>2024-09-09T09:33:45.515Z</updated>
+    <updated>2024-09-09T09:50:33.114Z</updated>
     
     
       
@@ -122,6 +122,165 @@
   </entry>
   
   <entry>
+    <title>py_rust_cpp_速度比较</title>
+    <link href="http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao/"/>
+    <id>http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao/</id>
+    <published>2024-09-02T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.105Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;TIobe指数依据向主要搜索引擎提交编程语言名称时返回的网页数量来衡量编程语言的流行程度。该指数每月更新一次，并提供了自2002年以来的历史数据。&lt;/p&gt;
+&lt;p&gt;其官网是&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    <category term="rust" scheme="http://ytkz11@.github.io/categories/python/rust/"/>
+    
+    <category term="cpp" scheme="http://ytkz11@.github.io/categories/python/rust/cpp/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="rust" scheme="http://ytkz11@.github.io/tags/rust/"/>
+    
+    <category term="cpp" scheme="http://ytkz11@.github.io/tags/cpp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows电脑定时关机</title>
+    <link href="http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/"/>
+    <id>http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/</id>
+    <published>2024-08-31T17:54:10.000Z</published>
+    <updated>2024-09-09T09:50:33.115Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天聊一聊其他的。我时不时的有一个需求，是关于在windows电脑上定时关机。&lt;/p&gt;
+&lt;p&gt;不知道怎么地，我好几次都忘了这个自动定时关机的终端命令，于是每一次都要去网上查。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="http://ytkz11@.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E5%B7%A5%E5%85%B7/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="工具" scheme="http://ytkz11@.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>无人机照片空间分布及排序</title>
+    <link href="http://ytkz11@.github.io/2024/08/28/wu-ren-ji-zhao-pian-kong-jian-fen-bu-ji-pai-xu/"/>
+    <id>http://ytkz11@.github.io/2024/08/28/wu-ren-ji-zhao-pian-kong-jian-fen-bu-ji-pai-xu/</id>
+    <published>2024-08-28T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.237Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;从直觉上来说，照片拼接必然是在两张有重叠的照片拼接开始，慢慢递进循环到所有照片。&lt;/p&gt;
+&lt;p&gt;在原先的预想中，需要对照片进行排序。但是现在再细想一下，大疆无人机在拍摄照片时就做好了照片的排序。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="无人机" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/python/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="无人机" scheme="http://ytkz11@.github.io/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用于目标检测的YOLO v3 （一）</title>
+    <link href="http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/"/>
+    <id>http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/</id>
+    <published>2024-08-27T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.240Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;em&gt;YOLO v3&lt;/em&gt;是一种流行的用于实时物体检测的卷积神经网络(CNN) ，由Redmon等人于 2018</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过python创建矢量文件</title>
+    <link href="http://ytkz11@.github.io/2024/08/27/tong-guo-python-chuang-jian-shi-liang-wen-jian/"/>
+    <id>http://ytkz11@.github.io/2024/08/27/tong-guo-python-chuang-jian-shi-liang-wen-jian/</id>
+    <published>2024-08-27T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.261Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;现有四个点：(1, 1), (2, 2), (3, 3), (4,</summary>
+        
+      
+    
+    
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/categories/gis/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/gis/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/gis/%E9%81%A5%E6%84%9F/python/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>pygmtsar的安装和使用</title>
     <link href="http://ytkz11@.github.io/2024/08/26/pygmtsar-de-an-zhuang-he-shi-yong/"/>
     <id>http://ytkz11@.github.io/2024/08/26/pygmtsar-de-an-zhuang-he-shi-yong/</id>
@@ -140,388 +299,288 @@
     
     <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
+    <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
+    
     <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GMTSAR的D-InSAR基本处理过程（少走弯路）</title>
+    <link href="http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/</id>
+    <published>2024-08-20T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.091Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前成功地在linux安装了GMTSAR，我这个linux是指win10系统的WSL。&lt;/p&gt;
+&lt;p&gt;安装了GMTSAR，就要用起来，现在来讲讲如何使用GMTSAR进行D-Insar处理。&lt;/p&gt;
+&lt;p&gt;以下均为实际操作。&lt;/p&gt;
+&lt;p&gt;首先在wsl创建新文件夹insar_</summary>
+        
+      
+    
+    
+    
+    <category term="sar" scheme="http://ytkz11@.github.io/categories/sar/"/>
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/categories/sar/linux/"/>
+    
+    
+    <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>对GMTSAR的D-InSAR得到数据进行简单的分析</title>
+    <link href="http://ytkz11@.github.io/2024/08/20/dui-gmtsar-de-d-insar-de-dao-shu-ju-jin-xing-fen-xi/"/>
+    <id>http://ytkz11@.github.io/2024/08/20/dui-gmtsar-de-d-insar-de-dao-shu-ju-jin-xing-fen-xi/</id>
+    <published>2024-08-20T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.232Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;对GMTSAR的D-InSAR得到的结果数据有很多，其中栅格数据类型为grd。&lt;/p&gt;
+&lt;p&gt;grd数据其实本质上是一种HDF数据（NC数据），在envi或者arcgis是无法打开直接这种的数据。&lt;/p&gt;
+&lt;h2 id=&quot;怎么在python读取grd&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="sar" scheme="http://ytkz11@.github.io/categories/sar/"/>
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/categories/sar/linux/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/sar/linux/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 下安装miniconda</title>
+    <link href="http://ytkz11@.github.io/2024/08/19/linux-xia-an-zhuang-miniconda/"/>
+    <id>http://ytkz11@.github.io/2024/08/19/linux-xia-an-zhuang-miniconda/</id>
+    <published>2024-08-19T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.097Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Miniconda 和 Conda 都是用于管理</summary>
+        
+      
+    
+    
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/categories/linux/"/>
+    
+    
+    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>怎么在windows 10 安装gmtsar</title>
+    <link href="http://ytkz11@.github.io/2024/08/19/dinsar-di-yi-bu/"/>
+    <id>http://ytkz11@.github.io/2024/08/19/dinsar-di-yi-bu/</id>
+    <published>2024-08-19T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.084Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://hidayatpanuntun.staff.ugm.ac.id/files/2020/03/WEBA-e1585056702410-1429x500.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在本教程中，我将向您展示如何在</summary>
+        
+      
+    
+    
+    
+    <category term="sar" scheme="http://ytkz11@.github.io/categories/sar/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/sar/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
     
   </entry>
   
   <entry>
-    <title>矩阵太大了内存不够导致numpy报错</title>
-    <link href="http://ytkz11@.github.io/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/"/>
-    <id>http://ytkz11@.github.io/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/</id>
-    <published>2024-08-08T14:30:10.000Z</published>
-    <updated>2024-08-09T13:23:08.045Z</updated>
+    <title>ubuntu22.04安装gmtsar</title>
+    <link href="http://ytkz11@.github.io/2024/08/19/ubuntu22.04-an-zhuang-gmtsar/"/>
+    <id>http://ytkz11@.github.io/2024/08/19/ubuntu22.04-an-zhuang-gmtsar/</id>
+    <published>2024-08-19T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.112Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;之前写过分块进行16位转8位的程序。今天使用一景大影像进行处理，发现程序报错了。&lt;/p&gt;
-&lt;p&gt;原因是，影像太大了,numpy一下子不能读取到矩阵的百分之二最小值和百分之98最大值。报错的代码如下：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://hidayatpanuntun.staff.ugm.ac.id/files/2020/03/WEBA-e1585056702410-1429x500.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+&lt;p&gt;GMTSAR</summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    <category term="sar" scheme="http://ytkz11@.github.io/categories/sar/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/sar/%E9%81%A5%E6%84%9F/"/>
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
-  </entry>
-  
-  <entry>
-    <title>pyinstaller打包中的大坑geopandas</title>
-    <link href="http://ytkz11@.github.io/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/"/>
-    <id>http://ytkz11@.github.io/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/</id>
-    <published>2024-08-08T14:00:10.000Z</published>
-    <updated>2024-08-08T02:40:37.331Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;一开始使用以下语句打包：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;pyinstaller -F simplify.py&lt;span aria-hidden=&quot;true&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
     
   </entry>
   
   <entry>
-    <title>2000坐标系转换为wgs84坐标系</title>
-    <link href="http://ytkz11@.github.io/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/"/>
-    <id>http://ytkz11@.github.io/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/</id>
-    <published>2024-08-06T14:00:10.000Z</published>
-    <updated>2024-08-06T06:24:02.314Z</updated>
+    <title>手动下载Sentinel-1卫星精密轨道数据</title>
+    <link href="http://ytkz11@.github.io/2024/08/19/shou-dong-xia-zai-sentinel-1-wei-xing-jing-mi-gui-dao-shu-ju/"/>
+    <id>http://ytkz11@.github.io/2024/08/19/shou-dong-xia-zai-sentinel-1-wei-xing-jing-mi-gui-dao-shu-ju/</id>
+    <published>2024-08-19T14:00:10.000Z</published>
+    <updated>2024-09-09T09:50:33.236Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;</summary>
+    <summary type="html">&lt;p&gt;轨道信息对于InSAR（干涉合成孔径雷达）数据处理至关重要，因为它影响从初始图像配准到最终形变图像生成的整个过程。不准确的轨道信息会导致基线误差，这些误差会以残差条纹的形式出现在干涉图中。为了消除由轨道误差引起的系统性误差，使用高精度的卫星轨道数据进行校正是非常必要的。在使</summary>
         
       
     
     
     
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="linux" scheme="http://ytkz11@.github.io/categories/linux/"/>
     
     
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
-    <title>解决ERROR 1 PROJ proj create from database Cannot find proj.db</title>
-    <link href="http://ytkz11@.github.io/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/"/>
-    <id>http://ytkz11@.github.io/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/</id>
-    <published>2024-08-01T14:00:10.000Z</published>
-    <updated>2024-09-02T00:46:22.082Z</updated>
+    <title>加载torch报错及如何解决，Failed to import pytorch fbgemm.dll or one of its dependencies is missing</title>
+    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/"/>
+    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</id>
+    <published>2024-08-16T14:30:10.000Z</published>
+    <updated>2024-09-09T09:50:33.220Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;针对部分小工具用户反馈：由于Cannot find</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/failed-to-import-pytorch-fbgemm-dll-or-one-of-its-dependencies-is-missing/201969&quot;&gt;Failed to</summary>
         
       
     
     
     
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
-    <title>2011年-2022年摄影测量地图制图GIS相关真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2011-nian-2022-nian-she-ying-ce-liang-di-tu-zhi-tu-gis-xiang-guan-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2011-nian-2022-nian-she-ying-ce-liang-di-tu-zhi-tu-gis-xiang-guan-zhen-ti/</id>
-    <published>2024-07-31T14:30:10.000Z</published>
-    <updated>2024-07-31T00:49:47.837Z</updated>
+    <title>加载torch报错及如何解决</title>
+    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/"/>
+    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</id>
+    <published>2024-08-16T14:30:10.000Z</published>
+    <updated>2024-09-09T09:50:33.219Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;39.多源遥感影像数据融合的主要优点是（ ）。&lt;br&gt;A.可以自动确定多种传感器影像的外方位元素 &lt;strong&gt;&lt;span style=&quot;color:#03decd;&quot;&gt;B.可以充分发挥各种传感器影像自身的特点&lt;/span&gt;&lt;/strong&gt; C.可以提高影像匹配的速度</summary>
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/failed-to-import-pytorch-fbgemm-dll-or-one-of-its-dependencies-is-missing/201969&quot;&gt;Failed to</summary>
         
       
     
     
     
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
-    <title>注册测绘师2022年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2022-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T14:22:10.000Z</published>
-    <updated>2024-07-31T00:49:13.222Z</updated>
+    <title>基于Python实现RLE格式分割标注文件的格式转换-深度学习数据处理</title>
+    <link href="http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/"/>
+    <id>http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/</id>
+    <published>2024-08-16T12:30:10.000Z</published>
+    <updated>2024-09-09T09:50:33.226Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1.地球椭球的真子午线与中央子午线的差值，被称为（ ）。&lt;br&gt;A磁偏角 B垂线偏差 &lt;strong&gt;&lt;span style=&quot;color:#2cae77;&quot;&gt;C子午线收敛角&lt;/span&gt;&lt;/strong&gt; D真北方位角&lt;br&gt;答案:</summary>
+    <summary type="html">&lt;p&gt;RLE (Run-Length Encoding) 是一种简单的无损数据压缩算法，常用于压缩图像数据。在图像处理中，特别是位图图像的存储和传输方面，RLE 可以有效地减少存储空间或带宽需求。&lt;/p&gt;
+&lt;p&gt;RLE</summary>
         
       
     
     
     
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
-    <title>注册测绘师2021年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2021-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2021-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T14:21:10.000Z</published>
-    <updated>2024-07-31T00:48:55.219Z</updated>
+    <title>基于《基于无人机影像序列的三维重建方法综述》的思考</title>
+    <link href="http://ytkz11@.github.io/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/"/>
+    <id>http://ytkz11@.github.io/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/</id>
+    <published>2024-08-14T14:30:10.000Z</published>
+    <updated>2024-09-09T09:50:33.226Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;1.下列坐标系中，所釆用的地球椭球长半径为6378140米的是（ ）。&lt;br&gt;A.1954北京坐标系 &lt;strong&gt;&lt;span style=&quot;color:#cc5b38;&quot;&gt;B.1980西安坐标系&lt;/span&gt;&lt;/strong&gt; C.WGS-84坐标系</summary>
+    <summary type="html">&lt;p&gt;今天读到一篇2017年的综述文章，虽然至今有7年之久，但这篇文章的一些内容值得参考、思考。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409040928674.png&quot;</summary>
         
       
     
     
     
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    <category term="无人机" scheme="http://ytkz11@.github.io/categories/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
     
     
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2020年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2020-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2020-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T14:10:10.000Z</published>
-    <updated>2024-07-31T00:48:29.213Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.高程异常是指（ ）至参考椭球面的垂直距离。&lt;br&gt;A.大地水准面 &lt;strong&gt;&lt;span style=&quot;color:#a2e58e;&quot;&gt;B.似大地水准面&lt;/span&gt;&lt;/strong&gt; C.地球自然表面 D.理论最低潮面&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2019年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:09:10.000Z</published>
-    <updated>2024-07-31T00:48:05.375Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.与大地水准面处处垂直的线是（ ）。&lt;br&gt;A.地球引力线 B.椭球面法线 &lt;strong&gt;&lt;span style=&quot;color:#5c5905;&quot;&gt;C.铅垂线&lt;/span&gt;&lt;/strong&gt; D.离心力方向线&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2018年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:08:10.000Z</published>
-    <updated>2024-07-31T00:47:46.801Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.水准测量中，在连续各测站上安置水准仪的三脚架时，应使其中两脚与水准路线方向平行，而第三脚轮换置路线的左侧与右侧，可以减弱因（ ）引起的误差。&lt;br&gt;&lt;strong&gt;&lt;span style=&quot;color:#77555d;&quot;&gt;A.竖轴不垂直&lt;/span&gt;&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2017年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:07:10.000Z</published>
-    <updated>2024-07-31T00:47:29.550Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.地球表面重力的方向是指（ ）。&lt;br&gt;A.地球引力方向 B.地球离心力相反方向 &lt;strong&gt;&lt;span style=&quot;color:#8963a6;&quot;&gt;C.铅垂线方向&lt;/span&gt;&lt;/strong&gt; D.椭球法线方向&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2016年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2016-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:06:10.000Z</published>
-    <updated>2024-07-31T00:47:11.136Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.在一.二等水准路线上加测重力，主要目的是为了对水准测量进行（ ）。&lt;br&gt;A.地面倾斜改正 B.归心改正 &lt;strong&gt;&lt;span style=&quot;color:#794628;&quot;&gt;C.重力异常改正&lt;/span&gt;&lt;/strong&gt; D.i角误差改正&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2015年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2015-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:05:10.000Z</published>
-    <updated>2024-07-31T00:46:53.134Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.LCR—G型相对重力仪必须锁摆的状态是（ ）。&lt;br&gt;&lt;strong&gt;&lt;span style=&quot;color:#afbdd2;&quot;&gt;A.运输过程中&lt;/span&gt;&lt;/strong&gt; B.仪器检查 C.观测读数 D.静置&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2014年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2014-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:04:10.000Z</published>
-    <updated>2024-07-31T00:46:27.746Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2014年《综合能力》考试真题&lt;/p&gt;
-&lt;p&gt;1.FG5绝对重力仪的观测值是重力点的（ ）。&lt;br&gt;A.重力差值 B.重力垂线偏差 &lt;strong&gt;&lt;span style=&quot;color:#f7dafc;&quot;&gt;C.重力加速度&lt;/span&gt;&lt;/strong&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>注册测绘师2013年《综合能力》考试真题</title>
-    <link href="http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/07/31/zhu-ce-ce-hui-shi-2013-nian-zong-he-neng-li-kao-shi-zhen-ti/</id>
-    <published>2024-07-31T11:03:10.000Z</published>
-    <updated>2024-07-31T00:46:01.277Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.一等重力点联测路线的测段数最多不应超过（ ）个。&lt;br&gt;A. &lt;strong&gt;&lt;span style=&quot;color:#82967f;&quot;&gt;4&lt;/span&gt;&lt;/strong&gt; B. 5 C. 6 D. 7&lt;br&gt;答案:</summary>
-        
-      
-    
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/categories/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
-    
-    
-    <category term="注册测绘师" scheme="http://ytkz11@.github.io/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/"/>
+    <category term="无人机" scheme="http://ytkz11@.github.io/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
     
   </entry>
   
