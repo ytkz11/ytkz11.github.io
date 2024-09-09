@@ -160,7 +160,7 @@
     <link href="http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/"/>
     <id>http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/</id>
     <published>2024-08-31T17:54:10.000Z</published>
-    <updated>2024-09-09T09:54:01.855Z</updated>
+    <updated>2024-09-09T09:55:34.772Z</updated>
     
     
       
@@ -483,11 +483,11 @@
   </entry>
   
   <entry>
-    <title>加载torch报错及如何解决</title>
-    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/"/>
-    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</id>
+    <title>加载torch报错及如何解决，Failed to import pytorch fbgemm.dll or one of its dependencies is missing</title>
+    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/"/>
+    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</id>
     <published>2024-08-16T14:30:10.000Z</published>
-    <updated>2024-09-09T09:50:33.219Z</updated>
+    <updated>2024-09-09T09:50:33.220Z</updated>
     
     
       
@@ -508,11 +508,11 @@
   </entry>
   
   <entry>
-    <title>加载torch报错及如何解决，Failed to import pytorch fbgemm.dll or one of its dependencies is missing</title>
-    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/"/>
-    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</id>
+    <title>加载torch报错及如何解决</title>
+    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/"/>
+    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</id>
     <published>2024-08-16T14:30:10.000Z</published>
-    <updated>2024-09-09T09:50:33.220Z</updated>
+    <updated>2024-09-09T09:50:33.219Z</updated>
     
     
       
