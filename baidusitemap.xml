@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2024/09/09/sam/</loc>
+    <lastmod>2024-09-10</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/09/09/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/</loc>
+    <lastmod>2024-09-10</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/04/18/mei-ge-python-cheng-xu-yuan-du-ying-gai-zhi-dao-de-22-ju-python-dan-xing-yu-ju/</loc>
+    <lastmod>2024-09-10</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/</loc>
+    <lastmod>2024-09-10</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/</loc>
+    <lastmod>2024-09-10</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/07/01/gis-jiang-shp-wen-jian-zhuan-huan-wei-geopackage-ge-shi.gpkg-de-guo-cheng/</loc>
+    <lastmod>2024-09-09</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/</loc>
+    <lastmod>2024-09-09</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/</loc>
+    <lastmod>2024-09-09</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/</loc>
+    <lastmod>2024-09-09</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
@@ -62,10 +98,6 @@
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2023/12/22/shi-liang-zuo-biao-zhuan-huan/</loc>
-    <lastmod>2024-09-09</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -349,10 +381,6 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2024/07/01/gis-jiang-shp-wen-jian-zhuan-huan-wei-geopackage-ge-shi.gpkg-de-guo-cheng/</loc>
-    <lastmod>2024-09-09</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2024/09/09/vx-xiao-you-xi-ni-xiang-si-lu/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
@@ -401,10 +429,6 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/</loc>
-    <lastmod>2024-09-09</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2024/02/05/github-star-8k-jiang-copilot-zhuan-wei-gpt4-xue-sheng-dang-mian-fei-shi-yong-gpt-de-jiao-cheng/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
@@ -426,10 +450,6 @@
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2023/10/25/arcgis-shan-tui-dao-zhi-shp-wen-jian-po-sun-ji-xiu-fu-fang-fa/</loc>
-    <lastmod>2024-09-09</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2023/01/30/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -455,10 +475,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2022/11/30/sentinel-5p-xia-zai-dai-ma-ce-shi/</loc>
     <lastmod>2024-09-04</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/</loc>
-    <lastmod>2024-09-03</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/</loc>

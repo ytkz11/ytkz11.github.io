@@ -38,6 +38,70 @@
   </entry>
   
   <entry>
+    <title>sam</title>
+    <link href="http://ytkz11@.github.io/2024/09/09/sam/"/>
+    <id>http://ytkz11@.github.io/2024/09/09/sam/</id>
+    <published>2024-09-09T09:25:10.000Z</published>
+    <updated>2024-09-10T07:57:23.597Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2023 年发布的 Segment Anything 模型 (SAM) 因其出色的准确分割图像中物体的能力而迅速成为计算机视觉领域最先进的模型。SAM</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>带标注KML的批量生成，代码已开源，工具免费下载</title>
+    <link href="http://ytkz11@.github.io/2024/09/09/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/09/09/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/</id>
+    <published>2024-09-09T09:25:10.000Z</published>
+    <updated>2024-09-10T02:11:35.748Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;也是之前写过shp文件转换为KML文件，里面附上了代码。代码的实现仅依靠OGR库。KML是基于xml格式，而当时是用字符串拼接的方式进行构建XML。&lt;/p&gt;
+&lt;p&gt;当时记得那篇博客发出去后，有老哥反应：建议用标准的XML库来构建。&lt;/p&gt;
+&lt;p&gt;这次将重构之前的代码，并且将</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>重采样影像</title>
     <link href="http://ytkz11@.github.io/2024/09/06/chong-cai-yang-ying-xiang/"/>
     <id>http://ytkz11@.github.io/2024/09/06/chong-cai-yang-ying-xiang/</id>
@@ -97,11 +161,73 @@
   </entry>
   
   <entry>
+    <title>shp文件转换为CAD文件  (第三版)</title>
+    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/"/>
+    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/</id>
+    <published>2024-09-05T14:00:10.000Z</published>
+    <updated>2024-09-10T00:59:34.442Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
+&lt;p&gt;前天写了一篇shp文件转换为CAD文件的博客（公众号），今天是周六，也没啥事做，所以我们继续来完善这个小工具吧！&lt;/p&gt;
+&lt;p&gt;有个朋友反映这个小工具的存在可以改进的地方、问题，并希望可以开发继续开发字段分</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/categories/python/gis/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>shp文件转换为CAD文件  (改进版)</title>
+    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/"/>
+    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/</id>
+    <published>2024-09-05T14:00:10.000Z</published>
+    <updated>2024-09-10T00:59:34.440Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
+&lt;p&gt;后面被吐槽说这个工具的大小为390M。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/categories/python/gis/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>用于目标检测的YOLO v3 （二） 未完成</title>
     <link href="http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/"/>
     <id>http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/</id>
     <published>2024-09-03T14:00:10.000Z</published>
-    <updated>2024-09-03T01:35:32.159Z</updated>
+    <updated>2024-09-09T10:02:06.689Z</updated>
     
     
       
@@ -227,7 +353,7 @@
     <link href="http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/"/>
     <id>http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/</id>
     <published>2024-08-27T14:00:10.000Z</published>
-    <updated>2024-09-09T09:50:33.240Z</updated>
+    <updated>2024-09-09T10:02:11.826Z</updated>
     
     
       
@@ -310,7 +436,7 @@
     <link href="http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/"/>
     <id>http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/</id>
     <published>2024-08-20T14:00:10.000Z</published>
-    <updated>2024-09-09T09:50:33.091Z</updated>
+    <updated>2024-09-09T10:02:15.552Z</updated>
     
     
       
@@ -479,108 +605,6 @@
     
     
     <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>加载torch报错及如何解决，Failed to import pytorch fbgemm.dll or one of its dependencies is missing</title>
-    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/"/>
-    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</id>
-    <published>2024-08-16T14:30:10.000Z</published>
-    <updated>2024-09-09T09:50:33.220Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/failed-to-import-pytorch-fbgemm-dll-or-one-of-its-dependencies-is-missing/201969&quot;&gt;Failed to</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>加载torch报错及如何解决</title>
-    <link href="http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/"/>
-    <id>http://ytkz11@.github.io/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</id>
-    <published>2024-08-16T14:30:10.000Z</published>
-    <updated>2024-09-09T09:50:33.219Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://discuss.pytorch.org/t/failed-to-import-pytorch-fbgemm-dll-or-one-of-its-dependencies-is-missing/201969&quot;&gt;Failed to</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于Python实现RLE格式分割标注文件的格式转换-深度学习数据处理</title>
-    <link href="http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/"/>
-    <id>http://ytkz11@.github.io/2024/08/16/ji-yu-python-shi-xian-rle-ge-shi-fen-ge-biao-zhu-wen-jian-de-ge-shi-zhuan-huan/</id>
-    <published>2024-08-16T12:30:10.000Z</published>
-    <updated>2024-09-09T09:50:33.226Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;RLE (Run-Length Encoding) 是一种简单的无损数据压缩算法，常用于压缩图像数据。在图像处理中，特别是位图图像的存储和传输方面，RLE 可以有效地减少存储空间或带宽需求。&lt;/p&gt;
-&lt;p&gt;RLE</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于《基于无人机影像序列的三维重建方法综述》的思考</title>
-    <link href="http://ytkz11@.github.io/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/"/>
-    <id>http://ytkz11@.github.io/2024/08/14/ji-yu-ji-yu-wu-ren-ji-ying-xiang-xu-lie-de-san-wei-chong-jian-fang-fa-zong-shu-de-si-kao/</id>
-    <published>2024-08-14T14:30:10.000Z</published>
-    <updated>2024-09-09T09:50:33.226Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天读到一篇2017年的综述文章，虽然至今有7年之久，但这篇文章的一些内容值得参考、思考。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409040928674.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="无人机" scheme="http://ytkz11@.github.io/categories/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
-    
-    
-    <category term="无人机" scheme="http://ytkz11@.github.io/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
     
   </entry>
   
