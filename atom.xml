@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-09-09T09:50:33.114Z</updated>
+  <updated>2024-09-12T02:11:12.390Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在 Python 中使用 JSON</title>
+    <link href="http://ytkz11@.github.io/2024/09/12/zai-python-zhong-shi-yong-json/"/>
+    <id>http://ytkz11@.github.io/2024/09/12/zai-python-zhong-shi-yong-json/</id>
+    <published>2024-09-12T09:25:10.000Z</published>
+    <updated>2024-09-12T02:11:12.390Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;了解如何在 Python 中使用 JSON，从基础到高级技术。本指南涵盖解析、序列化、API 集成和最佳实践。&lt;/p&gt;
+&lt;h1 id=&quot;1-JSON-简介&quot;&gt;&lt;a href=&quot;#1-JSON-简介&quot; class=&quot;headerlink&quot; title=&quot;1. JSON</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -75,16 +101,16 @@
     <link href="http://ytkz11@.github.io/2024/09/09/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/"/>
     <id>http://ytkz11@.github.io/2024/09/09/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/</id>
     <published>2024-09-09T09:25:10.000Z</published>
-    <updated>2024-09-10T02:11:35.748Z</updated>
+    <updated>2024-09-11T08:31:48.903Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;也是之前写过shp文件转换为KML文件，里面附上了代码。代码的实现仅依靠OGR库。KML是基于xml格式，而当时是用字符串拼接的方式进行构建XML。&lt;/p&gt;
-&lt;p&gt;当时记得那篇博客发出去后，有老哥反应：建议用标准的XML库来构建。&lt;/p&gt;
-&lt;p&gt;这次将重构之前的代码，并且将</summary>
+    <summary type="html">&lt;p&gt;这个号分享的、开源的代码，基本上是可以直接运行的，也是免费的。&lt;/p&gt;
+&lt;p&gt;为什么是免费的？主要是现在是在为爱发电，如果对你有帮助，点个赞不过分吧。&lt;/p&gt;
+&lt;p&gt;回到今天的主题，之前写过shp文件转换为KML文件，里面附上了代码。代码的实现仅依靠OGR库。而KML是基于</summary>
         
       
     
@@ -161,11 +187,11 @@
   </entry>
   
   <entry>
-    <title>shp文件转换为CAD文件  (第三版)</title>
-    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/"/>
-    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/</id>
+    <title>shp文件转换为CAD文件  (改进版)</title>
+    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/"/>
+    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/</id>
     <published>2024-09-05T14:00:10.000Z</published>
-    <updated>2024-09-10T00:59:34.442Z</updated>
+    <updated>2024-09-10T00:59:34.440Z</updated>
     
     
       
@@ -173,8 +199,8 @@
         
         
     <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
-&lt;p&gt;前天写了一篇shp文件转换为CAD文件的博客（公众号），今天是周六，也没啥事做，所以我们继续来完善这个小工具吧！&lt;/p&gt;
-&lt;p&gt;有个朋友反映这个小工具的存在可以改进的地方、问题，并希望可以开发继续开发字段分</summary>
+&lt;p&gt;后面被吐槽说这个工具的大小为390M。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -192,11 +218,11 @@
   </entry>
   
   <entry>
-    <title>shp文件转换为CAD文件  (改进版)</title>
-    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/"/>
-    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/</id>
+    <title>shp文件转换为CAD文件  (第三版)</title>
+    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/"/>
+    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/</id>
     <published>2024-09-05T14:00:10.000Z</published>
-    <updated>2024-09-10T00:59:34.440Z</updated>
+    <updated>2024-09-10T00:59:34.442Z</updated>
     
     
       
@@ -204,8 +230,8 @@
         
         
     <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
-&lt;p&gt;后面被吐槽说这个工具的大小为390M。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
+&lt;p&gt;前天写了一篇shp文件转换为CAD文件的博客（公众号），今天是周六，也没啥事做，所以我们继续来完善这个小工具吧！&lt;/p&gt;
+&lt;p&gt;有个朋友反映这个小工具的存在可以改进的地方、问题，并希望可以开发继续开发字段分</summary>
         
       
     
@@ -580,31 +606,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手动下载Sentinel-1卫星精密轨道数据</title>
-    <link href="http://ytkz11@.github.io/2024/08/19/shou-dong-xia-zai-sentinel-1-wei-xing-jing-mi-gui-dao-shu-ju/"/>
-    <id>http://ytkz11@.github.io/2024/08/19/shou-dong-xia-zai-sentinel-1-wei-xing-jing-mi-gui-dao-shu-ju/</id>
-    <published>2024-08-19T14:00:10.000Z</published>
-    <updated>2024-09-09T09:50:33.236Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;轨道信息对于InSAR（干涉合成孔径雷达）数据处理至关重要，因为它影响从初始图像配准到最终形变图像生成的整个过程。不准确的轨道信息会导致基线误差，这些误差会以残差条纹的形式出现在干涉图中。为了消除由轨道误差引起的系统性误差，使用高精度的卫星轨道数据进行校正是非常必要的。在使</summary>
-        
-      
-    
-    
-    
-    <category term="linux" scheme="http://ytkz11@.github.io/categories/linux/"/>
-    
-    
-    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
     
   </entry>
   
