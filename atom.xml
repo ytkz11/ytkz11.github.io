@@ -46,6 +46,32 @@
   </entry>
   
   <entry>
+    <title>破损shp文件修复</title>
+    <link href="http://ytkz11@.github.io/2024/09/16/po-sun-shp-wen-jian-xiu-fu/"/>
+    <id>http://ytkz11@.github.io/2024/09/16/po-sun-shp-wen-jian-xiu-fu/</id>
+    <published>2024-09-16T14:25:10.000Z</published>
+    <updated>2024-09-16T19:26:05.843Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大家中秋节快乐！&lt;/p&gt;
+&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ogr使用教程</title>
     <link href="http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/"/>
     <id>http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/</id>
@@ -554,38 +580,6 @@
     
     
     <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
-    
-    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GMTSAR的D-InSAR基本处理过程（少走弯路）</title>
-    <link href="http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/08/20/gmtsar-de-d-insar-ji-ben-chu-li-guo-cheng/</id>
-    <published>2024-08-20T14:00:10.000Z</published>
-    <updated>2024-09-09T11:09:58.069Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;之前成功地在linux安装了GMTSAR，我这个linux是指win10系统的WSL。&lt;/p&gt;
-&lt;p&gt;安装了GMTSAR，就要用起来，现在来讲讲如何使用GMTSAR进行D-Insar处理。&lt;/p&gt;
-&lt;p&gt;以下均为实际操作。&lt;/p&gt;
-&lt;p&gt;首先在wsl创建新文件夹insar_</summary>
-        
-      
-    
-    
-    
-    <category term="sar" scheme="http://ytkz11@.github.io/categories/sar/"/>
-    
-    <category term="linux" scheme="http://ytkz11@.github.io/categories/sar/linux/"/>
-    
     
     <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
     
