@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-09-15T19:49:51.937Z</updated>
+  <updated>2024-09-17T13:19:20.969Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>小型连续剧之程序员喜欢说的几句话</title>
+    <link href="http://ytkz11@.github.io/2024/09/17/xie-dai-ma-xi-huan-gan-de-yi-jian-shi-shi-ba-can-shu-xie-si/"/>
+    <id>http://ytkz11@.github.io/2024/09/17/xie-dai-ma-xi-huan-gan-de-yi-jian-shi-shi-ba-can-shu-xie-si/</id>
+    <published>2024-09-17T14:25:10.000Z</published>
+    <updated>2024-09-17T13:19:20.969Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;小型连续剧之程序员喜欢说的几句话：&lt;/p&gt;
+&lt;p&gt;1、啊，在我环境没问题的呀&lt;/p&gt;
+&lt;p&gt;2、咋复现的？我这咋没问题呢？&lt;/p&gt;
+&lt;p&gt;3、这个我们没法验、能稳定复现吗&lt;/p&gt;
+&lt;p&gt;4、他们接口的问题&lt;/p&gt;
+&lt;p&gt;5、这是前端的问题，去找前端&lt;/p&gt;
+&lt;p&gt;6、这是后</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>从十年的注册测绘师提炼出与GIS相关的知识点</title>
@@ -50,7 +81,7 @@
     <link href="http://ytkz11@.github.io/2024/09/16/po-sun-shp-wen-jian-xiu-fu/"/>
     <id>http://ytkz11@.github.io/2024/09/16/po-sun-shp-wen-jian-xiu-fu/</id>
     <published>2024-09-16T14:25:10.000Z</published>
-    <updated>2024-09-16T19:26:05.843Z</updated>
+    <updated>2024-09-17T09:05:47.611Z</updated>
     
     
       
@@ -559,31 +590,6 @@
     <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
     <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pygmtsar的安装和使用</title>
-    <link href="http://ytkz11@.github.io/2024/08/26/pygmtsar-de-an-zhuang-he-shi-yong/"/>
-    <id>http://ytkz11@.github.io/2024/08/26/pygmtsar-de-an-zhuang-he-shi-yong/</id>
-    <published>2024-08-26T14:00:10.000Z</published>
-    <updated>2024-08-27T12:45:33.496Z</updated>
-    
-    
-    
-    
-    <category term="sar" scheme="http://ytkz11@.github.io/categories/sar/"/>
-    
-    <category term="linux" scheme="http://ytkz11@.github.io/categories/sar/linux/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/sar/linux/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="sar" scheme="http://ytkz11@.github.io/tags/sar/"/>
-    
-    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
     
   </entry>
   
