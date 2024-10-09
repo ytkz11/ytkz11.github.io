@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-09-26T02:28:44.399Z</updated>
+  <updated>2024-10-09T01:22:08.590Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pyinstaller打包含有folium模块，运行错误的解决方法</title>
+    <link href="http://ytkz11@.github.io/2024/10/08/pyinstaller-da-bao-han-you-folium-mo-kuai-yun-xing-cuo-wu-de-jie-jue-fang-fa/"/>
+    <id>http://ytkz11@.github.io/2024/10/08/pyinstaller-da-bao-han-you-folium-mo-kuai-yun-xing-cuo-wu-de-jie-jue-fang-fa/</id>
+    <published>2024-10-08T14:25:10.000Z</published>
+    <updated>2024-10-09T01:22:08.590Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;pyinstaller打包含有folium模块，运行错误的解决方法&quot;&gt;&lt;a href=&quot;#pyinstaller打包含有folium模块，运行错误的解决方法&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>linux安装python的步骤</title>
@@ -196,18 +225,18 @@
   </entry>
   
   <entry>
-    <title>yolo数据集格式</title>
-    <link href="http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/"/>
-    <id>http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/</id>
+    <title>ogr使用教程</title>
+    <link href="http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/</id>
     <published>2024-09-13T09:25:10.000Z</published>
-    <updated>2024-09-14T09:48:50.524Z</updated>
+    <updated>2024-09-13T07:46:31.978Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;YOLO（You Only Look</summary>
+    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;h1 id=&quot;用法&quot;&gt;&lt;a href=&quot;#用法&quot; class=&quot;headerlink&quot; title=&quot;用法&quot;&gt;&lt;/a&gt;用法&lt;/h1&gt;&lt;pre</summary>
         
       
     
@@ -221,18 +250,18 @@
   </entry>
   
   <entry>
-    <title>ogr使用教程</title>
-    <link href="http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/</id>
+    <title>yolo数据集格式</title>
+    <link href="http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/"/>
+    <id>http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/</id>
     <published>2024-09-13T09:25:10.000Z</published>
-    <updated>2024-09-13T07:46:31.978Z</updated>
+    <updated>2024-09-14T09:48:50.524Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;h1 id=&quot;用法&quot;&gt;&lt;a href=&quot;#用法&quot; class=&quot;headerlink&quot; title=&quot;用法&quot;&gt;&lt;/a&gt;用法&lt;/h1&gt;&lt;pre</summary>
+    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;YOLO（You Only Look</summary>
         
       
     
@@ -441,11 +470,11 @@
   </entry>
   
   <entry>
-    <title>shp文件转换为CAD文件  (改进版)</title>
-    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/"/>
-    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/</id>
+    <title>shp文件转换为CAD文件  (第三版)</title>
+    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/"/>
+    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/</id>
     <published>2024-09-05T14:00:10.000Z</published>
-    <updated>2024-09-13T03:03:31.900Z</updated>
+    <updated>2024-09-13T03:03:02.858Z</updated>
     
     
       
@@ -453,8 +482,8 @@
         
         
     <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
-&lt;p&gt;后面被吐槽说这个工具的大小为390M。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
+&lt;p&gt;前天写了一篇shp文件转换为CAD文件的博客（公众号），今天是周六，也没啥事做，所以我们继续来完善这个小工具吧！&lt;/p&gt;
+&lt;p&gt;有个朋友反映这个小工具的存在可以改进的地方、问题，并希望可以开发继续开发字段分</summary>
         
       
     
@@ -472,11 +501,11 @@
   </entry>
   
   <entry>
-    <title>shp文件转换为CAD文件  (第三版)</title>
-    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/"/>
-    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/</id>
+    <title>shp文件转换为CAD文件  (改进版)</title>
+    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/"/>
+    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/</id>
     <published>2024-09-05T14:00:10.000Z</published>
-    <updated>2024-09-13T03:03:02.858Z</updated>
+    <updated>2024-09-13T03:03:31.900Z</updated>
     
     
       
@@ -484,8 +513,8 @@
         
         
     <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
-&lt;p&gt;前天写了一篇shp文件转换为CAD文件的博客（公众号），今天是周六，也没啥事做，所以我们继续来完善这个小工具吧！&lt;/p&gt;
-&lt;p&gt;有个朋友反映这个小工具的存在可以改进的地方、问题，并希望可以开发继续开发字段分</summary>
+&lt;p&gt;后面被吐槽说这个工具的大小为390M。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -558,37 +587,6 @@
     <category term="rust" scheme="http://ytkz11@.github.io/tags/rust/"/>
     
     <category term="cpp" scheme="http://ytkz11@.github.io/tags/cpp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>windows电脑定时关机</title>
-    <link href="http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/"/>
-    <id>http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/</id>
-    <published>2024-08-31T17:54:10.000Z</published>
-    <updated>2024-09-09T09:55:34.772Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天聊一聊其他的。我时不时的有一个需求，是关于在windows电脑上定时关机。&lt;/p&gt;
-&lt;p&gt;不知道怎么地，我好几次都忘了这个自动定时关机的终端命令，于是每一次都要去网上查。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="工具" scheme="http://ytkz11@.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E5%B7%A5%E5%85%B7/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="工具" scheme="http://ytkz11@.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
