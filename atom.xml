@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-10-09T01:22:08.590Z</updated>
+  <updated>2024-10-10T08:53:15.634Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>空间数据和遥感处理的 Python 库综合指南</title>
+    <link href="http://ytkz11@.github.io/2024/10/10/kong-jian-shu-ju-he-yao-gan-chu-li-de-python-ku-zong-he-zhi-nan/"/>
+    <id>http://ytkz11@.github.io/2024/10/10/kong-jian-shu-ju-he-yao-gan-chu-li-de-python-ku-zong-he-zhi-nan/</id>
+    <published>2024-10-10T14:25:10.000Z</published>
+    <updated>2024-10-10T08:53:15.634Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;写代码有几年了，平常我的主力语言是python。总体来说，python相对于其他语言可以说是很简单。很多事情和python是一样的，入门容易，精通难。&lt;/p&gt;
+&lt;p&gt;为什么我经常使用python，原因在于Python</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>pyinstaller打包含有folium模块，运行错误的解决方法</title>
@@ -553,40 +583,6 @@
     
     
     <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>py_rust_cpp_速度比较</title>
-    <link href="http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao/"/>
-    <id>http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao/</id>
-    <published>2024-09-02T14:00:10.000Z</published>
-    <updated>2024-09-09T09:50:33.105Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;TIobe指数依据向主要搜索引擎提交编程语言名称时返回的网页数量来衡量编程语言的流行程度。该指数每月更新一次，并提供了自2002年以来的历史数据。&lt;/p&gt;
-&lt;p&gt;其官网是&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    <category term="rust" scheme="http://ytkz11@.github.io/categories/python/rust/"/>
-    
-    <category term="cpp" scheme="http://ytkz11@.github.io/categories/python/rust/cpp/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="rust" scheme="http://ytkz11@.github.io/tags/rust/"/>
-    
-    <category term="cpp" scheme="http://ytkz11@.github.io/tags/cpp/"/>
     
   </entry>
   
