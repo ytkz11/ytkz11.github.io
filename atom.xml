@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-10-10T08:53:15.634Z</updated>
+  <updated>2024-10-12T09:48:57.255Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>这么多年下来，我确实是没处理过modis影像</title>
+    <link href="http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/"/>
+    <id>http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/</id>
+    <published>2024-10-12T14:25:10.000Z</published>
+    <updated>2024-10-12T09:48:57.255Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;读研的时候，研究方法跟modis是不搭边的。工作后也没机会去使用modis。&lt;/p&gt;
+&lt;p&gt;modis的数据格式是hdf。&lt;/p&gt;
+&lt;p&gt;hdf文件和nc文件非常像，而我对nc格式的文件算是比较熟悉。&lt;/p&gt;
+&lt;p&gt;这么多年下来，我确实是没处理过modis。&lt;/p&gt;
+&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>空间数据和遥感处理的 Python 库综合指南</title>
@@ -500,37 +533,6 @@
   </entry>
   
   <entry>
-    <title>shp文件转换为CAD文件  (第三版)</title>
-    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/"/>
-    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/</id>
-    <published>2024-09-05T14:00:10.000Z</published>
-    <updated>2024-09-13T03:03:02.858Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
-&lt;p&gt;前天写了一篇shp文件转换为CAD文件的博客（公众号），今天是周六，也没啥事做，所以我们继续来完善这个小工具吧！&lt;/p&gt;
-&lt;p&gt;有个朋友反映这个小工具的存在可以改进的地方、问题，并希望可以开发继续开发字段分</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/categories/python/gis/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
-    
-  </entry>
-  
-  <entry>
     <title>shp文件转换为CAD文件  (改进版)</title>
     <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/"/>
     <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/</id>
@@ -562,27 +564,33 @@
   </entry>
   
   <entry>
-    <title>用于目标检测的YOLO v3 （二） 未完成</title>
-    <link href="http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/"/>
-    <id>http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/</id>
-    <published>2024-09-03T14:00:10.000Z</published>
-    <updated>2024-09-09T10:02:06.689Z</updated>
+    <title>shp文件转换为CAD文件  (第三版)</title>
+    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/"/>
+    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/</id>
+    <published>2024-09-05T14:00:10.000Z</published>
+    <updated>2024-09-13T03:03:02.858Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;em&gt;YOLO v3&lt;/em&gt;是一种流行的用于实时物体检测的卷积神经网络(CNN) ，由Redmon等人于 2018</summary>
+    <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
+&lt;p&gt;前天写了一篇shp文件转换为CAD文件的博客（公众号），今天是周六，也没啥事做，所以我们继续来完善这个小工具吧！&lt;/p&gt;
+&lt;p&gt;有个朋友反映这个小工具的存在可以改进的地方、问题，并希望可以开发继续开发字段分</summary>
         
       
     
     
     
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/categories/python/gis/"/>
     
     
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
     
   </entry>
   
