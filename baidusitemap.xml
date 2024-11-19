@@ -1,16 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2024/11/19/parquet-shi-shi-me/</loc>
+    <lastmod>2024-11-19</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/11/15/ying-xiang-de-you-xiao-fan-wei/</loc>
+    <lastmod>2024-11-15</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/</loc>
+    <lastmod>2024-10-29</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/</loc>
+    <lastmod>2024-10-29</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/09/18/shu-ru-xing-lie-hao-huo-qu-yao-gan-ying-xiang-de-dui-ying-wei-zhi-de-shu-zhi/</loc>
+    <lastmod>2024-10-29</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/</loc>
+    <lastmod>2024-10-29</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/09/20/linux-an-zhuang-python-de-bu-zou/</loc>
+    <lastmod>2024-10-29</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/10/22/tong-ji-mou-ge-mu-lu-xia-de-py-wen-jian-you-duo-shao-xing/</loc>
+    <lastmod>2024-10-29</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2024/10/16/shi-yong-python-he-geojson-ji-suan-duo-bian-xing-de-bian-jie-kuang-bounding-box/</loc>
     <lastmod>2024-10-16</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/10/15/bi-mian-python-zhong-gdalogr-bang-ding-dao-zhi-de-beng-kui-yi-ge-suo-you-quan-wen-ti/</loc>
     <lastmod>2024-10-15</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/</loc>
-    <lastmod>2024-10-12</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/10/10/kong-jian-shu-ju-he-yao-gan-chu-li-de-python-ku-zong-he-zhi-nan/</loc>
@@ -29,14 +57,6 @@
     <lastmod>2024-09-26</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2024/09/20/linux-an-zhuang-python-de-bu-zou/</loc>
-    <lastmod>2024-09-20</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/09/18/shu-ru-xing-lie-hao-huo-qu-yao-gan-ying-xiang-de-dui-ying-wei-zhi-de-shu-zhi/</loc>
-    <lastmod>2024-09-18</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2024/09/16/po-sun-shp-wen-jian-xiu-fu/</loc>
     <lastmod>2024-09-18</lastmod>
   </url>
@@ -51,10 +71,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2024/09/16/yi-xie-gis-kao-shi-de-zhi-shi/</loc>
     <lastmod>2024-09-18</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/</loc>
-    <lastmod>2024-09-14</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/</loc>
@@ -497,10 +513,6 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2023/12/10/gis-ge-shi-he-di-li-kong-jian-wen-jian-kuo-zhan-ming-de-hui-zong/</loc>
-    <lastmod>2024-09-09</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2023/09/18/gdal-du-qu-hdf-netcdf-shu-ju-ji/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
@@ -881,11 +893,11 @@
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
+    <loc>http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
+    <loc>http://ytkz11@.github.io/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
@@ -897,11 +909,11 @@
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/</loc>
+    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2021/09/24/he-cheng-kong-jing-lei-da-fan-she-san-she-ji-zhi/</loc>
+    <loc>http://ytkz11@.github.io/2021/02/11/quan-ji-hua-he-cheng-kong-jing-lei-da-ke-shi-hua-zhi-pauli-fen-jie/</loc>
     <lastmod>2021-11-23</lastmod>
   </url>
   <url>

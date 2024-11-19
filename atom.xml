@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-10-16T08:15:31.383Z</updated>
+  <updated>2024-11-19T09:52:01.984Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,95 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我下载了全球耕地数据集（柬埔寨和越南地区），遇到的坑及解决办法</title>
+    <link href="http://ytkz11@.github.io/2024/11/19/parquet-shi-shi-me/"/>
+    <id>http://ytkz11@.github.io/2024/11/19/parquet-shi-shi-me/</id>
+    <published>2024-11-19T14:25:10.000Z</published>
+    <updated>2024-11-19T09:52:01.984Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;全球耕地数据集地址：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fiboa/data&quot;&gt;https://github.com/fiboa/data&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;List-of-datasets&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>影像的有效范围</title>
+    <link href="http://ytkz11@.github.io/2024/11/15/ying-xiang-de-you-xiao-fan-wei/"/>
+    <id>http://ytkz11@.github.io/2024/11/15/ying-xiang-de-you-xiao-fan-wei/</id>
+    <published>2024-11-15T14:25:10.000Z</published>
+    <updated>2024-11-15T09:27:56.845Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;pip </summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Python 和 GeoJSON 计算多边形的边界框（Bounding Box）</title>
+    <link href="http://ytkz11@.github.io/2024/10/22/tong-ji-mou-ge-mu-lu-xia-de-py-wen-jian-you-duo-shao-xing/"/>
+    <id>http://ytkz11@.github.io/2024/10/22/tong-ji-mou-ge-mu-lu-xia-de-py-wen-jian-you-duo-shao-xing/</id>
+    <published>2024-10-22T14:25:10.000Z</published>
+    <updated>2024-10-29T09:31:13.084Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在地理信息系统 (GIS) 中，边界框 (Bounding Box) 是用来描述一个几何图形的最小矩形区域的。它可以简单地表示为两个坐标：左下角和右上角的点。在这篇文章中，我们将介绍如何使用 Python 的 &lt;code&gt;geojson&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 Python 和 GeoJSON 计算多边形的边界框（Bounding Box）</title>
@@ -80,7 +169,7 @@
     <link href="http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/"/>
     <id>http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/</id>
     <published>2024-10-12T14:25:10.000Z</published>
-    <updated>2024-10-12T09:48:57.255Z</updated>
+    <updated>2024-10-29T09:32:17.391Z</updated>
     
     
       
@@ -203,7 +292,7 @@
     <link href="http://ytkz11@.github.io/2024/09/20/linux-an-zhuang-python-de-bu-zou/"/>
     <id>http://ytkz11@.github.io/2024/09/20/linux-an-zhuang-python-de-bu-zou/</id>
     <published>2024-09-20T14:25:10.000Z</published>
-    <updated>2024-09-20T01:39:39.114Z</updated>
+    <updated>2024-10-29T09:31:35.006Z</updated>
     
     
       
@@ -234,7 +323,7 @@
     <link href="http://ytkz11@.github.io/2024/09/18/shu-ru-xing-lie-hao-huo-qu-yao-gan-ying-xiang-de-dui-ying-wei-zhi-de-shu-zhi/"/>
     <id>http://ytkz11@.github.io/2024/09/18/shu-ru-xing-lie-hao-huo-qu-yao-gan-ying-xiang-de-dui-ying-wei-zhi-de-shu-zhi/</id>
     <published>2024-09-18T14:25:10.000Z</published>
-    <updated>2024-09-18T09:38:13.023Z</updated>
+    <updated>2024-10-29T09:32:50.077Z</updated>
     
     
       
@@ -376,7 +465,7 @@
     <link href="http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/"/>
     <id>http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/</id>
     <published>2024-09-13T09:25:10.000Z</published>
-    <updated>2024-09-14T09:48:50.524Z</updated>
+    <updated>2024-10-29T09:36:59.331Z</updated>
     
     
       
@@ -498,96 +587,6 @@
     <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
     <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>带标注KML的批量生成，代码已开源，工具免费下载</title>
-    <link href="http://ytkz11@.github.io/2024/09/09/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/09/09/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/</id>
-    <published>2024-09-09T09:25:10.000Z</published>
-    <updated>2024-09-11T08:31:48.903Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这个号分享的、开源的代码，基本上是可以直接运行的，也是免费的。&lt;/p&gt;
-&lt;p&gt;为什么是免费的？主要是现在是在为爱发电，如果对你有帮助，点个赞不过分吧。&lt;/p&gt;
-&lt;p&gt;回到今天的主题，之前写过shp文件转换为KML文件，里面附上了代码。代码的实现仅依靠OGR库。而KML是基于</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>重采样影像</title>
-    <link href="http://ytkz11@.github.io/2024/09/06/chong-cai-yang-ying-xiang/"/>
-    <id>http://ytkz11@.github.io/2024/09/06/chong-cai-yang-ying-xiang/</id>
-    <published>2024-09-06T15:00:10.000Z</published>
-    <updated>2024-09-06T06:01:23.139Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>超大影像的矢量裁剪</title>
-    <link href="http://ytkz11@.github.io/2024/09/06/chao-da-ying-xiang-de-shi-liang-cai-jian/"/>
-    <id>http://ytkz11@.github.io/2024/09/06/chao-da-ying-xiang-de-shi-liang-cai-jian/</id>
-    <published>2024-09-06T14:00:10.000Z</published>
-    <updated>2024-09-06T03:14:55.210Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近工作遇到了一个小需求，用一个矢量文件去裁剪一个超级大的栅格文件（单文件超过140G）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409061114361.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
