@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-11-19T09:52:01.984Z</updated>
+  <updated>2024-11-25T03:59:40.445Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,106 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我下载了全球耕地数据集（柬埔寨和越南地区），遇到的坑及解决办法</title>
-    <link href="http://ytkz11@.github.io/2024/11/19/parquet-shi-shi-me/"/>
-    <id>http://ytkz11@.github.io/2024/11/19/parquet-shi-shi-me/</id>
+    <title>从数组维度的角度去理解图像</title>
+    <link href="http://ytkz11@.github.io/2024/11/25/cong-numpy-de-jiao-du-qu-li-jie-tu-xiang/"/>
+    <id>http://ytkz11@.github.io/2024/11/25/cong-numpy-de-jiao-du-qu-li-jie-tu-xiang/</id>
+    <published>2024-11-25T14:25:10.000Z</published>
+    <updated>2024-11-25T03:59:40.445Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;说起数组，不得不说numpy。&lt;/p&gt;
+&lt;p&gt;当然 ，如果你是使用其他的语言，如 C、C++或者matlab，数组的基本概念与编程语言无关。&lt;/p&gt;
+&lt;p&gt;因为我平常使用 python比较多，所以 就用numpy作为解释什么是图像。&lt;/p&gt;
+&lt;p&gt;NumPy 是一个</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从数组维度的角度去理解图像</title>
+    <link href="http://ytkz11@.github.io/2024/11/25/cong-shu-zu-wei-du-de-jiao-du-qu-li-jie-tu-xiang/"/>
+    <id>http://ytkz11@.github.io/2024/11/25/cong-shu-zu-wei-du-de-jiao-du-qu-li-jie-tu-xiang/</id>
+    <published>2024-11-25T14:25:10.000Z</published>
+    <updated>2024-11-25T13:00:30.359Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;说起数组，不得不说numpy。 &lt;/p&gt;
+&lt;p&gt;当然 ，如果你是使用其他的语言，如 C、C++或者matlab，数组的基本概念与编程语言无关。&lt;/p&gt;
+&lt;p&gt;因为我平常使用 python比较多，所以 就用numpy作为解释什么是图像。&lt;/p&gt;
+&lt;p&gt;NumPy 是一个</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>下载全球耕地数据集（柬埔寨和越南地区），遇到的坑及解决办法</title>
+    <link href="http://ytkz11@.github.io/2024/11/19/gcp-ji-he-xiao-zheng/"/>
+    <id>http://ytkz11@.github.io/2024/11/19/gcp-ji-he-xiao-zheng/</id>
     <published>2024-11-19T14:25:10.000Z</published>
-    <updated>2024-11-19T09:52:01.984Z</updated>
+    <updated>2024-11-20T08:09:03.410Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;全球耕地数据集地址：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fiboa/data&quot;&gt;https://github.com/fiboa/data&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;List-of-datasets&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>下载全球耕地数据集（柬埔寨和越南地区），遇到的坑及解决办法</title>
+    <link href="http://ytkz11@.github.io/2024/11/19/xia-zai-quan-qiu-geng-di-shu-ju-ji-jian-bu-zhai-he-yue-nan-di-qu-yu-dao-de-keng-ji-jie-jue-ban-fa-copy/"/>
+    <id>http://ytkz11@.github.io/2024/11/19/xia-zai-quan-qiu-geng-di-shu-ju-ji-jian-bu-zhai-he-yue-nan-di-qu-yu-dao-de-keng-ji-jie-jue-ban-fa-copy/</id>
+    <published>2024-11-19T14:25:10.000Z</published>
+    <updated>2024-11-20T08:08:24.680Z</updated>
     
     
       
@@ -507,86 +602,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在 Python 中使用 JSON</title>
-    <link href="http://ytkz11@.github.io/2024/09/12/zai-python-zhong-shi-yong-json/"/>
-    <id>http://ytkz11@.github.io/2024/09/12/zai-python-zhong-shi-yong-json/</id>
-    <published>2024-09-12T09:25:10.000Z</published>
-    <updated>2024-09-12T02:11:12.390Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;了解如何在 Python 中使用 JSON，从基础到高级技术。本指南涵盖解析、序列化、API 集成和最佳实践。&lt;/p&gt;
-&lt;h1 id=&quot;1-JSON-简介&quot;&gt;&lt;a href=&quot;#1-JSON-简介&quot; class=&quot;headerlink&quot; title=&quot;1. JSON</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://ytkz11@.github.io/2024/09/09/vx-xiao-you-xi-ni-xiang-si-lu/"/>
-    <id>http://ytkz11@.github.io/2024/09/09/vx-xiao-you-xi-ni-xiang-si-lu/</id>
-    <published>2024-09-09T09:33:45.515Z</published>
-    <updated>2024-09-09T09:50:33.114Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;本文章仅用于学习交流，请勿用于非法用途&quot;&gt;&lt;a href=&quot;#本文章仅用于学习交流，请勿用于非法用途&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>sam</title>
-    <link href="http://ytkz11@.github.io/2024/09/09/sam/"/>
-    <id>http://ytkz11@.github.io/2024/09/09/sam/</id>
-    <published>2024-09-09T09:25:10.000Z</published>
-    <updated>2024-09-10T07:57:23.597Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2023 年发布的 Segment Anything 模型 (SAM) 因其出色的准确分割图像中物体的能力而迅速成为计算机视觉领域最先进的模型。SAM</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
