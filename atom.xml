@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-11-25T03:59:40.445Z</updated>
+  <updated>2024-11-28T03:37:59.536Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,21 +17,51 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>从数组维度的角度去理解图像</title>
-    <link href="http://ytkz11@.github.io/2024/11/25/cong-numpy-de-jiao-du-qu-li-jie-tu-xiang/"/>
-    <id>http://ytkz11@.github.io/2024/11/25/cong-numpy-de-jiao-du-qu-li-jie-tu-xiang/</id>
-    <published>2024-11-25T14:25:10.000Z</published>
-    <updated>2024-11-25T03:59:40.445Z</updated>
+    <title>曾经</title>
+    <link href="http://ytkz11@.github.io/2024/11/28/shi-yong-gdal-du-qu-yao-gan-ying-xiang-bing-xian-shi-tu-xiang/"/>
+    <id>http://ytkz11@.github.io/2024/11/28/shi-yong-gdal-du-qu-yao-gan-ying-xiang-bing-xian-shi-tu-xiang/</id>
+    <published>2024-11-28T14:25:10.000Z</published>
+    <updated>2024-11-28T03:37:59.536Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;说起数组，不得不说numpy。&lt;/p&gt;
-&lt;p&gt;当然 ，如果你是使用其他的语言，如 C、C++或者matlab，数组的基本概念与编程语言无关。&lt;/p&gt;
-&lt;p&gt;因为我平常使用 python比较多，所以 就用numpy作为解释什么是图像。&lt;/p&gt;
-&lt;p&gt;NumPy 是一个</summary>
+    <summary type="html">&lt;p&gt;学习遥感编程要注意的一个地方是 ：&lt;/p&gt;
+&lt;p&gt;gdal读取图像返回的矩阵，和python图像库读取图像返回的矩阵，二者格式大小是不一致的。&lt;/p&gt;
+&lt;p&gt;这也是我自己在学习遥感编程曾经混淆的一个知识点。 &lt;/p&gt;
+&lt;h1 id=&quot;实践对比&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>影像的有效范围</title>
+    <link href="http://ytkz11@.github.io/2024/11/28/ying-xiang-de-you-xiao-fan-wei/"/>
+    <id>http://ytkz11@.github.io/2024/11/28/ying-xiang-de-you-xiao-fan-wei/</id>
+    <published>2024-11-28T14:25:10.000Z</published>
+    <updated>2024-11-28T06:17:55.902Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;输入遥感影像的路径，生成对应的有效覆盖范围。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ytkz11/picture/master/image-20241126223932773.png&quot;</summary>
         
       
     
@@ -50,17 +80,17 @@
   
   <entry>
     <title>从数组维度的角度去理解图像</title>
-    <link href="http://ytkz11@.github.io/2024/11/25/cong-shu-zu-wei-du-de-jiao-du-qu-li-jie-tu-xiang/"/>
-    <id>http://ytkz11@.github.io/2024/11/25/cong-shu-zu-wei-du-de-jiao-du-qu-li-jie-tu-xiang/</id>
+    <link href="http://ytkz11@.github.io/2024/11/25/cong-numpy-de-jiao-du-qu-li-jie-tu-xiang/"/>
+    <id>http://ytkz11@.github.io/2024/11/25/cong-numpy-de-jiao-du-qu-li-jie-tu-xiang/</id>
     <published>2024-11-25T14:25:10.000Z</published>
-    <updated>2024-11-25T13:00:30.359Z</updated>
+    <updated>2024-11-28T01:48:27.716Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;说起数组，不得不说numpy。 &lt;/p&gt;
+    <summary type="html">&lt;p&gt;说起数组，不得不说numpy。&lt;/p&gt;
 &lt;p&gt;当然 ，如果你是使用其他的语言，如 C、C++或者matlab，数组的基本概念与编程语言无关。&lt;/p&gt;
 &lt;p&gt;因为我平常使用 python比较多，所以 就用numpy作为解释什么是图像。&lt;/p&gt;
 &lt;p&gt;NumPy 是一个</summary>
@@ -116,7 +146,7 @@
     <link href="http://ytkz11@.github.io/2024/11/19/xia-zai-quan-qiu-geng-di-shu-ju-ji-jian-bu-zhai-he-yue-nan-di-qu-yu-dao-de-keng-ji-jie-jue-ban-fa-copy/"/>
     <id>http://ytkz11@.github.io/2024/11/19/xia-zai-quan-qiu-geng-di-shu-ju-ji-jian-bu-zhai-he-yue-nan-di-qu-yu-dao-de-keng-ji-jie-jue-ban-fa-copy/</id>
     <published>2024-11-19T14:25:10.000Z</published>
-    <updated>2024-11-20T08:08:24.680Z</updated>
+    <updated>2024-11-28T01:49:06.922Z</updated>
     
     
       
@@ -126,35 +156,6 @@
     <summary type="html">&lt;p&gt;全球耕地数据集地址：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/fiboa/data&quot;&gt;https://github.com/fiboa/data&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;List-of-datasets&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>影像的有效范围</title>
-    <link href="http://ytkz11@.github.io/2024/11/15/ying-xiang-de-you-xiao-fan-wei/"/>
-    <id>http://ytkz11@.github.io/2024/11/15/ying-xiang-de-you-xiao-fan-wei/</id>
-    <published>2024-11-15T14:25:10.000Z</published>
-    <updated>2024-11-15T09:27:56.845Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h4 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h4&gt;&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;pip </summary>
         
       
     
