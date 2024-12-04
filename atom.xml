@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-11-29T01:08:47.755Z</updated>
+  <updated>2024-12-04T06:54:10.609Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>90行代码，由遥感影像制作遥感变化检测样本的教程</title>
+    <link href="http://ytkz11@.github.io/2024/12/04/90-xing-dai-ma-zhi-zuo-yao-gan-bian-hua-jian-ce-yang-ben/"/>
+    <id>http://ytkz11@.github.io/2024/12/04/90-xing-dai-ma-zhi-zuo-yao-gan-bian-hua-jian-ce-yang-ben/</id>
+    <published>2024-12-04T13:20:10.000Z</published>
+    <updated>2024-12-04T06:54:10.609Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;制作遥感变化检测样本，其他的遥感深度学习样本制作流程，在本质上无大的差别。&lt;/p&gt;
+&lt;p&gt;比如遥感语义分割的样本coco格式、voc格式，遥感目标检测yolo格式等。&lt;/p&gt;
+&lt;p&gt;它们的差别只在细节之处。现不展开细说，今天说的是：由遥感影像制作遥感变化检测样本&lt;/p&gt;
+&lt;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>使用gdal读取遥感影像并显示图像</title>
@@ -569,31 +601,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;YOLO（You Only Look</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ogr使用教程</title>
-    <link href="http://ytkz11@.github.io/2024/09/13/guang-xue-yao-gan-kong-jian-fen-bian-lu-de-bian-jie-neng-li/"/>
-    <id>http://ytkz11@.github.io/2024/09/13/guang-xue-yao-gan-kong-jian-fen-bian-lu-de-bian-jie-neng-li/</id>
-    <published>2024-09-13T09:25:10.000Z</published>
-    <updated>2024-09-18T05:33:11.081Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;h1 id=&quot;用法&quot;&gt;&lt;a href=&quot;#用法&quot; class=&quot;headerlink&quot; title=&quot;用法&quot;&gt;&lt;/a&gt;用法&lt;/h1&gt;&lt;pre</summary>
         
       
     
