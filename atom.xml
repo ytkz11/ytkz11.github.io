@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-12-04T06:54:10.609Z</updated>
+  <updated>2025-01-23T01:55:44.517Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,224 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MATLAB 与 Python：哪一个适合你？</title>
+    <link href="http://ytkz11@.github.io/2025/01/23/matlab-yu-python-na-yi-ge-gua-he-ni/"/>
+    <id>http://ytkz11@.github.io/2025/01/23/matlab-yu-python-na-yi-ge-gua-he-ni/</id>
+    <published>2025-01-23T12:20:10.000Z</published>
+    <updated>2025-01-23T01:55:44.517Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; MATLAB 和 Python 的主要区别在于，Python 是一种通用编程语言，而 MATLAB 是一个用于工程和科学应用的计算平台。&lt;/p&gt;
+&lt;p&gt;Matlab和Python，它们就像 Windows  和 Linux。&lt;/p&gt;
+&lt;p&gt;Matlab 更加直观，而</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>clion配置gdal的简单步骤</title>
+    <link href="http://ytkz11@.github.io/2025/01/21/clion-pei-zhi-gdal-de-jian-dan-bu-zou/"/>
+    <id>http://ytkz11@.github.io/2025/01/21/clion-pei-zhi-gdal-de-jian-dan-bu-zou/</id>
+    <published>2025-01-21T12:20:10.000Z</published>
+    <updated>2025-01-21T09:14:53.928Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一直想在CLION上写关于GDAL的代码。由于我是一个野生程序员，所以我的CPP功力不深厚，甚至是属于那种，学过但全忘了的状态。&lt;/p&gt;
+&lt;p&gt;平常的工作中，python足以解决了我遇到80%的问题。&lt;/p&gt;
+&lt;p&gt;由于我习惯使用pycharm，那自然对clion也有一个较</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自建节点的简单记录</title>
+    <link href="http://ytkz11@.github.io/2025/01/13/zi-jian-jie-dian-de-jian-dan-ji-lu/"/>
+    <id>http://ytkz11@.github.io/2025/01/13/zi-jian-jie-dian-de-jian-dan-ji-lu/</id>
+    <published>2025-01-13T12:20:10.000Z</published>
+    <updated>2025-01-13T03:47:08.012Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1.购买vps&lt;/p&gt;
+&lt;p&gt;2.安装xshell&lt;/p&gt;
+&lt;p&gt;3.输入以下语句&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;bash &amp;lt;(wget -qO-</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/"/>
+    <id>http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/</id>
+    <published>2025-01-07T03:31:00.316Z</published>
+    <updated>2025-01-07T06:20:36.464Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;简介-入门&quot;&gt;&lt;a href=&quot;#简介-入门&quot; class=&quot;headerlink&quot; title=&quot;简介/入门&quot;&gt;&lt;/a&gt;&lt;strong&gt;简介/入门&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;0-1-教程的简介&quot;&gt;&lt;a href=&quot;#0-1-教程的简介&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>影像落图</title>
+    <link href="http://ytkz11@.github.io/2025/01/06/ying-xiang-luo-tu/"/>
+    <id>http://ytkz11@.github.io/2025/01/06/ying-xiang-luo-tu/</id>
+    <published>2025-01-06T12:20:10.000Z</published>
+    <updated>2025-01-06T09:41:25.493Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202501061741890.png&quot; alt=&quot;image-20250106102917645&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>观《无人机航拍多光谱图像全景拼接显示系统设计》有感</title>
+    <link href="http://ytkz11@.github.io/2025/01/03/guan-wu-ren-ji-hang-pai-duo-guang-pu-tu-xiang-quan-jing-pin-jie-xian-shi-xi-tong-she-ji-you-gan/"/>
+    <id>http://ytkz11@.github.io/2025/01/03/guan-wu-ren-ji-hang-pai-duo-guang-pu-tu-xiang-quan-jing-pin-jie-xian-shi-xi-tong-she-ji-you-gan/</id>
+    <published>2025-01-03T12:20:10.000Z</published>
+    <updated>2025-01-03T07:24:54.987Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一般看知网的论文，我喜欢看别人的毕业论文。&lt;/p&gt;
+&lt;p&gt;今天在看《无人机航拍多光谱图像全景拼接显示系统设计》，收获颇多。&lt;/p&gt;
+&lt;p&gt;现简单地记录一下关于无人机图像校正的部分。&lt;/p&gt;
+&lt;p&gt;首先是无人机图像校正的方面，论文梳理了各个坐标系的区别与联系。&lt;/p&gt;
+&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>制作遥感标签样本的一般流程</title>
+    <link href="http://ytkz11@.github.io/2025/01/01/zhi-zuo-yao-gan-biao-qian-yang-ben-de-guo-cheng/"/>
+    <id>http://ytkz11@.github.io/2025/01/01/zhi-zuo-yao-gan-biao-qian-yang-ben-de-guo-cheng/</id>
+    <published>2025-01-01T13:20:10.000Z</published>
+    <updated>2025-01-02T08:59:43.576Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 制作遥感标签样本，可以分为3个步骤：&lt;/p&gt;
+&lt;p&gt;1.画矢量&lt;/p&gt;
+&lt;p&gt;2.矢量转栅格&lt;/p&gt;
+&lt;p&gt;3.分块分割影像&lt;/p&gt;
+&lt;h1 id=&quot;画矢量&quot;&gt;&lt;a href=&quot;#画矢量&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://ytkz11@.github.io/2024/12/10/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/"/>
+    <id>http://ytkz11@.github.io/2024/12/10/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/</id>
+    <published>2024-12-10T08:01:31.304Z</published>
+    <updated>2024-12-10T08:01:57.532Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;什么是深度学习？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;-&lt;/strong&gt; &lt;strong&gt;45**&lt;/strong&gt;分钟理解深度神经网络和深度学习**&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>90行代码，由遥感影像制作遥感变化检测样本的教程</title>
@@ -381,235 +599,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux安装python的步骤</title>
-    <link href="http://ytkz11@.github.io/2024/09/20/ogr-python-xue-xi-jiao-cheng-da-gang/"/>
-    <id>http://ytkz11@.github.io/2024/09/20/ogr-python-xue-xi-jiao-cheng-da-gang/</id>
-    <published>2024-09-20T14:25:10.000Z</published>
-    <updated>2024-09-26T02:28:44.399Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;OGR Python 学习教程大纲&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;引言&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&quot;什么是OGR？&quot;&gt;&lt;a href=&quot;#什么是OGR？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>linux安装python的步骤</title>
-    <link href="http://ytkz11@.github.io/2024/09/20/linux-an-zhuang-python-de-bu-zou/"/>
-    <id>http://ytkz11@.github.io/2024/09/20/linux-an-zhuang-python-de-bu-zou/</id>
-    <published>2024-09-20T14:25:10.000Z</published>
-    <updated>2024-10-29T09:31:35.006Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近买了一台云服务器，这是我目前买的第三台云服务器。我习惯用ubuntu系统，所以就安装了ubuntu22.4版本。现在记录一下怎么在linux下安装python。&lt;/p&gt;
-&lt;p&gt;因为我买的是轻量型服务器，自己私下玩一下linux&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>输入行列号，获取遥感影像的对应位置的数值</title>
-    <link href="http://ytkz11@.github.io/2024/09/18/shu-ru-xing-lie-hao-huo-qu-yao-gan-ying-xiang-de-dui-ying-wei-zhi-de-shu-zhi/"/>
-    <id>http://ytkz11@.github.io/2024/09/18/shu-ru-xing-lie-hao-huo-qu-yao-gan-ying-xiang-de-dui-ying-wei-zhi-de-shu-zhi/</id>
-    <published>2024-09-18T14:25:10.000Z</published>
-    <updated>2024-10-29T09:32:50.077Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在以前我在学习监督分类的时候，使用过这个功能。即输入行列号，获取遥感影像的对应位置的数值。&lt;/p&gt;
-&lt;p&gt;往往在写和遥感相关的代码时，我优先考虑使用python的gdal库去完成，而不是rasterio。这个是是个人的习惯。&lt;/p&gt;
-&lt;p&gt;rasterio很优秀，它是基于g</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小型连续剧之程序员喜欢说的几句话</title>
-    <link href="http://ytkz11@.github.io/2024/09/17/xie-dai-ma-xi-huan-gan-de-yi-jian-shi-shi-ba-can-shu-xie-si/"/>
-    <id>http://ytkz11@.github.io/2024/09/17/xie-dai-ma-xi-huan-gan-de-yi-jian-shi-shi-ba-can-shu-xie-si/</id>
-    <published>2024-09-17T14:25:10.000Z</published>
-    <updated>2024-09-18T05:33:11.082Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;小型连续剧之程序员喜欢说的几句话：&lt;/p&gt;
-&lt;p&gt;1、啊，在我环境没问题的呀&lt;/p&gt;
-&lt;p&gt;2、咋复现的？我这咋没问题呢？&lt;/p&gt;
-&lt;p&gt;3、这个我们没法验、能稳定复现吗&lt;/p&gt;
-&lt;p&gt;4、他们接口的问题&lt;/p&gt;
-&lt;p&gt;5、这是前端的问题，去找前端&lt;/p&gt;
-&lt;p&gt;6、这是后</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从十年的注册测绘师提炼出与GIS相关的知识点</title>
-    <link href="http://ytkz11@.github.io/2024/09/16/yi-xie-gis-kao-shi-de-zhi-shi/"/>
-    <id>http://ytkz11@.github.io/2024/09/16/yi-xie-gis-kao-shi-de-zhi-shi/</id>
-    <published>2024-09-16T15:25:10.000Z</published>
-    <updated>2024-09-18T05:33:11.041Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>破损shp文件修复</title>
-    <link href="http://ytkz11@.github.io/2024/09/16/po-sun-shp-wen-jian-xiu-fu/"/>
-    <id>http://ytkz11@.github.io/2024/09/16/po-sun-shp-wen-jian-xiu-fu/</id>
-    <published>2024-09-16T14:25:10.000Z</published>
-    <updated>2024-09-18T05:33:11.083Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;大家中秋节快乐！&lt;/p&gt;
-&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ogr使用教程</title>
-    <link href="http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/</id>
-    <published>2024-09-13T09:25:10.000Z</published>
-    <updated>2024-09-13T07:46:31.978Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;h1 id=&quot;用法&quot;&gt;&lt;a href=&quot;#用法&quot; class=&quot;headerlink&quot; title=&quot;用法&quot;&gt;&lt;/a&gt;用法&lt;/h1&gt;&lt;pre</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>yolo数据集格式</title>
-    <link href="http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/"/>
-    <id>http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/</id>
-    <published>2024-09-13T09:25:10.000Z</published>
-    <updated>2024-10-29T09:36:59.331Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;YOLO（You Only Look</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   

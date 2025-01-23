@@ -1,0 +1,588 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Find everything you need | Find everything you need</title><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Find everything you need"><meta name="application-name" content="Find everything you need"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Find everything you need"><meta property="og:url" content="http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="简介&amp;#x2F;入门0.1 教程的简介欢迎来到学习 C++ 教程！最重要的是，这些教程的目的是让学习 C++ 变得容易。 与许多其他网站和书籍不同，这些教程不假设您之前有任何编程经验。随着您的进步，我们将教您所需了解的一切，并提供大量示例。 无论您是出于业余爱好还是为了职业发展而学习 C++，您都来对地方了！"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta name="description" content="简介&amp;#x2F;入门0.1 教程的简介欢迎来到学习 C++ 教程！最重要的是，这些教程的目的是让学习 C++ 变得容易。 与许多其他网站和书籍不同，这些教程不假设您之前有任何编程经验。随着您的进步，我们将教您所需了解的一切，并提供大量示例。 无论您是出于业余爱好还是为了职业发展而学习 C++，您都来对地方了！"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: 'Find everything you need',
+  postAI: '',
+  pageFillDescription: '简介/入门, 0.1 教程的简介, 目标, 0.2 — 编程语言简介, 0.3  C/C++ 简介, 0.4  C++ 开发简介, 0.7  编译你的第一个程序简介入门教程的简介欢迎来到学习教程最重要的是这些教程的目的是让学习变得容易与许多其他网站和书籍不同这些教程不假设您之前有任何编程经验随着您的进步我们将教您所需了解的一切并提供大量示例无论您是出于业余爱好还是为了职业发展而学习您都来对地方了本介绍性章节中的课程旨在为您提供有关是什么它是如何产生的程序如何工作以及需要安装哪些软件来创建自己的程序的一些背景信息您甚至可以编写自己的第一个程序后续章节将探讨语言的不同部分在第一章第章中您将对许多基本概念进行广泛但浅显的概述因此我们可以开始编写一些简单的程序后续章节将深入探讨这些概念或介绍新概念每一章都有一个主题其下面的大部分课程通常与该主题相关没有建议您应该花在每课或每章上的时间以您觉得舒服的速度学习材料目标在开始之前让我们先介绍一下这些教程的几个重要目标涵盖一般编程主题以及传统教科书在教授特定编程语言的基础知识方面做得相当不错但它们通常不涵盖与该语言无关的其他编程主题例如书籍会省略有关编程风格常见陷阱调试良好不良编程实践和测试的部分因此当您读完这本书时您可能理解了如何使用一种语言进行编程但您可能也养成了以后会反噬您的坏习惯这些教程的目标之一是确保在自然讨论这些主题的部分中涵盖所有这些附带主题当您读完时您不仅会知道如何用编程还会知道如何不使用编程这可以说同样重要提供大量示例大多数人通过遵循示例学到的东西与通过阅读文本学到的东西一样多甚至更多这些教程将努力提供大量清晰简洁的示例来展示您正在学习的概念的应用我们还将尽可能避免双重弊端省略号也称为其中为了节省空间而省略示例中必要或不明显的部分以及未解释的新概念其中引入了示例中不可或缺的新概念但没有提及它是什么或它如何工作这两种情况都容易导致卡住提供练习计划许多课程和章节的末尾都会包含一些练习你可以尝试自己回答并附上解决方案你可以将你的解决方案与我们的解决方案进行比较看看我们做了哪些不同的事情或者如果你遇到困难看看我们是如何解决问题的然后你可以回过头来重新关注你需要进一步努力的领域最重要的是玩得开心编程可以很有趣如果你总是玩得不开心那你就没有正确的心态去编程疲惫或不开心的程序员会犯错误调试代码往往比一开始就写对代码要花更长的时间通常你可以上床睡觉睡个好觉第二天早上再回来解决问题这样可以节省一些时间编程语言简介现代计算机的速度快得令人难以置信而且速度一直在不断提高然而计算机也有一些明显的限制它们只能理解一组有限的指令必须有人告诉它们该做什么计算机程序通常也称为应用程序是计算机可以遵循以执行某些任务的一组指令程序是使用编程语言编写的编程语言是一种旨在方便编写计算机指令的语言使用编程语言编写程序的过程称为编程程序员通常通过创建源代码通常简称为代码来编写程序源代码是一个或多个包含用编程语言编写的指令的文本文件当计算机被要求处理特定程序中的指令时我们称计算机正在运行或执行该程序程序在计算机硬件组成计算机的物理组件上物理执行典型计算设备上值得注意的硬件包括交互式设备例如显示器触摸屏键盘或鼠标允许人与计算机交互存储设备例如硬盘或闪存即使在计算机关闭时也能存储信息内存计算机程序在执行之前加载于其中中央处理单元通常被称为计算机的大脑实际执行指令在现代计算中程序通常不仅与硬件交互还与系统上的其他软件特别是操作系统交互平台一词是指一组兼容的硬件和软件操作系统浏览器等为软件应用程序提供运行环境例如一词在口语中是指由在系列上运行的操作系统组成的平台机器语言计算机的无法理解相反只能处理用机器语言或机器代码编写的指令给定可以理解的所有可能的机器语言指令的集合称为指令集以下是机器语言指令示例每条指令都由解释为执行特定任务的命令例如比较这两个数字或将此数字复制到该内存位置当计算机刚刚发明时程序员必须直接用机器语言编写程序这是非常困难且耗时的如何组织和解释这些指令超出了本教程系列的范围但有两点值得注意首先每条指令都由一串和组成每个单独的或称为二进制数字简称为位机器语言指令中的位数各不相同例如某些处理的指令始终为位长而其他一些例如您可能正在使用的系列的指令长度可变其次每个兼容系列例如都有自己的机器语言并且该机器语言与其他系列的机器语言不兼容这意味着为一个系列编写的机器语言程序不能在不同系列的上运行汇编语言由于机器语言对于人类来说很难阅读和理解因此人们发明了汇编语言在汇编语言中每条指令都用一个简短的缩写而不是一组位来标识并且可以使用名称和其他数字以下是汇编语言中与上面相同的指令这使得汇编语言比机器语言更易于读写用汇编语言编写的程序往往非常快而且在速度至关重要的情况下或在资源严重受限的环境中汇编语言至今仍在使用然而由于只能理解机器语言因此必须先将汇编程序翻译成机器语言然后计算机才能执行它们这是通过使用一种称为汇编器的程序来完成的该程序将汇编程序作为输入并输出可运行的机器语言程序汇编语言和机器语言本质上具有相同的缺点汇编程序很难理解虽然个别汇编指令可以理解但很难推断出一段汇编代码实际上在做什么而且由于汇编程序需要许多指令才能完成哪怕是简单的任务因此它们往往很长汇编程序不可移植每个系列都有自己的汇编语言这些语言旨在汇编成同一系列的机器语言用汇编语言编写的程序无法轻易汇编成不同系列的机器语言高级语言为了解决机器语言和汇编语言的可理解性和可移植性问题人们开发了等新的编程语言后来又开发了和等语言这些语言被称为高级语言这是与上面相同的指令与汇编语言程序非常相似用高级语言编写的程序必须先翻译成机器语言才能运行主要有两种方法编译和解释程序通常经过编译编译器是一个程序或程序集合它读取源代码通常用高级语言编写并将其翻译成其他语言通常是低级语言例如机器语言或汇编语言然后可以将其汇编成机器语言这些机器语言文件通常会组合成可执行文件包含机器语言指令可运行或分发给其他人值得注意的是运行可执行文件不需要安装编译器最初编译器非常原始生成的汇编代码或机器代码速度缓慢未经优化然而多年来编译器已经变得非常擅长生成快速优化的代码在某些情况下它甚至比人类在汇编语言中的表现还要好以下是编译过程的简化表示或者说解释器是一种直接执行源代码中的指令而无需先将其编译为可执行文件的程序解释器往往比编译器更灵活但在运行程序时效率较低因为每次运行程序时都需要进行解释过程这也意味着必须在每台将运行解释程序的机器上安装解释器以下是解释过程的简化表示大多数语言既可以编译也可以解释传统上高级语言如和是编译型的而脚本语言如和则倾向于解释型某些语言如则混合使用这两种语言我们将在稍后更详细地探讨编译器高级语言有许多理想的特性高级语言更容易读写因为指令更接近我们日常使用的自然语言这也使它们更容易学习高级语言需要更少的指令来执行与低级语言相同的任务在中您可以在一行中完成类似的事情在汇编语言中这需要到条不同的指令这使得使用高级语言编写的程序更加简洁易懂高级语言在设计时往往考虑到了可移植性如果我们足够谨慎我们可以编写一个程序然后编译它这样它就可以在许多不同的平台上运行跨平台程序是指设计为在多个平台上运行的程序简介在之前有语言由贝尔电话实验室的于年开发主要用作系统编程语言用于编写操作系统的语言的主要目标是开发一种易于编译允许高效访问内存生成高效代码且自包含不依赖于其他程序的简约语言作为高级语言旨在为程序员提供大量控制权同时允许开发人员编写可以在不同平台上运行的程序语言非常高效灵活年和用语言重写了操作系统的大部分内容之前的许多操作系统都是用汇编语言编写的与汇编语言编写的程序只能在特定上运行不同语言具有出色的可移植性使能够在多种不同类型的计算机上轻松重新编译从而加快了其普及速度语言和的命运息息相关语言的流行在一定程度上与作为操作系统的成功息息相关年和出版了一本名为编程语言的书这本书通常被称为以作者姓氏命名它为该语言提供了非正式规范并成为事实上的标准当需要最大限度的可移植性时程序员会遵循中的建议因为当时大多数编译器都是按照标准实现的年美国国家标准协会成立了一个委员会为语言制定正式标准年委员会做任何事情都花很长时间他们完成并发布了标准即通常所说的年国际标准化组织采用了略作修改这个版本的语言被称为编译器最终符合标准需要最大可移植性的程序都按照此标准进行编码年委员会发布了新版语言非正式名称为采纳了许多已作为扩展进入编译器或已在中实现的功能发音为由在贝尔实验室开发作为的扩展始于年为语言添加了许多新功能也许最好将其视为的超集尽管这并不完全正确因为引入了一些中不存在的功能相对于最显著的创新是它支持面向对象编程至于对象是什么以及它与传统编程方法有何不同我们将在后面的章节中介绍于年由委员会标准化这意味着标准委员会批准了一份文档称为标准文档该文档提供了语言的正式描述标准化的目标是帮助确保代码在不同的编译器和平台上的行为一致该语言的一个小更新版本于年发布非正式名称为从那时起语言已经进行了五次重大更新非正式名称为和每次更新都增加了额外的功能尤其是增加了大量新功能被广泛认为是该语言的新基准版本预计该语言未来每三年左右会进行一次升级由于已获批准标准的正式名称很复杂的正式名称为因此通常使用非正式名称来指代标准其中包括出版年份或预计出版年份的最后两位数字例如指的是年发布的语言版本和的哲学和的基本设计理念可以概括为信任程序员这既美妙又危险的设计允许程序员高度自由地做他们想做的事情然而这也意味着语言通常不会阻止你做没有意义的事情因为它会假设你这样做是出于某种它无法理解的原因如果新程序员没有意识到这一点他们很可能会陷入很多陷阱这就是为什么知道在中你不应该做什么几乎和知道你应该做什么一样重要的主要原因之一问擅长什么在需要高性能和对内存及其他资源进行精确控制的情况下表现出色以下是擅长的几种应用程序电子游戏实时系统例如运输制造等高性能金融应用程序例如高频交易图形应用程序和模拟生产力办公应用程序嵌入式软件音频和视频处理人工智能和神经网络还拥有大量可用的高质量第三方库可以大大缩短开发时间问不是正在消亡吗不是调查一致表明是第二或第三大最受欢迎的编译语言仅次于有时也排在之后略高于也是第五或第六大最受欢迎的语言不包括和脚本语言是学习编码最受欢迎的语言之一因为它拥有丰富的教学资源庞大的社区以及教授它的大学课程随着每三年一次的语言更新大量有用的第三方库以及在广受欢迎的视频游戏行业中的主导地位继续蓬勃发展问在学习这些教程之前我需要了解语言吗不从开始完全没问题我们会教你所有你需要知道的知识包括要避免的陷阱一旦你了解了如果有需要的话学习标准应该相当容易如今主要用于小众用例在嵌入式设备上运行的代码当你需要与只能与交互的其他语言交互时等等对于大多数其他情况建议使用开发简介在我们编写和执行第一个程序之前我们需要更详细地了解程序的开发方式下面是一张概述简单方法的图表步骤定义你想要解决的问题这是什么步骤在此步骤中您要弄清楚要解决什么问题提出要编程的初始想法可能是最简单的步骤也可能是最困难的一步但从概念上讲这是最简单的您所需要的只是一个可以很好地定义的想法然后您就可以为下一步做好准备了以下是一些示例我想编写一个程序让我输入许多数字然后计算平均值我想编写一个程序来生成一个二维迷宫并让用户在其中导航如果用户到达终点他们就赢了我想编写一个程序读取股票价格文件并预测股票价格是上涨还是下跌第步确定如何解决问题这是如何步骤在此步骤中您要确定如何解决在步骤中提出的问题这也是软件开发中最容易被忽视的步骤问题的关键在于解决问题的方法有很多种但是有些解决方案是好的有些是坏的程序员经常会有想法坐下来立即开始编写解决方案这通常会产生属于糟糕类别的解决方案通常好的解决方案具有以下特点它们很简单不会过于复杂或令人困惑它们有详实的记录特别是围绕所做的任何假设或限制它们是模块化构建的因此各个部分可以重复使用或稍后更改而不会影响程序的其他部分当发生意外情况时它们可以正常恢复或给出有用的错误消息当你坐下来立即开始编码时你通常会想我想做某事所以你会实施最快实现目标的解决方案这可能会导致程序变得脆弱难以更改或扩展或者有很多错误错误是任何一种阻止程序正常运行的编程错误顺便说一下托马斯爱迪生在世纪年代首次使用了一词然而该术语在世纪年代才开始流行当时工程师们发现一只真正的飞蛾卡在一台早期计算机的硬件中导致电路短路记录错误的日志和飞蛾现在都属于史密森尼美国历史博物馆各种研究表明在复杂的软件系统中程序员实际上只用的时间编写初始程序其余的时间用于维护包括调试删除错误更新以应对环境变化例如在新的操作系统版本上运行增强为提高可用性或能力而进行的细微更改或内部改进以提高可靠性或可维护性因此值得你花一点额外的时间在开始编码之前思考解决问题的最佳方法你做出了哪些假设以及如何规划未来以便在以后节省大量时间和避免麻烦我们将在以后的课程中进一步讨论如何有效地设计问题的解决方案步骤编写程序为了编写程序我们需要两样东西首先我们需要掌握编程语言这就是这些教程的目的其次我们需要一个文本编辑器来编写和保存我们的程序我们输入到文本编辑器中的一组指令称为程序的源代码通常缩写为代码您可以使用任何文本编辑器编写程序甚至可以使用像的记事本或的或这样简单的编辑器在基本文本编辑器中输入的程序看起来是这样的但是我们强烈建议您使用专为编程而设计的编辑器称为代码编辑器如果您还没有请不要担心我们将很快介绍如何安装代码编辑器许多简单的程序只有一个源代码文件但复杂的程序可能有数百甚至数千个源代码文件程序中的每个源代码文件都需要保存到磁盘这意味着每个源代码文件都需要一个文件名对文件命名没有任何要求但是事实上的标准是将为程序创建的第一个主要源文件命名为文件名可以轻松确定哪个是主要源代码文件扩展名表示该文件是源代码文件您可能偶尔会看到以程序名称命名的第一个主要源代码文件例如您也可能偶尔会看到使用其他扩展名例如或步骤编译源代码为了编译源代码文件我们使用编译器编译器按顺序检查程序中的每个源代码文件并执行两项重要任务首先编译器会检查您的代码以确保它符合语言的规则如果不符合编译器会给出错误以及相应的行号帮助您确定需要修复的内容编译过程也会中止直到错误得到修复其次编译器将代码翻译成机器语言指令这些指令存储在中间文件中称为目标文件目标文件还包含后续步骤中需要或有用的其他数据包括步骤中链接器所需的数据以及步骤中调试所需的数据目标文件通常命名为或其中与生成它的文件的名称相同例如如果你的程序有个文件编译器将生成个目标文件编译器适用于多种不同的操作系统我们将很快讨论如何安装编译器因此现在无需讨论步骤链接目标文件和库编译器成功完成后另一个名为链接器的程序开始运行链接器的工作是将所有目标文件组合起来并生成所需的输出文件例如可以运行的可执行文件这个过程称为链接首先链接器读入编译器生成的每个目标文件并确保它们有效其次链接器确保正确解析所有跨文件依赖关系例如如果您在一个文件中定义某个内容然后在另一个文件中使用它则链接器会将两者连接在一起如果链接器无法将对某个内容的引用与其定义连接起来您将收到链接器错误并且链接过程将中止第三链接器还能够链接库文件库文件是一组预编译的代码这些代码已被打包以供其他程序重复使用附带一个称为标准库通常称为标准库的扩展库它提供了一组可用于程序的有用功能标准库中最常用的部分之一是输入输出库通常称为它包含在显示器上打印文本和从用户那里获取键盘输入的功能几乎每个编写的程序都以某种形式使用标准库因此将标准库链接到您的程序中是很常见的大多数链接器都配置为默认链接到标准库因此这通常不是您需要担心的事情您还可以选择链接其他库例如如果您要编写一个播放声音的程序您可能不想编写自己的代码来从磁盘读取声音文件检查以确保它们有效或者弄清楚如何将声音数据路由到操作系统或硬件以通过扬声器播放这将是大量的工作相反您可能会下载一个已经知道如何做这些事情的库然后使用它我们将在附录中讨论如何链接库并创建您自己的库最后链接器输出所需的输出文件通常是可执行文件但如果您是这样设置项目的则可以是库文件步骤和测试和调试这是最有趣的部分现在您可以运行可执行文件并查看它的功能一旦可以运行程序就可以测试它了测试是评估软件是否按预期运行的过程基本测试通常涉及尝试不同的输入组合以确保软件在不同情况下正常运行如果程序没有按预期运行那么您将必须进行一些调试即查找和修复编程错误的过程我们将在后面的章节中更详细地讨论如何测试和调试您的程序集成开发环境请注意步骤和都涉及必须安装的软件程序编辑器编译器链接器调试器虽然您可以为每项活动使用单独的程序但称为集成开发环境的软件包将所有这些功能捆绑并集成在一起编译你的第一个程序在我们编写第一个程序之前我们需要学习如何在集成开发环境中创建新程序在本课中我们将介绍如何做到这一点您还将编译并执行您的第一个程序项目要在中编写程序我们通常首先创建一个新项目稍后我们将向您展示如何执行此操作项目是一个容器其中包含生成可运行或使用的可执行文件或库网站等所需的所有源代码文件图像数据文件等该项目还保存了各种编译器和链接器设置并记住了您上次中断的位置以便您稍后重新打开项目时的状态可以恢复到您上次中断的位置当您选择编译程序时项目中的所有文件都将被编译和链接每个项目对应一个程序当您准备创建第二个程序时您需要创建一个新项目或者覆盖现有项目中的代码如果您不想保留它项目文件通常是特定于的因此为一个创建的项目需要在另一个中重新创建控制台项目当您创建新项目时通常会询问您要创建什么类型的项目本教程中我们将创建的所有项目都是控制台项目控制台项目意味着我们将创建可以从或控制台运行的程序以下是控制台的屏幕截图默认情况下控制台应用程序没有图形用户界面它们将文本打印到控制台从键盘读取输入并编译为独立的可执行文件这对于学习来说非常完美因为它将复杂性降至最低并确保程序可以在各种系统上运行如果您以前从未使用过控制台或者不知道如何访问它请不要担心我们将通过在必要时将调用控制台编译和启动我们的程序工作区解决方案当您为程序创建新项目时许多会自动将您的项目添加到工作区或解决方案不同的术语不同工作区或解决方案是可以容纳一个或多个相关项目的容器例如如果您正在编写游戏并希望为单人游戏和多人游戏分别创建可执行文件则需要创建两个项目让这两个项目完全独立是没有意义的毕竟它们是同一款游戏的一部分最有可能的是每个项目都将配置为单个工作区解决方案中的单独项目虽然您可以将多个项目添加到单个解决方案中但我们通常建议为每个程序创建一个新的工作区或解决方案尤其是在学习时这样更简单出错的可能性也更小编写你的第一个程序传统上程序员用新语言编写的第一个程序是程序在或更高版本中创建项目当你运行或更新版本时你应该会看到如下对话框选择创建新项目然后你会看到一个如下所示的对话框如果您已经打开了之前的项目您可以通过文件菜单新建项目访问此对话框选择桌面向导并单击下一步如果您没有看到此信息那么您可能忘记在安装时选择安装使用的桌面开发工作负载在这种情况下请返回课程安装集成开发环境并按照指示重新安装注意您可以运行安装程序并修改现有安装以添加工作负载而不是完全重新安装接下来您将看到如下对话框将现有项目名称替换为建议您还检查将解决方案和项目放在同一目录中因为这可以减少每个项目创建的子目录的数量单击创建继续最后您将看到最后一个对话框确保应用程序类型设置为控制台应用程序并且未选择预编译头文件选项然后单击确定您现在已经创建了一个项目跳转到下面的解决方案资源管理器部分继续在或更早版本中创建项目要在或更早版本中创建新项目请转到文件菜单新建项目将弹出一个如下所示的对话框首先确保左侧列出了如果您没有看到那么您可能忘记在安装时选择安装使用的桌面开发工作负载在这种情况下请返回课程安装集成开发环境并按照指示重新安装注意您可以运行安装程序并修改现有安装以添加工作负载而不是完全重新安装如果您使用的是或更新版本请在下选择桌面然后在主窗口中选择桌面向导如果您没有看到桌面选项则可能是您使用的是旧版本的没关系相反请在主窗口中选择然后选择控制台应用程序在下面的名称字段中输入程序的名称将现有名称替换为在位置字段中您可以选择将项目放置到其他位置目前默认即可单击确定如果您使用的是旧版本的则将启动应用程序向导按下一步此时您应该看到一个类似这样的向导对话框旧版本的使用不同的样式但大多数选项相同',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-01-07 14:20:36',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>2</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>4</sup></a><a href="/tags/git/" style="font-size: 1.05rem;">git<sup>2</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>35</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 1.05rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 1.05rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1.05rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>2</sup></a><a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/" style="font-size: 1.05rem;">无人机<sup>2</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>14</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>17</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>139</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">十一月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">九月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">20</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">24</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">30</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">六月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-01-07T03:31:00.316Z" title="发表于 2025-01-07 11:31:00">2025-01-07</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-01-07T06:20:36.464Z" title="更新于 2025-01-07 14:20:36">2025-01-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/"><header><h1 id="CrawlerTitle" itemprop="name headline">无题</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2025-01-07T03:31:00.316Z" title="发表于 2025-01-07 11:31:00">2025-01-07</time><time itemprop="dateCreated datePublished" datetime="2025-01-07T06:20:36.464Z" title="更新于 2025-01-07 14:20:36">2025-01-07</time></header><h1 id="简介-入门"><a href="#简介-入门" class="headerlink" title="简介/入门"></a><strong>简介/入门</strong></h1><h2 id="0-1-教程的简介"><a href="#0-1-教程的简介" class="headerlink" title="0.1 教程的简介"></a>0.1 教程的简介</h2><p>欢迎来到学习 C++ 教程！最重要的是，这些教程的目的是让学习 C++ 变得容易。</p>
+<p>与许多其他网站和书籍不同，这些教程不假设您之前有任何编程经验。随着您的进步，我们将教您所需了解的一切，并提供<em>大量</em>示例。</p>
+<p>无论您是出于业余爱好还是为了职业发展而学习 C++，您都来对地方了！</p>
+<p>本介绍性章节中的课程旨在为您提供有关 C++ 是什么、它是如何产生的、程序如何工作以及需要安装哪些软件来创建自己的程序的一些背景信息。您甚至可以编写自己的第一个程序。</p>
+<p>后续章节将探讨 C++ 语言的不同部分。在第一章（第 1 章）中，您将对许多基本 C++ 概念进行广泛但浅显的概述，因此我们可以开始编写一些简单的程序。后续章节将深入探讨这些概念，或介绍新概念。</p>
+<p>每一章都有一个主题，其下面的大部分课程通常与该主题相关。没有建议您应该花在每课或每章上的时间；以您觉得舒服的速度学习材料。</p>
+<hr>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>在开始之前，让我们先介绍一下这些教程的几个重要目标：</p>
+<ul>
+<li>涵盖一般编程主题以及 C++。传统教科书在教授特定编程语言的基础知识方面做得相当不错，但它们通常不涵盖与该语言无关的其他编程主题。例如，书籍会省略有关编程风格、常见陷阱、调试、良好/不良编程实践和测试的部分。因此，当您读完这本书时，您可能理解了如何使用一种语言进行编程，但您可能也养成了以后会反噬您的坏习惯！这些教程的目标之一是确保在自然讨论这些主题的部分中涵盖所有这些附带主题。当您读完时，您不仅会知道如何用 C++ 编程，还会知道如何不使用 C++ 编程，这可以说同样重要。</li>
+</ul>
+<ul>
+<li>提供大量示例。大多数人通过遵循示例学到的东西与通过阅读文本学到的东西一样多，甚至更多。这些教程将努力提供大量清晰、简洁的示例来展示您正在学习的概念的应用。我们还将（尽可能）避免双重弊端：省略号<em>（</em>也称为<em>…</em>），其中为了节省空间而省略示例中必要或不明显的部分，以及<em>未解释的新概念</em>，其中引入了示例中不可或缺的新概念，但没有提及它是什么或它如何工作。这两种情况都容易导致卡住。</li>
+</ul>
+<ul>
+<li>提供练习计划。许多课程和章节的末尾都会包含一些练习，你可以尝试自己回答，并附上解决方案。你可以将你的解决方案与我们的解决方案进行比较，看看我们做了哪些不同的事情，或者，如果你遇到困难，看看我们是如何解决问题的。然后你可以回过头来重新关注你需要进一步努力的领域。</li>
+</ul>
+<ul>
+<li>最重要的是：玩得开心。编程可以很有趣，如果你总是玩得不开心，那你就没有正确的心态去编程。疲惫或不开心的程序员会犯错误，调试代码往往比一开始就写对代码要花更长的时间！通常，你可以上床睡觉，睡个好觉，第二天早上再回来解决问题，这样可以节省一些时间。</li>
+</ul>
+<h2 id="0-2-—-编程语言简介"><a href="#0-2-—-编程语言简介" class="headerlink" title="0.2 — 编程语言简介"></a>0.2 — 编程语言简介</h2><p>现代计算机的速度快得令人难以置信，而且速度一直在不断提高。然而，计算机也有一些明显的限制：它们只能理解一组有限的指令，必须有人告诉它们该做什么。</p>
+<p><strong>计算机程序</strong>（通常也称为<strong>应用</strong>程序）是计算机可以遵循以执行某些任务的一组指令。程序是使用<strong>编程语言</strong>编写的，编程语言是一种旨在方便编写计算机指令的语言。</p>
+<p>使用编程语言编写程序的过程称为<strong>编程</strong>。程序员通常通过创建<strong>源代码</strong>（通常简称为<strong>代码</strong>）来编写程序，源代码是一个或多个包含用编程语言编写的指令的文本文件。</p>
+<p>当计算机被要求处理特定程序中的指令时，我们称计算机正在<strong>运行</strong>或<strong>执行</strong>该程序。程序在计算机硬件（组成计算机的物理组件）上物理执行。</p>
+<p>典型计算设备上值得注意的硬件包括：</p>
+<ul>
+<li>交互式设备（例如显示器、触摸屏、键盘或鼠标），允许人与计算机交互。</li>
+<li>存储设备（例如硬盘、SSD 或闪存），即使在计算机关闭时也能存储信息。</li>
+<li>内存，计算机程序在执行之前加载于其中。</li>
+<li>CPU（中央处理单元，通常被称为计算机的“大脑”），实际执行指令。</li>
+</ul>
+<p>在现代计算中，程序通常不仅与硬件交互，还与系统上的其他软件（特别是操作系统）交互。<strong>平台</strong>一词是指一组兼容的硬件（CPU）和软件（操作系统、浏览器等），为软件应用程序提供运行环境。例如，“PC”一词在口语中是指由在 x86 系列 CPU 上运行的 Windows 操作系统组成的平台。</p>
+<hr>
+<p><strong>机器语言</strong></p>
+<p>计算机的 CPU 无法理解 C++。相反，CPU 只能处理用<strong>机器语言</strong>（或<strong>机器代码</strong>）编写的指令。给定 CPU 可以理解的所有可能的机器语言指令的集合称为<strong>指令集</strong>。</p>
+<p>以下是机器语言指令示例：<code>10110000 01100001</code>。</p>
+<p>每条指令都由 CPU 解释为执行特定任务的命令，例如“比较这两个数字”或“将此数字复制到该内存位置”。当计算机刚刚发明时，程序员必须直接用机器语言编写程序，这是非常困难且耗时的。</p>
+<p>如何组织和解释这些指令超出了本教程系列的范围，但有两点值得注意。</p>
+<p>首先，每条指令都由一串 1 和 0 组成。每个单独的 0 或 1 称为<strong>二进制数字</strong>，简称为<strong>位</strong>。机器语言指令中的位数各不相同 - 例如，某些 CPU 处理的指令始终为 32 位长，而其他一些 CPU（例如您可能正在使用的 x86 系列 CPU）的指令长度可变。</p>
+<p>其次，每个兼容 CPU 系列（例如 x86、Arm64）都有自己的机器语言，并且该机器语言与其他 CPU 系列的机器语言不兼容。这意味着为一个 CPU 系列编写的机器语言程序不能在不同系列的 CPU 上运行！</p>
+<hr>
+<p><strong>汇编语言</strong></p>
+<p>由于机器语言对于人类来说很难阅读和理解，因此人们发明了汇编语言。在汇编语言中，每条指令都用一个简短的缩写（而不是一组位）来标识，并且可以使用名称和其他数字。</p>
+<p>以下是 x86 汇编语言中与上面相同的指令：<code>mov al, 061h</code>。</p>
+<p>这使得汇编语言比机器语言更易于读写。用汇编语言编写的程序往往非常快，而且在速度至关重要的情况下（或在资源严重受限的环境中），汇编语言至今仍在使用。</p>
+<p>然而，由于 CPU 只能理解机器语言，因此必须先将汇编程序翻译成机器语言，然后计算机才能执行它们。这是通过使用一种称为<strong>汇编器的</strong>程序来完成的，该程序将汇编程序作为输入，并输出可运行的机器语言程序。</p>
+<p>汇编语言和机器语言本质上具有相同的缺点。</p>
+<ul>
+<li>汇编程序很难理解。虽然个别汇编指令可以理解，但很难推断出一段汇编代码实际上在做什么。而且，由于汇编程序需要许多指令才能完成哪怕是简单的任务，因此它们往往很长。</li>
+<li>汇编程序不可<strong>移植</strong>。每个 CPU 系列都有自己的汇编语言，这些语言旨在汇编成同一 CPU 系列的机器语言。用汇编语言编写的程序无法轻易汇编成不同 CPU 系列的机器语言。</li>
+</ul>
+<hr>
+<p><strong>高级语言</strong></p>
+<p>为了解决机器语言和汇编语言的可理解性和可移植性问题，人们开发了 C、C++、Pascal 等新的编程语言（后来又开发了 Java、Javascript 和 Perl 等语言）。这些语言被称为<strong>高级语言</strong>。</p>
+<p>这是与上面相同的 C/C++ 指令：<code>a = 97;</code>。</p>
+<p>与汇编语言程序非常相似，用高级语言编写的程序必须先翻译成机器语言才能运行。主要有两种方法：编译和解释。</p>
+<p>C++ 程序通常经过编译。<strong>编译器</strong>是一个程序（或程序集合），它读取源代码（通常用高级语言编写）并将其翻译成其他语言（通常是低级语言，例如机器语言或汇编语言（然后可以将其汇编成机器语言））。这些机器语言文件通常会组合成可执行文件（包含机器语言指令），可运行或分发给其他人。值得注意的是，运行可执行文件不需要安装编译器。</p>
+<p>最初，编译器非常原始，生成的汇编代码或机器代码速度缓慢、未经优化。然而，多年来，编译器已经变得非常擅长生成快速、优化的代码，在某些情况下，它甚至比人类在汇编语言中的表现还要好！</p>
+<p>以下是编译过程的简化表示：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20250107114003073.png" alt="image-20250107114003073"></p>
+<p>或者说，<strong>解释器</strong>是一种直接执行源代码中的指令而无需先将其编译为可执行文件的程序。解释器往往比编译器更灵活，但在运行程序时效率较低，因为每次运行程序时都需要进行解释过程。这也意味着必须在每台将运行解释程序的机器上安装解释器。</p>
+<p>以下是解释过程的简化表示：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20250107114021873.png" alt="image-20250107114021873"></p>
+<p>大多数语言既可以编译也可以解释。传统上，高级语言（如 C、C++ 和 Pascal）是编译型的，而“脚本”语言（如 Perl 和 Javascript）则倾向于解释型。某些语言（如 Java）则混合使用这两种语言。我们将在稍后更详细地探讨 C++ 编译器。</p>
+<p>高级语言有许多理想的特性：</p>
+<ul>
+<li>高级语言更容易读写，因为指令更接近我们日常使用的自然语言。这也使它们更容易学习。</li>
+<li>高级语言需要更少的指令来执行与低级语言相同的任务。在 C++ 中，您可以<code>a = b * 2 + 5;</code>在一行中完成类似的事情。在汇编语言中，这需要 4 到 6 条不同的指令。这使得使用高级语言编写的程序更加简洁易懂。</li>
+<li>高级语言在设计时往往考虑到了可移植性。如果我们足够谨慎，我们可以编写一个程序，然后编译它，这样它就可以在许多不同的平台上运行。<strong>跨平台</strong>程序是指设计为在多个平台上运行的程序。</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20250107114042440.png" alt="image-20250107114042440"></p>
+<h2 id="0-3-C-C-简介"><a href="#0-3-C-C-简介" class="headerlink" title="0.3  C/C++ 简介"></a>0.3  C/C++ 简介</h2><p><strong>在 C++ 之前，有 C</strong></p>
+<p>C 语言由贝尔电话实验室的 Dennis Ritchie 于 1972 年开发，主要用作系统编程语言（用于编写操作系统的语言）。Ritchie 的主要目标是开发一种易于编译、允许高效访问内存、生成高效代码且自包含（不依赖于其他程序）的简约语言。作为高级语言，C 旨在为程序员提供大量控制权，同时允许开发人员编写可以在不同平台上运行的程序。</p>
+<p>C 语言非常高效灵活，1973 年，Ritchie 和 Ken Thompson 用 C 语言重写了 Unix 操作系统的大部分内容。之前的许多操作系统都是用汇编语言编写的。与汇编语言编写的程序只能在特定 CPU 上运行不同，C 语言具有出色的可移植性，使 Unix 能够在多种不同类型的计算机上轻松重新编译，从而加快了其普及速度。C 语言和 Unix 的命运息息相关，C 语言的流行在一定程度上与 Unix 作为操作系统的成功息息相关。</p>
+<p>1978 年，Brian Kernighan 和 Dennis Ritchie 出版了一本名为《C 编程语言》的书。这本书通常被称为 K&amp;R（以作者姓氏命名），它为该语言提供了非正式规范，并成为事实上的标准。当需要最大限度的可移植性时，程序员会遵循 K&amp;R 中的建议，因为当时大多数编译器都是按照 K&amp;R 标准实现的。</p>
+<p>1983 年，美国国家标准协会 (ANSI) 成立了一个委员会，为 C 语言制定正式标准。1989 年（委员会做任何事情都花很长时间），他们完成并发布了 C89 标准，即通常所说的 ANSI C。1990 年，国际标准化组织 (ISO) 采用了 ANSI C（略作修改）。这个版本的 C 语言被称为 C90。编译器最终符合 ANSI C/C90 标准，需要最大可移植性的程序都按照此标准进行编码。</p>
+<p>1999 年，ISO 委员会发布了新版 C 语言，非正式名称为 C99。C99 采纳了许多已作为扩展进入编译器或已在 C++ 中实现的功能。</p>
+<hr>
+<p><strong>C++</strong></p>
+<p>C++（发音为“see plus plus”）由 Bjarne Stroustrup 在贝尔实验室开发，作为 C 的扩展，始于 1979 年。C++ 为 C 语言添加了许多新功能，也许最好将其视为 C 的超集，尽管这并不完全正确（因为 C99 引入了一些 C++ 中不存在的功能）。C++ 相对于 C 最显著的创新是它支持面向对象编程。至于“对象”是什么以及它与传统编程方法有何不同，我们将在后面的章节中介绍。</p>
+<p>C++ 于 1998 年由 ISO 委员会标准化。这意味着 ISO 标准委员会批准了一份文档（称为<strong>标准文档</strong>），该文档提供了 C++ 语言的正式描述。标准化的目标是帮助确保 C++ 代码在不同的编译器和平台上的行为一致。</p>
+<p>该语言的一个小更新版本于 2003 年发布（非正式名称为 C++03）。</p>
+<p>从那时起，C++ 语言已经进行了五次重大更新（非正式名称为 C++11、C++14、C++17、C++20 和 C++23），每次更新都增加了额外的功能。尤其是 C++11 增加了大量新功能，被广泛认为是该语言的新基准版本。预计该语言未来每三年左右会进行一次升级。</p>
+<p>由于已获批准标准的正式名称很复杂（C++20 的正式名称为 ISO/IEC 14882:2020），因此通常使用非正式名称来指代标准，其中包括出版年份（或预计出版年份）的最后两位数字。例如，C++20 指的是 2020 年发布的语言版本。</p>
+<hr>
+<p><strong>C 和 C++ 的哲学</strong></p>
+<p>C 和 C++ 的基本设计理念可以概括为“信任程序员”——这既美妙又危险。C++ 的设计允许程序员高度自由地做他们想做的事情。然而，这也意味着语言通常不会阻止你做没有意义的事情，因为它会假设你这样做是出于某种它无法理解的原因。如果新程序员没有意识到这一点，他们很可能会陷入很多陷阱。这就是为什么知道在 C/C++ 中你不应该做什么几乎和知道你应该做什么一样重要的主要原因之一。</p>
+<pre class="line-numbers language-none"><code class="language-none">问：C++ 擅长什么？
+
+C++ 在需要高性能和对内存及其他资源进行精确控制的情况下表现出色。以下是 C++ 擅长的几种应用程序：
+
+电子游戏
+实时系统（例如运输、制造等）
+高性能金融应用程序（例如高频交易）
+图形应用程序和模拟
+生产力/办公应用程序
+嵌入式软件
+音频和视频处理
+人工智能和神经网络
+C++ 还拥有大量可用的高质量第三方库，可以大大缩短开发时间。
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">问：C++ 不是正在消亡吗？
+
+不是。调查一致表明，C++ 是第二或第三大最受欢迎的编译语言（仅次于 Java，有时也排在 C# 之后，略高于 C），也是第五或第六大最受欢迎的语言（不包括 HTML、SQL 和 shell 脚本语言）。
+
+C++ 是学习编码最受欢迎的语言之一，因为它拥有丰富的教学资源、庞大的社区以及教授它的大学课程。
+
+随着每三年一次的语言更新、大量有用的第三方库以及在广受欢迎的视频游戏行业中的主导地位，C++ 继续蓬勃发展。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">问：在学习这些教程之前我需要了解 C 语言吗？
+
+不！从 C++ 开始完全没问题，我们会教你所有你需要知道的知识（包括要避免的陷阱）。
+
+一旦你了解了 C++，如果有需要的话，学习标准 C 应该相当容易。如今，C 主要用于小众用例：在嵌入式设备上运行的代码，当你需要与只能与 C 交互的其他语言交互时，等等……对于大多数其他情况，建议使用 C++。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="0-4-C-开发简介"><a href="#0-4-C-开发简介" class="headerlink" title="0.4  C++ 开发简介"></a>0.4  C++ 开发简介</h2><p>在我们编写和执行第一个 C++ 程序之前，我们需要更详细地了解 C++ 程序的开发方式。下面是一张概述简单方法的图表：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20250107114904157.png" alt="image-20250107114904157"></p>
+<hr>
+<p><strong>步骤 1：定义你想要解决的问题</strong></p>
+<p>这是“什么”步骤，在此步骤中，您要弄清楚要解决什么问题。提出要编程的初始想法可能是最简单的步骤，也可能是最困难的一步。但从概念上讲，这是最简单的。您所需要的只是一个可以很好地定义的想法，然后您就可以为下一步做好准备了。</p>
+<p>以下是一些示例：</p>
+<ul>
+<li>“我想编写一个程序，让我输入许多数字，然后计算平均值。”</li>
+<li>“我想编写一个程序来生成一个二维迷宫并让用户在其中导航。如果用户到达终点，他们就赢了。”</li>
+<li>“我想编写一个程序，读取股票价格文件并预测股票价格是上涨还是下跌。”</li>
+</ul>
+<hr>
+<p><strong>第 2 步：确定如何解决问题</strong></p>
+<p>这是“如何”步骤，在此步骤中，您要确定如何解决在步骤 1 中提出的问题。这也是软件开发中最容易被忽视的步骤。问题的关键在于，解决问题的方法有很多种——但是，有些解决方案是好的，有些是坏的。程序员经常会有想法，坐下来，立即开始编写解决方案。这通常会产生属于糟糕类别的解决方案。</p>
+<p>通常，好的解决方案具有以下特点：</p>
+<ul>
+<li>它们很简单（不会过于复杂或令人困惑）。</li>
+<li>它们有详实的记录（特别是围绕所做的任何假设或限制）。</li>
+<li>它们是模块化构建的，因此各个部分可以重复使用或稍后更改，而不会影响程序的其他部分。</li>
+<li>当发生意外情况时，它们可以正常恢复或给出有用的错误消息。</li>
+</ul>
+<p>当你坐下来立即开始编码时，你通常会想“我想做&lt;某事&gt;”，所以你会实施最快实现目标的解决方案。这可能会导致程序变得脆弱、难以更改或扩展，或者有很多错误。<strong>错误</strong>是任何一种阻止程序正常运行的编程错误。</p>
+<pre class="line-numbers language-none"><code class="language-none">顺便说一下……
+
+托马斯·爱迪生在 19 世纪 70 年代首次使用了“bug”一词！然而，该术语在 20 世纪 40 年代才开始流行，当时工程师们发现一只真正的飞蛾卡在一台早期计算机的硬件中，导致电路短路。记录错误的日志和飞蛾现在都属于史密森尼美国历史博物馆。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>各种研究表明，在复杂的软件系统中，程序员实际上只用 10-40% 的时间编写初始程序。其余 60-90% 的时间用于维护，包括<strong>调试</strong>（删除错误）、更新以应对环境变化（例如在新的操作系统版本上运行）、增强（为提高可用性或能力而进行的细微更改）或内部改进（以提高可靠性或可维护性）。</p>
+<p>因此，值得你花一点额外的时间（在开始编码之前）思考解决问题的最佳方法、你做出了哪些假设以及如何规划未来，以便在以后节省大量时间和避免麻烦。</p>
+<p>我们将在以后的课程中进一步讨论如何有效地设计问题的解决方案。</p>
+<hr>
+<p><strong>步骤3：编写程序</strong></p>
+<p>为了编写程序，我们需要两样东西：首先，我们需要掌握编程语言——这就是这些教程的目的！其次，我们需要一个文本编辑器来编写和保存我们的 C++ 程序。我们输入到文本编辑器中的一组 C++ 指令称为程序的<strong>源代码</strong>（通常缩写为<strong>代码</strong>）。您可以使用任何文本编辑器编写程序，甚至可以使用像 Windows 的记事本或 Unix 的 vi 或 pico 这样简单的编辑器。</p>
+<p>在基本文本编辑器中输入的程序看起来是这样的：</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include &lt;iostream&gt;
+
+int main()
+{
+    std::cout &lt;&lt; "Here is some text.";
+    return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>但是，我们强烈建议您使用专为编程而设计的编辑器（称为<strong>代码编辑器</strong>）。如果您还没有，请不要担心。我们将很快介绍如何安装代码编辑器。</p>
+<p>许多简单的 C++ 程序只有一个源代码文件，但复杂的 C++ 程序可能有数百甚至数千个源代码文件。</p>
+<p>程序中的每个源代码文件都需要保存到磁盘，这意味着每个源代码文件都需要一个文件名。C++ 对文件命名没有任何要求。但是，事实上的标准是将为程序创建的第一个/主要源文件命名为<code>main.cpp</code>。文件名 ( <code>main</code>) 可以轻松确定哪个是主要源代码文件，<code>.cpp</code>扩展名表示该文件是 C++ 源代码文件。</p>
+<p>您可能偶尔会看到以程序名称命名的第一个/主要源代码文件（例如<code>calculator.cpp</code>）<code>poker.cpp</code>。您也可能偶尔会看到使用其他扩展名（例如<code>.cc</code>或<code>.cxx</code>）。</p>
+<hr>
+<p><strong>步骤 4：编译源代码</strong></p>
+<p>为了编译 C++ 源代码文件，我们使用 C++ 编译器。C++ 编译器按顺序检查程序中的每个源代码 (.cpp) 文件并执行两项重要任务：</p>
+<p>首先，编译器会检查您的 C++ 代码，以确保它符合 C++ 语言的规则。如果不符合，编译器会给出错误（以及相应的行号），帮助您确定需要修复的内容。编译过程也会中止，直到错误得到修复。</p>
+<p>其次，编译器将 C++ 代码翻译成机器语言指令。这些指令存储在中间文件中，称为<strong>目标文件</strong>。目标文件还包含后续步骤中需要或有用的其他数据（包括步骤 5 中链接器所需的数据以及步骤 7 中调试所需的数据）。</p>
+<p>目标文件通常命名为<em>name.o</em>或<em>name.obj</em>，其中<em>name</em>与生成它的 .cpp 文件的名称相同。</p>
+<p>例如，如果你的程序有 3 个 .cpp 文件，编译器将生成 3 个目标文件：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20250107115652035.png" alt="image-20250107115652035"></p>
+<p>C++ 编译器适用于多种不同的操作系统。我们将很快讨论如何安装编译器，因此现在无需讨论。</p>
+<hr>
+<p><strong>步骤 5：链接目标文件和库</strong></p>
+<p>编译器成功完成后，另一个名为“<strong>链接器”</strong>的程序开始运行。链接器的工作是将所有目标文件组合起来并生成所需的输出文件（例如，可以运行的可执行文件）。这个过程称为<strong>“链接”</strong>。</p>
+<p>首先，链接器读入编译器生成的每个目标文件并确保它们有效。</p>
+<p>其次，链接器确保正确解析所有跨文件依赖关系。例如，如果您在一个 .cpp 文件中定义某个内容，然后在另一个 .cpp 文件中使用它，则链接器会将两者连接在一起。如果链接器无法将对某个内容的引用与其定义连接起来，您将收到链接器错误，并且链接过程将中止。</p>
+<p>第三，链接器还能够链接库文件。<strong>库文件</strong>是一组预编译的代码，这些代码已被“打包”以供其他程序重复使用。</p>
+<p>C++ 附带一个称为<strong>C++ 标准库</strong>（通常称为“标准库”）的扩展库，它提供了一组可用于程序的有用功能。C++ 标准库中最常用的部分之一是输入/输出库（通常称为“iostream”），它包含在显示器上打印文本和从用户那里获取键盘输入的功能。几乎每个编写的 C++ 程序都以某种形式使用标准库，因此将标准库链接到您的程序中是很常见的。大多数 C++ 链接器都配置为默认链接到标准库，因此这通常不是您需要担心的事情。</p>
+<p>您还可以选择链接其他库。例如，如果您要编写一个播放声音的程序，您可能不想编写自己的代码来从磁盘读取声音文件，检查以确保它们有效，或者弄清楚如何将声音数据路由到操作系统或硬件以通过扬声器播放 - 这将是大量的工作！相反，您可能会下载一个已经知道如何做这些事情的库，然后使用它。我们将在附录中讨论如何链接库（并创建您自己的库！）。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="C:\Users\OBT-SJCP-B-A08\AppData\Roaming\Typora\typora-user-images\image-20250107115823805.png" alt="image-20250107115823805"></p>
+<p>最后，链接器输出所需的输出文件（通常是可执行文件，但如果您是这样设置项目的，则可以是库文件）。</p>
+<hr>
+<p><strong>步骤 6 和 7：测试和调试</strong></p>
+<p>这是最有趣的部分！现在您可以运行可执行文件并查看它的功能！</p>
+<p>一旦可以运行程序，就可以测试它了。<strong>测试</strong>是评估软件是否按预期运行的过程。基本测试通常涉及尝试不同的输入组合，以确保软件在不同情况下正常运行。</p>
+<p>如果程序没有按预期运行，那么您将必须进行一些<strong>调试</strong>，即查找和修复编程错误的过程。</p>
+<p>我们将在后面的章节中更详细地讨论如何测试和调试您的程序。</p>
+<hr>
+<p><strong>集成开发环境 (IDE)</strong></p>
+<p>请注意，步骤 3、4、5 和 7 都涉及必须安装的软件程序（编辑器、编译器、链接器、调试器）。虽然您可以为每项活动使用单独的程序，但称为集成开发环境 (IDE) 的软件包将所有这些功能捆绑并集成在一起。</p>
+<hr>
+<h2 id="0-7-编译你的第一个程序"><a href="#0-7-编译你的第一个程序" class="headerlink" title="0.7  编译你的第一个程序"></a>0.7  编译你的第一个程序</h2><p>在我们编写第一个程序之前，我们需要学习如何在集成开发环境 (IDE) 中创建新程序。在本课中，我们将介绍如何做到这一点，您还将编译并执行您的第一个程序！</p>
+<hr>
+<p><strong>项目</strong></p>
+<p>要在 IDE 中编写 C++ 程序，我们通常首先创建一个新项目（稍后我们将向您展示如何执行此操作）。项目<strong>是</strong>一个容器，其中包含生成可运行或使用的可执行文件（或库、网站等）所需的所有源代码文件、图像、数据文件等。该项目还保存了各种 IDE、编译器和链接器设置，并记住了您上次中断的位置，以便您稍后重新打开项目时，IDE 的状态可以恢复到您上次中断的位置。当您选择编译程序时，项目中的所有 .cpp 文件都将被编译和链接。</p>
+<p>每个项目对应一个程序。当您准备创建第二个程序时，您需要创建一个新项目，或者覆盖现有项目中的代码（如果您不想保留它）。项目文件通常是特定于 IDE 的，因此为一个 IDE 创建的项目需要在另一个 IDE 中重新创建。</p>
+<hr>
+<p><strong>控制台项目</strong></p>
+<p>当您创建新项目时，通常会询问您要创建什么类型的项目。本教程中我们将创建的所有项目都是控制台项目。<strong>控制台项目</strong>意味着我们将创建可以从 Windows、Linux 或 Mac 控制台运行的程序。</p>
+<p>以下是 Windows 控制台的屏幕截图：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.learncpp.com/images/CppTutorial/Chapter0/WindowsCommandLine-min.png?ezimgfmt=ng%3Awebp%2Fngcb2%2Frs%3Adevice%2Frscb2-1" alt="Windows 控制台"></p>
+<hr>
+<p>默认情况下，控制台应用程序没有图形用户界面 (GUI)，它们将文本打印到控制台，从键盘读取输入，并编译为独立的可执行文件。这对于学习 C++ 来说非常完美，因为它将复杂性降至最低，并确保程序可以在各种系统上运行。</p>
+<p>如果您以前从未使用过控制台，或者不知道如何访问它，请不要担心。我们将通过 IDE（在必要时将调用控制台）编译和启动我们的程序。</p>
+<hr>
+<p><strong>工作区/解决方案</strong></p>
+<p>当您为程序创建新项目时，许多 IDE 会自动将您的项目添加到“工作区”或“解决方案”（不同 IDE 的术语不同）。工作区或解决方案是可以容纳一个或多个相关项目的容器。例如，如果您正在编写游戏并希望为单人游戏和多人游戏分别创建可执行文件，则需要创建两个项目。让这两个项目完全独立是没有意义的——毕竟，它们是同一款游戏的一部分。最有可能的是，每个项目都将配置为单个工作区/解决方案中的单独项目。</p>
+<p>虽然您可以将多个项目添加到单个解决方案中，但我们通常建议为每个程序创建一个新的工作区或解决方案，尤其是在学习时。这样更简单，出错的可能性也更小。</p>
+<hr>
+<p><strong>编写你的第一个程序</strong></p>
+<p>传统上，程序员用新语言编写的第一个程序是<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Hello_world">hello world 程序</a></p>
+<hr>
+<p><strong>在 Visual Studio 2019（或更高版本）中创建项目</strong></p>
+<p>当你运行 Visual Studio 2019（或更新版本）时，你应该会看到如下对话框：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.learncpp.com/images/CppTutorial/Chapter0/VS2019-GetStarted-min.png?ezimgfmt=rs:768x533/rscb2/ng:webp/ngcb2" alt="Visual Studio 2019 入门对话框"></p>
+<p>选择<em>创建新项目</em>。</p>
+<p>然后你会看到一个如下所示的对话框：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.learncpp.com/images/CppTutorial/Chapter0/VS2019-CreateNewProject-min.png?ezimgfmt=rs:768x533/rscb2/ng:webp/ngcb2" alt="Visual Studio 2019 创建新项目对话框"></p>
+<p>如果您已经打开了之前的项目，您可以通过<em>文件菜单 &gt; 新建 &gt; 项目</em>访问此对话框。</p>
+<p>选择<em>Windows 桌面向导</em>并单击<em>下一步</em>。如果您没有看到此信息，那么您可能忘记在安装 Visual Studio 时选择安装<em>使用 C++ 的桌面开发</em>工作负载。在这种情况下，请返回课程<a target="_blank" rel="noopener" href="https://www.learncpp.com/cpp-tutorial/installing-an-integrated-development-environment-ide/">0.6 - 安装集成开发环境 (IDE)</a>并按照指示重新安装 Visual Studio（注意：您可以运行 Visual Studio 安装程序并修改现有安装以添加 C++ 工作负载，而不是完全重新安装）。</p>
+<p>接下来，您将看到如下对话框：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.learncpp.com/images/CppTutorial/Chapter0/VS2019-ConfigureNewProject-min.png?ezimgfmt=rs:768x533/rscb2/ng:webp/ngcb2" alt="Visual Studio 2019 配置新项目对话框"></p>
+<p>将现有项目名称替换为<code>HelloWorld</code>。</p>
+<p>建议您还检查将<em>解决方案和项目放在同一目录中</em>，因为这可以减少每个项目创建的子目录的数量。</p>
+<p>单击<em>“创建”</em>继续。</p>
+<p>最后，您将看到最后一个对话框：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.learncpp.com/images/CppTutorial/Chapter0/VS2019-PrecompiledHeader-min.png?ezimgfmt=rs:563x449/rscb2/ng:webp/ngcb2" alt="Visual Studio 2019 项目选项对话框"></p>
+<p>确保<em>应用程序类型</em>设置为<em>控制台应用程序（.exe）</em>，并且未选择<em>预编译头文件</em>选项。然后单击<em>确定</em>。</p>
+<p>您现在已经创建了一个项目！跳转到下面的<a target="_blank" rel="noopener" href="https://www.learncpp.com/cpp-tutorial/compiling-your-first-program/#visual_studio_solution_explorer">Visual Studio 解决方案资源管理器</a>部分继续。</p>
+<hr>
+<p><strong>在 Visual Studio 2017 或更早版本中创建项目</strong></p>
+<p>要在 Visual Studio 2017 或更早版本中创建新项目，请转到<em>文件菜单 &gt; 新建 &gt; 项目</em>。将弹出一个如下所示的对话框：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.learncpp.com/images/CppTutorial/Chapter0/VS2017-NewProject-min.png?ezimgfmt=rs:888x614/rscb2/ng:webp/ngcb2" alt="Visual Studio 2017 新建项目对话框"></p>
+<p>首先，确保左侧列出了<em>Visual C++ 。如果您没有看到**Visual C++</em>，那么您可能忘记在安装 Visual Studio 时选择安装<em>使用 C++ 的桌面开发工作</em>负载。在这种情况下，请返回课程<a target="_blank" rel="noopener" href="https://www.learncpp.com/cpp-tutorial/installing-an-integrated-development-environment-ide/">0.6 - 安装集成开发环境 (IDE)</a>并按照指示重新安装 Visual Studio（注意：您可以运行 Visual Studio 安装程序并修改现有安装以添加 C++ 工作负载，而不是完全重新安装）。</p>
+<p>如果您使用的是 Visual Studio 2017 v15.3 或更新版本，请在<em>Visual C++</em>下选择<em>“Windows 桌面”</em>，然后在主窗口中选择<em>“Windows 桌面向导” 。</em></p>
+<p>如果您没有看到<em>Windows 桌面</em>选项，则可能是您使用的是旧版本的 Visual Studio。没关系。相反，请在主窗口中选择<em>Win32</em> ，然后选择<em>Win32 控制台应用程序。</em></p>
+<p>在下面的<em>名称</em>字段中，输入程序的名称（将现有名称替换为<code>HelloWorld</code>）。在位置字段中，您可以选择将项目放置到其他位置。目前默认即可。</p>
+<p>单击<em>“确定”</em>。如果您使用的是旧版本的 Visual Studio，则将启动 Win32 应用程序向导。按<em>“下一步”</em>。</p>
+<p>此时，您应该看到一个类似这样的向导对话框（旧版本的 Visual Studio 使用不同的样式，但大多数选项相同）：</p>
+<hr>
+<hr>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/')">Find everything you need</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Find everything you need&amp;url=http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202501211713229.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/01/06/ying-xiang-luo-tu/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202501031519917.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">影像落图</div></div></a></div><div class="next-post pull-right"><a href="/2025/01/13/zi-jian-jie-dian-de-jian-dan-ji-lu/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.garygeng.net/wp-content/uploads/2021/10/20211009201926.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">自建节点的简单记录</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://raw.githubusercontent.com/ytkz11/picture/e0561f27bb351a8dc757d4f5b1d74a1ab5ef4e42/imgs202411281530223.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B-%E5%85%A5%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text">简介&#x2F;入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-1-%E6%95%99%E7%A8%8B%E7%9A%84%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">0.1 教程的简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87"><span class="toc-number">1.1.1.</span> <span class="toc-text">目标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0-2-%E2%80%94-%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B"><span class="toc-number">1.2.</span> <span class="toc-text">0.2 — 编程语言简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0-3-C-C-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.3.</span> <span class="toc-text">0.3  C&#x2F;C++ 简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0-4-C-%E5%BC%80%E5%8F%91%E7%AE%80%E4%BB%8B"><span class="toc-number">1.4.</span> <span class="toc-text">0.4  C++ 开发简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0-7-%E7%BC%96%E8%AF%91%E4%BD%A0%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.5.</span> <span class="toc-text">0.7  编译你的第一个程序</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/01/23/matlab-yu-python-na-yi-ge-gua-he-ni/" title="MATLAB 与 Python：哪一个适合你？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202501211713229.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MATLAB 与 Python：哪一个适合你？"/></a><div class="content"><a class="title" href="/2025/01/23/matlab-yu-python-na-yi-ge-gua-he-ni/" title="MATLAB 与 Python：哪一个适合你？">MATLAB 与 Python：哪一个适合你？</a><time datetime="2025-01-23T12:20:10.000Z" title="发表于 2025-01-23 20:20:10">2025-01-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/21/clion-pei-zhi-gdal-de-jian-dan-bu-zou/" title="clion配置gdal的简单步骤"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202501211713229.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="clion配置gdal的简单步骤"/></a><div class="content"><a class="title" href="/2025/01/21/clion-pei-zhi-gdal-de-jian-dan-bu-zou/" title="clion配置gdal的简单步骤">clion配置gdal的简单步骤</a><time datetime="2025-01-21T12:20:10.000Z" title="发表于 2025-01-21 20:20:10">2025-01-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/13/zi-jian-jie-dian-de-jian-dan-ji-lu/" title="自建节点的简单记录"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.garygeng.net/wp-content/uploads/2021/10/20211009201926.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="自建节点的简单记录"/></a><div class="content"><a class="title" href="/2025/01/13/zi-jian-jie-dian-de-jian-dan-ji-lu/" title="自建节点的简单记录">自建节点的简单记录</a><time datetime="2025-01-13T12:20:10.000Z" title="发表于 2025-01-13 20:20:10">2025-01-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/01/07/learncpp/1/jiao-cheng-jian-jie/" title="无题">无题</a><time datetime="2025-01-07T03:31:00.316Z" title="发表于 2025-01-07 11:31:00">2025-01-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/06/ying-xiang-luo-tu/" title="影像落图"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202501031519917.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="影像落图"/></a><div class="content"><a class="title" href="/2025/01/06/ying-xiang-luo-tu/" title="影像落图">影像落图</a><time datetime="2025-01-06T12:20:10.000Z" title="发表于 2025-01-06 20:20:10">2025-01-06</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">244</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">49</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">76</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>2</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>4</sup></a><a href="/tags/git/" style="font-size: 0.88rem;">git<sup>2</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>35</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 0.88rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 0.88rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 0.88rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>2</sup></a><a href="/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/" style="font-size: 0.88rem;">无人机<sup>2</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>14</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>17</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>139</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>
