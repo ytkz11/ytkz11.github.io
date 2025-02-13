@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-01-23T08:28:43.766Z</updated>
+  <updated>2025-02-12T07:51:23.113Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,69 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>deepseek之提问什么是几何校正</title>
+    <link href="http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/"/>
+    <id>http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/</id>
+    <published>2025-02-12T13:00:10.000Z</published>
+    <updated>2025-02-12T07:51:23.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;提问&quot;&gt;&lt;a href=&quot;#提问&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GDAL" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GDAL/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GDAL" scheme="http://ytkz11@.github.io/tags/GDAL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习gdal的过程</title>
+    <link href="http://ytkz11@.github.io/2025/02/06/xue-xi-gdal-de-guo-cheng/"/>
+    <id>http://ytkz11@.github.io/2025/02/06/xue-xi-gdal-de-guo-cheng/</id>
+    <published>2025-02-06T13:00:10.000Z</published>
+    <updated>2025-02-11T06:51:25.402Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;代码片段1&quot;&gt;&lt;a href=&quot;#代码片段1&quot; class=&quot;headerlink&quot; title=&quot;代码片段1&quot;&gt;&lt;/a&gt;代码片段1&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-c++&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GDAL" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GDAL/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="GDAL" scheme="http://ytkz11@.github.io/tags/GDAL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MATLAB 与 Python：哪一个适合你？</title>
     <link href="http://ytkz11@.github.io/2025/01/23/matlab-yu-python-na-yi-ge-gua-he-ni/"/>
     <id>http://ytkz11@.github.io/2025/01/23/matlab-yu-python-na-yi-ge-gua-he-ni/</id>
     <published>2025-01-23T12:20:10.000Z</published>
-    <updated>2025-01-23T08:28:43.766Z</updated>
+    <updated>2025-02-13T09:06:01.254Z</updated>
     
     
       
@@ -527,65 +585,6 @@
 &lt;p&gt;hdf文件和nc文件非常像，而我对nc格式的文件算是比较熟悉。&lt;/p&gt;
 &lt;p&gt;这么多年下来，我确实是没处理过modis。&lt;/p&gt;
 &lt;p&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>空间数据和遥感处理的 Python 库综合指南</title>
-    <link href="http://ytkz11@.github.io/2024/10/10/kong-jian-shu-ju-he-yao-gan-chu-li-de-python-ku-zong-he-zhi-nan/"/>
-    <id>http://ytkz11@.github.io/2024/10/10/kong-jian-shu-ju-he-yao-gan-chu-li-de-python-ku-zong-he-zhi-nan/</id>
-    <published>2024-10-10T14:25:10.000Z</published>
-    <updated>2024-10-10T08:53:15.634Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;写代码有几年了，平常我的主力语言是python。总体来说，python相对于其他语言可以说是很简单。很多事情和python是一样的，入门容易，精通难。&lt;/p&gt;
-&lt;p&gt;为什么我经常使用python，原因在于Python</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pyinstaller打包含有folium模块，运行错误的解决方法</title>
-    <link href="http://ytkz11@.github.io/2024/10/08/pyinstaller-da-bao-han-you-folium-mo-kuai-yun-xing-cuo-wu-de-jie-jue-fang-fa/"/>
-    <id>http://ytkz11@.github.io/2024/10/08/pyinstaller-da-bao-han-you-folium-mo-kuai-yun-xing-cuo-wu-de-jie-jue-fang-fa/</id>
-    <published>2024-10-08T14:25:10.000Z</published>
-    <updated>2024-10-09T01:22:08.590Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;pyinstaller打包含有folium模块，运行错误的解决方法&quot;&gt;&lt;a href=&quot;#pyinstaller打包含有folium模块，运行错误的解决方法&quot; class=&quot;headerlink&quot;</summary>
         
       
     
