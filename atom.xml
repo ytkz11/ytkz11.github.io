@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-02-12T07:51:23.113Z</updated>
+  <updated>2025-02-18T09:03:48.746Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>去除遥感影像黑边</title>
+    <link href="http://ytkz11@.github.io/2025/02/18/qu-chu-yao-gan-ying-xiang-hei-bian/"/>
+    <id>http://ytkz11@.github.io/2025/02/18/qu-chu-yao-gan-ying-xiang-hei-bian/</id>
+    <published>2025-02-18T12:20:10.000Z</published>
+    <updated>2025-02-18T09:03:48.746Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么会出现黑边&quot;&gt;&lt;a href=&quot;#为什么会出现黑边&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>获取遥感影像的真正的顶点</title>
+    <link href="http://ytkz11@.github.io/2025/02/17/huo-qu-yao-gan-ying-xiang-de-si-ge-ding-dian/"/>
+    <id>http://ytkz11@.github.io/2025/02/17/huo-qu-yao-gan-ying-xiang-de-si-ge-ding-dian/</id>
+    <published>2025-02-17T13:20:10.000Z</published>
+    <updated>2025-02-18T09:03:55.336Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;遥感影像的真正的顶点&quot;&gt;&lt;a href=&quot;#遥感影像的真正的顶点&quot; class=&quot;headerlink&quot; title=&quot;遥感影像的真正的顶点&quot;&gt;&lt;/a&gt;遥感影像的真正的顶点&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>deepseek之提问什么是几何校正</title>
@@ -42,6 +92,31 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="GDAL" scheme="http://ytkz11@.github.io/tags/GDAL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sam微调过程</title>
+    <link href="http://ytkz11@.github.io/2025/02/12/sam-wei-diao-guo-cheng/"/>
+    <id>http://ytkz11@.github.io/2025/02/12/sam-wei-diao-guo-cheng/</id>
+    <published>2025-02-12T13:00:10.000Z</published>
+    <updated>2025-02-14T07:54:56.836Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;根据&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
@@ -493,98 +568,6 @@
         
         
     <summary type="html">&lt;p&gt;在地理信息系统 (GIS) 中，边界框 (Bounding Box) 是用来描述一个几何图形的最小矩形区域的。它可以简单地表示为两个坐标：左下角和右上角的点。在这篇文章中，我们将介绍如何使用 Python 的 &lt;code&gt;geojson&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Python 和 GeoJSON 计算多边形的边界框（Bounding Box）</title>
-    <link href="http://ytkz11@.github.io/2024/10/16/shi-yong-python-he-geojson-ji-suan-duo-bian-xing-de-bian-jie-kuang-bounding-box/"/>
-    <id>http://ytkz11@.github.io/2024/10/16/shi-yong-python-he-geojson-ji-suan-duo-bian-xing-de-bian-jie-kuang-bounding-box/</id>
-    <published>2024-10-16T14:25:10.000Z</published>
-    <updated>2024-10-16T08:15:31.383Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在地理信息系统 (GIS) 中，边界框 (Bounding Box) 是用来描述一个几何图形的最小矩形区域的。它可以简单地表示为两个坐标：左下角和右上角的点。在这篇文章中，我们将介绍如何使用 Python 的 &lt;code&gt;geojson&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>避免 Python 中 GDAL/OGR 绑定导致的崩溃：一个所有权问题</title>
-    <link href="http://ytkz11@.github.io/2024/10/15/bi-mian-python-zhong-gdalogr-bang-ding-dao-zhi-de-beng-kui-yi-ge-suo-you-quan-wen-ti/"/>
-    <id>http://ytkz11@.github.io/2024/10/15/bi-mian-python-zhong-gdalogr-bang-ding-dao-zhi-de-beng-kui-yi-ge-suo-you-quan-wen-ti/</id>
-    <published>2024-10-15T14:25:10.000Z</published>
-    <updated>2024-10-15T10:47:35.479Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在使用 OGR 和 GDAL 的 Python 绑定时，有时你可能会遇到一个奇怪的现象：同样的代码结构，在某些情况下正常运行，而在其他情况下却导致 Python 闪退崩溃。本文将解释这种现象的原因，并演示如何避免这种问题。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这么多年下来，我确实是没处理过modis影像</title>
-    <link href="http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/"/>
-    <id>http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/</id>
-    <published>2024-10-12T14:25:10.000Z</published>
-    <updated>2024-10-29T09:32:17.391Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;读研的时候，研究方法跟modis是不搭边的。工作后也没机会去使用modis。&lt;/p&gt;
-&lt;p&gt;modis的数据格式是hdf。&lt;/p&gt;
-&lt;p&gt;hdf文件和nc文件非常像，而我对nc格式的文件算是比较熟悉。&lt;/p&gt;
-&lt;p&gt;这么多年下来，我确实是没处理过modis。&lt;/p&gt;
-&lt;p&gt;</summary>
         
       
     
