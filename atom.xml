@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-02-18T09:03:48.746Z</updated>
+  <updated>2025-02-19T08:58:27.410Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>遥感矢量文件坐标系转换到WGS1984</title>
+    <link href="http://ytkz11@.github.io/2025/02/19/yao-gan-shi-liang-wen-jian-zuo-biao-xi-zhuan-huan-dao-wgs1984/"/>
+    <id>http://ytkz11@.github.io/2025/02/19/yao-gan-shi-liang-wen-jian-zuo-biao-xi-zhuan-huan-dao-wgs1984/</id>
+    <published>2025-02-19T13:20:10.000Z</published>
+    <updated>2025-02-19T08:58:27.410Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 今天分享一个坐标系转换到wgs1984的脚本，并且分析此脚本生成的结果、和arcgis、QGIS的结果的差别，以此验证该脚本的可靠性。首先那么我说下为什么写这个脚本。&lt;/p&gt;
+&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>去除遥感影像黑边</title>
@@ -539,35 +565,6 @@
     <summary type="html">&lt;p&gt;全球耕地数据集地址：&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/fiboa/data&quot;&gt;https://github.com/fiboa/data&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;List-of-datasets&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Python 和 GeoJSON 计算多边形的边界框（Bounding Box）</title>
-    <link href="http://ytkz11@.github.io/2024/10/22/tong-ji-mou-ge-mu-lu-xia-de-py-wen-jian-you-duo-shao-xing/"/>
-    <id>http://ytkz11@.github.io/2024/10/22/tong-ji-mou-ge-mu-lu-xia-de-py-wen-jian-you-duo-shao-xing/</id>
-    <published>2024-10-22T14:25:10.000Z</published>
-    <updated>2024-10-29T09:31:13.084Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在地理信息系统 (GIS) 中，边界框 (Bounding Box) 是用来描述一个几何图形的最小矩形区域的。它可以简单地表示为两个坐标：左下角和右上角的点。在这篇文章中，我们将介绍如何使用 Python 的 &lt;code&gt;geojson&lt;/code&gt;</summary>
         
       
     
