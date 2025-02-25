@@ -69,6 +69,32 @@
   </entry>
   
   <entry>
+    <title>遥感矢量文件坐标系转换到WGS1984  c++版</title>
+    <link href="http://ytkz11@.github.io/2025/02/25/yao-gan-shi-liang-wen-jian-zuo-biao-xi-zhuan-huan-dao-wgs1984-c-ban/"/>
+    <id>http://ytkz11@.github.io/2025/02/25/yao-gan-shi-liang-wen-jian-zuo-biao-xi-zhuan-huan-dao-wgs1984-c-ban/</id>
+    <published>2025-02-25T13:20:10.000Z</published>
+    <updated>2025-02-25T07:44:07.135Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; 之前写了相同的主题，但是所用的代码python。而今天写一个坐标系转换到wgs1984的c++代码的版本。首先说一下为什么要用c++写，直接用python通杀一切不好嘛？&lt;/p&gt;
+&lt;h1 id=&quot;1-为什么要用-C-编写坐标系转换代码？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>PNG颜色类型与色深的技术解析及Python实现</title>
     <link href="http://ytkz11@.github.io/2025/02/21/png-yan-se-lei-xing-yu-se-shen-de-ji-zhu-jie-xi-ji-python-shi-xian/"/>
     <id>http://ytkz11@.github.io/2025/02/21/png-yan-se-lei-xing-yu-se-shen-de-ji-zhu-jie-xi-ji-python-shi-xian/</id>
@@ -124,7 +150,7 @@
     <link href="http://ytkz11@.github.io/2025/02/19/yao-gan-shi-liang-wen-jian-zuo-biao-xi-zhuan-huan-dao-wgs1984/"/>
     <id>http://ytkz11@.github.io/2025/02/19/yao-gan-shi-liang-wen-jian-zuo-biao-xi-zhuan-huan-dao-wgs1984/</id>
     <published>2025-02-19T13:20:10.000Z</published>
-    <updated>2025-02-20T08:38:35.204Z</updated>
+    <updated>2025-02-25T07:16:10.909Z</updated>
     
     
       
@@ -525,38 +551,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用gdal读取遥感影像并显示图像</title>
-    <link href="http://ytkz11@.github.io/2024/11/28/shi-yong-gdal-du-qu-yao-gan-ying-xiang-bing-xian-shi-tu-xiang/"/>
-    <id>http://ytkz11@.github.io/2024/11/28/shi-yong-gdal-du-qu-yao-gan-ying-xiang-bing-xian-shi-tu-xiang/</id>
-    <published>2024-11-28T14:25:10.000Z</published>
-    <updated>2024-11-29T01:08:47.755Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;学习遥感编程要注意的一个地方是 ：&lt;/p&gt;
-&lt;p&gt;gdal读取图像返回的矩阵，和python图像库读取图像返回的矩阵，二者格式大小是不一致的。&lt;/p&gt;
-&lt;p&gt;这也是我自己在学习遥感编程曾经混淆的一个知识点。 &lt;/p&gt;
-&lt;h1 id=&quot;实践对比&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="矢量" scheme="http://ytkz11@.github.io/tags/%E7%9F%A2%E9%87%8F/"/>
     
   </entry>
   
