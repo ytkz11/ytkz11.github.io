@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-02-25T02:47:00.710Z</updated>
+  <updated>2025-02-27T06:16:50.183Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,83 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 Python 将矢量数据重投影到 Krasovsky_1940_Albers 坐标系</title>
+    <link href="http://ytkz11@.github.io/2025/02/27/shi-yong-python-jiang-shi-liang-shu-ju-chong-tou-ying-dao-krasovsky-1940-albers-zuo-biao-xi/"/>
+    <id>http://ytkz11@.github.io/2025/02/27/shi-yong-python-jiang-shi-liang-shu-ju-chong-tou-ying-dao-krasovsky-1940-albers-zuo-biao-xi/</id>
+    <published>2025-02-27T13:10:10.000Z</published>
+    <updated>2025-02-27T06:16:50.183Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在地理信息系统（GIS）中，坐标系转换是常见的操作，尤其在处理历史数据或特定区域测绘数据时。本文将介绍如何使用 Python 和 GDAL/OGR 库，将矢量文件（如 Shapefile）从任意坐标系重投影到基于 Krasovsky 1940 椭球的 Albers</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>grok生成的记忆单词app搭建文档</title>
+    <link href="http://ytkz11@.github.io/2025/02/26/grok-sheng-cheng-de-ji-yi-dan-ci-app-da-jian-wen-dang/"/>
+    <id>http://ytkz11@.github.io/2025/02/26/grok-sheng-cheng-de-ji-yi-dan-ci-app-da-jian-wen-dang/</id>
+    <published>2025-02-26T13:20:10.000Z</published>
+    <updated>2025-02-26T02:26:22.832Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一个人开发一款记忆单词的App虽然工作量不小，但完全可行。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202502261026356.png&quot; alt=&quot;grok&quot;&gt;&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Python的矢量与卫星影像重叠区域提取</title>
+    <link href="http://ytkz11@.github.io/2025/02/26/ji-yu-python-de-shi-liang-yu-wei-xing-ying-xiang-chong-die-qu-yu-ti-qu/"/>
+    <id>http://ytkz11@.github.io/2025/02/26/ji-yu-python-de-shi-liang-yu-wei-xing-ying-xiang-chong-die-qu-yu-ti-qu/</id>
+    <published>2025-02-26T13:10:10.000Z</published>
+    <updated>2025-02-26T08:08:04.654Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;原始版本&quot;&gt;&lt;a href=&quot;#原始版本&quot; class=&quot;headerlink&quot; title=&quot;原始版本&quot;&gt;&lt;/a&gt;原始版本&lt;/h1&gt;&lt;h3 id=&quot;功能概述&quot;&gt;&lt;a href=&quot;#功能概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>deepseek生成的flutter tutorial 文档</title>
@@ -30,32 +107,6 @@
         
     <summary type="html">&lt;p&gt;以下是一份结构化的 &lt;strong&gt;Flutter 教程整理&lt;/strong&gt;，适合新手逐步学习，覆盖核心知识点和实战项目：&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>grok生成的flutter tutorial 文档</title>
-    <link href="http://ytkz11@.github.io/2025/02/25/grok-sheng-cheng-de-ji-yi-dan-ci-app-da-jian-wen-dang/"/>
-    <id>http://ytkz11@.github.io/2025/02/25/grok-sheng-cheng-de-ji-yi-dan-ci-app-da-jian-wen-dang/</id>
-    <published>2025-02-25T13:20:10.000Z</published>
-    <updated>2025-02-25T03:52:57.955Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;一个人开发一款记忆单词的App虽然工作量不小，但完全可行。以下是一个清晰的思路，帮你在设计和开发过程中逐步推进：&lt;/p&gt;
-&lt;h3 id=&quot;1-明确目标和核心功能&quot;&gt;&lt;a href=&quot;#1-明确目标和核心功能&quot; class=&quot;headerlink&quot; title=&quot;1.</summary>
         
       
     
@@ -99,7 +150,7 @@
     <link href="http://ytkz11@.github.io/2025/02/21/png-yan-se-lei-xing-yu-se-shen-de-ji-zhu-jie-xi-ji-python-shi-xian/"/>
     <id>http://ytkz11@.github.io/2025/02/21/png-yan-se-lei-xing-yu-se-shen-de-ji-zhu-jie-xi-ji-python-shi-xian/</id>
     <published>2025-02-21T13:20:10.000Z</published>
-    <updated>2025-02-24T01:18:31.047Z</updated>
+    <updated>2025-02-28T07:28:32.547Z</updated>
     
     
       
@@ -201,7 +252,7 @@
     <link href="http://ytkz11@.github.io/2025/02/17/huo-qu-yao-gan-ying-xiang-de-si-ge-ding-dian/"/>
     <id>http://ytkz11@.github.io/2025/02/17/huo-qu-yao-gan-ying-xiang-de-si-ge-ding-dian/</id>
     <published>2025-02-17T13:20:10.000Z</published>
-    <updated>2025-02-18T09:03:55.336Z</updated>
+    <updated>2025-02-27T01:52:37.548Z</updated>
     
     
       
@@ -483,61 +534,6 @@
 &lt;p&gt;2.矢量转栅格&lt;/p&gt;
 &lt;p&gt;3.分块分割影像&lt;/p&gt;
 &lt;h1 id=&quot;画矢量&quot;&gt;&lt;a href=&quot;#画矢量&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://ytkz11@.github.io/2024/12/10/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/"/>
-    <id>http://ytkz11@.github.io/2024/12/10/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/</id>
-    <published>2024-12-10T08:01:31.304Z</published>
-    <updated>2024-12-10T08:01:57.532Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;什么是深度学习？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;-&lt;/strong&gt; &lt;strong&gt;45**&lt;/strong&gt;分钟理解深度神经网络和深度学习**&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>90行代码，由遥感影像制作遥感变化检测样本的教程</title>
-    <link href="http://ytkz11@.github.io/2024/12/04/90-xing-dai-ma-zhi-zuo-yao-gan-bian-hua-jian-ce-yang-ben/"/>
-    <id>http://ytkz11@.github.io/2024/12/04/90-xing-dai-ma-zhi-zuo-yao-gan-bian-hua-jian-ce-yang-ben/</id>
-    <published>2024-12-04T13:20:10.000Z</published>
-    <updated>2024-12-04T06:54:10.609Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;制作遥感变化检测样本，其他的遥感深度学习样本制作流程，在本质上无大的差别。&lt;/p&gt;
-&lt;p&gt;比如遥感语义分割的样本coco格式、voc格式，遥感目标检测yolo格式等。&lt;/p&gt;
-&lt;p&gt;它们的差别只在细节之处。现不展开细说，今天说的是：由遥感影像制作遥感变化检测样本&lt;/p&gt;
-&lt;</summary>
         
       
     
