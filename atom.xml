@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-03-03T08:21:04.631Z</updated>
+  <updated>2025-03-11T08:08:51.520Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,81 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>将 Linux 目录中的视频通过网页快速发布的方法</title>
+    <link href="http://ytkz11@.github.io/2025/03/11/jiang-linux-mu-lu-zhong-de-shi-pin-tong-guo-wang-ye-kuai-su-fa-bu-de-fang-fa/"/>
+    <id>http://ytkz11@.github.io/2025/03/11/jiang-linux-mu-lu-zhong-de-shi-pin-tong-guo-wang-ye-kuai-su-fa-bu-de-fang-fa/</id>
+    <published>2025-03-11T12:20:10.000Z</published>
+    <updated>2025-03-11T08:08:51.520Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;使用-Nginx-Apache-专业部署&quot;&gt;&lt;a href=&quot;#使用-Nginx-Apache-专业部署&quot; class=&quot;headerlink&quot; title=&quot;使用 Nginx/Apache 专业部署&quot;&gt;&lt;/a&gt;&lt;strong&gt;使用 Nginx/Apache</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用GDAL库按1000x1000米格网分幅处理卫图</title>
+    <link href="http://ytkz11@.github.io/2025/03/06/shi-yong-gdal-ku-an-1000x1000-mi-ge-wang-fen-fu-chu-li-wei-tu/"/>
+    <id>http://ytkz11@.github.io/2025/03/06/shi-yong-gdal-ku-an-1000x1000-mi-ge-wang-fen-fu-chu-li-wei-tu/</id>
+    <published>2025-03-06T13:20:10.000Z</published>
+    <updated>2025-03-06T02:17:49.389Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;最近一位小伙伴私信我，说他在处理卫星影像时遇到一个需求：需要将大范围的栅格影像按固定网格（比如 1000x1000</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一种基于Segment Anything Model（SAM）改进的算法</title>
+    <link href="http://ytkz11@.github.io/2025/03/04/yi-chong-ji-yu-segment-anything-model-sam-gai-jin-de-suan-fa/"/>
+    <id>http://ytkz11@.github.io/2025/03/04/yi-chong-ji-yu-segment-anything-model-sam-gai-jin-de-suan-fa/</id>
+    <published>2025-03-04T13:20:10.000Z</published>
+    <updated>2025-03-04T07:49:06.561Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;论文提出了&lt;strong&gt;SAM-Road&lt;/strong&gt;，一种基于Segment Anything</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>OGR Layer 常用方法手册</title>
@@ -448,81 +523,6 @@
     <summary type="html">&lt;p&gt;一直想在CLION上写关于GDAL的代码。由于我是一个野生程序员，所以我的CPP功力不深厚，甚至是属于那种，学过但全忘了的状态。&lt;/p&gt;
 &lt;p&gt;平常的工作中，python足以解决了我遇到80%的问题。&lt;/p&gt;
 &lt;p&gt;由于我习惯使用pycharm，那自然对clion也有一个较</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自建节点的简单记录</title>
-    <link href="http://ytkz11@.github.io/2025/01/13/zi-jian-jie-dian-de-jian-dan-ji-lu/"/>
-    <id>http://ytkz11@.github.io/2025/01/13/zi-jian-jie-dian-de-jian-dan-ji-lu/</id>
-    <published>2025-01-13T12:20:10.000Z</published>
-    <updated>2025-01-13T03:47:08.012Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;1.购买vps&lt;/p&gt;
-&lt;p&gt;2.安装xshell&lt;/p&gt;
-&lt;p&gt;3.输入以下语句&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;bash &amp;lt;(wget -qO-</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/"/>
-    <id>http://ytkz11@.github.io/2025/01/07/learncpp/1/jiao-cheng-jian-jie/</id>
-    <published>2025-01-07T03:31:00.316Z</published>
-    <updated>2025-01-07T06:20:36.464Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;简介-入门&quot;&gt;&lt;a href=&quot;#简介-入门&quot; class=&quot;headerlink&quot; title=&quot;简介/入门&quot;&gt;&lt;/a&gt;&lt;strong&gt;简介/入门&lt;/strong&gt;&lt;/h1&gt;&lt;h2 id=&quot;0-1-教程的简介&quot;&gt;&lt;a href=&quot;#0-1-教程的简介&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>影像落图</title>
-    <link href="http://ytkz11@.github.io/2025/01/06/ying-xiang-luo-tu/"/>
-    <id>http://ytkz11@.github.io/2025/01/06/ying-xiang-luo-tu/</id>
-    <published>2025-01-06T12:20:10.000Z</published>
-    <updated>2025-01-06T09:41:25.493Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202501061741890.png&quot; alt=&quot;image-20250106102917645&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
