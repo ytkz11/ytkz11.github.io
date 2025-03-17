@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-03-13T06:45:27.393Z</updated>
+  <updated>2025-03-17T03:04:41.475Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub 项目 OpenFreeMap</title>
+    <link href="http://ytkz11@.github.io/2025/03/17/github-xiang-mu-openfreemap/"/>
+    <id>http://ytkz11@.github.io/2025/03/17/github-xiang-mu-openfreemap/</id>
+    <published>2025-03-17T12:20:10.000Z</published>
+    <updated>2025-03-17T03:04:41.475Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt; &lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202503171104648.png&quot; alt=&quot;image-20250317110433259&quot;&gt;&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>面转线数据转换全攻略：如何完美提取多边形边界？</title>
@@ -504,33 +530,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="GDAL" scheme="http://ytkz11@.github.io/tags/GDAL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MATLAB 与 Python：哪一个适合你？</title>
-    <link href="http://ytkz11@.github.io/2025/01/23/matlab-yu-python-na-yi-ge-gua-he-ni/"/>
-    <id>http://ytkz11@.github.io/2025/01/23/matlab-yu-python-na-yi-ge-gua-he-ni/</id>
-    <published>2025-01-23T12:20:10.000Z</published>
-    <updated>2025-02-13T09:06:01.254Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; MATLAB 和 Python 的主要区别在于，Python 是一种通用编程语言，而 MATLAB 是一个用于工程和科学应用的计算平台。&lt;/p&gt;
-&lt;p&gt;Matlab和Python，它们就像 Windows  和 Linux。&lt;/p&gt;
-&lt;p&gt;Matlab 更加直观，而</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
