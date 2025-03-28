@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-03-17T03:04:41.475Z</updated>
+  <updated>2025-03-27T08:00:47.854Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,77 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在GitHub上下载别人的项目以及历史版本</title>
+    <link href="http://ytkz11@.github.io/2025/03/27/ru-he-zai-github-shang-xia-zai-bie-ren-de-xiang-mu-yi-ji-li-shi-ban-ben/"/>
+    <id>http://ytkz11@.github.io/2025/03/27/ru-he-zai-github-shang-xia-zai-bie-ren-de-xiang-mu-yi-ji-li-shi-ban-ben/</id>
+    <published>2025-03-27T12:20:10.000Z</published>
+    <updated>2025-03-27T08:00:47.854Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;下载方式&quot;&gt;&lt;a href=&quot;#下载方式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub 项目 OpenFreeMap</title>
+    <link href="http://ytkz11@.github.io/2025/03/20/mei-tian-yun-tu/"/>
+    <id>http://ytkz11@.github.io/2025/03/20/mei-tian-yun-tu/</id>
+    <published>2025-03-20T12:20:10.000Z</published>
+    <updated>2025-03-20T06:39:47.285Z</updated>
+    
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub 项目 OpenFreeMap</title>
+    <link href="http://ytkz11@.github.io/2025/03/20/shi-pin-xia-zai-qi/"/>
+    <id>http://ytkz11@.github.io/2025/03/20/shi-pin-xia-zai-qi/</id>
+    <published>2025-03-20T12:20:10.000Z</published>
+    <updated>2025-03-20T09:46:42.055Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;代码&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;import sys
+import os
+import subprocess
+import</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub 项目 OpenFreeMap</title>
@@ -447,89 +518,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>deepseek之提问什么是几何校正</title>
-    <link href="http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/"/>
-    <id>http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/</id>
-    <published>2025-02-12T13:00:10.000Z</published>
-    <updated>2025-02-12T07:51:23.113Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;提问&quot;&gt;&lt;a href=&quot;#提问&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GDAL" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GDAL/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GDAL" scheme="http://ytkz11@.github.io/tags/GDAL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sam微调过程</title>
-    <link href="http://ytkz11@.github.io/2025/02/12/sam-wei-diao-guo-cheng/"/>
-    <id>http://ytkz11@.github.io/2025/02/12/sam-wei-diao-guo-cheng/</id>
-    <published>2025-02-12T13:00:10.000Z</published>
-    <updated>2025-02-21T08:45:17.969Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;根据&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习gdal的过程</title>
-    <link href="http://ytkz11@.github.io/2025/02/06/xue-xi-gdal-de-guo-cheng/"/>
-    <id>http://ytkz11@.github.io/2025/02/06/xue-xi-gdal-de-guo-cheng/</id>
-    <published>2025-02-06T13:00:10.000Z</published>
-    <updated>2025-02-20T09:43:12.644Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;代码片段1&quot;&gt;&lt;a href=&quot;#代码片段1&quot; class=&quot;headerlink&quot; title=&quot;代码片段1&quot;&gt;&lt;/a&gt;代码片段1&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-c++&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GDAL" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GDAL/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GDAL" scheme="http://ytkz11@.github.io/tags/GDAL/"/>
     
   </entry>
   
