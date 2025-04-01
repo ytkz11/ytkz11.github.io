@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-03-27T08:00:47.854Z</updated>
+  <updated>2025-04-01T10:18:59.880Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GIS：前景很香，钱景有点悬，我一个测绘转码农的破局心得</title>
+    <link href="http://ytkz11@.github.io/2025/03/27/gis-qian-jing-hen-xiang-qian-jing-you-dian-xuan-wo-yi-ge-ce-hui-zhuan-ma-nong-de-po-ju-xin-de/"/>
+    <id>http://ytkz11@.github.io/2025/03/27/gis-qian-jing-hen-xiang-qian-jing-you-dian-xuan-wo-yi-ge-ce-hui-zhuan-ma-nong-de-po-ju-xin-de/</id>
+    <published>2025-03-27T12:20:10.000Z</published>
+    <updated>2025-04-01T10:18:59.880Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在GitHub上下载别人的项目以及历史版本</title>
@@ -29,6 +54,59 @@
         
         
     <summary type="html">&lt;h1 id=&quot;下载方式&quot;&gt;&lt;a href=&quot;#下载方式&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今天问了朋友，有没有更好的Ssh工具，她给我推荐了XTerminal</title>
+    <link href="http://ytkz11@.github.io/2025/03/27/kai-fa-gong-ju-xterminal/"/>
+    <id>http://ytkz11@.github.io/2025/03/27/kai-fa-gong-ju-xterminal/</id>
+    <published>2025-03-27T12:20:10.000Z</published>
+    <updated>2025-03-31T07:50:11.440Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;SSH工具，我之前用的是xshell。今天问了朋友，有没有更好的Ssh工具，她给我推荐了XTerminal。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阶段性汇总  2025年3月公众号文章精选回顾</title>
+    <link href="http://ytkz11@.github.io/2025/03/27/jie-duan-xing-hui-zong-2025-nian-3-yue-gong-zhong-hao-wen-zhang-jing-xuan-hui-gu/"/>
+    <id>http://ytkz11@.github.io/2025/03/27/jie-duan-xing-hui-zong-2025-nian-3-yue-gong-zhong-hao-wen-zhang-jing-xuan-hui-gu/</id>
+    <published>2025-03-27T12:20:10.000Z</published>
+    <updated>2025-04-01T08:37:02.980Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;各位读者朋友们好！转眼间3月已接近尾声，感谢大家对本公众号的持续关注。本月我们围绕&lt;strong&gt;遥感技术开发、地理信息工具更新、编程实践与行业洞察&lt;/strong&gt;等方向，产出了多篇干货内容。现将3月文章精华整理如下：&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3</summary>
         
       
     
@@ -433,82 +511,6 @@ import</summary>
         
     <summary type="html">&lt;p&gt; 今天分享一个遥感矢量和影像制作voc数据集的全流程及代码。&lt;/p&gt;
 &lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>遥感矢量文件坐标系转换到WGS1984</title>
-    <link href="http://ytkz11@.github.io/2025/02/19/yao-gan-shi-liang-wen-jian-zuo-biao-xi-zhuan-huan-dao-wgs1984/"/>
-    <id>http://ytkz11@.github.io/2025/02/19/yao-gan-shi-liang-wen-jian-zuo-biao-xi-zhuan-huan-dao-wgs1984/</id>
-    <published>2025-02-19T13:20:10.000Z</published>
-    <updated>2025-02-25T07:16:10.909Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt; 今天分享一个坐标系转换到wgs1984的脚本，并且分析此脚本生成的结果、和arcgis、QGIS的结果的差别，以此验证该脚本的可靠性。首先那么我说下为什么写这个脚本。&lt;/p&gt;
-&lt;h1 id=&quot;1&quot;&gt;&lt;a href=&quot;#1&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>去除遥感影像黑边</title>
-    <link href="http://ytkz11@.github.io/2025/02/18/qu-chu-yao-gan-ying-xiang-hei-bian/"/>
-    <id>http://ytkz11@.github.io/2025/02/18/qu-chu-yao-gan-ying-xiang-hei-bian/</id>
-    <published>2025-02-18T12:20:10.000Z</published>
-    <updated>2025-02-18T09:03:48.746Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;为什么会出现黑边&quot;&gt;&lt;a href=&quot;#为什么会出现黑边&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>获取遥感影像的真正的顶点</title>
-    <link href="http://ytkz11@.github.io/2025/02/17/huo-qu-yao-gan-ying-xiang-de-si-ge-ding-dian/"/>
-    <id>http://ytkz11@.github.io/2025/02/17/huo-qu-yao-gan-ying-xiang-de-si-ge-ding-dian/</id>
-    <published>2025-02-17T13:20:10.000Z</published>
-    <updated>2025-02-27T01:52:37.548Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;遥感影像的真正的顶点&quot;&gt;&lt;a href=&quot;#遥感影像的真正的顶点&quot; class=&quot;headerlink&quot; title=&quot;遥感影像的真正的顶点&quot;&gt;&lt;/a&gt;遥感影像的真正的顶点&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
         
       
     
