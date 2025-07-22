@@ -1,0 +1,746 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>linux安装python的步骤 | Find everything you need</title><meta name="keywords" content="遥感,矢量"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="linux安装python的步骤"><meta name="application-name" content="linux安装python的步骤"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="linux安装python的步骤"><meta property="og:url" content="http://ytkz11@.github.io/2024/09/20/ogr-python-xue-xi-jiao-cheng-da-gang/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="OGR Python 学习教程大纲 引言 什么是OGR？OGR是一个用于处理矢量数据的库，是GDAL（地理数据抽象库）的一部分。它支持多种矢量数据格式，如Shapefile、GeoJSON和KML等，可以进行读取、写入和转换等操作。OGR使得在Python中处理空间数据变得更加方便和高效。  OGR"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409181503548.png"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409181503548.png"><meta name="description" content="OGR Python 学习教程大纲 引言 什么是OGR？OGR是一个用于处理矢量数据的库，是GDAL（地理数据抽象库）的一部分。它支持多种矢量数据格式，如Shapefile、GeoJSON和KML等，可以进行读取、写入和转换等操作。OGR使得在Python中处理空间数据变得更加方便和高效。  OGR"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ytkz11@.github.io/2024/09/20/ogr-python-xue-xi-jiao-cheng-da-gang/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: 'linux安装python的步骤',
+  postAI: '',
+  pageFillDescription: '什么是OGR？, 环境设置, 读写数据, 如何创建和写入空间数据, 1.导入OGR模块, 2. 创建数据源, 3.创建图层, 4. 定义字段, 5. 创建和写入要素, 6. 关闭数据源, 示例完整代码, 数据操作, 1. 导入OGR模块, 2. 打开数据源, 3. 设置属性过滤器, 4. 遍历筛选后的要素, 常用的查询操作, 几何操作, 总结, 后续学习方向学习教程大纲引言什么是是一个用于处理矢量数据的库是地理数据抽象库的一部分它支持多种矢量数据格式如和等可以进行读取写入和转换等操作使得在中处理空间数据变得更加方便和高效在中的应用在中的应用非常广泛主要包括以下几个方面数据导入与导出能够读取和写入多种格式的空间数据使得不同数据源之间的转换变得简单例如将转换为或将导出为数据处理可以对矢量数据进行操作如剪切合并缓冲区分析等帮助用户进行空间分析数据查询支持属性查询和空间查询用户可以根据特定条件筛选和检索数据方便数据分析和可视化坐标转换支持坐标系统的转换用户可以在不同的坐标参考系之间进行数据转换以确保数据的准确性自动化与批处理可以使用脚本自动化处理大量的空间数据提高工作效率适用于数据预处理和分析工作流环境设置安装库安装库可以通过以下几种方法进行使用如果你使用可以通过以下命令安装从源代码安装你可以从的官方网站下载源代码按照文档中的说明进行编译和安装安装完成后可以通过运行以下命令检查是否成功基本概念数据格式简介等在中常见的数据格式包括一种广泛使用的矢量数据格式通常由多个文件组成等用于存储点线和面数据基于格式的开放标准用于表示地理特征易于与应用程序结合使用支持点线多边形及其属性用于表示地理数据的格式常用于支持地标路径和图层一种开放的可扩展的格式支持栅格和矢量数据适用于移动和应用一种文本格式用于表示几何对象的描述常用于数据库和传输数据的核心功能的核心功能主要包括以下几个方面数据读取能够从多种矢量数据格式中读取数据如等并将其加载到中进行处理数据写入支持将处理后的数据保存为不同格式包括创建新的等方便数据共享和发布数据转换可以在不同格式之间进行转换例如将转换为或将转换为简化数据管理属性操作支持对数据属性进行查询和修改允许用户根据属性条件筛选和更新数据几何操作提供几何对象的创建修改和计算功能如缓冲区分析相交并集等便于进行空间分析坐标参考系管理支持坐标参考系的转换和管理确保数据在不同空间参考系中的准确性空间查询支持基于几何关系的空间查询如查找与特定几何形状相交的要素读写数据如何读取空间数据使用读取空间数据非常简单以下是一个基本的步骤和示例代码导入模块首先确保你已安装库并在脚本中导入模块打开数据源使用函数打开数据源支持多种格式替换为你的数据文件路径获取图层通过数据源获取图层图层是数据的实际集合遍历要素使用方法遍历图层中的要素获取几何对象获取属性字典关闭数据源完成操作后关闭数据源如何创建和写入空间数据导入模块创建数据源使用选择驱动程序并创建一个新的数据源选择驱动例如创建一个创建图层在数据源中创建一个新的图层定义其几何类型和投影信息创建一个点图层定义字段定义一个名为的字符串字段创建和写入要素创建要素并设置其几何和属性创建一个新要素设置几何例如添加一个点设置点坐标设置属性值将要素写入图层清理要素对象关闭数据源完成写入后关闭数据源以保存更改示例完整代码创建数据源创建图层定义字段创建和写入要素清理数据操作常用的数据处理方法在使用进行数据处理时常用的方法包括筛选和查询使用方法对图层进行属性过滤方便检索特定要素空间查询结合几何对象进行空间查询如使用或方法检查要素之间的空间关系几何转换使用方法将几何对象转换到不同的坐标参考系确保数据的一致性缓冲区分析使用方法为几何对象创建缓冲区用于分析影响范围合并和拆分可以将多个要素合并为一个几何对象或根据条件拆分要素几何计算计算面积周长中心点等使用和等方法属性更新通过方法更新要素的属性值删除要素使用方法从图层中删除特定要素创建新图层将处理结果写入新的图层以便后续使用属性查询与筛选导入模块确保你已安装库并在脚本中导入模块打开数据源设置属性过滤器使用方法设置属性过滤器以选择符合特定条件的要素遍历筛选后的要素使用循环遍历筛选后的要素并处理或输出所需信息常用的查询操作比较操作符逻辑操作符字符串匹配使用进行部分匹配如几何操作创建一个点创建一个多边形闭合环计算面积和周长获取中心点创建缓冲区检查空间关系关闭示例项目完整的实用案例打开点数据输入打开多边形数据输入创建输出创建新的图层定义字段记录到多边形的距离获取多边形的几何对象假设只处理第一个多边形遍历点数据计算点到多边形的距离创建新要素并设置几何和属性将新要素写入输出图层清理关闭输入和输出数据源常见问题与解决方案文件路径错误使用错误的文件路径或文件名确保路径正确且文件存在在系统中注意使用反斜杠或双反斜杠来避免转义字符问题缺少必要的库忘记安装或库导致确保通过或进行安装驱动程序未找到使用不支持的文件格式导致无法找到驱动程序检查你要使用的格式是否被支持几何对象操作错误在操作几何对象时未检查几何对象是否有效例如尝试对未初始化的几何对象进行操作会导致错误未处理内存管理忘记清理和关闭数据源可能导致内存泄漏使用关闭数据源属性查询失败使用错误的字段名称进行属性查询导致过滤器无法正确应用确保字段名称拼写正确并存在空间查询错误在进行空间查询时几何对象未正确初始化或不在同一坐标参考系下导致查询失败不正确的几何类型在创建新几何对象时使用了不正确的几何类型导致后续操作失败例如尝试将点对象与线对象混合使用数据类型错误在设置字段值时使用了不兼容的数据类型例如将字符串值赋给浮点数字段使用过期或不推荐的方法使用已经被弃用的方法或导致兼容性问题或错误结论总结和后续学习方向在学习和的过程中以下是一些关键点的总结和后续学习方向的建议总结的基础是的一部分专注于矢量数据的处理支持多种常用的空间数据格式如等基本操作读取和写入空间数据进行数据筛选和属性查询处理几何对象包括几何计算空间分析和几何转换数据管理理解如何创建修改和删除图层与要素掌握坐标参考系的管理与转换空间分析利用进行空间关系查询和缓冲区分析等操作计算几何特征的属性如面积周长和中心点常见问题与调试熟悉新手常见错误及其解决方案提升代码的稳定性和可维护性后续学习方向深入学习进一步研究的其他功能包括栅格数据处理和分析学习如何使用进行数据格式转换和栅格分析空间数据库学习如何将空间数据存储在或其他空间数据库中以便于管理和查询高级空间分析掌握更复杂的空间分析技术如空间插值网络分析和地统计分析可视化工具学习如何使用库如或将空间数据进行可视化展示应用开发学习如何使用构建应用程序利用或等框架开发应用参与开源项目加入或其他相关的开源项目通过贡献代码或文档来加深理解阅读文献和案例阅读相关书籍和研究论文了解在不同行业中的应用案例和最佳实践',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-26 10:28:44',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 1.05rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 1.05rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1.05rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 1.05rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/" itemprop="url">遥感</a><i class="anzhiyufont anzhiyu-icon-angle-right post-meta-separator"></i><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/" itemprop="url">矢量</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%81%A5%E6%84%9F/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>遥感</span></a><a class="article-meta__tags" href="/tags/%E7%9F%A2%E9%87%8F/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>矢量</span></a></span></div></div><h1 class="post-title" itemprop="name headline">linux安装python的步骤</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-09-20T14:25:10.000Z" title="发表于 2024-09-20 22:25:10">2024-09-20</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-09-26T02:28:44.399Z" title="更新于 2024-09-26 10:28:44">2024-09-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409181503548.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ytkz11@.github.io/2024/09/20/ogr-python-xue-xi-jiao-cheng-da-gang/"><header><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/" itemprop="url">遥感</a><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/%E7%9F%A2%E9%87%8F/" itemprop="url">矢量</a><a href="/tags/%E9%81%A5%E6%84%9F/" tabindex="-1" itemprop="url">遥感</a><a href="/tags/%E7%9F%A2%E9%87%8F/" tabindex="-1" itemprop="url">矢量</a><h1 id="CrawlerTitle" itemprop="name headline">linux安装python的步骤</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2024-09-20T14:25:10.000Z" title="发表于 2024-09-20 22:25:10">2024-09-20</time><time itemprop="dateCreated datePublished" datetime="2024-09-26T02:28:44.399Z" title="更新于 2024-09-26 10:28:44">2024-09-26</time></header><p>OGR Python 学习教程大纲</p>
+<p><strong>引言</strong></p>
+<h1 id="什么是OGR？"><a href="#什么是OGR？" class="headerlink" title="什么是OGR？"></a>什么是OGR？</h1><p>OGR是一个用于处理矢量数据的库，是GDAL（地理数据抽象库）的一部分。它支持多种矢量数据格式，如Shapefile、GeoJSON和KML等，可以进行读取、写入和转换等操作。OGR使得在Python中处理空间数据变得更加方便和高效。</p>
+<ul>
+<li>OGR在GIS中的应用</li>
+</ul>
+<p>OGR在GIS中的应用非常广泛，主要包括以下几个方面：</p>
+<ol>
+<li><strong>数据导入与导出</strong>：能够读取和写入多种格式的空间数据，使得不同数据源之间的转换变得简单。例如，将Shapefile转换为GeoJSON，或将KML导出为Shapefile。</li>
+<li><strong>数据处理</strong>：可以对矢量数据进行操作，如剪切、合并、缓冲区分析等，帮助用户进行空间分析。</li>
+<li><strong>数据查询</strong>：支持属性查询和空间查询，用户可以根据特定条件筛选和检索数据，方便数据分析和可视化。</li>
+<li><strong>坐标转换</strong>：支持坐标系统的转换，用户可以在不同的坐标参考系之间进行数据转换，以确保数据的准确性。</li>
+<li><strong>自动化与批处理</strong>：可以使用Python脚本自动化处理大量的空间数据，提高工作效率，适用于数据预处理和分析工作流。</li>
+</ol>
+<h1 id="环境设置"><a href="#环境设置" class="headerlink" title="环境设置"></a><strong>环境设置</strong></h1><ul>
+<li>安装GDAL库</li>
+</ul>
+<p>安装GDAL库可以通过以下几种方法进行：</p>
+<ol>
+<li><strong>使用conda</strong>： 如果你使用Anaconda，可以通过以下命令安装：</li>
+</ol>
+<pre class="line-numbers language-none"><code class="language-none">conda install -c conda-forge gdal<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>   2.<strong>从源代码安装</strong>： 你可以从GDAL的官方网站下载源代码，按照文档中的说明进行编译和安装。</p>
+<p>安装完成后，可以通过运行以下命令检查是否成功：</p>
+<pre class="line-numbers language-none"><code class="language-none">gdalinfo --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>基本概念</strong></p>
+<ul>
+<li>数据格式简介（Shapefile, GeoJSON等）</li>
+</ul>
+<p>在GIS中，常见的数据格式包括：</p>
+<ol>
+<li><strong>Shapefile</strong>：一种广泛使用的矢量数据格式，通常由多个文件组成（.shp, .shx, .dbf等），用于存储点、线和面数据。</li>
+<li><strong>GeoJSON</strong>：基于JSON格式的开放标准，用于表示地理特征，易于与Web应用程序结合使用，支持点、线、多边形及其属性。</li>
+<li><strong>KML（Keyhole Markup Language）</strong>：用于表示地理数据的XML格式，常用于Google Earth，支持地标、路径和图层。</li>
+<li><strong>GPKG（GeoPackage）</strong>：一种开放的、可扩展的格式，支持栅格和矢量数据，适用于移动和Web应用。</li>
+<li><strong>WKT（Well-Known Text）</strong>：一种文本格式，用于表示几何对象的描述，常用于数据库和传输数据。</li>
+</ol>
+<ul>
+<li>OGR的核心功能</li>
+</ul>
+<p>OGR的核心功能主要包括以下几个方面：</p>
+<ol>
+<li><strong>数据读取</strong>：能够从多种矢量数据格式中读取数据，如Shapefile、GeoJSON、KML等，并将其加载到Python中进行处理。</li>
+<li><strong>数据写入</strong>：支持将处理后的数据保存为不同格式，包括创建新的Shapefile、GeoJSON等，方便数据共享和发布。</li>
+<li><strong>数据转换</strong>：可以在不同格式之间进行转换，例如将Shapefile转换为GeoJSON，或将KML转换为GPKG，简化数据管理。</li>
+<li><strong>属性操作</strong>：支持对数据属性进行查询和修改，允许用户根据属性条件筛选和更新数据。</li>
+<li><strong>几何操作</strong>：提供几何对象的创建、修改和计算功能，如缓冲区分析、相交、并集等，便于进行空间分析。</li>
+<li><strong>坐标参考系管理</strong>：支持坐标参考系的转换和管理，确保数据在不同空间参考系中的准确性。</li>
+<li><strong>空间查询</strong>：支持基于几何关系的空间查询，如查找与特定几何形状相交的要素。</li>
+</ol>
+<h1 id="读写数据"><a href="#读写数据" class="headerlink" title="读写数据"></a><strong>读写数据</strong></h1><ul>
+<li>如何读取空间数据</li>
+</ul>
+<p>使用OGR读取空间数据非常简单，以下是一个基本的步骤和示例代码：</p>
+<p>1.<strong>导入OGR模块</strong>： 首先，确保你已安装GDAL库并在Python脚本中导入OGR模块。</p>
+<pre class="line-numbers language-none"><code class="language-none">from osgeo import ogr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>2.<strong>打开数据源</strong>： 使用<code>ogr.Open()</code>函数打开数据源，支持多种格式。</p>
+<pre class="line-numbers language-none"><code class="language-none"># 替换为你的数据文件路径
+data_source = ogr.Open("path/to/your/data.shp")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>3.<strong>获取图层</strong>： 通过数据源获取图层，图层是数据的实际集合。</p>
+<pre class="line-numbers language-none"><code class="language-none">layer = data_source.GetLayer()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>4.<strong>遍历要素</strong>： 使用<code>GetNextFeature()</code>方法遍历图层中的要素。</p>
+<pre class="line-numbers language-none"><code class="language-none">for feature in layer:
+    geometry = feature.GetGeometryRef()  # 获取几何对象
+    attributes = feature.items()          # 获取属性字典
+    print("Geometry:", geometry)
+    print("Attributes:", attributes)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>5.<strong>关闭数据源</strong>： 完成操作后，关闭数据源。</p>
+<pre class="line-numbers language-none"><code class="language-none">data_source = None <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="如何创建和写入空间数据"><a href="#如何创建和写入空间数据" class="headerlink" title="如何创建和写入空间数据"></a>如何创建和写入空间数据</h1><h3 id="1-导入OGR模块"><a href="#1-导入OGR模块" class="headerlink" title="1.导入OGR模块"></a>1.导入OGR模块</h3><pre class="line-numbers language-none"><code class="language-none">from osgeo import ogr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-创建数据源"><a href="#2-创建数据源" class="headerlink" title="2. 创建数据源"></a>2. 创建数据源</h3><p>使用<code>ogr.GetDriverByName()</code>选择驱动程序，并创建一个新的数据源。</p>
+<pre class="line-numbers language-none"><code class="language-none"># 选择驱动，例如创建一个Shapefile
+driver = ogr.GetDriverByName("ESRI Shapefile")
+data_source = driver.CreateDataSource("path/to/your/new_data.shp")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-创建图层"><a href="#3-创建图层" class="headerlink" title="3.创建图层"></a>3.创建图层</h3><p>在数据源中创建一个新的图层，定义其几何类型和投影信息。</p>
+<pre class="line-numbers language-none"><code class="language-none"># 创建一个点图层
+layer = data_source.CreateLayer("layer_name", geom_type=ogr.wkbPoint)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="4-定义字段"><a href="#4-定义字段" class="headerlink" title="4. 定义字段"></a>4. 定义字段</h3><pre class="line-numbers language-none"><code class="language-none"># 定义一个名为"name"的字符串字段
+field_definition = ogr.FieldDefn("name", ogr.OFTString)
+layer.CreateField(field_definition)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-创建和写入要素"><a href="#5-创建和写入要素" class="headerlink" title="5. 创建和写入要素"></a>5. 创建和写入要素</h3><p>创建要素并设置其几何和属性。</p>
+<pre class="line-numbers language-none"><code class="language-none"># 创建一个新要素
+feature = ogr.Feature(layer.GetLayerDefn())
+
+# 设置几何（例如：添加一个点）
+point = ogr.Geometry(ogr.wkbPoint)
+point.AddPoint(1.0, 1.0)  # 设置点坐标
+feature.SetGeometry(point)
+
+# 设置属性值
+feature.SetField("name", "Example Point")
+
+# 将要素写入图层
+layer.CreateFeature(feature)
+
+# 清理要素对象
+feature = None
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="6-关闭数据源"><a href="#6-关闭数据源" class="headerlink" title="6. 关闭数据源"></a>6. 关闭数据源</h3><p>完成写入后，关闭数据源以保存更改。</p>
+<pre class="line-numbers language-none"><code class="language-none">data_source = None<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="示例完整代码"><a href="#示例完整代码" class="headerlink" title="示例完整代码"></a>示例完整代码</h4><pre class="line-numbers language-none"><code class="language-none">from osgeo import ogr
+
+# 创建数据源
+driver = ogr.GetDriverByName("ESRI Shapefile")
+data_source = driver.CreateDataSource("path/to/your/new_data.shp")
+
+# 创建图层
+layer = data_source.CreateLayer("layer_name", geom_type=ogr.wkbPoint)
+
+# 定义字段
+field_definition = ogr.FieldDefn("name", ogr.OFTString)
+layer.CreateField(field_definition)
+
+# 创建和写入要素
+feature = ogr.Feature(layer.GetLayerDefn())
+point = ogr.Geometry(ogr.wkbPoint)
+point.AddPoint(1.0, 1.0)
+feature.SetGeometry(point)
+feature.SetField("name", "Example Point")
+layer.CreateFeature(feature)
+
+# 清理
+feature = None
+data_source = None
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a><strong>数据操作</strong></h1><ul>
+<li>常用的数据处理方法</li>
+</ul>
+<p>在使用OGR进行数据处理时，常用的方法包括：</p>
+<ol>
+<li><strong>筛选和查询</strong>：<ul>
+<li>使用<code>SetAttributeFilter()</code>方法对图层进行属性过滤，方便检索特定要素。</li>
+</ul>
+</li>
+<li><strong>空间查询</strong>：<ul>
+<li>结合几何对象进行空间查询，如使用<code>Intersect()</code>或<code>Contains()</code>方法检查要素之间的空间关系。</li>
+</ul>
+</li>
+<li><strong>几何转换</strong>：<ul>
+<li>使用<code>Transform()</code>方法将几何对象转换到不同的坐标参考系，确保数据的一致性。</li>
+</ul>
+</li>
+<li><strong>缓冲区分析</strong>：<ul>
+<li>使用<code>Buffer()</code>方法为几何对象创建缓冲区，用于分析影响范围。</li>
+</ul>
+</li>
+<li><strong>合并和拆分</strong>：<ul>
+<li>可以将多个要素合并为一个几何对象，或根据条件拆分要素。</li>
+</ul>
+</li>
+<li><strong>几何计算</strong>：<ul>
+<li>计算面积、周长、中心点等，使用<code>GetArea()</code>、<code>GetLength()</code>和<code>Centroid()</code>等方法。</li>
+</ul>
+</li>
+<li><strong>属性更新</strong>：<ul>
+<li>通过<code>SetField()</code>方法更新要素的属性值。</li>
+</ul>
+</li>
+<li><strong>删除要素</strong>：<ul>
+<li>使用<code>DeleteFeature()</code>方法从图层中删除特定要素。</li>
+</ul>
+</li>
+<li><strong>创建新图层</strong>：<ul>
+<li>将处理结果写入新的图层，以便后续使用。</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>属性查询与筛选</li>
+</ul>
+<h3 id="1-导入OGR模块-1"><a href="#1-导入OGR模块-1" class="headerlink" title="1. 导入OGR模块"></a>1. 导入OGR模块</h3><p>确保你已安装GDAL库并在Python脚本中导入OGR模块。</p>
+<pre class="line-numbers language-none"><code class="language-none">from osgeo import ogr<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-打开数据源"><a href="#2-打开数据源" class="headerlink" title="2. 打开数据源"></a>2. 打开数据源</h3><pre class="line-numbers language-none"><code class="language-none">data_source = ogr.Open("path/to/your/data.shp")
+layer = data_source.GetLayer()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="3-设置属性过滤器"><a href="#3-设置属性过滤器" class="headerlink" title="3. 设置属性过滤器"></a>3. 设置属性过滤器</h3><p>使用<code>SetAttributeFilter()</code>方法设置属性过滤器，以选择符合特定条件的要素。</p>
+<pre class="line-numbers language-none"><code class="language-none">layer.SetAttributeFilter("name = 'Example Point'")<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="4-遍历筛选后的要素"><a href="#4-遍历筛选后的要素" class="headerlink" title="4. 遍历筛选后的要素"></a>4. 遍历筛选后的要素</h3><p>使用循环遍历筛选后的要素，并处理或输出所需信息。</p>
+<pre class="line-numbers language-none"><code class="language-none">for feature in layer:
+    geometry = feature.GetGeometryRef()
+    attributes = feature.items()
+    print("Geometry:", geometry)
+    print("Attributes:", attributes)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="常用的查询操作"><a href="#常用的查询操作" class="headerlink" title="常用的查询操作"></a>常用的查询操作</h3><ul>
+<li><strong>比较操作符</strong>：<ul>
+<li><code>=</code>、<code>!=</code>、<code>&gt;</code>、<code>&lt;</code>、<code>&gt;=</code>、<code>&lt;=</code></li>
+</ul>
+</li>
+<li><strong>逻辑操作符</strong>：<ul>
+<li><code>AND</code>、<code>OR</code>、<code>NOT</code></li>
+</ul>
+</li>
+<li><strong>字符串匹配</strong>：<ul>
+<li>使用<code>LIKE</code>进行部分匹配，如<code>name LIKE 'Example%'</code>。</li>
+</ul>
+</li>
+</ul>
+<h1 id="几何操作"><a href="#几何操作" class="headerlink" title="几何操作"></a><strong>几何操作</strong></h1><pre class="line-numbers language-none"><code class="language-none">from osgeo import ogr
+
+# 创建一个点
+point = ogr.Geometry(ogr.wkbPoint)
+point.AddPoint(1.0, 2.0)
+
+# 创建一个多边形
+polygon = ogr.Geometry(ogr.wkbPolygon)
+ring = ogr.Geometry(ogr.wkbLinearRing)
+ring.AddPoint(0.0, 0.0)
+ring.AddPoint(4.0, 0.0)
+ring.AddPoint(4.0, 4.0)
+ring.AddPoint(0.0, 4.0)
+ring.AddPoint(0.0, 0.0)  # 闭合环
+polygon.AddGeometry(ring)
+
+# 计算面积和周长
+area = polygon.GetArea()
+print("Area:", area)
+
+# 获取中心点
+centroid = polygon.Centroid()
+print("Centroid:", centroid)
+
+# 创建缓冲区
+buffer = point.Buffer(1.0)
+
+# 检查空间关系
+is_intersecting = point.Intersects(polygon)
+is_contained = polygon.Contains(point)
+print("Intersects:", is_intersecting)
+print("Contains:", is_contained)
+
+# 关闭
+point = None
+polygon = None<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>示例项目</strong></p>
+<ul>
+<li>完整的实用案例</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">from osgeo import ogr
+
+# 打开点数据（输入Shapefile）
+point_data_source = ogr.Open("path/to/your/points.shp")
+point_layer = point_data_source.GetLayer()
+
+# 打开多边形数据（输入Shapefile）
+polygon_data_source = ogr.Open("path/to/your/polygon.shp")
+polygon_layer = polygon_data_source.GetLayer()
+
+# 创建输出Shapefile
+driver = ogr.GetDriverByName("ESRI Shapefile")
+output_data_source = driver.CreateDataSource("path/to/your/output.shp")
+
+# 创建新的图层
+output_layer = output_data_source.CreateLayer("output_points", geom_type=ogr.wkbPoint)
+
+# 定义字段，记录到多边形的距离
+field_definition = ogr.FieldDefn("distance_to_polygon", ogr.OFTReal)
+output_layer.CreateField(field_definition)
+
+# 获取多边形的几何对象
+polygon_feature = polygon_layer.GetFeature(0)  # 假设只处理第一个多边形
+polygon_geometry = polygon_feature.GetGeometryRef()
+
+# 遍历点数据
+for point_feature in point_layer:
+    point_geometry = point_feature.GetGeometryRef()
+    
+    # 计算点到多边形的距离
+    distance = point_geometry.Distance(polygon_geometry)
+    
+    # 创建新要素并设置几何和属性
+    new_feature = ogr.Feature(output_layer.GetLayerDefn())
+    new_feature.SetGeometry(point_geometry)
+    new_feature.SetField("distance_to_polygon", distance)
+    
+    # 将新要素写入输出图层
+    output_layer.CreateFeature(new_feature)
+    
+    # 清理
+    new_feature = None
+
+# 关闭输入和输出数据源
+point_data_source = None
+polygon_data_source = None
+output_data_source = None<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><strong>常见问题与解决方案</strong></p>
+<ul>
+<li><p><strong>文件路径错误</strong>：</p>
+<ul>
+<li>使用错误的文件路径或文件名。确保路径正确且文件存在。</li>
+<li>在Windows系统中，注意使用反斜杠（<code>\</code>）或双反斜杠（<code>\\</code>）来避免转义字符问题。</li>
+</ul>
+<p><strong>缺少必要的库</strong>：</p>
+<ul>
+<li>忘记安装GDAL或OGR库，导致<code>ImportError</code>。确保通过<code>pip install GDAL</code>或<code>conda install gdal</code>进行安装。</li>
+</ul>
+<p><strong>驱动程序未找到</strong>：</p>
+<ul>
+<li>使用不支持的文件格式，导致无法找到驱动程序。检查你要使用的格式是否被GDAL支持。</li>
+</ul>
+<p><strong>几何对象操作错误</strong>：</p>
+<ul>
+<li>在操作几何对象时，未检查几何对象是否有效。例如，尝试对未初始化的几何对象进行操作会导致错误。</li>
+</ul>
+<p><strong>未处理内存管理</strong>：</p>
+<ul>
+<li>忘记清理和关闭数据源，可能导致内存泄漏。使用<code>data_source = None</code>关闭数据源。</li>
+</ul>
+<p><strong>属性查询失败</strong>：</p>
+<ul>
+<li>使用错误的字段名称进行属性查询，导致过滤器无法正确应用。确保字段名称拼写正确并存在。</li>
+</ul>
+<p><strong>空间查询错误</strong>：</p>
+<ul>
+<li>在进行空间查询时，几何对象未正确初始化或不在同一坐标参考系下，导致查询失败。</li>
+</ul>
+<p><strong>不正确的几何类型</strong>：</p>
+<ul>
+<li>在创建新几何对象时使用了不正确的几何类型，导致后续操作失败。例如，尝试将点对象与线对象混合使用。</li>
+</ul>
+<p><strong>数据类型错误</strong>：</p>
+<ul>
+<li>在设置字段值时，使用了不兼容的数据类型。例如，将字符串值赋给浮点数字段。</li>
+</ul>
+<p><strong>使用过期或不推荐的方法</strong>：</p>
+<ul>
+<li>使用已经被弃用的方法或API，导致兼容性问题或错误。</li>
+</ul>
+</li>
+</ul>
+<p><strong>结论</strong></p>
+<ul>
+<li>总结和后续学习方向</li>
+</ul>
+<p>在学习OGR和GDAL的过程中，以下是一些关键点的总结和后续学习方向的建议：</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ol>
+<li><strong>OGR的基础</strong>：<ul>
+<li>OGR是GDAL的一部分，专注于矢量数据的处理。</li>
+<li>支持多种常用的空间数据格式，如Shapefile、GeoJSON、KML等。</li>
+</ul>
+</li>
+<li><strong>基本操作</strong>：<ul>
+<li>读取和写入空间数据。</li>
+<li>进行数据筛选和属性查询。</li>
+<li>处理几何对象，包括几何计算、空间分析和几何转换。</li>
+</ul>
+</li>
+<li><strong>数据管理</strong>：<ul>
+<li>理解如何创建、修改和删除图层与要素。</li>
+<li>掌握坐标参考系的管理与转换。</li>
+</ul>
+</li>
+<li><strong>空间分析</strong>：<ul>
+<li>利用OGR进行空间关系查询和缓冲区分析等操作。</li>
+<li>计算几何特征的属性，如面积、周长和中心点。</li>
+</ul>
+</li>
+<li><strong>常见问题与调试</strong>：<ul>
+<li>熟悉新手常见错误及其解决方案，提升代码的稳定性和可维护性。</li>
+</ul>
+</li>
+</ol>
+<h3 id="后续学习方向"><a href="#后续学习方向" class="headerlink" title="后续学习方向"></a>后续学习方向</h3><ol>
+<li><strong>深入学习GDAL</strong>：<ul>
+<li>进一步研究GDAL的其他功能，包括栅格数据处理和分析。</li>
+<li>学习如何使用GDAL进行数据格式转换和栅格分析。</li>
+</ul>
+</li>
+<li><strong>空间数据库</strong>：<ul>
+<li>学习如何将空间数据存储在PostGIS或其他空间数据库中，以便于管理和查询。</li>
+</ul>
+</li>
+<li><strong>高级空间分析</strong>：<ul>
+<li>掌握更复杂的空间分析技术，如空间插值、网络分析和地统计分析。</li>
+</ul>
+</li>
+<li><strong>可视化工具</strong>：<ul>
+<li>学习如何使用Python库（如Matplotlib、Folium或Geopandas）将空间数据进行可视化展示。</li>
+</ul>
+</li>
+<li><strong>GIS应用开发</strong>：<ul>
+<li>学习如何使用Python构建GIS应用程序，利用Flask或Django等框架开发Web GIS应用。</li>
+</ul>
+</li>
+<li><strong>参与开源项目</strong>：<ul>
+<li>加入GDAL或其他GIS相关的开源项目，通过贡献代码或文档来加深理解。</li>
+</ul>
+</li>
+<li><strong>阅读文献和案例</strong>：<ul>
+<li>阅读相关书籍和研究论文，了解GIS在不同行业中的应用案例和最佳实践。</li>
+</ul>
+</li>
+</ol>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ytkz11@.github.io/2024/09/20/ogr-python-xue-xi-jiao-cheng-da-gang/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ytkz11@.github.io/2024/09/20/ogr-python-xue-xi-jiao-cheng-da-gang/')">linux安装python的步骤</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ytkz11@.github.io/2024/09/20/ogr-python-xue-xi-jiao-cheng-da-gang/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=linux安装python的步骤&amp;url=http://ytkz11@.github.io/2024/09/20/ogr-python-xue-xi-jiao-cheng-da-gang/&amp;pic=https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409181503548.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E9%81%A5%E6%84%9F/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>遥感<span class="tagsPageCount">183</span></a><a class="post-meta__box__tags" href="/tags/%E7%9F%A2%E9%87%8F/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>矢量<span class="tagsPageCount">26</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/09/20/linux-an-zhuang-python-de-bu-zou/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409200939642.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">linux安装python的步骤</div></div></a></div><div class="next-post pull-right"><a href="/2024/10/08/pyinstaller-da-bao-han-you-folium-mo-kuai-yun-xing-cuo-wu-de-jie-jue-fang-fa/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202410081715879.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">pyinstaller打包含有folium模块，运行错误的解决方法</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2024/11/28/shi-yong-gdal-du-qu-yao-gan-ying-xiang-bing-xian-shi-tu-xiang/" title="使用gdal读取遥感影像并显示图像"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202411280957650.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-11-28</div><div class="title">使用gdal读取遥感影像并显示图像</div></div></a></div><div><a href="/2024/11/28/ying-xiang-de-you-xiao-fan-wei/" title="影像的有效范围"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20241126223932773.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-11-28</div><div class="title">影像的有效范围</div></div></a></div><div><a href="/2024/11/25/cong-numpy-de-jiao-du-qu-li-jie-tu-xiang/" title="从数组维度的角度去理解图像"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.sculpteo.com/wp-content/uploads/2020/01/Webp.net-resizeimage8-1200x675.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-11-25</div><div class="title">从数组维度的角度去理解图像</div></div></a></div><div><a href="/2024/11/19/gcp-ji-he-xiao-zheng/" title="下载全球耕地数据集（柬埔寨和越南地区），遇到的坑及解决办法"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202411191705078.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-11-19</div><div class="title">下载全球耕地数据集（柬埔寨和越南地区），遇到的坑及解决办法</div></div></a></div><div><a href="/2024/11/19/xia-zai-quan-qiu-geng-di-shu-ju-ji-jian-bu-zhai-he-yue-nan-di-qu-yu-dao-de-keng-ji-jie-jue-ban-fa-copy/" title="下载全球耕地数据集（柬埔寨和越南地区），遇到的坑及解决办法"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202411280948181.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-11-19</div><div class="title">下载全球耕地数据集（柬埔寨和越南地区），遇到的坑及解决办法</div></div></a></div><div><a href="/2024/10/22/tong-ji-mou-ge-mu-lu-xia-de-py-wen-jian-you-duo-shao-xing/" title="使用 Python 和 GeoJSON 计算多边形的边界框（Bounding Box）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202410161611235.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-10-22</div><div class="title">使用 Python 和 GeoJSON 计算多边形的边界框（Bounding Box）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://raw.githubusercontent.com/ytkz11/picture/e0561f27bb351a8dc757d4f5b1d74a1ab5ef4e42/imgs202411281530223.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFOGR%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">什么是OGR？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E8%AE%BE%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">环境设置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%BB%E5%86%99%E6%95%B0%E6%8D%AE"><span class="toc-number">3.</span> <span class="toc-text">读写数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%92%8C%E5%86%99%E5%85%A5%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE"><span class="toc-number">4.</span> <span class="toc-text">如何创建和写入空间数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AF%BC%E5%85%A5OGR%E6%A8%A1%E5%9D%97"><span class="toc-number">4.0.1.</span> <span class="toc-text">1.导入OGR模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="toc-number">4.0.2.</span> <span class="toc-text">2. 创建数据源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%88%9B%E5%BB%BA%E5%9B%BE%E5%B1%82"><span class="toc-number">4.0.3.</span> <span class="toc-text">3.创建图层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5"><span class="toc-number">4.0.4.</span> <span class="toc-text">4. 定义字段</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%88%9B%E5%BB%BA%E5%92%8C%E5%86%99%E5%85%A5%E8%A6%81%E7%B4%A0"><span class="toc-number">4.0.5.</span> <span class="toc-text">5. 创建和写入要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%85%B3%E9%97%AD%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="toc-number">4.0.6.</span> <span class="toc-text">6. 关闭数据源</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81"><span class="toc-number">4.0.6.1.</span> <span class="toc-text">示例完整代码</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%93%8D%E4%BD%9C"><span class="toc-number">5.</span> <span class="toc-text">数据操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AF%BC%E5%85%A5OGR%E6%A8%A1%E5%9D%97-1"><span class="toc-number">5.0.1.</span> <span class="toc-text">1. 导入OGR模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%89%93%E5%BC%80%E6%95%B0%E6%8D%AE%E6%BA%90"><span class="toc-number">5.0.2.</span> <span class="toc-text">2. 打开数据源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%AE%BE%E7%BD%AE%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">5.0.3.</span> <span class="toc-text">3. 设置属性过滤器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%81%8D%E5%8E%86%E7%AD%9B%E9%80%89%E5%90%8E%E7%9A%84%E8%A6%81%E7%B4%A0"><span class="toc-number">5.0.4.</span> <span class="toc-text">4. 遍历筛选后的要素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C"><span class="toc-number">5.0.5.</span> <span class="toc-text">常用的查询操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%A0%E4%BD%95%E6%93%8D%E4%BD%9C"><span class="toc-number">6.</span> <span class="toc-text">几何操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">6.0.1.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%8E%E7%BB%AD%E5%AD%A6%E4%B9%A0%E6%96%B9%E5%90%91"><span class="toc-number">6.0.2.</span> <span class="toc-text">后续学习方向</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641974.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学习Rasterio还是GDAL？"/></a><div class="content"><a class="title" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？">学习Rasterio还是GDAL？</a><time datetime="2025-07-16T12:20:10.000Z" title="发表于 2025-07-16 20:20:10">2025-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="告别 gdal_translate：迎接 GDAL 统一命令行新时代"/></a><div class="content"><a class="title" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代">告别 gdal_translate：迎接 GDAL 统一命令行新时代</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111438678.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简要介绍 GDAL 的架构、关键组件和功能"/></a><div class="content"><a class="title" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能">简要介绍 GDAL 的架构、关键组件和功能</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641982.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GDAL_OGR简单的使用教程"/></a><div class="content"><a class="title" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程">GDAL_OGR简单的使用教程</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507101625855.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="遥感到底是个啥"/></a><div class="content"><a class="title" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥">遥感到底是个啥</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">317</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">52</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">79</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 0.88rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 0.88rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 0.88rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 0.88rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>【代码】无人机航拍图像几何校正 | Find everything you need</title><meta name="keywords" content="遥感"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="【代码】无人机航拍图像几何校正"><meta name="application-name" content="【代码】无人机航拍图像几何校正"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="【代码】无人机航拍图像几何校正"><meta property="og:url" content="http://ytkz11@.github.io/2024/05/12/dai-ma-wu-ren-ji-hang-pai-tu-xiang-ji-he-xiao-zheng/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="经过这几天的测试，完成无人机航拍图像几何校正，也叫做航片的正射影像处理。 主要步骤如下：  现在对每一个步骤分析，谈论为什么要这样做。 获取航片信息 获取航片信息是为了计算影像的分辨率，相关操作可以查看这里。 根据偏航角旋转图片这步骤是必要的。详细讲解如何实现这一步骤。  扩充图像的意思是，用0值在"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512202815823.png"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512202815823.png"><meta name="description" content="经过这几天的测试，完成无人机航拍图像几何校正，也叫做航片的正射影像处理。 主要步骤如下：  现在对每一个步骤分析，谈论为什么要这样做。 获取航片信息 获取航片信息是为了计算影像的分辨率，相关操作可以查看这里。 根据偏航角旋转图片这步骤是必要的。详细讲解如何实现这一步骤。  扩充图像的意思是，用0值在"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ytkz11@.github.io/2024/05/12/dai-ma-wu-ren-ji-hang-pai-tu-xiang-ji-he-xiao-zheng/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: '【代码】无人机航拍图像几何校正',
+  postAI: '',
+  pageFillDescription: '获取航片信息, 根据偏航角旋转图片, 裁剪图像, 计算左上角坐标, 仿射六参数拟合, 合成为TIF格式, 代码, 最终结果展示经过这几天的测试完成无人机航拍图像几何校正也叫做航片的正射影像处理主要步骤如下现在对每一个步骤分析谈论为什么要这样做获取航片信息获取航片信息是为了计算影像的分辨率相关操作可以查看这里根据偏航角旋转图片这步骤是必要的详细讲解如何实现这一步骤扩充图像的意思是用值在图像的边缘填充这一步骤的目的是为了旋转后的图像还在指定尺寸范围内扩充图像效果如下下一步是对图像进行旋转假设偏航角为则此时要对图像进行逆时针旋转这涉及到另一个问题偏航角的定义示意图如下简单来说航迹线偏在航线右边偏航角为正航迹线偏在航线左边偏航角为负请看下面的灵魂画图这里假设偏航角是度旋转中心为图像的中心旋转后的图像如下为什么要先扩充图像再旋转因为这里调用的函数如果直接对原始图像进行旋转会丢失部分信息直接对原始图像进行旋转效果如下如上图所示部分信息被省略了所以要先用值扩充图像边缘使图像的尺寸增加一倍然后再对扩充后的图像进行旋转裁剪图像这一步骤的目的是为了减少旋转图像的无效像素缩小图像的尺寸的同时仅保留有用信息裁剪后的旋转图像的效果如下计算左上角坐标现在得到的结果是不包含经纬度信息的我们在第一步的时候获取了图像的中心的的经纬度高度镜头参数所以我们可以计算此时无人机拍摄照片的空间分辨率空间分辨率像元尺寸高度焦距以上的单位都要换算为米像元尺寸要根据你的无人机硬件参数决定现在我们的无人机镜头的像元尺寸为微米高度焦距自动从影像文件中获取此时的空间分辨率为米我们需要进行单位换算把米换算为度假设地球的半径为米则有以下的换算公式左上角经纬度换算公式如下左上角经度中心点经度裁剪后的旋转图像的宽度经度分辨率左上角纬度中心点纬度裁剪后的旋转图像的宽度纬度分辨率仿射六参数拟合通过以上的步骤我们获得了左上角经纬度空间分辨率所以我们可以得到该影像的仿射六参数其格式如下左上角经度经度分辨率左上角纬度纬度分辨率由于我们在北半球所以上面公式中的经纬度分辨率换算公式如下经度分辨率空间分辨率纬度分辨率空间分辨率合成为格式这里跳用库轻松地把裁剪后的旋转图像与仿射六参数结合生成格式的影像代码航片校正读取彩色图像图片的高度和宽度计算新的图像尺寸这里实际上是原始尺寸的两倍计算每个方向的填充量这里是原始尺寸的一半镜头参数空间分辨率单位是米空间分辨率单位是度删减图像中的黑框二值化找到轮廓如果没有检测到轮廓则退出获取最大轮廓计算边界框从图片中返回元数据使用库打开图片获取图片的标签尝试从预定义的字典中获取标签的中文描述否则使用标签将标签及其值存储到字典中捕获所有异常并忽略这通常不是一个好的做法应该明确指定要捕获的异常输入图片路径图片的偏航角获取图片偏航角纬度经度如果中包含信息纬度焦距从元数据中提取信息偏航信息纬度经度如果中包含信息纬度纬度方向纬度度数纬度分钟纬度秒将纬度转换为十进制度经度经度方向经度度数经度分钟经度秒将经度转换为十进制度将度分秒转换为十进制度将分和秒转换为秒将秒转换为小数度将度和小数度相加如果方向是西将度数变为负数如果方向是南将度数变为负数获取图像尺寸计算旋转中心计算旋转矩阵应用偏航旋转弥市镇康家档子北最终结果展示上的测试区范围如下把结果拖到上如下图所示以上可以认为是航片的粗几何校正存在有一定的偏差在米左右这是因为我们在计算空间分辨率的时候是假设地球半径实际上当地的地球半径不是我们假设的通用地球半径优化思路可以根据当地的经纬度进行坐标转换为坐标如果要精细化校正则再需要进行特征点匹配进行航片与底图的配准航片与航片直接的配置代码已开源地址在欢迎给我一个免费的这次代码和样本数据就不放在百度云了直接放在样本数据是一个小伙伴提供的现在只分享一景作为测试数据之后会对代码进行讲解明天先把代码整合使其可以批量对航片处理最后打包为会用云盘的方式分享出来',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-09 17:50:33',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 1.05rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 1.05rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1.05rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 1.05rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/" itemprop="url">遥感</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%81%A5%E6%84%9F/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>遥感</span></a></span></div></div><h1 class="post-title" itemprop="name headline">【代码】无人机航拍图像几何校正</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-05-12T14:00:10.000Z" title="发表于 2024-05-12 22:00:10">2024-05-12</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-09-09T09:50:33.174Z" title="更新于 2024-09-09 17:50:33">2024-09-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512202815823.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ytkz11@.github.io/2024/05/12/dai-ma-wu-ren-ji-hang-pai-tu-xiang-ji-he-xiao-zheng/"><header><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/" itemprop="url">遥感</a><a href="/tags/%E9%81%A5%E6%84%9F/" tabindex="-1" itemprop="url">遥感</a><h1 id="CrawlerTitle" itemprop="name headline">【代码】无人机航拍图像几何校正</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2024-05-12T14:00:10.000Z" title="发表于 2024-05-12 22:00:10">2024-05-12</time><time itemprop="dateCreated datePublished" datetime="2024-09-09T09:50:33.174Z" title="更新于 2024-09-09 17:50:33">2024-09-09</time></header><p>经过这几天的测试，完成无人机航拍图像几何校正，也叫做航片的正射影像处理。</p>
+<p>主要步骤如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512182008484.png" alt="image-20240512182008484" style="zoom: 33%;"></p>
+<p>现在对每一个步骤分析，谈论为什么要这样做。</p>
+<h1 id="获取航片信息"><a href="#获取航片信息" class="headerlink" title="获取航片信息"></a>获取航片信息</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512183940941.png" alt="image-20240512183940941"></p>
+<p>获取航片信息是为了计算影像的分辨率，相关操作可以查看这里。</p>
+<h1 id="根据偏航角旋转图片"><a href="#根据偏航角旋转图片" class="headerlink" title="根据偏航角旋转图片"></a>根据偏航角旋转图片</h1><p>这步骤是必要的。详细讲解如何实现这一步骤。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512184238007.png" alt="image-20240512184238007" style="zoom:33%;"></p>
+<p>扩充图像的意思是，用0值在图像的边缘填充，这一步骤的目的是，为了 旋转后的图像 还在指定尺寸范围内。</p>
+<p>扩充图像效果如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512185126099.png" alt="image-20240512185126099"></p>
+<p>下一步是对图像进行旋转，假设偏航角为-45°，则此时要对图像进行逆时针旋转45°。</p>
+<p>这涉及到另一个问题，偏航角的定义。示意图如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img-blog.csdn.net/20151125211917940" alt="这里写图片描述"></p>
+<p>简单来说，<strong>航迹线偏在航线右边，偏航角为正，航迹线偏在航线左边，偏航角为负</strong>。请看下面的灵魂画图。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512190947793.png" alt="image-20240512190947793"></p>
+<p>这里假设偏航角是-45度，旋转中心为图像的中心，旋转后的图像如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512191155774.png" alt="image-20240512191155774"></p>
+<p>为什么要先扩充图像，再旋转？因为这里调用opencv的函数，如果直接对原始图像进行旋转，会丢失部分信息。</p>
+<p>直接对原始图像进行旋转，效果如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512191815207.png" alt="image-20240512191815207"></p>
+<p>如上图所示，部分信息被省略了，所以要先用0值扩充图像边缘，使图像的尺寸增加一倍，然后再对扩充后的图像进行旋转。</p>
+<h1 id="裁剪图像"><a href="#裁剪图像" class="headerlink" title="裁剪图像"></a>裁剪图像</h1><p>这一步骤的目的是，为了减少旋转图像的无效像素，缩小图像的尺寸的同时，仅保留有用信息。</p>
+<p>裁剪后的旋转图像的效果如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512192248669.png" alt="image-20240512192248669"></p>
+<h1 id="计算左上角坐标"><a href="#计算左上角坐标" class="headerlink" title="计算左上角坐标"></a>计算左上角坐标</h1><p>现在得到的结果，是不包含经纬度信息的。我们在第一步的时候，获取了图像的中心的的经纬度、高度、镜头参数。所以我们可以计算此时无人机拍摄照片的空间分辨率。</p>
+<p>空间分辨率 = （像元尺寸 x 高度）/ 焦距</p>
+<p>以上的单位都要换算为米。</p>
+<p>像元尺寸要根据你的无人机硬件参数决定。现在我们的无人机镜头的像元尺寸为4.4微米。</p>
+<p>高度、焦距自动从影像文件中获取。</p>
+<p>此时的空间分辨率为米，我们需要进行单位换算，把米换算为度。</p>
+<p>假设地球的半径为6371004米，则有以下的换算公式：</p>
+<pre class="line-numbers language-none"><code class="language-none">x_res = x_res_meter / (2 * math.pi * 6371004) * 360 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>左上角经纬度换算公式如下：</p>
+<p>左上角经度 = 中心点经度 - 裁剪后的旋转图像的宽度 x 0.5 x 经度分辨率</p>
+<p>左上角纬度 = 中心点纬度 + 裁剪后的旋转图像的宽度 x 0.5 x 纬度分辨率</p>
+<h1 id="仿射六参数拟合"><a href="#仿射六参数拟合" class="headerlink" title="仿射六参数拟合"></a>仿射六参数拟合</h1><p>通过以上的步骤，我们获得了</p>
+<p>1.左上角经纬度</p>
+<p>2.空间分辨率</p>
+<p>所以我们可以得到该影像的仿射六参数。其格式如下：</p>
+<p>[左上角经度,经度分辨率,0,左上角纬度，0，纬度分辨率 ]</p>
+<p>由于我们在北半球，所以，上面公式中的经纬度分辨率换算公式如下：</p>
+<p>经度分辨率 = 空间分辨率</p>
+<p>纬度分辨率 = -1 x 空间分辨率</p>
+<h1 id="合成为TIF格式"><a href="#合成为TIF格式" class="headerlink" title="合成为TIF格式"></a>合成为TIF格式</h1><p>这里跳用GDAL库，轻松地把裁剪后的旋转图像与仿射六参数结合，生成TIF格式的影像。</p>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># file: AerialCorrection.py</span>
+<span class="token comment"># time: 2024/5/12 16:49</span>
+
+<span class="token comment"># 航片校正</span>
+
+<span class="token keyword">import</span> os
+<span class="token keyword">try</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> Image
+    <span class="token keyword">import</span> ImageDraw
+<span class="token keyword">except</span><span class="token punctuation">:</span>
+    <span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+    <span class="token keyword">from</span> PIL<span class="token punctuation">.</span>ExifTags <span class="token keyword">import</span> TAGS
+<span class="token keyword">import</span> math
+<span class="token keyword">from</span> osgeo <span class="token keyword">import</span> gdal<span class="token punctuation">,</span> osr
+
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+<span class="token keyword">class</span> <span class="token class-name">AerialCorrection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> img<span class="token punctuation">,</span> out_folder<span class="token punctuation">,</span> pixel_size<span class="token operator">=</span><span class="token number">4.4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>img <span class="token operator">=</span> img
+        self<span class="token punctuation">.</span>out_folder <span class="token operator">=</span> out_folder
+        self<span class="token punctuation">.</span>temp_name <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>self<span class="token punctuation">.</span>out_folder<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'_temp.tif'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>out_name <span class="token operator">=</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>self<span class="token punctuation">.</span>out_folder<span class="token punctuation">,</span> os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>basename<span class="token punctuation">(</span>img<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">'.tif'</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>pixel_size <span class="token operator">=</span> pixel_size
+
+    <span class="token keyword">def</span> <span class="token function">rotation</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        latitude1<span class="token punctuation">,</span> longitude1 <span class="token operator">=</span> self<span class="token punctuation">.</span>get_gps_info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        roll_angle<span class="token punctuation">,</span> yaw_angle<span class="token punctuation">,</span> pitch_angle<span class="token punctuation">,</span> altitude <span class="token operator">=</span> self<span class="token punctuation">.</span>get_image_info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        yaw_angle <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token operator">*</span>yaw_angle
+        roll_angle <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token operator">*</span>roll_angle
+        img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imdecode<span class="token punctuation">(</span>np<span class="token punctuation">.</span>fromfile<span class="token punctuation">(</span>self<span class="token punctuation">.</span>img <span class="token punctuation">,</span>dtype<span class="token operator">=</span>np<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token comment"># img = cv2.imread(self.img)  # 读取彩色图像(BGR)</span>
+        height<span class="token punctuation">,</span> width <span class="token operator">=</span> img<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>  <span class="token comment"># 图片的高度和宽度</span>
+        <span class="token comment"># 计算新的图像尺寸（这里实际上是原始尺寸的两倍）</span>
+
+        <span class="token comment"># 计算每个方向的填充量（这里是原始尺寸的一半）</span>
+        top <span class="token operator">=</span> bottom <span class="token operator">=</span> height <span class="token operator">//</span> <span class="token number">2</span>
+        left <span class="token operator">=</span> right <span class="token operator">=</span> width <span class="token operator">//</span> <span class="token number">2</span>
+        padded_img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>copyMakeBorder<span class="token punctuation">(</span>img<span class="token punctuation">,</span> top<span class="token punctuation">,</span> bottom<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>BORDER_CONSTANT<span class="token punctuation">,</span> value<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+        rotated_image <span class="token operator">=</span> rotate_image<span class="token punctuation">(</span>padded_img<span class="token punctuation">,</span> yaw_angle<span class="token punctuation">)</span>
+
+        cropped_image <span class="token operator">=</span> self<span class="token punctuation">.</span>find_edge<span class="token punctuation">(</span>rotated_image<span class="token punctuation">)</span>
+
+        new_height<span class="token punctuation">,</span>new_width <span class="token operator">=</span> cropped_image<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+
+        focal_length <span class="token operator">=</span> self<span class="token punctuation">.</span>get_len_info<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 镜头参数</span>
+        x_res_meter <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>pixel_size<span class="token punctuation">)</span> <span class="token operator">*</span> altitude <span class="token operator">/</span> <span class="token builtin">float</span><span class="token punctuation">(</span>focal_length<span class="token punctuation">)</span>  <span class="token operator">*</span> <span class="token number">0.001</span>  <span class="token comment"># 空间分辨率  单位是米</span>
+
+        x_res <span class="token operator">=</span> x_res_meter <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token number">2</span> <span class="token operator">*</span> math<span class="token punctuation">.</span>pi <span class="token operator">*</span> <span class="token number">6371004</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">360</span>   <span class="token comment"># 空间分辨率  单位是度 0.000008983</span>
+        left_coord <span class="token operator">=</span> <span class="token punctuation">[</span>longitude1 <span class="token operator">-</span> x_res <span class="token operator">*</span> new_width<span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> latitude1 <span class="token operator">+</span> x_res <span class="token operator">*</span> new_height <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">]</span>
+        <span class="token comment"># left_coord = [longitude1, latitude1]</span>
+        out_png_geom <span class="token operator">=</span> <span class="token punctuation">[</span>left_coord<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> x_res<span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> left_coord<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token operator">-</span>x_res<span class="token punctuation">]</span>
+
+        srs <span class="token operator">=</span> osr<span class="token punctuation">.</span>SpatialReference<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        srs<span class="token punctuation">.</span>ImportFromEPSG<span class="token punctuation">(</span><span class="token number">4326</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># export the png tif</span>
+        driver <span class="token operator">=</span> gdal<span class="token punctuation">.</span>GetDriverByName<span class="token punctuation">(</span><span class="token string">'GTiff'</span><span class="token punctuation">)</span>
+        <span class="token comment"># out_tif = driver.Create(name=out_name, ysize=tar_y, xsize=tar_x, bands=tar_bandnum, eType=tar_datatype)</span>
+        out_tif <span class="token operator">=</span> driver<span class="token punctuation">.</span>Create<span class="token punctuation">(</span>self<span class="token punctuation">.</span>out_name<span class="token punctuation">,</span> new_width<span class="token punctuation">,</span> new_height<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> eType<span class="token operator">=</span>gdal<span class="token punctuation">.</span>GDT_Byte<span class="token punctuation">)</span>
+        j<span class="token operator">=</span><span class="token number">2</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+
+            band <span class="token operator">=</span> out_tif<span class="token punctuation">.</span>GetRasterBand<span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span>WriteArray<span class="token punctuation">(</span>cropped_image<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">,</span>j<span class="token operator">-</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">del</span> band
+
+        out_tif<span class="token punctuation">.</span>SetProjection<span class="token punctuation">(</span>srs<span class="token punctuation">.</span>ExportToWkt<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        out_tif<span class="token punctuation">.</span>SetGeoTransform<span class="token punctuation">(</span>out_png_geom<span class="token punctuation">)</span>
+        out_tif<span class="token punctuation">.</span>FlushCache<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">find_edge</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment"># 删减图像中的黑框</span>
+        temp_arr <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span>
+        <span class="token comment"># 二值化</span>
+        _<span class="token punctuation">,</span> thresh <span class="token operator">=</span> cv2<span class="token punctuation">.</span>threshold<span class="token punctuation">(</span>temp_arr<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">255</span><span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>THRESH_BINARY<span class="token punctuation">)</span>
+
+        <span class="token comment"># 找到轮廓</span>
+        contours<span class="token punctuation">,</span> _ <span class="token operator">=</span> cv2<span class="token punctuation">.</span>findContours<span class="token punctuation">(</span>thresh<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>RETR_EXTERNAL<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>CHAIN_APPROX_SIMPLE<span class="token punctuation">)</span>
+
+        <span class="token comment"># 如果没有检测到轮廓，则退出</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> contours<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"No contours found."</span><span class="token punctuation">)</span>
+            exit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+        <span class="token comment"># 获取最大轮廓</span>
+        c <span class="token operator">=</span> <span class="token builtin">max</span><span class="token punctuation">(</span>contours<span class="token punctuation">,</span> key<span class="token operator">=</span>cv2<span class="token punctuation">.</span>contourArea<span class="token punctuation">)</span>
+        <span class="token comment"># 计算边界框</span>
+        x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> w<span class="token punctuation">,</span> h <span class="token operator">=</span> cv2<span class="token punctuation">.</span>boundingRect<span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+        cropped_image <span class="token operator">=</span> arr<span class="token punctuation">[</span>y<span class="token punctuation">:</span>y<span class="token operator">+</span>h<span class="token punctuation">,</span> x<span class="token punctuation">:</span>x<span class="token operator">+</span>w<span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+        plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>cv2<span class="token punctuation">.</span>cvtColor<span class="token punctuation">(</span>cropped_image<span class="token punctuation">,</span> cv2<span class="token punctuation">.</span>COLOR_BGR2RGB<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> cropped_image
+
+    <span class="token keyword">def</span> <span class="token function">exif</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        从图片中返回EXIF元数据
+        """</span>
+        exif_data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+        <span class="token keyword">try</span><span class="token punctuation">:</span>
+            i <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>img<span class="token punctuation">)</span>  <span class="token comment"># 使用PIL库打开图片</span>
+            tags <span class="token operator">=</span> i<span class="token punctuation">.</span>_getexif<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 获取图片的EXIF标签</span>
+
+            <span class="token keyword">for</span> tag<span class="token punctuation">,</span> value <span class="token keyword">in</span> tags<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                decoded <span class="token operator">=</span> TAGS<span class="token punctuation">.</span>get<span class="token punctuation">(</span>tag<span class="token punctuation">,</span> tag<span class="token punctuation">)</span>  <span class="token comment"># 尝试从预定义的TAGS字典中获取标签的中文描述，否则使用标签ID</span>
+                exif_data<span class="token punctuation">[</span>decoded<span class="token punctuation">]</span> <span class="token operator">=</span> value  <span class="token comment"># 将标签及其值存储到exif_data字典中</span>
+
+        <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>  <span class="token comment"># 捕获所有异常并忽略，这通常不是一个好的做法，应该明确指定要捕获的异常</span>
+
+        <span class="token keyword">return</span> exif_data
+    <span class="token keyword">def</span> <span class="token function">get_image_size</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        i <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>img<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> i<span class="token punctuation">.</span>width<span class="token punctuation">,</span> i<span class="token punctuation">.</span>height
+
+
+
+    <span class="token keyword">def</span> <span class="token function">get_image_info</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        :param file_path: 输入图片路径
+        :return: 图片的偏航角
+        """</span>
+        <span class="token comment"># 获取图片偏航角</span>
+        b <span class="token operator">=</span> <span class="token string">b"\x3c\x2f\x72\x64\x66\x3a\x44\x65\x73\x63\x72\x69\x70\x74\x69\x6f\x6e\x3e"</span>
+        a <span class="token operator">=</span> <span class="token string">b"\x3c\x72\x64\x66\x3a\x44\x65\x73\x63\x72\x69\x70\x74\x69\x6f\x6e\x20"</span>
+        img <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>img<span class="token punctuation">,</span> <span class="token string">'rb'</span><span class="token punctuation">)</span>
+        data <span class="token operator">=</span> <span class="token builtin">bytearray</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        dj_data_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        flag <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token keyword">for</span> line <span class="token keyword">in</span> img<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> a <span class="token keyword">in</span> line<span class="token punctuation">:</span>
+                flag <span class="token operator">=</span> <span class="token boolean">True</span>
+            <span class="token keyword">if</span> flag<span class="token punctuation">:</span>
+                data <span class="token operator">+=</span> line
+            <span class="token keyword">if</span> b <span class="token keyword">in</span> line<span class="token punctuation">:</span>
+                <span class="token keyword">break</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            data <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>data<span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">'ascii'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            lines <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">filter</span><span class="token punctuation">(</span><span class="token keyword">lambda</span> x<span class="token punctuation">:</span> <span class="token string">'drone-dji:'</span> <span class="token keyword">in</span> x<span class="token punctuation">,</span> data<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">for</span> d <span class="token keyword">in</span> lines<span class="token punctuation">:</span>
+                d <span class="token operator">=</span> d<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+                key<span class="token punctuation">,</span> value <span class="token operator">=</span> d<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">"="</span><span class="token punctuation">)</span>
+                dj_data_dict<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> value
+
+        <span class="token keyword">return</span> <span class="token builtin">float</span><span class="token punctuation">(</span>dj_data_dict<span class="token punctuation">[</span><span class="token string">"FlightRollDegree"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token builtin">float</span><span class="token punctuation">(</span>dj_data_dict<span class="token punctuation">[</span><span class="token string">"FlightYawDegree"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token builtin">float</span><span class="token punctuation">(</span>dj_data_dict<span class="token punctuation">[</span><span class="token string">"FlightPitchDegree"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">float</span><span class="token punctuation">(</span>dj_data_dict<span class="token punctuation">[</span><span class="token string">"RelativeAltitude"</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">get_len_info</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        exif <span class="token operator">=</span> self<span class="token punctuation">.</span>exif<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        lat <span class="token operator">=</span> <span class="token boolean">None</span>  <span class="token comment"># 纬度</span>
+        lon <span class="token operator">=</span> <span class="token boolean">None</span>  <span class="token comment"># 经度</span>
+
+        <span class="token keyword">if</span> exif<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'LensSpecification'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 如果EXIF中包含GPS信息</span>
+            <span class="token comment"># 纬度</span>
+            Lens <span class="token operator">=</span> exif<span class="token punctuation">[</span><span class="token string">'LensSpecification'</span><span class="token punctuation">]</span>
+            focal_length <span class="token operator">=</span> Lens<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 焦距</span>
+        <span class="token keyword">return</span> focal_length
+
+    <span class="token keyword">def</span> <span class="token function">get_gps_info</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        从EXIF元数据中提取GPS信息、偏航信息
+        """</span>
+        exif <span class="token operator">=</span> self<span class="token punctuation">.</span>exif<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        lat <span class="token operator">=</span> <span class="token boolean">None</span>  <span class="token comment"># 纬度</span>
+        lon <span class="token operator">=</span> <span class="token boolean">None</span>  <span class="token comment"># 经度</span>
+
+        <span class="token keyword">if</span> exif<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'GPSInfo'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 如果EXIF中包含GPS信息</span>
+            <span class="token comment"># 纬度</span>
+            coords <span class="token operator">=</span> exif<span class="token punctuation">[</span><span class="token string">'GPSInfo'</span><span class="token punctuation">]</span>
+            i <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 纬度方向（N/S）</span>
+            d <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment"># 纬度度数</span>
+            m <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 纬度分钟</span>
+            s <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>  <span class="token comment"># 纬度秒</span>
+            lat <span class="token operator">=</span> self<span class="token punctuation">.</span>dms2dd<span class="token punctuation">(</span>d<span class="token punctuation">,</span> m<span class="token punctuation">,</span> s<span class="token punctuation">,</span> i<span class="token punctuation">)</span>  <span class="token comment"># 将纬度转换为十进制度</span>
+
+            <span class="token comment"># 经度</span>
+            i <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>  <span class="token comment"># 经度方向（E/W）</span>
+            d <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>  <span class="token comment"># 经度度数</span>
+            m <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># 经度分钟</span>
+            s <span class="token operator">=</span> coords<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>  <span class="token comment"># 经度秒</span>
+            lon <span class="token operator">=</span> self<span class="token punctuation">.</span>dms2dd<span class="token punctuation">(</span>d<span class="token punctuation">,</span> m<span class="token punctuation">,</span> s<span class="token punctuation">,</span> i<span class="token punctuation">)</span>  <span class="token comment"># 将经度转换为十进制度</span>
+
+        <span class="token keyword">return</span> lat<span class="token punctuation">,</span> lon
+
+    <span class="token keyword">def</span> <span class="token function">dms2dd</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> d<span class="token punctuation">,</span> m<span class="token punctuation">,</span> s<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token triple-quoted-string string">"""
+        将度/分/秒转换为十进制度
+        """</span>
+        sec <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token punctuation">(</span>m <span class="token operator">*</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token operator">+</span> s<span class="token punctuation">)</span>  <span class="token comment"># 将分和秒转换为秒</span>
+        dec <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>sec <span class="token operator">/</span> <span class="token number">3600</span><span class="token punctuation">)</span>  <span class="token comment"># 将秒转换为小数度</span>
+        deg <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span>d <span class="token operator">+</span> dec<span class="token punctuation">)</span>  <span class="token comment"># 将度和小数度相加</span>
+
+        <span class="token keyword">if</span> i<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'W'</span><span class="token punctuation">:</span>  <span class="token comment"># 如果方向是西</span>
+            deg <span class="token operator">=</span> deg <span class="token operator">*</span> <span class="token operator">-</span><span class="token number">1</span>  <span class="token comment"># 将度数变为负数</span>
+
+        <span class="token keyword">elif</span> i<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'S'</span><span class="token punctuation">:</span>  <span class="token comment"># 如果方向是南</span>
+            deg <span class="token operator">=</span> deg <span class="token operator">*</span> <span class="token operator">-</span><span class="token number">1</span>  <span class="token comment"># 将度数变为负数</span>
+
+        <span class="token keyword">return</span> <span class="token builtin">float</span><span class="token punctuation">(</span>deg<span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">rotate_image</span><span class="token punctuation">(</span>image<span class="token punctuation">,</span> yaw<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 获取图像尺寸</span>
+    height<span class="token punctuation">,</span> width <span class="token operator">=</span> image<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+
+    <span class="token comment"># 计算旋转中心</span>
+    center <span class="token operator">=</span> <span class="token punctuation">(</span>width <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">,</span> height <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 计算旋转矩阵</span>
+    rotation_matrix <span class="token operator">=</span> cv2<span class="token punctuation">.</span>getRotationMatrix2D<span class="token punctuation">(</span>center<span class="token punctuation">,</span> yaw<span class="token punctuation">,</span> <span class="token number">1.0</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 应用偏航旋转</span>
+    rotated_image <span class="token operator">=</span> cv2<span class="token punctuation">.</span>warpAffine<span class="token punctuation">(</span>image<span class="token punctuation">,</span> rotation_matrix<span class="token punctuation">,</span> <span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> rotated_image
+
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    A <span class="token operator">=</span> AerialCorrection<span class="token punctuation">(</span><span class="token string">r'E:\109弥市镇——康家档子北\DJI_20230410091159_0017.JPG'</span><span class="token punctuation">,</span> <span class="token string">r'D:\test'</span><span class="token punctuation">,</span> pixel_size<span class="token operator">=</span> <span class="token number">4.4</span><span class="token punctuation">)</span>
+
+    a <span class="token operator">=</span> A<span class="token punctuation">.</span>rotation<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="最终结果展示"><a href="#最终结果展示" class="headerlink" title="最终结果展示"></a>最终结果展示</h1><p>google earth上的测试区范围如下：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512202505950.png" alt="image-20240512202505950"></p>
+<p>把结果拖到google earth上，如下图所示：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512201042676.png" alt="image-20240512201042676"></p>
+<p>以上可以认为是航片的粗几何校正。存在有一定的偏差，在2米左右。</p>
+<p>这是因为我们在计算空间分辨率的时候，是假设地球半径。实际上当地的地球半径不是我们假设的通用地球半径。优化思路可以根据当地的经纬度，进行UTM坐标转换为WGS84坐标。</p>
+<p>如果要精细化校正，则再需要进行特征点匹配，进行航片与底图的配准、航片与航片直接的配置。</p>
+<p>代码已开源，地址在：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ytkz11/AerialPictureCorrection">https://github.com/ytkz11/AerialPictureCorrection</a></p>
+<p>欢迎给我一个免费的star，这次代码和样本数据就不放在百度云了，直接放在github。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512202815823.png" alt="image-20240512202815823"></p>
+<p>样本数据是一个小伙伴提供的，现在只分享一景，作为测试数据。</p>
+<p>之后会对代码进行讲解。明天先把代码整合，使其可以批量对航片处理，最后打包为exe，会用云盘的方式分享出来。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ytkz11@.github.io/2024/05/12/dai-ma-wu-ren-ji-hang-pai-tu-xiang-ji-he-xiao-zheng/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ytkz11@.github.io/2024/05/12/dai-ma-wu-ren-ji-hang-pai-tu-xiang-ji-he-xiao-zheng/')">【代码】无人机航拍图像几何校正</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ytkz11@.github.io/2024/05/12/dai-ma-wu-ren-ji-hang-pai-tu-xiang-ji-he-xiao-zheng/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=【代码】无人机航拍图像几何校正&amp;url=http://ytkz11@.github.io/2024/05/12/dai-ma-wu-ren-ji-hang-pai-tu-xiang-ji-he-xiao-zheng/&amp;pic=https://raw.githubusercontent.com/ytkz11/picture/master/image-20240512202815823.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E9%81%A5%E6%84%9F/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>遥感<span class="tagsPageCount">183</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/05/09/dai-ma-wu-ren-ji-hang-pai-tu-xiang-de-kong-jian-fen-bian-lu-ji-suan/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405101434645.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">【代码】无人机航拍图像的空间分辨率计算</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/14/dai-ma-da-jiang-hang-pian-cu-ji-he-xiao-zheng-gong-ju/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202405141343336.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【代码】大疆航片粗几何校正工具</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2021/03/10/gdal-api-bi-ji/" title="gdal api笔记"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://z3.ax1x.com/2021/01/11/s8Nhmn.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-03-10</div><div class="title">gdal api笔记</div></div></a></div><div><a href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641974.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-16</div><div class="title">学习Rasterio还是GDAL？</div></div></a></div><div><a href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-11</div><div class="title">告别 gdal_translate：迎接 GDAL 统一命令行新时代</div></div></a></div><div><a href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111438678.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-11</div><div class="title">简要介绍 GDAL 的架构、关键组件和功能</div></div></a></div><div><a href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641982.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-10</div><div class="title">GDAL_OGR简单的使用教程</div></div></a></div><div><a href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507101625855.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-10</div><div class="title">遥感到底是个啥</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://raw.githubusercontent.com/ytkz11/picture/e0561f27bb351a8dc757d4f5b1d74a1ab5ef4e42/imgs202411281530223.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E8%88%AA%E7%89%87%E4%BF%A1%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text">获取航片信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%B9%E6%8D%AE%E5%81%8F%E8%88%AA%E8%A7%92%E6%97%8B%E8%BD%AC%E5%9B%BE%E7%89%87"><span class="toc-number">2.</span> <span class="toc-text">根据偏航角旋转图片</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A3%81%E5%89%AA%E5%9B%BE%E5%83%8F"><span class="toc-number">3.</span> <span class="toc-text">裁剪图像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%B7%A6%E4%B8%8A%E8%A7%92%E5%9D%90%E6%A0%87"><span class="toc-number">4.</span> <span class="toc-text">计算左上角坐标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%BF%E5%B0%84%E5%85%AD%E5%8F%82%E6%95%B0%E6%8B%9F%E5%90%88"><span class="toc-number">5.</span> <span class="toc-text">仿射六参数拟合</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%88%E6%88%90%E4%B8%BATIF%E6%A0%BC%E5%BC%8F"><span class="toc-number">6.</span> <span class="toc-text">合成为TIF格式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">7.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%80%E7%BB%88%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="toc-number">8.</span> <span class="toc-text">最终结果展示</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641974.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学习Rasterio还是GDAL？"/></a><div class="content"><a class="title" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？">学习Rasterio还是GDAL？</a><time datetime="2025-07-16T12:20:10.000Z" title="发表于 2025-07-16 20:20:10">2025-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="告别 gdal_translate：迎接 GDAL 统一命令行新时代"/></a><div class="content"><a class="title" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代">告别 gdal_translate：迎接 GDAL 统一命令行新时代</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111438678.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简要介绍 GDAL 的架构、关键组件和功能"/></a><div class="content"><a class="title" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能">简要介绍 GDAL 的架构、关键组件和功能</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641982.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GDAL_OGR简单的使用教程"/></a><div class="content"><a class="title" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程">GDAL_OGR简单的使用教程</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507101625855.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="遥感到底是个啥"/></a><div class="content"><a class="title" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥">遥感到底是个啥</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">317</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">52</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">79</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 0.88rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 0.88rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 0.88rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 0.88rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>

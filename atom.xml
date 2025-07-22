@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Find everything you need</title>
+  
+  <subtitle>Some personal notes</subtitle>
+  <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://ytkz11@.github.io/"/>
+  <updated>2025-07-16T09:09:01.545Z</updated>
+  <id>http://ytkz11@.github.io/</id>
+  
+  <author>
+    <name>ytkz</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习Rasterio还是GDAL？</title>
+    <link href="http://ytkz11@.github.io/2025/07/16/xue-xi-rasterio-huan-shi-gdal/"/>
+    <id>http://ytkz11@.github.io/2025/07/16/xue-xi-rasterio-huan-shi-gdal/</id>
+    <published>2025-07-16T12:20:10.000Z</published>
+    <updated>2025-07-16T09:09:01.545Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;rasterio是什么？&quot;&gt;&lt;a href=&quot;#rasterio是什么？&quot; class=&quot;headerlink&quot; title=&quot;rasterio是什么？&quot;&gt;&lt;/a&gt;rasterio是什么？&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;GDAL (Geospatial Data</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>告别 gdal_translate：迎接 GDAL 统一命令行新时代</title>
+    <link href="http://ytkz11@.github.io/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/"/>
+    <id>http://ytkz11@.github.io/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/</id>
+    <published>2025-07-11T12:20:10.000Z</published>
+    <updated>2025-07-11T07:00:37.799Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;如果您是地理空间数据处理领域的一员，那么 GDAL/OGR 库想必是您工具箱中不可或缺的瑞士军刀。多年来，我们习惯了使用一系列独立的命令行工具，如</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简要介绍 GDAL 的架构、关键组件和功能</title>
+    <link href="http://ytkz11@.github.io/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/"/>
+    <id>http://ytkz11@.github.io/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/</id>
+    <published>2025-07-11T12:20:10.000Z</published>
+    <updated>2025-07-11T06:44:58.514Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;GDAL（地理空间数据抽象库，Geospatial Data Abstraction Library）是一个开源库，用于读取、写入和处理多种栅格和矢量地理空间数据格式。它为地理信息系统（GIS）提供了强大而统一的数据访问方式。。简要介绍 GDAL</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GDAL_OGR简单的使用教程</title>
+    <link href="http://ytkz11@.github.io/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/</id>
+    <published>2025-07-10T12:20:10.000Z</published>
+    <updated>2025-07-17T02:16:07.083Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;GDAL-OGR简单的使用教程&quot;&gt;&lt;a href=&quot;#GDAL-OGR简单的使用教程&quot; class=&quot;headerlink&quot; title=&quot;GDAL_OGR简单的使用教程&quot;&gt;&lt;/a&gt;GDAL_OGR简单的使用教程&lt;/h1&gt;&lt;h2 id=&quot;检测安装&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遥感到底是个啥</title>
+    <link href="http://ytkz11@.github.io/2025/07/10/yao-gan-dao-di-shi-ge-sha/"/>
+    <id>http://ytkz11@.github.io/2025/07/10/yao-gan-dao-di-shi-ge-sha/</id>
+    <published>2025-07-10T12:20:10.000Z</published>
+    <updated>2025-07-10T08:25:19.022Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;各位，今天我们来解构一下“遥感”这个专业。&lt;/p&gt;
+&lt;h4 id=&quot;一、遥感到底是个啥？&quot;&gt;&lt;a href=&quot;#一、遥感到底是个啥？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏外挂制作原理-转载</title>
+    <link href="http://ytkz11@.github.io/2025/06/27/you-xi-wai-gua-zhi-zuo-yuan-li/"/>
+    <id>http://ytkz11@.github.io/2025/06/27/you-xi-wai-gua-zhi-zuo-yuan-li/</id>
+    <published>2025-06-27T12:20:10.000Z</published>
+    <updated>2025-06-27T07:32:26.407Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;原文地址：&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="游戏" scheme="http://ytkz11@.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
+    
+    
+    <category term="游戏" scheme="http://ytkz11@.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lee滤波对于sar影像去噪非常有用</title>
+    <link href="http://ytkz11@.github.io/2025/06/24/pan-duan-rgb-yao-gan-ying-xiang-de-bo-duan-shi-fou-zheng-que-de-fang-fa/"/>
+    <id>http://ytkz11@.github.io/2025/06/24/pan-duan-rgb-yao-gan-ying-xiang-de-bo-duan-shi-fou-zheng-que-de-fang-fa/</id>
+    <published>2025-06-24T12:20:10.000Z</published>
+    <updated>2025-06-24T13:13:30.409Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;正如之前我说的，遥感影像在深度学习的输入形式一般是RGB格式，而遥感影像的原始数据一般由多个波段组合。&lt;/p&gt;
+&lt;p&gt;所以，我们需要做的一个步骤的：把多波段的遥感影像转换为RGB遥感影像。&lt;/p&gt;
+&lt;p&gt;RGB，三个字母说明了这个文件由三个矩阵组成，它们的顺序是RED、GR</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bilibili 下载指南</title>
+    <link href="http://ytkz11@.github.io/2025/06/20/bilibili-xia-zai-zhi-nan/"/>
+    <id>http://ytkz11@.github.io/2025/06/20/bilibili-xia-zai-zhi-nan/</id>
+    <published>2025-06-20T12:20:10.000Z</published>
+    <updated>2025-06-20T02:58:01.334Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Bilibili-下载指南&quot;&gt;&lt;a href=&quot;#Bilibili-下载指南&quot; class=&quot;headerlink&quot; title=&quot;Bilibili 下载指南&quot;&gt;&lt;/a&gt;Bilibili 下载指南&lt;/h1&gt;&lt;p&gt;本指南提供使用</summary>
+        
+      
+    
+    
+    
+    <category term="技术" scheme="http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="技术" scheme="http://ytkz11@.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Landsat9影像下载教程</title>
+    <link href="http://ytkz11@.github.io/2025/06/20/landsat9-ying-xiang-xia-zai-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2025/06/20/landsat9-ying-xiang-xia-zai-jiao-cheng/</id>
+    <published>2025-06-20T12:20:10.000Z</published>
+    <updated>2025-06-20T07:25:58.440Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;landsat9影像下载的渠道有很多个，最常见的是USGS、GEE。&lt;/p&gt;
+&lt;p&gt;今天是演示怎么在USGS下载Landsat9影像。&lt;/p&gt;
+&lt;p&gt;下载数据本身是免费的、不收钱。但是最大的阻碍就是科学网上冲浪。&lt;/p&gt;
+&lt;p&gt;所以也导致了很多小白，跑去国内二手交易平台寻求</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>lee滤波对于sar影像去噪非常有用</title>
+    <link href="http://ytkz11@.github.io/2025/06/18/sar-ying-xiang-qu-zao-lee-lu-bo/"/>
+    <id>http://ytkz11@.github.io/2025/06/18/sar-ying-xiang-qu-zao-lee-lu-bo/</id>
+    <published>2025-06-18T12:20:10.000Z</published>
+    <updated>2025-06-19T01:20:29.668Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;lee滤波对于sar影像去噪非常有用。且lee滤波也很容易理解，且看以下python代码编写的lee滤波函数。&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>朋友问我压力大么？</title>
+    <link href="http://ytkz11@.github.io/2025/06/16/peng-you-wen-wo-ya-li-da-me/"/>
+    <id>http://ytkz11@.github.io/2025/06/16/peng-you-wen-wo-ya-li-da-me/</id>
+    <published>2025-06-16T12:20:10.000Z</published>
+    <updated>2025-06-16T07:13:02.245Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大约在半个月前，朋友问我这个问题，老实说，目前我的压力不大。&lt;/p&gt;
+&lt;p&gt;压力不大的前提在于，我所处的状态有关，不结婚、不买房、不买车。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>影像影像要不要做大气校正？</title>
+    <link href="http://ytkz11@.github.io/2025/06/16/yao-gan-ying-xiang-yao-bu-yao-zuo-da-qi-xiao-zheng/"/>
+    <id>http://ytkz11@.github.io/2025/06/16/yao-gan-ying-xiang-yao-bu-yao-zuo-da-qi-xiao-zheng/</id>
+    <published>2025-06-16T12:20:10.000Z</published>
+    <updated>2025-06-16T08:21:19.882Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;开门见山地回答这个问题，得看情况。&lt;/p&gt;
+&lt;p&gt;是否做大气校正由你的目的决定。&lt;/p&gt;
+&lt;p&gt;如果，你的目的是做遥感反演，如水质参数反演、指数计算等，此时需要做大气校正。&lt;/p&gt;
+&lt;p&gt;如果，若任务不涉及定量反演（如目视解译、粗略分类或相对变化监测），大气校正的必要性较低</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>北京超图软件股份有限公司与黄志杰劳动争议二审民事判决书 (2020)京03民终10308号</title>
+    <link href="http://ytkz11@.github.io/2025/06/13/bei-jing-chao-tu-ruan-jian-gu-fen-you-xian-gong-si-yu-huang-zhi-jie-lao-dong-zheng-yi-er-shen-min-shi-pan-jue-shu-2020-jing-03-min-zhong-10308-hao/"/>
+    <id>http://ytkz11@.github.io/2025/06/13/bei-jing-chao-tu-ruan-jian-gu-fen-you-xian-gong-si-yu-huang-zhi-jie-lao-dong-zheng-yi-er-shen-min-shi-pan-jue-shu-2020-jing-03-min-zhong-10308-hao/</id>
+    <published>2025-06-13T12:20:10.000Z</published>
+    <updated>2025-06-13T06:00:27.340Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202506131359258.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="案件" scheme="http://ytkz11@.github.io/categories/%E6%A1%88%E4%BB%B6/"/>
+    
+    
+    <category term="案件" scheme="http://ytkz11@.github.io/tags/%E6%A1%88%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>把vscode配置好就可以去愉快地写代码了，不谢我。</title>
+    <link href="http://ytkz11@.github.io/2025/06/05/zhi-shi-fu-fei/"/>
+    <id>http://ytkz11@.github.io/2025/06/05/zhi-shi-fu-fei/</id>
+    <published>2025-06-05T12:20:10.000Z</published>
+    <updated>2025-06-05T09:28:36.377Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;以下是我使用的vscode设置。虽然有些主观，但很实用。&lt;/p&gt;
+&lt;h2 id=&quot;1-主题。&quot;&gt;&lt;a href=&quot;#1-主题。&quot; class=&quot;headerlink&quot; title=&quot;1 主题。&quot;&gt;&lt;/a&gt;1</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>把vscode配置好就可以去愉快地写代码了，不谢我。</title>
+    <link href="http://ytkz11@.github.io/2025/06/05/jian-dan-de-vscode-she-zhi/"/>
+    <id>http://ytkz11@.github.io/2025/06/05/jian-dan-de-vscode-she-zhi/</id>
+    <published>2025-06-05T12:20:10.000Z</published>
+    <updated>2025-06-05T09:28:36.377Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;以下是我使用的vscode设置。虽然有些主观，但很实用。&lt;/p&gt;
+&lt;h2 id=&quot;1-主题。&quot;&gt;&lt;a href=&quot;#1-主题。&quot; class=&quot;headerlink&quot; title=&quot;1 主题。&quot;&gt;&lt;/a&gt;1</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>揭开卫星图像的4大误区</title>
+    <link href="http://ytkz11@.github.io/2025/05/27/jie-kai-mi-mi-wei-xing-tu-xiang-de-wu-ge-da-wu-qu/"/>
+    <id>http://ytkz11@.github.io/2025/05/27/jie-kai-mi-mi-wei-xing-tu-xiang-de-wu-ge-da-wu-qu/</id>
+    <published>2025-05-27T14:20:10.000Z</published>
+    <updated>2025-05-27T08:57:04.671Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;揭开卫星图像的4大误区&quot;&gt;&lt;a href=&quot;#揭开卫星图像的4大误区&quot; class=&quot;headerlink&quot; title=&quot;揭开卫星图像的4大误区&quot;&gt;&lt;/a&gt;揭开卫星图像的4大误区&lt;/h1&gt;&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>人工智能时代如何做一名优秀的开发者</title>
+    <link href="http://ytkz11@.github.io/2025/05/21/rustdesk-zi-jian-zhong-ji-jie-dian-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2025/05/21/rustdesk-zi-jian-zhong-ji-jie-dian-jiao-cheng/</id>
+    <published>2025-05-21T14:20:10.000Z</published>
+    <updated>2025-05-28T07:36:09.911Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;RustDesk 是一款开源、免费、高性能的远程桌面软件，它允许你通过互联网或局域网远程控制另一台计算机。RustDesk 使用 Rust 语言编写，注重安全性、速度和易用性，提供流畅、可靠的远程桌面体验。 与 TeamViewer 或 AnyDesk</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>人工智能时代如何做一名优秀的开发者</title>
+    <link href="http://ytkz11@.github.io/2025/05/21/ren-gong-zhi-neng-shi-dai-ru-he-zuo-yi-ming-you-xiu-de-kai-fa-zhe/"/>
+    <id>http://ytkz11@.github.io/2025/05/21/ren-gong-zhi-neng-shi-dai-ru-he-zuo-yi-ming-you-xiu-de-kai-fa-zhe/</id>
+    <published>2025-05-21T14:20:10.000Z</published>
+    <updated>2025-05-21T07:21:32.319Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;引言：当你忘了-Python-的-for-循环&quot;&gt;&lt;a href=&quot;#引言：当你忘了-Python-的-for-循环&quot; class=&quot;headerlink&quot; title=&quot;引言：当你忘了 Python 的 for 循环&quot;&gt;&lt;/a&gt;引言：当你忘了 Python 的</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常见遥感数据格式概述</title>
+    <link href="http://ytkz11@.github.io/2025/05/16/chang-jian-yao-gan-shu-ju-ge-shi-gai-shu/"/>
+    <id>http://ytkz11@.github.io/2025/05/16/chang-jian-yao-gan-shu-ju-ge-shi-gai-shu/</id>
+    <published>2025-05-16T14:20:10.000Z</published>
+    <updated>2025-05-16T08:23:32.908Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;常见遥感数据格式概述&lt;/p&gt;
+&lt;p&gt;地理空间数据有多种格式，每种格式都有其独特的用途和特性。了解这些格式对于有效进行地理空间分析至关重要。以下是对主要地理空间数据格式的概述，分为矢量数据和栅格数据两大类，以及一些新兴的混合格式。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10 个看似令人困惑但却非常出色的 Python 功能！</title>
+    <link href="http://ytkz11@.github.io/2025/05/15/10-ge-kan-si-ling-ren-kun-huo-dan-que-fei-chang-chu-se-de-python-gong-neng/"/>
+    <id>http://ytkz11@.github.io/2025/05/15/10-ge-kan-si-ling-ren-kun-huo-dan-que-fei-chang-chu-se-de-python-gong-neng/</id>
+    <published>2025-05-15T14:20:10.000Z</published>
+    <updated>2025-05-15T08:21:55.046Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Python 以其简洁和易读性闻名，但一些特性初看可能让人摸不着头脑。然而，一旦你掌握了它们，就会发现它们能极大地提升代码的效率和优雅度。让我们一起探索这 10 个看似复杂但能彻底改变编程体验的 Python 功能！&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+</feed>

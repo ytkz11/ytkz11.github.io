@@ -1,0 +1,902 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>deepseek之提问什么是几何校正 | Find everything you need</title><meta name="keywords" content="遥感,GDAL"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="deepseek之提问什么是几何校正"><meta name="application-name" content="deepseek之提问什么是几何校正"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="deepseek之提问什么是几何校正"><meta property="og:url" content="http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="提问以一张png做演示，不依赖gdal和rasterio第三方库，用python一步一步演示遥感影像几何校正的过程，写成函数，帮我学习几何校正，帮助理解几何校正的本质  以下是它的思考： 嗯，用户想让我用Python一步步演示遥感影像的几何校正过程，而且不依赖GDAL和rasterio这两个库。他们"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://www.osgeo.org/wp-content/uploads/GDAL-1_740x412_acf_cropped-370x206.png"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://www.osgeo.org/wp-content/uploads/GDAL-1_740x412_acf_cropped-370x206.png"><meta name="description" content="提问以一张png做演示，不依赖gdal和rasterio第三方库，用python一步一步演示遥感影像几何校正的过程，写成函数，帮我学习几何校正，帮助理解几何校正的本质  以下是它的思考： 嗯，用户想让我用Python一步步演示遥感影像的几何校正过程，而且不依赖GDAL和rasterio这两个库。他们"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: 'deepseek之提问什么是几何校正',
+  postAI: '',
+  pageFillDescription: '提问, 代码, 测试提问以一张做演示不依赖和第三方库用一步一步演示遥感影像几何校正的过程写成函数帮我学习几何校正帮助理解几何校正的本质以下是它的思考嗯用户想让我用一步步演示遥感影像的几何校正过程而且不依赖和这两个库他们希望写成函数帮助他们理解几何校正的本质好的首先我得理清楚几何校正的基本步骤然后考虑如何用纯实现这些步骤而不用那些专业的库首先几何校正的主要步骤通常包括确定控制点构建变换模型然后对图像进行重采样用户可能想了解的是多项式变换比如一阶或二阶多项式然后用最小二乘法来求解系数接着是反向映射用双线性插值等方法填充校正后的图像不过使用纯处理图像的话可能需要用到库来读取和保存图像以及处理像素数据那用户的需求是不用和所以需要找到替代的库或者应该可以处理基本的图像操作但处理地理空间数据的话可能需要自己解析坐标不过用户可能只是需要一个演示所以可能控制点是由用户提供的而不是从地理文件中读取的比如用户自己输入控制点的坐标对接下来构建多项式变换模型比如一阶多项式有六个系数需要至少三个控制点二阶的话需要更多然后用最小二乘法来解这个方程组这里可能需要用到的线性代数求解功能比如不过用户可能希望不用太多第三方库但应该是可以接受的毕竟纯处理矩阵运算会非常麻烦然后是图像的重采样部分这一步需要遍历校正后的图像的每个像素找到在原图中的对应位置然后通过插值得到像素值反向映射是比较常用的方法比如对于每个校正后的像素点用变换矩阵的逆来找到原图中的位置然后用双线性插值计算像素值这里需要处理的是原图中的坐标可能超出图像范围这时候需要处理边缘情况比如填充或者进行镜像等但简单的处理可能是填充黑色接下来我需要考虑如何将这些步骤拆分成函数比如一个函数用来计算变换系数另一个函数用来应用变换并进行重采样控制点的输入可能需要用户以列表形式提供每个控制点包含原图和目标图的坐标可能的问题点如何确保变换矩阵的正确性尤其是在处理多项式的时候比如一阶变换的模型是这需要为和分别构建系数矩阵然后求解或者是否应该将和分开处理或者一起处理通常每个坐标方向的变换是独立的所以可能需要分别求解和的系数例如对于控制点我们有多个点每个点有原图的坐标和目标坐标对于一阶多项式每个坐标的方程是每个控制点可以构成一个方程所有的控制点组成一个方程组用最小二乘法求解同样地对方向也是一样得到所以可能需要分别求解和的系数那在代码中我需要为和分别构建系数矩阵例如对于一阶多项式每个控制点的系数矩阵的行是对应的目标值是同样对于方向目标值是然后使用来解这个方程组接下来是反向变换的问题因为通常几何校正是将校正后的图像每个像素映射回原图的位置所以需要逆变换不过用户提供的控制点可能是从原图到目标图的变换所以在进行校正时可能需要逆变换的参数或者假设用户提供的控制点是原图到目标图的对应关系那么当我们要生成目标图像时每个目标图像的像素点需要找到对应的原图位置这时候可能需要使用逆变换不过这可能比较复杂特别是当变换矩阵不是可逆的时候或者是否应该直接使用原变换的正向变换将原图的点映射到目标图这可能会产生问题因为目标图的像素可能不是整数或者存在空洞因此反向映射更为常见即遍历每个目标图像的像素通过逆变换找到在原图中的位置然后进行插值所以在代码中可能需要先确定变换模型然后计算逆变换或者用户提供的控制点是从目标图到原图的对应关系或者需要明确控制点的方向这里可能需要用户提供的控制点对是原图坐标到目标图坐标的映射例如原图中的点对应目标图中的点然后要构建从目标到原图的变换因为在校正的时候我们需要对于每个目标图像的位置找到对应的原图位置并采样或者可能用户提供的控制点是目标到原图的这需要明确或者可能用户提供的控制点对是原图到参考目标坐标的即原图的点对应到目标坐标的点因此要构建一个从目标坐标到原图坐标的变换以便将目标图像的每个像素映射回原图然后进行采样例如当我们校正时生成的目标图像中的每个点需要找到对应的原图中的这可能需要逆变换或者构建另一个方向的变换模型这里可能需要重新考虑控制点的使用方式比如假设我们有原图的坐标点比如存在几何畸变的图像和它们对应的正确的地理坐标或目标坐标几何校正的目标是将原图校正到目标坐标系中因此需要建立一个从目标坐标到原图坐标的映射因为对于每个目标坐标的像素需要知道在原图中的哪个位置获取像素值因此可能控制点对应该是目标坐标与原图中的坐标之间的对应关系因此我们需要建立一个从目标坐标到原图坐标的变换模型这可能与用户提供的控制点的顺序有关可能需要用户以这样的方式提供即每个控制点包含目标坐标和对应的原图坐标例如控制点可能是这样的或者可能反过来这可能会影响如何构建变换模型例如如果用户提供的控制点是原图的坐标到目标坐标的映射即原图中的点应该被映射到目标坐标那么我们需要构建一个变换模型将目标坐标映射回原图坐标这可能比较复杂因为变换可能是不可逆的或者用户可能需要用目标到原图的控制点对这样可以直接构建从目标坐标到原图坐标的变换这样就不需要求逆例如假设用户提供的每个控制点是这样我们直接可以用坐标作为自变量坐标作为因变量建立模型这样在生成目标图像时每个目标像素的位置可以通过模型计算出对应的和从而在原图中采样这样更直接不需要求逆变换所以用户可能需要将控制点以这种方式提供因此在构建多项式模型时自变量是目标坐标的和因变量是原图的和比如原图的坐标可以表示为多项式函数参数是目标坐标的和同样原图的坐标也是如此因此构建两个多项式模型一个用于预测原图的坐标基于目标坐标的和另一个用于预测原图的坐标这样当处理每个目标像素的坐标时带入多项式模型得到对应的原图坐标然后进行插值这可能更合理因此用户提供的控制点应该是目标坐标到原图坐标的对应关系这可能更直接因为几何校正的目的是将原图校正到目标坐标系所以对于每个目标像素的位置我们需要找到在原图中的对应位置这样的话控制点的结构应该是对于每个控制点给出其在目标图像中的位置比如正确的坐标和其在原图中的位置可能畸变的坐标例如可能用户知道某些地物在目标坐标系中的正确位置以及这些地物在原图中的位置从而建立对应关系现在构建模型的话比如使用二阶多项式模型原图的和坐标可以表示为对于每个控制点我们可以建立两个方程一个是关于的另一个是的如果有足够的控制点可以用最小二乘法求解这些系数然后在应用变换时对于目标图像中的每个像素点计算对应的和然后从原图中采样使用双线性插值得到该位置的像素值赋给目标图像现在如何将这些步骤转化为代码首先读取原图像可以使用库将图像转换为数组然后定义控制点列表每个元素包含目标坐标和原图坐标例如的结构可能是然后构建多项式矩阵例如对于二阶多项式每个控制点对应一个行向量包含各项的值比如对于和生成的行向量是将这些行向量组成矩阵然后解方程组同理使用来解得到和后就可以对每个目标坐标点计算对应的原图坐标然后生成目标图像遍历每个像素的坐标计算对应的和然后根据这些坐标在原图中进行插值双线性插值的实现需要处理原图中的四个邻近像素如果坐标超出原图范围则填充或者进行其他处理现在将这个过程写成函数可能需要以下步骤读取原图像转换为数组定义控制点根据控制点构建多项式模型求解系数创建目标图像数组尺寸可能需要用户指定或者根据原图尺寸和变换自动计算遍历目标图像的每个像素计算对应的原图坐标进行插值将结果保存为图像可能的函数结构函数参数为原图像路径控制点列表多项式阶数目标图像尺寸输出路径等辅助函数如计算多项式系数双线性插值等需要注意的问题控制点的数量必须足够比如一阶多项式需要至少个点二阶需要至少个点否则无法解唯一解或者需要使用最小二乘法当点数多于所需时目标图像的尺寸可能需要用户指定或者自动计算为原图的大小或者根据控制点的范围确定处理图像时原图的坐标可能是浮点数需要插值颜色通道的处理比如图像需要分别处理每个通道例如原图是三维数组高度宽度通道所以插值时需要对每个通道进行操作现在编写代码的大致步骤首先导入必要的库的以及然后定义函数步骤读取原图像注意的是宽高步骤处理控制点构建多项式方程组控制点格式应为提取目标坐标和原坐标构建多项式矩阵根据阶数生成对应的项一阶项二阶项三阶及以上可能需要更多项这里假设只处理和阶暂时不支持解最小二乘问题步骤确定目标图像尺寸可能需要根据控制点的坐标的最大最小值来确定或者直接使用原图的尺寸这里假设用户指定或者使用原图尺寸可能需要更合理的处理比如根据变换后的原图范围但为了简单可能直接使用原图尺寸创建目标图像数组步骤遍历目标图像的每个像素计算对应的原图坐标并插值计算多项式项计算对应的原图坐标进行双线性插值需要处理和是否在原图范围内边界检查超出范围设置为或透明双线性插值获取四个邻域的像素值插值计算保存图像但这段代码可能存在问题的读取的图像转换为数组后的形状是高度宽度通道而的是宽度高度所以在处理的时候需要将坐标转换正确例如原图的宽度是高度是在数组中是所以在代码中的形状应该是高度宽度通道或者高度宽度对于灰度图例如当原图是时的形状是所以在遍历的时候原图的坐标是和对应到数组中的位置是因此在双线性插值时需要注意和的顺序是否与数组的索引对应例如假设原图的某个点的坐标为在数组中对应的位置是例如是列数对应到数组的第二个轴是行数对应到数组的第一个轴这可能容易出错例如如果原图是宽度为高度为那么数组的索引是其中的范围是到的范围是到所以当计算得到原图的坐标为需要转换为数组的索引为或者可能坐标的对应数组的列第二个轴对应数组的行第一个轴这可能是一个容易出错的地方例如在代码中当用户提供的控制点中的和是原图中的坐标比如原图的左上角是向右为增加向下为增加那么在数组中对应的是所以在处理时比如原图的坐标是对应的数组索引是例如的范围是到的范围是到所以在双线性插值时原图的坐标需要转换为数组的索引即然后检查这些是否在范围内是否在范围内如果越界则处理为或者跳过但是在代码中原图的宽度和高度是从得到的而是所以在数组中的形状是因此在访问数组时必须确保和不超过和不超过例如假设原图的宽度是高度是数组的是所以在检查时应确保或者在双线性插值的时候如果坐标超出范围就直接返回另一个问题当处理图像时每个像素有三个通道所以在双线性插值时必须对每个通道进行插值例如在代码中可能需要循环每个通道或者使用向量化操作此外在计算多项式项的时候代码中的和是否是正确的目标坐标比如假设目标图像的坐标从开始到和例如当设置为原图的大小时那么遍历的的范围是到是到这可能不正确因为控制点中的目标坐标可能是一个不同的范围例如用户可能希望将原图校正到一个更大的坐标系中或者不同的位置因此这里可能需要更灵活的处理比如允许用户指定输出图像的范围或者根据控制点的目标坐标自动计算这可能比较复杂但为了示例可能让用户指定或者默认使用原图的尺寸例如在示例中用户可能希望校正后的图像与原图尺寸相同或者根据控制点的范围调整但为了简化问题可能在示例中将设置为原图的尺寸或者根据控制点的最大坐标自动计算例如如果控制点中的目标坐标是相对于校正后的图像的左上角那么可能需要确定校正后的图像的范围这可能超出示例的范围所以可能假设由用户提供或者在函数中默认为原图的尺寸另一个问题是当多项式阶数较高时比如二阶需要更多的控制点如果用户提供的控制点不足会给出一个最小二乘解但可能不准确所以函数需要确保控制点的数量足够比如对于二阶至少需要个点否则解可能不可靠现在关于双线性插值的实现代码中的循环是否正确比如对于每个通道单独处理或者是否可以利用的向量化操作来加速在示例代码中为了清晰可能会逐个像素处理但在实际中这会非常慢特别是对大图像不过用户可能只是需要一个演示所以可以接受此外双线性插值的计算是否正确例如应该是而是然后是左右之间的线性插值同理最后是上下之间的线性插值这部分公式是否正确是的正确的双线性插值公式应该是这样此外当或超出原图范围时如何处理在示例代码中如果或或者或那么该像素会被设为这可能是一种简单的处理方式但在实际中可能需要其他方法如镜像重复边缘像素等但为了简单示例可能采用填的方式现在测试这个函数是否可行例如假设用户有一个简单的例子比如原图是某种几何畸变的图像用户提供几个控制点然后运行函数生成校正后的图像例如假设原图是一个被水平错切的图像用户提供四个控制点校正后的图像应该是一个矩形控制点可能是在目标图像中的四个角点对应的原图中的错切后的坐标但如何生成这样的示例呢可能用户需要手动定义控制点对例如假设原图被向右错切每个点的坐标增加了坐标的某个比例例如原图中的点在目标图像中应为这可能是一个一阶变换用户提供的控制点可以是四个角点例如原图的四个角点可能被错切成目标坐标对应原图目标坐标对应原图目标坐标对应原图目标坐标对应原图这样的话控制点可能帮助计算出一阶变换的系数但用户可能需要更多的控制点比如至少三个点因为一阶多项式有个系数每个坐标方向个或者可能这里的目标到原图的变换模型是一阶每个坐标方向需要三个参数因此需要至少三个控制点例如假设用户提供的控制点足够函数将正确计算变换参数并应用校正现在编写一个示例的使用代码假设原图是一个带有错切的图像用户希望校正它例如原图的左上角在目标图像的原图的右上角在目标图像的原图的左下角在目标图像的而原图中的左下角实际位于可能被错切成因此用户提供的控制点可能包括目标对应原图目标对应原图目标对应原图这里假设是某个值比如原图在方向有水平错切例如假设当时此时使用一阶多项式构建变换模型其中原图的坐标由目标和的线性组合得到例如而根据这三个控制点对于点对于点因为所以对于点所以原图的这样当应用这个变换时校正后的图像每个点的和将被转换为原图的而这样在目标图像中的每个点对应的原图坐标是这样校正后的图像将消除错切因为原图中的错切被逆变换了这可能是一个合理的测试案例在代码中用户需要将这些控制点传入函数然后生成校正后的图像综上这个函数的大体结构应该能工作但需要注意坐标系的转换以及和数组的索引顺序是否正确最后用户可能希望这个函数能帮助他们理解几何校正的本质即通过控制点建立坐标映射关系然后利用插值填充校正后的图像这个过程的核心是坐标变换模型的构建和重采样这正是函数所要演示的代码双线性插值实现边界检查计算权重获取四个邻域像素值彩色图像灰度图像插值计算计算多项式变换系数构建多项式矩阵一阶项二阶项几何校正主函数原始图像路径控制点列表格式多项式阶数或输出图像尺寸宽高读取原始影像计算变换系数确定输出尺寸创建输出图像遍历输出图像的每个像素计算对应的原图坐标执行插值示例使用定义控制点示例目标坐标目标坐标原图坐标原图坐标左上角右上角左下角右下角执行几何校正测试',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-02-12 15:51:23',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 1.05rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 1.05rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1.05rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 1.05rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/" itemprop="url">遥感</a><i class="anzhiyufont anzhiyu-icon-angle-right post-meta-separator"></i><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/GDAL/" itemprop="url">GDAL</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%81%A5%E6%84%9F/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>遥感</span></a><a class="article-meta__tags" href="/tags/GDAL/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>GDAL</span></a></span></div></div><h1 class="post-title" itemprop="name headline">deepseek之提问什么是几何校正</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-02-12T13:00:10.000Z" title="发表于 2025-02-12 21:00:10">2025-02-12</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-02-12T07:51:23.113Z" title="更新于 2025-02-12 15:51:23">2025-02-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://www.osgeo.org/wp-content/uploads/GDAL-1_740x412_acf_cropped-370x206.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/"><header><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/" itemprop="url">遥感</a><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/GDAL/" itemprop="url">GDAL</a><a href="/tags/%E9%81%A5%E6%84%9F/" tabindex="-1" itemprop="url">遥感</a><a href="/tags/GDAL/" tabindex="-1" itemprop="url">GDAL</a><h1 id="CrawlerTitle" itemprop="name headline">deepseek之提问什么是几何校正</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2025-02-12T13:00:10.000Z" title="发表于 2025-02-12 21:00:10">2025-02-12</time><time itemprop="dateCreated datePublished" datetime="2025-02-12T07:51:23.113Z" title="更新于 2025-02-12 15:51:23">2025-02-12</time></header><h2 id="提问"><a href="#提问" class="headerlink" title="提问"></a>提问</h2><p>以一张png做演示，不依赖gdal和rasterio第三方库，用python一步一步演示遥感影像几何校正的过程，写成函数，帮我学习几何校正，帮助理解几何校正的本质</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202502121547448.png" alt="image-20250212153313466"></p>
+<p>以下是它的思考：</p>
+<pre class="line-numbers language-none"><code class="language-none">嗯，用户想让我用Python一步步演示遥感影像的几何校正过程，而且不依赖GDAL和rasterio这两个库。他们希望写成函数，帮助他们理解几何校正的本质。好的，首先我得理清楚几何校正的基本步骤，然后考虑如何用纯Python实现这些步骤，而不用那些专业的库。
+
+首先，几何校正的主要步骤通常包括确定控制点、构建变换模型、然后对图像进行重采样。用户可能想了解的是多项式变换，比如一阶或二阶多项式，然后用最小二乘法来求解系数。接着是反向映射，用双线性插值等方法填充校正后的图像。不过，使用纯Python处理图像的话，可能需要用到PIL库来读取和保存图像，以及处理像素数据。
+
+那用户的需求是不用GDAL和rasterio，所以需要找到替代的库。PIL或者Pillow应该可以处理基本的图像操作。但处理地理空间数据的话，可能需要自己解析坐标，不过用户可能只是需要一个演示，所以可能控制点是由用户提供的，而不是从地理文件中读取的。比如，用户自己输入控制点的坐标对。
+
+接下来，构建多项式变换模型。比如，一阶多项式有六个系数，需要至少三个控制点；二阶的话需要更多。然后用最小二乘法来解这个方程组。这里可能需要用到numpy的线性代数求解功能，比如numpy.linalg.lstsq。不过用户可能希望不用太多第三方库，但numpy应该是可以接受的，毕竟纯Python处理矩阵运算会非常麻烦。
+
+然后是图像的重采样部分。这一步需要遍历校正后的图像的每个像素，找到在原图中的对应位置，然后通过插值得到像素值。反向映射是比较常用的方法，比如对于每个校正后的像素点，用变换矩阵的逆来找到原图中的位置，然后用双线性插值计算像素值。这里需要处理的是，原图中的坐标可能超出图像范围，这时候需要处理边缘情况，比如填充0或者进行镜像等，但简单的处理可能是填充黑色。
+
+接下来，我需要考虑如何将这些步骤拆分成函数。比如，一个函数用来计算变换系数，另一个函数用来应用变换并进行重采样。控制点的输入可能需要用户以列表形式提供，每个控制点包含原图和目标图的坐标。
+
+可能的问题点：如何确保变换矩阵的正确性，尤其是在处理多项式的时候。比如，一阶变换的模型是x' = a0 + a1x + a2y，y' = b0 + b1x + b2y。这需要为x和y分别构建系数矩阵，然后求解。或者，是否应该将x和y分开处理，或者一起处理？通常，每个坐标方向的变换是独立的，所以可能需要分别求解a和b的系数。
+
+例如，对于控制点，我们有多个点，每个点有原图的坐标（x, y）和目标坐标（x', y'）。对于一阶多项式，每个坐标的方程是x' = a0 + a1x + a2y。每个控制点可以构成一个方程，所有的控制点组成一个方程组，用最小二乘法求解a0, a1, a2。同样地，对y'方向也是一样，得到b0, b1, b2。所以，可能需要分别求解x和y的系数。
+
+那在代码中，我需要为x和y分别构建系数矩阵。例如，对于一阶多项式，每个控制点的系数矩阵的行是[1, x, y]，对应的目标值是x'。同样，对于y方向，目标值是y'。然后使用numpy.linalg.lstsq来解这个方程组。
+
+接下来是反向变换的问题。因为通常几何校正是将校正后的图像每个像素映射回原图的位置，所以需要逆变换。不过用户提供的控制点可能是从原图到目标图的变换，所以在进行校正时，可能需要逆变换的参数。或者，假设用户提供的控制点是原图到目标图的对应关系，那么当我们要生成目标图像时，每个目标图像的像素点需要找到对应的原图位置，这时候可能需要使用逆变换。不过这可能比较复杂，特别是当变换矩阵不是可逆的时候。或者，是否应该直接使用原变换的正向变换，将原图的点映射到目标图？这可能会产生问题，因为目标图的像素可能不是整数，或者存在空洞。因此，反向映射更为常见，即遍历每个目标图像的像素，通过逆变换找到在原图中的位置，然后进行插值。
+
+所以在代码中，可能需要先确定变换模型，然后计算逆变换。或者，用户提供的控制点是从目标图到原图的对应关系？或者需要明确控制点的方向？
+
+这里可能需要用户提供的控制点对是原图坐标到目标图坐标的映射。例如，原图中的点(x_src, y_src)对应目标图中的点(x_dst, y_dst)。然后，要构建从目标到原图的变换，因为在校正的时候，我们需要对于每个目标图像的位置，找到对应的原图位置，并采样。或者，可能用户提供的控制点是目标到原图的？这需要明确。
+
+或者，可能用户提供的控制点对是原图到参考（目标）坐标的，即原图的点对应到目标坐标的点。因此，要构建一个从目标坐标到原图坐标的变换，以便将目标图像的每个像素映射回原图，然后进行采样。例如，当我们校正时，生成的目标图像中的每个点(x', y')需要找到对应的原图中的(x, y)，这可能需要逆变换，或者构建另一个方向的变换模型。
+
+这里可能需要重新考虑控制点的使用方式。比如，假设我们有原图的坐标点（比如，存在几何畸变的图像）和它们对应的正确的地理坐标（或目标坐标）。几何校正的目标是将原图校正到目标坐标系中。因此，需要建立一个从目标坐标到原图坐标的映射，因为对于每个目标坐标的像素，需要知道在原图中的哪个位置获取像素值。因此，可能控制点对应该是目标坐标（x_dst, y_dst）与原图中的坐标（x_src, y_src）之间的对应关系。因此，我们需要建立一个从目标坐标到原图坐标的变换模型。这可能与用户提供的控制点的顺序有关，可能需要用户以这样的方式提供：即每个控制点包含目标坐标和对应的原图坐标。例如，控制点可能是这样的： [(x_dst1, y_dst1, x_src1, y_src1), ...]。或者可能反过来？
+
+这可能会影响如何构建变换模型。例如，如果用户提供的控制点是原图的坐标到目标坐标的映射，即原图中的点(x_src, y_src)应该被映射到目标坐标(x_dst, y_dst)。那么，我们需要构建一个变换模型，将目标坐标映射回原图坐标。这可能比较复杂，因为变换可能是不可逆的。或者，用户可能需要用目标到原图的控制点对，这样可以直接构建从目标坐标到原图坐标的变换，这样就不需要求逆。
+
+例如，假设用户提供的每个控制点是（dst_x, dst_y, src_x, src_y），这样我们直接可以用dst坐标作为自变量，src坐标作为因变量，建立模型。这样，在生成目标图像时，每个目标像素的位置（dst_x, dst_y）可以通过模型计算出对应的src_x和src_y，从而在原图中采样。这样更直接，不需要求逆变换。
+
+所以，用户可能需要将控制点以这种方式提供。因此，在构建多项式模型时，自变量是目标坐标的x和y，因变量是原图的x和y。比如，原图的x坐标可以表示为多项式函数，参数是目标坐标的x和y。同样，原图的y坐标也是如此。
+
+因此，构建两个多项式模型：一个用于预测原图的x坐标（基于目标坐标的x和y），另一个用于预测原图的y坐标。这样，当处理每个目标像素的坐标时，带入多项式模型，得到对应的原图坐标，然后进行插值。
+
+这可能更合理，因此用户提供的控制点应该是目标坐标到原图坐标的对应关系。这可能更直接，因为几何校正的目的是将原图校正到目标坐标系，所以对于每个目标像素的位置，我们需要找到在原图中的对应位置。
+
+这样的话，控制点的结构应该是：对于每个控制点，给出其在目标图像中的位置（比如，正确的坐标）和其在原图中的位置（可能畸变的坐标）。例如，可能用户知道某些地物在目标坐标系中的正确位置，以及这些地物在原图中的位置，从而建立对应关系。
+
+现在，构建模型的话，比如，使用二阶多项式模型，原图的x和y坐标可以表示为：
+
+src_x = a0 + a1*dst_x + a2*dst_y + a3*dst_x^2 + a4*dst_x*dst_y + a5*dst_y^2
+
+src_y = b0 + b1*dst_x + b2*dst_y + b3*dst_x^2 + b4*dst_x*dst_y + b5*dst_y^2
+
+对于每个控制点，我们可以建立两个方程：一个是关于src_x的，另一个是src_y的。如果有足够的控制点，可以用最小二乘法求解这些系数。
+
+然后，在应用变换时，对于目标图像中的每个像素点（dst_x, dst_y），计算对应的src_x和src_y，然后从原图中采样（使用双线性插值）得到该位置的像素值，赋给目标图像。
+
+现在，如何将这些步骤转化为代码？
+
+首先，读取原图像，可以使用Pillow库，将图像转换为numpy数组。然后，定义控制点列表，每个元素包含目标坐标和原图坐标。例如，control_points的结构可能是[(dst_x1, dst_y1, src_x1, src_y1), ...]。
+
+然后，构建多项式矩阵。例如，对于二阶多项式，每个控制点对应一个行向量，包含各项的值。比如，对于dst_x和dst_y，生成的行向量是[1, dst_x, dst_y, dst_x^2, dst_x*dst_y, dst_y^2]。将这些行向量组成矩阵A，然后解方程组A * coeffs_x = src_x_vector，同理coeffs_y = ...。使用numpy.linalg.lstsq来解。
+
+得到coeffs_x和coeffs_y后，就可以对每个目标坐标点计算对应的原图坐标。
+
+然后，生成目标图像，遍历每个像素的坐标（dst_x, dst_y），计算对应的src_x和src_y。然后，根据这些坐标在原图中进行插值。
+
+双线性插值的实现需要处理原图中的四个邻近像素，如果坐标超出原图范围，则填充0或者进行其他处理。
+
+现在，将这个过程写成函数。可能需要以下步骤：
+
+1. 读取原图像，转换为numpy数组。
+
+2. 定义控制点。
+
+3. 根据控制点构建多项式模型，求解系数。
+
+4. 创建目标图像数组，尺寸可能需要用户指定，或者根据原图尺寸和变换自动计算。
+
+5. 遍历目标图像的每个像素，计算对应的原图坐标，进行插值。
+
+6. 将结果保存为PNG图像。
+
+可能的函数结构：
+
+- 函数geometric_correction，参数为原图像路径，控制点列表，多项式阶数，目标图像尺寸，输出路径等。
+
+- 辅助函数，如计算多项式系数，双线性插值等。
+
+需要注意的问题：
+
+- 控制点的数量必须足够。比如，一阶多项式需要至少3个点，二阶需要至少6个点，否则无法解唯一解，或者需要使用最小二乘法当点数多于所需时。
+
+- 目标图像的尺寸可能需要用户指定，或者自动计算为原图的大小，或者根据控制点的范围确定。
+
+- 处理图像时，原图的坐标可能是浮点数，需要插值。
+
+- 颜色通道的处理，比如RGB图像需要分别处理每个通道。
+
+例如，原图是三维数组（高度，宽度，通道），所以插值时需要对每个通道进行操作。
+
+现在，编写代码的大致步骤：
+
+首先，导入必要的库：PIL的Image，numpy，以及math。
+
+然后，定义函数：
+
+def geometric_correction(src_image_path, control_points, order=2, output_size=None, output_path='corrected.png'):
+
+# 步骤1：读取原图像
+
+src_img = Image.open(src_image_path)
+
+src_array = np.array(src_img)
+
+height_src, width_src = src_img.size  # 注意PIL的size是（宽，高）
+
+channels = src_array.shape[2] if len(src_array.shape) ==3 else 1
+
+# 步骤2：处理控制点，构建多项式方程组
+
+# 控制点格式应为 [(dst_x, dst_y, src_x, src_y), ...]
+
+# 提取目标坐标和原坐标
+
+dst_points = np.array([(pt[0], pt[1]) for pt in control_points])
+
+src_x = np.array([pt[2] for pt in control_points])
+
+src_y = np.array([pt[3] for pt in control_points])
+
+# 构建多项式矩阵A
+
+# 根据阶数生成对应的项
+
+A = []
+
+for (x, y) in dst_points:
+
+terms = []
+
+if order &gt;= 1:
+
+# 一阶项：1, x, y
+
+terms = [1, x, y]
+
+if order &gt;=2:
+
+# 二阶项：x², xy, y²
+
+terms += [x**2, x*y, y**2]
+
+if order &gt;=3:
+
+# 三阶及以上可能需要更多项，这里假设只处理1和2阶
+
+pass # 暂时不支持
+
+A.append(terms)
+
+A = np.array(A)
+
+# 解最小二乘问题
+
+coeffs_x, residuals, rank, singular_values = np.linalg.lstsq(A, src_x, rcond=None)
+
+coeffs_y, residuals, rank, singular_values = np.linalg.lstsq(A, src_y, rcond=None)
+
+# 步骤3：确定目标图像尺寸
+
+if output_size is None:
+
+# 可能需要根据控制点的dst坐标的最大最小值来确定
+
+dst_x_coords = [pt[0] for pt in control_points]
+
+dst_y_coords = [pt[1] for pt in control_points]
+
+min_x, max_x = min(dst_x_coords), max(dst_x_coords)
+
+min_y, max_y = min(dst_y_coords), max(dst_y_coords)
+
+output_width = int(max_x - min_x + 1)
+
+output_height = int(max_y - min_y + 1)
+
+# 或者直接使用原图的尺寸？
+
+# 这里假设用户指定或者使用原图尺寸
+
+# 可能需要更合理的处理，比如根据变换后的原图范围
+
+# 但为了简单，可能直接使用原图尺寸？
+
+output_width, output_height = src_img.size
+
+else:
+
+output_width, output_height = output_size
+
+# 创建目标图像数组
+
+if channels ==1:
+
+corrected_array = np.zeros((output_height, output_width), dtype=np.uint8)
+
+else:
+
+corrected_array = np.zeros((output_height, output_width, channels), dtype=np.uint8)
+
+# 步骤4：遍历目标图像的每个像素，计算对应的原图坐标，并插值
+
+for dst_y in range(output_height):
+
+for dst_x in range(output_width):
+
+# 计算多项式项
+
+terms = []
+
+x = dst_x
+
+y = dst_y
+
+if order &gt;=1:
+
+terms = [1, x, y]
+
+if order &gt;=2:
+
+terms += [x**2, x*y, y**2]
+
+terms = np.array(terms)
+
+# 计算对应的原图坐标
+
+src_x = np.dot(terms, coeffs_x)
+
+src_y = np.dot(terms, coeffs_y)
+
+# 进行双线性插值
+
+# 需要处理src_x和src_y是否在原图范围内
+
+x0 = int(np.floor(src_x))
+
+y0 = int(np.floor(src_y))
+
+x1 = x0 +1
+
+y1 = y0 +1
+
+# 边界检查
+
+if x0 &lt;0 or y0 &lt;0 or x1 &gt;= width_src or y1 &gt;= height_src:
+
+# 超出范围，设置为0或透明
+
+pixel_value = 0
+
+else:
+
+# 双线性插值
+
+dx = src_x - x0
+
+dy = src_y - y0
+
+for c in range(channels) if channels !=1 else [0]:
+
+# 获取四个邻域的像素值
+
+top_left = src_array[y0, x0, c] if channels !=1 else src_array[y0, x0]
+
+top_right = src_array[y0, x1, c] if channels !=1 else src_array[y0, x1]
+
+bottom_left = src_array[y1, x0, c] if channels !=1 else src_array[y1, x0]
+
+bottom_right = src_array[y1, x1, c] if channels !=1 else src_array[y1, x1]
+
+# 插值计算
+
+top = top_left * (1 - dx) + top_right * dx
+
+bottom = bottom_left * (1 - dx) + bottom_right * dx
+
+pixel_value = top * (1 - dy) + bottom * dy
+
+pixel_value = int(np.clip(pixel_value, 0, 255))
+
+if channels ==1:
+
+corrected_array[dst_y, dst_x] = pixel_value
+
+else:
+
+corrected_array[dst_y, dst_x, c] = pixel_value
+
+# 保存图像
+
+corrected_img = Image.fromarray(corrected_array)
+
+corrected_img.save(output_path)
+
+但这段代码可能存在问题：
+
+1. PIL的Image.open读取的图像，转换为numpy数组后的形状是（高度，宽度，通道），而PIL的size是（宽度，高度）。所以在处理的时候需要将坐标转换正确。例如，原图的宽度是src_img.size[0]，高度是src_img.size[1]。在numpy数组中，是src_array[y, x]。
+
+所以在代码中，src_array的形状应该是（高度，宽度， 通道）或者（高度， 宽度）对于灰度图。例如，当原图是RGB时，src_array的形状是 (height, width, 3)。
+
+所以在遍历的时候，原图的坐标是src_x和src_y，对应到数组中的位置是 [y, x]。因此，在双线性插值时，需要注意x和y的顺序是否与数组的索引对应。
+
+例如，假设原图的某个点的坐标为 (src_x, src_y)，在数组中对应的位置是 [y, x]。例如，src_x是列数，对应到数组的第二个轴，src_y是行数，对应到数组的第一个轴。这可能容易出错。
+
+例如，如果原图是宽度为W，高度为H，那么数组的索引是 [y][x]，其中x的范围是0到W-1，y的范围是0到H-1。所以，当计算得到原图的坐标为 (src_x, src_y)，需要转换为数组的索引为 (int(src_y), int(src_x))。或者，可能坐标的x对应数组的列（第二个轴），y对应数组的行（第一个轴）。
+
+这可能是一个容易出错的地方。例如，在代码中，当用户提供的控制点中的src_x和src_y是原图中的坐标，比如原图的左上角是 (0,0)，向右为x增加，向下为y增加。那么在数组中，对应的是 [y][x]。所以在处理时，比如，原图的坐标是 (x, y)，对应的数组索引是 [y][x]。例如，src_x的范围是 0到width_src-1，src_y的范围是0到height_src-1。
+
+所以，在双线性插值时，原图的坐标需要转换为数组的索引，即：
+
+x0 = floor(src_x)
+
+y0 = floor(src_y)
+
+x1 = x0 + 1
+
+y1 = y0 + 1
+
+然后，检查这些x0, x1是否在 [0, width_src -1] 范围内，y0, y1是否在 [0, height_src -1] 范围内。如果越界，则处理为0或者跳过。
+
+但是，在代码中，原图的宽度和高度是从src_img.size得到的，而src_img.size是 (width, height)。所以在数组中的形状是 (height, width, channels)。因此，在访问数组时，必须确保y0和y1不超过height-1，x0和x1不超过width-1。
+
+例如，假设原图的宽度是width_src，高度是height_src。数组的shape是 (height_src, width_src, ...)。所以在检查时，应确保x0 &gt;=0，x1 &lt; width_src，y0 &gt;=0，y1 &lt; height_src。或者，在双线性插值的时候，如果坐标超出范围，就直接返回0。
+
+另一个问题，当处理RGB图像时，每个像素有三个通道，所以在双线性插值时，必须对每个通道进行插值。例如，在代码中，可能需要循环每个通道，或者使用向量化操作。
+
+此外，在计算多项式项的时候，代码中的dst_x和dst_y是否是正确的目标坐标？比如，假设目标图像的坐标从0开始到output_width-1和output_height-1。例如，当output_size设置为原图的大小时，那么遍历的dst_x的范围是0到width_src-1，dst_y是0到height_src-1。这可能不正确，因为控制点中的目标坐标可能是一个不同的范围。例如，用户可能希望将原图校正到一个更大的坐标系中，或者不同的位置。因此，这里可能需要更灵活的处理，比如允许用户指定输出图像的范围，或者根据控制点的目标坐标自动计算。
+
+这可能比较复杂，但为了示例，可能让用户指定output_size，或者默认使用原图的尺寸。例如，在示例中，用户可能希望校正后的图像与原图尺寸相同，或者根据控制点的范围调整。
+
+但为了简化问题，可能在示例中将output_size设置为原图的尺寸，或者根据控制点的最大坐标自动计算。例如，如果控制点中的目标坐标是相对于校正后的图像的左上角，那么可能需要确定校正后的图像的范围。
+
+这可能超出示例的范围，所以可能假设output_size由用户提供，或者在函数中默认为原图的尺寸。
+
+另一个问题是，当多项式阶数较高时，比如二阶，需要更多的控制点。如果用户提供的控制点不足，numpy.linalg.lstsq会给出一个最小二乘解，但可能不准确。所以函数需要确保控制点的数量足够，比如对于二阶，至少需要6个点。否则，解可能不可靠。
+
+现在，关于双线性插值的实现，代码中的循环是否正确？比如，对于每个通道，单独处理。或者，是否可以利用numpy的向量化操作来加速？
+
+在示例代码中，为了清晰，可能会逐个像素处理，但在实际中这会非常慢，特别是对大图像。不过，用户可能只是需要一个演示，所以可以接受。
+
+此外，双线性插值的计算是否正确？例如，dx应该是src_x - x0，而dy是src_y - y0。然后，top是左右之间的线性插值，bottom同理，最后是上下之间的线性插值。这部分公式是否正确？
+
+是的，正确的双线性插值公式应该是这样。
+
+此外，当x0或y0超出原图范围时，如何处理？在示例代码中，如果x0 &lt;0或y0 &lt;0，或者x1 &gt;= width_src或y1 &gt;= height_src，那么该像素会被设为0。这可能是一种简单的处理方式，但在实际中可能需要其他方法，如镜像、重复边缘像素等。但为了简单，示例可能采用填0的方式。
+
+现在，测试这个函数是否可行。例如，假设用户有一个简单的例子，比如原图是某种几何畸变的图像，用户提供几个控制点，然后运行函数生成校正后的图像。
+
+例如，假设原图是一个被水平错切的图像，用户提供四个控制点，校正后的图像应该是一个矩形。控制点可能是在目标图像中的四个角点，对应的原图中的错切后的坐标。
+
+但如何生成这样的示例呢？可能用户需要手动定义控制点对。
+
+例如，假设原图被向右错切，每个点的x坐标增加了y坐标的某个比例。例如，原图中的点 (x, y) 在目标图像中应为 (x - 0.5*y, y)。这可能是一个一阶变换。用户提供的控制点可以是四个角点：
+
+例如，原图的四个角点可能被错切成：
+
+目标坐标（0,0）对应原图（0,0）
+
+目标坐标（width,0）对应原图（width, 0)
+
+目标坐标（0,height）对应原图（0.5*height, height)
+
+目标坐标（width,height）对应原图(width + 0.5*height, height)
+
+这样的话，控制点可能帮助计算出一阶变换的系数。
+
+但用户可能需要更多的控制点，比如至少三个点，因为一阶多项式有6个系数（每个坐标方向3个）。或者，可能这里的目标到原图的变换模型是一阶，每个坐标方向需要三个参数，因此需要至少三个控制点。
+
+例如，假设用户提供的控制点足够，函数将正确计算变换参数，并应用校正。
+
+现在，编写一个示例的使用代码：
+
+假设原图是一个带有错切的图像，用户希望校正它。例如，原图的左上角在目标图像的（0,0），原图的右上角在目标图像的（width,0），原图的左下角在目标图像的（0,height），而原图中的左下角实际位于（0, height）可能被错切成（delta, height）。因此，用户提供的控制点可能包括：
+
+control_points = [
+
+(0, 0, 0, 0),          # 目标(0,0) 对应原图(0,0)
+
+(width, 0, width, 0),  # 目标(width,0) 对应原图(width,0)
+
+(0, height, delta, height)  # 目标(0,height)对应原图(delta, height)
+
+]
+
+这里，假设delta是某个值，比如原图在y方向有水平错切。例如，假设delta = 50，当height=100时。
+
+此时，使用一阶多项式，构建变换模型，其中原图的x坐标由目标x和y的线性组合得到，例如x_src = a0 + a1*dst_x + a2*dst_y。而根据这三个控制点：
+
+对于点 (0,0)，x_src=0 = a0 + a1*0 + a2*0 → a0=0.
+
+对于点 (width,0)，x_src=width = a0 + a1*width + a2*0 → width = a0 + a1*width. 因为a0=0，所以a1=1.
+
+对于点 (0,height)，x_src=delta = a0 + a1*0 + a2*height → delta = a2*height → a2=delta/height.
+
+所以，原图的x_src = dst_x + (delta/height)*dst_y.
+
+这样，当应用这个变换时，校正后的图像每个点的dst_x和dst_y将被转换为原图的x_src = dst_x + (delta/height)*dst_y，而y_src = dst_y.
+
+这样，在目标图像中的每个点（dst_x,dst_y）对应的原图坐标是（dst_x + (delta/height)*dst_y, dst_y）。这样，校正后的图像将消除错切，因为原图中的错切被逆变换了。
+
+这可能是一个合理的测试案例。
+
+在代码中，用户需要将这些控制点传入函数，然后生成校正后的图像。
+
+综上，这个函数的大体结构应该能工作，但需要注意坐标系的转换，以及PIL和numpy数组的索引顺序是否正确。
+
+最后，用户可能希望这个函数能帮助他们理解几何校正的本质，即通过控制点建立坐标映射关系，然后利用插值填充校正后的图像。这个过程的核心是坐标变换模型的构建和重采样，这正是函数所要演示的。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#!/usr/bin/env python</span>
+<span class="token comment"># -*- coding: utf-8 -*- </span>
+<span class="token comment"># @Time : 2025/2/12 </span>
+
+<span class="token triple-quoted-string string">'''
+
+'''</span>
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+<span class="token keyword">import</span> math
+
+<span class="token keyword">def</span> <span class="token function">bilinear_interpolation</span><span class="token punctuation">(</span>src_array<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""双线性插值实现"""</span>
+    x0<span class="token punctuation">,</span> y0 <span class="token operator">=</span> math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> math<span class="token punctuation">.</span>floor<span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+    x1<span class="token punctuation">,</span> y1 <span class="token operator">=</span> x0 <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> y0 <span class="token operator">+</span> <span class="token number">1</span>
+
+    <span class="token comment"># 边界检查</span>
+    height<span class="token punctuation">,</span> width <span class="token operator">=</span> src_array<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+    <span class="token keyword">if</span> <span class="token keyword">not</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">&lt;=</span> x0 <span class="token operator">&lt;</span> width <span class="token keyword">and</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> x1 <span class="token operator">&lt;</span> width <span class="token keyword">and</span>
+            <span class="token number">0</span> <span class="token operator">&lt;=</span> y0 <span class="token operator">&lt;</span> height <span class="token keyword">and</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> y1 <span class="token operator">&lt;</span> height<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token number">0</span>
+
+    <span class="token comment"># 计算权重</span>
+    dx<span class="token punctuation">,</span> dy <span class="token operator">=</span> x <span class="token operator">-</span> x0<span class="token punctuation">,</span> y <span class="token operator">-</span> y0
+
+    <span class="token comment"># 获取四个邻域像素值</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>src_array<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>  <span class="token comment"># 彩色图像</span>
+        top_left <span class="token operator">=</span> src_array<span class="token punctuation">[</span>y0<span class="token punctuation">,</span> x0<span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span>
+        top_right <span class="token operator">=</span> src_array<span class="token punctuation">[</span>y0<span class="token punctuation">,</span> x1<span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span>
+        bottom_left <span class="token operator">=</span> src_array<span class="token punctuation">[</span>y1<span class="token punctuation">,</span> x0<span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span>
+        bottom_right <span class="token operator">=</span> src_array<span class="token punctuation">[</span>y1<span class="token punctuation">,</span> x1<span class="token punctuation">,</span> <span class="token punctuation">:</span><span class="token punctuation">]</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>  <span class="token comment"># 灰度图像</span>
+        top_left <span class="token operator">=</span> src_array<span class="token punctuation">[</span>y0<span class="token punctuation">,</span> x0<span class="token punctuation">]</span>
+        top_right <span class="token operator">=</span> src_array<span class="token punctuation">[</span>y0<span class="token punctuation">,</span> x1<span class="token punctuation">]</span>
+        bottom_left <span class="token operator">=</span> src_array<span class="token punctuation">[</span>y1<span class="token punctuation">,</span> x0<span class="token punctuation">]</span>
+        bottom_right <span class="token operator">=</span> src_array<span class="token punctuation">[</span>y1<span class="token punctuation">,</span> x1<span class="token punctuation">]</span>
+
+    <span class="token comment"># 插值计算</span>
+    top <span class="token operator">=</span> top_left <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> dx<span class="token punctuation">)</span> <span class="token operator">+</span> top_right <span class="token operator">*</span> dx
+    bottom <span class="token operator">=</span> bottom_left <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> dx<span class="token punctuation">)</span> <span class="token operator">+</span> bottom_right <span class="token operator">*</span> dx
+    <span class="token keyword">return</span> top <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> dy<span class="token punctuation">)</span> <span class="token operator">+</span> bottom <span class="token operator">*</span> dy
+
+
+<span class="token keyword">def</span> <span class="token function">polynomial_coefficients</span><span class="token punctuation">(</span>control_points<span class="token punctuation">,</span> order<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""计算多项式变换系数"""</span>
+    dst_points <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span>pt<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> pt<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token keyword">for</span> pt <span class="token keyword">in</span> control_points<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    src_x <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span>pt<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token keyword">for</span> pt <span class="token keyword">in</span> control_points<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    src_y <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span>pt<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token keyword">for</span> pt <span class="token keyword">in</span> control_points<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    <span class="token comment"># 构建多项式矩阵</span>
+    A <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span> <span class="token keyword">in</span> dst_points<span class="token punctuation">:</span>
+        terms <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+        <span class="token keyword">if</span> order <span class="token operator">&gt;=</span> <span class="token number">1</span><span class="token punctuation">:</span>  <span class="token comment"># 一阶项</span>
+            terms <span class="token operator">+=</span> <span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span>
+        <span class="token keyword">if</span> order <span class="token operator">&gt;=</span> <span class="token number">2</span><span class="token punctuation">:</span>  <span class="token comment"># 二阶项</span>
+            terms <span class="token operator">+=</span> <span class="token punctuation">[</span>x <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">,</span> x <span class="token operator">*</span> y<span class="token punctuation">,</span> y <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">]</span>
+        A<span class="token punctuation">.</span>append<span class="token punctuation">(</span>terms<span class="token punctuation">)</span>
+
+    A <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>A<span class="token punctuation">)</span>
+    coeffs_x <span class="token operator">=</span> np<span class="token punctuation">.</span>linalg<span class="token punctuation">.</span>lstsq<span class="token punctuation">(</span>A<span class="token punctuation">,</span> src_x<span class="token punctuation">,</span> rcond<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    coeffs_y <span class="token operator">=</span> np<span class="token punctuation">.</span>linalg<span class="token punctuation">.</span>lstsq<span class="token punctuation">(</span>A<span class="token punctuation">,</span> src_y<span class="token punctuation">,</span> rcond<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">return</span> coeffs_x<span class="token punctuation">,</span> coeffs_y
+
+
+<span class="token keyword">def</span> <span class="token function">geometric_correction</span><span class="token punctuation">(</span>src_path<span class="token punctuation">,</span> control_points<span class="token punctuation">,</span> order<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> output_size<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token triple-quoted-string string">"""
+    几何校正主函数
+    :param src_path: 原始图像路径
+    :param control_points: 控制点列表，格式[(dst_x, dst_y, src_x, src_y)]
+    :param order: 多项式阶数（1或2）
+    :param output_size: 输出图像尺寸（宽，高）
+    """</span>
+    <span class="token comment"># 读取原始影像</span>
+    src_img <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>src_path<span class="token punctuation">)</span>
+    src_array <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>src_img<span class="token punctuation">)</span>
+    src_height<span class="token punctuation">,</span> src_width <span class="token operator">=</span> src_array<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span>
+
+    <span class="token comment"># 计算变换系数</span>
+    coeffs_x<span class="token punctuation">,</span> coeffs_y <span class="token operator">=</span> polynomial_coefficients<span class="token punctuation">(</span>control_points<span class="token punctuation">,</span> order<span class="token punctuation">)</span>
+
+    <span class="token comment"># 确定输出尺寸</span>
+    <span class="token keyword">if</span> output_size <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        output_width<span class="token punctuation">,</span> output_height <span class="token operator">=</span> src_img<span class="token punctuation">.</span>size
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        output_width<span class="token punctuation">,</span> output_height <span class="token operator">=</span> output_size
+
+    <span class="token comment"># 创建输出图像</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>src_array<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">:</span>
+        corrected <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>output_height<span class="token punctuation">,</span> output_width<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>np<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        corrected <span class="token operator">=</span> np<span class="token punctuation">.</span>zeros<span class="token punctuation">(</span><span class="token punctuation">(</span>output_height<span class="token punctuation">,</span> output_width<span class="token punctuation">)</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span>np<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span>
+
+    <span class="token comment"># 遍历输出图像的每个像素</span>
+    <span class="token keyword">for</span> y <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>output_height<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> x <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>output_width<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token comment"># 计算对应的原图坐标</span>
+            terms <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+            <span class="token keyword">if</span> order <span class="token operator">&gt;=</span> <span class="token number">1</span><span class="token punctuation">:</span>
+                terms <span class="token operator">+=</span> <span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span>
+            <span class="token keyword">if</span> order <span class="token operator">&gt;=</span> <span class="token number">2</span><span class="token punctuation">:</span>
+                terms <span class="token operator">+=</span> <span class="token punctuation">[</span>x <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">,</span> x <span class="token operator">*</span> y<span class="token punctuation">,</span> y <span class="token operator">**</span> <span class="token number">2</span><span class="token punctuation">]</span>
+
+            src_x <span class="token operator">=</span> np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>terms<span class="token punctuation">,</span> coeffs_x<span class="token punctuation">)</span>
+            src_y <span class="token operator">=</span> np<span class="token punctuation">.</span>dot<span class="token punctuation">(</span>terms<span class="token punctuation">,</span> coeffs_y<span class="token punctuation">)</span>
+
+            <span class="token comment"># 执行插值</span>
+            src_array <span class="token operator">=</span> src_array<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span>
+            <span class="token keyword">if</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> src_x <span class="token operator">&lt;</span> src_width <span class="token keyword">and</span> <span class="token number">0</span> <span class="token operator">&lt;=</span> src_y <span class="token operator">&lt;</span> src_height<span class="token punctuation">:</span>
+                corrected<span class="token punctuation">[</span>y<span class="token punctuation">,</span> x<span class="token punctuation">]</span> <span class="token operator">=</span> bilinear_interpolation<span class="token punctuation">(</span>src_array<span class="token punctuation">,</span> src_x<span class="token punctuation">,</span> src_y<span class="token punctuation">)</span>
+
+    <span class="token keyword">return</span> Image<span class="token punctuation">.</span>fromarray<span class="token punctuation">(</span>corrected<span class="token punctuation">)</span>
+
+
+<span class="token comment"># 示例使用</span>
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">"__main__"</span><span class="token punctuation">:</span>
+    <span class="token comment"># 定义控制点示例（目标坐标X，目标坐标Y，原图坐标X，原图坐标Y）</span>
+    control_points <span class="token operator">=</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># 左上角</span>
+        <span class="token punctuation">(</span><span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">250</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># 右上角</span>
+        <span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">300</span><span class="token punctuation">,</span> <span class="token number">40</span><span class="token punctuation">,</span> <span class="token number">250</span><span class="token punctuation">)</span><span class="token punctuation">,</span>  <span class="token comment"># 左下角</span>
+        <span class="token punctuation">(</span><span class="token number">600</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">,</span> <span class="token number">560</span><span class="token punctuation">,</span> <span class="token number">570</span><span class="token punctuation">)</span>  <span class="token comment"># 右下角</span>
+    <span class="token punctuation">]</span>
+
+    <span class="token comment"># 执行几何校正</span>
+    corrected_img <span class="token operator">=</span> geometric_correction<span class="token punctuation">(</span>
+        <span class="token string">"11.png"</span><span class="token punctuation">,</span>
+        control_points<span class="token punctuation">,</span>
+        order<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>
+        output_size<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">1500</span><span class="token punctuation">,</span> <span class="token number">1500</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span>
+    corrected_img<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">"corrected.png"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202502121547534.png" alt="11"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202502121547513.png" alt="corrected"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202502121551929.png" alt="corrected"></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/')">deepseek之提问什么是几何校正</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=deepseek之提问什么是几何校正&amp;url=http://ytkz11@.github.io/2025/02/12/deepseek-zhi-ti-wen-shi-me-shi-ji-he-xiao-zheng/&amp;pic=https://www.osgeo.org/wp-content/uploads/GDAL-1_740x412_acf_cropped-370x206.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E9%81%A5%E6%84%9F/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>遥感<span class="tagsPageCount">183</span></a><a class="post-meta__box__tags" href="/tags/GDAL/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>GDAL<span class="tagsPageCount">4</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/02/12/sam-wei-diao-guo-cheng/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.osgeo.org/wp-content/uploads/GDAL-1_740x412_acf_cropped-370x206.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">sam微调过程</div></div></a></div><div class="next-post pull-right"><a href="/2025/02/17/huo-qu-yao-gan-ying-xiang-de-si-ge-ding-dian/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202502270951296.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">获取遥感影像的真正的顶点</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2025/02/06/xue-xi-gdal-de-guo-cheng/" title="学习gdal的过程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.osgeo.org/wp-content/uploads/GDAL-1_740x412_acf_cropped-370x206.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-02-06</div><div class="title">学习gdal的过程</div></div></a></div><div><a href="/2022/12/06/shi-yong-cpp-diao-yong-gdal/" title="配置GDAL及使用CPP调用GDAL"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202211301448303.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2022-12-06</div><div class="title">配置GDAL及使用CPP调用GDAL</div></div></a></div><div><a href="/2021/03/10/gdal-api-bi-ji/" title="gdal api笔记"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://z3.ax1x.com/2021/01/11/s8Nhmn.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2021-03-10</div><div class="title">gdal api笔记</div></div></a></div><div><a href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641974.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-16</div><div class="title">学习Rasterio还是GDAL？</div></div></a></div><div><a href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-11</div><div class="title">告别 gdal_translate：迎接 GDAL 统一命令行新时代</div></div></a></div><div><a href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111438678.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-07-11</div><div class="title">简要介绍 GDAL 的架构、关键组件和功能</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://raw.githubusercontent.com/ytkz11/picture/e0561f27bb351a8dc757d4f5b1d74a1ab5ef4e42/imgs202411281530223.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%90%E9%97%AE"><span class="toc-number">1.</span> <span class="toc-text">提问</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number"></span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95"><span class="toc-number"></span> <span class="toc-text">测试</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641974.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学习Rasterio还是GDAL？"/></a><div class="content"><a class="title" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？">学习Rasterio还是GDAL？</a><time datetime="2025-07-16T12:20:10.000Z" title="发表于 2025-07-16 20:20:10">2025-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="告别 gdal_translate：迎接 GDAL 统一命令行新时代"/></a><div class="content"><a class="title" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代">告别 gdal_translate：迎接 GDAL 统一命令行新时代</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111438678.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简要介绍 GDAL 的架构、关键组件和功能"/></a><div class="content"><a class="title" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能">简要介绍 GDAL 的架构、关键组件和功能</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641982.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GDAL_OGR简单的使用教程"/></a><div class="content"><a class="title" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程">GDAL_OGR简单的使用教程</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507101625855.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="遥感到底是个啥"/></a><div class="content"><a class="title" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥">遥感到底是个啥</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">317</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">52</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">79</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 0.88rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 0.88rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 0.88rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 0.88rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>

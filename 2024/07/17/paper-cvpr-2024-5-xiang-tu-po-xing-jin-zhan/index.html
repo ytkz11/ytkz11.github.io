@@ -1,0 +1,422 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>探索CVPR 2024中视觉提示领域的5项突破性进展 | Find everything you need</title><meta name="keywords" content="编程"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="探索CVPR 2024中视觉提示领域的5项突破性进展"><meta name="application-name" content="探索CVPR 2024中视觉提示领域的5项突破性进展"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="探索CVPR 2024中视觉提示领域的5项突破性进展"><meta property="og:url" content="http://ytkz11@.github.io/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="计算机视觉领域视觉提示的五大进展 图像理解：简单的视觉标记能够帮助基础模型更好地理解图像中的特定部分。 MLLMs（多模态大型语言模型）：利用场景图使多模态大型语言模型能够更精准地描述图像，无需额外的训练数据。 基础模型改进：通过策略性的视觉提示改进视觉基础模型（如SAM），提升其性能。 增强泛化能"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407170953042.png"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407170953042.png"><meta name="description" content="计算机视觉领域视觉提示的五大进展 图像理解：简单的视觉标记能够帮助基础模型更好地理解图像中的特定部分。 MLLMs（多模态大型语言模型）：利用场景图使多模态大型语言模型能够更精准地描述图像，无需额外的训练数据。 基础模型改进：通过策略性的视觉提示改进视觉基础模型（如SAM），提升其性能。 增强泛化能"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ytkz11@.github.io/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: '探索CVPR 2024中视觉提示领域的5项突破性进展',
+  postAI: '',
+  pageFillDescription: '计算机视觉领域视觉提示的五大进展, 目录, 1.什么是视觉提示？, 1.1 视觉提示的起源, 1.2 理解视觉提示, 2.视觉提示：系统视角, 3. 视觉提示的进步在 CVPR 2024 上大出风头, 3.1 大型多模态模型的直观视觉提示, 3.2 零样本视觉提示增强AI对图像的理解, 3.3 基础模型中有效的分割（低成本）, 3.4 在基础模型中使用视觉提示以实现更好的图像分割, 3.5 主动学习与视觉语言模型（VLM）提示的结合, 4. 下一步是什么计算机视觉领域视觉提示的五大进展图像理解简单的视觉标记能够帮助基础模型更好地理解图像中的特定部分多模态大型语言模型利用场景图使多模态大型语言模型能够更精准地描述图像无需额外的训练数据基础模型改进通过策略性的视觉提示改进视觉基础模型如提升其性能增强泛化能力训练人工智能快速识别新未知对象同时保留对旧已知对象的记忆视觉提示与主动学习结合能够智能地学习新的视觉任务使用更少的例子且不会忘记已学的知识本文探讨了视觉提示技术这是一种使大型视觉模型能够适应新任务的方法除了定义这种方法并从系统角度阐述提示可调模型如何革新这一领域我们还着重介绍了上提出的五个最具影响力的视觉提示进展目录什么是视觉提示视觉提示一种系统视角上抢尽风头的视觉提示进展接下来会发生什么什么是视觉提示视觉提示的起源视觉提示可以追溯到年发表的其中研究人员开发了一种通过示例处理图像的策略其中需要提示和查询才能检索响应在生成式人工智能时代这类的提示方法有什么新变化提示是指调整模型去做他们没有经过专门训练的事情用技术术语来说提示可以使预先训练的模型适应看不见的分布提示在语言模型中得到了普及其中大型预训练模型即文心一言通义千问等适应新任务视觉提示是指采用视觉大模型来执行看不见的视觉任务的过程理解视觉提示为了理解视觉领域的提示确定提示和微调标准适应方法之间的差异可能会很有用说明了计算机视觉基础模型背景下视觉提示和微调之间的主要区别视觉提示采用特征来指导模型而不修改其参数这种方法提供了灵活性并且计算要求较低另一方面微调涉及在特定数据集上重新训练模型修改其参数以牺牲更高的计算资源为代价实现更好的特定于任务的性能然而这两种方法并不是二元选择它们都代表了基础模型的一系列潜在适应策略如下图所示上图显示当需要灵活性和速度时视觉提示可能是针对某些应用程序例如视觉搜索和检索或快速原型设计和实验利用大规模视觉模型的最佳方法视觉提示系统视角可提示的模型可以与其他系统无缝集成使其能够在推理过程中作为更大的人工智能系统的一部分执行特定任务上图显示了一个采用即时基础模型作为较大系统组件的系统输入图像系统从输入图像开始在本例中显示了一群在田野里奔跑的马对象检测输入图像由对象检测器例如处理此步骤识别并定位图像中的对象在检测到的对象周围生成边界框输出显示每匹马周围的边界框以及天空中云的较小框分割然后将检测到的框用作可提示分割模型的视觉提示例如该模型为每个检测到的对象生成精确的掩模从而对图像进行更详细的分割视觉提示的进步在上大出风头大型多模态模型的直观视觉提示论文地址代码地址创新点引入了能够解码任意自由形式视觉提示的多模态模型允许用户通过使用红色边界框或指向箭头等自然提示标记图像来直观地与模型交互而无需复杂的操作区域编码潜在应用医疗保健成像允许医疗专业人员突出显示医学图像例如射线中的特定区域以进行更准确的诊断和分析电子商务产品搜索使用户能够标记产品图像的特定部分例如突出显示鞋跟以查找相似的商品或详细的产品信息零样本视觉提示增强对图像的理解论文地址代码地址创新点组合思想链方法的发展其中涉及两步零样本提示过程首先多模态大语言模型根据任务提示从图像生成场景图然后该场景图用于提供上下文以生成详细且准确的响应利用成分信息而无需注释数据或微调潜在应用视觉问答通过全面理解视觉内容及其构成对有关图像的问题提供精确的答案监视识别图像中的对象并理解它们之间的关系这对于监视这类应用很有用基础模型中有效的分割低成本论文地址代码地址创新点语义感知实例分割网络的开发它使用点提示将多实例学习与等视觉基础模型集成在一起通过战略性地选择代表性掩模提案并通过点距离指导和框挖掘策略解决分割挑战来增强特定于类别的分割潜在应用自动驾驶改进自动驾驶车辆系统中的物体检测和分类从而提高决策和安全性农业监测通过航空或卫星图像对特定作物或植物进行精确分割以实现更好的农业管理和产量预测在基础模型中使用视觉提示以实现更好的图像分割论文地址代码地址潜在应用自动驾驶车辆通过最少的示例快速适应识别和分割新物体或路况同时保留常见道路元素卫星图像分析通过少量示例识别和分割新类型的土地利用或环境变化同时保持地理特征主动学习与视觉语言模型提示的结合论文地址代码地址创新点开发了一种名为的新型主动学习框架专门为预训练的视觉语言模型设计这种方法解决了使适应新任务的挑战同时最大限度地减少对标签的需求潜在应用医学成像快速调整以最少的专家标记来识别新的疾病模式或异常电子商务通过使用有限的手动输入使适应新产品线提高产品分类和搜索能力下一步是什么正如我们在本文中讨论的视觉提示使得在输入空间中调整基础模型成为可能这一点至关重要因为这一输入充当了人类与模型之间的通用接口在视觉领域可提示模型很可能重塑传统计算机视觉流程的运作方式许多这类模型可以被视为构建模块它们将取代传统流程中的一些常见阶段例如标注换句话说通过视觉提示技术我们现在能够在输入层面灵活地调整基础模型这对于连接人机交互至关重要在视觉模型领域具备提示能力的模型正引领着计算机视觉传统处理流程的变革这些模型就像是新的基石它们有望替代传统流水线中诸如图像标注等常规步骤从而简化和优化整个视觉处理流程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-13 11:11:53',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 1.05rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 1.05rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1.05rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 1.05rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url">编程</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E7%BC%96%E7%A8%8B/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>编程</span></a></span></div></div><h1 class="post-title" itemprop="name headline">探索CVPR 2024中视觉提示领域的5项突破性进展</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-07-17T14:00:10.000Z" title="发表于 2024-07-17 22:00:10">2024-07-17</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-09-13T03:11:53.615Z" title="更新于 2024-09-13 11:11:53">2024-09-13</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407170953042.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ytkz11@.github.io/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/"><header><a class="post-meta-categories" href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url">编程</a><a href="/tags/%E7%BC%96%E7%A8%8B/" tabindex="-1" itemprop="url">编程</a><h1 id="CrawlerTitle" itemprop="name headline">探索CVPR 2024中视觉提示领域的5项突破性进展</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2024-07-17T14:00:10.000Z" title="发表于 2024-07-17 22:00:10">2024-07-17</time><time itemprop="dateCreated datePublished" datetime="2024-09-13T03:11:53.615Z" title="更新于 2024-09-13 11:11:53">2024-09-13</time></header><h3 id="计算机视觉领域视觉提示的五大进展"><a href="#计算机视觉领域视觉提示的五大进展" class="headerlink" title="计算机视觉领域视觉提示的五大进展"></a>计算机视觉领域视觉提示的五大进展</h3><ol>
+<li><strong>图像理解</strong>：简单的视觉标记能够帮助基础模型更好地理解图像中的特定部分。</li>
+<li><strong>MLLMs（多模态大型语言模型）</strong>：利用场景图使多模态大型语言模型能够更精准地描述图像，无需额外的训练数据。</li>
+<li><strong>基础模型改进</strong>：通过策略性的视觉提示改进视觉基础模型（如SAM），提升其性能。</li>
+<li><strong>增强泛化能力</strong>：训练人工智能快速识别新（未知）对象，同时保留对旧（已知）对象的记忆。</li>
+<li><strong>视觉提示与主动学习结合</strong>：AI能够智能地学习新的视觉任务，使用更少的例子，且不会忘记已学的知识。</li>
+</ol>
+<p>本文探讨了视觉提示技术，这是一种使大型视觉模型能够适应新任务的方法。</p>
+<p>除了定义这种方法并从系统角度阐述提示可调模型如何革新这一领域，我们还着重介绍了CVPR 2024上提出的五个最具影响力的视觉提示进展。</p>
+<h4 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h4><ul>
+<li>什么是视觉提示Visual Prompting</li>
+<li>视觉提示：一种系统视角</li>
+<li>CVPR 2024上抢尽风头的视觉提示进展</li>
+<li>接下来会发生什么</li>
+</ul>
+<h1 id="1-什么是视觉提示？"><a href="#1-什么是视觉提示？" class="headerlink" title="1.什么是视觉提示？"></a>1.什么是视觉提示？</h1><p>What is Visual Prompting?</p>
+<h2 id="1-1-视觉提示的起源"><a href="#1-1-视觉提示的起源" class="headerlink" title="1.1 视觉提示的起源"></a>1.1 视觉提示的起源</h2><p>视觉提示可以追溯到 2001 年发表的《Image Analogies》，其中研究人员开发了一种通过示例处理图像的策略，其中需要提示和查询才能检索响应。</p>
+<p>在生成式人工智能时代，这类的提示方法有什么新变化？</p>
+<p>1.提示是指调整模型去做他们没有经过专门训练的事情。用技术术语来说，提示可以使预先训练的模型适应看不见的分布。</p>
+<p>2.提示在语言模型中得到了普及，其中大型预训练模型（即 GPT-4、文心一言、通义千问等）适应新任务。</p>
+<p>3.视觉提示是指采用视觉大模型来执行（看不见的）视觉任务的过程。</p>
+<h2 id="1-2-理解视觉提示"><a href="#1-2-理解视觉提示" class="headerlink" title="1.2 理解视觉提示"></a>1.2 理解视觉提示</h2><p>为了理解视觉领域的提示，确定提示和微调（标准适应方法）之间的差异可能会很有用。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407170953042.png" alt="image-20240717095353420"></p>
+<p>说明了计算机视觉基础模型背景下视觉提示和微调之间的主要区别。视觉提示采用特征来指导模型而不修改其参数。这种方法提供了灵活性，并且计算要求较低。另一方面，微调涉及在特定数据集上重新训练模型，修改其参数，以牺牲更高的计算资源为代价实现更好的特定于任务的性能。</p>
+<p>然而，这两种方法并不是二元选择。它们都代表了基础模型的一系列潜在适应策略。如下图所示。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409040925047.png" alt="image-20240717100613998"></p>
+<p>上图显示，当需要灵活性和速度时，视觉提示可能是针对某些应用程序（例如视觉搜索和检索或快速原型设计和实验）利用大规模视觉模型的最佳方法。</p>
+<h1 id="2-视觉提示：系统视角"><a href="#2-视觉提示：系统视角" class="headerlink" title="2.视觉提示：系统视角"></a>2.视觉提示：系统视角</h1><p>可提示的模型可以与其他系统无缝集成，使其能够在推理过程中作为更大的人工智能系统的一部分执行特定任务。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://miro.medium.com/v2/resize:fit:630/1*3ysayHkf_miZUtLSkm5Y3A.png" alt="img"></p>
+<p>上图显示了一个采用即时基础模型作为较大系统组件的系统：</p>
+<p>1.输入图像：系统从输入图像开始，在本例中显示了一群在田野里奔跑的马。</p>
+<p>2.对象检测：输入图像由对象检测器（例如 YOLO-World [6]）处理。此步骤识别并定位图像中的对象，在检测到的对象周围生成边界框。输出显示每匹马周围的边界框，以及天空中云的较小框。</p>
+<p>3.分割：然后将检测到的框用作可提示分割模型的视觉提示（例如，Segment Anything）。该模型为每个检测到的对象生成精确的掩模，从而对图像进行更详细的分割。</p>
+<h1 id="3-视觉提示的进步在-CVPR-2024-上大出风头"><a href="#3-视觉提示的进步在-CVPR-2024-上大出风头" class="headerlink" title="3. 视觉提示的进步在 CVPR 2024 上大出风头"></a>3. 视觉提示的进步在 CVPR 2024 上大出风头</h1><h2 id="3-1-大型多模态模型的直观视觉提示"><a href="#3-1-大型多模态模型的直观视觉提示" class="headerlink" title="3.1 大型多模态模型的直观视觉提示"></a>3.1 大型多模态模型的直观视觉提示</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://miro.medium.com/v2/resize:fit:630/0*pfSM2gmNRgcXeZAn" alt="img"></p>
+<p><strong>论文</strong>地址: <a target="_blank" rel="noopener" href="https://openaccess.thecvf.com/content/CVPR2024/papers/Cai_ViP-LLaVA_Making_Large_Multimodal_Models_Understand_Arbitrary_Visual_Prompts_CVPR_2024_paper.pdf">cvpr open access</a> </p>
+<p>代码地址： : <a target="_blank" rel="noopener" href="https://vip-llava.github.io/">https://vip-llava.github.io/</a></p>
+<p>创新点：引入了能够解码任意（自由形式）视觉提示的多模态模型，允许用户通过使用“红色边界框”或“指向箭头”等自然提示标记图像来直观地与模型交互，而无需复杂的操作区域编码。</p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 医疗保健成像：允许医疗专业人员突出显示医学图像（例如 X 射线、MRI）中的特定区域，以进行更准确的诊断和分析。</p>
+<p>b) 电子商务产品搜索：使用户能够标记产品图像的特定部分（例如突出显示鞋跟）以查找相似的商品或详细的产品信息。</p>
+<h2 id="3-2-零样本视觉提示增强AI对图像的理解"><a href="#3-2-零样本视觉提示增强AI对图像的理解" class="headerlink" title="3.2 零样本视觉提示增强AI对图像的理解"></a>3.2 零样本视觉提示增强AI对图像的理解</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://miro.medium.com/v2/resize:fit:630/0*DLNqfL69WTk767nk.png" alt="img"></p>
+<p>论文地址：<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.17076">https://arxiv.org/pdf/2311.17076</a></p>
+<p>代码地址： <a target="_blank" rel="noopener" href="https://github.com/chancharikmitra/CCoT">https://github.com/chancharikmitra/CCoT</a></p>
+<p>创新点：组合思想链（CCoT）方法的发展，其中涉及两步零样本提示过程。首先，多模态大语言模型 (MLLM) 根据任务提示从图像生成场景图。然后，该场景图用于提供上下文以生成详细且准确的响应，利用成分信息，而无需注释数据或微调。</p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 视觉问答：通过全面理解视觉内容及其构成，对有关图像的问题提供精确的答案。</p>
+<p>b) 监视：识别图像中的对象并理解它们之间的关系，这对于监视这类应用很有用。</p>
+<h2 id="3-3-基础模型中有效的分割（低成本）"><a href="#3-3-基础模型中有效的分割（低成本）" class="headerlink" title="3.3 基础模型中有效的分割（低成本）"></a>3.3 基础模型中有效的分割（低成本）</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://miro.medium.com/v2/resize:fit:630/0*osYnr00wDxrQ3Xwa" alt="img"></p>
+<p>论文地址：<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2312.15895">https://arxiv.org/abs/2312.15895</a></p>
+<p>代码地址：<a target="_blank" rel="noopener" href="https://github.com/zhaoyangwei123/SAPNet">https://github.com/zhaoyangwei123/SAPNet</a></p>
+<p>创新点：语义感知实例分割网络 (SAPNet) 的开发，它使用点提示将多实例学习 (MIL) 与 SAM 等视觉基础模型集成在一起。 SAPNet 通过战略性地选择代表性掩模提案并通过点距离指导和框挖掘策略解决分割挑战来增强特定于类别的分割。</p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 自动驾驶：改进自动驾驶车辆系统中的物体检测和分类，从而提高决策和安全性。</p>
+<p>b) 农业监测：通过航空或卫星图像对特定作物或植物进行精确分割，以实现更好的农业管理和产量预测。</p>
+<h2 id="3-4-在基础模型中使用视觉提示以实现更好的图像分割"><a href="#3-4-在基础模型中使用视觉提示以实现更好的图像分割" class="headerlink" title="3.4 在基础模型中使用视觉提示以实现更好的图像分割"></a>3.4 在基础模型中使用视觉提示以实现更好的图像分割</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://miro.medium.com/v2/resize:fit:630/0*RILcmIO31pZbCwWO" alt="img"></p>
+<p>论文地址：<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2404.11732">https://arxiv.org/pdf/2404.11732</a></p>
+<p>代码地址：<a target="_blank" rel="noopener" href="https://github.com/rayat137/VisualPromptGFSS">https://github.com/rayat137/VisualPromptGFSS</a></p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 自动驾驶车辆：通过最少的示例快速适应识别和分割新物体或路况，同时保留常见道路元素。</p>
+<p>b) 卫星图像分析：通过少量示例识别和分割新类型的土地利用或环境变化，同时保持地理特征。</p>
+<h2 id="3-5-主动学习与视觉语言模型（VLM）提示的结合"><a href="#3-5-主动学习与视觉语言模型（VLM）提示的结合" class="headerlink" title="3.5 主动学习与视觉语言模型（VLM）提示的结合"></a>3.5 主动学习与视觉语言模型（VLM）提示的结合</h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://miro.medium.com/v2/resize:fit:630/0*Og3RCSRfW0B0aOZd" alt="img"></p>
+<p>论文地址：<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/2311.11178">https://arxiv.org/pdf/2311.11178</a></p>
+<p>代码地址：<a target="_blank" rel="noopener" href="https://github.com/kaist-dmlab/pcb">https://github.com/kaist-dmlab/pcb</a></p>
+<p>创新点：开发了一种名为 PCB 的新型主动学习框架，专门为预训练的视觉语言模型 (VLM) 设计。这种方法解决了使 VLM 适应新任务的挑战，同时最大限度地减少对标签的需求。</p>
+<p><strong>潜在应用：</strong></p>
+<p>a) 医学成像：快速调整 VLM，以最少的专家标记来识别新的疾病模式或异常。</p>
+<p>b) 电子商务：通过使用有限的手动输入使 VLM 适应新产品线，提高产品分类和搜索能力。</p>
+<h1 id="4-下一步是什么"><a href="#4-下一步是什么" class="headerlink" title="4. 下一步是什么"></a>4. 下一步是什么</h1><p>正如我们在本文中讨论的，视觉提示使得在输入空间中调整基础模型成为可能。这一点至关重要，因为这一输入充当了人类与模型之间的通用接口。在视觉领域，可提示模型很可能重塑传统计算机视觉流程的运作方式。许多这类模型可以被视为构建模块，它们将取代传统流程中的一些常见阶段（例如，标注）。</p>
+<p>换句话说，通过视觉提示技术，我们现在能够在输入层面灵活地调整基础模型，这对于连接人机交互至关重要。在视觉模型领域，具备提示能力的模型正引领着计算机视觉传统处理流程的变革。这些模型就像是新的基石，它们有望替代传统流水线中诸如图像标注等常规步骤，从而简化和优化整个视觉处理流程。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ytkz11@.github.io/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ytkz11@.github.io/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/')">探索CVPR 2024中视觉提示领域的5项突破性进展</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ytkz11@.github.io/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=探索CVPR 2024中视觉提示领域的5项突破性进展&amp;url=http://ytkz11@.github.io/2024/07/17/paper-cvpr-2024-5-xiang-tu-po-xing-jin-zhan/&amp;pic=https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407170953042.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E7%BC%96%E7%A8%8B/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>编程<span class="tagsPageCount">19</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/07/17/python-wo-hen-yi-han-mei-you-zao-dian-zhi-dao-python-zi-dian-de-8-ge-gong-neng/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://loudbench.com/wp-content/uploads/2023/02/Python-logo-1024x576.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">【python】我很遗憾没有早点知道 Python 字典的 8 个功能</div></div></a></div><div class="next-post pull-right"><a href="/2024/07/22/shen-du-xue-xi-yolo-zhi-guan-er-xiang-xi-de-jie-shi/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">【深度学习】yolo直观而详细的解释</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2025/06/05/zhi-shi-fu-fei/" title="把vscode配置好就可以去愉快地写代码了，不谢我。"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202504181156631.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-06-05</div><div class="title">把vscode配置好就可以去愉快地写代码了，不谢我。</div></div></a></div><div><a href="/2025/06/05/jian-dan-de-vscode-she-zhi/" title="把vscode配置好就可以去愉快地写代码了，不谢我。"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202504181156631.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-06-05</div><div class="title">把vscode配置好就可以去愉快地写代码了，不谢我。</div></div></a></div><div><a href="/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/" title="pyinstaller打包中的大坑geopandas"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-08-08</div><div class="title">pyinstaller打包中的大坑geopandas</div></div></a></div><div><a href="/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/" title="2000坐标系转换为wgs84坐标系"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-08-06</div><div class="title">2000坐标系转换为wgs84坐标系</div></div></a></div><div><a href="/2024/08/06/tu-xiang-te-zheng-dian-pi-pei/" title="图像特征点匹配"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408061750351.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-08-06</div><div class="title">图像特征点匹配</div></div></a></div><div><a href="/2024/08/01/jie-jue-error-1-proj-proj-create-from-database-cannot-find-proj.db/" title="解决ERROR 1 PROJ proj create from database Cannot find proj.db"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-08-01</div><div class="title">解决ERROR 1 PROJ proj create from database Cannot find proj.db</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://raw.githubusercontent.com/ytkz11/picture/e0561f27bb351a8dc757d4f5b1d74a1ab5ef4e42/imgs202411281530223.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E9%A2%86%E5%9F%9F%E8%A7%86%E8%A7%89%E6%8F%90%E7%A4%BA%E7%9A%84%E4%BA%94%E5%A4%A7%E8%BF%9B%E5%B1%95"><span class="toc-number">1.</span> <span class="toc-text">计算机视觉领域视觉提示的五大进展</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95"><span class="toc-number">1.1.</span> <span class="toc-text">目录</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E8%A7%86%E8%A7%89%E6%8F%90%E7%A4%BA%EF%BC%9F"><span class="toc-number"></span> <span class="toc-text">1.什么是视觉提示？</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E8%A7%86%E8%A7%89%E6%8F%90%E7%A4%BA%E7%9A%84%E8%B5%B7%E6%BA%90"><span class="toc-number"></span> <span class="toc-text">1.1 视觉提示的起源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E7%90%86%E8%A7%A3%E8%A7%86%E8%A7%89%E6%8F%90%E7%A4%BA"><span class="toc-number"></span> <span class="toc-text">1.2 理解视觉提示</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E8%A7%86%E8%A7%89%E6%8F%90%E7%A4%BA%EF%BC%9A%E7%B3%BB%E7%BB%9F%E8%A7%86%E8%A7%92"><span class="toc-number"></span> <span class="toc-text">2.视觉提示：系统视角</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E8%A7%86%E8%A7%89%E6%8F%90%E7%A4%BA%E7%9A%84%E8%BF%9B%E6%AD%A5%E5%9C%A8-CVPR-2024-%E4%B8%8A%E5%A4%A7%E5%87%BA%E9%A3%8E%E5%A4%B4"><span class="toc-number"></span> <span class="toc-text">3. 视觉提示的进步在 CVPR 2024 上大出风头</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-%E5%A4%A7%E5%9E%8B%E5%A4%9A%E6%A8%A1%E6%80%81%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%9B%B4%E8%A7%82%E8%A7%86%E8%A7%89%E6%8F%90%E7%A4%BA"><span class="toc-number"></span> <span class="toc-text">3.1 大型多模态模型的直观视觉提示</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-%E9%9B%B6%E6%A0%B7%E6%9C%AC%E8%A7%86%E8%A7%89%E6%8F%90%E7%A4%BA%E5%A2%9E%E5%BC%BAAI%E5%AF%B9%E5%9B%BE%E5%83%8F%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-number"></span> <span class="toc-text">3.2 零样本视觉提示增强AI对图像的理解</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%E4%B8%AD%E6%9C%89%E6%95%88%E7%9A%84%E5%88%86%E5%89%B2%EF%BC%88%E4%BD%8E%E6%88%90%E6%9C%AC%EF%BC%89"><span class="toc-number"></span> <span class="toc-text">3.3 基础模型中有效的分割（低成本）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-%E5%9C%A8%E5%9F%BA%E7%A1%80%E6%A8%A1%E5%9E%8B%E4%B8%AD%E4%BD%BF%E7%94%A8%E8%A7%86%E8%A7%89%E6%8F%90%E7%A4%BA%E4%BB%A5%E5%AE%9E%E7%8E%B0%E6%9B%B4%E5%A5%BD%E7%9A%84%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2"><span class="toc-number"></span> <span class="toc-text">3.4 在基础模型中使用视觉提示以实现更好的图像分割</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-%E4%B8%BB%E5%8A%A8%E5%AD%A6%E4%B9%A0%E4%B8%8E%E8%A7%86%E8%A7%89%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%88VLM%EF%BC%89%E6%8F%90%E7%A4%BA%E7%9A%84%E7%BB%93%E5%90%88"><span class="toc-number"></span> <span class="toc-text">3.5 主动学习与视觉语言模型（VLM）提示的结合</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E4%B8%8B%E4%B8%80%E6%AD%A5%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number"></span> <span class="toc-text">4. 下一步是什么</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641974.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学习Rasterio还是GDAL？"/></a><div class="content"><a class="title" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？">学习Rasterio还是GDAL？</a><time datetime="2025-07-16T12:20:10.000Z" title="发表于 2025-07-16 20:20:10">2025-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="告别 gdal_translate：迎接 GDAL 统一命令行新时代"/></a><div class="content"><a class="title" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代">告别 gdal_translate：迎接 GDAL 统一命令行新时代</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111438678.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简要介绍 GDAL 的架构、关键组件和功能"/></a><div class="content"><a class="title" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能">简要介绍 GDAL 的架构、关键组件和功能</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641982.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GDAL_OGR简单的使用教程"/></a><div class="content"><a class="title" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程">GDAL_OGR简单的使用教程</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507101625855.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="遥感到底是个啥"/></a><div class="content"><a class="title" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥">遥感到底是个啥</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">317</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">52</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">79</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 0.88rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 0.88rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 0.88rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 0.88rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>

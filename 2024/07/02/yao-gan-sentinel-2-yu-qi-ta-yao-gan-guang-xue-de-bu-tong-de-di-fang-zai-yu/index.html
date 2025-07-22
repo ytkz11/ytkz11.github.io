@@ -1,0 +1,467 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Sentinel-2影像的独特之处与数据存储策略 | Find everything you need</title><meta name="keywords" content="遥感,GIS"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Sentinel-2影像的独特之处与数据存储策略"><meta name="application-name" content="Sentinel-2影像的独特之处与数据存储策略"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Sentinel-2影像的独特之处与数据存储策略"><meta property="og:url" content="http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="在遥感技术的广阔领域中，Sentinel-2卫星以其独特的多波段和高分辨率成像能力脱颖而出，成为环境监测、农业评估、城市规划等多个领域的重要数据来源。然而，Sentinel-2影像的一个显著特点——其拥有三种不同的空间分辨率，使得其数据存储和处理方式与传统遥感影像存在显著差异。本文将深入探讨Sent"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021450688.png"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021450688.png"><meta name="description" content="在遥感技术的广阔领域中，Sentinel-2卫星以其独特的多波段和高分辨率成像能力脱颖而出，成为环境监测、农业评估、城市规划等多个领域的重要数据来源。然而，Sentinel-2影像的一个显著特点——其拥有三种不同的空间分辨率，使得其数据存储和处理方式与传统遥感影像存在显著差异。本文将深入探讨Sent"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: 'Sentinel-2影像的独特之处与数据存储策略',
+  postAI: '',
+  pageFillDescription: 'Sentinel-2影像的多分辨率特性, Sentinel-2影像的数据存储策略, 节省存储空间的考量, 结论在遥感技术的广阔领域中卫星以其独特的多波段和高分辨率成像能力脱颖而出成为环境监测农业评估城市规划等多个领域的重要数据来源然而影像的一个显著特点其拥有三种不同的空间分辨率使得其数据存储和处理方式与传统遥感影像存在显著差异本文将深入探讨影像的这一特殊之处并解析其数据存储策略背后的考量影像的多分辨率特性卫星搭载了多光谱成像仪能够捕获从可见光到短波红外的多个光谱波段然而与许多其他遥感卫星不同并非将所有波段数据以相同分辨率记录如表所示的波段涵盖了从的蓝色波段到的短波红外波段且其空间分辨率分为三种米米和米米分辨率波段主要包括蓝色绿色红色和近红外波段这些波段对于植被监测水体识别和地表覆盖分类等应用至关重要米分辨率波段包括红边波段和短波红外波段这些波段在监测植被健康水分含量和土壤特性等方面发挥着重要作用米分辨率波段气溶胶波段和水蒸气波段这些波段主要用于大气校正和云检测虽然分辨率较低但对提高整体数据处理精度至关重要影像信息见下表波段顺序英文简写空间分辨率中心波长描述第波段米气溶胶波段第波段米蓝色波段第波段米绿色波段第波段米红色波段第波段米红边波段第波段米红边波段第波段米红边波段第波段米近红外波段第波段米红边波段第波段米水蒸气波段第波段米短波红外波段第波段米短波红外波段影像的数据存储策略鉴于影像的多分辨率特性其数据存储策略也采用了独特的方式与常见的等卫星影像将多波段数据集成在单个文件中不同选择将每个波段的数据以单波段形式分别存储这种策略虽然增加了文件管理的复杂性但带来了显著的存储空间节省优势节省存储空间的考量由于影像的某些波段如和空间分辨率较低如果采用传统方式将所有波段集成在单个文件中并以最高分辨率如米为标准进行像素对齐重采样将极大地增加数据存储量而通过将各波段数据分别存储并保持其原始分辨率可以有效减少不必要的像素冗余从而节省存储空间结论影像以其独特的多分辨率特性和数据存储策略在遥感领域展现出了强大的应用潜力通过单波段分别存储的方式不仅有效节省了存储空间还提高了数据处理的灵活性和效率三年前写过怎么从影像合成图片从那时起知道了影像文件结构的特殊性相关代码已开源到',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-09 17:50:33',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 1.05rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 1.05rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1.05rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 1.05rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/" itemprop="url">遥感</a><i class="anzhiyufont anzhiyu-icon-angle-right post-meta-separator"></i><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/GIS/" itemprop="url">GIS</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%81%A5%E6%84%9F/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>遥感</span></a><a class="article-meta__tags" href="/tags/GIS/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>GIS</span></a></span></div></div><h1 class="post-title" itemprop="name headline">Sentinel-2影像的独特之处与数据存储策略</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-07-02T14:00:10.000Z" title="发表于 2024-07-02 22:00:10">2024-07-02</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-09-09T09:50:33.203Z" title="更新于 2024-09-09 17:50:33">2024-09-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021450688.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/"><header><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/" itemprop="url">遥感</a><a class="post-meta-categories" href="/categories/%E9%81%A5%E6%84%9F/GIS/" itemprop="url">GIS</a><a href="/tags/%E9%81%A5%E6%84%9F/" tabindex="-1" itemprop="url">遥感</a><a href="/tags/GIS/" tabindex="-1" itemprop="url">GIS</a><h1 id="CrawlerTitle" itemprop="name headline">Sentinel-2影像的独特之处与数据存储策略</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2024-07-02T14:00:10.000Z" title="发表于 2024-07-02 22:00:10">2024-07-02</time><time itemprop="dateCreated datePublished" datetime="2024-09-09T09:50:33.203Z" title="更新于 2024-09-09 17:50:33">2024-09-09</time></header><p>在遥感技术的广阔领域中，Sentinel-2卫星以其独特的多波段和高分辨率成像能力脱颖而出，成为环境监测、农业评估、城市规划等多个领域的重要数据来源。然而，Sentinel-2影像的一个显著特点——其拥有三种不同的空间分辨率，使得其数据存储和处理方式与传统遥感影像存在显著差异。本文将深入探讨Sentinel-2影像的这一特殊之处，并解析其数据存储策略背后的考量。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUWGBobGBYYGBgZGxoaFxkYFxoYGhgdHSggGRolGxcYITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGi0lHyUtLS0tLS0tLS0tLy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAMQBAQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAECAwUGBwj/xAA/EAABAgQEAwUHAgQFBAMAAAABAhEAAyExBBJBUQVhcRMigZGhBjJCUrHR8MHhB2LS8RQVI0NyM1OCohYX8v/EABoBAAIDAQEAAAAAAAAAAAAAAAACAQMEBQb/xAAuEQACAgEDAgUDAwUBAAAAAAAAAQIRAwQhMRJBExQiUWEycZFCUrEFI4Gh4cH/2gAMAwEAAhEDEQA/APD8sIGHeES8ADqDfrDAQ5/OcMG6QAOQG57NTwL1hJQ7lxStSATUCg1NfKGVDAQASmJGhceVddbc/pESGhw8RgAkl4YiGh2gAfLveHUG5v8A38xDZojABOSspUCGcEEGlx1pDLJJJN9YjDgQAJKd4WUw9CduQ/eEFEciD+VgAS209d9fV4fMmlK61vtpSHlgKJzKAoS5cubtQGps9oikA7voIAGy2fX+0OmlfrDKuWtpExMoASSA5bYlgSPAJ8oAIZYZocq0hIURUQAJbaPYX3avg7wlJILG8M0SQtrXt4EEEeRgAZJqCz8t4RNbeAhEQ6S3P8vABGEIeEkkVGkACfT8pDyxye9IZZJLm5r5whAAzQmh4aAD3OFChQAeGq6Qr6RcjCrVZKj4QXL4PPLNLI/LxasOR8RZDaXJmiJARtyPZPEqsg+saMj+H2KV8JHgf1ixaTM/0ieLD3ORhzHfSP4YYg3p4j7xoyP4Ur1WPX9BDrRT7tfkjxoHmJUWZyzuz0eztvCBDG76V/asevSf4VI+JY8j+0aEn+F0gXX/AOo+8T5Nd5ojxl7M8PiVY99lfw2wo1J8B9ovT7B4MfN/6/0xPlcf7/8ARHjfB895DsYcSVfKfKPoZPsjgx8J84kPZnCD/b9TDeVx/uf4Ief4PnkSFfKfKHGHX8qvKPoccAwo/wBoeavvD/5Hhv8Asp9fvE+Uxe7F8x8Hzt/hl/KfKHTJWPhOum4aPoj/ACHDf9pPrDn2dwx/2h5n7weUxfuYeYfsfOglKBdiPOG7NQ0MfRf/AMWw5/2/UxWr2Ow3yGDyuL9z/BPmH7HzsUnaGaPoZXsPhjofT7QNN9gMMbP5J+0L5TH2n/onx/g8CaFHuUz+G0g6+ggDG/w0kJDmYB4VPQCpiHo12miVnXszx5Mb3A/ZXET2VkCJah78wEAg6oSO8vkQG3MeicI9jZEh5oQJqgzZw5ToSEVAL2U5bkQ5PW9812q9TRg7ROHRdTdvZC5NRXCOd4Z7L4aTUp7ZQuuZbYhMuwGxOY9NOC9ouFnDT1S65T3kE6oU7eIqDzSY9amHQAMKAvUtdtqvXlGF7UcDOJkjKP8AVTVHMEDMjV3CQRzH80XajSR6PQt0JizPq9R5gEEu2geIRrzvZ3EJugwJM4bNTeWryjA9PlXMWalKL7ghEOTS29fL88YkqUoXBHhEIqcWuUMIGJJTQnb+0RMPVuX5pEAe5QoUKADd4d7NyQhByD3U6chGpJ4XLTZIHgBEsED2aP8Ain6CL+zJjpvNNrkxdCvgQkoG0LtkCwESTg9zF8rDITt6RW5+7GUWUpmk2ERK61/PtE8ZOAHd8hWMHHrLXrrt52hoLqIm+k1Z2IQkVUH2iocSRs/h+8c4CdYmFRd4S9zP4zvg3ZnFdk/SKjjibxk9rE0z4noSF8VvuaaZ+4PrEjLOzRny8UOYgwzSAGLg7faFewydlyZRifYmK5WNOv55QUjFhuutYVtoZKLKQhovkpiapSmepigiI6rG6aNKRKG49IKTKRyjCCYRTqSANz+Vitx+R1Oux0KJCYoxi5Msd9QHK5J2bxHmI5+fjilPcN9dafy6dfJoFmzMyXIJV3QS9dQHOruE0/lBsGPCkt29ifET2S3LMbxsqpKRlBfvH3mDVDUHrGFiVl6u/MuepfV79II15V5chqbbxSsioYc+9TWv5vzjp48cYcIyyk5ckcCWNbKoTdi4YnVnu105hrFOJlZVkFJBLgeFDV2cEMSNoRNy6dB5M1b0i8qCkuC6kgA0FhQKdnLhkNoUy2DqJhZ+ifX2ez/8Y0fVGjManeb69dvwQga93TwZufhEphJYCxrQM/4Q3lFaurVq1erjTSLhT0LhBRiZQWwzDurBFlD9DQ+MKf7PSVXlIPQCOQ9n+KdhNLkhCyEqc2IqFHZq+Z8O6GJUOfWOdPrxypMvXS1uc9jPYnDq+Bun4Yw8Z/DiQq1PAH7R6CMXy9YczRAtRPuT0pcM8ixn8LQfdWPp+hjFxn8L5492vQgx7oUAxA4R7QOcJfVFEqU1wzhf8MqFGnkhRz/T7Gq2dDglf6aKP3E/QRZNxQTd+kZsvHMhAAcZU2d7CtREF951WL0069f7xoSKWw2bjSbU5/3igYgGjnzeAlKF1Zm3I8olIl6ih5+jbQ1Ii2GVNAC28BYnDMXIHlEsTxHI27G/20jLxHGCbsYeEZMryTiuS2aqtgOkVkgwIriAPwnwMDzcVsTGlQZklliaCiIqUrnGXMnHeKjPO8WrGzPLN8GyhY6+MTm4j5aDnX1jEE0s+m8RVjVJNUqKbOkFVeYAoIz5M2HHLplJWaMePNONxi6Orw6CpLio5M79DDIWWoHAMYUrFpIBBvrpFonm7/SG6HyCzR4ZuDHqHddm9OmsF8OnFSmuS7aM1fGgOmkc2MSr+7xq8BmzJk5CUISSnvXYkC7VYnbm2jxVkj0xbLsWRSklZ0CpWUbq3anl9/SBpyXqdrvfxP5QwYtQu9CN/FgNut3gGfUvYebtFeKnuPP2A5hAqPs7H02vvFIWQahwSQobg3Djk9fERfPJGoA5X+nT93gNQoHI/OUa0k1TKbp7FWIlaGpfalQ+YAaKAfwUNIEWB0HR6VtB8tBUDY5QW1DVKvFJ71NAtqqaAJ4bd7CuooRy84fDL9D5Q01+pFUwGpS1N6X1fW8VSsUUKGrFlAOCU2LH5mJY6FjFymawOoYfrygVYI6kkHmOsXNJqmInTsv4hLCSTRzYgUbKC4As4II2ChrGeAXdiRWhH13LRqYVQWns8xdiUuaMHLE/MFEkPotWwinCcMXMdu6l2KlctAPiOjfSKYT6U1LlFsl3XcCSMywlKXUbJFVE/n0juuDYRcuUlKySqpNc1yaP0beKeGS5ckMhN7qPvG1z+gp9Y1ZeKH4zRmzZHN7IaKXuRDxILiecGv2hEg3imxqGEyLpcwxBMpPzMedvAxFiDRj0YxGzDdHNvCiLQ8ZjSEYPCns0h37gY9RWDJcwIHu+bAf36Q8hQEpDfKn6CM/Fz1Bw46Fx5ERojuVvYnicY49wAPr5QIvEbHKGIOj9HiBnalqitzraKUzXYB2fQaWZy/SLUipsivDvVRBHIu/l5RHFYVNgpII3I/S9YtlFIVsGDMxbpRiYuxUgFJUpiTe7gganS20N1UxHBNGeiXJoVLVV7Dy/WB8dJDAy3ytXNlcKvRjZtY1cQVdnl7gCq6WDdB6PGJw3FyTMUk5SpBVmCiPhsQ9L9YrzauOCPW7fwTDSyyvoVIrw+EmL91JI3sPM3gqVwld1kACrAOfFwwHKtvCN2dPAS4OlKfpy6QKtCiEkqe7MQCTRi9xTaODqP6zqMu0fSvjn8nU039KwYt5ep/PH4MnGJA0bZ7nw0H5SA5shKgCX2YC3IAGngPpHSYXAoVnJaiSqzK6NsXuwhl4UKBDAULFrUPn0jnRyUdNxRzcnh0xSnlAtqVsPoXV4mIrmlCsk1kr2BcbguLO+sW47h6lKzCZMlm2eWSjMK0IFGDxBAw8okYkTGYZV5ZhCiXzOtIK35EtWO1otZKFRg/unwcrWaOOS3JfZrkmmcd42eE4lUlP+JusEpkpLsVWWsjVKUlv+ShsYwZipVexSRLChU58xCgXYF8odNHGtYIxvEO0UDlyJSAmWivdSLAEgFRuSpqkkx2o6mGd+Hw+//DjS0k8Hrq/b/p3cycjtETUf9DFjMn+SePeQdipmbVSYjiTqef4+/wC0YXspiEzQvBTCyZ3elK+SckOkg6ZgP/VvijSw04lJE0ETUEpmig76daU7wq4DO7OBCRThLpZa2pxUkSnBiEgbPvvT81gfEbWN+QF/xt4tehqPH0156bnpAy11qA7aG/l+X6RrghGQTNZlpcZTQ8xW2g6xTjwSaMAAMoPymz/8S6OmQ1zExZMXqRlAFG1P5+0QkupYBoHu2hooFtCmnIhJ0EGROP8AcXb+Bob+kABZ+ezg6xFSXLXJPugl6t5m0EzZbktRI+MkFOVQJHVwxADmsaHB58hJIokt75uq7gAe69KB6FnLQ08yStbiqO9PYfgvA2OaYRT/AG01ANu+xeo0111Eac3BKFAQWFK3ApStYHlyy2aUSRy+1x5aeSTxBQIzVHgf1a0YpSlKVl21UQJIvFqJ8HKkJUL31DEb2vAC8ITVBCun6pLEeUCmmK4tF0ufzbzb7iCEz+fjeMsJWDVJHn+CLnOsS0Qmw0zSItw+MY1EAZqXHRxEkzB+zvENE2AZxCirNCjDsbrNIziiUgkApypqOg0jKxmLQoGoHhTyi7gPFkLlBBHeZIZbVoLRlcckiWsgFIzbVHMEM4NrRrxx3pmactrRTi8QMjpWNdak7AeMZaOIqRUM9akVctV/D1i2fIBD5qNatzYmloy5w5fm8a4xRjnJ2Ho4st6sfzyjWwvHQzEkOGNHSL/CSzX01jmpmHUn3hlcUBoW3baKzQ0L84l44yCOSUTqJ2PlgApW+Vu4QQDrUe76xyXGSO2UtPcJyqcfCQNOpS+t/GCpU8psSNXF3H94kVJWcxZ2DCtG6xh1uKsV+xs0uS8lFnCeOkd2Zcsysxv7rKYUGoUG5kR1au2VLCpRSssSUoJKgNHST3tbWjicVIYWdGo2/mHSI8Px03DNlOaW99v+KvhOvUR53JgUt4nZhla5PRPZ+TaYXVmDGrlrMQ7nX0iPGe4kZDkY3LkmlmLuOUQ4Hx2TOTmnrCKDvh8xOoUAkpfn6xScWkqWZaXYslamUo9AoBKfJ4xuDRqUkyrDS1rDqBQSHBcsof8AF/p4RVPl5C7hjq9H2yuyj4RoJm9oxKsxD5ncizkaC7eUAcQkqb/ppXsxyq6DQDxh8f1UyJcbGKOIpOIXKBckI7zqoQjOxykBq2DaxOZhXL5q/wArJSepyk+ZijgwWMSVKlrQVSi6CNiWBNlVCTQWJ0EbZkAqZTp7oL1+LNlSToTlV5RqySpquyKYK1v3MhCFpNxmFUhDlQYvnzWDXegDCO0nYztZUvGqYF+wxjNlBFET+ljrRTCOJ9rZSuxT/hwrLnAWqX3hRxUipUC3/EHR4D4NKISVdoRNDMlRcqSCal6Ejn9axux6zIoKUndce5iyaSDlUdv4O9wE0zV5ZUpS0i0ywJ5A6PqWvTeEoEHKQzFjqR15v9IAwftcEyFJMqWJiaApdIXQ3HwsWcu5fa0eAYiZNlKmTCC6jVsiQlki/wAoOvhGzQa7LkyOOTj+CjU6WEIXEImqoTm18vSGXLEsDMXOiBQ1Fcx+EPpeul4pn8QA7svT/cIr1SPhHO/SBZKgXqx+sdWWRvZcHOe3HJOevNfckBywzEqOUaVJikyzpEnELNAq4Rll1J2yxK1oYgt0Ifxao8YPw+PcBJVlLgDbx5WjJM02NokVA9YWULLIZDbRjyk3pYkEtf3vQUv0jRweKTMTQhKwfe/cDZ7jS7mOQM9R1LP1DwXhAq4Nfy3TziuWJUWxzOzqwvOoCrtoQQ/QNXpeNSRhpSqFAHJ6vsWjjlYpTM7lPwmo5kfKbW3gvh3H1S1d4FQsxU7WZidq3OsUvFKti9ZY3udKvhCFPlUR9IAxfCFpqGPRvpBaeIqzJyd5JdwEnkx2NOfhSLsficpRWirvWujjSEUpIscYs5DKYUWMeUKM9l9I5fD4hKEpDgggbi4tTnFqsNMUnMlJUWZwSRqCX+b7xoTuFIlIB7POSlN3AFBXV4vwOMQJagvuad1RBNrJcv1Mb1La0Y+nemcgc6VMKF9/TY2jS/xsst2spSCRQs4I8WpEcfiJSSrsVd7ulKqu4JdiKVCm8IzDjilaVLadukmhBFna4P0i/wCrsUfT3NLGYdCkhaZhWpVLbAE6mocRmCSfxoN4RjghaglAIVoXJAqwzMAfIXi0Ygy1kgIBFWKXbkOcFtbDUnuXYbhs2coMGCqOEskatQfSpinF8GmSiVqAoz6OD3WYh3ato1ZfGe2UUZ8jCnw5jfXW4vaM7iiZqzk7TMHOQCr3IY3366Rmy9UouL9i+CimpL3M9Bdk8xX+Ul38nHUQdhODyF9oOzSFUYgEXe4BAUKWMZKVBJBL0LHoSxDaa9ClqUEGSsapCqdORGjjVo4OOSjP1LY604tx2MoS1yVKHyG4cCjjxSa3Fnje/wAWopSpRyhY7oJAChsk2JDe6T5wsQgTFJPu9opINiz36m8dPg+EIGHGHnJTMSMzgijZioEagh9KjQxZHTxzN127iPK8dGBhpgYCqFJoFpvexGo9Y1+HLmKfMApCLzgwQKfEqgf1+sc7xyYnALR3O3luWSpRSQKgJUsA5gNDQ6PvnYjis7GntJygmSgAJlopL+JSQEu1ndV7RhyaaUW1I1wzKXB1sz2hlpfsyVVbNTvV+B9L11alI5vjXF14fECdKnKBmvnKCFAZQlIDKDKoVXA1h+HYDtlgZmzd0UolNlq6+94JO9KcRhMy1lLGX7qUkPQBgVN55t4bDGEZbkZJSaMmRxGZ261pX/1Fd9qJWLh0mnSlNGjp5AQEpKsq1qoUpXmKTZlUF3oQTtHOTuFqlnOmoSQW1ehpu0afsPw7tsShKlgBCVK+LMthlYmybuS8acyi49SeyRVjbTo3cJwiYv8A1AhK2UCqWQrvcgAMrXDO/jF+MxMxZyrdLf7bZQPD0c1jveElkmSlCUkkg5qpJYFstnKSFM9awPxPhktRaeg91mUEAJIsUpUkgJuG1BBu8JpdXPFvVoXUYo5HXc8/IiBMbnEOChCVqC2CchZfyrTfNoynDEbVjDmCO9p9VDMricjNglje46ZkEYpSXGWxAPRxaAjF89nS2wfr940lHYbNDExKdJIYVdnPiWH6RS8SmK4BEqYQXBY/l9DBkicgEZgUn5k2PVL0/wDE+EZwVFyVwPcEqNaWkurKc7M7OHGpbwrDTsO/um2nSB8DiTLIUk+tfPbkY2cDNlzFd/KnYksz09400cDmeUVSbiWKKZXwviC0gIUSlLh1UDZjUqe52MdHhQJjF723BBq7RkDDJW6VGjgpUgghmLP61DRbKwa00Cg+hqDYab0G8VTp78F0LXyZmWFEMyt4UZP8muzmFe1E0pS4SwA+Emw3gOfxntB3mBAJerMznra0S4tOlAJliYUMkFSSCUlWUF82xBGkYU6cD3RU0716BxQEDRr7R1ccE0tjnTbtqzTmditDpnOtwAjLld9tup2gTF4JaKECzulQV18oFl5WZRLE1YA+sRnZX7hpzi5KivZk5M0pLuzfrDrmF7xHDylKLJD6nYAXJ2AjQXw7LTMFKsUhxl7uYHoyh5HrA5JMEirCT7Ei1avWto6rAICk91SVJb3F5X0oyrl9DT6xz8jCssJcZnYodyC6rGiSaWd6+Ma+EQGBaymzIOV2Ld3lQ1/lPWKMtMux7BPGRImS6ledDWSwY6AuSHdwFfKdRHP9ow5i0dNj0lYqugAd2KmDW3GvgIxVyw1GIJ7w+EVs/wCv2jBm0kcsbWzNmPPLG/gHnzzlSR8KgTyIr5R302c9d6/r+sefLlFLgjuu25Aex1Z6R02GxZMpB1KEv5VjNo4ShOUJF+eSklKJz/8AEtjJSqjh2OodSLevlygPIlMpDAJSZaCb1cOp61oFGNP2oT2mHmDXKSP/AB77en0jO4l7iEt8IGxNm6fvFGs+ui3TfTZoez6/9JJLPU1rdSqHdnI5xHsMpJNQK9X+ginhswoTyBNdg4Pk3l9NAzS9BTU8vtGGUd2ab2AZCVqUnMzqUnnlSDQDqa+Aj0T2c4HhQ05MzJNYpIVlqX7wY+8ksOfOOFlpAVYPo5oOban8rHoXsHxOWpS5IorKFA60YKSH0DpbephZyl/gWWytG5iJKVAlLKUUgMnMkOn3Vp0BBIepo21Q8fxoSkGcpaijKO5kzBRUcrANQ6GzE1jN9pfaUYcqkl1z0TAqWrRKV17x1pmGXUNa8ec43jU6ckiYs5SoqYUqR5NQ2/miYQtCKIZxfjC8RMBUMksEBMsO16al28hoBB/GZgUvMlJAVWoYHmKl6vV/KOWw8x5ieZBHhV/S8dFJ4kcpRMdafhc1Sf5SbPSOz/T4VFtGHWyVqIGYQLGNXh3DxPByKAU9UqBG/ukEvpoICxMizXNGA5t56fd46akrowODSsWZyS5NDzL3/OjxXNAf9q8/GJ4WflCg7PuBpo9/CzgUhTl5jdq01oWA+m8C5IfAzhvOv7eWgiTkQkSXcuGe7tSuhbVodYIoQWDGoZnA8npE2RRYF62f8aCcPMcEehLcqbmsArMJCoKCzVkzihVSQ1Om3hyjoMMvMkFCwSlVy4Lh3DiwNR945EziTW8X4PHrQ4DFJL1uCzX8B6wko2NGVM0sx29YUD5oUYKN9nCcaxxmhDJSGQkPXMQlOtWA2G0ZRUKAJbcuXNmpYMxjcn8LWiWha0LCTlOVYKUq97IAXe1aswesZKkpU5CWYMEhy6jQVam7R18bXTsc6XLKFKBDM3N/vF2FVVsruWbd6MOdfpEezv0DUOtSwg9WBsFAoTlSX94ErJyvQM4HTu9YdyRFBWGUVg5cqEB6CjdxVTV1HR1PyaCpE9LFklu7lZkrSSMuVrvpRhDIly0oUQlRKXoDkdJGZyGYi1LUG8VheXOQE91SSU0DomB7iqNNaZtKiKbsctkz0qSwSQoEEJq4rVTm9SOVYPw5zOP+mxqk1Ar6deYgPDYJSalswJejVSshyav7wL+lK6+CU6QAhN3DDUgMzBnZR8tTFcnXA0UycrDAt2ibm4IamUv3TQ+O9BF83hQfumta5gGYOHcZgBryN4rVgZiAyUkJewytUMHWBluTRT3akaMrEI1SUmxLJYkFmY3PV4pbfYuSXcy5eCITWWWALMygKEZajnrs2taFYWYkdxLpb3fiGtBr0cnZ3p2WH7wypUH3UGNtGO+nOI4eUpKwJgBToQQ/IOaEdWMVuV/cdKjz7HHNLOoI9C4vGTxFf+lLtR3fa9deceicf9ms+YyilKifcJASuruPlX5gv4xx0n2RxsxSs8pKEAUClAKUrQ0cZAdyDtHP1EJTyWl2NmKSjGgfg00lDmtf6QPoYJQs1oqtgAHGnTzjN4ZPKHlqI94sQoKcPo2mxtWNVFnAoDQvvr4vGGWz3NUd1sVO1Tcsb2DgAUuS59dhFi8euSkqlKyLIYKcOAoMa2FHA2ahitNjUudTU1NC36aNA3EJoEkG4JqTrehpzOkHJAOqcW3NASTWuZr1KjnP1gefNoKhuQAHMsPIdOsQC77AZt6jWwc94lv7xseyPs7Ox01QlgplAEKmqDpSSxpbMs7DepF4eKt7CuVAvAJeefTRJNdaN+tLVYbCNWcggx6BI4FIwcoJSlSkk5VqUlJUsFwysqQwBVS9hHPT+BzFlwDloHKVAl7OwYHeOzo/7caZy9UnOVoxcHi1SySmh3YEhiDTazUjXw5lYjM4EudVRJICFcmcZfuTGbieHrR7yWex0LbHWOh4Bg0iUFqyVJfvKCqPo7GkasjVWijGndMxsThsoL0IUAXZqgmtaUqGpQ7QDqNBs9K9bDrHQcTEsKJXlzA0ykZsqQSygHBJqM2hZ4y8YpOYZX1pU1o3m59RBGVkTjRLDnKl33SbZdyK+D9bgNEMdJCS4DB2ruwcCtR+hG4iScTuk6sQzFTMKDkohq32aB8XiMx5C2/idTo+rRKuyG1Q4Q/hyP4NKcxEHip+UO8WFbCM7wzxUkxJ4gg2HhQ0KOcdEH9tpueVLQFBRQgKUlvdGS996eJjlsVLUkheQIf3RRwGLUZi4SWeqnvufwbifeGc51MGKu6NAavoGqWsWi6aFTFOmjuQopmAUZwlLvuS6Qb10jfD0qjJL1OznpMoqWMyX0NCaABzQ7F9Gp0i/DSlKUEFQBKkl3BoRQPV2NAG1joky1IFRLRdSCld1i4oGJLEF/5RDyuGH3uyHaJU4QlORgAagO5BpR37p2hnlIUGYeJk5FlQmKmAXIBZrAHQCwIrfWLpUgBSS7oWgZmAIon5C1QSL6OWMa8vCISDnSMrd6hGVIJUEoFWFqs3dLPAuL4WgIMzDzCqhKmABy0BISK5WLMLMpzeF67JcaCOEKC15VupSUOMrBJ95wQGCks1XrbSmgPdQCeySSkql0HxgOHD5aPyd9Y56QJ4ASUqKQBQuAUhzlrQpdRPjzjWkY6cJoUhPZk3AACNlOWcJIFQevOFlHceMtjqVSUgvYOQCHDVLPUOKigLHagiqXg0vmWwNiKd5g5KhYKZqGpaDMHhxMlBaakAgh3C07MxpTlpDyQ9wSCWLirCgzJJelBmY21vGWzRRkhBB7qgpvd1ID6A/jGNnhoRN7xRYb90HWw6awP/AJcUkpISUnmQTsSR+8F4eRlcAUpUknyMDdoEgtSAKBuTsYtwssBnNH8orRhn/Nosn4ZRSQKQg580YLixkqVJmd5KFFIULpylr6inh6R0+Cx7MoKKkNdxTxFN46f26/hj/iM2IwgCcReZKcBMw6lJslZvoDyNT5Zw/Dz0rXh8ixNzpT2TEKzkkZcu7t6RkyYky6GRo7yTiUKJUFA0dwRu4DXZm2gfjK2QkZaZh/8AkHmwjr//AKk/0cLlnmXiAp8RMBJGUgkplpZiQpkg0BBUS9BHTn+G2EKpaiuYpCPeQop75A1IAIBq4G9GFIo8u09i3xkefexHshMx2Za3lyAQMwuti6kofoAVW7xAdqexcI4dJwksSZCChAJOXMpVSzl1EmLcHhEyUCVJly5aE2SkZQHLlgBzJivFTFylEqqghwwtbx1jVDGolE5uRPG4xCGCiEvUg3bcA9IBm8TdYQlJL0zpNU0soFmG1wXhsbh5U2f/AKiH7jciKnzr6xn4PEplr7MJzJQDlWD7oJYJVQMaM71pFyjsVNjf5KnMpRaaTYTBV2e4oR4C2sZXFeHkOAlMtIVbMvISzgkHuvWvI3tBHFeJKSe7OKFVOUhwHqO8m9C14hK9qS+WalLDVDl9KA/lIuipclcukw8Xg0VIKWJPu5Wqe6L1PR3y1aAZ6QiruSUkVzFhUk9fvTSOpxnCULT2kjqBsxqyns72pWOXxuDU9VP1JPW/0i+ErM8012B54yjumlLHZRY025UpygYHX8/aLxIIs5L6eO0N2Q1I+3IvYxcmUvcqaHEWdkNxWmlDRurv9Ic7UD86PUEHzF6wWFEAYnLSTp9hzMISybA9DeJJWoNYM/i+/OIBGvl/KwoUKOcdLY5DA4NIKFMvLdsqVEH3SUPRRcpozu8ak3CBwqWqcQoDJMVQIYn3iqrHcs0aOCT2cp8xKUpLshSVNMDshRZTggmhVbSK52Plq/0lFapU58q1HMQSapcKcVIuwrreN3U2ZHFIE4fhJmYiYhXZv3gCSgh3GQprmcXfyjVncXlyUjLqBkD2JckuXcUF30gGWnsEzEZ0qzILEqJarlJQ5Di7gQBMwLhRqkEBhYXUadDRyK8rxDSk9wTaWwdiUHErIXMIAYMDS1st6KcAkC/KpEjgSc6WmZVbAUBN8uw1jLVOyKBBJJYEtXKGJIDVU1X5x0nB8VKVPKRLVmCazUqzCgFaOPSCVpbExpvc6CXgkliteZhUkgBgPJ+cZkrh6VTllLhzQgApIysomu+YPy10nxLha5gDKUASxBOUirZg5AFNCdjFK+HHDKQqWVEP7pUHtU2vQUqKxQvuXv7HU4fDBKQMoTlDOGY0vS9hA3ZlSal72BDVanOl4PlF0v8AvoNdD9oQlkip919PvFNllHPzZhRM+cNZwD5AWjTkpzjMHB56xDiEgqSLebaW5wLhcMsCpzNYCjcvSH5QvBpJkrfdOoYv9YNTe5+npAsmbm3BA1/LxJElb1t1hGMFy8PV2/OkCzfZ3DqxUvGGWDOlpKUrfQhqixIBUAbjMeTackEUhLmAU5wjJHEyLggwHLUCSM3iPpBSAwu43NYGSSmShcg/tFE+YGzOwBapYV3grNAGPlFcvKCz0L0oaU/PtEIGATCgLYFzoCauxsRox1gPC4BKVG+ZbGoTTKXA2Z/oIqxPB0mZLoTRQ1FQQWLNo7OY2ZOBKQB8IDcxFtpcCcnOe02CAAYGrs53YmvJmal9Y5pKVXBZ6eH0juuJ4JSiEmqal60dvOMbEcJ7hUmuzbXHjXaLoT2oqnHcz+HT+z+EqYGrkBiDTlUwavi0lbBaGUWrbR33/eAZmFUKFJGlYEn4WjGGpMS2ieNXLLZXcUYKZwQdDQ/X9M3ETMzVdmqRcM1WZ23v1g44UOyjdyA1QC9HpUEw0zAHMTmBSTWmtNNIsTSK5JszCkGhRQ07pe9A77HZve5VIOAWmj16OXr6H7Rqy8HLTUnKbpJ9aM0C4hAZkrUXINeZ1FibxPUL01yCBBqGrrZh4aafvCMsmtzy+2hp4wcMIbhTEUWgUUBQuA48Kwbw/AhVaGpuTXwNjSByJUbA8sKL2hRgs2GNxLHy5EpMtC5ixMSgnKpKikCiglwyaE0Nm8Yq4ZhcKvuy1TEqfMylISCAaVSDXk9wWjMVweepiEApDAFHuh05vhIoxJ101MVzeGzJYAIqzuWFLUan6+sdCKjWz3Mkm+rg6aVKKU0CUl6MoZiCzuWc+J+KIdgk5nU5BAqQwd2dQ91730NKwLhcNJTlUQpXyhYVVwxDAaGoP7QeM+fKxQlj3E5QkklxQu5v0YQjHW/Jn8Q4JOCnOUkpBGUhqJJcEAMcwBarveDvZeWuUpdaAgTEkEJy5SxJyOXLUCrnxjUMztLIEvLYOdDc2BN9KvEM/eZu71P06wvU2qY3Sk7R0mAMsJStg6hpS5JsORbwg4SQoKzAVGwjOw402AbyFPrGtIVTnGZl6BJaMoCakJDDem/lBBB7M3tCnTQmpEUrxQIiCRsMt0hKjV4sGCF3IrpA4S3KD8MmjmBgMMJcpLRNBahh0Ku1YpmJc3iACZkwMxrA6Vix8D+8TzCovyEVLkgsX2cNAFhGHlACrQdKtAyRalodam8TEPckvEwChirEpBYvTbcQ0uY+v0aJlIKSm23LpEUBn4cqScinPeJBUXppoINRNa+sVzZAJHL69YIKAzEXiWQC8RPcLKbm1ozsNKyJA3pm97Mf7CCZmKyqyKBF728N4eWyhSoBpfSxHL7w64FZUcKC5UKPrXf88oycdgEzFNLuBfmLA+EdChT3H5zgeUtNQAAxq28SmQ0cdNwxfvU2e39n+sSwq6spL6EhqNqI6/FyEqSzP+XgJHCUioN9NPysWdfuV9JizOHSl1SrzgObwlQBAQSNwNHdo18Vw/KoKT3LuNCzBmHnaDsKpwK9Uw3VXBDinyZHDeFIGVRSum4al2Y6co2JeFl7QWkGLEohHJslRSOLaHh2hRQX0ASXABzKJbdrBgwDAUGgitSVEuVrJ3zV1N73J8zChRYpMTpRdLWQQXPdsDZzctZ+cWFZvqf3pChRHWyVFFeYvUk9axOSq5LH85QoUHUyelGlheIqTYJ8X+8Xni6391PkfvChQlsZIeZxhahVKD4H7xUviivlR5H7woUCYUWJ4uvVKD4H7xZ/ncz5UeSvvChRFhRNHHpg+FHkfvDL49MPwo8lf1QoUFklaeMLf3UeR+8Wo4/MHwo8lf1Q8KBshItT7RTPll+Sv6ogv2hmGmWX5K/qhQoiyRh7QzWHdR5K/qiz/wCRTflR5K/qhQoLASfaGYLIR5K/qhle0U35UeSv6oUKAAWdxZamJCXBcEZgQdwyoZfGph0SDuMw/WFChr2FoZXG5j/D6/eJjjkx3ZHkfvDQom2RQjxuZsnyP3iY47M+VHkfvChQWwpCPHZnyo8lf1RAcZWPhR5H7woUFsKRM8cmfKjyV/VC/wA9mbI8j94UKC2RSB/8KNz6faFChQtjH//Z" alt="Sentinel-2A / 2B / 2C / 2D | 一般財団法人リモート・センシング技術センター"></p>
+<h2 id="Sentinel-2影像的多分辨率特性"><a href="#Sentinel-2影像的多分辨率特性" class="headerlink" title="Sentinel-2影像的多分辨率特性"></a>Sentinel-2影像的多分辨率特性</h2><p>Sentinel-2卫星搭载了多光谱成像仪（MSI），能够捕获从可见光到短波红外（SWIR）的多个光谱波段。然而，与许多其他遥感卫星不同，Sentinel-2并非将所有波段数据以相同分辨率记录。如表所示，Sentinel-2的波段涵盖了从443.9nm的蓝色波段到2202.4nm的短波红外2波段，且其空间分辨率分为三种：10米、20米和60米。</p>
+<ul>
+<li><strong>10米分辨率波段</strong>：主要包括蓝色（B2）、绿色（B3）、红色（B4）和近红外（B8）波段，这些波段对于植被监测、水体识别和地表覆盖分类等应用至关重要。</li>
+<li><strong>20米分辨率波段</strong>：包括红边波段（B5、B6、B7、B9）和短波红外1波段（B11），这些波段在监测植被健康、水分含量和土壤特性等方面发挥着重要作用。</li>
+<li><strong>60米分辨率波段</strong>：气溶胶波段（B1）和水蒸气波段（B10），这些波段主要用于大气校正和云检测，虽然分辨率较低，但对提高整体数据处理精度至关重要。</li>
+</ul>
+<p>Sentinel-2影像信息见下表。</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>波段顺序</th>
+<th>英文简写</th>
+<th>空间分辨率</th>
+<th>中心波长</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>第1波段</td>
+<td>B1</td>
+<td>60米</td>
+<td>443.9nm</td>
+<td>气溶胶波段</td>
+</tr>
+<tr>
+<td>第2波段</td>
+<td>B2</td>
+<td>10米</td>
+<td>496.6nm</td>
+<td>蓝色波段</td>
+</tr>
+<tr>
+<td>第3波段</td>
+<td>B3</td>
+<td>10米</td>
+<td>560nm</td>
+<td>绿色波段</td>
+</tr>
+<tr>
+<td>第4波段</td>
+<td>B4</td>
+<td>10米</td>
+<td>664.5nm</td>
+<td>红色波段</td>
+</tr>
+<tr>
+<td>第5波段</td>
+<td>B5</td>
+<td>20米</td>
+<td>703.9nm</td>
+<td>红边波段</td>
+</tr>
+<tr>
+<td>第6波段</td>
+<td>B6</td>
+<td>20米</td>
+<td>740.2nm</td>
+<td>红边波段</td>
+</tr>
+<tr>
+<td>第7波段</td>
+<td>B7</td>
+<td>20米</td>
+<td>782.5nm</td>
+<td>红边波段</td>
+</tr>
+<tr>
+<td>第8波段</td>
+<td>B8</td>
+<td>10米</td>
+<td>835.1nm</td>
+<td>近红外波段</td>
+</tr>
+<tr>
+<td>第9波段</td>
+<td>B8A</td>
+<td>20米</td>
+<td>864.8nm</td>
+<td>红边波段</td>
+</tr>
+<tr>
+<td>第10波段</td>
+<td>B9</td>
+<td>60米</td>
+<td>945nm</td>
+<td>水蒸气波段</td>
+</tr>
+<tr>
+<td>第11波段</td>
+<td>B11</td>
+<td>20米</td>
+<td>1613.7nm</td>
+<td>短波红外1波段</td>
+</tr>
+<tr>
+<td>第12波段</td>
+<td>B12</td>
+<td>20米</td>
+<td>2202.4nm</td>
+<td>短波红外2波段</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="Sentinel-2影像的数据存储策略"><a href="#Sentinel-2影像的数据存储策略" class="headerlink" title="Sentinel-2影像的数据存储策略"></a>Sentinel-2影像的数据存储策略</h2><p>鉴于Sentinel-2影像的多分辨率特性，其数据存储策略也采用了独特的方式。与常见的GF1、GF2等卫星影像将多波段数据集成在单个TIF文件中不同，Sentinel-2选择将每个波段的数据以单波段形式分别存储。这种策略虽然增加了文件管理的复杂性，但带来了显著的存储空间节省优势。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.seagate.com/content/dam/seagate/migrated-assets/www-content/support-content/knowledge-base/images/ka03A000000iuC1QAI__0.jpg" alt="Storage capacity measurement standards | Support Seagate US"></p>
+<h3 id="节省存储空间的考量"><a href="#节省存储空间的考量" class="headerlink" title="节省存储空间的考量"></a>节省存储空间的考量</h3><p>由于Sentinel-2影像的某些波段（如B1和B10）空间分辨率较低，如果采用传统方式将所有波段集成在单个文件中，并以最高分辨率（如10米）为标准进行像素对齐（重采样），将极大地增加数据存储量。而通过将各波段数据分别存储，并保持其原始分辨率，可以有效减少不必要的像素冗余，从而节省存储空间。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>Sentinel-2影像以其独特的多分辨率特性和数据存储策略，在遥感领域展现出了强大的应用潜力。通过单波段分别存储的方式，Sentinel-2不仅有效节省了存储空间，还提高了数据处理的灵活性和效率。</p>
+<p>三年前，写过怎么从Sentinel-2影像合成RGB图片，从那时起知道了Sentinel-2影像文件结构的特殊性，相关代码已开源到github。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021450688.png" alt="image-20240702145016664"></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/')">Sentinel-2影像的独特之处与数据存储策略</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Sentinel-2影像的独特之处与数据存储策略&amp;url=http://ytkz11@.github.io/2024/07/02/yao-gan-sentinel-2-yu-qi-ta-yao-gan-guang-xue-de-bu-tong-de-di-fang-zai-yu/&amp;pic=https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021450688.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E9%81%A5%E6%84%9F/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>遥感<span class="tagsPageCount">183</span></a><a class="post-meta__box__tags" href="/tags/GIS/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>GIS<span class="tagsPageCount">8</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/07/01/gis-jiang-shp-wen-jian-zhuan-huan-wei-geopackage-ge-shi.gpkg-de-guo-cheng/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407011030759.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">将shp文件转换为GeoPackage格式（.gpkg）的过程</div></div></a></div><div class="next-post pull-right"><a href="/2024/07/02/dai-ma-pyqgis-er-ci-kai-fa-jiao-cheng/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021645318.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">pyqgis二次开发教程</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2024/09/16/yi-xie-gis-kao-shi-de-zhi-shi/" title="从十年的注册测绘师提炼出与GIS相关的知识点"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409120954318.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-09-16</div><div class="title">从十年的注册测绘师提炼出与GIS相关的知识点</div></div></a></div><div><a href="/2024/07/15/dai-ma-li-yong-python-ji-suan-he-ke-shi-hua-wen-du-zhi-bei-gan-han-zhi-shu-tvdi/" title="利用Python计算和可视化温度植被干旱指数（TVDI）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407151002901.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-15</div><div class="title">利用Python计算和可视化温度植被干旱指数（TVDI）</div></div></a></div><div><a href="/2024/07/09/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-yi/" title="使用GDAL进行遥感影像植被真彩色增强 （一）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407041758486.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-09</div><div class="title">使用GDAL进行遥感影像植被真彩色增强 （一）</div></div></a></div><div><a href="/2024/07/04/shi-yong-gdal-jin-xing-yao-gan-ying-xiang-zhi-bei-zhen-cai-se-zeng-qiang-er/" title="使用GDAL进行遥感影像植被真彩色增强 （二）"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-04</div><div class="title">使用GDAL进行遥感影像植被真彩色增强 （二）</div></div></a></div><div><a href="/2024/07/02/dai-ma-pyqgis-er-ci-kai-fa-jiao-cheng/" title="pyqgis二次开发教程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407021645318.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-02</div><div class="title">pyqgis二次开发教程</div></div></a></div><div><a href="/2024/07/01/gis-jiang-shp-wen-jian-zhuan-huan-wei-geopackage-ge-shi.gpkg-de-guo-cheng/" title="将shp文件转换为GeoPackage格式（.gpkg）的过程"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202407011030759.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2024-07-01</div><div class="title">将shp文件转换为GeoPackage格式（.gpkg）的过程</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://raw.githubusercontent.com/ytkz11/picture/e0561f27bb351a8dc757d4f5b1d74a1ab5ef4e42/imgs202411281530223.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sentinel-2%E5%BD%B1%E5%83%8F%E7%9A%84%E5%A4%9A%E5%88%86%E8%BE%A8%E7%8E%87%E7%89%B9%E6%80%A7"><span class="toc-number">1.</span> <span class="toc-text">Sentinel-2影像的多分辨率特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sentinel-2%E5%BD%B1%E5%83%8F%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E7%AD%96%E7%95%A5"><span class="toc-number">2.</span> <span class="toc-text">Sentinel-2影像的数据存储策略</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E7%9C%81%E5%AD%98%E5%82%A8%E7%A9%BA%E9%97%B4%E7%9A%84%E8%80%83%E9%87%8F"><span class="toc-number">2.1.</span> <span class="toc-text">节省存储空间的考量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">3.</span> <span class="toc-text">结论</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641974.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学习Rasterio还是GDAL？"/></a><div class="content"><a class="title" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？">学习Rasterio还是GDAL？</a><time datetime="2025-07-16T12:20:10.000Z" title="发表于 2025-07-16 20:20:10">2025-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="告别 gdal_translate：迎接 GDAL 统一命令行新时代"/></a><div class="content"><a class="title" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代">告别 gdal_translate：迎接 GDAL 统一命令行新时代</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111438678.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简要介绍 GDAL 的架构、关键组件和功能"/></a><div class="content"><a class="title" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能">简要介绍 GDAL 的架构、关键组件和功能</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641982.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GDAL_OGR简单的使用教程"/></a><div class="content"><a class="title" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程">GDAL_OGR简单的使用教程</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507101625855.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="遥感到底是个啥"/></a><div class="content"><a class="title" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥">遥感到底是个啥</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">317</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">52</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">79</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 0.88rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 0.88rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 0.88rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 0.88rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>

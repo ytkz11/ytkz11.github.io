@@ -1,0 +1,834 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>kotlin自学过程，第一天2023年2月13日 | Find everything you need</title><meta name="keywords" content="kotlin"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="kotlin自学过程，第一天2023年2月13日"><meta name="application-name" content="kotlin自学过程，第一天2023年2月13日"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="kotlin自学过程，第一天2023年2月13日"><meta property="og:url" content="http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="为什么要学Kotlin 我想开发一款安卓APP，所以就想去学学这个语言，主要是不打游戏了，下班之后也闲得慌，闲着也是闲着，所以就去学Kotlin，内卷从我做起。 文章很多内容机翻于w3schools， 有需要的同学可以去它家网站学习:https:&amp;#x2F;&amp;#x2F;www.w3schools.com&amp;#x2F;KOTLIN&amp;#x2F;"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png"><meta name="description" content="为什么要学Kotlin 我想开发一款安卓APP，所以就想去学学这个语言，主要是不打游戏了，下班之后也闲得慌，闲着也是闲着，所以就去学Kotlin，内卷从我做起。 文章很多内容机翻于w3schools， 有需要的同学可以去它家网站学习:https:&amp;#x2F;&amp;#x2F;www.w3schools.com&amp;#x2F;KOTLIN&amp;#x2F;"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: 'kotlin自学过程，第一天2023年2月13日',
+  postAI: '',
+  pageFillDescription: '为什么要学Kotlin, 简介, 为什么使用Kotlin？, Kotlin入门, 集成开发环境, Kotlin语法, Kotlin注释, 单行注释, 多行注释, Kotlin变量, 注意事项, 那么什么时候使用val？, 显示变量, 变量命名规则, kotlin数据类型, 数值, 整数类型, Byte, Short, Int, Long, Int 和 Long 之间的区别, 浮点类型, 何时使用Float或Double二者区别, 布尔值, Char, 字符串String, 数组, 运算符, 算术运算符, 赋值运算符, 比较运算符, 逻辑运算符, 字符串, 获取具体的字符, 字符串长度, 在字符串中查找字符串, 字符串连接, 字符串模板, Booleans布尔值, If … Else, if, Else, When, While 循环, 循环中断和继续, 数组, 更改数组元素, 数组长度, For循环, Ranges, 检查值是否存在, 函数, 创建自定义的函数, 调用函数, 小结为什么要学我想开发一款安卓所以就想去学学这个语言主要是不打游戏了下班之后也闲得慌闲着也是闲着所以就去学内卷从我做起文章很多内容机翻于有需要的同学可以去它家网站学习写这样的文章也是在督促自己保持学习简介什么是是一种现代的流行的编程语言由于年发布它变得非常流行因为它与目前最流行的编程语言之一兼容这意味着代码和库可以在程序中使用为什么使用与完全兼容适用于不同的平台等简洁安全易于学习特别是如果您已经了解是免费使用的大社区支持入门集成开发环境使用可以从免费下载新建项目如下图新建文件新学一门语言的第一个代码语法以为例说明关键字用于声明函数函数是设计用于执行特定任务的代码块在上面的示例中它声明了函数该函数是您将在每个程序中看到的东西该函数用于执行代码函数大括号内的任何代码都将被执行例如函数在函数内部这意味着将执行此操作该函数用于输出打印文本在我们的示例中它将输出在中代码语句不必以分号结尾其他编程语言通常需要分号例如等注释单行注释单行注释以两个正斜杠开头行尾之间的任何文本都会被忽略不会被执行此示例在一行代码之前使用单行注释注释多行注释多行注释以开头和结尾将忽略和之间的任何文本本例使用多行注释一个注释块来解释代码变量变量是存储数据值的容器要创建变量请使用或并使用等号为其赋值值得注意的是声明一个变量而不赋值然后再赋值但这时必须声明变量的类型如下注意事项使用关键字创建变量时无法更改重新分配值使用可以随时更改值那么什么时候使用比如希望这个变量不发生改变的时候相当于其他语言的关键字显示变量可以用在显示变量符合可以连接两个相同类型的变量如果变量是数值则相加如果变量是字符串则相连如下变量命名规则变量可以有一个短名称如和或更具描述性的名称变量的一般规则是名称可以包含字母数字下划线和美元符号名称应以字母开头名称也可以以和开头但我们不会在本教程中使用它名称区分大小写和是不同的变量名称应以小写字母开头并且不能包含空格保留字如关键字如不能用作名称数据类型在中变量的类型由其值决定整型浮点类型字符布尔字符如果需要可以指定类型数值整数类型存储整数正数或负数不带小数有效类型为浮点类型表示带有小数部分的数字包含一位或多位小数有两种类型和整数类型该数据类型可以存储从到的整数相当于是有符号整型数值该值将在和之间时可以使用它代替或其他整数类型来节省内存数据类型可以存储从到的整数数据类型可以存储从到的整数该数据类型可以存储从到的整数当不够大以存储值时使用或者可以用结束值和之间的区别浮点类型浮点类型表示带小数的数字例如或和数据类型可以存储小数何时使用或二者区别浮点值的精度表示该值在小数点后可以有多少位的精度只有六七位十进制数字而变量的精度大约为位因此在大多数计算中使用它更安全布尔值数据类型只能取值或者该数据类型用于存储单个字符值必须用单引号括起来例如或值得注意的是是在中不能使用值来显示代表某些字符字符串数据类型用于存储字符序列文本字符串值必须用双引号括起来数组数组用于在单个变量中存储多个值而不是为每个值声明单独的变量运算符将运算符分为以下组算术运算符赋值运算符比较运算符逻辑运算符算术运算符运算符含义例子加减乘除取余自加自减赋值运算符使用赋值运算符将值赋给名为的变量加法赋值运算符向变量添加一个值等于运算符例子相当于比较运算符运算符含义例子等于不等于大于小于大于或者等于小于或者等于逻辑运算符运算符含义例子并且或者不是字符串字符串用于存储文本一个字符串包含一组用双引号括起来的字符与不同不必指定变量应该是足够聪明可以理解上例中的变量是获取具体的字符要获取字符串的字符元素必须引用方括号内的索引号字符串索引从开始在下面的示例中获取的第一个和第三个元素是第一个元素是第二个元素是第三个元素等等字符串长度中的是一个对象它包含可以对字符串执行某些操作的属性和函数自带找到字符串的长度函数该字符的长度是在字符串中查找字符串该函数返回指定文本在字符串包括空格中第一次出现的索引位置我有个朋友叫张三张三字符串连接可以在字符串之间使用运算符将它们相加以生成新字符串这称为串联张三李四还可以使用该函数连接两个字符串张三李四字符串模板张三李四布尔值是否常常用在条件控制语句中语法如下运行一些代码例子张三张三赋值张三张三张三他是个好人语法运行一些代码运行另外一些代码例子张三张三张三张三张三他是个好人张三人品不行符合条件时运行一些代码表达式类似于中的语句循环只要达到指定的条件循环就可以执行一段代码循环很实用可以节省时间减少错误并使代码更具可读性循环中断和继续该语句用于跳出循环这个例子在等于时跳出循环如果指定条件发生该语句将中断一次迭代在循环中并继续循环中的下一次迭代此示例跳过值相当于中的语句数组数组用于将多个值存储在单个变量中而不是为每个值创建单独的变量要创建数组请使用该函数并将值放在其中以逗号分隔的列表中张三李四刘五可以通过引用方括号内的索引号来访问数组元素张三李四刘五更改数组元素张三李四刘五张数组长度要找出数组有多少个元素使用数组自动的属性张三李四刘五循环要遍历数组元素请将和关键字张三李四刘五使用循环还可以使用创建值范围检查值是否存在还可以使用运算符检查范围内是否存在值张三李四刘五张三张三在此张三不在函数函数是一段代码只有在被调用时才会运行可以将称为参数的数据传递到函数中函数用于执行某些操作它们也称为方法例如是一个函数它用于将文本输出打印到屏幕创建自定义的函数今晚脑子都是和张三调用函数现在已经创建了一个函数可以通过调用来执行它要在中调用函数请编写函数名称后跟两个括号在以下示例中将在调用时打印一些文本操作小结两个小时的学习过了一遍的语法和其他类语言是差不多的大同小异明天再学习的对象和一些简单的示例再后面找些简单的例子再学学如果能跑起来应该就掌握了一些安卓开发的皮毛了自己感觉后面还是要查看一些的部件容器控件监听器网络连接数据库等等',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-04-02 13:31:36',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 1.05rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 1.05rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1.05rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 1.05rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/kotlin/" itemprop="url">kotlin</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/kotlin/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>kotlin</span></a></span></div></div><h1 class="post-title" itemprop="name headline">kotlin自学过程，第一天2023年2月13日</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2023-02-13T14:00:10.000Z" title="发表于 2023-02-13 22:00:10">2023-02-13</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-04-02T05:31:36.383Z" title="更新于 2024-04-02 13:31:36">2024-04-02</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/"><header><a class="post-meta-categories" href="/categories/kotlin/" itemprop="url">kotlin</a><a href="/tags/kotlin/" tabindex="-1" itemprop="url">kotlin</a><h1 id="CrawlerTitle" itemprop="name headline">kotlin自学过程，第一天2023年2月13日</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2023-02-13T14:00:10.000Z" title="发表于 2023-02-13 22:00:10">2023-02-13</time><time itemprop="dateCreated datePublished" datetime="2024-04-02T05:31:36.383Z" title="更新于 2024-04-02 13:31:36">2024-04-02</time></header><h1 id="为什么要学Kotlin"><a href="#为什么要学Kotlin" class="headerlink" title="为什么要学Kotlin"></a>为什么要学Kotlin</h1><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png" alt="download"></p>
+<p>我想开发一款安卓APP，所以就想去学学这个语言，主要是不打游戏了，下班之后也闲得慌，闲着也是闲着，所以就去学Kotlin，内卷从我做起。</p>
+<p>文章很多内容机翻于w3schools， 有需要的同学可以去它家网站学习:<a target="_blank" rel="noopener" href="https://www.w3schools.com/KOTLIN/kotlin_intro.php">https://www.w3schools.com/KOTLIN/kotlin_intro.php</a></p>
+<p>写这样的文章也是在督促自己保持学习。</p>
+<hr>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>什么是kotlin?</p>
+<p>Kotlin 是一种现代的、流行的编程语言，由 JetBrains 于 2016 年发布。</p>
+<p><a target="_blank" rel="noopener" href="https://www.w3schools.com/java/default.asp">它变得非常流行，因为它与Java</a>（目前最流行的编程语言之一）兼容，这意味着 Java 代码（和库）可以在 Kotlin 程序中使用。</p>
+<hr>
+<h1 id="为什么使用Kotlin？"><a href="#为什么使用Kotlin？" class="headerlink" title="为什么使用Kotlin？"></a>为什么使用Kotlin？</h1><ul>
+<li>Kotlin 与 Java 完全兼容</li>
+<li>Kotlin 适用于不同的平台（Windows、Mac、Linux、Raspberry Pi 等）</li>
+<li>Kotlin 简洁安全</li>
+<li>Kotlin 易于学习，特别是如果您已经了解 Java</li>
+<li>Kotlin 是免费使用的</li>
+<li>大社区/支持</li>
+</ul>
+<hr>
+<h1 id="Kotlin入门"><a href="#Kotlin入门" class="headerlink" title="Kotlin入门"></a>Kotlin入门</h1><h2 id="集成开发环境"><a href="#集成开发环境" class="headerlink" title="集成开发环境"></a>集成开发环境</h2><p>使用 IntelliJ，可以从<a target="_blank" rel="noopener" href="https://www.jetbrains.com/idea/download/免费下载。新建项目如下图：">https://www.jetbrains.com/idea/download/免费下载。新建项目如下图：</a></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132022986.png" alt="微信截图_20230213202214"></p>
+<p>新建文件：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404021330323.png" alt="image-20230213203210187"></p>
+<p>新学一门语言的第一个代码hello world:</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132035868.png" alt="微信截图_20230213203407"></p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, world"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h1 id="Kotlin语法"><a href="#Kotlin语法" class="headerlink" title="Kotlin语法"></a>Kotlin语法</h1><p>以</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello, world"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>为例说明：</p>
+<p>关键字<code>fun</code>用于声明函数。函数是设计用于执行特定任务的代码块。在上面的示例中，它声明了<code>main()</code>函数。</p>
+<p>该<code>main()</code>函数是您将在每个 Kotlin 程序中看到的东西。该函数用于<strong>执行</strong>代码。<code>main()</code>函数大括号内的任何代码都<code>{}</code>将被<strong>执行</strong>。</p>
+<p>例如，<code>println()</code>函数在<code>main()</code>函数内部，这意味着将执行此操作。该<code>println()</code>函数用于输出/打印文本，在我们的示例中它将输出“Hello World”。</p>
+<p>tips:在 Kotlin 中，代码语句不必以分号 ( <code>;</code>) 结尾（其他编程语言通常需要分号，例如<a target="_blank" rel="noopener" href="https://www.w3schools.com/java/default.asp">Java</a>、<a target="_blank" rel="noopener" href="https://www.w3schools.com/cpp/default.asp">C++</a>、<a target="_blank" rel="noopener" href="https://www.w3schools.com/cs/default.asp">C#</a>等）。</p>
+<h1 id="Kotlin注释"><a href="#Kotlin注释" class="headerlink" title="Kotlin注释"></a>Kotlin注释</h1><h2 id="单行注释"><a href="#单行注释" class="headerlink" title="单行注释"></a>单行注释</h2><p>单行注释以两个正斜杠 ( <code>//</code>) 开头。</p>
+<p><code>//</code>行尾之间的任何文本都会被 Kotlin 忽略（不会被执行）。</p>
+<p>此示例在一行代码之前使用单行注释：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token comment">// 注释</span>
+<span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="多行注释"><a href="#多行注释" class="headerlink" title="多行注释"></a>多行注释</h2><p>多行注释以 开头<code>/*</code>和结尾<code>*/</code>。</p>
+<p>Kotlin 将忽略<code>/*</code>和之间的任何文本。<code>*/</code></p>
+<p>本例使用多行注释（一个注释块）来解释代码：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token comment">/* The code below will print the words Hello World
+to the screen, and it is amazing */</span>
+<span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello World"</span><span class="token punctuation">)</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="Kotlin变量"><a href="#Kotlin变量" class="headerlink" title="Kotlin变量"></a>Kotlin变量</h1><p>变量是存储数据值的容器。</p>
+<p>要创建变量，请使用<code>var</code>或<code>val</code>，并使用等号 ( <code>=</code>) 为其赋值：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"halo"</span>
+    <span class="token keyword">val</span> birthyear <span class="token operator">=</span> <span class="token number">2023</span>
+
+    <span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>          <span class="token comment">// Print the value of name</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>birthyear<span class="token punctuation">)</span>     <span class="token comment">// Print the value of birthyear</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404021331373.png" alt="image-20230213204112426"></p>
+<p>值得注意的是：kotlin声明一个变量而不赋值，然后再赋值。但这时必须声明变量的类型。</p>
+<p>如下：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> name<span class="token operator">:</span> String
+name <span class="token operator">=</span> <span class="token string">"John"</span>
+<span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p>使用<code>val</code>关键字创建变量时，<strong>无法</strong>更改/重新分配``值 。</p>
+<p>使用 <code>var</code>，可以随时更改值：</p>
+<h4 id="那么什么时候使用val？"><a href="#那么什么时候使用val？" class="headerlink" title="那么什么时候使用val？"></a>那么什么时候使用<code>val</code>？</h4><p>比如希望这个变量不发生改变的时候。相当于其他语言的const关键字。</p>
+<h2 id="显示变量"><a href="#显示变量" class="headerlink" title="显示变量"></a>显示变量</h2><p>println()可以用在显示变量。”+”符合可以连接两个相同类型的变量，如果变量是数值则相加，如果变量是字符串，则相连。如下：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> name1 <span class="token operator">=</span> <span class="token string">"halo"</span>
+    <span class="token keyword">val</span> name2 <span class="token operator">=</span> <span class="token string">"world"</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>name1 <span class="token operator">+</span><span class="token string">' '</span><span class="token operator">+</span>name2<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132051159.png" alt="image-20230213205152068"></p>
+<h2 id="变量命名规则"><a href="#变量命名规则" class="headerlink" title="变量命名规则"></a>变量命名规则</h2><p>变量可以有一个短名称（如 x 和 y）或更具描述性的名称（age、sum、totalVolume）。</p>
+<p>Kotlin 变量的一般规则是：</p>
+<ul>
+<li>名称可以包含字母、数字、下划线和美元符号</li>
+<li>名称应以字母开头</li>
+<li>名称也可以以 $ 和 _ 开头（但我们不会在本教程中使用它）</li>
+<li>名称区分大小写（“myVar”和“myvar”是不同的变量）</li>
+<li>名称应以小写字母开头，并且不能包含空格</li>
+<li>保留字（如 Kotlin 关键字，如<code>var</code>or <code>String</code>）不能用作名称</li>
+</ul>
+<hr>
+<h1 id="kotlin数据类型"><a href="#kotlin数据类型" class="headerlink" title="kotlin数据类型"></a>kotlin数据类型</h1><p>在 Kotlin 中，变量的<em>类型</em>由其值决定：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> myNum <span class="token operator">=</span> <span class="token number">5</span>             <span class="token comment">// Int整型</span>
+<span class="token keyword">val</span> myDoubleNum <span class="token operator">=</span> <span class="token number">5.99</span>    <span class="token comment">// Double浮点类型</span>
+<span class="token keyword">val</span> myLetter <span class="token operator">=</span> <span class="token string">'D'</span>        <span class="token comment">// Char字符</span>
+<span class="token keyword">val</span> myBoolean <span class="token operator">=</span> <span class="token boolean">true</span>      <span class="token comment">// Boolean布尔</span>
+<span class="token keyword">val</span> myText <span class="token operator">=</span> <span class="token string">"Hello"</span>      <span class="token comment">// String字符</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果需要，可以指定类型:</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> myNum<span class="token operator">:</span> Int <span class="token operator">=</span> <span class="token number">5</span>                <span class="token comment">// Int</span>
+<span class="token keyword">val</span> myDoubleNum<span class="token operator">:</span> Double <span class="token operator">=</span> <span class="token number">5.99</span>    <span class="token comment">// Double</span>
+<span class="token keyword">val</span> myLetter<span class="token operator">:</span> Char <span class="token operator">=</span> <span class="token string">'D'</span>          <span class="token comment">// Char</span>
+<span class="token keyword">val</span> myBoolean<span class="token operator">:</span> Boolean <span class="token operator">=</span> <span class="token boolean">true</span>     <span class="token comment">// Boolean</span>
+<span class="token keyword">val</span> myText<span class="token operator">:</span> String <span class="token operator">=</span> <span class="token string">"Hello"</span>      <span class="token comment">// String</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h1><p><strong>整数类型</strong>存储整数，正数或负数，不带小数。有效类型为<code>Byte</code>、<code>Short</code>、<code>Int</code> 、<code>Long</code></p>
+<p><strong>浮点类型</strong>表示带有小数部分的数字，包含一位或多位小数。有两种类型：<code>Float</code>和<code>Double</code>。</p>
+<h2 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h2><h3 id="Byte"><a href="#Byte" class="headerlink" title="Byte"></a>Byte</h3><p>该<code>Byte</code>数据类型可以存储从 -128 到 127 的整数。相当于是有符号整型8bit数值。该值将在 -128 和 127 之间时，可以使用它代替<code>Int</code>或其他整数类型来节省内存：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> myNum<span class="token operator">:</span> Byte <span class="token operator">=</span> <span class="token number">100</span>
+<span class="token function">println</span><span class="token punctuation">(</span>myNum<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="Short"><a href="#Short" class="headerlink" title="Short"></a>Short</h3><p>数据<code>Short</code>类型可以存储从 -32768 到 32767 的整数：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> myNum<span class="token operator">:</span> Short <span class="token operator">=</span> <span class="token number">5000</span>
+<span class="token function">println</span><span class="token punctuation">(</span>myNum<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="Int"><a href="#Int" class="headerlink" title="Int"></a>Int</h3><p>数据<code>Int</code>类型可以存储从-2147483648到2147483647的整数：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> myNum<span class="token operator">:</span> Int <span class="token operator">=</span> <span class="token number">100000</span>
+<span class="token function">println</span><span class="token punctuation">(</span>myNum<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="Long"><a href="#Long" class="headerlink" title="Long"></a>Long</h3><p>该数据类型可以存储从 -9223372036854775807 到 9223372036854775807 的整数。当不够大以存储值<code>Long</code>时使用 。<code>Int</code>或者，可以用“L”结束值：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> myNum<span class="token operator">:</span> Long <span class="token operator">=</span> <span class="token number">15000000000L</span>
+<span class="token function">println</span><span class="token punctuation">(</span>myNum<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h3 id="Int-和-Long-之间的区别"><a href="#Int-和-Long-之间的区别" class="headerlink" title="Int 和 Long 之间的区别"></a>Int 和 Long 之间的区别</h3><pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> myNum1 <span class="token operator">=</span> <span class="token number">2147483647</span>  <span class="token comment">// Int</span>
+<span class="token keyword">val</span> myNum2 <span class="token operator">=</span> <span class="token number">2147483648</span>  <span class="token comment">// Long</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="浮点类型"><a href="#浮点类型" class="headerlink" title="浮点类型"></a>浮点类型</h2><p>浮点类型表示带小数的数字，例如 9.99 或 3.14515。</p>
+<p>和数据<code>Float</code>类型<code>Double</code>可以存储小数</p>
+<h3 id="何时使用Float或Double，二者区别"><a href="#何时使用Float或Double，二者区别" class="headerlink" title="何时使用Float或Double，二者区别"></a>何时使用<code>Float</code>或<code>Double</code>，二者区别</h3><p>浮点值的精度表示该值在小数点后可以有多少位<strong>。</strong>的精度<code>Float</code>只有六七位十进制数字，而<code>Double</code>变量的精度大约为 15 位。因此，在大多数计算中使用它更安全<code>Double</code>。</p>
+<h2 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h2><p>数据<code>Boolean</code>类型   只能取值<code>true</code>或者<code>false</code>：</p>
+<h2 id="Char"><a href="#Char" class="headerlink" title="Char"></a>Char</h2><p>该<code>Char</code>数据类型用于存储 <strong>单个</strong>字符。char 值必须用<strong>单</strong>引号括起来，例如 ‘A’ 或 ‘c’：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> exam<span class="token operator">:</span> Char <span class="token operator">=</span> <span class="token string">'A'</span>
+<span class="token function">println</span><span class="token punctuation">(</span>exam<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>值得注意的是是，在Kotlin中不能使用 ASCII 值，来显示（代表）某些字符。</p>
+<h2 id="字符串String"><a href="#字符串String" class="headerlink" title="字符串String"></a>字符串String</h2><p>数据<code>String</code>类型用于存储字符序列（文本）。字符串值必须用 <strong>双</strong>引号括起来：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> myText<span class="token operator">:</span> String <span class="token operator">=</span> <span class="token string">"Hello World"</span>
+<span class="token function">println</span><span class="token punctuation">(</span>myText<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组用于在单个变量中存储多个值，而不是为每个值声明单独的变量。</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">val</span> names <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span><span class="token string">"lihua"</span><span class="token punctuation">,</span> <span class="token string">"yaoming"</span><span class="token punctuation">,</span> <span class="token string">"zhangsan"</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404021331098.png" alt="image-20230213210943624"></p>
+<hr>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><p>Kotlin 将运算符分为以下4组：</p>
+<ul>
+<li>算术运算符</li>
+<li>赋值运算符</li>
+<li>比较运算符</li>
+<li>逻辑运算符</li>
+</ul>
+<h2 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>加</td>
+<td>x+y</td>
+</tr>
+<tr>
+<td>-</td>
+<td>减</td>
+<td>x-y</td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘</td>
+<td>x*y</td>
+</tr>
+<tr>
+<td>/</td>
+<td>除</td>
+<td>x/y</td>
+</tr>
+<tr>
+<td>%</td>
+<td>取余</td>
+<td>x%y</td>
+</tr>
+<tr>
+<td>++</td>
+<td>自加</td>
+<td>++x</td>
+</tr>
+<tr>
+<td>—</td>
+<td>自减</td>
+<td>—x</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h2><p>使用<strong>赋值</strong>运算符 ( <code>=</code>) 将值<strong>10</strong>赋给名为<strong>x</strong>的变量：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>加法<strong>赋值运算</strong>符 ( <code>+=</code>) 向变量添加一个值：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span>
+x <span class="token operator">+=</span> <span class="token number">5</span> <span class="token comment">// x等于15</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>例子</th>
+<th>相当于</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>x = 5</td>
+<td>x = 5</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>x +=3</td>
+<td>x = x + 3</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>x -=3</td>
+<td>x = x - 3</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>x *=3</td>
+<td>x = x * 3</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>x /=3</td>
+<td>x = x / 3</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>x %+=3</td>
+<td>x = x % 3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>等于</td>
+<td>x == y</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>不等于</td>
+<td>x ！= y</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+<td>x &gt; y</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+<td>x &lt; y</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于或者等于</td>
+<td>x &gt;= y</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于或者等于</td>
+<td>x &lt;= y</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>含义</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;&amp;</td>
+<td>并且</td>
+<td>x &lt; 5 &amp;&amp; x&gt;0</td>
+</tr>
+<tr>
+<td>\</td>
+<td>\</td>
+<td></td>
+<td>或者</td>
+<td>x &lt; 5 \</td>
+<td>\</td>
+<td>x==10</td>
+</tr>
+<tr>
+<td>!</td>
+<td>不是</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>字符串用于存储文本。</p>
+<p>一个字符串包含一组用双引号括起来的字符：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> greeting <span class="token operator">=</span> <span class="token string">"Hello"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://www.w3schools.com/java/default.asp">与Java</a>不同，不必指定变量应该是<code>String</code>. Kotlin 足够聪明，可以理解上例中的 greeting 变量是 <code>String</code>。</p>
+<h2 id="获取具体的字符"><a href="#获取具体的字符" class="headerlink" title="获取具体的字符"></a>获取具体的字符</h2><p>要获取字符串的字符（元素），必须引用<strong>方括号</strong> 内的<strong>索引号。</strong></p>
+<p>字符串索引从 0 开始。在下面的示例中，获取的第一个和第三个元素<code>txt</code>：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">val</span> names <span class="token operator">=</span> <span class="token string">"lihua"</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>names<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132130428.png" alt="image-20230213213013063"></p>
+<p>[0] 是第一个元素。[1] 是第二个元素，[2] 是第三个元素，等等。</p>
+<h2 id="字符串长度"><a href="#字符串长度" class="headerlink" title="字符串长度"></a>字符串长度</h2><p>Kotlin 中的 String 是一个对象，它包含可以对字符串执行某些操作的属性和函数，自带找到字符串的长度<code>length</code>函数</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> txt <span class="token operator">=</span> <span class="token string">"AAAAAAAAAWWWWWWWW2sdadag"</span>
+    <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"该字符的长度是: "</span> <span class="token operator">+</span> txt<span class="token punctuation">.</span>length<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132132271.png" alt="微信截图_20230213213233"></p>
+<h2 id="在字符串中查找字符串"><a href="#在字符串中查找字符串" class="headerlink" title="在字符串中查找字符串"></a>在字符串中查找字符串</h2><p>该<code>indexOf()</code>函数返回指定文本在字符串（包括空格）中第一次出现的<strong>索引</strong>（位置）：</p>
+<pre class="line-numbers language-none"><code class="language-none">fun main(){
+    var txt = "我有个朋友叫张三!"
+    println(txt.indexOf("张三"))  // Outputs 6
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132135905.png" alt="微信截图_20230213213511"></p>
+<h2 id="字符串连接"><a href="#字符串连接" class="headerlink" title="字符串连接"></a>字符串连接</h2><p>可以在字符串之间使用运算<code>+</code>符将它们相加以生成新字符串。这称为<strong>串联</strong>：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> firstName <span class="token operator">=</span> <span class="token string">"张三"</span>
+<span class="token keyword">var</span> lastName <span class="token operator">=</span> <span class="token string">"李四"</span>
+<span class="token function">println</span><span class="token punctuation">(</span>firstName <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> lastName<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>还可以使用该<code>plus()</code>函数连接两个字符串：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> firstName <span class="token operator">=</span> <span class="token string">"张三"</span>
+<span class="token keyword">var</span> lastName <span class="token operator">=</span> <span class="token string">"李四"</span>
+<span class="token function">println</span><span class="token punctuation">(</span>firstName<span class="token punctuation">.</span><span class="token function">plus</span><span class="token punctuation">(</span>lastName<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="字符串模板"><a href="#字符串模板" class="headerlink" title="字符串模板"></a>字符串模板</h2><pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> firstName <span class="token operator">=</span> <span class="token string">"张三"</span>
+<span class="token keyword">var</span> lastName <span class="token operator">=</span> <span class="token string">"李四"</span>
+<span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"My name is <span class="token interpolation variable">$firstName</span> <span class="token interpolation variable">$lastName</span>"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132138520.png" alt="微信截图_20230213213802"></p>
+<h1 id="Booleans布尔值"><a href="#Booleans布尔值" class="headerlink" title="Booleans布尔值"></a>Booleans布尔值</h1><p>是，否。常常用在条件、控制语句中。</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> isKotlinFun <span class="token operator">=</span> <span class="token boolean">true</span>
+<span class="token keyword">val</span> isFishTasty <span class="token operator">=</span> <span class="token boolean">false</span>
+<span class="token function">println</span><span class="token punctuation">(</span>isKotlinFun<span class="token punctuation">)</span>   <span class="token comment">// Outputs true</span>
+<span class="token function">println</span><span class="token punctuation">(</span>isFishTasty<span class="token punctuation">)</span>   <span class="token comment">// Outputs false </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="If-…-Else"><a href="#If-…-Else" class="headerlink" title="If … Else"></a>If … Else</h1><h2 id="if"><a href="#if" class="headerlink" title="if"></a>if</h2><p>语法如下：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 运行一些代码</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>例子1：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> 张三 <span class="token operator">=</span> <span class="token string">"张三"</span>  <span class="token comment">// 赋值</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>张三 <span class="token operator">==</span><span class="token string">"张三"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"张三他是个好人！"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202404021331339.png" alt="微信截图_20230213214317"></p>
+<hr>
+<h2 id="Else"><a href="#Else" class="headerlink" title="Else"></a>Else</h2><p>语法</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">if</span> <span class="token punctuation">(</span>condition<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 运行一些代码</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 运行另外一些代码</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>例子2：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> 张三 <span class="token operator">=</span> <span class="token string">"张1三"</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>张三 <span class="token operator">==</span><span class="token string">"张三"</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"张三他是个好人！"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"张三人品不行！"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="When"><a href="#When" class="headerlink" title="When"></a>When</h1><p>符合条件时，运行一些代码。</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> day <span class="token operator">=</span> <span class="token number">4</span>
+
+<span class="token keyword">val</span> result <span class="token operator">=</span> <span class="token keyword">when</span> <span class="token punctuation">(</span>day<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token number">1</span> <span class="token operator">-&gt;</span> <span class="token string">"Monday"</span>
+  <span class="token number">2</span> <span class="token operator">-&gt;</span> <span class="token string">"Tuesday"</span>
+  <span class="token number">3</span> <span class="token operator">-&gt;</span> <span class="token string">"Wednesday"</span>
+  <span class="token number">4</span> <span class="token operator">-&gt;</span> <span class="token string">"Thursday"</span>
+  <span class="token number">5</span> <span class="token operator">-&gt;</span> <span class="token string">"Friday"</span>
+  <span class="token number">6</span> <span class="token operator">-&gt;</span> <span class="token string">"Saturday"</span>
+  <span class="token number">7</span> <span class="token operator">-&gt;</span> <span class="token string">"Sunday"</span>
+  <span class="token keyword">else</span> <span class="token operator">-&gt;</span> <span class="token string">"Invalid day."</span>
+<span class="token punctuation">}</span>
+<span class="token function">println</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+
+<span class="token comment">// Outputs "Thursday" (day 4)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>表达式<code>when</code>类似于Java中的<code>switch</code>语句。</p>
+<hr>
+<h1 id="While-循环"><a href="#While-循环" class="headerlink" title="While 循环"></a>While 循环</h1><p>只要达到指定的条件，循环就可以执行一段代码。</p>
+<p>循环很实用，可以节省时间、减少错误并使代码更具可读性。</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+  i<span class="token operator">++</span>
+<span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h1 id="循环中断和继续"><a href="#循环中断和继续" class="headerlink" title="循环中断和继续"></a>循环中断和继续</h1><p>该<code>break</code>语句用于跳出 <strong>循环</strong>。</p>
+<p>这个例子在 i 等于 4 时跳出循环：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+  i<span class="token operator">++</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">break</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如果指定条件发生，该<code>continue</code>语句将中断一次迭代（在循环中），并继续循环中的下一次迭代。</p>
+<p>此示例跳过值 4：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    i<span class="token operator">++</span>
+    <span class="token keyword">continue</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">println</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+  i<span class="token operator">++</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>相当于python中的<code>pass</code>语句。</p>
+<h1 id="数组-1"><a href="#数组-1" class="headerlink" title="数组"></a>数组</h1><p>数组用于将多个值存储在单个变量中，而不是为每个值创建单独的变量。</p>
+<p>要创建数组，请使用该<code>arrayOf()</code>函数，并将值放在其中以逗号分隔的列表中：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> names <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"李四"</span><span class="token punctuation">,</span> <span class="token string">"刘五"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>可以通过引用方括号</strong>内的<strong>索引号</strong>来访问数组元素。</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">val</span> names <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"李四"</span><span class="token punctuation">,</span> <span class="token string">"刘五"</span><span class="token punctuation">)</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="更改数组元素"><a href="#更改数组元素" class="headerlink" title="更改数组元素"></a>更改数组元素</h2><pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">val</span> names <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"李四"</span><span class="token punctuation">,</span> <span class="token string">"刘五"</span><span class="token punctuation">)</span>
+    names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"张3"</span>
+    <span class="token function">println</span><span class="token punctuation">(</span>names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132156289.png" alt="微信截图_20230213215544"></p>
+<h2 id="数组长度"><a href="#数组长度" class="headerlink" title="数组长度"></a>数组长度</h2><p>要找出数组有多少个元素，使用数组自动的<code>size</code>属性：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> names <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"李四"</span><span class="token punctuation">,</span> <span class="token string">"刘五"</span><span class="token punctuation">)</span>
+<span class="token function">println</span><span class="token punctuation">(</span>names<span class="token punctuation">.</span>size<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1 id="For循环"><a href="#For循环" class="headerlink" title="For循环"></a>For循环</h1><p>要遍历数组元素，请将<code>for</code> 和<code>in</code>关键字：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">val</span> names <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"李四"</span><span class="token punctuation">,</span> <span class="token string">"刘五"</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>x <span class="token keyword">in</span> names<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132159344.png" alt="微信截图_20230213215948"></p>
+<h1 id="Ranges"><a href="#Ranges" class="headerlink" title="Ranges"></a>Ranges</h1><p>使用<a target="_blank" rel="noopener" href="https://www.w3schools.com/KOTLIN/kotlin_for_loop.php"><code>for</code>循环</a>，还可以 使用“..”创建值<strong>范围</strong>``：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>nums <span class="token keyword">in</span> <span class="token number">1</span><span class="token operator">..</span><span class="token number">6</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">println</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132202687.png" alt="微信截图_20230213220228"></p>
+<h2 id="检查值是否存在"><a href="#检查值是否存在" class="headerlink" title="检查值是否存在"></a>检查值是否存在</h2><p>还可以使用<code>in</code>运算符检查范围内是否存在值：</p>
+<pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">val</span> names <span class="token operator">=</span> <span class="token function">arrayOf</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">,</span> <span class="token string">"李四"</span><span class="token punctuation">,</span> <span class="token string">"刘五"</span><span class="token punctuation">)</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"张三"</span> <span class="token keyword">in</span> names<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"张三在此!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+  <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"张三不在."</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132204630.png" alt="微信截图_20230213220433"></p>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>函数是一段代码，只有在被调用时才会运行<strong>。</strong></p>
+<p>可以将称为参数的数据传递到函数中。</p>
+<p>函数用于执行某些操作，它们也称为<strong>方法</strong>。</p>
+<p>例如，<code>println()</code>是一个函数。它用于将文本输出/打印到屏幕：</p>
+<h2 id="创建自定义的函数"><a href="#创建自定义的函数" class="headerlink" title="创建自定义的函数"></a>创建自定义的函数</h2><pre class="line-numbers language-kotlin" data-language="kotlin"><code class="language-kotlin"><span class="token keyword">fun</span> <span class="token function">myFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"今晚脑子都是kotlin和张三!"</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h2><p>现在已经创建了一个函数，可以通过<strong>调用</strong>来执行它。</p>
+<p>要在 Kotlin 中调用函数，请编写函数名称后跟两个括号<strong>()</strong>。</p>
+<p>在以下示例中，<code>myFunction()</code>将在调用时打印一些文本（操作）：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132207070.png" alt="微信截图_20230213220709"></p>
+<h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><p>两个小时的学习，过了一遍kotlin的语法。和其他“类C”语言是差不多的，大同小异。明天再学习kotlin的“对象”和一些简单的示例。再后面找些简单的例子再学学。如果APP能跑起来，应该就掌握了一些安卓开发的皮毛了。</p>
+<p>自己感觉后面还是要查看一些APP的部件、容器控件、监听器、网络连接，数据库等等，</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/')">kotlin自学过程，第一天2023年2月13日</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=kotlin自学过程，第一天2023年2月13日&amp;url=http://ytkz11@.github.io/2023/02/13/kotlin-zi-xue-ji-lu-1/&amp;pic=https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/kotlin/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>kotlin<span class="tagsPageCount">3</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://www.wangbase.com/blogimg/asset/202001/bg2020011008.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">6个波段的landsat数据怎么在Matlab里叠加成12个波段</div></div></a></div><div class="next-post pull-right"><a href="/2023/02/16/ji-lu-yi-ci-pa-chong-li-zi/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">记录一次爬虫例子</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2023/02/16/kotlin-zi-xue-ji-lu-2/" title="kotlin自学记录2，第二天2023年2月16日"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-02-16</div><div class="title">kotlin自学记录2，第二天2023年2月16日</div></div></a></div><div><a href="/2023/02/16/ji-lu-yi-ci-pa-chong-li-zi/" title="记录一次爬虫例子"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202302132023775.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-02-16</div><div class="title">记录一次爬虫例子</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://raw.githubusercontent.com/ytkz11/picture/e0561f27bb351a8dc757d4f5b1d74a1ab5ef4e42/imgs202411281530223.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%AD%A6Kotlin"><span class="toc-number">1.</span> <span class="toc-text">为什么要学Kotlin</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Kotlin%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">为什么使用Kotlin？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Kotlin%E5%85%A5%E9%97%A8"><span class="toc-number">4.</span> <span class="toc-text">Kotlin入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%86%E6%88%90%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83"><span class="toc-number">4.1.</span> <span class="toc-text">集成开发环境</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Kotlin%E8%AF%AD%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">Kotlin语法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Kotlin%E6%B3%A8%E9%87%8A"><span class="toc-number">6.</span> <span class="toc-text">Kotlin注释</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%95%E8%A1%8C%E6%B3%A8%E9%87%8A"><span class="toc-number">6.1.</span> <span class="toc-text">单行注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A"><span class="toc-number">6.2.</span> <span class="toc-text">多行注释</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Kotlin%E5%8F%98%E9%87%8F"><span class="toc-number">7.</span> <span class="toc-text">Kotlin变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">7.1.</span> <span class="toc-text">注意事项</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%82%A3%E4%B9%88%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BD%BF%E7%94%A8val%EF%BC%9F"><span class="toc-number">7.1.0.1.</span> <span class="toc-text">那么什么时候使用val？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E5%8F%98%E9%87%8F"><span class="toc-number">7.2.</span> <span class="toc-text">显示变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99"><span class="toc-number">7.3.</span> <span class="toc-text">变量命名规则</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#kotlin%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">8.</span> <span class="toc-text">kotlin数据类型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E5%80%BC"><span class="toc-number">9.</span> <span class="toc-text">数值</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="toc-number">9.1.</span> <span class="toc-text">整数类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Byte"><span class="toc-number">9.1.1.</span> <span class="toc-text">Byte</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Short"><span class="toc-number">9.1.2.</span> <span class="toc-text">Short</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Int"><span class="toc-number">9.1.3.</span> <span class="toc-text">Int</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Long"><span class="toc-number">9.1.4.</span> <span class="toc-text">Long</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Int-%E5%92%8C-Long-%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">9.1.5.</span> <span class="toc-text">Int 和 Long 之间的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%AE%E7%82%B9%E7%B1%BB%E5%9E%8B"><span class="toc-number">9.2.</span> <span class="toc-text">浮点类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8Float%E6%88%96Double%EF%BC%8C%E4%BA%8C%E8%80%85%E5%8C%BA%E5%88%AB"><span class="toc-number">9.2.1.</span> <span class="toc-text">何时使用Float或Double，二者区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E5%80%BC"><span class="toc-number">9.3.</span> <span class="toc-text">布尔值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Char"><span class="toc-number">9.4.</span> <span class="toc-text">Char</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2String"><span class="toc-number">9.5.</span> <span class="toc-text">字符串String</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84"><span class="toc-number">9.6.</span> <span class="toc-text">数组</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">10.</span> <span class="toc-text">运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">10.1.</span> <span class="toc-text">算术运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">10.2.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">10.3.</span> <span class="toc-text">比较运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">10.4.</span> <span class="toc-text">逻辑运算符</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">11.</span> <span class="toc-text">字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%85%B7%E4%BD%93%E7%9A%84%E5%AD%97%E7%AC%A6"><span class="toc-number">11.1.</span> <span class="toc-text">获取具体的字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%95%BF%E5%BA%A6"><span class="toc-number">11.2.</span> <span class="toc-text">字符串长度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E6%9F%A5%E6%89%BE%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">11.3.</span> <span class="toc-text">在字符串中查找字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5"><span class="toc-number">11.4.</span> <span class="toc-text">字符串连接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%A8%A1%E6%9D%BF"><span class="toc-number">11.5.</span> <span class="toc-text">字符串模板</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Booleans%E5%B8%83%E5%B0%94%E5%80%BC"><span class="toc-number">12.</span> <span class="toc-text">Booleans布尔值</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#If-%E2%80%A6-Else"><span class="toc-number">13.</span> <span class="toc-text">If … Else</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if"><span class="toc-number">13.1.</span> <span class="toc-text">if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Else"><span class="toc-number">13.2.</span> <span class="toc-text">Else</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#When"><span class="toc-number">14.</span> <span class="toc-text">When</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#While-%E5%BE%AA%E7%8E%AF"><span class="toc-number">15.</span> <span class="toc-text">While 循环</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E4%B8%AD%E6%96%AD%E5%92%8C%E7%BB%A7%E7%BB%AD"><span class="toc-number">16.</span> <span class="toc-text">循环中断和继续</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E7%BB%84-1"><span class="toc-number">17.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%94%B9%E6%95%B0%E7%BB%84%E5%85%83%E7%B4%A0"><span class="toc-number">17.1.</span> <span class="toc-text">更改数组元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6"><span class="toc-number">17.2.</span> <span class="toc-text">数组长度</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#For%E5%BE%AA%E7%8E%AF"><span class="toc-number">18.</span> <span class="toc-text">For循环</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Ranges"><span class="toc-number">19.</span> <span class="toc-text">Ranges</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5%E5%80%BC%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8"><span class="toc-number">19.1.</span> <span class="toc-text">检查值是否存在</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">20.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9A%84%E5%87%BD%E6%95%B0"><span class="toc-number">20.1.</span> <span class="toc-text">创建自定义的函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">20.2.</span> <span class="toc-text">调用函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">21.</span> <span class="toc-text">小结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641974.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学习Rasterio还是GDAL？"/></a><div class="content"><a class="title" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？">学习Rasterio还是GDAL？</a><time datetime="2025-07-16T12:20:10.000Z" title="发表于 2025-07-16 20:20:10">2025-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="告别 gdal_translate：迎接 GDAL 统一命令行新时代"/></a><div class="content"><a class="title" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代">告别 gdal_translate：迎接 GDAL 统一命令行新时代</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111438678.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简要介绍 GDAL 的架构、关键组件和功能"/></a><div class="content"><a class="title" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能">简要介绍 GDAL 的架构、关键组件和功能</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641982.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GDAL_OGR简单的使用教程"/></a><div class="content"><a class="title" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程">GDAL_OGR简单的使用教程</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507101625855.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="遥感到底是个啥"/></a><div class="content"><a class="title" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥">遥感到底是个啥</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">317</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">52</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">79</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 0.88rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 0.88rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 0.88rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 0.88rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>

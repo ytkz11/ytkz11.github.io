@@ -1,0 +1,570 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>概念与现代实践 | Find everything you need</title><meta name="keywords" content="Python"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="概念与现代实践"><meta name="application-name" content="概念与现代实践"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="概念与现代实践"><meta property="og:url" content="http://ytkz11@.github.io/2025/05/12/di-2-zhang-di-li-kong-jian-shu-ju-he-xin-gai-nian-yu-xian-dai-shi-jian/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="地理空间数据：核心概念与现代实践第二章深入探讨了地理空间数据的核心要素，从数据类型到处理技术，再到新兴范式和交换体系，全面揭示其多维特性与应用价值。地理空间数据不仅是分析的基础，还承载了从城市规划到环境监测的广泛场景。本章通过详细分类、示例代码和趋势分析，帮助读者掌握数据的结构、管理和优化方法。"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp"><meta name="description" content="地理空间数据：核心概念与现代实践第二章深入探讨了地理空间数据的核心要素，从数据类型到处理技术，再到新兴范式和交换体系，全面揭示其多维特性与应用价值。地理空间数据不仅是分析的基础，还承载了从城市规划到环境监测的广泛场景。本章通过详细分类、示例代码和趋势分析，帮助读者掌握数据的结构、管理和优化方法。"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ytkz11@.github.io/2025/05/12/di-2-zhang-di-li-kong-jian-shu-ju-he-xin-gai-nian-yu-xian-dai-shi-jian/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: '概念与现代实践',
+  postAI: '',
+  pageFillDescription: '地理空间数据：核心概念与现代实践, 一、地理空间数据的分类体系, 1. 矢量数据：几何要素的精确表达, 2. 栅格数据：像元矩阵的连续表达, 二、数据处理关键技术, 1. 空间索引机制, 2. 元数据标准, 3. 数据预处理, 三、新型数据范式, 1. 点云数据, 2. 时空数据, 四、数据交换体系, 1. 服务化访问, 2. 数据库解决方案, 五、总结与趋势地理空间数据核心概念与现代实践第二章深入探讨了地理空间数据的核心要素从数据类型到处理技术再到新兴范式和交换体系全面揭示其多维特性与应用价值地理空间数据不仅是分析的基础还承载了从城市规划到环境监测的广泛场景本章通过详细分类示例代码和趋势分析帮助读者掌握数据的结构管理和优化方法一地理空间数据的分类体系地理空间数据按存储与表达方式分为矢量数据和栅格数据各有独特的格式与应用场景矢量数据几何要素的精确表达矢量数据以点如兴趣点线如道路河流面如行政区划湖泊描述空间信息适合表示离散的地理对象每个要素通常关联属性表存储非空间信息如名称人口常见格式标准包含几何属性索引等文件广泛用于软件基于的轻量级格式易于应用如支持动态交互基于的开源容器支持多维数据矢量栅格时空适合移动端与跨平台应用格式常见于工程设计包含详细的制图元数据适于建筑与基础设施规划应用示例城市道路网络分析土地使用分区分布可视化栅格数据像元矩阵的连续表达栅格数据以规则的网格像元记录地表特征每个像元对应特定值如光谱反射率高程适合表示连续现象如温度分布或植被覆盖常见类型遥感影像如包含地理参考信息支持多光谱和高分辨率数据如高程模型记录地形高度用于坡度分析洪水模拟等图片格式需搭配世界文件如提供地理定位常见于简单地图展示应用示例卫星影像分类热力图生成地形三维建模矢量与栅格的对比矢量高精度适合离散对象存储需求小栅格适合连续表面存储需求随分辨率增加二数据处理关键技术高效处理地理空间数据需要依赖空间索引元数据标准和预处理技术以优化查询存储和分析性能空间索引机制空间索引通过组织数据空间分布加速查询和渲染四叉树索引将空间递归划分为四等份适合点数据查询如查找最近的医院树索引基于边界矩形树变体优化范围查询和邻近分析如查找某区域内的所有公园金字塔概览为栅格数据生成多分辨率版本加速大尺度影像显示如卫星地图缩放示例代码使用构建树索引读取矢量数据创建树索引查询附近要素查询范围元数据标准元数据记录数据的来源坐标系分辨率等信息确保数据可追溯和互操作系列国际标准提供详细的地理信息元数据框架适用于学术与政府数据共享轻量级元数据方案适合跨领域应用如数据集描述文件内嵌元数据如的标签存储投影信息和传感器参数示例读取元数据显示元数据如坐标系尺寸显示内嵌标签数据预处理预处理占地理空间分析以上的工作量涉及投影转换数据清洗和格式转换投影转换统一坐标系如从到数据清洗移除噪声修复拓扑错误如多边形重叠格式转换如转为以适配应用示例代码投影转换读取数据转换为投影三新型数据范式随着传感器技术与计算能力提升地理空间数据呈现新的形态拓展了分析维度与应用场景点云数据点云是由三维坐标及其属性如强度颜色组成的密集点集常通过激光雷达或摄影测量生成特点高精度捕捉复杂地形和物体细节大数据量单次扫描可生成数亿点应用数字孪生构建城市或工厂的虚拟模型林业调查估算树高与生物量自动驾驶生成高精度道路地图示例代码使用处理点云定义点云处理流水线执行流水线时空数据时空数据融合时间戳与空间位置适合动态现象分析如交通流量动物迁徙特点时间序列记录对象随时间的变化高维分析需处理空间与时间双重维度支持格式时空扩展支持时间字段与动态查询时空类型支持轨迹与时间序列分析应用动态可视化生成车辆轨迹动画预测建模分析城市扩张趋势示例代码使用分析轨迹读取时空数据创建轨迹对象可视化轨迹四数据交换体系地理空间数据的共享与访问正从本地文件向服务化与数据库解决方案转变服务化访问通过网络协议提供实时数据访问降低本地存储需求提供渲染后的地图影像适合静态展示传输矢量要素支持动态查询与编辑云端如允许按需提取数据示例使用访问连接服务获取地图影像数据库解决方案数据库提供高效的存储与查询能力适合大规模数据管理的扩展支持空间查询如缓冲区分析空间连接基于的轻量级空间数据库适合嵌入式应用方案如的地理运算符处理非结构化地理数据示例代码使用查询连接数据库查询附近城市五总结与趋势地理空间数据以其多维特性时空支撑了从基础研究到复杂应用的广泛需求本章详细解析了矢量与栅格数据的格式处理技术如空间索引元数据管理新型范式如点云时空数据以及现代交换体系如值得注意的是数据预处理如投影转换清洗索引构建通常占分析流程的以上是确保分析效率和准确性的关键现代趋势云端数据服务如简化数据访问与处理与大数据结合机器学习如影像分类与点云分析驱动智能应用开放数据等平台促进数据共享与协作实践建议熟悉工具掌握等库参与社区贡献插件或参与地理空间竞赛关注前沿探索时空分析与数字孪生技术迎接地理空间领域的下一波浪潮地理空间数据不仅是分析的基石更是连接物理世界与数字世界的桥梁通过系统化学习与实践读者将能从海量数据中挖掘出改变世界的洞察关键词地理空间数据矢量数据栅格数据空间索引元数据点云时空数据',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-05-12 09:31:36',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 1.05rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 1.05rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1.05rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 1.05rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">10</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/12/"><span class="card-archive-list-date">十二月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/Python/" itemprop="url">Python</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/Python/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>Python</span></a></span></div></div><h1 class="post-title" itemprop="name headline">概念与现代实践</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-05-12T14:30:10.000Z" title="发表于 2025-05-12 22:30:10">2025-05-12</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-05-12T01:31:36.170Z" title="更新于 2025-05-12 09:31:36">2025-05-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ytkz11@.github.io/2025/05/12/di-2-zhang-di-li-kong-jian-shu-ju-he-xin-gai-nian-yu-xian-dai-shi-jian/"><header><a class="post-meta-categories" href="/categories/Python/" itemprop="url">Python</a><a href="/tags/Python/" tabindex="-1" itemprop="url">Python</a><h1 id="CrawlerTitle" itemprop="name headline">概念与现代实践</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2025-05-12T14:30:10.000Z" title="发表于 2025-05-12 22:30:10">2025-05-12</time><time itemprop="dateCreated datePublished" datetime="2025-05-12T01:31:36.170Z" title="更新于 2025-05-12 09:31:36">2025-05-12</time></header><h1 id="地理空间数据：核心概念与现代实践"><a href="#地理空间数据：核心概念与现代实践" class="headerlink" title="地理空间数据：核心概念与现代实践"></a>地理空间数据：核心概念与现代实践</h1><p>第二章深入探讨了地理空间数据的核心要素，从数据类型到处理技术，再到新兴范式和交换体系，全面揭示其多维特性与应用价值。地理空间数据不仅是分析的基础，还承载了从城市规划到环境监测的广泛场景。本章通过详细分类、示例代码和趋势分析，帮助读者掌握数据的结构、管理和优化方法。</p>
+<hr>
+<h2 id="一、地理空间数据的分类体系"><a href="#一、地理空间数据的分类体系" class="headerlink" title="一、地理空间数据的分类体系"></a>一、地理空间数据的分类体系</h2><p>地理空间数据按存储与表达方式分为<strong>矢量数据</strong>和<strong>栅格数据</strong>，各有独特的格式与应用场景。</p>
+<h3 id="1-矢量数据：几何要素的精确表达"><a href="#1-矢量数据：几何要素的精确表达" class="headerlink" title="1. 矢量数据：几何要素的精确表达"></a>1. 矢量数据：几何要素的精确表达</h3><p>矢量数据以<strong>点</strong>（如兴趣点POI）、<strong>线</strong>（如道路、河流）、<strong>面</strong>（如行政区划、湖泊）描述空间信息，适合表示离散的地理对象。每个要素通常关联属性表，存储非空间信息（如名称、人口）。</p>
+<ul>
+<li><strong>常见格式</strong>：<ul>
+<li><strong>Shapefile</strong>：ESRI标准，包含<code>.shp</code>（几何）、<code>.dbf</code>（属性）、<code>.shx</code>（索引）等文件，广泛用于GIS软件。</li>
+<li><strong>GeoJSON</strong>：基于JSON的轻量级格式，易于Web应用（如Leaflet、Mapbox），支持动态交互。</li>
+<li><strong>GeoPackage</strong>：基于SQLite的开源容器，支持多维数据（矢量、栅格、时空），适合移动端与跨平台应用。</li>
+<li><strong>CAD格式（DWG/DXF）</strong>：常见于工程设计，包含详细的制图元数据，适于建筑与基础设施规划。</li>
+</ul>
+</li>
+<li><strong>应用示例</strong>：城市道路网络分析、土地使用分区、POI分布可视化。</li>
+</ul>
+<h3 id="2-栅格数据：像元矩阵的连续表达"><a href="#2-栅格数据：像元矩阵的连续表达" class="headerlink" title="2. 栅格数据：像元矩阵的连续表达"></a>2. 栅格数据：像元矩阵的连续表达</h3><p>栅格数据以规则的网格（像元）记录地表特征，每个像元对应特定值（如光谱反射率、高程）。适合表示连续现象，如温度分布或植被覆盖。</p>
+<ul>
+<li><strong>常见类型</strong>：<ul>
+<li><strong>遥感影像</strong>：如TIFF/GeoTIFF，包含地理参考信息，支持多光谱和高分辨率数据（如Landsat、Sentinel）。</li>
+<li><strong>高程模型（DEM）</strong>：记录地形高度，用于坡度分析、洪水模拟等。</li>
+<li><strong>图片格式（JPEG/PNG）</strong>：需搭配“世界文件”（如<code>.jgw</code>）提供地理定位，常见于简单地图展示。</li>
+</ul>
+</li>
+<li><strong>应用示例</strong>：卫星影像分类、热力图生成、地形三维建模。</li>
+</ul>
+<p><strong>矢量与栅格的对比</strong>：</p>
+<ul>
+<li>矢量：高精度，适合离散对象，存储需求小。</li>
+<li>栅格：适合连续表面，存储需求随分辨率增加。</li>
+</ul>
+<hr>
+<h2 id="二、数据处理关键技术"><a href="#二、数据处理关键技术" class="headerlink" title="二、数据处理关键技术"></a>二、数据处理关键技术</h2><p>高效处理地理空间数据需要依赖空间索引、元数据标准和预处理技术，以优化查询、存储和分析性能。</p>
+<h3 id="1-空间索引机制"><a href="#1-空间索引机制" class="headerlink" title="1. 空间索引机制"></a>1. 空间索引机制</h3><p>空间索引通过组织数据空间分布，加速查询和渲染。</p>
+<ul>
+<li><strong>四叉树索引</strong>：将空间递归划分为四等份，适合点数据查询（如查找最近的医院）。</li>
+<li><strong>R树索引</strong>：基于边界矩形（B树变体），优化范围查询和邻近分析（如查找某区域内的所有公园）。</li>
+<li><strong>金字塔概览（Overviews）</strong>：为栅格数据生成多分辨率版本，加速大尺度影像显示（如卫星地图缩放）。</li>
+</ul>
+<p><strong>示例代码</strong>（使用<code>geopandas</code>构建R树索引）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
+<span class="token keyword">from</span> rtree <span class="token keyword">import</span> index
+
+<span class="token comment"># 读取矢量数据</span>
+gdf <span class="token operator">=</span> gpd<span class="token punctuation">.</span>read_file<span class="token punctuation">(</span><span class="token string">"data/cities.shp"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建R树索引</span>
+idx <span class="token operator">=</span> index<span class="token punctuation">.</span>Index<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i<span class="token punctuation">,</span> geom <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>gdf<span class="token punctuation">.</span>geometry<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    idx<span class="token punctuation">.</span>insert<span class="token punctuation">(</span>i<span class="token punctuation">,</span> geom<span class="token punctuation">.</span>bounds<span class="token punctuation">)</span>
+
+<span class="token comment"># 查询附近要素</span>
+bounds <span class="token operator">=</span> <span class="token punctuation">(</span>x_min<span class="token punctuation">,</span> y_min<span class="token punctuation">,</span> x_max<span class="token punctuation">,</span> y_max<span class="token punctuation">)</span>  <span class="token comment"># 查询范围</span>
+hits <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>idx<span class="token punctuation">.</span>intersection<span class="token punctuation">(</span>bounds<span class="token punctuation">)</span><span class="token punctuation">)</span>
+nearby_features <span class="token operator">=</span> gdf<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span>hits<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-元数据标准"><a href="#2-元数据标准" class="headerlink" title="2. 元数据标准"></a>2. 元数据标准</h3><p>元数据记录数据的来源、坐标系、分辨率等信息，确保数据可追溯和互操作。</p>
+<ul>
+<li><strong>ISO 19115系列</strong>：国际标准，提供详细的地理信息元数据框架，适用于学术与政府数据共享。</li>
+<li><strong>Dublin Core</strong>：轻量级元数据方案，适合跨领域应用（如Web数据集描述）。</li>
+<li><strong>文件内嵌元数据</strong>：如GeoTIFF的EXIF标签，存储投影信息和传感器参数。</li>
+</ul>
+<p><strong>示例</strong>（读取GeoTIFF元数据）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> rasterio
+
+<span class="token keyword">with</span> rasterio<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"data/satellite.tif"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> src<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>src<span class="token punctuation">.</span>meta<span class="token punctuation">)</span>  <span class="token comment"># 显示元数据（如坐标系、尺寸）</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>src<span class="token punctuation">.</span>tags<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 显示内嵌标签</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-数据预处理"><a href="#3-数据预处理" class="headerlink" title="3. 数据预处理"></a>3. 数据预处理</h3><p>预处理占地理空间分析70%以上的工作量，涉及投影转换、数据清洗和格式转换。</p>
+<ul>
+<li><strong>投影转换</strong>：统一坐标系（如从WGS84到UTM）。</li>
+<li><strong>数据清洗</strong>：移除噪声、修复拓扑错误（如多边形重叠）。</li>
+<li><strong>格式转换</strong>：如Shapefile转为GeoJSON以适配Web应用。</li>
+</ul>
+<p><strong>示例代码</strong>（投影转换）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
+
+<span class="token comment"># 读取数据</span>
+gdf <span class="token operator">=</span> gpd<span class="token punctuation">.</span>read_file<span class="token punctuation">(</span><span class="token string">"data/cities.shp"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 转换为UTM投影</span>
+gdf_utm <span class="token operator">=</span> gdf<span class="token punctuation">.</span>to_crs<span class="token punctuation">(</span>epsg<span class="token operator">=</span><span class="token number">32633</span><span class="token punctuation">)</span>  <span class="token comment"># UTM Zone 33N</span>
+gdf_utm<span class="token punctuation">.</span>to_file<span class="token punctuation">(</span><span class="token string">"data/cities_utm.shp"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="三、新型数据范式"><a href="#三、新型数据范式" class="headerlink" title="三、新型数据范式"></a>三、新型数据范式</h2><p>随着传感器技术与计算能力提升，地理空间数据呈现新的形态，拓展了分析维度与应用场景。</p>
+<h3 id="1-点云数据"><a href="#1-点云数据" class="headerlink" title="1. 点云数据"></a>1. 点云数据</h3><p>点云是由三维坐标（X, Y, Z）及其属性（如强度、RGB颜色）组成的密集点集，常通过<strong>LiDAR</strong>（激光雷达）或<strong>摄影测量</strong>生成。</p>
+<ul>
+<li>特点：<ul>
+<li>高精度：捕捉复杂地形和物体细节。</li>
+<li>大数据量：单次扫描可生成数亿点。</li>
+</ul>
+</li>
+<li>应用：<ul>
+<li><strong>数字孪生</strong>：构建城市或工厂的3D虚拟模型。</li>
+<li><strong>林业调查</strong>：估算树高与生物量。</li>
+<li><strong>自动驾驶</strong>：生成高精度道路地图。</li>
+</ul>
+</li>
+</ul>
+<p><strong>示例代码</strong>（使用<code>PDAL</code>处理点云）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> pdal
+
+<span class="token comment"># 定义点云处理流水线</span>
+pipeline <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+{
+  "pipeline": [
+    {
+      "type": "readers.las",
+      "filename": "data/pointcloud.las"
+    },
+    {
+      "type": "filters.crop",
+      "bounds": "[100, 200, 100, 200, 0, 50]"
+    },
+    {
+      "type": "writers.las",
+      "filename": "data/cropped_pointcloud.las"
+    }
+  ]
+}
+"""</span>
+<span class="token comment"># 执行流水线</span>
+pdal<span class="token punctuation">.</span>Pipeline<span class="token punctuation">(</span>pipeline<span class="token punctuation">)</span><span class="token punctuation">.</span>execute<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-时空数据"><a href="#2-时空数据" class="headerlink" title="2. 时空数据"></a>2. 时空数据</h3><p>时空数据融合时间戳与空间位置，适合动态现象分析（如交通流量、动物迁徙）。</p>
+<ul>
+<li>特点：<ul>
+<li>时间序列：记录对象随时间的变化。</li>
+<li>高维分析：需处理空间与时间双重维度。</li>
+</ul>
+</li>
+<li>支持格式：<ul>
+<li><strong>GeoPackage时空扩展</strong>：支持时间字段与动态查询。</li>
+<li><strong>PostGIS时空类型</strong>：支持轨迹与时间序列分析。</li>
+</ul>
+</li>
+<li>应用：<ul>
+<li>动态可视化：生成车辆轨迹动画。</li>
+<li>预测建模：分析城市扩张趋势。</li>
+</ul>
+</li>
+</ul>
+<p><strong>示例代码</strong>（使用<code>movingpandas</code>分析轨迹）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> movingpandas <span class="token keyword">as</span> mpd
+<span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
+
+<span class="token comment"># 读取时空数据</span>
+gdf <span class="token operator">=</span> gpd<span class="token punctuation">.</span>read_file<span class="token punctuation">(</span><span class="token string">"data/trajectories.geojson"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 创建轨迹对象</span>
+traj <span class="token operator">=</span> mpd<span class="token punctuation">.</span>Trajectory<span class="token punctuation">(</span>gdf<span class="token punctuation">,</span> groupby<span class="token operator">=</span><span class="token string">"vehicle_id"</span><span class="token punctuation">,</span> t<span class="token operator">=</span><span class="token string">"timestamp"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 可视化轨迹</span>
+traj<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="四、数据交换体系"><a href="#四、数据交换体系" class="headerlink" title="四、数据交换体系"></a>四、数据交换体系</h2><p>地理空间数据的共享与访问正从本地文件向服务化与数据库解决方案转变。</p>
+<h3 id="1-服务化访问"><a href="#1-服务化访问" class="headerlink" title="1. 服务化访问"></a>1. 服务化访问</h3><p>通过网络协议提供实时数据访问，降低本地存储需求。</p>
+<ul>
+<li><strong>WMS（Web Map Service）</strong>：提供渲染后的地图影像，适合静态展示。</li>
+<li><strong>WFS（Web Feature Service）</strong>：传输矢量要素，支持动态查询与编辑。</li>
+<li><strong>云端GeoJSON API</strong>：如Overpass API，允许按需提取OpenStreetMap数据。</li>
+</ul>
+<p><strong>示例</strong>（使用<code>owslib</code>访问WMS）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> owslib<span class="token punctuation">.</span>wms <span class="token keyword">import</span> WebMapService
+
+<span class="token comment"># 连接WMS服务</span>
+wms <span class="token operator">=</span> WebMapService<span class="token punctuation">(</span><span class="token string">"https://ows.terrestris.de/osm/service"</span><span class="token punctuation">)</span>
+layer <span class="token operator">=</span> wms<span class="token punctuation">.</span>contents<span class="token punctuation">[</span><span class="token string">"OSM-WMS"</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 获取地图影像</span>
+img <span class="token operator">=</span> wms<span class="token punctuation">.</span>getmap<span class="token punctuation">(</span>
+    layers<span class="token operator">=</span><span class="token punctuation">[</span>layer<span class="token punctuation">.</span><span class="token builtin">id</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    srs<span class="token operator">=</span><span class="token string">"EPSG:4326"</span><span class="token punctuation">,</span>
+    bbox<span class="token operator">=</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">180</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">90</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    size<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">800</span><span class="token punctuation">,</span> <span class="token number">400</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token builtin">format</span><span class="token operator">=</span><span class="token string">"image/png"</span>
+<span class="token punctuation">)</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"map.png"</span><span class="token punctuation">,</span> <span class="token string">"wb"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>img<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-数据库解决方案"><a href="#2-数据库解决方案" class="headerlink" title="2. 数据库解决方案"></a>2. 数据库解决方案</h3><p>数据库提供高效的存储与查询能力，适合大规模数据管理。</p>
+<ul>
+<li><strong>PostGIS</strong>：PostgreSQL的扩展，支持空间SQL查询（如缓冲区分析、空间连接）。</li>
+<li><strong>SpatiaLite</strong>：基于SQLite的轻量级空间数据库，适合嵌入式应用。</li>
+<li><strong>NoSQL方案</strong>：如MongoDB的地理运算符，处理非结构化地理数据。</li>
+</ul>
+<p><strong>示例代码</strong>（使用<code>PostGIS</code>查询）：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> sqlalchemy <span class="token keyword">import</span> create_engine
+<span class="token keyword">import</span> geopandas <span class="token keyword">as</span> gpd
+
+<span class="token comment"># 连接PostGIS数据库</span>
+engine <span class="token operator">=</span> create_engine<span class="token punctuation">(</span><span class="token string">"postgresql://user:password@localhost:5432/gis_db"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 查询附近城市</span>
+query <span class="token operator">=</span> <span class="token triple-quoted-string string">"""
+SELECT name, geom
+FROM cities
+WHERE ST_DWithin(
+    geom,
+    ST_SetSRID(ST_MakePoint(-74.0060, 40.7128), 4326),
+    10000
+)
+"""</span>
+gdf <span class="token operator">=</span> gpd<span class="token punctuation">.</span>read_postgis<span class="token punctuation">(</span>query<span class="token punctuation">,</span> engine<span class="token punctuation">,</span> geom_col<span class="token operator">=</span><span class="token string">"geom"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>gdf<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<h2 id="五、总结与趋势"><a href="#五、总结与趋势" class="headerlink" title="五、总结与趋势"></a>五、总结与趋势</h2><p>地理空间数据以其多维特性（2D、3D、时空）支撑了从基础研究到复杂应用的广泛需求。本章详细解析了矢量与栅格数据的格式、处理技术（如空间索引、元数据管理）、新型范式（如点云、时空数据）以及现代交换体系（如WMS、PostGIS）。值得注意的是，<strong>数据预处理</strong>（如投影转换、清洗、索引构建）通常占分析流程的70%以上，是确保分析效率和准确性的关键。</p>
+<p><strong>现代趋势</strong>：</p>
+<ul>
+<li><strong>云端数据服务</strong>：如Google Earth Engine、AWS Data Lake，简化数据访问与处理。</li>
+<li><strong>AI与大数据</strong>：结合机器学习（如影像分类）与点云分析，驱动智能应用。</li>
+<li><strong>开放数据</strong>：OpenStreetMap、Copernicus等平台促进数据共享与协作。</li>
+</ul>
+<p><strong>实践建议</strong>：</p>
+<ul>
+<li>熟悉工具：掌握<code>geopandas</code>、<code>rasterio</code>、<code>PDAL</code>等Python库。</li>
+<li>参与社区：贡献QGIS插件或参与Kaggle地理空间竞赛。</li>
+<li>关注前沿：探索时空分析与数字孪生技术，迎接地理空间领域的下一波浪潮。</li>
+</ul>
+<p>地理空间数据不仅是分析的基石，更是连接物理世界与数字世界的桥梁。通过系统化学习与实践，读者将能从海量数据中挖掘出改变世界的洞察。</p>
+<hr>
+<p><strong>关键词</strong>：地理空间数据、矢量数据、栅格数据、空间索引、元数据、点云、时空数据、WMS、PostGIS、Python</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ytkz11@.github.io/2025/05/12/di-2-zhang-di-li-kong-jian-shu-ju-he-xin-gai-nian-yu-xian-dai-shi-jian/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ytkz11@.github.io/2025/05/12/di-2-zhang-di-li-kong-jian-shu-ju-he-xin-gai-nian-yu-xian-dai-shi-jian/')">概念与现代实践</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ytkz11@.github.io/2025/05/12/di-2-zhang-di-li-kong-jian-shu-ju-he-xin-gai-nian-yu-xian-dai-shi-jian/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=概念与现代实践&amp;url=http://ytkz11@.github.io/2025/05/12/di-2-zhang-di-li-kong-jian-shu-ju-he-xin-gai-nian-yu-xian-dai-shi-jian/&amp;pic=https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/Python/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>Python<span class="tagsPageCount">11</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/05/12/di-4-zhang-jie-suo-di-li-kong-jian-fen-xi-de-python-gong-ju-xiang-he-xin-gong-ju-yu-shi-zhan-zhi-nan/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">第4章-解锁地理空间分析的Python工具箱——核心工具与实战指南</div></div></a></div><div class="next-post pull-right"><a href="/2025/05/12/di-10-zhang-python-di-li-kong-jian-fen-xi-shi-zhan-gou-jian-gps-lu-xian-fen-xi-bao-gao-xi-tong/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第10章 -Python地理空间分析实战：构建GPS路线分析报告系统.md</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/2025/05/13/di-9-zhang-python-di-li-kong-jian-jian-mo-yu-shi-shi-fen-xi-shi-zhan-zhi-nan/" title="第9章-Python地理空间建模与实时分析实战指南"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-05-13</div><div class="title">第9章-Python地理空间建模与实时分析实战指南</div></div></a></div><div><a href="/2025/05/12/di-5-zhang-python-di-li-kong-jian-suan-fa-shi-zhan/" title="第5章-Python地理空间算法实战"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-05-12</div><div class="title">第5章-Python地理空间算法实战</div></div></a></div><div><a href="/2025/05/12/di-3-zhang-di-li-kong-jian-ji-zhu-jing-guan-jie-xi-gou-jian-xian-dai-di-li-fen-xi-de-he-xin-gong-ju-zhan/" title="地理空间技术景观解析：构建现代地理分析的核心工具栈"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202505120939252.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-05-12</div><div class="title">地理空间技术景观解析：构建现代地理分析的核心工具栈</div></div></a></div><div><a href="/2025/05/12/di-10-zhang-python-di-li-kong-jian-fen-xi-shi-zhan-gou-jian-gps-lu-xian-fen-xi-bao-gao-xi-tong/" title="第10章 -Python地理空间分析实战：构建GPS路线分析报告系统.md"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-05-12</div><div class="title">第10章 -Python地理空间分析实战：构建GPS路线分析报告系统.md</div></div></a></div><div><a href="/2025/05/12/di-4-zhang-jie-suo-di-li-kong-jian-fen-xi-de-python-gong-ju-xiang-he-xin-gong-ju-yu-shi-zhan-zhi-nan/" title="第4章-解锁地理空间分析的Python工具箱——核心工具与实战指南"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-05-12</div><div class="title">第4章-解锁地理空间分析的Python工具箱——核心工具与实战指南</div></div></a></div><div><a href="/2025/05/12/di-6-zhang-python-di-li-kong-jian-shu-ju-gong-cheng-shi-zhan-cong-shapefile-bian-ji-shuo-qi/" title="第6章-Python地理空间数据工程实战——从Shapefile编辑说起"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://media.geeksforgeeks.org/wp-content/uploads/20231109100003/remote-sensing-768.webp" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2025-05-12</div><div class="title">第6章-Python地理空间数据工程实战——从Shapefile编辑说起</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://raw.githubusercontent.com/ytkz11/picture/e0561f27bb351a8dc757d4f5b1d74a1ab5ef4e42/imgs202411281530223.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9C%B0%E7%90%86%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE%EF%BC%9A%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%E4%B8%8E%E7%8E%B0%E4%BB%A3%E5%AE%9E%E8%B7%B5"><span class="toc-number">1.</span> <span class="toc-text">地理空间数据：核心概念与现代实践</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9C%B0%E7%90%86%E7%A9%BA%E9%97%B4%E6%95%B0%E6%8D%AE%E7%9A%84%E5%88%86%E7%B1%BB%E4%BD%93%E7%B3%BB"><span class="toc-number">1.1.</span> <span class="toc-text">一、地理空间数据的分类体系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%9F%A2%E9%87%8F%E6%95%B0%E6%8D%AE%EF%BC%9A%E5%87%A0%E4%BD%95%E8%A6%81%E7%B4%A0%E7%9A%84%E7%B2%BE%E7%A1%AE%E8%A1%A8%E8%BE%BE"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 矢量数据：几何要素的精确表达</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A0%85%E6%A0%BC%E6%95%B0%E6%8D%AE%EF%BC%9A%E5%83%8F%E5%85%83%E7%9F%A9%E9%98%B5%E7%9A%84%E8%BF%9E%E7%BB%AD%E8%A1%A8%E8%BE%BE"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 栅格数据：像元矩阵的连续表达</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF"><span class="toc-number">1.2.</span> <span class="toc-text">二、数据处理关键技术</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A9%BA%E9%97%B4%E7%B4%A2%E5%BC%95%E6%9C%BA%E5%88%B6"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 空间索引机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%83%E6%95%B0%E6%8D%AE%E6%A0%87%E5%87%86"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 元数据标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 数据预处理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%96%B0%E5%9E%8B%E6%95%B0%E6%8D%AE%E8%8C%83%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">三、新型数据范式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%82%B9%E4%BA%91%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 点云数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%97%B6%E7%A9%BA%E6%95%B0%E6%8D%AE"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 时空数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%95%B0%E6%8D%AE%E4%BA%A4%E6%8D%A2%E4%BD%93%E7%B3%BB"><span class="toc-number">1.4.</span> <span class="toc-text">四、数据交换体系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9C%8D%E5%8A%A1%E5%8C%96%E8%AE%BF%E9%97%AE"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 服务化访问</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 数据库解决方案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%80%BB%E7%BB%93%E4%B8%8E%E8%B6%8B%E5%8A%BF"><span class="toc-number">1.5.</span> <span class="toc-text">五、总结与趋势</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641974.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="学习Rasterio还是GDAL？"/></a><div class="content"><a class="title" href="/2025/07/16/xue-xi-rasterio-huan-shi-gdal/" title="学习Rasterio还是GDAL？">学习Rasterio还是GDAL？</a><time datetime="2025-07-16T12:20:10.000Z" title="发表于 2025-07-16 20:20:10">2025-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111500105.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="告别 gdal_translate：迎接 GDAL 统一命令行新时代"/></a><div class="content"><a class="title" href="/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/" title="告别 gdal_translate：迎接 GDAL 统一命令行新时代">告别 gdal_translate：迎接 GDAL 统一命令行新时代</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507111438678.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="简要介绍 GDAL 的架构、关键组件和功能"/></a><div class="content"><a class="title" href="/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/" title="简要介绍 GDAL 的架构、关键组件和功能">简要介绍 GDAL 的架构、关键组件和功能</a><time datetime="2025-07-11T12:20:10.000Z" title="发表于 2025-07-11 20:20:10">2025-07-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507161641982.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="GDAL_OGR简单的使用教程"/></a><div class="content"><a class="title" href="/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/" title="GDAL_OGR简单的使用教程">GDAL_OGR简单的使用教程</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202507101625855.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="遥感到底是个啥"/></a><div class="content"><a class="title" href="/2025/07/10/yao-gan-dao-di-shi-ge-sha/" title="遥感到底是个啥">遥感到底是个啥</a><time datetime="2025-07-10T12:20:10.000Z" title="发表于 2025-07-10 20:20:10">2025-07-10</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">317</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">52</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">79</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>4</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>1</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 0.88rem;">shp<sup>1</sup></a><a href="/tags/vs/" style="font-size: 0.88rem;">vs<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 0.88rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>3</sup></a><a href="/tags/%E6%A1%88%E4%BB%B6/" style="font-size: 0.88rem;">案件<sup>1</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>15</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>19</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>183</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>
