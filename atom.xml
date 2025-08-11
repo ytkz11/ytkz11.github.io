@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-07-16T09:09:01.545Z</updated>
+  <updated>2025-08-11T13:20:16.975Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,90 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>事情是一件一件的去做完</title>
+    <link href="http://ytkz11@.github.io/2025/08/11/shi-qing-shi-yi-jian-yi-jian-de-qu-zuo-wan/"/>
+    <id>http://ytkz11@.github.io/2025/08/11/shi-qing-shi-yi-jian-yi-jian-de-qu-zuo-wan/</id>
+    <published>2025-08-11T12:20:10.000Z</published>
+    <updated>2025-08-11T13:20:16.975Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近我会做两个微信小程序，代码初步写完。&lt;/p&gt;
+&lt;p&gt;第一个小程序正在备案，第二个小程序还没申请。&lt;/p&gt;
+&lt;p&gt;第一个小程序是查询经纬度。&lt;/p&gt;
+&lt;p&gt;第二个小程序是台风轨迹可视化。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2025年7月总结</title>
+    <link href="http://ytkz11@.github.io/2025/08/04/2025-nian-7-yue-zong-jie/"/>
+    <id>http://ytkz11@.github.io/2025/08/04/2025-nian-7-yue-zong-jie/</id>
+    <published>2025-08-04T12:20:10.000Z</published>
+    <updated>2025-08-04T03:50:16.363Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202508041150543.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个基于Web的Shapefile文件修复工具</title>
+    <link href="http://ytkz11@.github.io/2025/08/04/yi-ge-ji-yu-web-de-shapefile-wen-jian-xiu-fu-gong-ju/"/>
+    <id>http://ytkz11@.github.io/2025/08/04/yi-ge-ji-yu-web-de-shapefile-wen-jian-xiu-fu-gong-ju/</id>
+    <published>2025-08-04T12:20:10.000Z</published>
+    <updated>2025-08-06T09:45:39.250Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h1&gt;&lt;video</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学习Rasterio还是GDAL？</title>
     <link href="http://ytkz11@.github.io/2025/07/16/xue-xi-rasterio-huan-shi-gdal/"/>
     <id>http://ytkz11@.github.io/2025/07/16/xue-xi-rasterio-huan-shi-gdal/</id>
     <published>2025-07-16T12:20:10.000Z</published>
-    <updated>2025-07-16T09:09:01.545Z</updated>
+    <updated>2025-08-06T09:09:07.988Z</updated>
     
     
       
@@ -139,32 +218,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>游戏外挂制作原理-转载</title>
-    <link href="http://ytkz11@.github.io/2025/06/27/you-xi-wai-gua-zhi-zuo-yuan-li/"/>
-    <id>http://ytkz11@.github.io/2025/06/27/you-xi-wai-gua-zhi-zuo-yuan-li/</id>
-    <published>2025-06-27T12:20:10.000Z</published>
-    <updated>2025-06-27T07:32:26.407Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;原文地址：&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="游戏" scheme="http://ytkz11@.github.io/categories/%E6%B8%B8%E6%88%8F/"/>
-    
-    
-    <category term="游戏" scheme="http://ytkz11@.github.io/tags/%E6%B8%B8%E6%88%8F/"/>
     
   </entry>
   
@@ -330,62 +383,11 @@
   </entry>
   
   <entry>
-    <title>北京超图软件股份有限公司与黄志杰劳动争议二审民事判决书 (2020)京03民终10308号</title>
-    <link href="http://ytkz11@.github.io/2025/06/13/bei-jing-chao-tu-ruan-jian-gu-fen-you-xian-gong-si-yu-huang-zhi-jie-lao-dong-zheng-yi-er-shen-min-shi-pan-jue-shu-2020-jing-03-min-zhong-10308-hao/"/>
-    <id>http://ytkz11@.github.io/2025/06/13/bei-jing-chao-tu-ruan-jian-gu-fen-you-xian-gong-si-yu-huang-zhi-jie-lao-dong-zheng-yi-er-shen-min-shi-pan-jue-shu-2020-jing-03-min-zhong-10308-hao/</id>
-    <published>2025-06-13T12:20:10.000Z</published>
-    <updated>2025-06-13T06:00:27.340Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202506131359258.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="案件" scheme="http://ytkz11@.github.io/categories/%E6%A1%88%E4%BB%B6/"/>
-    
-    
-    <category term="案件" scheme="http://ytkz11@.github.io/tags/%E6%A1%88%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>把vscode配置好就可以去愉快地写代码了，不谢我。</title>
-    <link href="http://ytkz11@.github.io/2025/06/05/zhi-shi-fu-fei/"/>
-    <id>http://ytkz11@.github.io/2025/06/05/zhi-shi-fu-fei/</id>
-    <published>2025-06-05T12:20:10.000Z</published>
-    <updated>2025-06-05T09:28:36.377Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;以下是我使用的vscode设置。虽然有些主观，但很实用。&lt;/p&gt;
-&lt;h2 id=&quot;1-主题。&quot;&gt;&lt;a href=&quot;#1-主题。&quot; class=&quot;headerlink&quot; title=&quot;1 主题。&quot;&gt;&lt;/a&gt;1</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>把vscode配置好就可以去愉快地写代码了，不谢我。</title>
+    <title>简单的 VSCode 设置</title>
     <link href="http://ytkz11@.github.io/2025/06/05/jian-dan-de-vscode-she-zhi/"/>
     <id>http://ytkz11@.github.io/2025/06/05/jian-dan-de-vscode-she-zhi/</id>
     <published>2025-06-05T12:20:10.000Z</published>
-    <updated>2025-06-05T09:28:36.377Z</updated>
+    <updated>2025-08-06T09:17:42.960Z</updated>
     
     
       
@@ -432,11 +434,11 @@
   </entry>
   
   <entry>
-    <title>人工智能时代如何做一名优秀的开发者</title>
+    <title>RustDesk 自建中继节点教程</title>
     <link href="http://ytkz11@.github.io/2025/05/21/rustdesk-zi-jian-zhong-ji-jie-dian-jiao-cheng/"/>
     <id>http://ytkz11@.github.io/2025/05/21/rustdesk-zi-jian-zhong-ji-jie-dian-jiao-cheng/</id>
     <published>2025-05-21T14:20:10.000Z</published>
-    <updated>2025-05-28T07:36:09.911Z</updated>
+    <updated>2025-08-06T09:01:30.179Z</updated>
     
     
       

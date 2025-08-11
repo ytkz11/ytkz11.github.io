@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://ytkz11@.github.io/2025/08/11/shi-qing-shi-yi-jian-yi-jian-de-qu-zuo-wan/</loc>
+    <lastmod>2025-08-11</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/08/04/yi-ge-ji-yu-web-de-shapefile-wen-jian-xiu-fu-gong-ju/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2021/07/23/jiao-cha-ding-biao/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/02/12/sam-wei-diao-guo-cheng/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/06/05/jian-dan-de-vscode-she-zhi/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/11/25/cong-numpy-de-jiao-du-qu-li-jie-tu-xiang/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/03/27/ru-he-zai-github-shang-xia-zai-bie-ren-de-xiang-mu-yi-ji-li-shi-ban-ben/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/04/18/yao-gan-ying-xiang-fen-kuai-chu-li-de-dong-hua-zhan-shi/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/03/27/dian-yun-wen-jian-de-shen-ru-jie-xi/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/07/16/xue-xi-rasterio-huan-shi-gdal/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/04/18/wei-shi-me-wo-cong-todesk-gai-yong-rustdesk/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/07/26/dai-ma-cong-zhu-ce-ce-hui-shi-zhen-ti-wen-ben-chu-li-yu-da-an-gao-liang/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2024/06/24/python-pip-huan-yuan-de-bi-yao-xing-ji-bu-zou/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/04/18/todesk-huan-shi-rustdesk/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/03/27/gis-qian-jing-hen-xiang-qian-jing-you-dian-xuan-wo-yi-ge-ce-hui-zhuan-ma-nong-de-po-ju-xin-de/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/05/21/rustdesk-zi-jian-zhong-ji-jie-dian-jiao-cheng/</loc>
+    <lastmod>2025-08-06</lastmod>
+  </url>
+  <url>
+    <loc>http://ytkz11@.github.io/2025/08/04/2025-nian-7-yue-zong-jie/</loc>
+    <lastmod>2025-08-04</lastmod>
+  </url>
+  <url>
     <loc>http://ytkz11@.github.io/2025/06/18/lee-lu-bo-dui-yu-sar-ying-xiang-qu-zao-fei-chang-you-yong/</loc>
     <lastmod>2025-07-30</lastmod>
   </url>
@@ -17,10 +89,6 @@
     <lastmod>2025-07-17</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2025/07/16/xue-xi-rasterio-huan-shi-gdal/</loc>
-    <lastmod>2025-07-16</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/</loc>
     <lastmod>2025-07-11</lastmod>
   </url>
@@ -31,10 +99,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2025/07/10/yao-gan-dao-di-shi-ge-sha/</loc>
     <lastmod>2025-07-10</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/06/27/you-xi-wai-gua-zhi-zuo-yuan-li/</loc>
-    <lastmod>2025-06-27</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2025/06/24/pan-duan-rgb-yao-gan-ying-xiang-de-bo-duan-shi-fou-zheng-que-de-fang-fa/</loc>
@@ -55,34 +119,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2025/06/16/peng-you-wen-wo-ya-li-da-me/</loc>
     <lastmod>2025-06-16</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/06/13/bei-jing-chao-tu-ruan-jian-gu-fen-you-xian-gong-si-yu-huang-zhi-jie-lao-dong-zheng-yi-er-shen-min-shi-pan-jue-shu-2020-jing-03-min-zhong-10308-hao/</loc>
-    <lastmod>2025-06-13</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/06/05/zhi-shi-fu-fei/</loc>
-    <lastmod>2025-06-05</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/06/05/jian-dan-de-vscode-she-zhi/</loc>
-    <lastmod>2025-06-05</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/04/18/yao-gan-ying-xiang-fen-kuai-chu-li-de-dong-hua-zhan-shi/</loc>
-    <lastmod>2025-06-04</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/04/18/todesk-huan-shi-rustdesk/</loc>
-    <lastmod>2025-05-30</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/04/18/wei-shi-me-wo-cong-todesk-gai-yong-rustdesk/</loc>
-    <lastmod>2025-05-30</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/05/21/rustdesk-zi-jian-zhong-ji-jie-dian-jiao-cheng/</loc>
-    <lastmod>2025-05-28</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2025/05/27/jie-kai-mi-mi-wei-xing-tu-xiang-de-wu-ge-da-wu-qu/</loc>
@@ -193,18 +229,6 @@
     <lastmod>2025-04-15</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2025/04/09/wo-de-leetcode-suan-fa-ti-xue-xi-ji-hua-mei-tian-1-xiao-shi-ban/</loc>
-    <lastmod>2025-04-09</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/03/27/dian-yun-wen-jian-de-shen-ru-jie-xi/</loc>
-    <lastmod>2025-04-02</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/03/27/gis-qian-jing-hen-xiang-qian-jing-you-dian-xuan-wo-yi-ge-ce-hui-zhuan-ma-nong-de-po-ju-xin-de/</loc>
-    <lastmod>2025-04-02</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2024/05/28/yao-gan-ying-xiang-biao-qian-wen-jian-chu-li/</loc>
     <lastmod>2025-04-01</lastmod>
   </url>
@@ -215,10 +239,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2025/03/27/kai-fa-gong-ju-xterminal/</loc>
     <lastmod>2025-03-31</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2025/03/27/ru-he-zai-github-shang-xia-zai-bie-ren-de-xiang-mu-yi-ji-li-shi-ban-ben/</loc>
-    <lastmod>2025-03-27</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2025/03/20/shi-pin-xia-zai-qi/</loc>
@@ -297,10 +317,6 @@
     <lastmod>2025-02-21</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2025/02/12/sam-wei-diao-guo-cheng/</loc>
-    <lastmod>2025-02-21</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2025/02/06/xue-xi-gdal-de-guo-cheng/</loc>
     <lastmod>2025-02-20</lastmod>
   </url>
@@ -357,10 +373,6 @@
     <lastmod>2024-11-28</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2024/11/25/cong-numpy-de-jiao-du-qu-li-jie-tu-xiang/</loc>
-    <lastmod>2024-11-28</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2024/11/19/gcp-ji-he-xiao-zheng/</loc>
     <lastmod>2024-11-20</lastmod>
   </url>
@@ -374,10 +386,6 @@
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/09/18/shu-ru-xing-lie-hao-huo-qu-yao-gan-ying-xiang-de-dui-ying-wei-zhi-de-shu-zhi/</loc>
-    <lastmod>2024-10-29</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/10/12/zhe-me-duo-nian-xia-lai-wo-que-shi-shi-mei-chu-li-guo-modis/</loc>
     <lastmod>2024-10-29</lastmod>
   </url>
   <url>
@@ -745,10 +753,6 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>http://ytkz11@.github.io/2024/07/26/dai-ma-cong-zhu-ce-ce-hui-shi-zhen-ti-wen-ben-chu-li-yu-da-an-gao-liang/</loc>
-    <lastmod>2024-09-09</lastmod>
-  </url>
-  <url>
     <loc>http://ytkz11@.github.io/2024/04/12/dai-ma-bu-jie-zhu-numpy-du-qu-tif-wen-jian/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
@@ -798,10 +802,6 @@
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2024/07/22/python-python-zhong-mei-ge-nei-zhi-han-shu-de-jian-ming-jie-shi/</loc>
-    <lastmod>2024-09-09</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2024/06/24/python-pip-huan-yuan-de-bi-yao-xing-ji-bu-zou/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1223,10 +1223,6 @@
   <url>
     <loc>http://ytkz11@.github.io/2022/05/19/geemap-xian-shi-roi-qu-yu-1/</loc>
     <lastmod>2022-05-19</lastmod>
-  </url>
-  <url>
-    <loc>http://ytkz11@.github.io/2021/07/23/jiao-cha-ding-biao/</loc>
-    <lastmod>2021-11-23</lastmod>
   </url>
   <url>
     <loc>http://ytkz11@.github.io/2021/05/20/jing-zhun-nong-ye-de-ji-suan-ji-shi-jue/</loc>
