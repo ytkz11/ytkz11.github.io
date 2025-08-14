@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-08-11T13:20:16.975Z</updated>
+  <updated>2025-08-13T08:11:05.083Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,63 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>揭秘地图坐标系的秘密</title>
+    <link href="http://ytkz11@.github.io/2025/08/13/shi-yong-python-shi-xian-gao-de-di-tu-wa-pian-xia-zai-yu-pin-jie-de-wan-zheng-liu-cheng/"/>
+    <id>http://ytkz11@.github.io/2025/08/13/shi-yong-python-shi-xian-gao-de-di-tu-wa-pian-xia-zai-yu-pin-jie-de-wan-zheng-liu-cheng/</id>
+    <published>2025-08-13T12:20:10.000Z</published>
+    <updated>2025-08-13T08:11:05.083Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;你是否曾经有过这样的经历：用着好好的谷歌地图，一到国内，发现自己的GPS定位和地图上的道路总有那么一点点偏移？或者在使用卫星图时，发现道路、建筑的标注和实际影像对不上号？&lt;/p&gt;
+&lt;p&gt;别担心，你的手机没坏，地图App也没有出bug。你所遇到的，是一个涉及技术、法规和数据的</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>揭秘地图坐标系的秘密</title>
+    <link href="http://ytkz11@.github.io/2025/08/13/jie-mi-di-tu-zuo-biao-xi-de-mi-mi/"/>
+    <id>http://ytkz11@.github.io/2025/08/13/jie-mi-di-tu-zuo-biao-xi-de-mi-mi/</id>
+    <published>2025-08-13T12:20:10.000Z</published>
+    <updated>2025-08-13T08:11:05.083Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;你是否曾经有过这样的经历：用着好好的谷歌地图，一到国内，发现自己的GPS定位和地图上的道路总有那么一点点偏移？或者在使用卫星图时，发现道路、建筑的标注和实际影像对不上号？&lt;/p&gt;
+&lt;p&gt;别担心，你的手机没坏，地图App也没有出bug。你所遇到的，是一个涉及技术、法规和数据的</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>事情是一件一件的去做完</title>
     <link href="http://ytkz11@.github.io/2025/08/11/shi-qing-shi-yi-jian-yi-jian-de-qu-zuo-wan/"/>
     <id>http://ytkz11@.github.io/2025/08/11/shi-qing-shi-yi-jian-yi-jian-de-qu-zuo-wan/</id>
     <published>2025-08-11T12:20:10.000Z</published>
-    <updated>2025-08-11T13:20:16.975Z</updated>
+    <updated>2025-08-12T00:52:28.442Z</updated>
     
     
       
@@ -29,10 +81,10 @@
         
         
     <summary type="html">&lt;p&gt;最近我会做两个微信小程序，代码初步写完。&lt;/p&gt;
-&lt;p&gt;第一个小程序正在备案，第二个小程序还没申请。&lt;/p&gt;
+&lt;p&gt;第一个小程序正在备案，估计过两天备案审核通过后就上线，第二个小程序还没申请。&lt;/p&gt;
 &lt;p&gt;第一个小程序是查询经纬度。&lt;/p&gt;
 &lt;p&gt;第二个小程序是台风轨迹可视化。&lt;/p&gt;
-</summary>
+&lt;p&gt;在这两个小程序上线的时候，我会好好写一</summary>
         
       
     
@@ -471,59 +523,6 @@
         
         
     <summary type="html">&lt;h2 id=&quot;引言：当你忘了-Python-的-for-循环&quot;&gt;&lt;a href=&quot;#引言：当你忘了-Python-的-for-循环&quot; class=&quot;headerlink&quot; title=&quot;引言：当你忘了 Python 的 for 循环&quot;&gt;&lt;/a&gt;引言：当你忘了 Python 的</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常见遥感数据格式概述</title>
-    <link href="http://ytkz11@.github.io/2025/05/16/chang-jian-yao-gan-shu-ju-ge-shi-gai-shu/"/>
-    <id>http://ytkz11@.github.io/2025/05/16/chang-jian-yao-gan-shu-ju-ge-shi-gai-shu/</id>
-    <published>2025-05-16T14:20:10.000Z</published>
-    <updated>2025-05-16T08:23:32.908Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;常见遥感数据格式概述&lt;/p&gt;
-&lt;p&gt;地理空间数据有多种格式，每种格式都有其独特的用途和特性。了解这些格式对于有效进行地理空间分析至关重要。以下是对主要地理空间数据格式的概述，分为矢量数据和栅格数据两大类，以及一些新兴的混合格式。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>10 个看似令人困惑但却非常出色的 Python 功能！</title>
-    <link href="http://ytkz11@.github.io/2025/05/15/10-ge-kan-si-ling-ren-kun-huo-dan-que-fei-chang-chu-se-de-python-gong-neng/"/>
-    <id>http://ytkz11@.github.io/2025/05/15/10-ge-kan-si-ling-ren-kun-huo-dan-que-fei-chang-chu-se-de-python-gong-neng/</id>
-    <published>2025-05-15T14:20:10.000Z</published>
-    <updated>2025-05-15T08:21:55.046Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Python 以其简洁和易读性闻名，但一些特性初看可能让人摸不着头脑。然而，一旦你掌握了它们，就会发现它们能极大地提升代码的效率和优雅度。让我们一起探索这 10 个看似复杂但能彻底改变编程体验的 Python 功能！&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
