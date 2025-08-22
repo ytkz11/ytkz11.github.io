@@ -1,0 +1,494 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>打造一个简洁实用的经纬度查询工具 | Find everything you need</title><meta name="keywords" content="小程序"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="打造一个简洁实用的经纬度查询工具"><meta name="application-name" content="打造一个简洁实用的经纬度查询工具"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="打造一个简洁实用的经纬度查询工具"><meta property="og:url" content="http://ytkz11@.github.io/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="打造一个简洁实用的经纬度查询工具最近折腾了一个基于Web的经纬度查询工具，挺有意思的，分享一下开发过程和心得。 我是先做了这个网页再改成小程序。本次将web端版本开源。 这个工具主要是为了方便查询地图上的经纬度坐标，支持实时显示鼠标位置的坐标、点击固定坐标点，还能切换不同的地图和坐标格式，适合需要快"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta name="description" content="打造一个简洁实用的经纬度查询工具最近折腾了一个基于Web的经纬度查询工具，挺有意思的，分享一下开发过程和心得。 我是先做了这个网页再改成小程序。本次将web端版本开源。 这个工具主要是为了方便查询地图上的经纬度坐标，支持实时显示鼠标位置的坐标、点击固定坐标点，还能切换不同的地图和坐标格式，适合需要快"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://ytkz11@.github.io/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎回来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: '打造一个简洁实用的经纬度查询工具',
+  postAI: '',
+  pageFillDescription: '打造一个简洁实用的经纬度查询工具, 项目背景, 功能亮点, 技术实现, 1. 地图初始化, 2. 实时坐标和固定坐标, 3. 坐标系转换, 4. 地名搜索, 5. 界面设计, 部署和运行, 遇到的问题和优化, 总结打造一个简洁实用的经纬度查询工具最近折腾了一个基于的经纬度查询工具挺有意思的分享一下开发过程和心得我是先做了这个网页再改成小程序本次将端版本开源这个工具主要是为了方便查询地图上的经纬度坐标支持实时显示鼠标位置的坐标点击固定坐标点还能切换不同的地图和坐标格式适合需要快速定位或者研究地图数据的朋友项目背景有时候我们需要精确地获取某个地点的经纬度比如做地理信息相关的开发户外活动规划或者只是单纯好奇某个地方的坐标市面上虽然有不少地图工具但要么功能复杂要么需要注册账号或者界面不够直观于是我就想着自己动手做一个简单易用的工具核心需求是支持高德地图和切换鼠标移动时实时显示坐标点击地图可以固定坐标点支持三种坐标系转换界面简洁适配手机和电脑最终成品是一个纯前端的应用部署在上打开浏览器就能用体验还不错功能亮点这个工具虽然简单但功能还算实用双地图支持可以切换高德地图和高德地图适合国内场景则是国际通用数据覆盖全球实时坐标显示鼠标在地图上移动时右下角会实时显示当前坐标精确到小数点后位固定坐标点击地图会在点击位置添加一个标记同时显示固定坐标方便记录特定地点的经纬度坐标格式切换支持小数点格式比如和度分秒格式比如满足不同使用习惯坐标系转换内置了高德腾讯地图用原始坐标百度地图用之间的转换逻辑确保坐标在不同场景下都能用地名搜索输入地名可以直接定位到对应地点比如输入北京天安门就能跳转过去响应式设计界面适配了手机和电脑触摸屏也能很好地操作在线体验地址技术实现整个项目用的是前端技术栈主要包括地图功能基于实现以下是核心部分的开发思路地图初始化用来渲染地图初始化时默认显示中国中心位置北京坐标缩放级别支持两种地图图层高德地图通过高德的瓦片服务加载国内体验更好用标准的瓦片服务适合国际场景代码上先初始化地图容器然后添加图层切换逻辑北京坐标高德地图实时坐标和固定坐标鼠标移动时通过的事件捕获鼠标位置的经纬度实时更新到界面右下角的动态坐标面板点击地图时通过事件记录固定坐标并在地图上添加一个红色图钉标记用实现的挺有趣为了适配移动端还加了事件处理确保单指触摸也能触发固定坐标功能代码片段如下坐标系转换国内地图服务如高德用的是坐标系和国际通用的有偏差直接用坐标在高德地图上定位会偏离所以我实现了一个类支持之间的相互转换核心算法参考了版本的坐标转换代码移植到比如转的代码如下高德地图显示时会把坐标转成确保定位准确反过来显示给用户时会把转回方便在其他平台使用地名搜索地名搜索用的是的输入地名后发送请求获取坐标然后在地图上定位并添加标记如果用的是高德地图会把返回的坐标转成代码如下请输入要搜索的地名未找到的位置信息搜索失败请稍后重试界面设计界面尽量做得简洁直观顶部是地图类型选择和搜索框右下角显示动态和固定坐标底部有链接还加了一个模态框方便手动输入经纬度定位用的是纯手写样式配合媒体查询实现响应式布局手机上用触摸操作体验跟差不多部署和运行项目是纯前端的部署在上省去了后端服务器的麻烦想自己跑的话步骤很简单克隆仓库安装依赖如果需要本地开发启动本地服务器浏览器访问直接部署到的话把代码推到分支启用功能选择文件夹就行遇到的问题和优化开发过程中遇到几个小坑坐标系偏差高德地图用坐标用直接用会导致定位偏差解决办法是加了坐标转换逻辑确保显示和输入的坐标统一移动端兼容一开始没考虑触摸事件手机上点击没反应后来加了事件处理单指触摸也能正常固定坐标搜索限制有每秒次的请求限制频繁搜索会报错加了按钮禁用和加载动画避免用户连续点击界面适配手机屏幕小坐标面板容易挡住地图调整了面板位置改成半透明背景视觉上更舒服总结这个经纬度查询工具虽然小但从需求设计到开发实现还是花了不少心思整个过程让我对地图和坐标系转换有了更深的理解也学到了一些前端优化的技巧如果你也有类似的需求可以试试这个工具或者直接拿代码改改部署到自己的服务器上源码和在线演示都在上欢迎去体验和提建议',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-21 16:09:57',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 1.05rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/blog/" style="font-size: 1.05rem;">blog<sup>1</sup></a><a href="/tags/c/" style="font-size: 1.05rem;">c#<sup>2</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>5</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>2</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 1.05rem;">shp<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 1.05rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>3</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>16</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>18</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>190</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/08/"><span class="card-archive-list-date">八月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/05/"><span class="card-archive-list-date">五月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">19</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/04/"><span class="card-archive-list-date">四月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">11</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/03/"><span class="card-archive-list-date">三月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">14</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/02/"><span class="card-archive-list-date">二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" itemprop="url">小程序</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>小程序</span></a></span></div></div><h1 class="post-title" itemprop="name headline">打造一个简洁实用的经纬度查询工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2025-08-21T14:00:10.000Z" title="发表于 2025-08-21 22:00:10">2025-08-21</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2025-08-21T08:09:57.335Z" title="更新于 2025-08-21 16:09:57">2025-08-21</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为广州"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>广州</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://ytkz11@.github.io/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/"><header><a class="post-meta-categories" href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" itemprop="url">小程序</a><a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" tabindex="-1" itemprop="url">小程序</a><h1 id="CrawlerTitle" itemprop="name headline">打造一个简洁实用的经纬度查询工具</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2025-08-21T14:00:10.000Z" title="发表于 2025-08-21 22:00:10">2025-08-21</time><time itemprop="dateCreated datePublished" datetime="2025-08-21T08:09:57.335Z" title="更新于 2025-08-21 16:09:57">2025-08-21</time></header><h1 id="打造一个简洁实用的经纬度查询工具"><a href="#打造一个简洁实用的经纬度查询工具" class="headerlink" title="打造一个简洁实用的经纬度查询工具"></a>打造一个简洁实用的经纬度查询工具</h1><p>最近折腾了一个基于Web的经纬度查询工具，挺有意思的，分享一下开发过程和心得。</p>
+<p>我是先做了这个网页再改成小程序。本次将web端版本开源。</p>
+<p>这个工具主要是为了方便查询地图上的经纬度坐标，支持实时显示鼠标位置的坐标、点击固定坐标点，还能切换不同的地图和坐标格式，适合需要快速定位或者研究地图数据的朋友。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202508211607451.png" alt="image-20250821160740217"></p>
+<h2 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h2><p>有时候我们需要精确地获取某个地点的经纬度，比如做地理信息相关的开发、户外活动规划，或者只是单纯好奇某个地方的坐标。市面上虽然有不少地图工具，但要么功能复杂，要么需要注册账号，或者界面不够直观。于是我就想着自己动手做一个简单易用的工具，核心需求是：</p>
+<ul>
+<li>支持高德地图和OpenStreetMap切换</li>
+<li>鼠标移动时实时显示坐标</li>
+<li>点击地图可以固定坐标点</li>
+<li>支持GCJ02、WGS84三种坐标系转换</li>
+<li>界面简洁，适配手机和电脑</li>
+</ul>
+<p>最终成品是一个纯前端的Web应用，部署在GitHub Pages上，打开浏览器就能用，体验还不错。</p>
+<h2 id="功能亮点"><a href="#功能亮点" class="headerlink" title="功能亮点"></a>功能亮点</h2><p>这个工具虽然简单，但功能还算实用：</p>
+<ol>
+<li><strong>双地图支持</strong>：可以切换高德地图和OpenStreetMap。高德地图适合国内场景，OpenStreetMap则是国际通用，数据覆盖全球。</li>
+<li><strong>实时坐标显示</strong>：鼠标在地图上移动时，右下角会实时显示当前坐标，精确到小数点后6位。</li>
+<li><strong>固定坐标</strong>：点击地图会在点击位置添加一个标记，同时显示固定坐标，方便记录特定地点的经纬度。</li>
+<li><strong>坐标格式切换</strong>：支持小数点格式（比如116.404, 39.904）和度分秒格式（比如116°24’14.4”E, 39°54’14.4”N），满足不同使用习惯。</li>
+<li><strong>坐标系转换</strong>：内置了GCJ02（高德/腾讯地图用）、WGS84（GPS原始坐标）、BD09（百度地图用）之间的转换逻辑，确保坐标在不同场景下都能用。</li>
+<li><strong>地名搜索</strong>：输入地名可以直接定位到对应地点，比如输入“北京天安门”就能跳转过去。</li>
+<li><strong>响应式设计</strong>：界面适配了手机和电脑，触摸屏也能很好地操作。</li>
+</ol>
+<p>在线体验地址：<a target="_blank" rel="noopener" href="https://ytkz.tech/querygps/">https://ytkz.tech/querygps/</a></p>
+<h2 id="技术实现"><a href="#技术实现" class="headerlink" title="技术实现"></a>技术实现</h2><p>整个项目用的是前端技术栈，主要包括HTML5、CSS3、JavaScript（ES6+），地图功能基于Leaflet.js实现。以下是核心部分的开发思路。</p>
+<h3 id="1-地图初始化"><a href="#1-地图初始化" class="headerlink" title="1. 地图初始化"></a>1. 地图初始化</h3><p>用Leaflet.js来渲染地图，初始化时默认显示中国中心位置（北京，坐标[39.9042, 116.4074]，缩放级别10）。支持两种地图图层：</p>
+<ul>
+<li>高德地图：通过高德的瓦片服务API加载，国内体验更好。</li>
+<li>OpenStreetMap：用标准的OSM瓦片服务，适合国际场景。</li>
+</ul>
+<p>代码上，先初始化地图容器，然后添加图层切换逻辑：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">initMap</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>map <span class="token operator">=</span> <span class="token constant">L</span><span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token string">'map'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        center<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">39.9042</span><span class="token punctuation">,</span> <span class="token number">116.4074</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 北京坐标</span>
+        zoom<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+        zoomControl<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        attributionControl<span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">initMapLayers</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token function">initMapLayers</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mapLayers<span class="token punctuation">.</span>gaode <span class="token operator">=</span> <span class="token constant">L</span><span class="token punctuation">.</span><span class="token function">tileLayer</span><span class="token punctuation">(</span><span class="token string">'https://webst0{s}.is.autonavi.com/appmaptile?style=7&amp;x={x}&amp;y={y}&amp;z={z}'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        subdomains<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'1'</span><span class="token punctuation">,</span> <span class="token string">'2'</span><span class="token punctuation">,</span> <span class="token string">'3'</span><span class="token punctuation">,</span> <span class="token string">'4'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        attribution<span class="token operator">:</span> <span class="token string">'© 高德地图'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mapLayers<span class="token punctuation">.</span>osm <span class="token operator">=</span> <span class="token constant">L</span><span class="token punctuation">.</span><span class="token function">tileLayer</span><span class="token punctuation">(</span><span class="token string">'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        attribution<span class="token operator">:</span> <span class="token string">'© OpenStreetMap contributors'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>mapLayers<span class="token punctuation">.</span>gaode<span class="token punctuation">.</span><span class="token function">addTo</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2-实时坐标和固定坐标"><a href="#2-实时坐标和固定坐标" class="headerlink" title="2. 实时坐标和固定坐标"></a>2. 实时坐标和固定坐标</h3><p>鼠标移动时，通过Leaflet的<code>mousemove</code>事件捕获鼠标位置的经纬度，实时更新到界面右下角的动态坐标面板。点击地图时，通过<code>click</code>事件记录固定坐标，并在地图上添加一个红色图钉标记（用emoji📍实现的，挺有趣）。</p>
+<p>为了适配移动端，还加了<code>touchend</code>事件处理，确保单指触摸也能触发固定坐标功能。代码片段如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'mousemove'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">updateDynamicCoordinates</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>latlng<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setFixedCoordinates</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>latlng<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'touchend'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">.</span>originalEvent<span class="token punctuation">.</span>changedTouches<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> touch <span class="token operator">=</span> e<span class="token punctuation">.</span>originalEvent<span class="token punctuation">.</span>changedTouches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> point <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">mouseEventToContainerPoint</span><span class="token punctuation">(</span>touch<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> latlng <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">containerPointToLatLng</span><span class="token punctuation">(</span>point<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setFixedCoordinates</span><span class="token punctuation">(</span>latlng<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="3-坐标系转换"><a href="#3-坐标系转换" class="headerlink" title="3. 坐标系转换"></a>3. 坐标系转换</h3><p>国内地图服务（如高德）用的是GCJ02坐标系，和国际通用的WGS84有偏差，直接用WGS84坐标在高德地图上定位会偏离。所以我实现了一个<code>CoordConverter</code>类，支持GCJ02、WGS84、BD09之间的相互转换。核心算法参考了Python版本的坐标转换代码，移植到JavaScript。</p>
+<p>比如，WGS84转GCJ02的代码如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">wgs84ToGcj02</span><span class="token punctuation">(</span><span class="token parameter">lng<span class="token punctuation">,</span> lat</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">outOfChina</span><span class="token punctuation">(</span>lng<span class="token punctuation">,</span> lat<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span>lng<span class="token punctuation">,</span> lat<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">let</span> dlat <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_transformLat</span><span class="token punctuation">(</span>lng <span class="token operator">-</span> <span class="token number">105.0</span><span class="token punctuation">,</span> lat <span class="token operator">-</span> <span class="token number">35.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> dlng <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">_transformLng</span><span class="token punctuation">(</span>lng <span class="token operator">-</span> <span class="token number">105.0</span><span class="token punctuation">,</span> lat <span class="token operator">-</span> <span class="token number">35.0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> radlat <span class="token operator">=</span> lat <span class="token operator">/</span> <span class="token number">180.0</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> magic <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">sin</span><span class="token punctuation">(</span>radlat<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    magic <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">-</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ee <span class="token operator">*</span> magic <span class="token operator">*</span> magic<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> sqrtmagic <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">sqrt</span><span class="token punctuation">(</span>magic<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dlat <span class="token operator">=</span> <span class="token punctuation">(</span>dlat <span class="token operator">*</span> <span class="token number">180.0</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">-</span> <span class="token keyword">this</span><span class="token punctuation">.</span>ee<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>magic <span class="token operator">*</span> sqrtmagic<span class="token punctuation">)</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    dlng <span class="token operator">=</span> <span class="token punctuation">(</span>dlng <span class="token operator">*</span> <span class="token number">180.0</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>a <span class="token operator">/</span> sqrtmagic <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">cos</span><span class="token punctuation">(</span>radlat<span class="token punctuation">)</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> mglat <span class="token operator">=</span> lat <span class="token operator">+</span> dlat<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> mglng <span class="token operator">=</span> lng <span class="token operator">+</span> dlng<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>mglng<span class="token punctuation">,</span> mglat<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>高德地图显示时，会把WGS84坐标转成GCJ02，确保定位准确。反过来，显示给用户时会把GCJ02转回WGS84，方便在其他平台使用。</p>
+<h3 id="4-地名搜索"><a href="#4-地名搜索" class="headerlink" title="4. 地名搜索"></a>4. 地名搜索</h3><p>地名搜索用的是OpenStreetMap的Nominatim API，输入地名后发送请求获取坐标，然后在地图上定位并添加标记。如果用的是高德地图，会把返回的WGS84坐标转成GCJ02。代码如下：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">async</span> <span class="token function">searchPlace</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> query <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'placeSearch'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">.</span><span class="token function">trim</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>query<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'请输入要搜索的地名'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://nominatim.openstreetmap.org/search?format=json&amp;q=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&amp;limit=1</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">const</span> results <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>results<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">未找到"</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>query<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">"的位置信息</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">const</span> <span class="token punctuation">{</span> lat<span class="token punctuation">,</span> lon <span class="token punctuation">}</span> <span class="token operator">=</span> results<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">let</span> mapLng <span class="token operator">=</span> lon<span class="token punctuation">,</span> mapLat <span class="token operator">=</span> lat<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>currentMapType <span class="token operator">===</span> <span class="token string">'gaode'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> gcj02 <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>coordConverter<span class="token punctuation">.</span><span class="token function">wgs84ToGcj02</span><span class="token punctuation">(</span>lon<span class="token punctuation">,</span> lat<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            mapLng <span class="token operator">=</span> gcj02<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            mapLat <span class="token operator">=</span> gcj02<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>map<span class="token punctuation">.</span><span class="token function">setView</span><span class="token punctuation">(</span><span class="token punctuation">[</span>mapLat<span class="token punctuation">,</span> mapLng<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setFixedCoordinates</span><span class="token punctuation">(</span><span class="token punctuation">{</span>lat<span class="token operator">:</span> mapLat<span class="token punctuation">,</span> lng<span class="token operator">:</span> mapLng<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'搜索失败，请稍后重试'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="5-界面设计"><a href="#5-界面设计" class="headerlink" title="5. 界面设计"></a>5. 界面设计</h3><p>界面尽量做得简洁直观，顶部是地图类型选择和搜索框，右下角显示动态和固定坐标，底部有GitHub链接。还加了一个模态框，方便手动输入经纬度定位。CSS用的是纯手写样式，配合媒体查询实现响应式布局。手机上用触摸操作，体验跟PC差不多。</p>
+<h2 id="部署和运行"><a href="#部署和运行" class="headerlink" title="部署和运行"></a>部署和运行</h2><p>项目是纯前端的，部署在GitHub Pages上，省去了后端服务器的麻烦。想自己跑的话，步骤很简单：</p>
+<ol>
+<li><p>克隆仓库：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/your-username/lat-lon-query-tool.git
+<span class="token builtin class-name">cd</span> lat-lon-query-tool<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>安装依赖（如果需要本地开发）：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>启动本地服务器：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>浏览器访问 <code>http://localhost:3000</code></p>
+</li>
+</ol>
+<p>直接部署到GitHub Pages的话，把代码推到<code>main</code>分支，启用Pages功能，选择<code>docs</code>文件夹就行。</p>
+<h2 id="遇到的问题和优化"><a href="#遇到的问题和优化" class="headerlink" title="遇到的问题和优化"></a>遇到的问题和优化</h2><p>开发过程中遇到几个小坑：</p>
+<ol>
+<li><strong>坐标系偏差</strong>：高德地图用GCJ02坐标，OpenStreetMap用WGS84，直接用会导致定位偏差。解决办法是加了坐标转换逻辑，确保显示和输入的坐标统一。</li>
+<li><strong>移动端兼容</strong>：一开始没考虑触摸事件，手机上点击没反应。后来加了<code>touchend</code>事件处理，单指触摸也能正常固定坐标。</li>
+<li><strong>搜索API限制</strong>：Nominatim API有每秒1次的请求限制，频繁搜索会报错。加了按钮禁用和加载动画，避免用户连续点击。</li>
+<li><strong>界面适配</strong>：手机屏幕小，坐标面板容易挡住地图。调整了面板位置，改成半透明背景，视觉上更舒服。</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个经纬度查询工具虽然小，但从需求设计到开发实现，还是花了不少心思。整个过程让我对地图API和坐标系转换有了更深的理解，也学到了一些前端优化的技巧。如果你也有类似的需求，可以试试这个工具，或者直接拿代码改改，部署到自己的服务器上。</p>
+<p>源码和在线演示都在GitHub上，欢迎去体验和提建议！<a target="_blank" rel="noopener" href="https://ytkz.tech/querygps">https://ytkz.tech/querygps</a></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://ytkz11@.github.io/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://ytkz11@.github.io/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/')">打造一个简洁实用的经纬度查询工具</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="/null" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/null" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://ytkz11@.github.io/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=打造一个简洁实用的经纬度查询工具&amp;url=http://ytkz11@.github.io/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://ytkz11@.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>小程序<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/08/19/dask-bing-xing-chu-li-xing-neng-dui-bi/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">小白c#教程</div></div></a></div><div class="next-post pull-right"><a href="/2025/08/21/xie-bo-ke-shi-wei-liao-ji-lu/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">写博客是为了记录</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://raw.githubusercontent.com/ytkz11/picture/e0561f27bb351a8dc757d4f5b1d74a1ab5ef4e42/imgs202411281530223.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%93%E9%80%A0%E4%B8%80%E4%B8%AA%E7%AE%80%E6%B4%81%E5%AE%9E%E7%94%A8%E7%9A%84%E7%BB%8F%E7%BA%AC%E5%BA%A6%E6%9F%A5%E8%AF%A2%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">打造一个简洁实用的经纬度查询工具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><span class="toc-number">1.1.</span> <span class="toc-text">项目背景</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E4%BA%AE%E7%82%B9"><span class="toc-number">1.2.</span> <span class="toc-text">功能亮点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0"><span class="toc-number">1.3.</span> <span class="toc-text">技术实现</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9C%B0%E5%9B%BE%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 地图初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%AE%9E%E6%97%B6%E5%9D%90%E6%A0%87%E5%92%8C%E5%9B%BA%E5%AE%9A%E5%9D%90%E6%A0%87"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 实时坐标和固定坐标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9D%90%E6%A0%87%E7%B3%BB%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 坐标系转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%9C%B0%E5%90%8D%E6%90%9C%E7%B4%A2"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 地名搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.3.5.</span> <span class="toc-text">5. 界面设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E7%BD%B2%E5%92%8C%E8%BF%90%E8%A1%8C"><span class="toc-number">1.4.</span> <span class="toc-text">部署和运行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E4%BC%98%E5%8C%96"><span class="toc-number">1.5.</span> <span class="toc-text">遇到的问题和优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.6.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/21/xie-bo-ke-shi-wei-liao-ji-lu/" title="写博客是为了记录">写博客是为了记录</a><time datetime="2025-08-21T14:00:10.000Z" title="发表于 2025-08-21 22:00:10">2025-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/" title="打造一个简洁实用的经纬度查询工具">打造一个简洁实用的经纬度查询工具</a><time datetime="2025-08-21T14:00:10.000Z" title="发表于 2025-08-21 22:00:10">2025-08-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/19/dask-bing-xing-chu-li-xing-neng-dui-bi/" title="小白c#教程">小白c#教程</a><time datetime="2025-08-19T14:00:10.000Z" title="发表于 2025-08-19 22:00:10">2025-08-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/08/19/c-xiao-bai-c-jiao-cheng/" title="小白c#教程">小白c#教程</a><time datetime="2025-08-19T14:00:10.000Z" title="发表于 2025-08-19 22:00:10">2025-08-19</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/08/18/rust-caogo-huan-guo-nei-jing-xiang-yuan-de-bu-zou/" title="caogo换国内镜像源的步骤"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/rust-lang/www.rust-lang.org/master/static/images/rust-social-wide-light.svg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="caogo换国内镜像源的步骤"/></a><div class="content"><a class="title" href="/2025/08/18/rust-caogo-huan-guo-nei-jing-xiang-yuan-de-bu-zou/" title="caogo换国内镜像源的步骤">caogo换国内镜像源的步骤</a><time datetime="2025-08-18T12:20:10.000Z" title="发表于 2025-08-18 20:20:10">2025-08-18</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2025 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">327</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">54</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">83</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/Python/" style="font-size: 0.88rem;">Python<sup>11</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/blog/" style="font-size: 0.88rem;">blog<sup>1</sup></a><a href="/tags/c/" style="font-size: 0.88rem;">c#<sup>2</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>5</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>6</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>47</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>2</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/shp/" style="font-size: 0.88rem;">shp<sup>1</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%8C%80%E8%89%B2/" style="font-size: 0.88rem;">匀色<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>3</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>16</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>18</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>190</sup></a><a href="/tags/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">遥感,矢量<sup>1</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>2</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>
