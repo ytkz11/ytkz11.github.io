@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-08-21T07:24:19.959Z</updated>
+  <updated>2025-08-27T12:52:58.228Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,89 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人技术债烂尾？</title>
+    <link href="http://ytkz11@.github.io/2025/08/27/ge-ren-ji-zhu-zhai-lan-wei/"/>
+    <id>http://ytkz11@.github.io/2025/08/27/ge-ren-ji-zhu-zhai-lan-wei/</id>
+    <published>2025-08-27T12:20:10.000Z</published>
+    <updated>2025-08-27T12:52:58.228Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;昨天分享的谷歌影像下载器你们是否在用？你们是否觉得好用？&lt;/p&gt;
+&lt;p&gt;今天聊另一个话题，是关于我的技术债的问题。&lt;/p&gt;
+&lt;p&gt;我本人并不是计算机科班出门，很多东西都是都是干中学。学得越多发现不会的越多。&lt;/p&gt;
+&lt;p&gt;去年我曾计划好好学无人机影像处理，好好学SAR，好好</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>口算深度学习模型有多少个参数</title>
+    <link href="http://ytkz11@.github.io/2025/08/25/kou-suan-shen-du-xue-xi-mo-xing-you-duo-shao-ge-can-shu/"/>
+    <id>http://ytkz11@.github.io/2025/08/25/kou-suan-shen-du-xue-xi-mo-xing-you-duo-shao-ge-can-shu/</id>
+    <published>2025-08-25T12:20:10.000Z</published>
+    <updated>2025-08-25T03:22:48.818Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在深度学习中，PyTorch 的 .pth 文件常用于保存神经网络的模型权重（state_dict）。当我们看到一个 .pth 文件时，可能会好奇：&lt;strong&gt;这个模型到底有多少参数？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下面分为两部分，正推和反推。&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谷歌的图像压缩让我看惊了</title>
+    <link href="http://ytkz11@.github.io/2025/08/25/gu-ge-de-tu-xiang-ya-suo-rang-wo-kan-liang-liao/"/>
+    <id>http://ytkz11@.github.io/2025/08/25/gu-ge-de-tu-xiang-ya-suo-rang-wo-kan-liang-liao/</id>
+    <published>2025-08-25T12:20:10.000Z</published>
+    <updated>2025-08-25T09:15:36.263Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;朋友们，你觉得一张10672 × 9525像素的 RGB 图像（3 个颜色通道）是多大？&lt;/p&gt;
+&lt;p&gt;我最近我使用小白影像下载器，下载了一张影像。我一看这个文件大小，把我看惊了。&lt;/p&gt;
+&lt;p&gt;它的大小高达 8.95兆。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>写博客是为了记录</title>
@@ -47,7 +130,7 @@
     <link href="http://ytkz11@.github.io/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/"/>
     <id>http://ytkz11@.github.io/2025/08/21/da-zao-yi-ge-jian-ji-shi-yong-de-jing-wei-du-cha-xun-gong-ju/</id>
     <published>2025-08-21T14:00:10.000Z</published>
-    <updated>2025-08-21T08:09:57.335Z</updated>
+    <updated>2025-08-23T04:12:34.343Z</updated>
     
     
       
@@ -147,14 +230,14 @@
     <link href="http://ytkz11@.github.io/2025/08/18/che-shang-wu-dao/"/>
     <id>http://ytkz11@.github.io/2025/08/18/che-shang-wu-dao/</id>
     <published>2025-08-18T12:20:10.000Z</published>
-    <updated>2025-08-22T16:09:07.521Z</updated>
+    <updated>2025-08-23T04:11:56.138Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;img</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202508231211399.webp&quot;</summary>
         
       
     
@@ -195,31 +278,6 @@
   </entry>
   
   <entry>
-    <title>微信小程序GPS坐标查询开发记录  版本v0.0.5</title>
-    <link href="http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-gps-zuo-biao-cha-xun-kai-fa-ji-lu-ban-ben-v0.0.5/"/>
-    <id>http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-gps-zuo-biao-cha-xun-kai-fa-ji-lu-ban-ben-v0.0.5/</id>
-    <published>2025-08-14T12:20:10.000Z</published>
-    <updated>2025-08-18T08:35:17.978Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
     <title>微信小程序  小白gps工具v0.01 使用说明</title>
     <link href="http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-xiao-bai-gps-gong-ju-v0.01-shi-yong-shuo-ming/"/>
     <id>http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-xiao-bai-gps-gong-ju-v0.01-shi-yong-shuo-ming/</id>
@@ -234,6 +292,31 @@
     <summary type="html">&lt;p&gt;今天微信小程序 《小白gps工具》已通过审核，终于可以上线使用。&lt;/p&gt;
 &lt;p&gt;作为第一个版本，小白gps工具主要提供查询位置信息、输入坐标反查地图。&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序GPS坐标查询开发记录  版本v0.0.5</title>
+    <link href="http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-gps-zuo-biao-cha-xun-kai-fa-ji-lu-ban-ben-v0.0.5/"/>
+    <id>http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-gps-zuo-biao-cha-xun-kai-fa-ji-lu-ban-ben-v0.0.5/</id>
+    <published>2025-08-14T12:20:10.000Z</published>
+    <updated>2025-08-18T08:35:17.978Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
         
       
     
@@ -277,7 +360,7 @@
     <link href="http://ytkz11@.github.io/2025/08/11/shi-qing-shi-yi-jian-yi-jian-de-qu-zuo-wan/"/>
     <id>http://ytkz11@.github.io/2025/08/11/shi-qing-shi-yi-jian-yi-jian-de-qu-zuo-wan/</id>
     <published>2025-08-11T12:20:10.000Z</published>
-    <updated>2025-08-15T01:57:23.798Z</updated>
+    <updated>2025-08-23T04:14:57.066Z</updated>
     
     
       
@@ -286,9 +369,7 @@
         
     <summary type="html">&lt;p&gt;最近我会做两个微信小程序，代码初步写完。&lt;/p&gt;
 &lt;p&gt;第一个小程序正在备案，估计过两天备案审核通过后就上线，第二个小程序还没申请。&lt;/p&gt;
-&lt;p&gt;第一个小程序是查询经纬度。&lt;/p&gt;
-&lt;p&gt;第二个小程序是台风轨迹可视化。&lt;/p&gt;
-&lt;p&gt;在这两个小程序上线的时候，我会好好写一</summary>
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -448,84 +529,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>遥感到底是个啥</title>
-    <link href="http://ytkz11@.github.io/2025/07/10/yao-gan-dao-di-shi-ge-sha/"/>
-    <id>http://ytkz11@.github.io/2025/07/10/yao-gan-dao-di-shi-ge-sha/</id>
-    <published>2025-07-10T12:20:10.000Z</published>
-    <updated>2025-07-10T08:25:19.022Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;各位，今天我们来解构一下“遥感”这个专业。&lt;/p&gt;
-&lt;h4 id=&quot;一、遥感到底是个啥？&quot;&gt;&lt;a href=&quot;#一、遥感到底是个啥？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>lee滤波对于sar影像去噪非常有用</title>
-    <link href="http://ytkz11@.github.io/2025/06/24/pan-duan-rgb-yao-gan-ying-xiang-de-bo-duan-shi-fou-zheng-que-de-fang-fa/"/>
-    <id>http://ytkz11@.github.io/2025/06/24/pan-duan-rgb-yao-gan-ying-xiang-de-bo-duan-shi-fou-zheng-que-de-fang-fa/</id>
-    <published>2025-06-24T12:20:10.000Z</published>
-    <updated>2025-06-24T13:13:30.409Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;正如之前我说的，遥感影像在深度学习的输入形式一般是RGB格式，而遥感影像的原始数据一般由多个波段组合。&lt;/p&gt;
-&lt;p&gt;所以，我们需要做的一个步骤的：把多波段的遥感影像转换为RGB遥感影像。&lt;/p&gt;
-&lt;p&gt;RGB，三个字母说明了这个文件由三个矩阵组成，它们的顺序是RED、GR</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Bilibili 下载指南</title>
-    <link href="http://ytkz11@.github.io/2025/06/20/bilibili-xia-zai-zhi-nan/"/>
-    <id>http://ytkz11@.github.io/2025/06/20/bilibili-xia-zai-zhi-nan/</id>
-    <published>2025-06-20T12:20:10.000Z</published>
-    <updated>2025-06-20T02:58:01.334Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Bilibili-下载指南&quot;&gt;&lt;a href=&quot;#Bilibili-下载指南&quot; class=&quot;headerlink&quot; title=&quot;Bilibili 下载指南&quot;&gt;&lt;/a&gt;Bilibili 下载指南&lt;/h1&gt;&lt;p&gt;本指南提供使用</summary>
-        
-      
-    
-    
-    
-    <category term="技术" scheme="http://ytkz11@.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="技术" scheme="http://ytkz11@.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
