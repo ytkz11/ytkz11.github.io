@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-08-27T12:52:58.228Z</updated>
+  <updated>2025-10-15T09:30:58.053Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,286 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不要陷入虚无主义</title>
+    <link href="http://ytkz11@.github.io/2025/10/15/bu-yao-xian-ru-xu-wu-zhu-yi/"/>
+    <id>http://ytkz11@.github.io/2025/10/15/bu-yao-xian-ru-xu-wu-zhu-yi/</id>
+    <published>2025-10-15T12:20:10.000Z</published>
+    <updated>2025-10-15T09:30:58.053Z</updated>
+    
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>conda 修改环境名字</title>
+    <link href="http://ytkz11@.github.io/2025/10/11/conda-xiu-gai-huan-jing-ming-zi/"/>
+    <id>http://ytkz11@.github.io/2025/10/11/conda-xiu-gai-huan-jing-ming-zi/</id>
+    <published>2025-10-11T14:00:10.000Z</published>
+    <updated>2025-10-11T06:45:59.615Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;方法1：克隆环境并删除旧环境&quot;&gt;&lt;a href=&quot;#方法1：克隆环境并删除旧环境&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>yolov8目标检测的标签格式</title>
+    <link href="http://ytkz11@.github.io/2025/10/09/yolov8-mu-biao-jian-ce-de-biao-qian-ge-shi/"/>
+    <id>http://ytkz11@.github.io/2025/10/09/yolov8-mu-biao-jian-ce-de-biao-qian-ge-shi/</id>
+    <published>2025-10-09T12:20:10.000Z</published>
+    <updated>2025-10-09T07:03:57.188Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;深度学习图像处理一般分为三个步骤：标签制作、模型训练、推理预测。&lt;/p&gt;
+&lt;p&gt;现在我准备做是目标检测，使用的框架是yolov8。&lt;/p&gt;
+&lt;p&gt;使用yolov8并不是代表落后，而是yolov8足够实用，你们当然可以使用最新的yolov26，在这一点上是无所谓的。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DINOv3是什么？DINOv3解决了遥感中哪些难点？</title>
+    <link href="http://ytkz11@.github.io/2025/09/17/dinov3-yi-ge-ke-shi-ji-bu-shu-de-dong-jie-tong-yong-shi-jue-zhu-gan/"/>
+    <id>http://ytkz11@.github.io/2025/09/17/dinov3-yi-ge-ke-shi-ji-bu-shu-de-dong-jie-tong-yong-shi-jue-zhu-gan/</id>
+    <published>2025-09-17T12:20:10.000Z</published>
+    <updated>2025-09-17T03:31:54.662Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;DINOv3是什么？DINOv3解决了遥感中哪些难点？&lt;/p&gt;
+&lt;p&gt;在计算机视觉领域，预训练模型的发展正快速演进。Meta 最新发布的</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习哪种编程语言决定于你想干嘛</title>
+    <link href="http://ytkz11@.github.io/2025/09/17/yi-zhou-mei-xie-dai-ma/"/>
+    <id>http://ytkz11@.github.io/2025/09/17/yi-zhou-mei-xie-dai-ma/</id>
+    <published>2025-09-17T12:20:10.000Z</published>
+    <updated>2025-09-17T09:45:45.054Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;选择学习哪种编程语言主要取决于你的目标和兴趣。&lt;/p&gt;
+&lt;p&gt;如果你想开发网站，JavaScript、HTML 和 CSS 是前端开发的首选，Python 、PHP 、go、java则适合后端；&lt;/p&gt;
+&lt;p&gt;想做数据分析或机器学习，Python 和 R</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学习哪种编程语言决定于你想干嘛</title>
+    <link href="http://ytkz11@.github.io/2025/09/17/xue-xi-na-chong-bian-cheng-yu-yan-jue-ding-yu-ni-xiang-gan-ma/"/>
+    <id>http://ytkz11@.github.io/2025/09/17/xue-xi-na-chong-bian-cheng-yu-yan-jue-ding-yu-ni-xiang-gan-ma/</id>
+    <published>2025-09-17T12:20:10.000Z</published>
+    <updated>2025-09-17T09:45:45.054Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;选择学习哪种编程语言主要取决于你的目标和兴趣。&lt;/p&gt;
+&lt;p&gt;如果你想开发网站，JavaScript、HTML 和 CSS 是前端开发的首选，Python 、PHP 、go、java则适合后端；&lt;/p&gt;
+&lt;p&gt;想做数据分析或机器学习，Python 和 R</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将Python 代码打包成.so文件</title>
+    <link href="http://ytkz11@.github.io/2025/09/11/jiang-python-dai-ma-da-bao-cheng.so-wen-jian/"/>
+    <id>http://ytkz11@.github.io/2025/09/11/jiang-python-dai-ma-da-bao-cheng.so-wen-jian/</id>
+    <published>2025-09-11T12:20:10.000Z</published>
+    <updated>2025-10-14T03:27:20.741Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;要将Python 代码打包成 &lt;code&gt;.so&lt;/code&gt; 文件，通常使用 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我应该学 C++ 还是 Python？</title>
+    <link href="http://ytkz11@.github.io/2025/08/29/wo-ying-gai-xue-c-huan-shi-python/"/>
+    <id>http://ytkz11@.github.io/2025/08/29/wo-ying-gai-xue-c-huan-shi-python/</id>
+    <published>2025-08-29T12:20:10.000Z</published>
+    <updated>2025-08-29T07:47:17.595Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;很多刚接触编程的朋友都会问：我该学 C++ 还是 Python？&lt;/p&gt;
+&lt;p&gt;如果把这两种语言比作汽车，C++ 就像一辆老式保时捷，手动挡、手动摇窗器、硬悬挂——跑得快，但开起来并不舒服；Python</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>神经网络的解释,我想到了遥感指数</title>
+    <link href="http://ytkz11@.github.io/2025/08/29/shen-jing-wang-luo-de-jie-shi-wo-xiang-dao-liao-yao-gan-zhi-shu/"/>
+    <id>http://ytkz11@.github.io/2025/08/29/shen-jing-wang-luo-de-jie-shi-wo-xiang-dao-liao-yao-gan-zhi-shu/</id>
+    <published>2025-08-29T12:20:10.000Z</published>
+    <updated>2025-08-29T02:22:15.962Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天在网上冲浪，看到了一个号称是最好懂的神经网络解释。我读完之后立马想到了遥感植被指数。&lt;/p&gt;
+&lt;p&gt;神经网络是 AI 的算法基础。&lt;/p&gt;
+&lt;p&gt;前些天，我在美国科普网站《量子杂志》（Quanta Magazine），读到一篇&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一个简单的局域网文本传输服务器</title>
+    <link href="http://ytkz11@.github.io/2025/08/28/yi-ge-jian-dan-de-ju-yu-wang-wen-ben-chuan-shu-fu-wu-qi/"/>
+    <id>http://ytkz11@.github.io/2025/08/28/yi-ge-jian-dan-de-ju-yu-wang-wen-ben-chuan-shu-fu-wu-qi/</id>
+    <published>2025-08-28T12:20:10.000Z</published>
+    <updated>2025-08-28T07:28:17.262Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202508281528645.png&quot; alt=&quot;image-20250828152804960&quot;&gt;&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>将Windows 10的G盘设置为局域网内的NAS</title>
+    <link href="http://ytkz11@.github.io/2025/08/28/jiang-windows-10-de-g-pan-she-zhi-wei-ju-yu-wang-nei-de-nas/"/>
+    <id>http://ytkz11@.github.io/2025/08/28/jiang-windows-10-de-g-pan-she-zhi-wei-ju-yu-wang-nei-de-nas/</id>
+    <published>2025-08-28T12:20:10.000Z</published>
+    <updated>2025-08-28T07:07:44.862Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;要将Windows 10的G盘设置为局域网内的NAS（网络附加存储），可以通过Windows的共享功能实现，其他局域网内的电脑可以访问共享的文件夹。以下是一个实现步骤的说明，并提供一个PowerShell脚本用于自动化设置共享文件夹和权限。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="NAS" scheme="http://ytkz11@.github.io/categories/NAS/"/>
+    
+    
+    <category term="NAS" scheme="http://ytkz11@.github.io/tags/NAS/"/>
+    
+  </entry>
   
   <entry>
     <title>个人技术债烂尾？</title>
@@ -247,288 +527,6 @@
     
     
     <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手机的地震预警系统是怎么做的？</title>
-    <link href="http://ytkz11@.github.io/2025/08/15/shou-ji-de-di-zhen-yu-jing-xi-tong-shi-zen-me-zuo-de/"/>
-    <id>http://ytkz11@.github.io/2025/08/15/shou-ji-de-di-zhen-yu-jing-xi-tong-shi-zen-me-zuo-de/</id>
-    <published>2025-08-15T12:20:10.000Z</published>
-    <updated>2025-08-15T01:53:07.608Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;安卓手机都有加速度计，就是手机横置时让屏幕翻转的那种传感器，它可以侦测到手机的移动。&lt;/p&gt;
-&lt;p&gt;如果系统发现，同一个地理区域的手机突然同时震动，就说明地震了。谷歌就会向该区域的用户推送地震警报。&lt;/p&gt;
-&lt;p&gt;该系统于2021年4月，首先在新西兰和希腊上线，已覆盖98个</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序  小白gps工具v0.01 使用说明</title>
-    <link href="http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-xiao-bai-gps-gong-ju-v0.01-shi-yong-shuo-ming/"/>
-    <id>http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-xiao-bai-gps-gong-ju-v0.01-shi-yong-shuo-ming/</id>
-    <published>2025-08-14T12:20:10.000Z</published>
-    <updated>2025-08-15T00:51:45.602Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天微信小程序 《小白gps工具》已通过审核，终于可以上线使用。&lt;/p&gt;
-&lt;p&gt;作为第一个版本，小白gps工具主要提供查询位置信息、输入坐标反查地图。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序GPS坐标查询开发记录  版本v0.0.5</title>
-    <link href="http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-gps-zuo-biao-cha-xun-kai-fa-ji-lu-ban-ben-v0.0.5/"/>
-    <id>http://ytkz11@.github.io/2025/08/14/wei-xin-xiao-cheng-xu-gps-zuo-biao-cha-xun-kai-fa-ji-lu-ban-ben-v0.0.5/</id>
-    <published>2025-08-14T12:20:10.000Z</published>
-    <updated>2025-08-18T08:35:17.978Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>揭秘地图坐标系的秘密</title>
-    <link href="http://ytkz11@.github.io/2025/08/13/jie-mi-di-tu-zuo-biao-xi-de-mi-mi/"/>
-    <id>http://ytkz11@.github.io/2025/08/13/jie-mi-di-tu-zuo-biao-xi-de-mi-mi/</id>
-    <published>2025-08-13T12:20:10.000Z</published>
-    <updated>2025-08-13T08:11:05.083Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;你是否曾经有过这样的经历：用着好好的谷歌地图，一到国内，发现自己的GPS定位和地图上的道路总有那么一点点偏移？或者在使用卫星图时，发现道路、建筑的标注和实际影像对不上号？&lt;/p&gt;
-&lt;p&gt;别担心，你的手机没坏，地图App也没有出bug。你所遇到的，是一个涉及技术、法规和数据的</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>事情是一件一件的去做完</title>
-    <link href="http://ytkz11@.github.io/2025/08/11/shi-qing-shi-yi-jian-yi-jian-de-qu-zuo-wan/"/>
-    <id>http://ytkz11@.github.io/2025/08/11/shi-qing-shi-yi-jian-yi-jian-de-qu-zuo-wan/</id>
-    <published>2025-08-11T12:20:10.000Z</published>
-    <updated>2025-08-23T04:14:57.066Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近我会做两个微信小程序，代码初步写完。&lt;/p&gt;
-&lt;p&gt;第一个小程序正在备案，估计过两天备案审核通过后就上线，第二个小程序还没申请。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2025年7月总结</title>
-    <link href="http://ytkz11@.github.io/2025/08/04/2025-nian-7-yue-zong-jie/"/>
-    <id>http://ytkz11@.github.io/2025/08/04/2025-nian-7-yue-zong-jie/</id>
-    <published>2025-08-04T12:20:10.000Z</published>
-    <updated>2025-08-04T03:50:16.363Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202508041150543.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个基于Web的Shapefile文件修复工具</title>
-    <link href="http://ytkz11@.github.io/2025/08/04/yi-ge-ji-yu-web-de-shapefile-wen-jian-xiu-fu-gong-ju/"/>
-    <id>http://ytkz11@.github.io/2025/08/04/yi-ge-ji-yu-web-de-shapefile-wen-jian-xiu-fu-gong-ju/</id>
-    <published>2025-08-04T12:20:10.000Z</published>
-    <updated>2025-08-15T01:55:26.597Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h1&gt;&lt;video</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习Rasterio还是GDAL？</title>
-    <link href="http://ytkz11@.github.io/2025/07/16/xue-xi-rasterio-huan-shi-gdal/"/>
-    <id>http://ytkz11@.github.io/2025/07/16/xue-xi-rasterio-huan-shi-gdal/</id>
-    <published>2025-07-16T12:20:10.000Z</published>
-    <updated>2025-08-06T09:09:07.988Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;rasterio是什么？&quot;&gt;&lt;a href=&quot;#rasterio是什么？&quot; class=&quot;headerlink&quot; title=&quot;rasterio是什么？&quot;&gt;&lt;/a&gt;rasterio是什么？&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;GDAL (Geospatial Data</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>告别 gdal_translate：迎接 GDAL 统一命令行新时代</title>
-    <link href="http://ytkz11@.github.io/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/"/>
-    <id>http://ytkz11@.github.io/2025/07/11/gao-bie-gdal-translate-ying-jie-gdal-tong-yi-ming-ling-xing-xin-shi-dai/</id>
-    <published>2025-07-11T12:20:10.000Z</published>
-    <updated>2025-07-11T07:00:37.799Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;如果您是地理空间数据处理领域的一员，那么 GDAL/OGR 库想必是您工具箱中不可或缺的瑞士军刀。多年来，我们习惯了使用一系列独立的命令行工具，如</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>简要介绍 GDAL 的架构、关键组件和功能</title>
-    <link href="http://ytkz11@.github.io/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/"/>
-    <id>http://ytkz11@.github.io/2025/07/11/jian-yao-jie-shao-gdal-de-jia-gou-guan-jian-zu-jian-he-gong-neng/</id>
-    <published>2025-07-11T12:20:10.000Z</published>
-    <updated>2025-07-11T06:44:58.514Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;GDAL（地理空间数据抽象库，Geospatial Data Abstraction Library）是一个开源库，用于读取、写入和处理多种栅格和矢量地理空间数据格式。它为地理信息系统（GIS）提供了强大而统一的数据访问方式。。简要介绍 GDAL</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>GDAL_OGR简单的使用教程</title>
-    <link href="http://ytkz11@.github.io/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2025/07/10/gdal-ogr-jian-dan-de-shi-yong-jiao-cheng/</id>
-    <published>2025-07-10T12:20:10.000Z</published>
-    <updated>2025-07-17T02:16:07.083Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;GDAL-OGR简单的使用教程&quot;&gt;&lt;a href=&quot;#GDAL-OGR简单的使用教程&quot; class=&quot;headerlink&quot; title=&quot;GDAL_OGR简单的使用教程&quot;&gt;&lt;/a&gt;GDAL_OGR简单的使用教程&lt;/h1&gt;&lt;h2 id=&quot;检测安装&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
