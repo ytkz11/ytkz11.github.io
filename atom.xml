@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-10-15T09:30:58.053Z</updated>
+  <updated>2025-10-17T08:45:32.627Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI模型部署必备：PyTorch转ONNX超简单指南！</title>
+    <link href="http://ytkz11@.github.io/2025/10/17/ai-mo-xing-bu-shu-bi-bei-pytorch-zhuan-onnx-chao-jian-dan-zhi-nan/"/>
+    <id>http://ytkz11@.github.io/2025/10/17/ai-mo-xing-bu-shu-bi-bei-pytorch-zhuan-onnx-chao-jian-dan-zhi-nan/</id>
+    <published>2025-10-17T12:20:10.000Z</published>
+    <updated>2025-10-17T08:45:32.627Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在AI项目中，训练好模型只是第一步，下一步是部署到其他的环境中！ 但PyTorch模型（.pth）在手机/服务器上跑不动？别急！ONNX格式来救场。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>普通人新的台式电脑选显卡5060就够了</title>
+    <link href="http://ytkz11@.github.io/2025/10/17/pu-tong-ren-xin-dian-nao-xuan-xian-qia-5060-jiu-gou-liao/"/>
+    <id>http://ytkz11@.github.io/2025/10/17/pu-tong-ren-xin-dian-nao-xuan-xian-qia-5060-jiu-gou-liao/</id>
+    <published>2025-10-17T12:20:10.000Z</published>
+    <updated>2025-10-17T11:42:58.404Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;普通人买新电脑一定要有一个心理价格预算，选电脑配件就按照这个预算去买。&lt;/p&gt;
+&lt;p&gt;一台新的台式电脑，最贵的就是显卡。在预算有限的前提下，普通人选显卡买英伟达的5060就够了。&lt;/p&gt;
+&lt;p&gt;很多东西都是一分钱一分货，显卡更是如此，等级森严。你不能把5060和5090比，</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>不要陷入虚无主义</title>
@@ -477,56 +530,6 @@
     
     
     <category term="c#" scheme="http://ytkz11@.github.io/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>caogo换国内镜像源的步骤</title>
-    <link href="http://ytkz11@.github.io/2025/08/18/rust-caogo-huan-guo-nei-jing-xiang-yuan-de-bu-zou/"/>
-    <id>http://ytkz11@.github.io/2025/08/18/rust-caogo-huan-guo-nei-jing-xiang-yuan-de-bu-zou/</id>
-    <published>2025-08-18T12:20:10.000Z</published>
-    <updated>2025-08-18T08:54:24.896Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;使用方法&quot;&gt;&lt;a href=&quot;#使用方法&quot; class=&quot;headerlink&quot; title=&quot;使用方法&quot;&gt;&lt;/a&gt;使用方法&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="rust" scheme="http://ytkz11@.github.io/categories/rust/"/>
-    
-    
-    <category term="rust" scheme="http://ytkz11@.github.io/tags/rust/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>车上悟道</title>
-    <link href="http://ytkz11@.github.io/2025/08/18/che-shang-wu-dao/"/>
-    <id>http://ytkz11@.github.io/2025/08/18/che-shang-wu-dao/</id>
-    <published>2025-08-18T12:20:10.000Z</published>
-    <updated>2025-08-23T04:11:56.138Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202508231211399.webp&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
