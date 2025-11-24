@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-11-17T07:33:40.256Z</updated>
+  <updated>2025-11-24T10:00:29.274Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>代码演示视频是怎么用python制作，我的解决思路</title>
+    <link href="http://ytkz11@.github.io/2025/11/24/dai-ma-yan-shi-shi-pin-shi-zen-me-yong-python-zhi-zuo-wo-de-jie-jue-si-lu/"/>
+    <id>http://ytkz11@.github.io/2025/11/24/dai-ma-yan-shi-shi-pin-shi-zen-me-yong-python-zhi-zuo-wo-de-jie-jue-si-lu/</id>
+    <published>2025-11-24T12:20:10.000Z</published>
+    <updated>2025-11-24T10:00:29.274Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在半年前，我曾想过出一些关于编程、图像处理的视频教程。&lt;/p&gt;
+&lt;p&gt;在往常附上代码的以文本的形式，那如果要制作视频，那应该怎么制作呢？&lt;/p&gt;
+&lt;p&gt;我有认真思考过这个问题。&lt;/p&gt;
+&lt;p&gt;视频的本质就是多帧的图片叠加起来。&lt;/p&gt;
+&lt;p&gt;大致就是周星驰电影《苏乞儿》里那</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么用pip安装的库有的可以直接在终端用命令执行？</title>
+    <link href="http://ytkz11@.github.io/2025/11/21/wei-shi-me-yong-pip-an-zhuang-de-ku-you-de-ke-yi-zhi-jie-zai-zhong-duan-yong-ming-ling-zhi-xing/"/>
+    <id>http://ytkz11@.github.io/2025/11/21/wei-shi-me-yong-pip-an-zhuang-de-ku-you-de-ke-yi-zhi-jie-zai-zhong-duan-yong-ming-ling-zhi-xing/</id>
+    <published>2025-11-21T12:20:10.000Z</published>
+    <updated>2025-11-21T09:44:01.495Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这个现象，正是Python包管理设计中一个巧妙之处。简单来说，这主要归功于一种叫做“&lt;strong&gt;控制台脚本入口点&lt;/strong&gt;”的机制。&lt;/p&gt;
+&lt;p&gt;当你 &lt;code&gt;pip install xxx&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>假的进度条：有时候我们只是需要一点安慰</title>
@@ -481,63 +536,6 @@
     
     
     <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>谷歌的图像压缩让我看惊了</title>
-    <link href="http://ytkz11@.github.io/2025/08/25/gu-ge-de-tu-xiang-ya-suo-rang-wo-kan-liang-liao/"/>
-    <id>http://ytkz11@.github.io/2025/08/25/gu-ge-de-tu-xiang-ya-suo-rang-wo-kan-liang-liao/</id>
-    <published>2025-08-25T12:20:10.000Z</published>
-    <updated>2025-08-25T09:15:36.263Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;朋友们，你觉得一张10672 × 9525像素的 RGB 图像（3 个颜色通道）是多大？&lt;/p&gt;
-&lt;p&gt;我最近我使用小白影像下载器，下载了一张影像。我一看这个文件大小，把我看惊了。&lt;/p&gt;
-&lt;p&gt;它的大小高达 8.95兆。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>在 Ascend 生态中，CANN工具包涉及的 固件（Firmware） 和 驱动</title>
-    <link href="http://ytkz11@.github.io/2025/08/22/zai-ascend-sheng-tai-zhong-cann-gong-ju-bao-she-ji-de-gu-jian-firmware-he-qu-dong/"/>
-    <id>http://ytkz11@.github.io/2025/08/22/zai-ascend-sheng-tai-zhong-cann-gong-ju-bao-she-ji-de-gu-jian-firmware-he-qu-dong/</id>
-    <published>2025-08-22T12:20:10.000Z</published>
-    <updated>2025-10-22T01:05:40.736Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在 Ascend 生态中，CANN（Compute Architecture for Neural Networks）工具包涉及的 &lt;strong&gt;固件（Firmware）&lt;/strong&gt; 和 &lt;strong&gt;驱动（Driver）&lt;/strong&gt; 是支持 Ascend</summary>
-        
-      
-    
-    
-    
-    <category term="昇腾" scheme="http://ytkz11@.github.io/categories/%E6%98%87%E8%85%BE/"/>
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%98%87%E8%85%BE/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="昇腾" scheme="http://ytkz11@.github.io/tags/%E6%98%87%E8%85%BE/"/>
     
   </entry>
   
