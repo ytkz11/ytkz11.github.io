@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-11-24T10:00:29.274Z</updated>
+  <updated>2025-12-08T10:38:33.145Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,169 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>YOLO 与 SAM 在地理空间工作流中的对比分析</title>
+    <link href="http://ytkz11@.github.io/2025/12/08/yolo-yu-sam-zai-di-li-kong-jian-gong-zuo-liu-zhong-de-dui-bi-fen-xi/"/>
+    <id>http://ytkz11@.github.io/2025/12/08/yolo-yu-sam-zai-di-li-kong-jian-gong-zuo-liu-zhong-de-dui-bi-fen-xi/</id>
+    <published>2025-12-08T13:20:10.000Z</published>
+    <updated>2025-12-08T10:38:33.145Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大家好，我是小白说遥感，今天我们来聊聊在地理空间工作流中，YOLO 与 SAM 的对比分析。1. 数据集要求：有监督的边界框 vs 无需训练的提示&lt;/p&gt;
+&lt;h4 id=&quot;YOLO-v3-至-v9、YOLOv8、YOLO-NAS、YOLO-World&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用直方图匹配实现批量图像匀色（16位多波段TIF）</title>
+    <link href="http://ytkz11@.github.io/2025/12/08/yong-zhi-fang-tu-pi-pei-shi-xian-pi-liang-tu-xiang-yun-se-16-wei-duo-bo-duan-tif/"/>
+    <id>http://ytkz11@.github.io/2025/12/08/yong-zhi-fang-tu-pi-pei-shi-xian-pi-liang-tu-xiang-yun-se-16-wei-duo-bo-duan-tif/</id>
+    <published>2025-12-08T12:20:10.000Z</published>
+    <updated>2025-12-08T10:31:24.798Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大家好，我是小白说遥感，今天我们来聊聊图像处理中的一个实用技巧——&lt;strong&gt;直方图匹配（Histogram Matching）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GDAL-VRT（虚拟栅格）应用场景</title>
+    <link href="http://ytkz11@.github.io/2025/11/25/gdal-vrt-xu-ni-zha-ge-ying-yong-chang-jing/"/>
+    <id>http://ytkz11@.github.io/2025/11/25/gdal-vrt-xu-ni-zha-ge-ying-yong-chang-jing/</id>
+    <published>2025-11-25T12:20:10.000Z</published>
+    <updated>2025-12-02T09:47:14.981Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在处理遥感影像和大型地理空间数据时，数据量动辄数十 GB 甚至 TB，传统的处理方式经常会遭遇&lt;strong&gt;“内存不足 (Out of Memory, OOM)”&lt;/strong&gt;的窘境。幸运的是，GDAL（Geospatial Data Abstraction</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cgcs2000坐标系的epsg计算</title>
+    <link href="http://ytkz11@.github.io/2025/11/25/cgcs2000-zuo-biao-xi-de-epsg-ji-suan/"/>
+    <id>http://ytkz11@.github.io/2025/11/25/cgcs2000-zuo-biao-xi-de-epsg-ji-suan/</id>
+    <published>2025-11-25T12:20:10.000Z</published>
+    <updated>2025-12-05T01:37:48.349Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;之前写了一篇关于wgs84影像转为cgcs2000的影像的文章：《wgs84影像直接转换为cgcs2000影像》&lt;/p&gt;
+&lt;p&gt;在里面我写道：诸如遥感数据处理的东西，其实是没有技术含量的，本质上都是调用gdal的东西，你把gdal的各个接口弄明白了就掌握这个数据处理的技能，</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我把个人电脑的arcgis卸载了</title>
+    <link href="http://ytkz11@.github.io/2025/11/25/wo-ba-ge-ren-dian-nao-de-arcgis-xie-zai-liao/"/>
+    <id>http://ytkz11@.github.io/2025/11/25/wo-ba-ge-ren-dian-nao-de-arcgis-xie-zai-liao/</id>
+    <published>2025-11-25T12:20:10.000Z</published>
+    <updated>2025-11-27T07:39:03.491Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;由于家里电脑的硬盘空间实在吃紧，我在清理空间时顺手就把 ArcGIS</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>矢量的属性表转化为excel</title>
+    <link href="http://ytkz11@.github.io/2025/11/25/shi-liang-de-shu-xing-biao-zhuan-hua-wei-excel/"/>
+    <id>http://ytkz11@.github.io/2025/11/25/shi-liang-de-shu-xing-biao-zhuan-hua-wei-excel/</id>
+    <published>2025-11-25T12:20:10.000Z</published>
+    <updated>2025-11-27T09:32:17.516Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;矢量的属性表转化为excel是不难的，在arcgis的工具有一个叫做：Table To Excel (Conversion)&lt;/p&gt;
+&lt;p&gt;在这里很快很简单地就可以把矢量文件的属性表导出，保存为excel文件。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>代码演示视频是怎么用python制作，我的解决思路</title>
@@ -367,166 +530,6 @@
         
         
     <summary type="html">&lt;p&gt;要将Python 代码打包成 &lt;code&gt;.so&lt;/code&gt; 文件，通常使用 &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我应该学 C++ 还是 Python？</title>
-    <link href="http://ytkz11@.github.io/2025/08/29/wo-ying-gai-xue-c-huan-shi-python/"/>
-    <id>http://ytkz11@.github.io/2025/08/29/wo-ying-gai-xue-c-huan-shi-python/</id>
-    <published>2025-08-29T12:20:10.000Z</published>
-    <updated>2025-08-29T07:47:17.595Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;很多刚接触编程的朋友都会问：我该学 C++ 还是 Python？&lt;/p&gt;
-&lt;p&gt;如果把这两种语言比作汽车，C++ 就像一辆老式保时捷，手动挡、手动摇窗器、硬悬挂——跑得快，但开起来并不舒服；Python</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>神经网络的解释,我想到了遥感指数</title>
-    <link href="http://ytkz11@.github.io/2025/08/29/shen-jing-wang-luo-de-jie-shi-wo-xiang-dao-liao-yao-gan-zhi-shu/"/>
-    <id>http://ytkz11@.github.io/2025/08/29/shen-jing-wang-luo-de-jie-shi-wo-xiang-dao-liao-yao-gan-zhi-shu/</id>
-    <published>2025-08-29T12:20:10.000Z</published>
-    <updated>2025-08-29T02:22:15.962Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天在网上冲浪，看到了一个号称是最好懂的神经网络解释。我读完之后立马想到了遥感植被指数。&lt;/p&gt;
-&lt;p&gt;神经网络是 AI 的算法基础。&lt;/p&gt;
-&lt;p&gt;前些天，我在美国科普网站《量子杂志》（Quanta Magazine），读到一篇&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个简单的局域网文本传输服务器</title>
-    <link href="http://ytkz11@.github.io/2025/08/28/yi-ge-jian-dan-de-ju-yu-wang-wen-ben-chuan-shu-fu-wu-qi/"/>
-    <id>http://ytkz11@.github.io/2025/08/28/yi-ge-jian-dan-de-ju-yu-wang-wen-ben-chuan-shu-fu-wu-qi/</id>
-    <published>2025-08-28T12:20:10.000Z</published>
-    <updated>2025-08-28T07:28:17.262Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202508281528645.png&quot; alt=&quot;image-20250828152804960&quot;&gt;&lt;/p&gt;
-&lt;pre</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>将Windows 10的G盘设置为局域网内的NAS</title>
-    <link href="http://ytkz11@.github.io/2025/08/28/jiang-windows-10-de-g-pan-she-zhi-wei-ju-yu-wang-nei-de-nas/"/>
-    <id>http://ytkz11@.github.io/2025/08/28/jiang-windows-10-de-g-pan-she-zhi-wei-ju-yu-wang-nei-de-nas/</id>
-    <published>2025-08-28T12:20:10.000Z</published>
-    <updated>2025-08-28T07:07:44.862Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;要将Windows 10的G盘设置为局域网内的NAS（网络附加存储），可以通过Windows的共享功能实现，其他局域网内的电脑可以访问共享的文件夹。以下是一个实现步骤的说明，并提供一个PowerShell脚本用于自动化设置共享文件夹和权限。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="NAS" scheme="http://ytkz11@.github.io/categories/NAS/"/>
-    
-    
-    <category term="NAS" scheme="http://ytkz11@.github.io/tags/NAS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人技术债烂尾？</title>
-    <link href="http://ytkz11@.github.io/2025/08/27/ge-ren-ji-zhu-zhai-lan-wei/"/>
-    <id>http://ytkz11@.github.io/2025/08/27/ge-ren-ji-zhu-zhai-lan-wei/</id>
-    <published>2025-08-27T12:20:10.000Z</published>
-    <updated>2025-08-27T12:52:58.228Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;昨天分享的谷歌影像下载器你们是否在用？你们是否觉得好用？&lt;/p&gt;
-&lt;p&gt;今天聊另一个话题，是关于我的技术债的问题。&lt;/p&gt;
-&lt;p&gt;我本人并不是计算机科班出门，很多东西都是都是干中学。学得越多发现不会的越多。&lt;/p&gt;
-&lt;p&gt;去年我曾计划好好学无人机影像处理，好好学SAR，好好</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>口算深度学习模型有多少个参数</title>
-    <link href="http://ytkz11@.github.io/2025/08/25/kou-suan-shen-du-xue-xi-mo-xing-you-duo-shao-ge-can-shu/"/>
-    <id>http://ytkz11@.github.io/2025/08/25/kou-suan-shen-du-xue-xi-mo-xing-you-duo-shao-ge-can-shu/</id>
-    <published>2025-08-25T12:20:10.000Z</published>
-    <updated>2025-08-25T03:22:48.818Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在深度学习中，PyTorch 的 .pth 文件常用于保存神经网络的模型权重（state_dict）。当我们看到一个 .pth 文件时，可能会好奇：&lt;strong&gt;这个模型到底有多少参数？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;下面分为两部分，正推和反推。&lt;/p&gt;
-&lt;h1</summary>
         
       
     
