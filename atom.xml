@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-12-08T10:38:33.145Z</updated>
+  <updated>2025-12-10T02:39:01.804Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rasterio裁剪影像的缺陷</title>
+    <link href="http://ytkz11@.github.io/2025/12/10/rasterio-cai-jian-ying-xiang-de-que-xian/"/>
+    <id>http://ytkz11@.github.io/2025/12/10/rasterio-cai-jian-ying-xiang-de-que-xian/</id>
+    <published>2025-12-10T13:20:10.000Z</published>
+    <updated>2025-12-10T02:39:01.804Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大家好，我是小白说遥感！今天我们继续聊聊遥感图像处理中的“老朋友”——&lt;strong&gt;裁剪影像（image</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>YOLO 与 SAM 在地理空间工作流中的对比分析</title>
@@ -514,31 +543,6 @@
     
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>将Python 代码打包成.so文件</title>
-    <link href="http://ytkz11@.github.io/2025/09/11/jiang-python-dai-ma-da-bao-cheng.so-wen-jian/"/>
-    <id>http://ytkz11@.github.io/2025/09/11/jiang-python-dai-ma-da-bao-cheng.so-wen-jian/</id>
-    <published>2025-09-11T12:20:10.000Z</published>
-    <updated>2025-10-14T03:27:20.741Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;要将Python 代码打包成 &lt;code&gt;.so&lt;/code&gt; 文件，通常使用 &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
