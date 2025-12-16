@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-12-10T02:39:01.804Z</updated>
+  <updated>2025-12-16T05:48:16.412Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中年危机和赚钱的底层逻辑</title>
+    <link href="http://ytkz11@.github.io/2025/12/16/zhong-nian-wei-ji-he-zhuan-qian-de-di-ceng-luo-ji/"/>
+    <id>http://ytkz11@.github.io/2025/12/16/zhong-nian-wei-ji-he-zhuan-qian-de-di-ceng-luo-ji/</id>
+    <published>2025-12-16T13:20:10.000Z</published>
+    <updated>2025-12-16T05:48:16.412Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我有个哥们儿，最近老跟我聊起一个事儿。他说，好多人二十出头的时候，对未来没啥紧迫感，觉得日子还长着呢。可一过三十，那股危机感就跟开了闸似的，扑面而来，让人有点慌神。&lt;/p&gt;
+&lt;p&gt;他想了好久，觉得啥叫“中年危机”啊，其实不是真等到中年才冒出来的，早在大伙儿年轻时候就埋下了种</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
   
   <entry>
     <title>rasterio裁剪影像的缺陷</title>
@@ -496,33 +522,6 @@
     <title>学习哪种编程语言决定于你想干嘛</title>
     <link href="http://ytkz11@.github.io/2025/09/17/yi-zhou-mei-xie-dai-ma/"/>
     <id>http://ytkz11@.github.io/2025/09/17/yi-zhou-mei-xie-dai-ma/</id>
-    <published>2025-09-17T12:20:10.000Z</published>
-    <updated>2025-09-17T09:45:45.054Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;选择学习哪种编程语言主要取决于你的目标和兴趣。&lt;/p&gt;
-&lt;p&gt;如果你想开发网站，JavaScript、HTML 和 CSS 是前端开发的首选，Python 、PHP 、go、java则适合后端；&lt;/p&gt;
-&lt;p&gt;想做数据分析或机器学习，Python 和 R</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习哪种编程语言决定于你想干嘛</title>
-    <link href="http://ytkz11@.github.io/2025/09/17/xue-xi-na-chong-bian-cheng-yu-yan-jue-ding-yu-ni-xiang-gan-ma/"/>
-    <id>http://ytkz11@.github.io/2025/09/17/xue-xi-na-chong-bian-cheng-yu-yan-jue-ding-yu-ni-xiang-gan-ma/</id>
     <published>2025-09-17T12:20:10.000Z</published>
     <updated>2025-09-17T09:45:45.054Z</updated>
     
