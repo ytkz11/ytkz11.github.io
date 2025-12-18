@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-12-16T05:48:16.412Z</updated>
+  <updated>2025-12-18T06:57:54.743Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,11 +17,100 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>从 os.path 转向 pathlib</title>
+    <link href="http://ytkz11@.github.io/2025/12/18/cong-os.path-zhuan-xiang-pathlib/"/>
+    <id>http://ytkz11@.github.io/2025/12/18/cong-os.path-zhuan-xiang-pathlib/</id>
+    <published>2025-12-18T13:20:10.000Z</published>
+    <updated>2025-12-18T06:57:54.743Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;从 &lt;code&gt;os.path&lt;/code&gt; 转向 &lt;code&gt;pathlib&lt;/code&gt; 是 Python 开发中的一个重要升级。虽然 &lt;code&gt;os.path&lt;/code&gt; 已经服务了我们很多年，但 &lt;code&gt;pathlib&lt;/code&gt;（自 Python</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/gis/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 GDALOGR 提取矢量文件唯一字段值</title>
+    <link href="http://ytkz11@.github.io/2025/12/17/shi-yong-gdalogr-ti-qu-shi-liang-wen-jian-wei-yi-zi-duan-zhi/"/>
+    <id>http://ytkz11@.github.io/2025/12/17/shi-yong-gdalogr-ti-qu-shi-liang-wen-jian-wei-yi-zi-duan-zhi/</id>
+    <published>2025-12-17T13:20:10.000Z</published>
+    <updated>2025-12-17T02:36:45.978Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在 GIS 开发中，我们经常需要从 Shapefile 或其他矢量文件中提取属性表的唯一值。今天分享一个简单的 Python 函数，使用 GDAL 的 OGR 模块来实现这个功能。&lt;/p&gt;
+&lt;p&gt;函数 get_names_from_vector</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/gis/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用Meta的Segment Anything Model (SAM) 加速图像分割标注</title>
+    <link href="http://ytkz11@.github.io/2025/12/17/shi-yong-meta-de-segment-anything-model-sam-jia-su-tu-xiang-fen-ge-biao-zhu/"/>
+    <id>http://ytkz11@.github.io/2025/12/17/shi-yong-meta-de-segment-anything-model-sam-jia-su-tu-xiang-fen-ge-biao-zhu/</id>
+    <published>2025-12-17T13:20:10.000Z</published>
+    <updated>2025-12-17T03:38:30.635Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;作为一名遥感行业从业者，深知获取高质量标注数据集的痛点。针对新物体类别的分割任务，往往需要手动收集并标注成千上万张图像。相比物体检测的边界框标注，像素级分割的精确度要求更高，工作量成倍增加。&lt;/p&gt;
+&lt;p&gt;Meta的Segment Anything Model (SAM)</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/gis/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>中年危机和赚钱的底层逻辑</title>
     <link href="http://ytkz11@.github.io/2025/12/16/zhong-nian-wei-ji-he-zhuan-qian-de-di-ceng-luo-ji/"/>
     <id>http://ytkz11@.github.io/2025/12/16/zhong-nian-wei-ji-he-zhuan-qian-de-di-ceng-luo-ji/</id>
     <published>2025-12-16T13:20:10.000Z</published>
-    <updated>2025-12-16T05:48:16.412Z</updated>
+    <updated>2025-12-16T14:47:36.843Z</updated>
     
     
       
@@ -29,7 +118,7 @@
         
         
     <summary type="html">&lt;p&gt;我有个哥们儿，最近老跟我聊起一个事儿。他说，好多人二十出头的时候，对未来没啥紧迫感，觉得日子还长着呢。可一过三十，那股危机感就跟开了闸似的，扑面而来，让人有点慌神。&lt;/p&gt;
-&lt;p&gt;他想了好久，觉得啥叫“中年危机”啊，其实不是真等到中年才冒出来的，早在大伙儿年轻时候就埋下了种</summary>
+&lt;p&gt;他想了好久，觉得中年危机，其实不是真等到中年才冒出来的，早在大家年轻时候就埋下了种子，只不过很</summary>
         
       
     
@@ -460,88 +549,6 @@
     
     
     <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>打包了一个conda环境压缩包到另一台linux电脑</title>
-    <link href="http://ytkz11@.github.io/2025/09/22/da-bao-liao-yi-ge-conda-huan-jing-ya-suo-bao-dao-ling-yi-tai-linux-dian-nao/"/>
-    <id>http://ytkz11@.github.io/2025/09/22/da-bao-liao-yi-ge-conda-huan-jing-ya-suo-bao-dao-ling-yi-tai-linux-dian-nao/</id>
-    <published>2025-09-22T12:20:10.000Z</published>
-    <updated>2025-10-23T07:15:01.262Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这个问题是关于在无conda、无网络的Linux机器上使用打包的conda环境压缩包（假设是tar.gz格式），以避免重新安装Python库，并用于后续模型训练。直接解压是否可运行取决于打包方式：如果使用&lt;code&gt;conda-pack&lt;/code&gt;工具打包的，那么是的，可</summary>
-        
-      
-    
-    
-    
-    <category term="linux" scheme="http://ytkz11@.github.io/categories/linux/"/>
-    
-    <category term="conda" scheme="http://ytkz11@.github.io/categories/linux/conda/"/>
-    
-    
-    <category term="linux" scheme="http://ytkz11@.github.io/tags/linux/"/>
-    
-    <category term="conda" scheme="http://ytkz11@.github.io/tags/conda/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>DINOv3是什么？DINOv3解决了遥感中哪些难点？</title>
-    <link href="http://ytkz11@.github.io/2025/09/17/dinov3-yi-ge-ke-shi-ji-bu-shu-de-dong-jie-tong-yong-shi-jue-zhu-gan/"/>
-    <id>http://ytkz11@.github.io/2025/09/17/dinov3-yi-ge-ke-shi-ji-bu-shu-de-dong-jie-tong-yong-shi-jue-zhu-gan/</id>
-    <published>2025-09-17T12:20:10.000Z</published>
-    <updated>2025-09-17T03:31:54.662Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;DINOv3是什么？DINOv3解决了遥感中哪些难点？&lt;/p&gt;
-&lt;p&gt;在计算机视觉领域，预训练模型的发展正快速演进。Meta 最新发布的</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习哪种编程语言决定于你想干嘛</title>
-    <link href="http://ytkz11@.github.io/2025/09/17/yi-zhou-mei-xie-dai-ma/"/>
-    <id>http://ytkz11@.github.io/2025/09/17/yi-zhou-mei-xie-dai-ma/</id>
-    <published>2025-09-17T12:20:10.000Z</published>
-    <updated>2025-09-17T09:45:45.054Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;选择学习哪种编程语言主要取决于你的目标和兴趣。&lt;/p&gt;
-&lt;p&gt;如果你想开发网站，JavaScript、HTML 和 CSS 是前端开发的首选，Python 、PHP 、go、java则适合后端；&lt;/p&gt;
-&lt;p&gt;想做数据分析或机器学习，Python 和 R</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
