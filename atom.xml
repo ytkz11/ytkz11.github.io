@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-12-18T06:57:54.743Z</updated>
+  <updated>2025-12-20T03:28:41.217Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,65 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>闲聊一下，今天是2025年考研的第一天</title>
+    <link href="http://ytkz11@.github.io/2025/12/20/2025-nian-kao-yan-de-di-yi-tian/"/>
+    <id>http://ytkz11@.github.io/2025/12/20/2025-nian-kao-yan-de-di-yi-tian/</id>
+    <published>2025-12-20T13:20:10.000Z</published>
+    <updated>2025-12-20T03:28:41.217Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我是忘记了今天是2025年考研第一天，时间过得真快，记忆模糊到忘记了第一天要考什么科目。&lt;/p&gt;
+&lt;p&gt;难怪昨晚老妹发信息给我：考古。&lt;/p&gt;
+&lt;p&gt;她昨晚翻了翻我的朋友圈，然后给我发信息说：考古。&lt;/p&gt;
+&lt;p&gt;当时我在加班，一时之间不知道她为何说起考古的意思。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>不校正也能看范围？手把手教你用Python和RPC秒提卫星影像边框</title>
+    <link href="http://ytkz11@.github.io/2025/12/19/bu-jiu-zheng-ye-neng-kan-fan-wei-shou-ba-shou-jiao-ni-yong-python-he-rpc-miao-ti-wei-xing-ying-xiang-bian-kuang/"/>
+    <id>http://ytkz11@.github.io/2025/12/19/bu-jiu-zheng-ye-neng-kan-fan-wei-shou-ba-shou-jiao-ni-yong-python-he-rpc-miao-ti-wei-xing-ying-xiang-bian-kuang/</id>
+    <published>2025-12-19T13:20:10.000Z</published>
+    <updated>2025-12-19T03:23:07.149Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大家好，我是小白。&lt;/p&gt;
+&lt;p&gt;最近处理国产卫星数据（比如高分、吉林一号这些），经常遇到一个痛点： 拿到的原始数据（L1级）是不带地理坐标的</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/gis/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
+    
+  </entry>
   
   <entry>
     <title>从 os.path 转向 pathlib</title>
@@ -496,59 +555,6 @@
     
     
     <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>conda 修改环境名字</title>
-    <link href="http://ytkz11@.github.io/2025/10/11/conda-xiu-gai-huan-jing-ming-zi/"/>
-    <id>http://ytkz11@.github.io/2025/10/11/conda-xiu-gai-huan-jing-ming-zi/</id>
-    <published>2025-10-11T14:00:10.000Z</published>
-    <updated>2025-10-11T06:45:59.615Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;方法1：克隆环境并删除旧环境&quot;&gt;&lt;a href=&quot;#方法1：克隆环境并删除旧环境&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>yolov8目标检测的标签格式</title>
-    <link href="http://ytkz11@.github.io/2025/10/09/yolov8-mu-biao-jian-ce-de-biao-qian-ge-shi/"/>
-    <id>http://ytkz11@.github.io/2025/10/09/yolov8-mu-biao-jian-ce-de-biao-qian-ge-shi/</id>
-    <published>2025-10-09T12:20:10.000Z</published>
-    <updated>2025-10-09T07:03:57.188Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;深度学习图像处理一般分为三个步骤：标签制作、模型训练、推理预测。&lt;/p&gt;
-&lt;p&gt;现在我准备做是目标检测，使用的框架是yolov8。&lt;/p&gt;
-&lt;p&gt;使用yolov8并不是代表落后，而是yolov8足够实用，你们当然可以使用最新的yolov26，在这一点上是无所谓的。&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
