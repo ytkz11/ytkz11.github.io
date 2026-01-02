@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-12-22T06:24:28.959Z</updated>
+  <updated>2025-12-31T06:48:30.165Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,85 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>不困于遥感，不止于当下</title>
+    <link href="http://ytkz11@.github.io/2025/12/31/2025-nian-12-yue-31-ri-za-tan-bu-kun-yu-yao-gan-bu-zhi-yu-dang-xia/"/>
+    <id>http://ytkz11@.github.io/2025/12/31/2025-nian-12-yue-31-ri-za-tan-bu-kun-yu-yao-gan-bu-zhi-yu-dang-xia/</id>
+    <published>2025-12-31T15:27:10.000Z</published>
+    <updated>2025-12-31T06:48:30.165Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天是2025年12月31日，祝大家2026、2027……（省略很多年份）……开开心心，身体健康。&lt;/p&gt;
+&lt;p&gt;今天简单来写一写近况。    </summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一文读懂国家 2000 投影坐标系：4513 与 4534 带号的核心秘密</title>
+    <link href="http://ytkz11@.github.io/2025/12/26/yi-wen-du-dong-guo-jia-2000-tou-ying-zuo-biao-xi-4513-yu-4534-dai-hao-de-he-xin-mi-mi/"/>
+    <id>http://ytkz11@.github.io/2025/12/26/yi-wen-du-dong-guo-jia-2000-tou-ying-zuo-biao-xi-4513-yu-4534-dai-hao-de-he-xin-mi-mi/</id>
+    <published>2025-12-26T15:27:10.000Z</published>
+    <updated>2025-12-26T10:08:24.792Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在测绘、GIS、工程建设等领域，“国家 2000 坐标系（CGCS2000）” 早已成为高频词汇。作为我国自主的高精度大地坐标系，它不仅是现代测绘体系的基础，更支撑着从城市规划到资源勘探的各类核心应用。而在实际使用中，“投影分带” 和 “带号” 是绕不开的关键知识点 ——</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 rasterio 将 0 值转换为 NoData 值</title>
+    <link href="http://ytkz11@.github.io/2025/12/23/shi-yong-rasterio-jiang-0-zhi-zhuan-huan-wei-nodata-zhi/"/>
+    <id>http://ytkz11@.github.io/2025/12/23/shi-yong-rasterio-jiang-0-zhi-zhuan-huan-wei-nodata-zhi/</id>
+    <published>2025-12-23T15:27:10.000Z</published>
+    <updated>2025-12-26T09:49:47.636Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我以前喜欢用gdal，不喜欢用rasterio。&lt;/p&gt;
+&lt;p&gt;因为rasterio在打包的时候存在很多问题。&lt;/p&gt;
+&lt;p&gt;但是，近一个月来，我使用rasterio的次数越来越多，主要原因还是rasterio包装了很多实用的api接口。&lt;/p&gt;
+&lt;p&gt;至于打包的问题，我后</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>这两天搬家后，开始断舍离</title>
@@ -166,7 +245,7 @@
     <link href="http://ytkz11@.github.io/2025/12/17/shi-yong-meta-de-segment-anything-model-sam-jia-su-tu-xiang-fen-ge-biao-zhu/"/>
     <id>http://ytkz11@.github.io/2025/12/17/shi-yong-meta-de-segment-anything-model-sam-jia-su-tu-xiang-fen-ge-biao-zhu/</id>
     <published>2025-12-17T13:20:10.000Z</published>
-    <updated>2025-12-17T03:38:30.635Z</updated>
+    <updated>2025-12-31T09:30:05.380Z</updated>
     
     
       
@@ -196,7 +275,7 @@
     <link href="http://ytkz11@.github.io/2025/12/16/zhong-nian-wei-ji-he-zhuan-qian-de-di-ceng-luo-ji/"/>
     <id>http://ytkz11@.github.io/2025/12/16/zhong-nian-wei-ji-he-zhuan-qian-de-di-ceng-luo-ji/</id>
     <published>2025-12-16T13:20:10.000Z</published>
-    <updated>2025-12-16T14:47:36.843Z</updated>
+    <updated>2025-12-31T09:30:27.067Z</updated>
     
     
       
@@ -486,85 +565,6 @@
     
     
     <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>wgs84影像直接转换为cgcs2000影像</title>
-    <link href="http://ytkz11@.github.io/2025/10/26/wgs84-ying-xiang-zhi-jie-zhuan-huan-wei-cgcs2000-ying-xiang/"/>
-    <id>http://ytkz11@.github.io/2025/10/26/wgs84-ying-xiang-zhi-jie-zhuan-huan-wei-cgcs2000-ying-xiang/</id>
-    <published>2025-10-26T12:20:10.000Z</published>
-    <updated>2025-10-26T15:30:04.264Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;最近写遥感的东西比较少，今天写一写如何将wgs84影像直接转换为cgcs2000影像，我们直接上代码就好了。&lt;/p&gt;
-&lt;p&gt;说白了这东西没什么技术含量，都是调用gdal写好的接口，以后我们再讨论一下wgs84的tif和cgcs2000的tif本质上有什么区别，这块我后面再好</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI模型部署必备：PyTorch转ONNX超简单指南！</title>
-    <link href="http://ytkz11@.github.io/2025/10/17/ai-mo-xing-bu-shu-bi-bei-pytorch-zhuan-onnx-chao-jian-dan-zhi-nan/"/>
-    <id>http://ytkz11@.github.io/2025/10/17/ai-mo-xing-bu-shu-bi-bei-pytorch-zhuan-onnx-chao-jian-dan-zhi-nan/</id>
-    <published>2025-10-17T12:20:10.000Z</published>
-    <updated>2025-10-17T08:45:32.627Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在AI项目中，训练好模型只是第一步，下一步是部署到其他的环境中！ 但PyTorch模型（.pth）在手机/服务器上跑不动？别急！ONNX格式来救场。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>普通人新的台式电脑选显卡5060就够了</title>
-    <link href="http://ytkz11@.github.io/2025/10/17/pu-tong-ren-xin-dian-nao-xuan-xian-qia-5060-jiu-gou-liao/"/>
-    <id>http://ytkz11@.github.io/2025/10/17/pu-tong-ren-xin-dian-nao-xuan-xian-qia-5060-jiu-gou-liao/</id>
-    <published>2025-10-17T12:20:10.000Z</published>
-    <updated>2025-10-17T11:49:01.836Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;普通人买新电脑一定要有一个心理价格预算，选电脑配件就按照这个预算去买。&lt;/p&gt;
-&lt;p&gt;一台新的台式电脑，最贵的就是显卡。在预算有限的前提下，普通人选显卡买英伟达的5060就够了。&lt;/p&gt;
-&lt;p&gt;很多东西都是一分钱一分货，显卡更是如此，等级森严。你不能把5060和5090比，</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
     
   </entry>
   
