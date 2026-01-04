@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2025-12-31T06:48:30.165Z</updated>
+  <updated>2026-01-04T17:37:42.955Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,77 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用 Python 把矢量等高线转成栅格网格</title>
+    <link href="http://ytkz11@.github.io/2026/01/05/yong-python-ba-shi-liang-deng-gao-xian-zhuan-cheng-zha-ge-wang-ge/"/>
+    <id>http://ytkz11@.github.io/2026/01/05/yong-python-ba-shi-liang-deng-gao-xian-zhuan-cheng-zha-ge-wang-ge/</id>
+    <published>2026-01-05T15:27:10.000Z</published>
+    <updated>2026-01-04T17:37:42.955Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;用-Python-把矢量等高线转成栅格网格——顺便聊聊乐高地形模型&quot;&gt;&lt;a href=&quot;#用-Python-把矢量等高线转成栅格网格——顺便聊聊乐高地形模型&quot; class=&quot;headerlink&quot; title=&quot;用 Python</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://ytkz11@.github.io/2026/01/05/cache/eb099a7d415da6c7c37b93ce069567d1092bebf7/"/>
+    <id>http://ytkz11@.github.io/2026/01/05/cache/eb099a7d415da6c7c37b93ce069567d1092bebf7/</id>
+    <published>2026-01-04T17:37:42.954Z</published>
+    <updated>2026-01-04T17:37:42.954Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">[{&quot;place_id&quot;:208441986,&quot;licence&quot;:&quot;Data © OpenStreetMap contributors, ODbL 1.0.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GeoPandas 十大实用技巧</title>
+    <link href="http://ytkz11@.github.io/2026/01/04/geopandas-shi-da-shi-yong-ji-qiao/"/>
+    <id>http://ytkz11@.github.io/2026/01/04/geopandas-shi-da-shi-yong-ji-qiao/</id>
+    <published>2026-01-04T15:27:10.000Z</published>
+    <updated>2026-01-04T17:37:42.949Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://geopandas.org/en/stable/_images/geopandas_logo.png&quot; alt=&quot;Google</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>不困于遥感，不止于当下</title>
@@ -476,86 +547,6 @@
     <summary type="html">&lt;p&gt;矢量的属性表转化为excel是不难的，在arcgis的工具有一个叫做：Table To Excel (Conversion)&lt;/p&gt;
 &lt;p&gt;在这里很快很简单地就可以把矢量文件的属性表导出，保存为excel文件。&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>代码演示视频是怎么用python制作，我的解决思路</title>
-    <link href="http://ytkz11@.github.io/2025/11/24/dai-ma-yan-shi-shi-pin-shi-zen-me-yong-python-zhi-zuo-wo-de-jie-jue-si-lu/"/>
-    <id>http://ytkz11@.github.io/2025/11/24/dai-ma-yan-shi-shi-pin-shi-zen-me-yong-python-zhi-zuo-wo-de-jie-jue-si-lu/</id>
-    <published>2025-11-24T12:20:10.000Z</published>
-    <updated>2025-11-24T10:00:29.274Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在半年前，我曾想过出一些关于编程、图像处理的视频教程。&lt;/p&gt;
-&lt;p&gt;在往常附上代码的以文本的形式，那如果要制作视频，那应该怎么制作呢？&lt;/p&gt;
-&lt;p&gt;我有认真思考过这个问题。&lt;/p&gt;
-&lt;p&gt;视频的本质就是多帧的图片叠加起来。&lt;/p&gt;
-&lt;p&gt;大致就是周星驰电影《苏乞儿》里那</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为什么用pip安装的库有的可以直接在终端用命令执行？</title>
-    <link href="http://ytkz11@.github.io/2025/11/21/wei-shi-me-yong-pip-an-zhuang-de-ku-you-de-ke-yi-zhi-jie-zai-zhong-duan-yong-ming-ling-zhi-xing/"/>
-    <id>http://ytkz11@.github.io/2025/11/21/wei-shi-me-yong-pip-an-zhuang-de-ku-you-de-ke-yi-zhi-jie-zai-zhong-duan-yong-ming-ling-zhi-xing/</id>
-    <published>2025-11-21T12:20:10.000Z</published>
-    <updated>2025-11-21T09:44:01.495Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这个现象，正是Python包管理设计中一个巧妙之处。简单来说，这主要归功于一种叫做“&lt;strong&gt;控制台脚本入口点&lt;/strong&gt;”的机制。&lt;/p&gt;
-&lt;p&gt;当你 &lt;code&gt;pip install xxx&lt;/code&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>假的进度条：有时候我们只是需要一点安慰</title>
-    <link href="http://ytkz11@.github.io/2025/11/17/jia-de-jin-du-tiao-you-shi-hou-wo-men-zhi-shi-xu-yao-yi-dian-an-wei/"/>
-    <id>http://ytkz11@.github.io/2025/11/17/jia-de-jin-du-tiao-you-shi-hou-wo-men-zhi-shi-xu-yao-yi-dian-an-wei/</id>
-    <published>2025-11-17T12:20:10.000Z</published>
-    <updated>2025-11-17T07:33:40.256Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202511171533791.png&quot;</summary>
         
       
     
