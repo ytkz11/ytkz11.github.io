@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2026-01-28T01:49:37.985Z</updated>
+  <updated>2026-03-05T06:51:55.439Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,116 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ai写专利的整体架构提示词</title>
+    <link href="http://ytkz11@.github.io/2026/03/05/ai-xie-zhuan-li-de-zheng-ti-jia-gou-ti-shi-ci/"/>
+    <id>http://ytkz11@.github.io/2026/03/05/ai-xie-zhuan-li-de-zheng-ti-jia-gou-ti-shi-ci/</id>
+    <published>2026-03-05T14:27:10.000Z</published>
+    <updated>2026-03-05T06:51:55.439Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;1、&lt;strong&gt;详细介绍技术背景，并描述已有的与本发明最相近似的实现方案&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1.1 技术背景&lt;br&gt;1.2</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>波段反了，模型废了</title>
+    <link href="http://ytkz11@.github.io/2026/03/05/bo-duan-fan-liao-mo-xing-fei-liao/"/>
+    <id>http://ytkz11@.github.io/2026/03/05/bo-duan-fan-liao-mo-xing-fei-liao/</id>
+    <published>2026-03-05T14:27:10.000Z</published>
+    <updated>2026-03-05T03:51:29.753Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;啥是波段顺序？&quot;&gt;&lt;a href=&quot;#啥是波段顺序？&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>停笔一个月的原因</title>
+    <link href="http://ytkz11@.github.io/2026/03/04/ting-bi-yi-ge-yue-de-yuan-yin/"/>
+    <id>http://ytkz11@.github.io/2026/03/04/ting-bi-yi-ge-yue-de-yuan-yin/</id>
+    <published>2026-03-04T14:27:10.000Z</published>
+    <updated>2026-03-04T08:41:55.972Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前两天晚上，2026年3月2日晚上，女朋友打电话给我，问我在干什么？我说在打游戏。她说：你变了，很久没听到你说写公众号了。是哦，我已经有一个多月没写公众号了，停笔了一个月原因是我陷入迷茫。&lt;/p&gt;
+&lt;p&gt;每天上班的处理的事情本来就够多了，下了班还要这几个问题：&lt;/p&gt;
+&lt;p</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>什么是遥感影像样本库？</title>
+    <link href="http://ytkz11@.github.io/2026/02/09/shi-me-shi-yao-gan-ying-xiang-yang-ben-ku-ji-zhi-zuo-liu-cheng/"/>
+    <id>http://ytkz11@.github.io/2026/02/09/shi-me-shi-yao-gan-ying-xiang-yang-ben-ku-ji-zhi-zuo-liu-cheng/</id>
+    <published>2026-02-09T14:27:10.000Z</published>
+    <updated>2026-02-10T09:43:30.633Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大家好，我是小白。很久没写公众号了。&lt;/p&gt;
+&lt;p&gt;今天聊一聊什么是遥感影像样本库及制作流程。&lt;/p&gt;
+&lt;p&gt;开门见山地说，深度学习需要的样本，我的理解是：&lt;strong&gt;指导计算机去识别、理解输入内容&lt;/strong&gt;。。&lt;/p&gt;
+&lt;p&gt;主语是计算机，动词是 识别，</summary>
+        
+      
+    
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/python/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>快速制作 YOLO-Seg 遥感分割样本</title>
@@ -50,7 +160,7 @@
     <link href="http://ytkz11@.github.io/2026/01/23/ba-zi-ji-xie-de.py-wen-jian-zuo-cheng-quan-ju-ke-yong-de-ben-di-ku/"/>
     <id>http://ytkz11@.github.io/2026/01/23/ba-zi-ji-xie-de.py-wen-jian-zuo-cheng-quan-ju-ke-yong-de-ben-di-ku/</id>
     <published>2026-01-23T14:27:10.000Z</published>
-    <updated>2026-01-23T07:52:36.598Z</updated>
+    <updated>2026-02-10T09:43:33.468Z</updated>
     
     
       
@@ -440,121 +550,6 @@
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
     <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Meta的Segment Anything Model (SAM) 加速图像分割标注</title>
-    <link href="http://ytkz11@.github.io/2025/12/17/shi-yong-meta-de-segment-anything-model-sam-jia-su-tu-xiang-fen-ge-biao-zhu/"/>
-    <id>http://ytkz11@.github.io/2025/12/17/shi-yong-meta-de-segment-anything-model-sam-jia-su-tu-xiang-fen-ge-biao-zhu/</id>
-    <published>2025-12-17T13:20:10.000Z</published>
-    <updated>2025-12-31T09:30:05.380Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;作为一名遥感行业从业者，深知获取高质量标注数据集的痛点。针对新物体类别的分割任务，往往需要手动收集并标注成千上万张图像。相比物体检测的边界框标注，像素级分割的精确度要求更高，工作量成倍增加。&lt;/p&gt;
-&lt;p&gt;Meta的Segment Anything Model (SAM)</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/gis/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中年危机和赚钱的底层逻辑</title>
-    <link href="http://ytkz11@.github.io/2025/12/16/zhong-nian-wei-ji-he-zhuan-qian-de-di-ceng-luo-ji/"/>
-    <id>http://ytkz11@.github.io/2025/12/16/zhong-nian-wei-ji-he-zhuan-qian-de-di-ceng-luo-ji/</id>
-    <published>2025-12-16T13:20:10.000Z</published>
-    <updated>2025-12-31T09:30:27.067Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我有个哥们儿，最近老跟我聊起一个事儿。他说，好多人二十出头的时候，对未来没啥紧迫感，觉得日子还长着呢。可一过三十，那股危机感就跟开了闸似的，扑面而来，让人有点慌神。&lt;/p&gt;
-&lt;p&gt;他想了好久，觉得中年危机，其实不是真等到中年才冒出来的，早在大家年轻时候就埋下了种子，只不过很</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>rasterio裁剪影像的缺陷</title>
-    <link href="http://ytkz11@.github.io/2025/12/10/rasterio-cai-jian-ying-xiang-de-que-xian/"/>
-    <id>http://ytkz11@.github.io/2025/12/10/rasterio-cai-jian-ying-xiang-de-que-xian/</id>
-    <published>2025-12-10T13:20:10.000Z</published>
-    <updated>2025-12-10T02:39:01.804Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;大家好，我是小白说遥感！今天我们继续聊聊遥感图像处理中的“老朋友”——&lt;strong&gt;裁剪影像（image</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>YOLO 与 SAM 在地理空间工作流中的对比分析</title>
-    <link href="http://ytkz11@.github.io/2025/12/08/yolo-yu-sam-zai-di-li-kong-jian-gong-zuo-liu-zhong-de-dui-bi-fen-xi/"/>
-    <id>http://ytkz11@.github.io/2025/12/08/yolo-yu-sam-zai-di-li-kong-jian-gong-zuo-liu-zhong-de-dui-bi-fen-xi/</id>
-    <published>2025-12-08T13:20:10.000Z</published>
-    <updated>2025-12-08T10:38:33.145Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;大家好，我是小白说遥感，今天我们来聊聊在地理空间工作流中，YOLO 与 SAM 的对比分析。1. 数据集要求：有监督的边界框 vs 无需训练的提示&lt;/p&gt;
-&lt;h4 id=&quot;YOLO-v3-至-v9、YOLOv8、YOLO-NAS、YOLO-World&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E7%BC%96%E7%A8%8B/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="编程" scheme="http://ytkz11@.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
