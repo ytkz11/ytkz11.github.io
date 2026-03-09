@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2026-03-05T06:51:55.439Z</updated>
+  <updated>2026-03-09T07:54:28.081Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,109 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从指定某个v2ex帖子下载所有的评论</title>
+    <link href="http://ytkz11@.github.io/2026/03/09/ai-zhe-me-qiang-huan-yao-xue-dong-xi-ma-wang-you-re-yi-xue-xi-dao-di-you-mei-you-yi-yi-liao/"/>
+    <id>http://ytkz11@.github.io/2026/03/09/ai-zhe-me-qiang-huan-yao-xue-dong-xi-ma-wang-you-re-yi-xue-xi-dao-di-you-mei-you-yi-yi-liao/</id>
+    <published>2026-03-09T14:27:10.000Z</published>
+    <updated>2026-03-09T07:54:28.081Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;视频标题建议：&lt;/strong&gt; AI这么强，还要学东西吗？网友热议：学习到底有没有意义了？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;视频时长建议：&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="自媒体" scheme="http://ytkz11@.github.io/categories/%E8%87%AA%E5%AA%92%E4%BD%93/"/>
+    
+    
+    <category term="自媒体" scheme="http://ytkz11@.github.io/tags/%E8%87%AA%E5%AA%92%E4%BD%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>yolo26双流模型设计</title>
+    <link href="http://ytkz11@.github.io/2026/03/09/yolo26-shuang-liu-mo-xing-she-ji/"/>
+    <id>http://ytkz11@.github.io/2026/03/09/yolo26-shuang-liu-mo-xing-she-ji/</id>
+    <published>2026-03-09T14:27:10.000Z</published>
+    <updated>2026-03-09T09:03:17.103Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;不过，在动手修改 &lt;code&gt;ultralytics&lt;/code&gt; 源码之前，我们需要先&lt;strong&gt;认清一个现实问题&lt;/strong&gt;： 如果 Global 图像是局部区域放大 3~5 倍再下采样回来的，那么原本在 Local 图中清晰可见的目标，在 Global</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从指定某个v2ex帖子下载所有的评论</title>
+    <link href="http://ytkz11@.github.io/2026/03/09/cong-v2ex-xia-zai-ping-lun/"/>
+    <id>http://ytkz11@.github.io/2026/03/09/cong-v2ex-xia-zai-ping-lun/</id>
+    <published>2026-03-09T14:27:10.000Z</published>
+    <updated>2026-03-09T10:58:08.612Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202603091858123.png&quot; alt=&quot;image-20260309152920588&quot;&gt;&lt;/p&gt;
+&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="自媒体" scheme="http://ytkz11@.github.io/categories/%E8%87%AA%E5%AA%92%E4%BD%93/"/>
+    
+    
+    <category term="自媒体" scheme="http://ytkz11@.github.io/tags/%E8%87%AA%E5%AA%92%E4%BD%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遥感小白必看：RPC 和 RPB 文件到底是什么？怎么用 Python 轻松读取它们？</title>
+    <link href="http://ytkz11@.github.io/2026/03/06/yao-gan-xiao-bai-bi-kan-rpc-he-rpb-wen-jian-dao-di-shi-shi-me-zen-me-yong-python-qing-song-du-qu-ta-men/"/>
+    <id>http://ytkz11@.github.io/2026/03/06/yao-gan-xiao-bai-bi-kan-rpc-he-rpb-wen-jian-dao-di-shi-shi-me-zen-me-yong-python-qing-song-du-qu-ta-men/</id>
+    <published>2026-03-06T14:27:10.000Z</published>
+    <updated>2026-03-06T08:10:30.338Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大家好，我是你们的老朋友——遥感码农小白。&lt;/p&gt;
+&lt;p&gt;之前有人问我：“RPC 文件是什么鬼？RPB 又是啥？为什么有的卫星给 .rpc，有的是</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>ai写专利的整体架构提示词</title>
@@ -30,6 +133,31 @@
         
     <summary type="html">&lt;p&gt;1、&lt;strong&gt;详细介绍技术背景，并描述已有的与本发明最相近似的实现方案&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;1.1 技术背景&lt;br&gt;1.2</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当水货13年了...</title>
+    <link href="http://ytkz11@.github.io/2026/03/05/dang-shui-huo-de-qi-ba-nian/"/>
+    <id>http://ytkz11@.github.io/2026/03/05/dang-shui-huo-de-qi-ba-nian/</id>
+    <published>2026-03-05T14:27:10.000Z</published>
+    <updated>2026-03-06T03:26:09.430Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;当水货13年了。。。</summary>
         
       
     
@@ -405,151 +533,6 @@
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>这两天搬家后，开始断舍离</title>
-    <link href="http://ytkz11@.github.io/2025/12/22/zhe-liang-tian-ban-jia-hou-kai-shi-duan-she-chi/"/>
-    <id>http://ytkz11@.github.io/2025/12/22/zhe-liang-tian-ban-jia-hou-kai-shi-duan-she-chi/</id>
-    <published>2025-12-22T13:20:10.000Z</published>
-    <updated>2025-12-22T06:24:28.959Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;《断舍离》是一本书，2017年我买了它。但是我一直学不会断舍离。&lt;/p&gt;
-&lt;p&gt;原因很简单：例如物品A扔了就可惜，万一以后用得上呢？然后这件物品A，就被我留下来，被我放到某个角度，直到后来我并没有用到它。&lt;/p&gt;
-&lt;p&gt;我这两天在搬家，整理东西的时候才发现，我还有三张手机贴</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>闲聊一下，今天是2025年考研的第一天</title>
-    <link href="http://ytkz11@.github.io/2025/12/20/2025-nian-kao-yan-de-di-yi-tian/"/>
-    <id>http://ytkz11@.github.io/2025/12/20/2025-nian-kao-yan-de-di-yi-tian/</id>
-    <published>2025-12-20T13:20:10.000Z</published>
-    <updated>2025-12-20T03:28:41.217Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我是忘记了今天是2025年考研第一天，时间过得真快，记忆模糊到忘记了第一天要考什么科目。&lt;/p&gt;
-&lt;p&gt;难怪昨晚老妹发信息给我：考古。&lt;/p&gt;
-&lt;p&gt;她昨晚翻了翻我的朋友圈，然后给我发信息说：考古。&lt;/p&gt;
-&lt;p&gt;当时我在加班，一时之间不知道她为何说起考古的意思。&lt;/p&gt;
-</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>不校正也能看范围？手把手教你用Python和RPC秒提卫星影像边框</title>
-    <link href="http://ytkz11@.github.io/2025/12/19/bu-jiu-zheng-ye-neng-kan-fan-wei-shou-ba-shou-jiao-ni-yong-python-he-rpc-miao-ti-wei-xing-ying-xiang-bian-kuang/"/>
-    <id>http://ytkz11@.github.io/2025/12/19/bu-jiu-zheng-ye-neng-kan-fan-wei-shou-ba-shou-jiao-ni-yong-python-he-rpc-miao-ti-wei-xing-ying-xiang-bian-kuang/</id>
-    <published>2025-12-19T13:20:10.000Z</published>
-    <updated>2025-12-19T03:23:07.149Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;大家好，我是小白。&lt;/p&gt;
-&lt;p&gt;最近处理国产卫星数据（比如高分、吉林一号这些），经常遇到一个痛点： 拿到的原始数据（L1级）是不带地理坐标的</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/gis/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>从 os.path 转向 pathlib</title>
-    <link href="http://ytkz11@.github.io/2025/12/18/cong-os.path-zhuan-xiang-pathlib/"/>
-    <id>http://ytkz11@.github.io/2025/12/18/cong-os.path-zhuan-xiang-pathlib/</id>
-    <published>2025-12-18T13:20:10.000Z</published>
-    <updated>2025-12-18T06:57:54.743Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;从 &lt;code&gt;os.path&lt;/code&gt; 转向 &lt;code&gt;pathlib&lt;/code&gt; 是 Python 开发中的一个重要升级。虽然 &lt;code&gt;os.path&lt;/code&gt; 已经服务了我们很多年，但 &lt;code&gt;pathlib&lt;/code&gt;（自 Python</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/gis/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 GDALOGR 提取矢量文件唯一字段值</title>
-    <link href="http://ytkz11@.github.io/2025/12/17/shi-yong-gdalogr-ti-qu-shi-liang-wen-jian-wei-yi-zi-duan-zhi/"/>
-    <id>http://ytkz11@.github.io/2025/12/17/shi-yong-gdalogr-ti-qu-shi-liang-wen-jian-wei-yi-zi-duan-zhi/</id>
-    <published>2025-12-17T13:20:10.000Z</published>
-    <updated>2025-12-17T02:36:45.978Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;在 GIS 开发中，我们经常需要从 Shapefile 或其他矢量文件中提取属性表的唯一值。今天分享一个简单的 Python 函数，使用 GDAL 的 OGR 模块来实现这个功能。&lt;/p&gt;
-&lt;p&gt;函数 get_names_from_vector</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/gis/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
     
   </entry>
   
