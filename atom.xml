@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2026-03-09T07:54:28.081Z</updated>
+  <updated>2026-03-10T14:58:03.625Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>全网疯传的“养龙虾”，到底是AI革命还是赛博地摊？</title>
+    <link href="http://ytkz11@.github.io/2026/03/10/quan-wang-feng-chuan-de-yang-long-xia-dao-di-shi-ai-ge-ming-huan-shi-sai-bo-di-tan/"/>
+    <id>http://ytkz11@.github.io/2026/03/10/quan-wang-feng-chuan-de-yang-long-xia-dao-di-shi-ai-ge-ming-huan-shi-sai-bo-di-tan/</id>
+    <published>2026-03-10T14:27:10.000Z</published>
+    <updated>2026-03-10T14:58:03.625Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;卖课的在数钱，小白在付费。OpenClaw 这一波“出圈”，究竟收割了谁的焦虑？&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="自媒体" scheme="http://ytkz11@.github.io/categories/%E8%87%AA%E5%AA%92%E4%BD%93/"/>
+    
+    
+    <category term="自媒体" scheme="http://ytkz11@.github.io/tags/%E8%87%AA%E5%AA%92%E4%BD%93/"/>
+    
+  </entry>
   
   <entry>
     <title>从指定某个v2ex帖子下载所有的评论</title>
@@ -496,34 +522,6 @@
         
         
     <summary type="html">&lt;p&gt;在测绘、GIS、工程建设等领域，“国家 2000 坐标系（CGCS2000）” 早已成为高频词汇。作为我国自主的高精度大地坐标系，它不仅是现代测绘体系的基础，更支撑着从城市规划到资源勘探的各类核心应用。而在实际使用中，“投影分带” 和 “带号” 是绕不开的关键知识点 ——</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 rasterio 将 0 值转换为 NoData 值</title>
-    <link href="http://ytkz11@.github.io/2025/12/23/shi-yong-rasterio-jiang-0-zhi-zhuan-huan-wei-nodata-zhi/"/>
-    <id>http://ytkz11@.github.io/2025/12/23/shi-yong-rasterio-jiang-0-zhi-zhuan-huan-wei-nodata-zhi/</id>
-    <published>2025-12-23T15:27:10.000Z</published>
-    <updated>2025-12-26T09:49:47.636Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我以前喜欢用gdal，不喜欢用rasterio。&lt;/p&gt;
-&lt;p&gt;因为rasterio在打包的时候存在很多问题。&lt;/p&gt;
-&lt;p&gt;但是，近一个月来，我使用rasterio的次数越来越多，主要原因还是rasterio包装了很多实用的api接口。&lt;/p&gt;
-&lt;p&gt;至于打包的问题，我后</summary>
         
       
     
