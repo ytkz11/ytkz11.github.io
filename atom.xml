@@ -6,7 +6,7 @@
   <link href="http://ytkz11@.github.io/atom.xml" rel="self"/>
   
   <link href="http://ytkz11@.github.io/"/>
-  <updated>2024-09-17T13:19:20.969Z</updated>
+  <updated>2026-06-23T14:15:28.477Z</updated>
   <id>http://ytkz11@.github.io/</id>
   
   <author>
@@ -17,24 +17,21 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>小型连续剧之程序员喜欢说的几句话</title>
-    <link href="http://ytkz11@.github.io/2024/09/17/xie-dai-ma-xi-huan-gan-de-yi-jian-shi-shi-ba-can-shu-xie-si/"/>
-    <id>http://ytkz11@.github.io/2024/09/17/xie-dai-ma-xi-huan-gan-de-yi-jian-shi-shi-ba-can-shu-xie-si/</id>
-    <published>2024-09-17T14:25:10.000Z</published>
-    <updated>2024-09-17T13:19:20.969Z</updated>
+    <title>我做了一个卫星地图下载助手，能看到同一个地方几十年的变化</title>
+    <link href="http://ytkz11@.github.io/2026/06/23/wo-zuo-liao-yi-ge-wei-xing-di-tu-xia-zai-zhu-shou-neng-kan-dao-tong-yi-ge-di-fang-ji-shi-nian-de-bian-hua/"/>
+    <id>http://ytkz11@.github.io/2026/06/23/wo-zuo-liao-yi-ge-wei-xing-di-tu-xia-zai-zhu-shou-neng-kan-dao-tong-yi-ge-di-fang-ji-shi-nian-de-bian-hua/</id>
+    <published>2026-06-23T14:33:34.000Z</published>
+    <updated>2026-06-23T14:15:28.477Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;小型连续剧之程序员喜欢说的几句话：&lt;/p&gt;
-&lt;p&gt;1、啊，在我环境没问题的呀&lt;/p&gt;
-&lt;p&gt;2、咋复现的？我这咋没问题呢？&lt;/p&gt;
-&lt;p&gt;3、这个我们没法验、能稳定复现吗&lt;/p&gt;
-&lt;p&gt;4、他们接口的问题&lt;/p&gt;
-&lt;p&gt;5、这是前端的问题，去找前端&lt;/p&gt;
-&lt;p&gt;6、这是后</summary>
+    <summary type="html">&lt;p&gt;你有没有好奇过，你家门前那条路十年前长什么样？你住的小区那块地，以前是不是一片农田？你常去的那座山，在卫星图上看又是什么样子？&lt;/p&gt;
+&lt;p&gt;我就好奇过，然后做了个工具。&lt;/p&gt;
+&lt;p&gt;下图是香港迪士尼公园。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -48,98 +45,73 @@
   </entry>
   
   <entry>
-    <title>从十年的注册测绘师提炼出与GIS相关的知识点</title>
-    <link href="http://ytkz11@.github.io/2024/09/16/yi-xie-gis-kao-shi-de-zhi-shi/"/>
-    <id>http://ytkz11@.github.io/2024/09/16/yi-xie-gis-kao-shi-de-zhi-shi/</id>
-    <published>2024-09-16T15:25:10.000Z</published>
-    <updated>2024-09-15T19:49:51.937Z</updated>
+    <title>学习51单片机的一个坑2 | 普中51 + STC89C52  数码管“0~9”逐字测试程序</title>
+    <link href="http://ytkz11@.github.io/2026/06/22/xue-xi-51-dan-pian-ji-de-yi-ge-keng-2/"/>
+    <id>http://ytkz11@.github.io/2026/06/22/xue-xi-51-dan-pian-ji-de-yi-ge-keng-2/</id>
+    <published>2026-06-22T14:33:34.000Z</published>
+    <updated>2026-06-22T15:25:07.312Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code class=&quot;language-none&quot;&gt;/***********************************************************
+  普中51 +</summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/GIS/"/>
+    <category term="嵌入式" scheme="http://ytkz11@.github.io/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="GIS" scheme="http://ytkz11@.github.io/tags/GIS/"/>
+    <category term="嵌入式" scheme="http://ytkz11@.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
-    <title>破损shp文件修复</title>
-    <link href="http://ytkz11@.github.io/2024/09/16/po-sun-shp-wen-jian-xiu-fu/"/>
-    <id>http://ytkz11@.github.io/2024/09/16/po-sun-shp-wen-jian-xiu-fu/</id>
-    <published>2024-09-16T14:25:10.000Z</published>
-    <updated>2024-09-17T09:05:47.611Z</updated>
+    <title>学习51单片机的一个坑</title>
+    <link href="http://ytkz11@.github.io/2026/06/21/xue-xi-51-dan-pian-ji-de-yi-ge-keng/"/>
+    <id>http://ytkz11@.github.io/2026/06/21/xue-xi-51-dan-pian-ji-de-yi-ge-keng/</id>
+    <published>2026-06-21T14:33:34.000Z</published>
+    <updated>2026-06-21T16:12:13.209Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;大家中秋节快乐！&lt;/p&gt;
-&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;最近我正式开始学习51单片机。这块普中开发板其实早在2024年就买了，但因为各种原因，一直在柜子里吃灰，整整两年没动过。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    <category term="嵌入式" scheme="http://ytkz11@.github.io/categories/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    <category term="嵌入式" scheme="http://ytkz11@.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
-    <title>ogr使用教程</title>
-    <link href="http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/09/13/ogr-shi-yong-jiao-cheng/</id>
-    <published>2024-09-13T09:25:10.000Z</published>
-    <updated>2024-09-15T14:37:42.939Z</updated>
+    <title>注册测绘师备考小程序综合真题答案勘误</title>
+    <link href="http://ytkz11@.github.io/2026/06/21/zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu-zong-he-zhen-ti-da-an-kan-wu/"/>
+    <id>http://ytkz11@.github.io/2026/06/21/zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu-zong-he-zhen-ti-da-an-kan-wu/</id>
+    <published>2026-06-21T14:33:34.000Z</published>
+    <updated>2026-06-20T16:21:06.702Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;h1 id=&quot;用法&quot;&gt;&lt;a href=&quot;#用法&quot; class=&quot;headerlink&quot; title=&quot;用法&quot;&gt;&lt;/a&gt;用法&lt;/h1&gt;&lt;pre</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>yolo数据集格式</title>
-    <link href="http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/"/>
-    <id>http://ytkz11@.github.io/2024/09/13/yolo-shu-ju-ji-ge-shi/</id>
-    <published>2024-09-13T09:25:10.000Z</published>
-    <updated>2024-09-15T14:37:43.002Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;p&gt;YOLO（You Only Look</summary>
+    <summary type="html">&lt;p&gt;注册测绘师备考小程序现已补齐2011年至2025年的《测绘综合能力》真题。&lt;/p&gt;
+&lt;p&gt;需要说明的是，有少量含插图的题目暂时无法录入小程序，还望见谅。&lt;/p&gt;
+&lt;p&gt;另外，个别题目的答案在业内存在争议，这类“怪题”占比较小，备考时建议直接跳过。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
         
       
     
@@ -153,18 +125,22 @@
   </entry>
   
   <entry>
-    <title>ogr使用教程</title>
-    <link href="http://ytkz11@.github.io/2024/09/13/guang-xue-yao-gan-kong-jian-fen-bian-lu-de-bian-jie-neng-li/"/>
-    <id>http://ytkz11@.github.io/2024/09/13/guang-xue-yao-gan-kong-jian-fen-bian-lu-de-bian-jie-neng-li/</id>
-    <published>2024-09-13T09:25:10.000Z</published>
-    <updated>2024-09-15T14:37:42.939Z</updated>
+    <title>注册测绘师备考小程序已添加2022年到2025年真题</title>
+    <link href="http://ytkz11@.github.io/2026/06/16/zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu-yi-tian-jia-2022-nian-dao-2025-nian-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2026/06/16/zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu-yi-tian-jia-2022-nian-dao-2025-nian-zhen-ti/</id>
+    <published>2026-06-16T14:33:34.000Z</published>
+    <updated>2026-06-19T03:04:39.844Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h1&gt;&lt;h1 id=&quot;用法&quot;&gt;&lt;a href=&quot;#用法&quot; class=&quot;headerlink&quot; title=&quot;用法&quot;&gt;&lt;/a&gt;用法&lt;/h1&gt;&lt;pre</summary>
+    <summary type="html">&lt;p&gt;最近开发了一个注册测绘师备考小程序。&lt;/p&gt;
+&lt;p&gt;这个小程序还是存在一些bug，我在尽力解决已发现的bug。&lt;/p&gt;
+&lt;p&gt;比如2022年的选项是显示不了、2023年到2025年的真题我没录入。&lt;/p&gt;
+&lt;p&gt;下面是兄弟们的反馈，对此我只能说：小程序持续改进中！&lt;/p&gt;
+</summary>
         
       
     
@@ -178,44 +154,47 @@
   </entry>
   
   <entry>
-    <title>在 Python 中使用 JSON</title>
-    <link href="http://ytkz11@.github.io/2024/09/12/zai-python-zhong-shi-yong-json/"/>
-    <id>http://ytkz11@.github.io/2024/09/12/zai-python-zhong-shi-yong-json/</id>
-    <published>2024-09-12T09:25:10.000Z</published>
-    <updated>2024-09-12T10:08:11.725Z</updated>
+    <title>读书时候多参加比赛是好事.md</title>
+    <link href="http://ytkz11@.github.io/2026/06/16/du-shu-shi-hou-duo-can-jia-bi-sai-shi-hao-shi/"/>
+    <id>http://ytkz11@.github.io/2026/06/16/du-shu-shi-hou-duo-can-jia-bi-sai-shi-hao-shi/</id>
+    <published>2026-06-16T14:33:34.000Z</published>
+    <updated>2026-06-16T11:41:35.016Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;了解如何在 Python 中使用 JSON，从基础到高级技术。本指南涵盖解析、序列化、API 集成和最佳实践。&lt;/p&gt;
-&lt;h1 id=&quot;1-JSON-简介&quot;&gt;&lt;a href=&quot;#1-JSON-简介&quot; class=&quot;headerlink&quot; title=&quot;1. JSON</summary>
+    <summary type="html">&lt;p&gt;前几天，超图的老师私聊我，问能不能帮忙推广一下他们的比赛。实属免费推广，我没有从中获利，但思索片刻后，我还是答应了下来。&lt;/p&gt;
+&lt;p&gt;读书期间，在不影响主线学业的前提下，多去参加各类比赛，是一件值得鼓励的事情。&lt;/p&gt;
+&lt;p&gt;所谓“主线”，指的是完成培养方案规定的课程、修</summary>
         
       
     
     
     
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
     
     
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
   <entry>
     <title></title>
-    <link href="http://ytkz11@.github.io/2024/09/09/vx-xiao-you-xi-ni-xiang-si-lu/"/>
-    <id>http://ytkz11@.github.io/2024/09/09/vx-xiao-you-xi-ni-xiang-si-lu/</id>
-    <published>2024-09-09T11:09:58.081Z</published>
-    <updated>2024-09-09T11:09:58.081Z</updated>
+    <link href="http://ytkz11@.github.io/2026/06/16/2025-nian-zong-he-neng-li-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2026/06/16/2025-nian-zong-he-neng-li-zhen-ti/</id>
+    <published>2026-06-16T11:34:49.198Z</published>
+    <updated>2026-06-16T02:42:57.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;本文章仅用于学习交流，请勿用于非法用途&quot;&gt;&lt;a href=&quot;#本文章仅用于学习交流，请勿用于非法用途&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;p&gt;2025 年测绘综合能力真题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;大地测量中外业观测的基准线是（ ）。&lt;br&gt;A、铅垂线 B、法线 C、地球引力线 D、大地线&lt;br&gt;参考答案：A&lt;br&gt;解析：外业测量基准线是铅垂线。&lt;br&gt;2.真北方向和坐标轴的夹角是什么角（</summary>
         
       
     
@@ -225,295 +204,87 @@
   </entry>
   
   <entry>
-    <title>sam</title>
-    <link href="http://ytkz11@.github.io/2024/09/09/sam/"/>
-    <id>http://ytkz11@.github.io/2024/09/09/sam/</id>
-    <published>2024-09-09T09:25:10.000Z</published>
-    <updated>2024-09-10T10:36:02.494Z</updated>
+    <title></title>
+    <link href="http://ytkz11@.github.io/2026/06/16/2024-nian-zong-he-neng-li-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2026/06/16/2024-nian-zong-he-neng-li-zhen-ti/</id>
+    <published>2026-06-16T11:34:48.974Z</published>
+    <updated>2026-06-16T03:10:45.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;2023 年发布的 Segment Anything 模型 (SAM) 因其出色的准确分割图像中物体的能力而迅速成为计算机视觉领域最先进的模型。SAM</summary>
+    <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
+&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
-    <title>带标注KML的批量生成，代码已开源，工具免费下载</title>
-    <link href="http://ytkz11@.github.io/2024/09/09/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/"/>
-    <id>http://ytkz11@.github.io/2024/09/09/dai-biao-zhu-kml-de-pi-liang-sheng-cheng/</id>
-    <published>2024-09-09T09:25:10.000Z</published>
-    <updated>2024-09-10T15:59:25.479Z</updated>
+    <title></title>
+    <link href="http://ytkz11@.github.io/2026/06/16/2023-nian-zong-he-neng-li-zhen-ti/"/>
+    <id>http://ytkz11@.github.io/2026/06/16/2023-nian-zong-he-neng-li-zhen-ti/</id>
+    <published>2026-06-16T11:34:48.776Z</published>
+    <updated>2026-06-16T03:10:45.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;这个号分享的、开源的代码，基本上是可以直接运行的，也是免费的。&lt;/p&gt;
-&lt;p&gt;为什么是免费的？主要是现在是在为爱发电，如果对你有帮助，点个赞不过分吧。&lt;/p&gt;
-&lt;p&gt;回到今天的主题，之前写过shp文件转换为KML文件，里面附上了代码。代码的实现仅依靠OGR库。而KML是基于</summary>
+    <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
+&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
   <entry>
-    <title>重采样影像</title>
-    <link href="http://ytkz11@.github.io/2024/09/06/chong-cai-yang-ying-xiang/"/>
-    <id>http://ytkz11@.github.io/2024/09/06/chong-cai-yang-ying-xiang/</id>
-    <published>2024-09-06T15:00:10.000Z</published>
-    <updated>2024-09-06T10:44:57.219Z</updated>
+    <title></title>
+    <link href="http://ytkz11@.github.io/2026/06/16/51-dan-pian-ji-dian-liang-led-wan-zheng-jiao-cheng/"/>
+    <id>http://ytkz11@.github.io/2026/06/16/51-dan-pian-ji-dian-liang-led-wan-zheng-jiao-cheng/</id>
+    <published>2026-06-16T11:34:48.627Z</published>
+    <updated>2026-06-16T09:18:15.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;代码&quot;&gt;&lt;a href=&quot;#代码&quot; class=&quot;headerlink&quot; title=&quot;代码&quot;&gt;&lt;/a&gt;代码&lt;/h1&gt;&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
+    <summary type="html">&lt;p&gt;你刚拿到普中51开发板，下面我用最详细、零基础也能看懂的方式，手把手带你点亮第一个LED。&lt;/p&gt;
+&lt;p&gt;整个过程分为四大部分：&lt;strong&gt;准备工作 → 安装软件 → 写程序 → 烧录运行&lt;/strong&gt;，请一步步跟着做。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3</summary>
         
       
     
     
     
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
     
   </entry>
   
   <entry>
-    <title>超大影像的矢量裁剪</title>
-    <link href="http://ytkz11@.github.io/2024/09/06/chao-da-ying-xiang-de-shi-liang-cai-jian/"/>
-    <id>http://ytkz11@.github.io/2024/09/06/chao-da-ying-xiang-de-shi-liang-cai-jian/</id>
-    <published>2024-09-06T14:00:10.000Z</published>
-    <updated>2024-09-06T10:44:57.219Z</updated>
+    <title>做了一个注册测绘师备考小程序</title>
+    <link href="http://ytkz11@.github.io/2026/06/15/zuo-liao-yi-ge-zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu/"/>
+    <id>http://ytkz11@.github.io/2026/06/15/zuo-liao-yi-ge-zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu/</id>
+    <published>2026-06-15T14:33:34.000Z</published>
+    <updated>2026-06-15T12:47:16.029Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;最近工作遇到了一个小需求，用一个矢量文件去裁剪一个超级大的栅格文件（单文件超过140G）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202409061114361.png&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/python/"/>
-    
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>shp文件转换为CAD文件  (改进版)</title>
-    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/"/>
-    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-gai-jin-ban/</id>
-    <published>2024-09-05T14:00:10.000Z</published>
-    <updated>2024-09-15T14:37:42.962Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
-&lt;p&gt;后面被吐槽说这个工具的大小为390M。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/categories/python/gis/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>shp文件转换为CAD文件  (第三版)</title>
-    <link href="http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/"/>
-    <id>http://ytkz11@.github.io/2024/09/05/shp-wen-jian-zhuan-huan-wei-cad-wen-jian-di-san-ban/</id>
-    <published>2024-09-05T14:00:10.000Z</published>
-    <updated>2024-09-15T14:37:42.987Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;上个月写了一个工具是关于shp文件转换为CAD文件，&lt;/p&gt;
-&lt;p&gt;前天写了一篇shp文件转换为CAD文件的博客（公众号），今天是周六，也没啥事做，所以我们继续来完善这个小工具吧！&lt;/p&gt;
-&lt;p&gt;有个朋友反映这个小工具的存在可以改进的地方、问题，并希望可以开发继续开发字段分</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/categories/python/gis/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>用于目标检测的YOLO v3 （二） 未完成</title>
-    <link href="http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/"/>
-    <id>http://ytkz11@.github.io/2024/09/03/yong-yu-mu-biao-jian-ce-de-yolo-v3-er/</id>
-    <published>2024-09-03T14:00:10.000Z</published>
-    <updated>2024-09-09T11:09:58.144Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;em&gt;YOLO v3&lt;/em&gt;是一种流行的用于实时物体检测的卷积神经网络(CNN) ，由Redmon等人于 2018</summary>
-        
-      
-    
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>py_rust_cpp_速度比较</title>
-    <link href="http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao/"/>
-    <id>http://ytkz11@.github.io/2024/09/02/py-rust-cpp-su-du-bi-jiao/</id>
-    <published>2024-09-02T14:00:10.000Z</published>
-    <updated>2024-09-09T11:09:58.095Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;TIobe指数依据向主要搜索引擎提交编程语言名称时返回的网页数量来衡量编程语言的流行程度。该指数每月更新一次，并提供了自2002年以来的历史数据。&lt;/p&gt;
-&lt;p&gt;其官网是&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/python/"/>
-    
-    <category term="rust" scheme="http://ytkz11@.github.io/categories/python/rust/"/>
-    
-    <category term="cpp" scheme="http://ytkz11@.github.io/categories/python/rust/cpp/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="rust" scheme="http://ytkz11@.github.io/tags/rust/"/>
-    
-    <category term="cpp" scheme="http://ytkz11@.github.io/tags/cpp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>windows电脑定时关机</title>
-    <link href="http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/"/>
-    <id>http://ytkz11@.github.io/2024/09/01/windows-dian-nao-ding-shi-guan-ji/</id>
-    <published>2024-08-31T17:54:10.000Z</published>
-    <updated>2024-09-09T11:09:58.097Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天聊一聊其他的。我时不时的有一个需求，是关于在windows电脑上定时关机。&lt;/p&gt;
-&lt;p&gt;不知道怎么地，我好几次都忘了这个自动定时关机的终端命令，于是每一次都要去网上查。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="工具" scheme="http://ytkz11@.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E5%B7%A5%E5%85%B7/python/"/>
-    
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="工具" scheme="http://ytkz11@.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>无人机照片空间分布及排序</title>
-    <link href="http://ytkz11@.github.io/2024/08/28/wu-ren-ji-zhao-pian-kong-jian-fen-bu-ji-pai-xu/"/>
-    <id>http://ytkz11@.github.io/2024/08/28/wu-ren-ji-zhao-pian-kong-jian-fen-bu-ji-pai-xu/</id>
-    <published>2024-08-28T14:00:10.000Z</published>
-    <updated>2024-09-09T11:09:58.144Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;从直觉上来说，照片拼接必然是在两张有重叠的照片拼接开始，慢慢递进循环到所有照片。&lt;/p&gt;
-&lt;p&gt;在原先的预想中，需要对照片进行排序。但是现在再细想一下，大疆无人机在拍摄照片时就做好了照片的排序。&lt;/p&gt;
-&lt;p&gt;例如：&lt;/p&gt;
+    <summary type="html">&lt;p&gt;起名字是一件非常困难的事情，本着简单的原则，结合本公众号ID，索性把注册测绘师备考小程序的ID改成     小白测绘。&lt;/p&gt;
+&lt;p&gt;这个小程序目前收录了2011年到2022年注册测绘师的综合选择题。&lt;/p&gt;
 &lt;p&gt;&lt;img</summary>
         
       
@@ -522,74 +293,250 @@
     
     <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
     
-    <category term="无人机" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/python/"/>
-    
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
-    
-    <category term="无人机" scheme="http://ytkz11@.github.io/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
     
   </entry>
   
   <entry>
-    <title>用于目标检测的YOLO v3 （一）</title>
-    <link href="http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/"/>
-    <id>http://ytkz11@.github.io/2024/08/27/yong-yu-mu-biao-jian-ce-de-yolo-v3-yi/</id>
-    <published>2024-08-27T14:00:10.000Z</published>
-    <updated>2024-09-09T11:09:58.144Z</updated>
+    <title></title>
+    <link href="http://ytkz11@.github.io/2026/06/15/an-zhuang-mimo-code-guo-cheng/"/>
+    <id>http://ytkz11@.github.io/2026/06/15/an-zhuang-mimo-code-guo-cheng/</id>
+    <published>2026-06-15T11:30:40.328Z</published>
+    <updated>2026-06-15T06:37:43.000Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;&lt;em&gt;YOLO v3&lt;/em&gt;是一种流行的用于实时物体检测的卷积神经网络(CNN) ，由Redmon等人于 2018</summary>
+    <summary type="html">&lt;p&gt;安装mimo code过程很简单。&lt;/p&gt;
+&lt;p&gt;第一步，安装node.js&lt;/p&gt;
+&lt;p&gt;打开这个links:&lt;a</summary>
         
       
     
     
     
-    <category term="深度学习" scheme="http://ytkz11@.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="深度学习" scheme="http://ytkz11@.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
-    <title>通过python创建矢量文件</title>
-    <link href="http://ytkz11@.github.io/2024/08/27/tong-guo-python-chuang-jian-shi-liang-wen-jian/"/>
-    <id>http://ytkz11@.github.io/2024/08/27/tong-guo-python-chuang-jian-shi-liang-wen-jian/</id>
-    <published>2024-08-27T14:00:10.000Z</published>
-    <updated>2024-09-09T11:09:58.155Z</updated>
+    <title>TIFF格式是谁发明的？为什么地信遥感界离不开它？未来又会走向哪里？.md</title>
+    <link href="http://ytkz11@.github.io/2026/05/24/tiff-ge-shi-shi-shui-fa-ming-de-wei-shi-me-di-xin-yao-gan-jie-chi-bu-kai-ta-wei-lai-you-hui-zou-xiang-na-li/"/>
+    <id>http://ytkz11@.github.io/2026/05/24/tiff-ge-shi-shi-shui-fa-ming-de-wei-shi-me-di-xin-yao-gan-jie-chi-bu-kai-ta-wei-lai-you-hui-zou-xiang-na-li/</id>
+    <published>2026-05-24T14:33:34.000Z</published>
+    <updated>2026-05-23T16:16:25.252Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;现有四个点：(1, 1), (2, 2), (3, 3), (4,</summary>
+    <summary type="html">&lt;h1 id=&quot;TIFF-格式是谁发明的？为什么遥感界离不开它？未来又会走向哪里？&quot;&gt;&lt;a href=&quot;#TIFF-格式是谁发明的？为什么遥感界离不开它？未来又会走向哪里？&quot; class=&quot;headerlink&quot; title=&quot;TIFF</summary>
         
       
     
     
     
-    <category term="gis" scheme="http://ytkz11@.github.io/categories/gis/"/>
-    
-    <category term="遥感" scheme="http://ytkz11@.github.io/categories/gis/%E9%81%A5%E6%84%9F/"/>
-    
-    <category term="python" scheme="http://ytkz11@.github.io/categories/gis/%E9%81%A5%E6%84%9F/python/"/>
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
     
     
     <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
-    <category term="python" scheme="http://ytkz11@.github.io/tags/python/"/>
+  </entry>
+  
+  <entry>
+    <title>许家印纪录片（双人对话版）</title>
+    <link href="http://ytkz11@.github.io/2026/05/24/xu-jia-yin-ji-lu-pian-shuang-ren-dui-hua-ban/"/>
+    <id>http://ytkz11@.github.io/2026/05/24/xu-jia-yin-ji-lu-pian-shuang-ren-dui-hua-ban/</id>
+    <published>2026-05-24T14:33:34.000Z</published>
+    <updated>2026-05-25T14:25:00.542Z</updated>
     
-    <category term="gis" scheme="http://ytkz11@.github.io/tags/gis/"/>
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;好的，这是根据您提供的许家印纪录片文案，改编成的双人对话版本。时长仍约为15分钟。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;角色设定：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;甲&lt;/strong&gt;：沉稳、冷静，像一位历史记录者，负责梳理事实脉络。&lt;/li&gt;
+&lt;li</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="http://ytkz11@.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pdf软件推荐Sumatra PDF</title>
+    <link href="http://ytkz11@.github.io/2026/05/19/pdf-ruan-jian-tui-jian-sumatra-pdf/"/>
+    <id>http://ytkz11@.github.io/2026/05/19/pdf-ruan-jian-tui-jian-sumatra-pdf/</id>
+    <published>2026-05-19T14:33:34.000Z</published>
+    <updated>2026-05-19T11:47:22.805Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;好久没看书了，看书就得有软件，我推荐一款最近正在用的pdf软件，绿色无毒，文件大小是10MB左右。&lt;/p&gt;
+&lt;p&gt;它名字叫做sumatra PDF.&lt;/p&gt;
+&lt;p&gt;它只支持在window系统安装、使用。&lt;/p&gt;
+&lt;p&gt;网址在下面，自取。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="软件" scheme="http://ytkz11@.github.io/categories/%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+    <category term="软件" scheme="http://ytkz11@.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开发日记：YOLO 实例分割可视化工具</title>
+    <link href="http://ytkz11@.github.io/2026/05/14/kai-fa-ri-ji-yolo-shi-li-fen-ge-ke-shi-hua-gong-ju/"/>
+    <id>http://ytkz11@.github.io/2026/05/14/kai-fa-ri-ji-yolo-shi-li-fen-ge-ke-shi-hua-gong-ju/</id>
+    <published>2026-05-14T14:33:34.000Z</published>
+    <updated>2026-05-19T11:47:22.805Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;开发日记：YOLO-实例分割可视化工具（增强版）&quot;&gt;&lt;a href=&quot;#开发日记：YOLO-实例分割可视化工具（增强版）&quot; class=&quot;headerlink&quot; title=&quot;开发日记：YOLO 实例分割可视化工具（增强版）&quot;&gt;&lt;/a&gt;开发日记：YOLO</summary>
+        
+      
+    
+    
+    
+    <category term="AI" scheme="http://ytkz11@.github.io/categories/AI/"/>
+    
+    
+    <category term="AI" scheme="http://ytkz11@.github.io/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用半佛仙人的文风写遥感</title>
+    <link href="http://ytkz11@.github.io/2026/05/12/shi-yong-ban-fo-xian-ren-de-wen-feng-xie-yao-gan/"/>
+    <id>http://ytkz11@.github.io/2026/05/12/shi-yong-ban-fo-xian-ren-de-wen-feng-xie-yao-gan/</id>
+    <published>2026-05-12T14:27:10.000Z</published>
+    <updated>2026-05-12T15:02:02.342Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;兄弟们，今天聊个听起来特科幻，其实原理特朴素的东西——&lt;strong&gt;遥感&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;说白了，这就是&lt;strong&gt;隔空搞情报&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你以为遥感是卫星在天上发激光，或者像科幻片里那样“滴”一下扫出地下的黄金？太天真了。遥感</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>问了下CHATGPT怎么优化网络结构</title>
+    <link href="http://ytkz11@.github.io/2026/05/12/wen-liao-xia-chatgpt-zen-me-you-hua-wang-luo-jie-gou/"/>
+    <id>http://ytkz11@.github.io/2026/05/12/wen-liao-xia-chatgpt-zen-me-you-hua-wang-luo-jie-gou/</id>
+    <published>2026-05-12T14:27:10.000Z</published>
+    <updated>2026-05-12T15:02:02.343Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我的提示词是：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RS新手怎么下载免费的遥感影像数据</title>
+    <link href="http://ytkz11@.github.io/2026/05/09/rs-xin-shou-zen-me-xia-zai-mian-fei-de-yao-gan-ying-xiang-shu-ju/"/>
+    <id>http://ytkz11@.github.io/2026/05/09/rs-xin-shou-zen-me-xia-zai-mian-fei-de-yao-gan-ying-xiang-shu-ju/</id>
+    <published>2026-05-09T14:27:10.000Z</published>
+    <updated>2026-05-12T15:02:02.341Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;RS新手怎么下载免费的遥感影像数据？&lt;/p&gt;
+&lt;p&gt;有不少的人在后台问我这个问题。&lt;/p&gt;
+&lt;p&gt;我推荐去这两个地方下载数据。&lt;/p&gt;
+&lt;p&gt;1是USGS&lt;/p&gt;
+&lt;p&gt;2是欧空局&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>躺是躺不平的呀</title>
+    <link href="http://ytkz11@.github.io/2026/05/09/tang-shi-tang-bu-ping-de-ya/"/>
+    <id>http://ytkz11@.github.io/2026/05/09/tang-shi-tang-bu-ping-de-ya/</id>
+    <published>2026-05-09T14:27:10.000Z</published>
+    <updated>2026-05-12T15:02:02.342Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;好久没更新了，最近我不是很忙，下班后直接打开暗黑破坏神4，刷刷刷！这个游戏真上头。&lt;/p&gt;
+&lt;p&gt;上个月，和朋友讨论了关于躺平的问题。&lt;/p&gt;
+&lt;p&gt;我的观点是：躺平与否是由你自己决定，私下说应该是不要信宏大叙事，但是一定是要把自己的生活搞好。&lt;/p&gt;
+&lt;p&gt;朋友给我转发那</summary>
+        
+      
+    
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/categories/%E9%97%B2%E8%81%8A/"/>
+    
+    
+    <category term="闲聊" scheme="http://ytkz11@.github.io/tags/%E9%97%B2%E8%81%8A/"/>
     
   </entry>
   
