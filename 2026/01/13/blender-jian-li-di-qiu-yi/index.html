@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>blender建立地球仪 | Find everything you need</title><meta name="keywords" content="blender"><meta name="author" content="ytkz"><meta name="copyright" content="ytkz"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="blender建立地球仪"><meta name="application-name" content="blender建立地球仪"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="blender建立地球仪"><meta property="og:url" content="https://ytkz11.github.io/2026/01/13/blender-jian-li-di-qiu-yi/index.html"><meta property="og:site_name" content="Find everything you need"><meta property="og:description" content="J:\blender\教程\Blender教程｜手把手教你建模一个NASA级别的真实地球_2.txt 在blender中，创建逼真地球的第一个技巧，是使用低分辨率的UV球体  开始使用的是颜色贴图，10K的地球图片进行颜色贴图 输入平滑阴影添加细分曲面修改器我们也切换到cycles渲染引擎的GPU渲"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://raw.githubusercontent.com/ytkz11/picture/master/4414d60efdb42af023d6b741849273e7.jpg"><meta property="article:author" content="ytkz"><meta property="article:tag"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://raw.githubusercontent.com/ytkz11/picture/master/4414d60efdb42af023d6b741849273e7.jpg"><meta name="description" content="J:\blender\教程\Blender教程｜手把手教你建模一个NASA级别的真实地球_2.txt 在blender中，创建逼真地球的第一个技巧，是使用低分辨率的UV球体  开始使用的是颜色贴图，10K的地球图片进行颜色贴图 输入平滑阴影添加细分曲面修改器我们也切换到cycles渲染引擎的GPU渲"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://ytkz11.github.io/2026/01/13/blender-jian-li-di-qiu-yi/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"prismjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: ytkz","link":"链接: ","source":"来源: Find everything you need","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: 'Find everything you need',
+  title: 'blender建立地球仪',
+  postAI: '',
+  pageFillDescription: '教程教程手把手教你建模一个级别的真实地球在中创建逼真地球的第一个技巧是使用低分辨率的球体开始使用的是颜色贴图的地球图片进行颜色贴图输入平滑阴影添加细分曲面修改器我们也切换到渲染引擎的渲染视图模式让我们添加一个太阳灯将能量增加导师并将北京颜色设置为太空既然我们在这里让我们也增加世界的大小目前只有米乘米通常我会建议使用真实世界的测量值但在这种情况下这会导致出现问题那所以我们将使用期一小部分将其设置为米这是真实世界大小的摸分之一但至少在使用精神时它看起来会更真实现在我们几乎无法在任何仕途中很好地看到这一点这是因为试图距离设置为在以前米处结束所以让我们将其增加到十然后调整拆建期时间将其设置为十现在我们可以看到整个世界接下来你可能会注意到的问题是均匀的粗糙度海洋应该是光亮的而陆地应该是粗糙的但目前它使用的是一个均匀的纸所以接下来我要使用的纹理是一个陆地海洋图我将获取版本将其设置为非颜色数据因为我们不适用任何颜色信息并将其插入到粗糙读书入中而现在这已经起作用了但他是反向工作的它是陆地变得光亮而是海洋变得粗糙现在我们可以使用一个翻转节点但我无论如何都想调整这些值所以我们该用一个映射范围节点首先为了翻转它我将其设置为与原来相反的范围也就是从现在已经反转了现在这里成为我们海洋的最大粗糙度然后这个只是我们绿底的粗糙度所以接下来我们需要的是凹凸效果所以我要添加另一个图像纹理这将是地球的地形图我将使用一个的地图因为在这种情况下额外的分辨率确实有帮助我还要再次确保将其设置为非颜色数据因为我们不适用任何颜色信息虽然我们可以将其插入凹凸输入并进行一些伪造但我发现如果是用真实集合体来推动它效果会更好所以我将使用唯一节点将其插入高度输入然后将其插入材质输出这将给我们带来这样的效果现在这仍然是伪造的知道我们将材质设置中的表面唯一从金奥图更改为唯一和凹凸现在它在物理上改变了世界但因为我们改变了地球的比例却没有应用它你可以看到这里的比例测量设置为留白所以我要按下控制键加来应用比例现在我们想要的另一件事是让它细分靠近摄像机的部分因为我们不相对所有东西进行统一细分因为那样做是没有必要的但我没有选择这个选项直到我进入渲染设置并将其更改为实验模式然后我可以点击子挂印细分好的他正在工作但我们的比例有点低所以让我们把比例增加到五现在你可以看到我们的网格上出现了真正的山脉为了不让地球也缩小我会将中间层级设置为零我们稍后会回到材质部分但首先让我们重命名这个球体表面然后复制它右键点击取消移动并将副本中命名为大气层然后创建一个全新的材质三出注超色期非常简单的我们只需用一个提及三色体还它并将其连接到体积输出上我们看不到任何东西因为它目前与下面的世界大小完全相同所以按下键调出属性让我们来改变这个让我们在上面加个十所以基本上让它嗯周长多出米我试图获取真实世界中大脐橙的诗集大小但很难确定因为可见范围变化很大不过这也无关紧要这样就可以了啊我将把它的颜色改为浅蓝色然后将密度调到非常低大约是看起来相当不错但我现在才注意到一个问题这是我第三次制作这个叫城市才发现的就是海洋看起来很烂真的非常非常烂也许它不应该这样现在如果我们关闭大气层看基础表面你会发现海洋已经是蓝色的但实际上谁是没有颜色的随时在翻设大气层所以没有理由这部分应该是蓝色的因为我们是根据大气层自然着色的而大气层是使用体积的因此这应该是正确的不需要在旗下的基础颜色中加入任何加的蓝色所以回到我们的表面在这里我们有颜色直接进入基础颜色输入我想做的是添加一个色相饱和度直接点并将饱和度改为零现在很明显这已经是所有东西都去饱和了所以我想要做的是确保绿的保持有颜色而海洋去饱和为此我可以使用从我的陆地海洋地图中获得的这个指数入到因子输入中这样他就可以用作一个折招基本上表示只有海洋应该去饱和其他所有东西都应该是有颜色的现在当我把大气层也加上来看时它看起来自然多了海洋的照射就像其他所有东西一样由已经存在的大气层来完成如果你想让海洋更烂一点你可以稍微增加一下哪里的饱和度值现在让我们设置一个渲染的镜头我来自澳大利亚尽管我很想在这个教程中渲染澳大利亚但它实际上没有什么有趣的山脉我们没有在我看来澳大利亚的地形并不那么有趣这里很平坦但嗯他并不能成为一个非常有趣的轩然对象但是如果我们使用大多数观看这个教程的人的国家嗯美国啊它有一些非常有趣的河流河山脉在我看来这是一个非常风景如画的国家还有一些其他地方你也许可以去但我认为这里看起来相当不错所以我打算把我的视角定位在这里我要添加一个新相机然后按下控制加加小键盘零如果你什么都看不到你应该记得需要调整你的视图才建设置就像你在这里的视图中所做的一样所以将你的猜肩其实设置为米结束设置为一模米如果你只是想四处飞行按下加波浪号键扫你就可以像玩电子游戏一样使用它只需向上滚动因为我们在这里处理的是如此巨大的比例直到你能够像一个真正的像鸡玩家一样移动但基本上他给你像虚幻引擎和其他第一人称射击游戏那样的控制不错嗯让我们渲染一下看看效果如何在渲染的时候你们知道吗有一个插件可以让你直接将模型纹理和下载到你的场景中它叫做插件可以实时连接到我们的网站哪里有个资产可以通过点击一个按钮下载和导入你甚至可以通过三个步骤尝试使用个免费资产首先电击描述中的链接下载插件第二登录一个免费的账户然后第三输入方文个可以在中使用的免费模型纹理和好的所以在我的电脑上这花了秒我的电脑是工作站配备了就是我们可以通过一些方法大大改进这一点首先的磨人噪声阈值有点太高了我通常发现对于最终渲染比较合适而玉兰是比较耗效果很好而且因为我们使用了自挂影细分它可能必须要的细分我们的网格更多所以呃我们的最大细分在哪里我打算把它从改为流这意味着最接近摄像机的网格最多会被细分六次所以现在让我们再渲染一次看看有什么不同所以从秒到现在的秒如果我来回切换你可以看到我们获得的细节减少了那是因为我们减少了细分的数量但这并不算太早你仍然可以看到网格上有阴影他仍然工作的很好但渲染起来轻松得多所以我们有了地面有了大气层我们缺少的一件事是云所以我要复制我们的表面对象油煎清除其为止然后我会把它命名为云给它一个全新的材质然后将这色漆从基本该为此表面散射现在我们看不到它因为它占据了完全相同的大小所以我只需要把它稍微放大一点啊让我们设为其货吧所以呢我们的一些运环稿但这在现实世界中也是自然的所以应该没问题好的显然地球并不是被完全不透明的云层包围的所以我们需要另一个图像纹理这次仍然由提供这是地球云纹理它的分辨率最高可达死是但我认为应该就足够了不过我们不适用任何颜色信息所以要确保颜色空间设置为非颜色数据我想做的是不要将其输入到颜色输入中因为那样会有黑色区域这是我们不想要的相反我们希望它驱动一个混合着色器再次表面着色漆和透明着色器之间切换所以如果我把这个放到底部然后将我的颜色输出放到因子输入中你会看到他在做一些事情但他做错了那是因为这些着色器的顺序是错误的所以把此表面放到底部现在这就正常工作了如果你不喜欢特定的运层位置我确实发现运层的位置对渲染效果有很大影响有时候你可能会完全用云层覆盖绿地看起来就很烦人嗯所以你想要尝试找到一个云层系数的区域这样看起来即真实又不会多到看不见下面的绿地所以我就在轴上旋转直到找到一个看起来令人愉悦的效果对我来说看起来不错他缺少的一件事是云层本身的阴影我们可以通过一些凹凸或唯一来实现这一点所以我们将对云层使用完全相同的自挂影细分因此我将添加一个唯一节点将其输出连接到高度输入然后将唯一连接到材质输出和然后像之前一样进入材质设置选择唯一和凹凸因为我们已经勾选了自挂印细粉所以应该已经准备好了现在你可能会注意到这里看起来有点红色的色调如果你增加此表面三色的比例你会看到的更明显原因是你的词表面散射节点中的半径只有三个分别是和这些是每个通道的三色量这基本上什么人培植为皮肤因为这是此表面三色最常见的用途但在我们的情况下我们希望它只是白色所以我会把它脱下来然后把所有制度设为一太棒了现在这个值的比例你可以看到如果我把它设为一我们会得到非常阴的效果几乎就像这是一个满反射着色器但如果我把它设为二你可以看到会有一点光线深入如果我把它设得太高比如是那么你会失去很多阴影它会变得非常乳白以至于你几乎看不到任何细节所以这只是找到一个不错的中间值的问题我认为在这种情况下只为三效果很好所以这就是我们现在的样子但我们应该是终于参考照片进行比较嗯嗯我有一个参考照片的集合在一个压缩文件中你可以在描述中下载你也可以从网站获取它们但网站并不容易批量下载东西嗯所以我实际上雇了一名助手来啊抓取所有内容但无论如何反看这些照片时你会注意到几件事情最明显的是世界的边缘并不像我们这里这样直接切断当然由于大气层的存在它是渐变的所以我们当前的大气层是一个体积是一个体积着色气但它仍然显得相当坚固我尝试了各种方法试图让体积照射器通过渐变纹理等来模仿这种效果但实际上没有什么区别最好的方法也是迄今为止最便宜和最简单的方法就是使用合成器所以进入你的渲染层设置然后在这里我们要打开阴影现在这可能没有意义但一旦我们悬然冰给你展示通道后就会明白然后在电影选项下我希望你启用透明这在我们渲染冰进入合成器后会再次有意义渲染完成跳转到合成期点击使用节点然后我们只需按着加点击直到我们看到那个阴影通道在我们模糊它之前可能不会明白我们为什么有一个阴影通道所以按加选择路径模糊把它放进去设置为快速高斯相对然后设为大约好的你可以看到地平线上那个边缘现在被模糊了其余的我们实际上不需要关注因为我现在要做的是使用一个叠加节点然后将原始渲染直接啊叠加在上面反转它现在你可以看到那个边缘有了一种柔和感不过我们不希望它看起来是白色的所以我要添加一个颜色渐变节点我们先单独查看一下这个效果这样会使它变成纯白色让我们把它变成深蓝色然后我会在它后面再加一个试着模仿参考照片中看到的浅蓝色因为在接近地平线的地方是非常浅的蓝色然后向外延伸时变成深蓝色现在我已经完成了让我们来看一下这看起来有点太青涩了稍微调成更烂一点呃稍微去饱和一些我也会把这个稍微往回拖一点我把这些拖到中间点现在我可以看到我得到了那个漂亮的地平线我可能会把这个讲到这样就好了快速简单的气氛衰减当我们与参考进行比较时你可以注意到在查看参考照片时无论何处有阳光反射在海洋或河流觞你会看到一点玄光这在这个小湖河上看起来会非常好实际上我不知道这是美国的那个地方但这个漂亮的呼河如果有一些眩光会看起来很好所以在你的渲染层设置中在光泽选项下我们要启用一个光泽直接通道渲染再次进入合成选项卡你可以看到光泽直接通道只是将光泽格骑在他自己的黑色层上所以如果我将其连接到一个眩光节点保持在条纹模式但将数量设置为史流然后掉地摔箭使其非常非常微妙讲混合调到这样我们只看到玄光然后我们将鱼值设置为大约不我希望从一些周围的河流中散发出一点光但不要太多给它加一点颜色然后我们将用一个典型的混合节点设置为相加来组合它然后只是将音子的量调的非常非常小比如这就是最终的节点设置这是之前的效果这是之后的效果之前诶之后微妙的变化但效果显著所以呃呃现在唯一能改善我们地球的方法就是在地球的暗面有椰等啊无论哪里有城市当然都不会是一片漆黑因为人们会打开电器和洁等等所以我们希望能够在这里看到这些碰巧的是提供给我们的便利纹理之一就是耶等地图所以我要把它加载进来我发现是最佳选择一如既往我们要确保它设置为非颜色数据然后我想把它插入到我们基本超色器的发光强度中让我在这里腾出一点空间因为否则会有点复杂让我们把这个移过去好的在我们将某些东西连接到发光颜色之前我们在这里不会看到任何发光所以为此我将使用黑体呃色温这就像是用开尔温温度你知道的像白炽灯泡之类的东西然后我会把它设置为这是一种不错的中等范围温暖的水平你可以看到他在黑暗区域中正常工作你可以看到灯光但你也可以在明亮的区域看到它就在大白天我们有这些城镇他们只是点亮了太阳的强度呃这完全没有意义所以我们想做的是告诉无论太阳指向哪里我们希望王哥的那一侧不适用哪部分纹理这相当记住性但实际上只需要几个节点第一个节点是一个纹理坐标节点然后我会使用这个习惯工具获取太阳对象的纹理坐标然后我会将其输入到一个发现节点并获取该对象的坐标所以太阳的对象做标注入到一个发现节点这样这里就是我们地球的表面发现所以它就像是在说我们地球的这一侧发现对七道太阳的旋转然后我想获取那个点值并将其与这个灰度纹理合并呃输入到发光强度中为此我只需使用一个数学节点然后将其设置为乘法并拖动到底部输入当你这样做时你可能会发现突然出现了一些问题首先后面的黑暗区域没有光亮但明亮区域也是如此就像是纯黑色原因时只有当太阳对象与地球本身共享相同的原点时使用太阳的纹理坐标才会有效这意味着如果它在地球之外它将不起作用他需要在内部所以按下假设你的地球的原点正好在场景的中心如果你是在哪里添加的球体那么现在应该可以工作了就是这样所以我们现在有了我们的光源实际上如果我们将太阳的强度设置为零你可以看到它正在工作它只照亮了地球的一侧然而它照亮的是地球的错误一侧所以在这里和这里之间我需要添加一个映射范围节点然后如果我把这个从最大值拖到这个负范围你可以看到它现在已经有效的反转了它被反转了现在工作正常但实际上如果我想让他在这里更好而不仅仅是反转它你可以看到他从光国读到夜湾区于是过渡的稍微遭了一点你可以想象如果是黄昏人们还没有真正打开他们的等所以应该有一条黑色的带子等还没有被打开所以为此我实际上可以把这个最小范围稍微往回调一点再多一点你不想钓的太远如果雕的太远他就会反过来所以我想确保这个呃最大范围总是低于起始范围但你可以看到现在我已经这样做了我把这个更接近零范围它就会更接近嗯嗯太阳的过渡点所以如果我想要有更多的袋子我就会把它设置的越来越暗像这样越来越往后然后这就像你可以想象的那样就像一个尖边从灯光关闭到灯光开启然后基本上这里的最大值就成为了强度所以如果我想让它比如说亮五倍那么我就会把它设置为一人们常说呃你实际上能够看到阳光照射到地球的一侧并看到夜晚的灯光这是不太可能的这确实是非常正确的比如地球上一个城市的野等梁都远远达不到太阳的强度值但这更具艺术性看到地球的另一半呃灯光山说是相当有趣的所以我喜欢把他雕的世纪应该的稍微高一点这是我们最终的渲染结果在就是上号是秒如果你想进一步减少时间再当然可以提高早生与之把最大细分讲到三火师啊冰晶可能使用最低分辨率的纹理你可以看到我能把时间缩短到秒这是最终的动画最后的那个天天圈是项目的预告该项目将于月日上线目的是为筹集资金从月日开始每天将拍卖一个天天圈持续天然后所有资金将捐赠给以帮助改进我们喜爱的这款软件如果你喜欢这个视频请点击赞和订阅如果你想看到更多类似的视频',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2026-01-14 00:21:50',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Find everything you need" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">Find everything you need</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 1.05rem;">AI<sup>2</sup></a><a href="/tags/GDAL/" style="font-size: 1.05rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 1.05rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 1.05rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 1.05rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.05rem;">JavaScript<sup>1</sup></a><a href="/tags/SAR/" style="font-size: 1.05rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 1.05rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 1.05rem;">arcgis<sup>1</sup></a><a href="/tags/blender/" style="font-size: 1.05rem;">blender<sup>1</sup></a><a href="/tags/c/" style="font-size: 1.05rem;">c#<sup>2</sup></a><a href="/tags/cpp/" style="font-size: 1.05rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 1.05rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 1.05rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 1.05rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 1.05rem;">gis<sup>9</sup></a><a href="/tags/golang/" style="font-size: 1.05rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 1.05rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 1.05rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 1.05rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 1.05rem;">linux<sup>7</sup></a><a href="/tags/matlab/" style="font-size: 1.05rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 1.05rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 1.05rem;">python<sup>52</sup></a><a href="/tags/rust/" style="font-size: 1.05rem;">rust<sup>2</sup></a><a href="/tags/sar/" style="font-size: 1.05rem;">sar<sup>5</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 1.05rem;">下载<sup>1</sup></a><a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 1.05rem;">吐槽<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1.05rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.05rem;">技术<sup>3</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 1.05rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 1.05rem;">深度学习<sup>32</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 1.05rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 1.05rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 1.05rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.05rem;">编程<sup>30</sup></a><a href="/tags/%E8%87%AA%E5%AA%92%E4%BD%93/" style="font-size: 1.05rem;">自媒体<sup>5</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 1.05rem;">软件<sup>1</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 1.05rem;">遥感<sup>216</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 1.05rem;">闲聊<sup>14</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/06/"><span class="card-archive-list-date">六月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/05/"><span class="card-archive-list-date">五月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/04/"><span class="card-archive-list-date">四月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/03/"><span class="card-archive-list-date">三月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">12</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/02/"><span class="card-archive-list-date">二月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/01/"><span class="card-archive-list-date">一月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">9</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">13</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">7</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/blender/" itemprop="url">blender</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/blender/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>blender</span></a></span></div></div><h1 class="post-title" itemprop="name headline">blender建立地球仪</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-01-13T15:49:10.000Z" title="发表于 2026-01-13 23:49:10">2026-01-13</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-01-13T16:21:50.030Z" title="更新于 2026-01-14 00:21:50">2026-01-14</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://raw.githubusercontent.com/ytkz11/picture/master/4414d60efdb42af023d6b741849273e7.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://ytkz11.github.io/2026/01/13/blender-jian-li-di-qiu-yi/"><header><a class="post-meta-categories" href="/categories/blender/" itemprop="url">blender</a><a href="/tags/blender/" tabindex="-1" itemprop="url">blender</a><h1 id="CrawlerTitle" itemprop="name headline">blender建立地球仪</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">ytkz</span><time itemprop="dateCreated datePublished" datetime="2026-01-13T15:49:10.000Z" title="发表于 2026-01-13 23:49:10">2026-01-13</time><time itemprop="dateCreated datePublished" datetime="2026-01-13T16:21:50.030Z" title="更新于 2026-01-14 00:21:50">2026-01-14</time></header><p>J:\blender\教程\Blender教程｜手把手教你建模一个NASA级别的真实地球_2.txt</p>
+<p>在blender中，创建逼真地球的第一个技巧，是使用低分辨率的UV球体</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20260114001058512.png" alt="image-20260114001058512"></p>
+<p>开始使用的是颜色贴图，10K的地球图片进行颜色贴图</p>
+<p>输入平滑阴影<br>添加细分曲面修改器<br>我们也切换到cycles渲染引擎的GPU<br>渲染视图模式<br>让我们添加一个太阳灯<br>将能量增加导师<br>并将北京颜色设置为太空<br>既然我们在这里<br>让我们也增加世界的大小<br>目前只有2米乘2米<br>通常我会建议使用真实世界的测量值<br>但在这种情况下<br>这会导致blender出现问题<br>那所以我们将使用期一小部分<br>将其设置为1274.2米<br>这是真实世界大小的摸分之一<br>但至少在使用精神时<br>它看起来会更真实<br>现在我们几乎无法在任何仕途中<br>很好地看到这一点<br>这是因为试图距离设置为在以前米处结束<br>所以让我们将其增加到十<br>然后调整拆建期时间<br>将其设置为十<br>现在我们可以看到整个世界<br>接下来你可能会注意到的问题是均匀的粗糙度<br>海洋应该是光亮的<br>而陆地应该是粗糙的<br>但目前它使用的是一个均匀的纸<br>所以接下来我要使用的纹理是一个陆地海洋图<br>我将获取16K版本<br>将其设置为非颜色数据<br>因为我们不适用任何颜色信息<br>并将其插入到粗糙读书入中<br>而现在这已经起作用了<br>但他是反向工作的<br>它是陆地变得光亮<br>而是海洋变得粗糙<br>现在我们可以使用一个翻转节点<br>但我无论如何都想调整这些值<br>所以我们该用一个映射范围节点<br>首先为了翻转它<br>我将其设置为与原来相反的范围<br>也就是从1~0<br>现在已经反转了<br>现在这里成为我们海洋的最大粗糙度<br>然后这个只是我们绿底的粗糙度<br>所以接下来我们需要的是凹凸效果<br>所以我要添加另一个图像纹理<br>这将是地球的地形图<br>我将使用一个21K的地图<br>因为在这种情况下<br>额外的分辨率确实有帮助<br>我还要再次确保将其设置为非颜色数据<br>因为我们不适用任何颜色信息<br>虽然我们可以将其插入凹凸输入<br>并进行一些伪造<br>但我发现如果是用真实集合体来推动它<br>效果会更好<br>所以我将使用唯一节点将其插入高度输入<br>然后将其插入材质输出<br>这将给我们带来这样的效果<br>现在这仍然是伪造的<br>知道我们将材质设置中的表面<br>唯一从金奥图更改为唯一和凹凸<br>现在它在物理上改变了世界<br>但因为我们改变了地球的比例<br>却没有应用它<br>你可以看到这里的比例测量设置为留白<br>所以我要按下控制键加A来应用比例<br>现在我们想要的另一件事是让它细分<br>靠近摄像机的部分<br>因为我们不相对所有东西进行统一细分<br>因为那样做是没有必要的<br>但我没有选择这个选项<br>直到我进入渲染设置<br>并将其更改为实验模式<br>然后我可以点击子挂印<br>细分好的<br>他正在工作<br>但我们的比例有点低<br>所以让我们把比例增加到五<br>现在你可以看到我们的网格上<br>出现了真正的山脉<br>为了不让地球也缩小<br>我会将中间层级设置为零<br>我们稍后会回到材质部分<br>但首先让我们重命名这个球体表面<br>然后复制它<br>右键点击取消移动<br>并将副本中命名为大气层<br>然后创建一个全新的材质<br>三出注超色期非常简单的<br>我们只需用一个提及三色体还它<br>并将其连接到体积输出上<br>我们看不到任何东西<br>因为它目前与下面的世界大小完全相同<br>所以按下N键调出属性<br>让我们来改变这个<br>让我们在上面加个十<br>所以基本上让它嗯周长多出10米<br>我试图获取真实世界中大脐橙的诗集大小<br>但很难确定<br>因为可见范围变化很大<br>不过这也无关紧要<br>这样就可以了啊<br>我将把它的颜色改为浅蓝色<br>然后将密度调到非常低<br>大约是0.15<br>看起来相当不错<br>但我现在才注意到一个问题<br>这是我第三次制作这个叫城市才发现的<br>就是海洋看起来很烂<br>真的非常非常烂<br>也许它不应该这样<br>现在如果我们关闭大气层<br>看基础表面<br>你会发现海洋已经是蓝色的<br>但实际上谁是没有颜色的<br>随时在翻设大气层<br>所以没有理由<br>这部分应该是蓝色的<br>因为我们是根据大气层自然着色的<br>而大气层是使用体积的<br>因此这应该是正确的<br>不需要在旗下的基础颜色中加入任何加的蓝色<br>所以回到我们的表面<br>在这里我们有颜色直接进入基础颜色输入<br>我想做的是添加一个色相饱和度<br>直接点<br>并将饱和度改为零<br>现在很明显<br>这已经是所有东西都去饱和了<br>所以我想要做的是确保绿的保持有颜色<br>而海洋去饱和<br>为此我可以使用从我的陆地<br>海洋地图中获得的这个指数入到因子输入中<br>这样他就可以用作一个折招<br>基本上表示只有海洋应该去饱和<br>其他所有东西都应该是有颜色的<br>现在当我把大气层也加上来看时<br>它看起来自然多了<br>海洋的照射就像其他所有东西一样<br>由已经存在的大气层来完成<br>如果你想让海洋更烂一点<br>你可以稍微增加一下哪里的饱和度值<br>现在让我们设置一个渲染的镜头<br>我来自澳大利亚<br>尽管我很想在这个教程中渲染澳大利亚<br>但它实际上没有什么有趣的山脉<br>我们没有<br>在我看来<br>澳大利亚的地形并不那么有趣<br>这里很平坦<br>但嗯他并不能成为一个非常有趣的轩然对象<br>但是如果我们使用大多数观看这个教程的人<br>的国家嗯<br>美国啊<br>它有一些非常有趣的河流<br>河山脉<br>在我看来这是一个非常风景如画的国家<br>还有一些其他地方你也许可以去<br>但我认为这里看起来相当不错<br>所以我打算把我的视角定位在这里<br>我要添加一个新相机<br>然后按下控制<br>加alt加小键盘零<br>如果你什么都看不到<br>你应该记得需要调整你的视图才建设置<br>就像你在这里的视图中所做的一样<br>所以将你的猜肩其实设置为10米<br>结束设置为一模米<br>如果你只是想四处飞行<br>按下shift加波浪号键扫DS<br>你就可以像玩电子游戏一样使用<br>它<br>只需向上滚动<br>因为我们在这里处理的是如此巨大的比例<br>直到你能够像一个真正的像鸡玩家一样移动<br>但基本上他给你<br>像虚幻引擎和其他第一人称射击游戏那样的<br>控制不错<br>嗯让我们渲染一下<br>看看效果如何<br>在渲染的时候你们知道吗<br>blender有一个插件<br>可以让你直接将模型纹理和HDR<br>下载到你的场景中<br>它叫做polygon插件<br>可以实时连接到我们的网站<br>哪里有5000个资产<br>可以通过点击一个按钮下载和导入<br>你甚至可以通过三个步骤<br>尝试使用100个免费资产<br>首先电击描述中的链接下载插件<br>第二登录一个免费的polygon账户<br>然后第三输入free1方文<br>100个可以在blender中使用的免费模型<br>纹理和HDR好的<br>所以在我的电脑上<br>这花了56秒<br>我的电脑是camino grando RM工作站<br>配备了3000<br>就是我们可以通过一些方法大大改进这一点<br>首先blender的磨人噪声阈值有点太高了<br>我通常发现对于最终渲染0.02比较合适<br>而玉兰是0.05<br>比较耗<br>效果很好<br>而且因为我们使用了自挂影细分<br>它可能必须要的细分<br>我们的网格更多<br>所以呃我们的最大细分在哪里<br>我打算把它从12改为流<br>这意味着最接近摄像机的网格<br>最多会被细分六次<br>所以现在让我们再渲染一次<br>看看有什么不同<br>所以从56秒到现在的14秒<br>如果我来回切换<br>你可以看到我们获得的细节减少了<br>那是因为我们减少了细分的数量<br>但这并不算太早<br>你仍然可以看到网格上有阴影<br>他仍然工作的很好<br>但渲染起来轻松得多<br>所以我们有了地面<br>有了大气层<br>我们缺少的一件事是云<br>所以我要复制我们的表面对象<br>油煎清除其为止<br>然后我会把它命名为云<br>给它一个全新的材质<br>然后将这色漆从基本该为此表面散射<br>现在我们看不到它<br>因为它占据了完全相同的大小<br>所以我只需要把它稍微放大一点啊<br>让我们设为其货吧<br>所以呢我们的一些3B运环稿<br>但这在现实世界中也是自然的<br>所以应该没问题<br>好的<br>显然地球并不是被完全不透明的云层包围的<br>所以我们需要另一个图像纹理<br>这次仍然由NASA提供<br>这是地球云纹理<br>它的分辨率最高可达死是3K<br>但我认为8K应该就足够了<br>不过我们不适用任何颜色信息<br>所以要确保颜色空间设置为非颜色数据<br>我想做的是不要将其输入到颜色输入中<br>因为那样会有黑色区域<br>这是我们不想要的<br>相反我们希望它驱动一个混合着色器<br>再次表面着色漆和透明着色器之间切换<br>所以如果我把这个放到底部<br>然后将我的颜色输出放到因子输入中<br>你会看到他在做一些事情<br>但他做错了<br>那是因为这些着色器的顺序是错误的<br>所以把此表面放到底部<br>现在这就正常工作了<br>如果你不喜欢特定的运层位置<br>我确实发现运层的位置对渲染效果有很大影响<br>有时候你可能会完全用云层覆盖绿地<br>看起来就很烦人嗯<br>所以你想要尝试找到一个云层系数的区域<br>这样看起来即真实又不会多到<br>看不见下面的绿地<br>所以我就在Z轴上旋转<br>直到找到一个看起来令人愉悦的效果<br>对我来说看起来不错<br>他缺少的一件事是云层本身的阴影<br>我们可以通过一些凹凸或唯一来实现这一点<br>所以我们将对云层使用完全相同的自挂影细分<br>因此我将添加一个唯一节点<br>将其输出连接到高度输入<br>然后将唯一连接到材质输出和<br>然后像之前一样进入材质设置<br>选择唯一和凹凸<br>因为我们已经勾选了自挂印细粉<br>所以应该已经准备好了<br>现在你可能会注意到<br>这里看起来有点红色的色调<br>如果你增加此表面三色的比例<br>你会看到的更明显<br>原因是你的词表面散射节点中的半径只有三个<br>分别是RG和B这些是每个通道的三色量<br>这基本上什么人培植为皮肤<br>因为这是此表面三色最常见的用途<br>但在我们的情况下<br>我们希望它只是白色<br>所以我会把它脱下来<br>然后把所有制度设为一<br>太棒了<br>现在这个值的比例你可以看到<br>如果我把它设为一<br>我们会得到非常阴的效果<br>几乎就像这是一个满反射着色器<br>但如果我把它设为二<br>你可以看到会有一点光线深入<br>如果我把它设得太高<br>比如是<br>那么你会失去很多阴影<br>它会变得非常乳白<br>以至于你几乎看不到任何细节<br>所以这只是找到一个不错的中间值的问题<br>我认为在这种情况下<br>只为三效果很好<br>所以这就是我们现在的样子<br>但我们应该是终于参考照片进行比较嗯<br>嗯我有一个参考照片的集合<br>在一个压缩文件中<br>你可以在描述中下载<br>你也可以从NASA网站获取它们<br>但NASA网站并不容易批量下载东西<br>嗯所以我实际上雇了一名助手来啊<br>抓取所有内容<br>但无论如何<br>反看这些照片时<br>你会注意到几件事情<br>最明显的是世界的边缘<br>并不像我们这里这样直接切断<br>当然由于大气层的存在<br>它是渐变的<br>所以我们当前的大气层是一个体积<br>是一个体积着色气<br>但它仍然显得相当坚固<br>我尝试了各种方法<br>试图让体积照射器<br>通过渐变纹理等来模仿这种效果<br>但实际上没有什么区别<br>最好的方法也是迄今为止<br>最便宜和最简单的方法就是使用合成器<br>所以进入你的渲染层设置<br>然后在这里我们要打开阴影<br>现在这可能没有意义<br>但一旦我们悬然冰给你展示通道后<br>就会明白<br>然后在电影选项下<br>我希望你启用透明<br>这在我们渲染冰进入合成器后会再次有意义<br>渲染完成<br>跳转到合成期<br>点击使用节点<br>然后我们只需按着CTRL加shift点击<br>直到我们看到那个阴影通道<br>在我们模糊它之前<br>可能不会明白我们为什么有一个阴影通道<br>所以按shift加A选择路径模糊<br>把它放进去<br>设置为快速高斯相对Y<br>然后设为大约1.5percent<br>好的<br>你可以看到地平线上那个边缘现在被模糊了<br>其余的我们实际上不需要关注<br>因为我现在要做的是使用一个alpha叠加节点<br>然后将原始渲染直接啊叠加在上面反转<br>它现在你可以看到那个边缘有了一种柔和感<br>不过我们不希望它看起来是白色的<br>所以我要添加一个颜色渐变节点<br>我们先单独查看一下这个效果<br>这样会使它变成纯白色<br>让我们把它变成深蓝色<br>然后我会在它后面再加一个<br>试着模仿参考照片中看到的浅蓝色<br>因为在接近地平线的地方是非常浅的蓝色<br>然后向外延伸时变成深蓝色<br>现在我已经完成了<br>让我们来看一下<br>这看起来有点太青涩了<br>稍微调成更烂一点呃<br>稍微去饱和一些<br>我也会把这个稍微往回拖一点<br>我把这些拖到中间点<br>现在我可以看到我得到了那个漂亮的地平线<br>我可能会把这个讲到1%<br>这样就好了<br>快速简单的气氛衰减<br>当我们与参考进行比较时<br>你可以注意到<br>在查看参考照片时<br>无论何处有阳光反射在海洋或河流觞<br>你会看到一点玄光<br>这在这个小湖河上看起来会非常好<br>实际上我不知道这是美国的那个地方<br>但这个漂亮的呼河如果有一些眩光<br>会看起来很好<br>所以在你的渲染层设置中<br>在光泽选项下<br>我们要启用一个光泽直接通道渲染<br>再次进入合成选项卡<br>你可以看到光泽直接通道<br>只是将光泽格骑在他自己的黑色层上<br>所以如果我将其连接到一个眩光节点<br>保持在条纹模式<br>但将数量设置为史流<br>然后掉地摔箭<br>使其非常非常微妙<br>讲混合调到E这样我们只看到玄光<br>然后我们将鱼值设置为大约0.2不0.5<br>我希望从一些周围的河流中散发出一点光<br>但不要太多<br>给它加一点颜色<br>然后我们将用一个典型的混合节点设置为相加<br>来组合它<br>然后只是将音子的量调的非常非常小<br>比如这就是最终的节点设置<br>这是之前的效果<br>这是之后的效果<br>之前诶之后微妙的变化<br>但效果显著<br>所以呃呃现在唯一能改善我们地球的方法<br>就是在地球的暗面有椰等啊<br>无论哪里有城市<br>当然都不会是一片漆黑<br>因为人们会打开电器和洁等等<br>所以我们希望能够在这里看到这些<br>碰巧的是<br>NASA提供给我们的便利<br>纹理之一就是耶等地图<br>所以我要把它加载进来<br>我发现21K是最佳选择<br>一如既往<br>我们要确保它设置为非颜色数据<br>然后我想把它插入到我们基本超色器的发<br>光强度中<br>让我在这里腾出一点空间<br>因为否则会有点复杂<br>让我们把这个移过去<br>好的在我们将某些东西连接到发光颜色之前<br>我们在这里不会看到任何发光<br>所以为此我将使用黑体呃色温<br>这就像是用开尔温温度<br>你知道的<br>像白炽灯泡之类的东西<br>然后我会把它设置为3500<br>这是一种不错的中等范围温暖的水平<br>你可以看到他在黑暗区域中正常工作<br>你可以看到灯光<br>但你也可以在明亮的区域看到它<br>就在大白天<br>我们有这些城镇<br>他们只是点亮了太阳的强度呃<br>这完全没有意义<br>所以我们想做的是告诉blender<br>无论太阳指向哪里<br>我们希望王哥的那一侧不适用哪部分纹理<br>这相当记住性<br>但实际上只需要几个节点<br>第一个节点是一个纹理坐标节点<br>然后我会使用这个习惯工具<br>获取太阳对象的纹理坐标<br>然后我会将其输入到一个发现节点<br>并获取该对象的坐标<br>所以太阳的对象做标注入到一个发现节点<br>这样这里就是我们地球的表面发现<br>所以它就像是在说我们地球的这一侧<br>发现对七道太阳的旋转<br>然后我想获取那个点值<br>并将其与这个灰度纹理合并呃<br>输入到发光强度中<br>为此我只需使用一个数学节点<br>然后将其设置为乘法<br>并拖动到底部输入<br>当你这样做时<br>你可能会发现突然出现了一些问题<br>首先后面的黑暗区域没有光亮<br>但明亮区域也是如此<br>就像是纯黑色原因时<br>只有当太阳对象与地球本身共享相同的原点时<br>使用太阳的纹理坐标才会有效<br>这意味着如果它在地球之外<br>它将不起作用<br>他需要在内部<br>所以按下RG<br>假设你的地球的原点正好在场景的中心<br>如果你是在哪里添加的UV球体<br>那么现在应该可以工作了<br>就是这样<br>所以我们现在有了我们的光源<br>实际上如果我们将太阳的强度设置为零<br>你可以看到它正在工作<br>它只照亮了地球的一侧<br>然而它照亮的是地球的错误一侧<br>所以在这里和这里之间<br>我需要添加一个映射范围节点<br>然后如果我把这个从最大值拖到这个负范围<br>你可以看到它现在已经有效的反转了<br>它被反转了<br>现在工作正常<br>但实际上如果我想让他在这里更好<br>而不仅仅是反转它<br>你可以看到他从光国读到夜湾区<br>于是过渡的稍微遭了一点<br>你可以想象<br>如果是黄昏<br>人们还没有真正打开他们的等<br>所以应该有一条黑色的带子<br>等还没有被打开<br>所以为此<br>我实际上可以把这个最小范围稍微往回调一点<br>再多一点<br>你不想钓的太远<br>如果雕的太远<br>他就会反过来<br>所以我想确保这个呃<br>最大范围总是低于起始范围<br>但你可以看到现在我已经这样做了<br>我把这个更接近零范围<br>它就会更接近嗯嗯太阳的过渡点<br>所以如果我想要有更多的袋子<br>我就会把它设置的越来越暗<br>像这样越来越往后<br>然后这就像你可以想象的那样<br>就像一个尖边<br>从灯光关闭到灯光开启<br>然后基本上这里的最大值就成为了强度<br>所以如果我想让它比如说亮五倍<br>那么我就会把它设置为一<br>人们常说呃<br>你实际上能够看到阳光照射到地球的一侧<br>并看到夜晚的灯光<br>这是不太可能的<br>这确实是非常正确的<br>比如地球上一个城市的野等梁<br>都远远达不到太阳的强度值<br>但这更具艺术性<br>看到地球的另一半呃<br>灯光山说是相当有趣的<br>所以我喜欢把他雕的B世纪应该的稍微高一点<br>这是我们最终的渲染结果<br>在3000就是上号是41秒<br>如果你想进一步减少时间<br>再当然可以提高早生<br>与之把最大细分讲到三火师啊<br>冰晶可能使用最低分辨率的纹理<br>你可以看到我能把时间缩短到13秒<br>这是最终的动画<br>最后的那个天天圈<br>是bakers dozen n f t项目的预告<br>该项目将于10月3日上线<br>目的是为blender筹集资金<br>从4月3日开始<br>每天将拍卖一个天天圈<br>NFTT持续13天<br>然后所有资金将捐赠给blender<br>以帮助改进我们喜爱的这款软件<br>如果你喜欢这个视频<br>请点击赞和订阅<br>如果你想看到更多类似的视频</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">ytkz</div><div class="post-copyright__author_desc">Some personal notes</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://ytkz11.github.io/2026/01/13/blender-jian-li-di-qiu-yi/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://ytkz11.github.io/2026/01/13/blender-jian-li-di-qiu-yi/')">blender建立地球仪</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://ytkz11.github.io/2026/01/13/blender-jian-li-di-qiu-yi/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=blender建立地球仪&amp;url=https://ytkz11.github.io/2026/01/13/blender-jian-li-di-qiu-yi/&amp;pic=https://raw.githubusercontent.com/ytkz11/picture/master/4414d60efdb42af023d6b741849273e7.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://ytkz11.github.io" target="_blank">Find everything you need</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/blender/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>blender<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://raw.githubusercontent.com/ytkz11/picture/master/image-20260623221013710.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2026/01/12/opencv-zai-python-huan-jing-xia-de-an-zhuang-bu-zou/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/image-20260112145033719%5D(https:/cdn.jsdelivr.net/gh/ytkz11/picture/imgs202601121450053.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">OpenCV Python 安装指南：为什么导入叫 cv2，以及 opencv-python 与 opencv-contrib-python 的那些坑</div></div></a></div><div class="next-post pull-right"><a href="/2026/01/23/ba-zi-ji-xie-de.py-wen-jian-zuo-cheng-quan-ju-ke-yong-de-ben-di-ku/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202601231551548.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">把自己写的.py 文件做成全局可用的本地库</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description"></div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/23/wo-zuo-liao-yi-ge-wei-xing-di-tu-xia-zai-zhu-shou-neng-kan-dao-tong-yi-ge-di-fang-ji-shi-nian-de-bian-hua/" title="我做了一个卫星地图下载助手，能看到同一个地方几十年的变化"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20260623221013710.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我做了一个卫星地图下载助手，能看到同一个地方几十年的变化"/></a><div class="content"><a class="title" href="/2026/06/23/wo-zuo-liao-yi-ge-wei-xing-di-tu-xia-zai-zhu-shou-neng-kan-dao-tong-yi-ge-di-fang-ji-shi-nian-de-bian-hua/" title="我做了一个卫星地图下载助手，能看到同一个地方几十年的变化">我做了一个卫星地图下载助手，能看到同一个地方几十年的变化</a><time datetime="2026-06-23T14:33:34.000Z" title="发表于 2026-06-23 22:33:34">2026-06-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/22/xue-xi-51-dan-pian-ji-de-yi-ge-keng-2/" title="学习51单片机的一个坑2 | 普中51 + STC89C52  数码管“0~9”逐字测试程序">学习51单片机的一个坑2 | 普中51 + STC89C52  数码管“0~9”逐字测试程序</a><time datetime="2026-06-22T14:33:34.000Z" title="发表于 2026-06-22 22:33:34">2026-06-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/21/xue-xi-51-dan-pian-ji-de-yi-ge-keng/" title="学习51单片机的一个坑">学习51单片机的一个坑</a><time datetime="2026-06-21T14:33:34.000Z" title="发表于 2026-06-21 22:33:34">2026-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/21/zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu-zong-he-zhen-ti-da-an-kan-wu/" title="注册测绘师备考小程序综合真题答案勘误">注册测绘师备考小程序综合真题答案勘误</a><time datetime="2026-06-21T14:33:34.000Z" title="发表于 2026-06-21 22:33:34">2026-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2026/06/16/zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu-yi-tian-jia-2022-nian-dao-2025-nian-zhen-ti/" title="注册测绘师备考小程序已添加2022年到2025年真题">注册测绘师备考小程序已添加2022年到2025年真题</a><time datetime="2026-06-16T14:33:34.000Z" title="发表于 2026-06-16 22:33:34">2026-06-16</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2026 By <a class="footer-bar-link" href="/" title="ytkz" target="_blank">ytkz</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">413</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">64</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">97</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/AI/" style="font-size: 0.88rem;">AI<sup>2</sup></a><a href="/tags/GDAL/" style="font-size: 0.88rem;">GDAL<sup>4</sup></a><a href="/tags/GEE/" style="font-size: 0.88rem;">GEE<sup>1</sup></a><a href="/tags/GIS/" style="font-size: 0.88rem;">GIS<sup>8</sup></a><a href="/tags/IDL/" style="font-size: 0.88rem;">IDL<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 0.88rem;">JavaScript<sup>1</sup></a><a href="/tags/SAR/" style="font-size: 0.88rem;">SAR<sup>2</sup></a><a href="/tags/Sentinel5/" style="font-size: 0.88rem;">Sentinel5<sup>3</sup></a><a href="/tags/arcgis/" style="font-size: 0.88rem;">arcgis<sup>1</sup></a><a href="/tags/blender/" style="font-size: 0.88rem;">blender<sup>1</sup></a><a href="/tags/c/" style="font-size: 0.88rem;">c#<sup>2</sup></a><a href="/tags/cpp/" style="font-size: 0.88rem;">cpp<sup>2</sup></a><a href="/tags/deep-learn/" style="font-size: 0.88rem;">deep_learn<sup>1</sup></a><a href="/tags/ffmpeg/" style="font-size: 0.88rem;">ffmpeg<sup>1</sup></a><a href="/tags/gdal/" style="font-size: 0.88rem;">gdal<sup>5</sup></a><a href="/tags/gis/" style="font-size: 0.88rem;">gis<sup>9</sup></a><a href="/tags/golang/" style="font-size: 0.88rem;">golang<sup>1</sup></a><a href="/tags/himawari8/" style="font-size: 0.88rem;">himawari8<sup>1</sup></a><a href="/tags/kotlin/" style="font-size: 0.88rem;">kotlin<sup>3</sup></a><a href="/tags/leetcode/" style="font-size: 0.88rem;">leetcode<sup>1</sup></a><a href="/tags/linux/" style="font-size: 0.88rem;">linux<sup>7</sup></a><a href="/tags/matlab/" style="font-size: 0.88rem;">matlab<sup>4</sup></a><a href="/tags/pyside6/" style="font-size: 0.88rem;">pyside6<sup>2</sup></a><a href="/tags/python/" style="font-size: 0.88rem;">python<sup>52</sup></a><a href="/tags/rust/" style="font-size: 0.88rem;">rust<sup>2</sup></a><a href="/tags/sar/" style="font-size: 0.88rem;">sar<sup>5</sup></a><a href="/tags/%E4%B8%8B%E8%BD%BD/" style="font-size: 0.88rem;">下载<sup>1</sup></a><a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 0.88rem;">吐槽<sup>1</sup></a><a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.88rem;">工具<sup>2</sup></a><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 0.88rem;">技术<sup>3</sup></a><a href="/tags/%E6%B3%A8%E5%86%8C%E6%B5%8B%E7%BB%98%E5%B8%88/" style="font-size: 0.88rem;">注册测绘师<sup>13</sup></a><a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 0.88rem;">深度学习<sup>32</sup></a><a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 0.88rem;">爬虫<sup>1</sup></a><a href="/tags/%E7%9F%A2%E9%87%8F/" style="font-size: 0.88rem;">矢量<sup>26</sup></a><a href="/tags/%E7%BB%98%E5%9B%BE/" style="font-size: 0.88rem;">绘图<sup>1</sup></a><a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 0.88rem;">编程<sup>30</sup></a><a href="/tags/%E8%87%AA%E5%AA%92%E4%BD%93/" style="font-size: 0.88rem;">自媒体<sup>5</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 0.88rem;">软件<sup>1</sup></a><a href="/tags/%E9%81%A5%E6%84%9F/" style="font-size: 0.88rem;">遥感<sup>216</sup></a><a href="/tags/%E9%97%B2%E8%81%8A/" style="font-size: 0.88rem;">闲聊<sup>14</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.7.1",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 ytkz 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body></html>
