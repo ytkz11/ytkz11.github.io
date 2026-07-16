@@ -6,7 +6,7 @@
   <link href="https://ytkz.tech/atom.xml" rel="self"/>
   
   <link href="https://ytkz.tech/"/>
-  <updated>2026-07-07T12:34:50.516Z</updated>
+  <updated>2026-07-16T00:25:28.122Z</updated>
   <id>https://ytkz.tech/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>闲鱼是国内暗网</title>
+    <link href="https://ytkz.tech/2026/07/15/wei-shi-me-shuo-xian-yu-shi-guo-nei-an-wang/"/>
+    <id>https://ytkz.tech/2026/07/15/wei-shi-me-shuo-xian-yu-shi-guo-nei-an-wang/</id>
+    <published>2026-07-15T14:33:34.000Z</published>
+    <updated>2026-07-16T00:25:28.122Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;“闲鱼是国内暗网”是网友调侃。它不止卖二手，还能买到陪聊、代扫墓、前任分手通知、甚至”代挨骂”这种离谱服务，加上评论区人均段子手，画风越来越像”正规 App 里藏了个野路子集市”，所以被戏称”国内版暗网”，本质是审核边界 + 脑洞商品的化学反应。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>遥感大模型DINOv3 逐层特征可视化</title>
@@ -496,36 +522,6 @@
         
     <summary type="html">&lt;p&gt;我的提示词是：&lt;/p&gt;
 &lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="https://ytkz.tech/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="https://ytkz.tech/tags/%E9%97%B2%E8%81%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RS新手怎么下载免费的遥感影像数据</title>
-    <link href="https://ytkz.tech/2026/05/09/rs-xin-shou-zen-me-xia-zai-mian-fei-de-yao-gan-ying-xiang-shu-ju/"/>
-    <id>https://ytkz.tech/2026/05/09/rs-xin-shou-zen-me-xia-zai-mian-fei-de-yao-gan-ying-xiang-shu-ju/</id>
-    <published>2026-05-09T14:27:10.000Z</published>
-    <updated>2026-05-12T15:02:02.341Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;RS新手怎么下载免费的遥感影像数据？&lt;/p&gt;
-&lt;p&gt;有不少的人在后台问我这个问题。&lt;/p&gt;
-&lt;p&gt;我推荐去这两个地方下载数据。&lt;/p&gt;
-&lt;p&gt;1是USGS&lt;/p&gt;
-&lt;p&gt;2是欧空局&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
         
       
     
