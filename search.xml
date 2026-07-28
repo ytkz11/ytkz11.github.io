@@ -4,6 +4,106 @@
   
     
     <entry>
+      <title>《小白看懂遥感》第2篇：为什么遥感图片有多个波段？</title>
+      <link href="/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/"/>
+      <url>/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/63002937-7014-481b-a334-e859175eea34.png" alt="从为什么遥感图片有多个波段说起"></p><p>上一篇我们弄明白了，任何数字图片的本质都是矩阵。</p><p>灰度图是一个矩阵，彩色图是三个矩阵叠在一起，分别记录红、绿、蓝。</p><p>但如果你打开一幅遥感影像，往往会发现它不止 3 层。</p><p>有的 4 层，有的 8 层，有的 13 层，甚至几百层。为什么卫星要这么“浪费”，拍那么多波段？难道红绿蓝还不够吗？</p><p>要回答这个问题，我们先得承认一件事：<strong>人眼其实挺“弱”的。</strong></p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/Gemini_Generated_Image_3mfqb83mfqb83mfq.png" alt="波段是什么"></p><hr><p><strong>人眼只能看见“可见光”这一小段。</strong><br>光是一种电磁波，波长的范围极广。从收音机的无线电波，到微波炉的微波，到我们感觉热的红外线，再到能晒伤皮肤的紫外线，全都是“光”的亲戚。</p><p>而人眼能直接看到的，只是这中间很窄的一段，我们叫它“可见光”。</p><p>可见光里，我们又按照波长从长到短，大致分成红、绿、蓝三个区域。</p><p>手机和普通相机，就是用红绿蓝这三个通道来模拟人眼的感受，所以三个波段就够拍出一张照片。</p><hr><p><strong>但地表上的东西，不止是只有蓝绿红色</strong><br>举个例子，你看一片草地是绿色的，是因为草叶的色素强烈反射绿光，同时吸收了红和蓝。所以它那个位置的红矩阵数值小，绿矩阵数值大，蓝矩阵数值小——人脑一解读，“绿了”。</p><p>可草的“绿”只是它在可见光里的表演。</p><p>如果有一双眼睛能看见近红外线（波长比红色再长一点点），草就突然变得超级亮，比它身边的任何东西都亮。</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/8bbd9ddb-9e8d-452f-9908-ed40f35b3ceb.png" alt="颜色的潜在知识"></p><p>因为健康植被在近红外的反射率极高。而假草皮、绿色油漆，或者枯萎的植物，在近红外下就亮不起来。</p><p>看，同样是一块地，红绿蓝只能说“这里有绿”，而近红外能告诉你“这绿是真的植物，还是塑料”。</p><p><strong>多一个波段，就多一个识别地物的维度。</strong></p><hr><p><strong>遥感卫星就是把这种思想推到极致。</strong><br>它不只用红绿蓝三只“眼睛”看地面，而是同时用好几个、好几十个“眼睛”，每个眼睛只对很窄的一段波长敏感。</p><p>比如蓝色波段、绿色波段、红色波段、近红外波段、短波红外波段、热红外波段……每个波段单独拍下来，都是一个矩阵。</p><p>一个场景拍完，卫星就交给你一堆矩阵：</p><ul><li>蓝色矩阵</li><li>绿色矩阵</li><li>红色矩阵</li><li>近红外矩阵</li><li>短波红外 1</li><li>短波红外 2<br>……</li></ul><p>把它们按波长顺序叠在一起，就是我们常说的“数据立方体”。</p><p>行和列是空间，深度是波段。</p><p>每一个像素，其实都对应着一条从蓝到红外甚至更远波段的“光谱曲线”。</p><p>不同地物的这条曲线形状不一样：水在近红外几乎全黑，混凝土一路灰突突，农作物在红边波段有一个陡峭的上升，矿物在短波红外有独特的吸收谷。</p><p>这些“光谱指纹”就是遥感影像能区分农田、森林、城市、水体的根本原因。</p><p><strong>波段越多，指纹越精细，分辨能力越强。</strong><br>多光谱卫星可能就 4 到 13 个波段；</p><p>而高光谱卫星，甚至可以拍到几百个连续的窄波段，那指纹比人的手指还精细，足以识别作物的品种、病害、甚至土壤的成分。</p><hr><p><strong>所以，为什么遥感图片有多个波段？</strong><br><strong>因为地面上的东西，如果只在红绿蓝的眼里看，都是一团模糊的相似颜色。</strong></p><p><strong>一旦把“眼睛”拓宽到人眼看不见的波段，它们就会各自露出马脚。</strong></p><p>植被的近红外高反射，水的近红外强吸收，矿物的短波红外特征……</p><p>这些差异都藏在多出来的矩阵里。遥感并不是想把图片变得更鲜艳，而是想要一个数字指纹库，好让计算机（或者后来的深度学习模型）能够从矩阵里读出“这是健康小麦”、“那是污染水体”。</p><p>这一切，不过是因为在最初那个简单的矩阵之上，我们又往上多摞了几层矩阵而已。</p><hr><p><strong>那问题又来了：</strong><br>这一大摞矩阵，卫星究竟是怎么让我们知道，它拍的是地球上的哪个角落？矩阵里的第 3 行第 5 列，怎么就变成了北京某条街的一个具体楼顶？</p><p>这就是下一篇要讲的故事：<strong>《一张影像为什么知道自己在哪里？》</strong>。</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/Gemini_Generated_Image_6tzne86tzne86tzn.png" alt="Gemini_Generated_Image_6tzne86tzne86tzn"></p><p>下一篇见。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>《小白看懂遥感》第1篇：图片为什么也是矩阵？</title>
+      <link href="/2026/07/27/xiao-bai-kan-dong-yao-gan-di-1-pian-tu-pian-wei-shi-me-ye-shi-ju-zhen/"/>
+      <url>/2026/07/27/xiao-bai-kan-dong-yao-gan-di-1-pian-tu-pian-wei-shi-me-ye-shi-ju-zhen/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/63002937-7014-481b-a334-e859175eea34.png" alt="从图片为什么也是矩阵说起"></p><p>让我们从最简单的东西开始：<strong>你用手机随便拍的一张照片。</strong></p><p>把它在屏幕上放大、再放大，直到再也看不清画面内容，你看到了什么？<br>一个个纯色的小方格，密密麻麻地排列在一起。</p><p>这些方格就是<strong>像素</strong>，是数字图像最小的组成单元。<br>如果把每个小方格的颜色，用一个数字来代替。比如纯黑是 0，纯白是 255，中间灰就取一个中间值。那么整张图片就不再是一幅“图”，而是一张填满数字的表格。</p><p>有行、有列，按位置排列，这张数字表格，在数学里就叫<strong>矩阵</strong>。</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/292d5619-f4d2-41c5-8ee8-61756501c356.jpg" alt="图片即矩阵"></p><p><strong>一张灰度图，就是一个矩阵。</strong><br>例如一张 3×3 像素的灰度图，它的矩阵可能是：</p><pre class="line-numbers language-none"><code class="language-none">[ 255, 128,  0  ][  64,  32, 200 ][  10, 240, 100 ]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>你看，画面的明暗、层次，其实就是这些数字的大小在起作用。</p><p><strong>彩色图片也并没有更高深。</strong><br>一张彩色图，只不过每个像素需要 3 个数字，分别控制红、绿、蓝三种颜色的强度。于是你得到了三个同样大小的矩阵。一个记红色，一个记绿色，一个记蓝色。把它们叠在一起，就是彩色图像。</p><p>数学家喜欢把这种叠在一起的矩阵叫<strong>张量</strong>，但我们暂时只需要知道：彩色图 = 三层矩阵叠起来。</p><hr><p><strong>遥感影像，本质上和手机照片没区别，只是更“厚”一些。</strong><br>手机只拍红绿蓝 3 个波段，卫星却会拍很多波段——近红外、短波红外、热红外……可能十几个、几十个，甚至几百个。</p><p>每个波段，就是一个独立的矩阵。</p><p>于是，遥感影像就变成了由许多矩阵堆叠而成的“数据立方体”：</p><ul><li>行、列描述空间位置；</li><li>层（波段）记录不同谱段的信息。</li></ul><p>所以，不管你面对的是手机自拍，还是一幅高光谱卫星影像，<strong>底层全是矩阵在支撑。</strong> 这层底层的统一性，正是后面一切操作的前提。</p><hr><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/ChatGPT%20Image%20Jul%2021%2C%202026%2C%2003_07_32%20PM.png" alt="矩阵与波段"></p><p><strong>那“空间”又是怎么加上去的？</strong><br>普通照片的矩阵只知道“第 3 行第 5 列的数字是 120”，但它不知道这个像素对应地球表面的哪一点。它没有位置意识。</p><p>遥感影像的特殊之处，在于给这个矩阵绑定了另一套数据——它记录了一种转换规则，能把矩阵的行列号，换算成真实的地理坐标。这套规则就叫<strong>地理变换（GeoTransform）</strong>，而且还捎带了一个坐标系说明（投影是什么）。</p><p>一旦有了这些，这个矩阵就再也不是一堆无根的数字了。它成了一个<strong>空间矩阵</strong>：矩阵里的每一个数值，都对应着地球上的一个具体位置。</p><p>这就是GIS里栅格数据的本质：<strong>带有地理坐标的矩阵。</strong></p><hr><p>现在，我们回头再看之前那个比喻。</p><p>GDAL 是万能遥控器。</p><p>它面对的，就是这些五花八门格式背后那个共同的东西：<strong>带有地理信息的矩阵。</strong></p><p> 它知道怎么读取、怎么裁剪、怎么转换坐标系，就是因为所有影像在它眼里，都是同一套数据结构。</p><p>而且，这个矩阵结构，恰好也是深度学习模型（卷积神经网络）的输入格式。</p><p>它吃进去的，正是高×宽×波段的多维矩阵。</p><p>所以，整个认知的链条，就能顺畅地串起来了：</p><p><strong>图片是矩阵 → 遥感影像是多波段矩阵 → 绑定空间信息成为空间矩阵 → GDAL 操作这个空间矩阵 → 输出矩阵喂给深度学习。</strong></p><hr><p>现在，我们聊完了最基本的“矩阵”，下一步就自然而然会问：<strong>为什么遥感影像需要那么多个波段，而手机只要 3 个就够了？</strong></p><p>这就是我们下一篇要聊的话题——第 2 篇：《为什么遥感图片有多个波段？》。</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/Gemini_Generated_Image_fgvzrxfgvzrxfgvz.png" alt="借助Gemini生成的封面"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>为什么单机多卡训练，不会因为多一张 GPU 就快一倍？</title>
+      <link href="/2026/07/26/wei-shi-me-dan-ji-duo-qia-xun-lian-bu-hui-yin-wei-duo-yi-zhang-gpu-jiu-kuai-yi-bei/"/>
+      <url>/2026/07/26/wei-shi-me-dan-ji-duo-qia-xun-lian-bu-hui-yin-wei-duo-yi-zhang-gpu-jiu-kuai-yi-bei/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/46705225-8deb-4005-8aef-03065782b948.png" alt="单机多卡训练"></p><p>很多人第一次接触 PyTorch 多 GPU 训练时，都会有一个非常直观的想法：</p><blockquote><p>一张 GPU 训练需要 10 个小时，两张 GPU 是不是 5 个小时？四张 GPU 是不是 2.5 个小时？</p></blockquote><p>理论上，好像应该如此。</p><p>毕竟 GPU 数量增加了一倍，计算能力也增加了一倍。</p><p>但是实际训练过程中，你往往会发现：</p><p><strong>2 张 GPU 并没有快 2 倍，4 张 GPU 也没有快 4 倍。</strong></p><p>甚至有时候，增加 GPU 后，训练速度提升非常有限。</p><p>为什么？</p><p>因为深度学习训练并不是一个“只靠 GPU 算力”的过程。</p><p>GPU 只是整个训练流水线中的一个环节。</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/f824bb91-f847-40e1-83f6-72e3b0a153da.png" alt="多卡训练"></p><hr><h2 id="训练模型，不只是-GPU-在工作"><a href="#训练模型，不只是-GPU-在工作" class="headerlink" title="训练模型，不只是 GPU 在工作"></a>训练模型，不只是 GPU 在工作</h2><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/4945f8ed-f4c8-4764-a0f3-bf8e769b60d0.png" alt="训练模型"></p><p>很多人理解训练过程时，会简单认为：</p><blockquote><p>把数据丢给 GPU，然后 GPU 负责计算。</p></blockquote><p>实际上，一次完整的训练迭代，背后包含很多步骤：</p><pre class="line-numbers language-none"><code class="language-none">读取数据    ↓CPU 数据处理    ↓数据加载到内存    ↓传输到 GPU    ↓Forward 前向计算    ↓Backward 反向传播    ↓梯度同步    ↓参数更新<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>其中只有：</p><ul><li>Forward</li><li>Backward</li></ul><p>是真正消耗 GPU 计算资源的部分。</p><p>但是：</p><ul><li>数据读取依赖磁盘</li><li>数据增强依赖 CPU</li><li>数据传输依赖 PCIe</li><li>多卡同步依赖 GPU 通信链路</li></ul><p>这些环节并不会因为你增加 GPU 数量而自动变快。</p><p>举一个简单例子：</p><p>假设一次训练：</p><pre class="line-numbers language-none"><code class="language-none">数据读取：20ms数据处理：10msGPU计算：100ms梯度同步：20ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>单卡情况下：</p><pre class="line-numbers language-none"><code class="language-none">总时间：20 + 10 + 100=130ms<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>增加 GPU 后：</p><p>GPU计算变成：</p><pre class="line-numbers language-none"><code class="language-none">100ms → 50ms<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>但是其它部分仍然存在：</p><pre class="line-numbers language-none"><code class="language-none">20 + 10 + 50 + 20=100ms<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>最终速度：</p><pre class="line-numbers language-none"><code class="language-none">130 / 100 = 1.3倍<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>而不是2倍。</p><p>这就是为什么多卡训练不会线性增长。</p><hr><h1 id="PyTorch-DDP：多张-GPU-到底做了什么？"><a href="#PyTorch-DDP：多张-GPU-到底做了什么？" class="headerlink" title="PyTorch DDP：多张 GPU 到底做了什么？"></a>PyTorch DDP：多张 GPU 到底做了什么？</h1><p>目前 PyTorch 最常用的多 GPU 训练方式是：</p><p><strong>DistributedDataParallel（DDP）</strong></p><p>它的核心思想其实很简单：</p><blockquote><p>每张 GPU 都复制一份完整模型，然后分别计算不同的数据。</p></blockquote><p>比如两张 GPU：</p><pre class="line-numbers language-none"><code class="language-none">GPU0模型ABatch 0GPU1模型ABatch 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>训练开始后：</p><p>两个 GPU 同时进行：</p><pre class="line-numbers language-none"><code class="language-none">Forward↓Backward<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这样计算量被分摊了。</p><p>看起来非常美好。</p><p>但是问题来了：</p><p>两个 GPU 计算出来的梯度是不一样的。</p><p>例如，GPU0：</p><pre class="line-numbers language-none"><code class="language-none">梯度：[0.2,0.5,0.1]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>GPU1：</p><pre class="line-numbers language-none"><code class="language-none">梯度：[0.3,0.4,0.2]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果直接更新模型：GPU0 的参数会变成一套。GPU1 的参数会变成另一套。</p><p>模型马上就不一致了。</p><p>所以 DDP 在每一次反向传播之后，都需要做一件事情：<strong>梯度同步。</strong></p><p>也就是：</p><pre class="line-numbers language-none"><code class="language-none">GPU0 梯度       \        AllReduce       /GPU1 梯度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>所有 GPU 交换梯度，然后求平均。</p><p>同步完成后：所有 GPU 才能执行：</p><pre class="line-numbers language-none"><code class="language-none">optimizer.step()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>更新模型参数。</p><p>所以多卡训练有一个特点：<strong>所有 GPU 必须等最慢的那一张。</strong></p><p>只要有一张 GPU 还没有完成计算，其他 GPU 都要等待。</p><hr><h1 id="GPU-越多，通信压力越大"><a href="#GPU-越多，通信压力越大" class="headerlink" title="GPU 越多，通信压力越大"></a>GPU 越多，通信压力越大</h1><p>很多人觉得：</p><blockquote><p>GPU 越多，计算能力越强，速度应该越快。</p></blockquote><p>这个说法只对了一半。</p><p>GPU 数量增加以后：计算确实变快了。</p><p>但是通信也增加了。</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/Gemini_Generated_Image_3tbyy13tbyy13tby.png" alt="多卡训练"></p><p>假设你的模型参数有：</p><pre class="line-numbers language-none"><code class="language-none">2GB<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>每一次训练，都需要同步对应的梯度。</p><p>单卡：</p><pre class="line-numbers language-none"><code class="language-none">不需要同步<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>两卡：</p><pre class="line-numbers language-none"><code class="language-none">需要一次梯度通信<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>四卡：</p><pre class="line-numbers language-none"><code class="language-none">更多 GPU 之间通信<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>八卡：</p><pre class="line-numbers language-none"><code class="language-none">通信规模进一步增加<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>最终训练时间变成：</p><pre class="line-numbers language-none"><code class="language-none">训练时间 =计算时间+通信时间<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>而不是：</p><pre class="line-numbers language-none"><code class="language-none">训练时间 = 计算时间<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>当 GPU 数量越来越多时：计算部分越来越短。</p><p>但是通信部分占比越来越高。</p><p>这就是大规模训练中的经典问题：</p><p><strong>通信瓶颈。</strong></p><h1 id="实际多卡能提升多少？"><a href="#实际多卡能提升多少？" class="headerlink" title="实际多卡能提升多少？"></a>实际多卡能提升多少？</h1><p>实际工程中：</p><p>如果：</p><ul><li>数据加载正常</li><li>Batch 足够大</li><li>GPU 通信良好</li><li>模型计算占比较高</li></ul><p>通常情况：</p><div class="table-container"><table><thead><tr><th>GPU数量</th><th>理论加速</th><th>实际常见</th></tr></thead><tbody><tr><td>1张</td><td>1倍</td><td>1倍</td></tr><tr><td>2张</td><td>2倍</td><td>约1.7～1.9倍</td></tr><tr><td>4张</td><td>4倍</td><td>约3～3.7倍</td></tr><tr><td>8张</td><td>8倍</td><td>约6～7倍</td></tr></tbody></table></div><p>当然，不同模型差异非常大。</p><p>例如：</p><p>一个小型 CNN：</p><p>可能多卡收益很低。</p><p>一个大型 Transformer：</p><p>可能多卡收益非常明显。</p><h1 id="如何提高多-GPU-训练效率？"><a href="#如何提高多-GPU-训练效率？" class="headerlink" title="如何提高多 GPU 训练效率？"></a>如何提高多 GPU 训练效率？</h1><p>真正高效的多卡训练，不是简单增加 GPU。</p><p>而是优化整个系统。</p><p>常见优化方向：</p><h3 id="1-提高-GPU-利用率"><a href="#1-提高-GPU-利用率" class="headerlink" title="1. 提高 GPU 利用率"></a>1. 提高 GPU 利用率</h3><p>检查：</p><pre class="line-numbers language-none"><code class="language-none">nvidia-smi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>观察 GPU 是否长期满载。</p><h3 id="2-优化数据加载"><a href="#2-优化数据加载" class="headerlink" title="2. 优化数据加载"></a>2. 优化数据加载</h3><p>调整：</p><pre class="line-numbers language-none"><code class="language-none">num_workerspin_memory=Truepersistent_workers=True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="3-使用混合精度训练"><a href="#3-使用混合精度训练" class="headerlink" title="3. 使用混合精度训练"></a>3. 使用混合精度训练</h3><p>例如：</p><pre class="line-numbers language-none"><code class="language-none">torch.cuda.amp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>减少显存占用，提高计算速度。</p><h3 id="4-增大-Batch-Size"><a href="#4-增大-Batch-Size" class="headerlink" title="4. 增大 Batch Size"></a>4. 增大 Batch Size</h3><p>让每张 GPU 都有足够计算任务。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>单机多卡训练，并不是简单的：</p><blockquote><p>GPU 数量 × 速度。</p></blockquote><p>真正的训练速度取决于整个系统：</p><p>训练速度 = GPU计算效率 + 数据加载效率 + GPU通信效率 + 存储效率 + 软件优化</p><p>增加 GPU，只是提高了其中一个环节。</p><p>如果其它环节没有跟上，多出来的 GPU 反而可能处于等待状态。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>弄懂GDAL就弄懂遥感数据处理</title>
+      <link href="/2026/07/20/nong-dong-gdal-jiu-nong-dong-yao-gan-shu-ju-chu-li/"/>
+      <url>/2026/07/20/nong-dong-gdal-jiu-nong-dong-yao-gan-shu-ju-chu-li/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.5H32yquLEXvGIYxVjHQcagHaDt?r=0&amp;rs=1&amp;pid=ImgDetMain&amp;o=7&amp;rm=3" alt="GDAL"></p><p>我们不妨把 GDAL 想象成一个万能遥控器。</p><p>遥感数据的世界里，格式成百上千，就像不同品牌、不同年代的老电视，各有各的遥控器。</p><p><img src="https://r-spatial.org/images/gis3.png" alt="众多软件使用了gdal，因为gdal支持多种数据格式"></p><p>而 GDAL 厉害的地方就在于，它能用一个统一的模式，去读懂几乎所有你能遇到的栅格影像，不管它是 GeoTIFF、HDF 还是什么奇怪的卫星格式。</p><p>所以，一旦你弄懂了这个遥控器怎么用，你就能打开绝大多数遥感数据的大门。</p><hr><p>那这个万能遥控器具体能做什么呢？</p><p>其实我们平时处理影像的那几个基本动作，它全包了。</p><p>比如你想把影像格式从A换成B，一个命令就搞定。</p><p>想把一张很大的图按经纬度范围切出一个小块，或者把几张图拼成一整张，它都能轻松做到。</p><p>更让人安心的是，它内部还装着一个翻译，知道怎么在各种投影和坐标系之间来回翻译，保证你这边裁下来的一块，和那边另一张图能严丝合缝地对在一起。</p><p><img src="https://pytorch.org/wp-content/uploads/2024/11/torchgeo-map.png" alt="对地球不同投影可视化"></p><p>这些工作，正是遥感数据处理里最繁琐、也最容易出错的部分，GDAL 把它变成了一步到位的流水线。</p><hr><p>更深一层，是理解GDAL是怎么描述一张影像的。</p><p><img src="https://hacker.trickstorm.com/wp-content/uploads/2024/11/DALL%C2%B7E-2024-11-27-03.31.43-A-visually-engaging-banner-style-image-for-a-blog-article-about-creating-GeoTIFF-files-from-JPEG-and-PNG-images-using-GDAL.-The-image-features-a-map-o.webp" alt="遥感离不开gdal"></p><p>在它看来，任何一张遥感图，都是一个数据集里装着几个数字波段，再配上一套地理编码和坐标信息。</p><p>这个简单的模型，解决了一个大问题：你不用再去死记硬背每种格式的细节，只要通过GDAL的眼睛去看，所有影像都变成了同样的结构。</p><p><img src="https://static.wixstatic.com/media/190ac7_c0c01b2b35da4dba8404ceffd0c69aee~mv2.jpg/v1/fill/w_980,h_980,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/190ac7_c0c01b2b35da4dba8404ceffd0c69aee~mv2.jpg" alt="gdal源代码是用c++编写"></p><p>你开始明白，为什么裁剪之前要先看它的坐标系，为什么重采样会让影像稍微变模糊一点，为什么有些影像带了黑边（NoData值）。</p><p>这些知识，才是你以后面对各种奇怪数据时，依然能沉着处理的底牌。</p><hr><p>既然GDAL这么全能，那是不是学好它就万事大吉了？</p><p>当然不是。你可以把GDAL看作一个超级能干的搬运工。</p><p><img src="https://pytorch.org/wp-content/uploads/2024/11/torchgeo-sample.png" alt="在遥感和深度学习结合也离不开gdal"></p><p>它负责把原始数据从盘里读出来、整理好、切成合适的形状，然后送到你手上。</p><p>但接下来的加工，就超出它的主场了。</p><p>比如，如果你想用深度学习去分类地面上的农田和森林，那更要请出深度学习框架。</p><p><img src="https://pytorch.org/wp-content/uploads/2024/11/torchgeo-nwpu.png" alt="目标检测的例子"></p><p>所以，GDAL 帮你打通了最艰难的第一关，数据准备。</p><p>小白死磕GDAL就对了。</p><p>深度学习的样本准备少不了GDAL的加持。</p><p>有人说，我不用GDAL，我用raterio。</p><p>那你是不知道raterio是封装了GDAL的api接口。</p><hr><p>说白了，遥感数据处理的千头万绪，最终都能归结为对影像在空间和数值的操纵。</p><p>GDAL 牢牢抓住了空间这个核心，帮你把各种数据规整到统一的坐标框架下，让你可以优雅地取出想要的那一块像素。</p><p><img src="https://pytorch.org/wp-content/uploads/2024/11/torchgeo-inria.png" alt="影像和标签可视化"></p><p>一旦你掌握了这门与空间数据打交道的共同语言，剩下的数值玩法，不过是换上不同的工具箱而已。</p><p>这就是为什么说，弄懂 GDAL，你就弄懂了遥感数据处理。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 遥感 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 遥感 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>闲鱼是国内暗网</title>
       <link href="/2026/07/15/wei-shi-me-shuo-xian-yu-shi-guo-nei-an-wang/"/>
       <url>/2026/07/15/wei-shi-me-shuo-xian-yu-shi-guo-nei-an-wang/</url>
@@ -1449,9 +1549,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> 编程 </tag>
             
         </tags>
       
@@ -1478,9 +1578,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> 编程 </tag>
             
         </tags>
       
@@ -1507,9 +1607,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> 编程 </tag>
             
         </tags>
       
@@ -6344,9 +6444,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> 编程 </tag>
             
             <tag> gis </tag>
             
@@ -6425,9 +6525,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> python </tag>
+            
+            <tag> 编程 </tag>
             
         </tags>
       
@@ -6504,9 +6604,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> python </tag>
+            
+            <tag> 编程 </tag>
             
         </tags>
       
@@ -6587,9 +6687,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> python </tag>
+            
+            <tag> 编程 </tag>
             
         </tags>
       
@@ -8684,9 +8784,9 @@
       
         <tags>
             
-            <tag> 编程 </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> 编程 </tag>
             
         </tags>
       

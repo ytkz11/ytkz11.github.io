@@ -6,7 +6,7 @@
   <link href="https://ytkz.tech/atom.xml" rel="self"/>
   
   <link href="https://ytkz.tech/"/>
-  <updated>2026-07-16T00:25:28.122Z</updated>
+  <updated>2026-07-27T16:18:52.547Z</updated>
   <id>https://ytkz.tech/</id>
   
   <author>
@@ -15,6 +15,106 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《小白看懂遥感》第2篇：为什么遥感图片有多个波段？</title>
+    <link href="https://ytkz.tech/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/"/>
+    <id>https://ytkz.tech/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/</id>
+    <published>2026-07-28T14:33:34.000Z</published>
+    <updated>2026-07-27T16:18:52.547Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ytkz11/picture/master/63002937-7014-481b-a334-e859175eea34.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="https://ytkz.tech/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《小白看懂遥感》第1篇：图片为什么也是矩阵？</title>
+    <link href="https://ytkz.tech/2026/07/27/xiao-bai-kan-dong-yao-gan-di-1-pian-tu-pian-wei-shi-me-ye-shi-ju-zhen/"/>
+    <id>https://ytkz.tech/2026/07/27/xiao-bai-kan-dong-yao-gan-di-1-pian-tu-pian-wei-shi-me-ye-shi-ju-zhen/</id>
+    <published>2026-07-27T14:33:34.000Z</published>
+    <updated>2026-07-27T16:18:50.055Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ytkz11/picture/master/63002937-7014-481b-a334-e859175eea34.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="https://ytkz.tech/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么单机多卡训练，不会因为多一张 GPU 就快一倍？</title>
+    <link href="https://ytkz.tech/2026/07/26/wei-shi-me-dan-ji-duo-qia-xun-lian-bu-hui-yin-wei-duo-yi-zhang-gpu-jiu-kuai-yi-bei/"/>
+    <id>https://ytkz.tech/2026/07/26/wei-shi-me-dan-ji-duo-qia-xun-lian-bu-hui-yin-wei-duo-yi-zhang-gpu-jiu-kuai-yi-bei/</id>
+    <published>2026-07-26T14:33:34.000Z</published>
+    <updated>2026-07-26T16:17:29.108Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ytkz11/picture/master/46705225-8deb-4005-8aef-03065782b948.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>弄懂GDAL就弄懂遥感数据处理</title>
+    <link href="https://ytkz.tech/2026/07/20/nong-dong-gdal-jiu-nong-dong-yao-gan-shu-ju-chu-li/"/>
+    <id>https://ytkz.tech/2026/07/20/nong-dong-gdal-jiu-nong-dong-yao-gan-shu-ju-chu-li/</id>
+    <published>2026-07-20T14:33:34.000Z</published>
+    <updated>2026-07-20T11:34:41.081Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://ts1.tc.mm.bing.net/th/id/OIP-C.5H32yquLEXvGIYxVjHQcagHaDt?r=0&amp;amp;rs=1&amp;amp;pid=ImgDetMain&amp;amp;o=7&amp;amp;rm=3&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="https://ytkz.tech/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>闲鱼是国内暗网</title>
@@ -424,113 +524,6 @@
     
     
     <category term="遥感" scheme="https://ytkz.tech/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pdf软件推荐Sumatra PDF</title>
-    <link href="https://ytkz.tech/2026/05/19/pdf-ruan-jian-tui-jian-sumatra-pdf/"/>
-    <id>https://ytkz.tech/2026/05/19/pdf-ruan-jian-tui-jian-sumatra-pdf/</id>
-    <published>2026-05-19T14:33:34.000Z</published>
-    <updated>2026-05-19T11:47:22.805Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;好久没看书了，看书就得有软件，我推荐一款最近正在用的pdf软件，绿色无毒，文件大小是10MB左右。&lt;/p&gt;
-&lt;p&gt;它名字叫做sumatra PDF.&lt;/p&gt;
-&lt;p&gt;它只支持在window系统安装、使用。&lt;/p&gt;
-&lt;p&gt;网址在下面，自取。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="软件" scheme="https://ytkz.tech/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="软件" scheme="https://ytkz.tech/tags/%E8%BD%AF%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开发日记：YOLO 实例分割可视化工具</title>
-    <link href="https://ytkz.tech/2026/05/14/kai-fa-ri-ji-yolo-shi-li-fen-ge-ke-shi-hua-gong-ju/"/>
-    <id>https://ytkz.tech/2026/05/14/kai-fa-ri-ji-yolo-shi-li-fen-ge-ke-shi-hua-gong-ju/</id>
-    <published>2026-05-14T14:33:34.000Z</published>
-    <updated>2026-05-19T11:47:22.805Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;开发日记：YOLO-实例分割可视化工具（增强版）&quot;&gt;&lt;a href=&quot;#开发日记：YOLO-实例分割可视化工具（增强版）&quot; class=&quot;headerlink&quot; title=&quot;开发日记：YOLO 实例分割可视化工具（增强版）&quot;&gt;&lt;/a&gt;开发日记：YOLO</summary>
-        
-      
-    
-    
-    
-    <category term="AI" scheme="https://ytkz.tech/categories/AI/"/>
-    
-    
-    <category term="AI" scheme="https://ytkz.tech/tags/AI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用半佛仙人的文风写遥感</title>
-    <link href="https://ytkz.tech/2026/05/12/shi-yong-ban-fo-xian-ren-de-wen-feng-xie-yao-gan/"/>
-    <id>https://ytkz.tech/2026/05/12/shi-yong-ban-fo-xian-ren-de-wen-feng-xie-yao-gan/</id>
-    <published>2026-05-12T14:27:10.000Z</published>
-    <updated>2026-05-12T15:02:02.342Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;兄弟们，今天聊个听起来特科幻，其实原理特朴素的东西——&lt;strong&gt;遥感&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;说白了，这就是&lt;strong&gt;隔空搞情报&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;你以为遥感是卫星在天上发激光，或者像科幻片里那样“滴”一下扫出地下的黄金？太天真了。遥感</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="https://ytkz.tech/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="https://ytkz.tech/tags/%E9%97%B2%E8%81%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>问了下CHATGPT怎么优化网络结构</title>
-    <link href="https://ytkz.tech/2026/05/12/wen-liao-xia-chatgpt-zen-me-you-hua-wang-luo-jie-gou/"/>
-    <id>https://ytkz.tech/2026/05/12/wen-liao-xia-chatgpt-zen-me-you-hua-wang-luo-jie-gou/</id>
-    <published>2026-05-12T14:27:10.000Z</published>
-    <updated>2026-05-12T15:02:02.343Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;我的提示词是：&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-none&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="闲聊" scheme="https://ytkz.tech/categories/%E9%97%B2%E8%81%8A/"/>
-    
-    
-    <category term="闲聊" scheme="https://ytkz.tech/tags/%E9%97%B2%E8%81%8A/"/>
     
   </entry>
   
