@@ -6,7 +6,7 @@
   <link href="https://ytkz.tech/atom.xml" rel="self"/>
   
   <link href="https://ytkz.tech/"/>
-  <updated>2026-07-27T16:18:52.547Z</updated>
+  <updated>2026-10-12T10:25:48.698Z</updated>
   <id>https://ytkz.tech/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>吐槽，GID数据集制作深度学习样本</title>
+    <link href="https://ytkz.tech/2026/10/12/tu-cao-gid-shu-ju-ji-zhi-zuo-shen-du-xue-xi-yang-ben/"/>
+    <id>https://ytkz.tech/2026/10/12/tu-cao-gid-shu-ju-ji-zhi-zuo-shen-du-xue-xi-yang-ben/</id>
+    <published>2026-10-12T14:33:34.000Z</published>
+    <updated>2026-10-12T10:25:48.698Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;GID 高分二号高分辨率土地覆盖数据集&lt;/p&gt;
+&lt;p&gt;GID 是 gaofen image dataset的缩写。&lt;/p&gt;
+&lt;p&gt;包含150张高分二号影像，被切成512×512大小的图片 标签含有5种类别（不加空白），0：建筑、1：田地、2：林地、3：草地、4：水体</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>《小白看懂遥感》第2篇：为什么遥感图片有多个波段？</title>
@@ -79,6 +106,33 @@
         
         
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ytkz11/picture/master/46705225-8deb-4005-8aef-03065782b948.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>做标注做到手抽筋？我写了个QGIS插件，一键搞定正负样本</title>
+    <link href="https://ytkz.tech/2026/07/26/zuo-biao-zhu-zuo-dao-shou-chou-jin-wo-xie-liao-ge-qgis-cha-jian-yi-jian-gao-ding-zheng-fu-yang-ben/"/>
+    <id>https://ytkz.tech/2026/07/26/zuo-biao-zhu-zuo-dao-shou-chou-jin-wo-xie-liao-ge-qgis-cha-jian-yi-jian-gao-ding-zheng-fu-yang-ben/</id>
+    <published>2026-07-26T14:33:34.000Z</published>
+    <updated>2026-08-08T12:54:16.732Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;朋友们，今天聊点实在的。&lt;/p&gt;
+&lt;p&gt;最近在搞一个遥感分类项目，要标注几千个蔬菜大棚，正样本标“1”，负样本标“0”。本以为是个机械活，结果在QGIS或者是在arcgis里一个个点开属性表改字段，再手动跳转下一个图斑，眼睛花了不说，手指头都快练出肌肉记忆了。&lt;/p&gt;
+&lt;p</summary>
         
       
     
@@ -470,60 +524,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>TIFF格式是谁发明的？为什么地信遥感界离不开它？未来又会走向哪里？.md</title>
-    <link href="https://ytkz.tech/2026/05/24/tiff-ge-shi-shi-shui-fa-ming-de-wei-shi-me-di-xin-yao-gan-jie-chi-bu-kai-ta-wei-lai-you-hui-zou-xiang-na-li/"/>
-    <id>https://ytkz.tech/2026/05/24/tiff-ge-shi-shi-shui-fa-ming-de-wei-shi-me-di-xin-yao-gan-jie-chi-bu-kai-ta-wei-lai-you-hui-zou-xiang-na-li/</id>
-    <published>2026-05-24T14:33:34.000Z</published>
-    <updated>2026-05-23T16:16:25.252Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;TIFF-格式是谁发明的？为什么遥感界离不开它？未来又会走向哪里？&quot;&gt;&lt;a href=&quot;#TIFF-格式是谁发明的？为什么遥感界离不开它？未来又会走向哪里？&quot; class=&quot;headerlink&quot; title=&quot;TIFF</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="https://ytkz.tech/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>许家印纪录片（双人对话版）</title>
-    <link href="https://ytkz.tech/2026/05/24/xu-jia-yin-ji-lu-pian-shuang-ren-dui-hua-ban/"/>
-    <id>https://ytkz.tech/2026/05/24/xu-jia-yin-ji-lu-pian-shuang-ren-dui-hua-ban/</id>
-    <published>2026-05-24T14:33:34.000Z</published>
-    <updated>2026-05-25T14:25:00.542Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;好的，这是根据您提供的许家印纪录片文案，改编成的双人对话版本。时长仍约为15分钟。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;角色设定：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;甲&lt;/strong&gt;：沉稳、冷静，像一位历史记录者，负责梳理事实脉络。&lt;/li&gt;
-&lt;li</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="https://ytkz.tech/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   

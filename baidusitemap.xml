@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ytkz.tech/2026/10/12/tu-cao-gid-shu-ju-ji-zhi-zuo-shen-du-xue-xi-yang-ben/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://ytkz.tech/2026/07/26/zuo-biao-zhu-zuo-dao-shou-chou-jin-wo-xie-liao-ge-qgis-cha-jian-yi-jian-gao-ding-zheng-fu-yang-ben/</loc>
+    <lastmod>2026-08-08</lastmod>
+  </url>
+  <url>
     <loc>https://ytkz.tech/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/</loc>
     <lastmod>2026-07-27</lastmod>
   </url>
@@ -993,11 +1001,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</loc>
+    <loc>https://ytkz.tech/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</loc>
+    <loc>https://ytkz.tech/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1037,11 +1045,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/03/15/shen-du-xue-xi-shi-yong-shen-jing-wang-luo-ni-he-zhen-shi-shi-jie/</loc>
+    <loc>https://ytkz.tech/2024/03/28/shen-du-xue-xi-shen-jing-wang-luo-shi-tong-guo-shi-me-lai-ni-he-zhen-shi-shi-jie/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/03/28/shen-du-xue-xi-shen-jing-wang-luo-shi-tong-guo-shi-me-lai-ni-he-zhen-shi-shi-jie/</loc>
+    <loc>https://ytkz.tech/2024/03/15/shen-du-xue-xi-shi-yong-shen-jing-wang-luo-ni-he-zhen-shi-shi-jie/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1061,11 +1069,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/04/08/dai-ma-ji-suan-di-li-duo-bian-xing-zai-di-qiu-biao-mian-de-mian-ji-de-python-dai-ma-jie-xi/</loc>
+    <loc>https://ytkz.tech/2024/04/21/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/04/21/dai-ma-huo-qu-dao-lu-zhong-xin-xian-de-dai-ma-shi-xian/</loc>
+    <loc>https://ytkz.tech/2024/04/08/dai-ma-ji-suan-di-li-duo-bian-xing-zai-di-qiu-biao-mian-de-mian-ji-de-python-dai-ma-jie-xi/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1169,11 +1177,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/</loc>
+    <loc>https://ytkz.tech/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/</loc>
+    <loc>https://ytkz.tech/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1185,11 +1193,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/</loc>
+    <loc>https://ytkz.tech/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/</loc>
+    <loc>https://ytkz.tech/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1229,11 +1237,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/03/01/pycharm-bian-ma-bao-cuo-ji-jie-jue/</loc>
+    <loc>https://ytkz.tech/2024/09/02/py-rust-cpp-su-du-bi-jiao/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/09/02/py-rust-cpp-su-du-bi-jiao/</loc>
+    <loc>https://ytkz.tech/2024/03/01/pycharm-bian-ma-bao-cuo-ji-jie-jue/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1341,19 +1349,19 @@
     <lastmod>2024-07-31</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/07/31/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/</loc>
-    <lastmod>2024-07-31</lastmod>
-  </url>
-  <url>
     <loc>https://ytkz.tech/2024/07/31/zhu-ce-ce-hui-shi-2020-nian-zong-he-neng-li-kao-shi-zhen-ti/</loc>
     <lastmod>2024-07-31</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/07/31/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/</loc>
+    <loc>https://ytkz.tech/2024/07/31/zhu-ce-ce-hui-shi-2019-nian-zong-he-neng-li-kao-shi-zhen-ti/</loc>
     <lastmod>2024-07-31</lastmod>
   </url>
   <url>
     <loc>https://ytkz.tech/2024/07/31/zhu-ce-ce-hui-shi-2017-nian-zong-he-neng-li-kao-shi-zhen-ti/</loc>
+    <lastmod>2024-07-31</lastmod>
+  </url>
+  <url>
+    <loc>https://ytkz.tech/2024/07/31/zhu-ce-ce-hui-shi-2018-nian-zong-he-neng-li-kao-shi-zhen-ti/</loc>
     <lastmod>2024-07-31</lastmod>
   </url>
   <url>
@@ -1413,11 +1421,11 @@
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2022/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/</loc>
+    <loc>https://ytkz.tech/2022/11/14/yao-gan-ru-men-zhi-shi-yong-matlab-du-qu-landsat8/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2022/11/14/yao-gan-ru-men-zhi-shi-yong-matlab-du-qu-landsat8/</loc>
+    <loc>https://ytkz.tech/2022/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
@@ -1453,19 +1461,19 @@
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
-    <lastmod>2024-07-26</lastmod>
-  </url>
-  <url>
     <loc>https://ytkz.tech/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2022/11/01/za-wei-shi-me-wu-ti-chao-shi-shi-hui-bian-an/</loc>
+    <loc>https://ytkz.tech/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
     <loc>https://ytkz.tech/2021/04/30/za-wen-ge-ren-jiao-du-kan-dai-dang-qian-yi-ji-jin-hou-yao-gan-de-xu-qiu-shi-shi-me/</loc>
+    <lastmod>2024-07-26</lastmod>
+  </url>
+  <url>
+    <loc>https://ytkz.tech/2022/11/01/za-wei-shi-me-wu-ti-chao-shi-shi-hui-bian-an/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
@@ -1485,11 +1493,11 @@
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2021/09/09/ru-he-jiang-python-bao-fa-bu-dao-pypi-shang/</loc>
+    <loc>https://ytkz.tech/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/</loc>
+    <loc>https://ytkz.tech/2021/09/09/ru-he-jiang-python-bao-fa-bu-dao-pypi-shang/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
@@ -1569,11 +1577,11 @@
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/04/26/dai-ma-cong-shi-jin-zhi-du-shu-dao-du-fen-miao-ge-shi-yu-fan-xiang-zhuan-huan-de-python-shi-xian/</loc>
+    <loc>https://ytkz.tech/2024/06/25/dai-ma-shi-me-shi-rtree-ji-qi-ying-yong/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/06/25/dai-ma-shi-me-shi-rtree-ji-qi-ying-yong/</loc>
+    <loc>https://ytkz.tech/2024/04/26/dai-ma-cong-shi-jin-zhi-du-shu-dao-du-fen-miao-ge-shi-yu-fan-xiang-zhuan-huan-de-python-shi-xian/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>

@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>吐槽，GID数据集制作深度学习样本</title>
+      <link href="/2026/10/12/tu-cao-gid-shu-ju-ji-zhi-zuo-shen-du-xue-xi-yang-ben/"/>
+      <url>/2026/10/12/tu-cao-gid-shu-ju-ji-zhi-zuo-shen-du-xue-xi-yang-ben/</url>
+      
+        <content type="html"><![CDATA[<p>GID 高分二号高分辨率土地覆盖数据集</p><p>GID 是 gaofen image dataset的缩写。</p><p>包含150张高分二号影像，被切成512×512大小的图片 标签含有5种类别（不加空白），0：建筑、1：田地、2：林地、3：草地、4：水体 </p><p>来源：<a href="https://x-ytong.github.io/project/GID.html">https://x-ytong.github.io/project/GID.html</a></p><p>首先下载GID-5网盘数据的只有标签文件，影像需要去另一个链接下载。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs20261012140414079.png" alt="某网盘的GID5数据"></p><p>不过这点作者在readme中提到了。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs20261012140059358.png" alt="GID5 README"></p><p>在我下载完标签文件后，转头去<a href="https://x-ytong.github.io/project/Five-Billion-Pixels.html"><strong>Five-Billion-Pixels</strong></a>.下载对应影像文件。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs20261012181618043.png" alt="Five-Billion-Pixels数据集"></p><p><a href="https://x-ytong.github.io/project/Five-Billion-Pixels.html"><strong>Five-Billion-Pixels</strong></a> 不止是有影像，还有其他标签。不过我并不需要<a href="https://x-ytong.github.io/project/Five-Billion-Pixels.html"><strong>Five-Billion-Pixels</strong></a>.的标签，考虑到深度学习图像处理大多数是处理8bit数据，我就下载上图中的Image__8bit_NirRGB 文件夹，结果踩坑了。</p><p>因为Image__8bit_NirRGB 中的文件是存在明显错误的。</p><p>根据介绍得知，该Image__8bit_NirRGB是8bit,波段顺序是nir、R、G、B。正常情况下是我需要对这个文件进行波段重组为RGB波段顺序的格式，然后再对影像和标签进行切片，分割为256x256或者512x512尺寸大小的训练样本。</p><p>但是！没想到Image__8bit_NirRGB的文件最后一个波段是坏的，全是255值，下图是在acrgis打开的结果，我设置了只显示第四波段。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs20261012141141721.png" alt="影像地址"></p><p>即使只显示前三波段进行展示，颜色效果也异常诡异，完全不不像场景的假彩色图像。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs20261012141523290.png" alt="异常的显示效果"></p><p>不过还好有补救措施，因为作者不止是提供了8bit的影像，还提供了8bit的爸爸：16bit</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs20261012141946433.png" alt="16bit"></p><p>我们只需要下载16bit，然后自己做一个批处理的拉伸处理，即可得到正常的8bit数据。</p><p>根据作者提供的readme得知，16-bit影像的波段顺序是B, G, R, Nir</p><pre class="line-numbers language-none"><code class="language-none">Image_16bit_BGRNir: 150 raw 16-bit GF-2 images, of which the band order is B, G, R, Nir.Image__8bit_NirRGB: 150 re-quantized 8-bit GF-2 images, of which the band order is Nir, R, G, B.<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>所以我们在arcgis设置16bit的波段显示，即可检查16bit是否正常。下图是我们在arcgis的设置波段显示</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs20261012142337336.png" alt="arcgis设置波段"></p><p>红色对应第三波段</p><p>绿色是第二波段</p><p>蓝色则是第一波段</p><p>下图是该16bit在拉伸后的显示效果。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs20261012142431048.png" alt="16bit在拉伸后的显示效果"></p><p>GID数据集虽有不足，但瑕不掩瑜。作为开源数据集，它获取成本极低，非常适合用于深度学习遥感图像处理的学习与实践。最后，感谢武汉大学的开源贡献。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《小白看懂遥感》第2篇：为什么遥感图片有多个波段？</title>
       <link href="/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/"/>
       <url>/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/</url>
@@ -59,6 +84,31 @@
       <url>/2026/07/26/wei-shi-me-dan-ji-duo-qia-xun-lian-bu-hui-yin-wei-duo-yi-zhang-gpu-jiu-kuai-yi-bei/</url>
       
         <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/46705225-8deb-4005-8aef-03065782b948.png" alt="单机多卡训练"></p><p>很多人第一次接触 PyTorch 多 GPU 训练时，都会有一个非常直观的想法：</p><blockquote><p>一张 GPU 训练需要 10 个小时，两张 GPU 是不是 5 个小时？四张 GPU 是不是 2.5 个小时？</p></blockquote><p>理论上，好像应该如此。</p><p>毕竟 GPU 数量增加了一倍，计算能力也增加了一倍。</p><p>但是实际训练过程中，你往往会发现：</p><p><strong>2 张 GPU 并没有快 2 倍，4 张 GPU 也没有快 4 倍。</strong></p><p>甚至有时候，增加 GPU 后，训练速度提升非常有限。</p><p>为什么？</p><p>因为深度学习训练并不是一个“只靠 GPU 算力”的过程。</p><p>GPU 只是整个训练流水线中的一个环节。</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/f824bb91-f847-40e1-83f6-72e3b0a153da.png" alt="多卡训练"></p><hr><h2 id="训练模型，不只是-GPU-在工作"><a href="#训练模型，不只是-GPU-在工作" class="headerlink" title="训练模型，不只是 GPU 在工作"></a>训练模型，不只是 GPU 在工作</h2><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/4945f8ed-f4c8-4764-a0f3-bf8e769b60d0.png" alt="训练模型"></p><p>很多人理解训练过程时，会简单认为：</p><blockquote><p>把数据丢给 GPU，然后 GPU 负责计算。</p></blockquote><p>实际上，一次完整的训练迭代，背后包含很多步骤：</p><pre class="line-numbers language-none"><code class="language-none">读取数据    ↓CPU 数据处理    ↓数据加载到内存    ↓传输到 GPU    ↓Forward 前向计算    ↓Backward 反向传播    ↓梯度同步    ↓参数更新<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>其中只有：</p><ul><li>Forward</li><li>Backward</li></ul><p>是真正消耗 GPU 计算资源的部分。</p><p>但是：</p><ul><li>数据读取依赖磁盘</li><li>数据增强依赖 CPU</li><li>数据传输依赖 PCIe</li><li>多卡同步依赖 GPU 通信链路</li></ul><p>这些环节并不会因为你增加 GPU 数量而自动变快。</p><p>举一个简单例子：</p><p>假设一次训练：</p><pre class="line-numbers language-none"><code class="language-none">数据读取：20ms数据处理：10msGPU计算：100ms梯度同步：20ms<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>单卡情况下：</p><pre class="line-numbers language-none"><code class="language-none">总时间：20 + 10 + 100=130ms<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>增加 GPU 后：</p><p>GPU计算变成：</p><pre class="line-numbers language-none"><code class="language-none">100ms → 50ms<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>但是其它部分仍然存在：</p><pre class="line-numbers language-none"><code class="language-none">20 + 10 + 50 + 20=100ms<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>最终速度：</p><pre class="line-numbers language-none"><code class="language-none">130 / 100 = 1.3倍<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>而不是2倍。</p><p>这就是为什么多卡训练不会线性增长。</p><hr><h1 id="PyTorch-DDP：多张-GPU-到底做了什么？"><a href="#PyTorch-DDP：多张-GPU-到底做了什么？" class="headerlink" title="PyTorch DDP：多张 GPU 到底做了什么？"></a>PyTorch DDP：多张 GPU 到底做了什么？</h1><p>目前 PyTorch 最常用的多 GPU 训练方式是：</p><p><strong>DistributedDataParallel（DDP）</strong></p><p>它的核心思想其实很简单：</p><blockquote><p>每张 GPU 都复制一份完整模型，然后分别计算不同的数据。</p></blockquote><p>比如两张 GPU：</p><pre class="line-numbers language-none"><code class="language-none">GPU0模型ABatch 0GPU1模型ABatch 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>训练开始后：</p><p>两个 GPU 同时进行：</p><pre class="line-numbers language-none"><code class="language-none">Forward↓Backward<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>这样计算量被分摊了。</p><p>看起来非常美好。</p><p>但是问题来了：</p><p>两个 GPU 计算出来的梯度是不一样的。</p><p>例如，GPU0：</p><pre class="line-numbers language-none"><code class="language-none">梯度：[0.2,0.5,0.1]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>GPU1：</p><pre class="line-numbers language-none"><code class="language-none">梯度：[0.3,0.4,0.2]<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>如果直接更新模型：GPU0 的参数会变成一套。GPU1 的参数会变成另一套。</p><p>模型马上就不一致了。</p><p>所以 DDP 在每一次反向传播之后，都需要做一件事情：<strong>梯度同步。</strong></p><p>也就是：</p><pre class="line-numbers language-none"><code class="language-none">GPU0 梯度       \        AllReduce       /GPU1 梯度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>所有 GPU 交换梯度，然后求平均。</p><p>同步完成后：所有 GPU 才能执行：</p><pre class="line-numbers language-none"><code class="language-none">optimizer.step()<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>更新模型参数。</p><p>所以多卡训练有一个特点：<strong>所有 GPU 必须等最慢的那一张。</strong></p><p>只要有一张 GPU 还没有完成计算，其他 GPU 都要等待。</p><hr><h1 id="GPU-越多，通信压力越大"><a href="#GPU-越多，通信压力越大" class="headerlink" title="GPU 越多，通信压力越大"></a>GPU 越多，通信压力越大</h1><p>很多人觉得：</p><blockquote><p>GPU 越多，计算能力越强，速度应该越快。</p></blockquote><p>这个说法只对了一半。</p><p>GPU 数量增加以后：计算确实变快了。</p><p>但是通信也增加了。</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/Gemini_Generated_Image_3tbyy13tbyy13tby.png" alt="多卡训练"></p><p>假设你的模型参数有：</p><pre class="line-numbers language-none"><code class="language-none">2GB<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>每一次训练，都需要同步对应的梯度。</p><p>单卡：</p><pre class="line-numbers language-none"><code class="language-none">不需要同步<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>两卡：</p><pre class="line-numbers language-none"><code class="language-none">需要一次梯度通信<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>四卡：</p><pre class="line-numbers language-none"><code class="language-none">更多 GPU 之间通信<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>八卡：</p><pre class="line-numbers language-none"><code class="language-none">通信规模进一步增加<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>最终训练时间变成：</p><pre class="line-numbers language-none"><code class="language-none">训练时间 =计算时间+通信时间<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>而不是：</p><pre class="line-numbers language-none"><code class="language-none">训练时间 = 计算时间<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>当 GPU 数量越来越多时：计算部分越来越短。</p><p>但是通信部分占比越来越高。</p><p>这就是大规模训练中的经典问题：</p><p><strong>通信瓶颈。</strong></p><h1 id="实际多卡能提升多少？"><a href="#实际多卡能提升多少？" class="headerlink" title="实际多卡能提升多少？"></a>实际多卡能提升多少？</h1><p>实际工程中：</p><p>如果：</p><ul><li>数据加载正常</li><li>Batch 足够大</li><li>GPU 通信良好</li><li>模型计算占比较高</li></ul><p>通常情况：</p><div class="table-container"><table><thead><tr><th>GPU数量</th><th>理论加速</th><th>实际常见</th></tr></thead><tbody><tr><td>1张</td><td>1倍</td><td>1倍</td></tr><tr><td>2张</td><td>2倍</td><td>约1.7～1.9倍</td></tr><tr><td>4张</td><td>4倍</td><td>约3～3.7倍</td></tr><tr><td>8张</td><td>8倍</td><td>约6～7倍</td></tr></tbody></table></div><p>当然，不同模型差异非常大。</p><p>例如：</p><p>一个小型 CNN：</p><p>可能多卡收益很低。</p><p>一个大型 Transformer：</p><p>可能多卡收益非常明显。</p><h1 id="如何提高多-GPU-训练效率？"><a href="#如何提高多-GPU-训练效率？" class="headerlink" title="如何提高多 GPU 训练效率？"></a>如何提高多 GPU 训练效率？</h1><p>真正高效的多卡训练，不是简单增加 GPU。</p><p>而是优化整个系统。</p><p>常见优化方向：</p><h3 id="1-提高-GPU-利用率"><a href="#1-提高-GPU-利用率" class="headerlink" title="1. 提高 GPU 利用率"></a>1. 提高 GPU 利用率</h3><p>检查：</p><pre class="line-numbers language-none"><code class="language-none">nvidia-smi<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>观察 GPU 是否长期满载。</p><h3 id="2-优化数据加载"><a href="#2-优化数据加载" class="headerlink" title="2. 优化数据加载"></a>2. 优化数据加载</h3><p>调整：</p><pre class="line-numbers language-none"><code class="language-none">num_workerspin_memory=Truepersistent_workers=True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="3-使用混合精度训练"><a href="#3-使用混合精度训练" class="headerlink" title="3. 使用混合精度训练"></a>3. 使用混合精度训练</h3><p>例如：</p><pre class="line-numbers language-none"><code class="language-none">torch.cuda.amp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>减少显存占用，提高计算速度。</p><h3 id="4-增大-Batch-Size"><a href="#4-增大-Batch-Size" class="headerlink" title="4. 增大 Batch Size"></a>4. 增大 Batch Size</h3><p>让每张 GPU 都有足够计算任务。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>单机多卡训练，并不是简单的：</p><blockquote><p>GPU 数量 × 速度。</p></blockquote><p>真正的训练速度取决于整个系统：</p><p>训练速度 = GPU计算效率 + 数据加载效率 + GPU通信效率 + 存储效率 + 软件优化</p><p>增加 GPU，只是提高了其中一个环节。</p><p>如果其它环节没有跟上，多出来的 GPU 反而可能处于等待状态。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 深度学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 深度学习 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>做标注做到手抽筋？我写了个QGIS插件，一键搞定正负样本</title>
+      <link href="/2026/07/26/zuo-biao-zhu-zuo-dao-shou-chou-jin-wo-xie-liao-ge-qgis-cha-jian-yi-jian-gao-ding-zheng-fu-yang-ben/"/>
+      <url>/2026/07/26/zuo-biao-zhu-zuo-dao-shou-chou-jin-wo-xie-liao-ge-qgis-cha-jian-yi-jian-gao-ding-zheng-fu-yang-ben/</url>
+      
+        <content type="html"><![CDATA[<p>朋友们，今天聊点实在的。</p><p>最近在搞一个遥感分类项目，要标注几千个蔬菜大棚，正样本标“1”，负样本标“0”。本以为是个机械活，结果在QGIS或者是在arcgis里一个个点开属性表改字段，再手动跳转下一个图斑，眼睛花了不说，手指头都快练出肌肉记忆了。</p><p>实在忍不了，撸了个小插件，取名 <strong>“01标注器”</strong>，专治这种重复劳动。</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20260808195326038.png" alt="image-20260808195326038"></p><p><strong>它有多懒人？</strong></p><ul><li>选中一个图斑，按键盘 <strong>数字1</strong> ,自动赋值为“1”（正样本）</li><li>按 <strong>数字2</strong> → 自动赋值为“0”（负样本）</li><li>然后<strong>自动跳转到下一个图斑</strong>，顺便把地图缩放到合适大小，不用你再手动滚轮。</li></ul><p>左右箭头还能随时前后翻看图斑，想回看修改也方便。</p><p><strong>关键是不用再碰属性表了</strong>,选好图层和字段，所有操作都在面板上完成，快捷键一按，丝滑得像玩游戏。</p><p>缩放比例我也调过几版，一开始图斑顶满屏幕，看着憋屈；后来改成8倍边距，视野舒服多了。你要是觉得太大或太小，代码里 <code>rect.scale()</code> 那个数字自己改，2.0、3.0随你心意。</p><p><strong>插件长这样</strong></p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20260808192907297.png" alt="image-20260808192907297"></p><p>停靠在qgis的右侧，我再放大一点：</p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20260808193006913.png" alt="image-20260808193006913"></p><p>现在我的标注效率至少翻了几倍，下午一边听播客一边按1/2，几千个图斑不知不觉就搞定了。</p><p>如果你也在QGIS里做类似标注，这插件或许能帮你省点力气。代码已经整理好了，需要的朋友可以找我要，或者自己照着改都行，反正开源精神，怎么顺手怎么来。</p><p>地址是：<a href="https://github.com/ytkz11/auto_label_switcher">https://github.com/ytkz11/auto_label_switcher</a></p><p><img src="https://raw.githubusercontent.com/ytkz11/picture/master/image-20260808195602825.png" alt="image-20260808195602825"></p><h2 id="功能特点"><a href="#功能特点" class="headerlink" title="功能特点"></a>功能特点</h2><ul><li><strong>键盘驱动</strong>：按 <code>1</code> 赋值为正样本（1），按 <code>2</code> 赋值为负样本（0），无需点击按钮。</li><li><strong>自动跳转</strong>：赋值后自动跳转到下一个图斑（FID 升序），并缩放至合适视野。</li><li><strong>灵活导航</strong>：左右箭头或按钮可在图斑间前后切换，方便复核修改。</li><li><strong>所见即所得</strong>：停靠面板清晰显示当前图层和字段，所有操作实时反馈。</li><li><strong>自定义缩放</strong>：可调整 <code>zoom_to_selected_with_margin</code> 中的缩放倍率，适配不同图斑大小。</li></ul><h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><h3 id="方法一：通过-QGIS-插件管理器（推荐）"><a href="#方法一：通过-QGIS-插件管理器（推荐）" class="headerlink" title="方法一：通过 QGIS 插件管理器（推荐）"></a>方法一：通过 QGIS 插件管理器（推荐）</h3><ol><li>从 <a href="../../releases">Releases</a> 页面下载最新版的 <code>.zip</code> 压缩包（<strong>不要解压</strong>）。</li><li>打开 QGIS，点击菜单 <strong>插件 → 管理和安装插件</strong>。</li><li>选择 <strong>“从 ZIP 安装”</strong>，选择下载的 zip 文件，点击安装。</li><li>安装完成后，在工具栏会出现“01标注”按钮，点击即可打开停靠面板。</li></ol><h3 id="方法二：手动拷贝（适用于开发-调试）"><a href="#方法二：手动拷贝（适用于开发-调试）" class="headerlink" title="方法二：手动拷贝（适用于开发/调试）"></a>方法二：手动拷贝（适用于开发/调试）</h3><ol><li>将本仓库克隆或下载到本地。</li><li>将整个文件夹（例如 <code>auto_label_switcher</code>）复制到 QGIS 的插件目录：<ul><li>Windows: <code>C:\Users\你的用户名\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\</code></li><li>Linux: <code>~/.local/share/QGIS/QGIS3/profiles/default/python/plugins/</code></li><li>macOS: <code>~/Library/Application Support/QGIS/QGIS3/profiles/default/python/plugins/</code></li></ul></li><li>重启 QGIS，在插件管理器中启用该插件。</li></ol><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><h3 id="初次配置"><a href="#初次配置" class="headerlink" title="初次配置"></a>初次配置</h3><ol><li>点击工具栏“01标注”按钮，打开停靠面板（默认停靠在右侧）。</li><li><strong>选择矢量图层</strong>：下拉列表中会自动过滤出<strong>多边形</strong>图层，选择你要标注的图斑图层。</li><li><strong>选择字段</strong>：选择用于存储标注结果的字段（支持整型、浮点型、字符串类型）。</li></ol><h3 id="标注流程"><a href="#标注流程" class="headerlink" title="标注流程"></a>标注流程</h3><ul><li><strong>选中图斑</strong>：在地图上点击选中一个图斑（或通过左右箭头跳转后自动选中）。</li><li><strong>赋值</strong>：<ul><li>按键盘 <code>1</code> → 将该图斑的字段值设为 <code>1</code>（正样本）</li><li>按键盘 <code>2</code> → 将该图斑的字段值设为 <code>0</code>（负样本）</li><li>也可以直接点击面板上的 <strong>“1 正样本”</strong> / <strong>“0 负样本”</strong> 按钮。</li></ul></li><li><strong>自动跳转</strong>（默认开启）：赋值后自动跳转到下一个图斑（按 FID 升序），并缩放至该图斑。</li></ul><p>写代码的初衷就是提高工作效率，让枯燥的工作变得有趣一点点。这个脚步还可以改进，比如改成多分类标注，不过这个是后话了。</p>]]></content>
       
       
       <categories>
@@ -5181,9 +5231,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5212,9 +5262,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -5241,9 +5291,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -5270,9 +5320,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -5446,9 +5496,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
             <tag> 无人机 </tag>
             
@@ -5504,9 +5554,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
             <tag> gis </tag>
             
@@ -5749,11 +5799,11 @@
     
     
     <entry>
-      <title>加载torch报错及如何解决</title>
-      <link href="/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/"/>
-      <url>/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</url>
+      <title>加载torch报错及如何解决，Failed to import pytorch fbgemm.dll or one of its dependencies is missing</title>
+      <link href="/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/"/>
+      <url>/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://discuss.pytorch.org/t/failed-to-import-pytorch-fbgemm-dll-or-one-of-its-dependencies-is-missing/201969">Failed to import pytorch fbgemm.dll or one of its dependencies is missing</a></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409008.png" alt="image-20240816135852503"></p><p>这往往是你的电脑缺少了某些微软的dll文件。所以报错了。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>前往<a href="https://www.dllme.com/dll/files/libomp140_x86_64?sort=upload&amp;arch=0x8664">https://www.dllme.com/dll/files/libomp140_x86_64?sort=upload&amp;arch=0x8664</a></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409197.png" alt="image-20240816140329703"></p><p>点击。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409618.png" alt="image-20240816140345130"></p><p>按照你的电脑是否为64位进行选择</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408122.png" alt="image-20240816140413092"></p><p>下载到本地。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408751.png" alt="image-20240816140449372"></p><p>把上图中的dll文件复制到你的电脑C:\Windows\System32  文件夹下面。</p><p>然后再进入命令行python环境，</p><p>输入import torch </p><p>测试是否可以成功加载torch</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408882.png" alt="image-20240816140816700"></p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://discuss.pytorch.org/t/failed-to-import-pytorch-fbgemm-dll-or-one-of-its-dependencies-is-missing/201969">Failed to import pytorch fbgemm.dll or one of its dependencies is missing</a></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409008.png" alt="image-20240816135852503"></p><p>这往往是你的电脑缺少了某些微软的dll文件。所以报错了。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>前往<a href="https://www.dllme.com/dll/files/libomp140_x86_64?sort=upload&amp;arch=0x8664">https://www.dllme.com/dll/files/libomp140_x86_64?sort=upload&amp;arch=0x8664</a></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409197.png" alt="image-20240816140329703"></p><p>点击。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409618.png" alt="image-20240816140345130"></p><p>按照你的电脑是否为64位进行选择</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408122.png" alt="image-20240816140413092"></p><p>下载到本地。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408751.png" alt="image-20240816140449372"></p><p>把上图中的dll文件复制到你的电脑C:\Windows\System32  文件夹下面。</p><p>然后再进入命令行python环境，</p><p>输入import torch </p><p>测试是否可以成功加载torch</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408882.png" alt="image-20240816140816700"></p><p>不报错则说明万事大吉！</p>]]></content>
       
       
       <categories>
@@ -5774,11 +5824,11 @@
     
     
     <entry>
-      <title>加载torch报错及如何解决，Failed to import pytorch fbgemm.dll or one of its dependencies is missing</title>
-      <link href="/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/"/>
-      <url>/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue-failed-to-import-pytorch-fbgemm.dll-or-one-of-its-dependencies-is-missing/</url>
+      <title>加载torch报错及如何解决</title>
+      <link href="/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/"/>
+      <url>/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://discuss.pytorch.org/t/failed-to-import-pytorch-fbgemm-dll-or-one-of-its-dependencies-is-missing/201969">Failed to import pytorch fbgemm.dll or one of its dependencies is missing</a></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409008.png" alt="image-20240816135852503"></p><p>这往往是你的电脑缺少了某些微软的dll文件。所以报错了。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>前往<a href="https://www.dllme.com/dll/files/libomp140_x86_64?sort=upload&amp;arch=0x8664">https://www.dllme.com/dll/files/libomp140_x86_64?sort=upload&amp;arch=0x8664</a></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409197.png" alt="image-20240816140329703"></p><p>点击。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409618.png" alt="image-20240816140345130"></p><p>按照你的电脑是否为64位进行选择</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408122.png" alt="image-20240816140413092"></p><p>下载到本地。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408751.png" alt="image-20240816140449372"></p><p>把上图中的dll文件复制到你的电脑C:\Windows\System32  文件夹下面。</p><p>然后再进入命令行python环境，</p><p>输入import torch </p><p>测试是否可以成功加载torch</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408882.png" alt="image-20240816140816700"></p><p>不报错则说明万事大吉！</p>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://discuss.pytorch.org/t/failed-to-import-pytorch-fbgemm-dll-or-one-of-its-dependencies-is-missing/201969">Failed to import pytorch fbgemm.dll or one of its dependencies is missing</a></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409008.png" alt="image-20240816135852503"></p><p>这往往是你的电脑缺少了某些微软的dll文件。所以报错了。</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p>前往<a href="https://www.dllme.com/dll/files/libomp140_x86_64?sort=upload&amp;arch=0x8664">https://www.dllme.com/dll/files/libomp140_x86_64?sort=upload&amp;arch=0x8664</a></p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409197.png" alt="image-20240816140329703"></p><p>点击。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161409618.png" alt="image-20240816140345130"></p><p>按照你的电脑是否为64位进行选择</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408122.png" alt="image-20240816140413092"></p><p>下载到本地。</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408751.png" alt="image-20240816140449372"></p><p>把上图中的dll文件复制到你的电脑C:\Windows\System32  文件夹下面。</p><p>然后再进入命令行python环境，</p><p>输入import torch </p><p>测试是否可以成功加载torch</p><p><img src="https://cdn.jsdelivr.net/gh/ytkz11/picture/imgs202408161408882.png" alt="image-20240816140816700"></p>]]></content>
       
       
       <categories>
@@ -7373,9 +7423,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
             <tag> 矢量 </tag>
             
@@ -7556,9 +7606,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -9350,9 +9400,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -9744,9 +9794,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -10187,9 +10237,9 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 遥感 </tag>
+            
+            <tag> python </tag>
             
             <tag> 绘图 </tag>
             
