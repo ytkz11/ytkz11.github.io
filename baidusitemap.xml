@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ytkz.tech/2026/06/15/3dgeospatial/</loc>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
     <loc>https://ytkz.tech/2026/11/18/tong-shi-wen-wo-zen-me-xue-bian-cheng/</loc>
     <lastmod>2026-11-19</lastmod>
   </url>
@@ -945,11 +949,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/</loc>
+    <loc>https://ytkz.tech/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2023/10/16/bian-cheng-landsat9-ying-xiang-zhuan-zhen-cai-se-rgba-suo-lue-tu/</loc>
+    <loc>https://ytkz.tech/2023/12/08/bian-cheng-bu-shi-yong-gdal-du-qu-tif-wen-jian/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1093,11 +1097,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/05/21/dai-ma-sheng-cheng-zai-zhi-ding-fan-wei-nei-de-dian/</loc>
+    <loc>https://ytkz.tech/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/03/17/dai-ma-gei-ding-dian-ju-chi-ji-zi-tai-jiao-qiu-ling-yi-dian-wei-zhi/</loc>
+    <loc>https://ytkz.tech/2024/05/21/dai-ma-sheng-cheng-zai-zhi-ding-fan-wei-nei-de-dian/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1153,11 +1157,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/</loc>
+    <loc>https://ytkz.tech/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/07/15/dai-ma-li-yong-python-du-qu-pdf-wen-jian/</loc>
+    <loc>https://ytkz.tech/2024/03/17/dai-ma-ling-lei-yao-gan-shu-ju-zhi-shui-shen-gu-ji/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1193,11 +1197,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/</loc>
+    <loc>https://ytkz.tech/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/04/15/dai-ma-wgs84-zuo-biao-zhuan-utm-zuo-biao/</loc>
+    <loc>https://ytkz.tech/2024/06/11/dai-ma-tif-zhuan-huan-dao-kmz-de-jiao-cheng/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1209,11 +1213,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/</loc>
+    <loc>https://ytkz.tech/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/03/29/dai-ma-dem-sheng-cheng-deng-gao-xian/</loc>
+    <loc>https://ytkz.tech/2024/04/09/dai-ma-ers-sar-yuan-shi-shu-ju-ti-qu-he-cheng-xiang/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1253,11 +1257,11 @@
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/09/02/py-rust-cpp-su-du-bi-jiao/</loc>
+    <loc>https://ytkz.tech/2024/03/01/pycharm-bian-ma-bao-cuo-ji-jie-jue/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2024/03/01/pycharm-bian-ma-bao-cuo-ji-jie-jue/</loc>
+    <loc>https://ytkz.tech/2024/09/02/py-rust-cpp-su-du-bi-jiao/</loc>
     <lastmod>2024-09-09</lastmod>
   </url>
   <url>
@@ -1437,11 +1441,11 @@
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2022/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/</loc>
+    <loc>https://ytkz.tech/2022/11/14/yao-gan-ru-men-zhi-shi-yong-matlab-du-qu-landsat8/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2022/11/14/yao-gan-ru-men-zhi-shi-yong-matlab-du-qu-landsat8/</loc>
+    <loc>https://ytkz.tech/2022/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
@@ -1477,11 +1481,11 @@
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
+    <loc>https://ytkz.tech/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>
-    <loc>https://ytkz.tech/2021/08/30/shen-du-xue-xi-yao-gan-ying-xiang-jian-zhu-wu-jian-ce/</loc>
+    <loc>https://ytkz.tech/2021/06/21/shen-du-xue-xi-yao-gan-ying-xiang-yun-jian-ce/</loc>
     <lastmod>2024-07-26</lastmod>
   </url>
   <url>

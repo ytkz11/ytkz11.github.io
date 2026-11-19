@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ytkz.tech/2026/06/15/3dgeospatial/</loc>
+    
+    <lastmod>2026-11-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ytkz.tech/2026/11/18/tong-shi-wen-wo-zen-me-xue-bian-cheng/</loc>
     
     <lastmod>2026-11-19</lastmod>
@@ -191,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/2024%E5%B9%B4%E7%BB%BC%E5%90%88%E8%83%BD%E5%8A%9B%E7%9C%9F%E9%A2%98.html</loc>
+    <loc>https://ytkz.tech/2023%E5%B9%B4%E7%BB%BC%E5%90%88%E8%83%BD%E5%8A%9B%E7%9C%9F%E9%A2%98.html</loc>
     
     <lastmod>2026-06-16</lastmod>
     
@@ -200,7 +209,7 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/2023%E5%B9%B4%E7%BB%BC%E5%90%88%E8%83%BD%E5%8A%9B%E7%9C%9F%E9%A2%98.html</loc>
+    <loc>https://ytkz.tech/2024%E5%B9%B4%E7%BB%BC%E5%90%88%E8%83%BD%E5%8A%9B%E7%9C%9F%E9%A2%98.html</loc>
     
     <lastmod>2026-06-16</lastmod>
     
@@ -3919,14 +3928,14 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/tags/%E7%BB%98%E5%9B%BE/</loc>
+    <loc>https://ytkz.tech/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ytkz.tech/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://ytkz.tech/tags/%E7%BB%98%E5%9B%BE/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4052,6 +4061,20 @@
   </url>
   
   <url>
+    <loc>https://ytkz.tech/tags/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ytkz.tech/tags/himawari8/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ytkz.tech/tags/golang/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -4066,21 +4089,7 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ytkz.tech/tags/leetcode/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ytkz.tech/tags/himawari8/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4255,14 +4264,14 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/tags/numpy/</loc>
+    <loc>https://ytkz.tech/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ytkz.tech/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/</loc>
+    <loc>https://ytkz.tech/tags/numpy/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4376,14 +4385,14 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/</loc>
+    <loc>https://ytkz.tech/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ytkz.tech/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4404,14 +4413,14 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/python/</loc>
+    <loc>https://ytkz.tech/categories/GIS/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ytkz.tech/categories/GIS/</loc>
+    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/%E7%BB%98%E5%9B%BE/python/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4495,13 +4504,6 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/Sentinel5/%E4%B8%8B%E8%BD%BD/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ytkz.tech/categories/arcgis/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -4510,6 +4512,13 @@
   
   <url>
     <loc>https://ytkz.tech/categories/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/Sentinel5/%E4%B8%8B%E8%BD%BD/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4530,14 +4539,14 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/categories/sar/%E9%81%A5%E6%84%9F/</loc>
+    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/GDAL/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/GDAL/</loc>
+    <loc>https://ytkz.tech/categories/sar/%E9%81%A5%E6%84%9F/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4551,7 +4560,21 @@
   </url>
   
   <url>
+    <loc>https://ytkz.tech/categories/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ytkz.tech/categories/gdal/%E9%81%A5%E6%84%9F/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ytkz.tech/categories/himawari8/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4572,21 +4595,7 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/categories/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ytkz.tech/categories/leetcode/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ytkz.tech/categories/himawari8/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4852,13 +4861,6 @@
   </url>
   
   <url>
-    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://ytkz.tech/categories/PyTorch/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -4866,21 +4868,14 @@
   </url>
   
   <url>
+    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://ytkz.tech/categories/%E6%8A%80%E6%9C%AF/autosub/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/numpy/</loc>
-    <lastmod>2026-11-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/python/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -4895,6 +4890,20 @@
   
   <url>
     <loc>https://ytkz.tech/categories/PyTorch/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/numpy/</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/%E6%97%A0%E4%BA%BA%E6%9C%BA/python/</loc>
     <lastmod>2026-11-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
