@@ -6,7 +6,7 @@
   <link href="https://ytkz.tech/atom.xml" rel="self"/>
   
   <link href="https://ytkz.tech/"/>
-  <updated>2026-10-12T10:25:48.698Z</updated>
+  <updated>2026-11-19T14:12:44.137Z</updated>
   <id>https://ytkz.tech/</id>
   
   <author>
@@ -15,6 +15,115 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>同样是 EPSG3857，ArcGIS 10.2 怎么就把我的图斑挪走了？</title>
+    <link href="https://ytkz.tech/2026/11/19/tong-yang-shi-epsg3857-arcgis-10.2-zen-me-jiu-ba-wo-de-tu-ban-nuo-zou-liao/"/>
+    <id>https://ytkz.tech/2026/11/19/tong-yang-shi-epsg3857-arcgis-10.2-zen-me-jiu-ba-wo-de-tu-ban-nuo-zou-liao/</id>
+    <published>2026-11-19T14:33:34.000Z</published>
+    <updated>2026-11-19T14:12:44.137Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近在处理遥感影像的矢量成果时，碰到了一个挺离谱的问题。&lt;/p&gt;
+&lt;p&gt;输入是一景 TIF 影像，输出是经过一系列后处理得到的 SHP 矢量文件。按理说，影像和矢量使用同一个坐标系，叠加起来应该严丝合缝。&lt;/p&gt;
+&lt;p&gt;结果偏偏出了问题。&lt;/p&gt;
+&lt;p&gt;在 QGIS</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="https://ytkz.tech/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>同事问我怎么学编程</title>
+    <link href="https://ytkz.tech/2026/11/18/tong-shi-wen-wo-zen-me-xue-bian-cheng/"/>
+    <id>https://ytkz.tech/2026/11/18/tong-shi-wen-wo-zen-me-xue-bian-cheng/</id>
+    <published>2026-11-18T14:33:34.000Z</published>
+    <updated>2026-11-19T14:13:08.784Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上周和同事聊天聊起来，我和他说了下我的经历，说起我学编程的这个经历，他就问我怎么学编程？&lt;/p&gt;
+&lt;p&gt;准确来说，我是在工作半年后，开始一边工作，一边自学编程。&lt;/p&gt;
+&lt;p&gt;那是我第一份工作，工作时，使用matlab比较多，但我知道python才是日后的主流。&lt;/p&gt;
+&lt;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://ytkz.tech/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="https://ytkz.tech/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GID遥感数据集训练多分类模型day1</title>
+    <link href="https://ytkz.tech/2026/10/15/gid-yao-gan-shu-ju-ji-xun-lian-duo-fen-lei-mo-xing-day1/"/>
+    <id>https://ytkz.tech/2026/10/15/gid-yao-gan-shu-ju-ji-xun-lian-duo-fen-lei-mo-xing-day1/</id>
+    <published>2026-10-15T14:33:34.000Z</published>
+    <updated>2026-10-15T11:37:51.500Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上回说到我检索到一份他人已切片完成的 GID5 数据，大小约 18 GB，后续可直接使用这份现成数据，省去自行处理。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GID数据集8bit问题数据复查</title>
+    <link href="https://ytkz.tech/2026/10/12/gid-shu-ju-ji-8bit-wen-ti-shu-ju-fu-cha/"/>
+    <id>https://ytkz.tech/2026/10/12/gid-shu-ju-ji-8bit-wen-ti-shu-ju-fu-cha/</id>
+    <published>2026-10-12T14:33:34.000Z</published>
+    <updated>2026-10-15T11:35:56.791Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;有人针对昨天的留意说：GID5数据集中的8bit那个版本数据本身没有问题，软件显示错误是其读取方式带来的，如果代码读取是没问题的。&lt;/p&gt;
+&lt;p&gt;本着求真的精神，严肃讨论GID5数据集8BIT是否是问题数据。&lt;/p&gt;
+&lt;p&gt;本文框架如下：&lt;br&gt;1.代码读取影像，显示。&lt;/</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz.tech/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>吐槽，GID数据集制作深度学习样本</title>
@@ -423,102 +532,6 @@
         
     <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
 &lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://ytkz.tech/2026/06/16/2023-nian-zong-he-neng-li-zhen-ti/"/>
-    <id>https://ytkz.tech/2026/06/16/2023-nian-zong-he-neng-li-zhen-ti/</id>
-    <published>2026-06-16T11:34:48.776Z</published>
-    <updated>2026-06-16T03:10:45.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
-&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://ytkz.tech/2026/06/16/51-dan-pian-ji-dian-liang-led-wan-zheng-jiao-cheng/"/>
-    <id>https://ytkz.tech/2026/06/16/51-dan-pian-ji-dian-liang-led-wan-zheng-jiao-cheng/</id>
-    <published>2026-06-16T11:34:48.627Z</published>
-    <updated>2026-06-16T09:18:15.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;你刚拿到普中51开发板，下面我用最详细、零基础也能看懂的方式，手把手带你点亮第一个LED。&lt;/p&gt;
-&lt;p&gt;整个过程分为四大部分：&lt;strong&gt;准备工作 → 安装软件 → 写程序 → 烧录运行&lt;/strong&gt;，请一步步跟着做。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>做了一个注册测绘师备考小程序</title>
-    <link href="https://ytkz.tech/2026/06/15/zuo-liao-yi-ge-zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu/"/>
-    <id>https://ytkz.tech/2026/06/15/zuo-liao-yi-ge-zhu-ce-ce-hui-shi-bei-kao-xiao-cheng-xu/</id>
-    <published>2026-06-15T14:33:34.000Z</published>
-    <updated>2026-06-15T12:47:16.029Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;起名字是一件非常困难的事情，本着简单的原则，结合本公众号ID，索性把注册测绘师备考小程序的ID改成     小白测绘。&lt;/p&gt;
-&lt;p&gt;这个小程序目前收录了2011年到2022年注册测绘师的综合选择题。&lt;/p&gt;
-&lt;p&gt;&lt;img</summary>
-        
-      
-    
-    
-    
-    <category term="遥感" scheme="https://ytkz.tech/categories/%E9%81%A5%E6%84%9F/"/>
-    
-    
-    <category term="遥感" scheme="https://ytkz.tech/tags/%E9%81%A5%E6%84%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://ytkz.tech/2026/06/15/an-zhuang-mimo-code-guo-cheng/"/>
-    <id>https://ytkz.tech/2026/06/15/an-zhuang-mimo-code-guo-cheng/</id>
-    <published>2026-06-15T11:30:40.328Z</published>
-    <updated>2026-06-15T06:37:43.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;安装mimo code过程很简单。&lt;/p&gt;
-&lt;p&gt;第一步，安装node.js&lt;/p&gt;
-&lt;p&gt;打开这个links:&lt;a</summary>
         
       
     
