@@ -10,9 +10,7 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/site.js" defer></script>
-<meta name="generator" content="Hexo 5.4.2">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<meta name="generator" content="Hexo 5.4.2"></head>
 <body>
   <a class="skip" href="#main">跳到正文</a>
   <header class="header wrap">
@@ -33,38 +31,6 @@
   </header>
   <main id="main" class="wrap"><section class="page-heading"><p class="eyebrow">ARCHIVE</p><h1>文章归档</h1><p>沿着时间，回看每一次探索。</p></section>
 <div class="post-list">
-
-  <article class="post-row">
-    <time datetime="2024-08-19">2024.08.19</time>
-    <div><h2><a href="/2024/08/19/ubuntu22.04-an-zhuang-gmtsar/">ubuntu22.04安装gmtsar</a></h2>
-    
-    <p>GMTSAR 是一款出色的工具，可让您在使用 GMT 的同时分析 SAR 卫星图像。不过，我仍在学习如何使用它。今天我只介绍一下安装方法。 安装官方安装教程：https://github.com/gmtsar/gm...</p>
-    <div class="post-meta"><a href="/categories/sar/">sar</a><a href="/categories/sar/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
-  </article>
-
-  <article class="post-row">
-    <time datetime="2024-08-19">2024.08.19</time>
-    <div><h2><a href="/2024/08/19/shou-dong-xia-zai-sentinel-1-wei-xing-jing-mi-gui-dao-shu-ju/">手动下载Sentinel-1卫星精密轨道数据</a></h2>
-    
-    <p>轨道信息对于InSAR（干涉合成孔径雷达）数据处理至关重要，因为它影响从初始图像配准到最终形变图像生成的整个过程。不准确的轨道信息会导致基线误差，这些误差会以残差条纹的形式出现在干涉图中。为了消除由轨道误差引起的系...</p>
-    <div class="post-meta"><a href="/categories/linux/">linux</a></div></div>
-  </article>
-
-  <article class="post-row">
-    <time datetime="2024-08-17">2024.08.17</time>
-    <div><h2><a href="/2024/08/17/yan-zheng-shi-fou-cheng-gong-an-zhuang-cann/">验证是否成功安装 CANN</a></h2>
-    
-    <p>要验证是否成功安装 CANN（Ascend Computing Language Neural Network）工具包（在 ARM Linux 系统上，用户模式安装），可以按照以下步骤检查安装状态和环境配置。以下是...</p>
-    <div class="post-meta"><a href="/categories/%E6%98%87%E8%85%BE/">昇腾</a><a href="/categories/%E6%98%87%E8%85%BE/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></div></div>
-  </article>
-
-  <article class="post-row">
-    <time datetime="2024-08-16">2024.08.16</time>
-    <div><h2><a href="/2024/08/16/jia-zai-torch-bao-cuo-ji-ru-he-jie-jue/">加载torch报错及如何解决</a></h2>
-    
-    <p>Failed to import pytorch fbgemm.dll or one of its dependencies is missing 这往往是你的电脑缺少了某些微软的dll文件。所以报错了。 解决办法...</p>
-    <div class="post-meta"><a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></div></div>
-  </article>
 
   <article class="post-row">
     <time datetime="2024-08-16">2024.08.16</time>
@@ -130,8 +96,40 @@
     <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
+  <article class="post-row">
+    <time datetime="2024-08-08">2024.08.08</time>
+    <div><h2><a href="/2024/08/08/ju-zhen-tai-da-liao-nei-cun-bu-gou-dao-zhi-numpy-bao-cuo/">矩阵太大了内存不够导致numpy报错</a></h2>
+    
+    <p>之前写过分块进行16位转8位的程序。今天使用一景大影像进行处理，发现程序报错了。 原因是，影像太大了,numpy一下子不能读取到矩阵的百分之二最小值和百分之98最大值。报错的代码如下： global_min &amp;#x...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
+  </article>
+
+  <article class="post-row">
+    <time datetime="2024-08-08">2024.08.08</time>
+    <div><h2><a href="/2024/08/08/pyinstaller-da-bao-zhong-de-da-keng-geopandas/">pyinstaller打包中的大坑geopandas</a></h2>
+    
+    <p>一开始使用以下语句打包： pyinstaller -F simplify.py 运行打包后的exe闪退，报错信息如下： Traceback (most recent call last): File &amp;quot;v...</p>
+    <div class="post-meta"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></div></div>
+  </article>
+
+  <article class="post-row">
+    <time datetime="2024-08-06">2024.08.06</time>
+    <div><h2><a href="/2024/08/06/2000-zuo-biao-xi-zhuan-hua-wei-wgs84-zuo-biao-xi/">2000坐标系转换为wgs84坐标系</a></h2>
+    
+    <p>记录一下如何进行2000坐标系转化为wgs84坐标系的过程。 在处理矢量数据转换的过程中，有几个关键步骤确保了数据的有效性和可用性。 首先，在转换之前，通过检查并创建目标保存目录，保证了正确的目录结构，这对于避免转...</p>
+    <div class="post-meta"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></div></div>
+  </article>
+
+  <article class="post-row">
+    <time datetime="2024-08-06">2024.08.06</time>
+    <div><h2><a href="/2024/08/06/tu-xiang-te-zheng-dian-pi-pei/">图像特征点匹配</a></h2>
+    
+    <p>本文主要介绍图像特征点匹配众多方法中的sift算法。这是几年前写的代码，现在再回看发现很多内容我不记得了，记忆被删除了一样。但是，当时记录好了，也把代码、数据备份了，现在一边运行、一边查资料，很快就把这段代码捡起来...</p>
+    <div class="post-meta"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></div></div>
+  </article>
+
 </div>
-<nav class="pagination" aria-label="文章分页"><a class="extend prev" rel="prev" href="/archives/page/19/">上一页</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/archives/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/36/">36</a><a class="extend next" rel="next" href="/archives/page/21/">下一页</a></nav>
+<nav class="pagination" aria-label="文章分页"><a class="extend prev" rel="prev" href="/archives/page/19/">上一页</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/19/">19</a><span class="page-number current">20</span><a class="page-number" href="/archives/page/21/">21</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/35/">35</a><a class="extend next" rel="next" href="/archives/page/21/">下一页</a></nav>
 
 </main>
   <footer class="footer wrap"><span>© 2026 ytkz · 记录与分享</span><div><a href="/atom.xml">RSS</a><a target="_blank" rel="noopener" href="https://github.com/ytkz11">GitHub</a><a href="#">回到顶部</a></div></footer>

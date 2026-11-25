@@ -10,9 +10,7 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/site.js" defer></script>
-<meta name="generator" content="Hexo 5.4.2">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<meta name="generator" content="Hexo 5.4.2"></head>
 <body>
   <a class="skip" href="#main">跳到正文</a>
   <header class="header wrap">
@@ -33,6 +31,14 @@
   </header>
   <main id="main" class="wrap"><section class="page-heading"><p class="eyebrow">ARCHIVE</p><h1>遥感</h1><p>沿着时间，回看每一次探索。</p></section>
 <div class="post-list">
+
+  <article class="post-row">
+    <time datetime="2024-03-17">2024.03.17</time>
+    <div><h2><a href="/2024/03/17/dai-ma-duo-ge-shapefile-mian-he-bing/">【代码】多个shapefile面合并</a></h2>
+    
+    <p>什么是GIS面合并GIS（地理信息系统）中的面合并是一个处理地理空间数据的常见操作。它涉及到将两个或者更多的相邻或者重叠的多边形（也被称为“面”）合并为一个单一的多边形。这个操作通常在处理地理数据时用来简化数据集，...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
+  </article>
 
   <article class="post-row">
     <time datetime="2024-03-17">2024.03.17</time>
@@ -120,14 +126,6 @@
     
     <p>需求现在有一份SHP文件，需要把这份矢量文件制作为深度学习的标签。这时候第一个步骤是：把矢量栅格化。 代码#!/usr/bin/env python # -*- coding: utf-8 -*- # @Time ...</p>
     <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
-  </article>
-
-  <article class="post-row">
-    <time datetime="2023-12-22">2023.12.22</time>
-    <div><h2><a href="/2023/12/22/ru-he-jiang-tif-ge-shi-de-wen-jian-you-30m-chong-cai-yang-dao-100m/">如何将tif格式的文件由30m重采样到100m?</a></h2>
-    
-    <p>在知乎上看到这个问题，记录一下解决的过程。 命令行的方式如果你安装编译好gdal，可以使用以下命令： gdalwarp -tr 100 100 input.tif output.tif 代码的方式此外，你还可以用p...</p>
-    <div class="post-meta"><a href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><a href="/categories/%E7%BC%96%E7%A8%8B/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
 </div>

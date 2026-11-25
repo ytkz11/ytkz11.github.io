@@ -10,9 +10,7 @@
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/assets/site.js" defer></script>
-<meta name="generator" content="Hexo 5.4.2">
-<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-</head>
+<meta name="generator" content="Hexo 5.4.2"></head>
 <body>
   <a class="skip" href="#main">跳到正文</a>
   <header class="header wrap">
@@ -36,87 +34,87 @@
 <div class="post-list">
 
   <article class="post-row">
-    <time datetime="2023-02-10">2023.02.10</time>
-    <div><h2><a href="/2023/02/10/6-ge-bo-duan-de-landsat-shu-ju-zen-me-zai-matlab-li-die-jia-cheng-12-ge-bo-duan/">6个波段的landsat数据怎么在Matlab里叠加成12个波段</a></h2>
+    <time datetime="2022-10-21">2022.10.21</time>
+    <div><h2><a href="/2022/10/21/di-tu-de-shi-zhen/">地图的失真</a></h2>
     
-    <p>引言很久没用过matlab，不记得了获取矩阵的大小的函数、不记得矩阵的下标索引操作，一些语法都忘记一干二净。但是要记住解决问题的大概思路，换个语言实现也是可以的，过程中遇到问题就去搜索。 回到这个这篇文章的主题，6...</p>
-    <div class="post-meta"><a href="/categories/matlab/">matlab</a></div></div>
+    <p>有时候，看地图会误判，地图上俄罗斯过大（6400公里），非洲过小（7200公里）。 这并不是地图画错了，而是地球为球形，投影成平面地图会失真，高纬度地区被拉长了。 1. 地理坐标系地理坐标系统（Geographic...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
   <article class="post-row">
-    <time datetime="2023-01-30">2023.01.30</time>
-    <div><h2><a href="/2023/01/30/shi-yong-python-jiang-netcdf-zhuan-huan-wei-geotiff-wen-jian/">使用 Python 将 NetCDF 转换为 GeoTiff 文件</a></h2>
+    <time datetime="2022-10-19">2022.10.19</time>
+    <div><h2><a href="/2022/10/19/gao-fen-3-hao-1-ji-dao-2-ji-de-chu-li-guo-cheng/">高分3号1级到2级的处理过程</a></h2>
     
-    <p>介绍我们将使用 Python 将 netCDF 文件转换为 GeoTIFF。GeoTIFF 基于 TIFF 格式，用作地理参考光栅图像的交换格式。 第三方库netCDF4 gdal numpy geopandas ...</p>
-    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a><a href="/categories/%E9%81%A5%E6%84%9F/python/">python</a></div></div>
+    <p>SAR的一级数据的无物理意义的DN值，而二级数据则是带有坐标信息的后向散射系数信息（图像） 1.简介这是针对国产合成孔径雷达遥感影像预处理的算法。 2.特点1.分块实现sar预处理：1L数据到1LB级数据再到2级数...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
   <article class="post-row">
-    <time datetime="2022-12-06">2022.12.06</time>
-    <div><h2><a href="/2022/12/06/shi-yong-cpp-diao-yong-gdal/">配置GDAL及使用CPP调用GDAL</a></h2>
+    <time datetime="2022-10-17">2022.10.17</time>
+    <div><h2><a href="/2022/10/17/ti-qu-dong-xiao-mai-zai-ai-earth-shang-shi-xian/">顾及物候信息提取冬小麦面积（基于AI earth）</a></h2>
     
-    <p>配置GDAL首先打开Visual Studio 2019，新建控制台工程，名字叫做“简单调用GDAL”。 右击工程，找到“属性” 把GDAL的include文件夹填写到“附加包含目录”中，如下图。 把GDAL的li...</p>
-    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a><a href="/categories/%E9%81%A5%E6%84%9F/GDAL/">GDAL</a></div></div>
+    <p>农业遥感 农业遥感的一个基础方向是农作物分类，农作物分类的基础在于要了解农作物的生长周期，打个比方就是： 1.植物越绿，NDVI值越高 2.植物不绿了，NDVI值变低 3.植物的生长期、 成熟期、收割期，即植物是什...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
   <article class="post-row">
-    <time datetime="2022-12-01">2022.12.01</time>
-    <div><h2><a href="/2022/12/01/sentinel-5p-ke-shi-hua-zhan-shi-kong-qi-wu-ran-cheng-du/">Sentinel-5P可视化展示空气污染程度</a></h2>
+    <time datetime="2022-10-14">2022.10.14</time>
+    <div><h2><a href="/2022/10/14/a-li-ai-earth-di-qiu-ke-xue-yun-ping-tai-1/">阿里AI Earth地球科学云平台1</a></h2>
     
-    <p>介绍Sentinel-5P任务旨在在 2017 年至至少 2023 年之间提供有关空气质量和气候的信息和服务。通过机载 TROPOMI 传感器，它每天对主要大气成分进行全球观测，包括臭氧、二氧化氮、二氧化硫、一氧化...</p>
-    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a><a href="/categories/%E9%81%A5%E6%84%9F/Sentinel5/">Sentinel5</a></div></div>
+    <p>介绍 2017年，google earth engine 横空出世，颠覆了传统的遥感数据处理全流程，以一种全新的方式对地理大数据进行分析。第一次接触GEE，会惊讶于它的处理速度，能快速的展示出一个大地区的可视化结果...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
   <article class="post-row">
-    <time datetime="2022-12-01">2022.12.01</time>
-    <div><h2><a href="/2022/12/01/pei-zhi-gdal-ji-shi-yong-cpp-diao-yong-gdal/">Sentinel-5P可视化展示空气污染程度</a></h2>
+    <time datetime="2022-10-13">2022.10.13</time>
+    <div><h2><a href="/2022/10/13/tu-di-fu-gai-fen-lei-jie-shao/">地物分类介绍</a></h2>
     
-    <p>介绍Sentinel-5P任务旨在在 2017 年至至少 2023 年之间提供有关空气质量和气候的信息和服务。通过机载 TROPOMI 传感器，它每天对主要大气成分进行全球观测，包括臭氧、二氧化氮、二氧化硫、一氧化...</p>
-    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a><a href="/categories/%E9%81%A5%E6%84%9F/Sentinel5/">Sentinel5</a></div></div>
+    <p>地物分类的概念将所有图像像素自动分类为不同的类型。 地球表面的地物类型，包括人造表面、农业区、森林、(半)自然区、湿地、水体。指地表覆盖物，例如植被、人造构筑物、水、裸露的土壤等等。 遥感影像分类基本分为非监督分类...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
   <article class="post-row">
-    <time datetime="2022-11-30">2022.11.30</time>
-    <div><h2><a href="/2022/11/30/sentinel-5p-xia-zai-dai-ma-ce-shi/">下载 | Sentinel-5P下载代码测试</a></h2>
+    <time datetime="2022-10-13">2022.10.13</time>
+    <div><h2><a href="/2022/10/13/gao-fen-san-hao-l1-dao-l2-de-chu-li-fang-fa/">高分三号L1到L2的处理方法</a></h2>
     
-    <p>Sentinel-5P下载代码测试 介绍Sentinel-5P任务旨在在 2017 年至至少 2023 年之间提供有关空气质量和气候的信息和服务。通过机载 TROPOMI 传感器，它每天对主要大气成分进行全球观测，...</p>
-    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a><a href="/categories/%E9%81%A5%E6%84%9F/Sentinel5/">Sentinel5</a></div></div>
+    <p>定标常数的获取利用定标场已知雷达截面积的角反射器和有源定标器确定定标常数。 K = |P^I-P_NG_{img2}|/\sigma_c \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
   <article class="post-row">
-    <time datetime="2022-11-24">2022.11.24</time>
-    <div><h2><a href="/2022/11/24/gao-fen-san-hao-lei-da-shu-ju-rpc-xiao-zheng/">RPC | 高分三号雷达数据RPC校正代码</a></h2>
+    <time datetime="2022-10-09">2022.10.09</time>
+    <div><h2><a href="/2022/10/09/landsat-ying-xiang-de-dan-du-de-tif-wen-jian-he-cheng-wei-yi-ge-tif-ying-xiang/">Landsat影像的单独的tif文件合成为一个tif影像</a></h2>
     
-    <p>RPC（rational polynomial coefficients），有理多项式系数。RPC是传感器严格几何模型的拟合形式。是根据卫星平台载荷测量的平台运行轨迹参数、姿态参数、传感器安装参数及传感器内部几何参...</p>
-    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a><a href="/categories/%E9%81%A5%E6%84%9F/RPC/">RPC</a></div></div>
+    <p>今天需要在ENVI显示一景Landsat 9 影像，猛地发现竟然不能在envi直接打开，网上一搜大概是要下载插件，于是乎就打开俺以前写的基础代码，修修改改实现了Landsat 9影像的所有文件合成为一个波段。把原始...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
   <article class="post-row">
-    <time datetime="2022-11-23">2022.11.23</time>
-    <div><h2><a href="/2022/11/23/yun-se-zhi-zhi-fang-tu-pi-pei-suan-fa-ji-qi-dai-ma/">匀色 | 直方图匹配算法及其代码</a></h2>
+    <time datetime="2022-09-30">2022.09.30</time>
+    <div><h2><a href="/2022/09/30/shi-yong-python-shi-xian-pi-liang-cong-gao-de-xia-zai-quan-guo-shi-liang-shu-ju/">使用python实现批量从高德下载全国矢量数据</a></h2>
     
-    <p>相关理论不再展示，感兴趣去网上搜，现在是基于图片图片进行匀色，代码如下： # -*- coding: utf-8 -*- # @Time : 2022/01/05 10:18 import numpy as np ...</p>
-    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a><a href="/categories/%E9%81%A5%E6%84%9F/%E5%8C%80%E8%89%B2/">匀色</a></div></div>
+    <p>因为网上很多shp都是国外制作的，导致某些敏感地区缺失，比如藏南地区、台湾省等。调查发现高德提供中国地区的矢量数据，其完整性较好。这也就是有这篇记录文章的目的，使用python爬虫进行下载。在arcgis打开下载好...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F-%E7%9F%A2%E9%87%8F/">遥感,矢量</a></div></div>
   </article>
 
   <article class="post-row">
-    <time datetime="2022-11-20">2022.11.20</time>
-    <div><h2><a href="/2022/11/20/ben-jiao-cheng-jie-shao-numpy-yi-ge-yong-yu-zai-python-zhong-zhi-xing-shu-zhi-ji-suan-de-python-ku/">maltab 语言如何熟练掌握？</a></h2>
+    <time datetime="2022-09-23">2022.09.23</time>
+    <div><h2><a href="/2022/09/23/wei-he-xue-xi-javascript-2022-nian/">为何学习JavaScript-2022年</a></h2>
     
-    <p>为了能够使用numpy，我们需要使用import numpy导入库。此外，指定np代表numpy: import numpy as np 现在，我们可以通过输入np.name_of_function来访问numpy...</p>
-    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a><a href="/categories/%E9%81%A5%E6%84%9F/numpy/">numpy</a></div></div>
+    <p>为何学习 JavaScript？JavaScript 是 web 开发者必学的三种语言之一： HTML 定义网页的内容 CSS 规定网页的布局 JavaScript 对网页行为进行编程 为何学习 JavaScrip...</p>
+    <div class="post-meta"><a href="/categories/JavaScript/">JavaScript</a></div></div>
   </article>
 
   <article class="post-row">
-    <time datetime="2022-11-19">2022.11.19</time>
-    <div><h2><a href="/2022/11/19/yao-gan-ru-men-zhi-maltab-yu-yan-ru-he-shou-lian-zhang-wo/">maltab 语言如何熟练掌握？</a></h2>
+    <time datetime="2022-09-21">2022.09.21</time>
+    <div><h2><a href="/2022/09/21/yao-gan-ying-yong-he-yong-tu-2022-nian/">遥感应用和用途-2022年</a></h2>
     
-    <p>由来我是研一接触的python，但是老实说，一直感觉编程是不得劲的，写代码有时候是云里来雾里去，没有悟到了精髓。2018年GEE大热，我跟风学了起来GEE，GEE说实在是一个平台、工具，用的JS语法，可是大部分时间...</p>
-    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a><a href="/categories/%E9%81%A5%E6%84%9F/matlab/">matlab</a></div></div>
+    <p>军事用侦察卫星监视地面目标军事是遥感卫星的一个重要方向，也是遥感市场上的需求方。 遥感卫星最大的优势是不受传统空间的限制获得特定的信息。例如2021年11月，美国使用卫星拍摄俄罗斯军队在边境集合，这是传统手段无法实...</p>
+    <div class="post-meta"><a href="/categories/%E9%81%A5%E6%84%9F/">遥感</a></div></div>
   </article>
 
 </div>
-<nav class="pagination" aria-label="文章分页"><a class="extend prev" rel="prev" href="/page/37/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/43/">43</a><a class="extend next" rel="next" href="/page/39/">下一页</a></nav>
+<nav class="pagination" aria-label="文章分页"><a class="extend prev" rel="prev" href="/page/37/">上一页</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/37/">37</a><span class="page-number current">38</span><a class="page-number" href="/page/39/">39</a><span class="space">&hellip;</span><a class="page-number" href="/page/41/">41</a><a class="extend next" rel="next" href="/page/39/">下一页</a></nav>
 
 </main>
   <footer class="footer wrap"><span>© 2026 ytkz · 记录与分享</span><div><a href="/atom.xml">RSS</a><a target="_blank" rel="noopener" href="https://github.com/ytkz11">GitHub</a><a href="#">回到顶部</a></div></footer>
