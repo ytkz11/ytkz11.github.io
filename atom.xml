@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Find everything you need</title>
+  <title>ytkz 的笔记</title>
   
-  <subtitle>Some personal notes</subtitle>
+  <subtitle>遥感、代码与日常探索</subtitle>
   <link href="https://ytkz11.github.io/atom.xml" rel="self"/>
   
   <link href="https://ytkz11.github.io/"/>
-  <updated>2026-11-25T01:46:31.808Z</updated>
+  <updated>2026-11-25T02:00:26.234Z</updated>
   <id>https://ytkz11.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>安装mimo code过程</title>
     <link href="https://ytkz11.github.io/2026/11/25/an-zhuang-mimo-code-guo-cheng/"/>
     <id>https://ytkz11.github.io/2026/11/25/an-zhuang-mimo-code-guo-cheng/</id>
-    <published>2026-11-25T01:46:31.808Z</published>
-    <updated>2026-11-25T01:46:31.808Z</updated>
+    <published>2026-11-25T02:00:26.234Z</published>
+    <updated>2026-11-25T02:00:26.234Z</updated>
     
     
       
@@ -40,11 +40,11 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>VX小游戏逆向思路</title>
     <link href="https://ytkz11.github.io/2026/11/25/vx-xiao-you-xi-ni-xiang-si-lu/"/>
     <id>https://ytkz11.github.io/2026/11/25/vx-xiao-you-xi-ni-xiang-si-lu/</id>
-    <published>2026-11-25T01:46:31.789Z</published>
-    <updated>2026-11-25T01:46:31.789Z</updated>
+    <published>2026-11-25T02:00:26.214Z</published>
+    <updated>2026-11-25T02:00:26.214Z</updated>
     
     
       
@@ -61,18 +61,19 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://ytkz11.github.io/2026/11/25/cache/eb099a7d415da6c7c37b93ce069567d1092bebf7/"/>
-    <id>https://ytkz11.github.io/2026/11/25/cache/eb099a7d415da6c7c37b93ce069567d1092bebf7/</id>
-    <published>2026-11-25T01:46:31.789Z</published>
-    <updated>2026-11-25T01:46:31.792Z</updated>
+    <title>2023年综合能力真题</title>
+    <link href="https://ytkz11.github.io/2026/11/25/2023-nian-zong-he-neng-li-zhen-ti/"/>
+    <id>https://ytkz11.github.io/2026/11/25/2023-nian-zong-he-neng-li-zhen-ti/</id>
+    <published>2026-11-25T02:00:26.211Z</published>
+    <updated>2026-11-25T02:00:26.211Z</updated>
     
     
       
       
         
         
-    <summary type="html">[{&quot;place_id&quot;:208441986,&quot;licence&quot;:&quot;Data © OpenStreetMap contributors, ODbL 1.0.</summary>
+    <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
+&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
         
       
     
@@ -82,11 +83,79 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>2024年综合能力真题</title>
+    <link href="https://ytkz11.github.io/2026/11/25/2024-nian-zong-he-neng-li-zhen-ti/"/>
+    <id>https://ytkz11.github.io/2026/11/25/2024-nian-zong-he-neng-li-zhen-ti/</id>
+    <published>2026-11-25T02:00:26.211Z</published>
+    <updated>2026-11-25T02:00:26.211Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
+&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2025年综合能力真题</title>
+    <link href="https://ytkz11.github.io/2026/11/25/2025-nian-zong-he-neng-li-zhen-ti/"/>
+    <id>https://ytkz11.github.io/2026/11/25/2025-nian-zong-he-neng-li-zhen-ti/</id>
+    <published>2026-11-25T02:00:26.211Z</published>
+    <updated>2026-11-25T02:00:26.211Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2025 年测绘综合能力真题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;大地测量中外业观测的基准线是（ ）。&lt;br&gt;A、铅垂线 B、法线 C、地球引力线 D、大地线&lt;br&gt;参考答案：A&lt;br&gt;解析：外业测量基准线是铅垂线。&lt;br&gt;2.真北方向和坐标轴的夹角是什么角（</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>45分钟理解深度神经网络和深度学习</title>
+    <link href="https://ytkz11.github.io/2026/11/25/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/"/>
+    <id>https://ytkz11.github.io/2026/11/25/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/</id>
+    <published>2026-11-25T02:00:26.211Z</published>
+    <updated>2026-11-25T02:00:26.211Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;什么是深度学习？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;-&lt;/strong&gt; &lt;strong&gt;45**&lt;/strong&gt;分钟理解深度神经网络和深度学习**&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>51单片机点亮LED完整教程</title>
     <link href="https://ytkz11.github.io/2026/11/25/51-dan-pian-ji-dian-liang-led-wan-zheng-jiao-cheng/"/>
     <id>https://ytkz11.github.io/2026/11/25/51-dan-pian-ji-dian-liang-led-wan-zheng-jiao-cheng/</id>
-    <published>2026-11-25T01:46:31.786Z</published>
-    <updated>2026-11-25T01:46:31.786Z</updated>
+    <published>2026-11-25T02:00:26.211Z</published>
+    <updated>2026-11-25T02:00:26.211Z</updated>
     
     
       
@@ -106,101 +175,11 @@
   </entry>
   
   <entry>
-    <title></title>
-    <link href="https://ytkz11.github.io/2026/11/25/2023-nian-zong-he-neng-li-zhen-ti/"/>
-    <id>https://ytkz11.github.io/2026/11/25/2023-nian-zong-he-neng-li-zhen-ti/</id>
-    <published>2026-11-25T01:46:31.785Z</published>
-    <updated>2026-11-25T01:46:31.785Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
-&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://ytkz11.github.io/2026/11/25/2024-nian-zong-he-neng-li-zhen-ti/"/>
-    <id>https://ytkz11.github.io/2026/11/25/2024-nian-zong-he-neng-li-zhen-ti/</id>
-    <published>2026-11-25T01:46:31.785Z</published>
-    <updated>2026-11-25T01:46:31.785Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
-&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://ytkz11.github.io/2026/11/25/2025-nian-zong-he-neng-li-zhen-ti/"/>
-    <id>https://ytkz11.github.io/2026/11/25/2025-nian-zong-he-neng-li-zhen-ti/</id>
-    <published>2026-11-25T01:46:31.785Z</published>
-    <updated>2026-11-25T01:46:31.785Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;2025 年测绘综合能力真题&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;大地测量中外业观测的基准线是（ ）。&lt;br&gt;A、铅垂线 B、法线 C、地球引力线 D、大地线&lt;br&gt;参考答案：A&lt;br&gt;解析：外业测量基准线是铅垂线。&lt;br&gt;2.真北方向和坐标轴的夹角是什么角（</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://ytkz11.github.io/2026/11/25/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/"/>
-    <id>https://ytkz11.github.io/2026/11/25/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/</id>
-    <published>2026-11-25T01:46:31.785Z</published>
-    <updated>2026-11-25T01:46:31.785Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;什么是深度学习？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;-&lt;/strong&gt; &lt;strong&gt;45**&lt;/strong&gt;分钟理解深度神经网络和深度学习**&lt;/p&gt;
-&lt;p&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>同样是 EPSG3857，ArcGIS 10.2 怎么就把我的图斑挪走了？</title>
     <link href="https://ytkz11.github.io/2026/11/19/tong-yang-shi-epsg3857-arcgis-10.2-zen-me-jiu-ba-wo-de-tu-ban-nuo-zou-liao/"/>
     <id>https://ytkz11.github.io/2026/11/19/tong-yang-shi-epsg3857-arcgis-10.2-zen-me-jiu-ba-wo-de-tu-ban-nuo-zou-liao/</id>
     <published>2026-11-19T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.807Z</updated>
+    <updated>2026-11-25T02:00:26.232Z</updated>
     
     
       
@@ -228,7 +207,7 @@
     <link href="https://ytkz11.github.io/2026/11/18/tong-shi-wen-wo-zen-me-xue-bian-cheng/"/>
     <id>https://ytkz11.github.io/2026/11/18/tong-shi-wen-wo-zen-me-xue-bian-cheng/</id>
     <published>2026-11-18T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.807Z</updated>
+    <updated>2026-11-25T02:00:26.232Z</updated>
     
     
       
@@ -256,7 +235,7 @@
     <link href="https://ytkz11.github.io/2026/10/15/gid-yao-gan-shu-ju-ji-xun-lian-duo-fen-lei-mo-xing-day1/"/>
     <id>https://ytkz11.github.io/2026/10/15/gid-yao-gan-shu-ju-ji-xun-lian-duo-fen-lei-mo-xing-day1/</id>
     <published>2026-10-15T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.787Z</updated>
+    <updated>2026-11-25T02:00:26.212Z</updated>
     
     
       
@@ -282,7 +261,7 @@
     <link href="https://ytkz11.github.io/2026/10/12/gid-shu-ju-ji-8bit-wen-ti-shu-ju-fu-cha/"/>
     <id>https://ytkz11.github.io/2026/10/12/gid-shu-ju-ji-8bit-wen-ti-shu-ju-fu-cha/</id>
     <published>2026-10-12T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.787Z</updated>
+    <updated>2026-11-25T02:00:26.212Z</updated>
     
     
       
@@ -309,7 +288,7 @@
     <link href="https://ytkz11.github.io/2026/10/12/tu-cao-gid-shu-ju-ji-zhi-zuo-shen-du-xue-xi-yang-ben/"/>
     <id>https://ytkz11.github.io/2026/10/12/tu-cao-gid-shu-ju-ji-zhi-zuo-shen-du-xue-xi-yang-ben/</id>
     <published>2026-10-12T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.807Z</updated>
+    <updated>2026-11-25T02:00:26.232Z</updated>
     
     
       
@@ -336,7 +315,7 @@
     <link href="https://ytkz11.github.io/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/"/>
     <id>https://ytkz11.github.io/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/</id>
     <published>2026-07-28T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.795Z</updated>
+    <updated>2026-11-25T02:00:26.220Z</updated>
     
     
       
@@ -361,7 +340,7 @@
     <link href="https://ytkz11.github.io/2026/07/27/xiao-bai-kan-dong-yao-gan-di-1-pian-tu-pian-wei-shi-me-ye-shi-ju-zhen/"/>
     <id>https://ytkz11.github.io/2026/07/27/xiao-bai-kan-dong-yao-gan-di-1-pian-tu-pian-wei-shi-me-ye-shi-ju-zhen/</id>
     <published>2026-07-27T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.795Z</updated>
+    <updated>2026-11-25T02:00:26.220Z</updated>
     
     
       
@@ -386,7 +365,7 @@
     <link href="https://ytkz11.github.io/2026/07/26/wei-shi-me-dan-ji-duo-qia-xun-lian-bu-hui-yin-wei-duo-yi-zhang-gpu-jiu-kuai-yi-bei/"/>
     <id>https://ytkz11.github.io/2026/07/26/wei-shi-me-dan-ji-duo-qia-xun-lian-bu-hui-yin-wei-duo-yi-zhang-gpu-jiu-kuai-yi-bei/</id>
     <published>2026-07-26T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.803Z</updated>
+    <updated>2026-11-25T02:00:26.229Z</updated>
     
     
       
@@ -411,7 +390,7 @@
     <link href="https://ytkz11.github.io/2026/07/26/zuo-biao-zhu-zuo-dao-shou-chou-jin-wo-xie-liao-ge-qgis-cha-jian-yi-jian-gao-ding-zheng-fu-yang-ben/"/>
     <id>https://ytkz11.github.io/2026/07/26/zuo-biao-zhu-zuo-dao-shou-chou-jin-wo-xie-liao-ge-qgis-cha-jian-yi-jian-gao-ding-zheng-fu-yang-ben/</id>
     <published>2026-07-26T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.806Z</updated>
+    <updated>2026-11-25T02:00:26.231Z</updated>
     
     
       
@@ -438,7 +417,7 @@
     <link href="https://ytkz11.github.io/2026/07/20/nong-dong-gdal-jiu-nong-dong-yao-gan-shu-ju-chu-li/"/>
     <id>https://ytkz11.github.io/2026/07/20/nong-dong-gdal-jiu-nong-dong-yao-gan-shu-ju-chu-li/</id>
     <published>2026-07-20T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.809Z</updated>
+    <updated>2026-11-25T02:00:26.235Z</updated>
     
     
       
@@ -463,7 +442,7 @@
     <link href="https://ytkz11.github.io/2026/07/15/wei-shi-me-shuo-xian-yu-shi-guo-nei-an-wang/"/>
     <id>https://ytkz11.github.io/2026/07/15/wei-shi-me-shuo-xian-yu-shi-guo-nei-an-wang/</id>
     <published>2026-07-15T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.804Z</updated>
+    <updated>2026-11-25T02:00:26.229Z</updated>
     
     
       
@@ -489,7 +468,7 @@
     <link href="https://ytkz11.github.io/2026/07/07/yao-gan-da-mo-xing-dinov3-zhu-ceng-te-zheng-ke-shi-hua/"/>
     <id>https://ytkz11.github.io/2026/07/07/yao-gan-da-mo-xing-dinov3-zhu-ceng-te-zheng-ke-shi-hua/</id>
     <published>2026-07-07T14:33:34.000Z</published>
-    <updated>2026-11-25T01:46:31.817Z</updated>
+    <updated>2026-11-25T02:00:26.243Z</updated>
     
     
       
@@ -507,6 +486,34 @@
     
     
     <category term="深度学习" scheme="https://ytkz11.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我做了一个卫星地图下载助手，能看到同一个地方几十年的变化</title>
+    <link href="https://ytkz11.github.io/2026/06/23/wo-zuo-liao-yi-ge-wei-xing-di-tu-xia-zai-zhu-shou-neng-kan-dao-tong-yi-ge-di-fang-ji-shi-nian-de-bian-hua/"/>
+    <id>https://ytkz11.github.io/2026/06/23/wo-zuo-liao-yi-ge-wei-xing-di-tu-xia-zai-zhu-shou-neng-kan-dao-tong-yi-ge-di-fang-ji-shi-nian-de-bian-hua/</id>
+    <published>2026-06-23T14:33:34.000Z</published>
+    <updated>2026-11-25T02:00:26.236Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;你有没有好奇过，你家门前那条路十年前长什么样？你住的小区那块地，以前是不是一片农田？你常去的那座山，在卫星图上看又是什么样子？&lt;/p&gt;
+&lt;p&gt;我就好奇过，然后做了个工具。&lt;/p&gt;
+&lt;p&gt;下图是香港迪士尼公园。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/tags/%E9%81%A5%E6%84%9F/"/>
     
   </entry>
   
