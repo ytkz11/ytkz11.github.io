@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Find everything you need</title>
+  
+  <subtitle>Some personal notes</subtitle>
+  <link href="https://ytkz11.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://ytkz11.github.io/"/>
+  <updated>2026-11-25T01:32:47.271Z</updated>
+  <id>https://ytkz11.github.io/</id>
+  
+  <author>
+    <name>ytkz</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://ytkz11.github.io/2026/11/25/an-zhuang-mimo-code-guo-cheng/"/>
+    <id>https://ytkz11.github.io/2026/11/25/an-zhuang-mimo-code-guo-cheng/</id>
+    <published>2026-11-25T01:32:47.271Z</published>
+    <updated>2026-11-25T01:32:47.271Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;安装mimo code过程很简单。&lt;/p&gt;
+&lt;p&gt;第一步，安装node.js&lt;/p&gt;
+&lt;p&gt;打开这个links:&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://ytkz11.github.io/2026/11/25/cache/eb099a7d415da6c7c37b93ce069567d1092bebf7/"/>
+    <id>https://ytkz11.github.io/2026/11/25/cache/eb099a7d415da6c7c37b93ce069567d1092bebf7/</id>
+    <published>2026-11-25T01:32:47.198Z</published>
+    <updated>2026-11-25T01:32:47.198Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">[{&quot;place_id&quot;:208441986,&quot;licence&quot;:&quot;Data © OpenStreetMap contributors, ODbL 1.0.</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://ytkz11.github.io/2026/11/25/vx-xiao-you-xi-ni-xiang-si-lu/"/>
+    <id>https://ytkz11.github.io/2026/11/25/vx-xiao-you-xi-ni-xiang-si-lu/</id>
+    <published>2026-11-25T01:32:47.194Z</published>
+    <updated>2026-11-25T01:32:47.194Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;本文章仅用于学习交流，请勿用于非法用途&quot;&gt;&lt;a href=&quot;#本文章仅用于学习交流，请勿用于非法用途&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://ytkz11.github.io/2026/11/25/51-dan-pian-ji-dian-liang-led-wan-zheng-jiao-cheng/"/>
+    <id>https://ytkz11.github.io/2026/11/25/51-dan-pian-ji-dian-liang-led-wan-zheng-jiao-cheng/</id>
+    <published>2026-11-25T01:32:47.179Z</published>
+    <updated>2026-11-25T01:32:47.179Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;你刚拿到普中51开发板，下面我用最详细、零基础也能看懂的方式，手把手带你点亮第一个LED。&lt;/p&gt;
+&lt;p&gt;整个过程分为四大部分：&lt;strong&gt;准备工作 → 安装软件 → 写程序 → 烧录运行&lt;/strong&gt;，请一步步跟着做。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://ytkz11.github.io/2026/11/25/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/"/>
+    <id>https://ytkz11.github.io/2026/11/25/45-fen-zhong-li-jie-shen-du-shen-jing-wang-luo-he-shen-du-xue-xi/</id>
+    <published>2026-11-25T01:32:47.178Z</published>
+    <updated>2026-11-25T01:32:47.178Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;什么是深度学习？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;-&lt;/strong&gt; &lt;strong&gt;45**&lt;/strong&gt;分钟理解深度神经网络和深度学习**&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://ytkz11.github.io/2026/11/25/2025-nian-zong-he-neng-li-zhen-ti/"/>
+    <id>https://ytkz11.github.io/2026/11/25/2025-nian-zong-he-neng-li-zhen-ti/</id>
+    <published>2026-11-25T01:32:47.176Z</published>
+    <updated>2026-11-25T01:32:47.176Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2025 年测绘综合能力真题&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;大地测量中外业观测的基准线是（ ）。&lt;br&gt;A、铅垂线 B、法线 C、地球引力线 D、大地线&lt;br&gt;参考答案：A&lt;br&gt;解析：外业测量基准线是铅垂线。&lt;br&gt;2.真北方向和坐标轴的夹角是什么角（</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://ytkz11.github.io/2026/11/25/2024-nian-zong-he-neng-li-zhen-ti/"/>
+    <id>https://ytkz11.github.io/2026/11/25/2024-nian-zong-he-neng-li-zhen-ti/</id>
+    <published>2026-11-25T01:32:47.175Z</published>
+    <updated>2026-11-25T01:32:47.175Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
+&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://ytkz11.github.io/2026/11/25/2023-nian-zong-he-neng-li-zhen-ti/"/>
+    <id>https://ytkz11.github.io/2026/11/25/2023-nian-zong-he-neng-li-zhen-ti/</id>
+    <published>2026-11-25T01:32:47.174Z</published>
+    <updated>2026-11-25T01:32:47.174Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;2024年度真题讲解&lt;br&gt;——2024《综合》真题&lt;/p&gt;
+&lt;p&gt;2022年综合真题，以下为单项选择题：&lt;br&gt;1．CGCS2000国家大地坐标系的长半轴是（ ）。&lt;br&gt;A．6378135 B．6378137 C．6378140</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>同样是 EPSG3857，ArcGIS 10.2 怎么就把我的图斑挪走了？</title>
+    <link href="https://ytkz11.github.io/2026/11/19/tong-yang-shi-epsg3857-arcgis-10.2-zen-me-jiu-ba-wo-de-tu-ban-nuo-zou-liao/"/>
+    <id>https://ytkz11.github.io/2026/11/19/tong-yang-shi-epsg3857-arcgis-10.2-zen-me-jiu-ba-wo-de-tu-ban-nuo-zou-liao/</id>
+    <published>2026-11-19T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.263Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近在处理遥感影像的矢量成果时，碰到了一个挺离谱的问题。&lt;/p&gt;
+&lt;p&gt;输入是一景 TIF 影像，输出是经过一系列后处理得到的 SHP 矢量文件。按理说，影像和矢量使用同一个坐标系，叠加起来应该严丝合缝。&lt;/p&gt;
+&lt;p&gt;结果偏偏出了问题。&lt;/p&gt;
+&lt;p&gt;在 QGIS</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>同事问我怎么学编程</title>
+    <link href="https://ytkz11.github.io/2026/11/18/tong-shi-wen-wo-zen-me-xue-bian-cheng/"/>
+    <id>https://ytkz11.github.io/2026/11/18/tong-shi-wen-wo-zen-me-xue-bian-cheng/</id>
+    <published>2026-11-18T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.263Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上周和同事聊天聊起来，我和他说了下我的经历，说起我学编程的这个经历，他就问我怎么学编程？&lt;/p&gt;
+&lt;p&gt;准确来说，我是在工作半年后，开始一边工作，一边自学编程。&lt;/p&gt;
+&lt;p&gt;那是我第一份工作，工作时，使用matlab比较多，但我知道python才是日后的主流。&lt;/p&gt;
+&lt;</summary>
+        
+      
+    
+    
+    
+    <category term="编程" scheme="https://ytkz11.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="编程" scheme="https://ytkz11.github.io/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GID遥感数据集训练多分类模型day1</title>
+    <link href="https://ytkz11.github.io/2026/10/15/gid-yao-gan-shu-ju-ji-xun-lian-duo-fen-lei-mo-xing-day1/"/>
+    <id>https://ytkz11.github.io/2026/10/15/gid-yao-gan-shu-ju-ji-xun-lian-duo-fen-lei-mo-xing-day1/</id>
+    <published>2026-10-15T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.184Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;上回说到我检索到一份他人已切片完成的 GID5 数据，大小约 18 GB，后续可直接使用这份现成数据，省去自行处理。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GID数据集8bit问题数据复查</title>
+    <link href="https://ytkz11.github.io/2026/10/12/gid-shu-ju-ji-8bit-wen-ti-shu-ju-fu-cha/"/>
+    <id>https://ytkz11.github.io/2026/10/12/gid-shu-ju-ji-8bit-wen-ti-shu-ju-fu-cha/</id>
+    <published>2026-10-12T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.184Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;有人针对昨天的留意说：GID5数据集中的8bit那个版本数据本身没有问题，软件显示错误是其读取方式带来的，如果代码读取是没问题的。&lt;/p&gt;
+&lt;p&gt;本着求真的精神，严肃讨论GID5数据集8BIT是否是问题数据。&lt;/p&gt;
+&lt;p&gt;本文框架如下：&lt;br&gt;1.代码读取影像，显示。&lt;/</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>吐槽，GID数据集制作深度学习样本</title>
+    <link href="https://ytkz11.github.io/2026/10/12/tu-cao-gid-shu-ju-ji-zhi-zuo-shen-du-xue-xi-yang-ben/"/>
+    <id>https://ytkz11.github.io/2026/10/12/tu-cao-gid-shu-ju-ji-zhi-zuo-shen-du-xue-xi-yang-ben/</id>
+    <published>2026-10-12T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;GID 高分二号高分辨率土地覆盖数据集&lt;/p&gt;
+&lt;p&gt;GID 是 gaofen image dataset的缩写。&lt;/p&gt;
+&lt;p&gt;包含150张高分二号影像，被切成512×512大小的图片 标签含有5种类别（不加空白），0：建筑、1：田地、2：林地、3：草地、4：水体</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《小白看懂遥感》第2篇：为什么遥感图片有多个波段？</title>
+    <link href="https://ytkz11.github.io/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/"/>
+    <id>https://ytkz11.github.io/2026/07/28/xiao-bai-kan-dong-yao-gan-di-2-pian-wei-shi-me-yao-gan-tu-pian-you-duo-ge-bo-duan/</id>
+    <published>2026-07-28T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.213Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ytkz11/picture/master/63002937-7014-481b-a334-e859175eea34.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《小白看懂遥感》第1篇：图片为什么也是矩阵？</title>
+    <link href="https://ytkz11.github.io/2026/07/27/xiao-bai-kan-dong-yao-gan-di-1-pian-tu-pian-wei-shi-me-ye-shi-ju-zhen/"/>
+    <id>https://ytkz11.github.io/2026/07/27/xiao-bai-kan-dong-yao-gan-di-1-pian-tu-pian-wei-shi-me-ye-shi-ju-zhen/</id>
+    <published>2026-07-27T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.213Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ytkz11/picture/master/63002937-7014-481b-a334-e859175eea34.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为什么单机多卡训练，不会因为多一张 GPU 就快一倍？</title>
+    <link href="https://ytkz11.github.io/2026/07/26/wei-shi-me-dan-ji-duo-qia-xun-lian-bu-hui-yin-wei-duo-yi-zhang-gpu-jiu-kuai-yi-bei/"/>
+    <id>https://ytkz11.github.io/2026/07/26/wei-shi-me-dan-ji-duo-qia-xun-lian-bu-hui-yin-wei-duo-yi-zhang-gpu-jiu-kuai-yi-bei/</id>
+    <published>2026-07-26T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.245Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/ytkz11/picture/master/46705225-8deb-4005-8aef-03065782b948.png&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>做标注做到手抽筋？我写了个QGIS插件，一键搞定正负样本</title>
+    <link href="https://ytkz11.github.io/2026/07/26/zuo-biao-zhu-zuo-dao-shou-chou-jin-wo-xie-liao-ge-qgis-cha-jian-yi-jian-gao-ding-zheng-fu-yang-ben/"/>
+    <id>https://ytkz11.github.io/2026/07/26/zuo-biao-zhu-zuo-dao-shou-chou-jin-wo-xie-liao-ge-qgis-cha-jian-yi-jian-gao-ding-zheng-fu-yang-ben/</id>
+    <published>2026-07-26T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.258Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;朋友们，今天聊点实在的。&lt;/p&gt;
+&lt;p&gt;最近在搞一个遥感分类项目，要标注几千个蔬菜大棚，正样本标“1”，负样本标“0”。本以为是个机械活，结果在QGIS或者是在arcgis里一个个点开属性表改字段，再手动跳转下一个图斑，眼睛花了不说，手指头都快练出肌肉记忆了。&lt;/p&gt;
+&lt;p</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>弄懂GDAL就弄懂遥感数据处理</title>
+    <link href="https://ytkz11.github.io/2026/07/20/nong-dong-gdal-jiu-nong-dong-yao-gan-shu-ju-chu-li/"/>
+    <id>https://ytkz11.github.io/2026/07/20/nong-dong-gdal-jiu-nong-dong-yao-gan-shu-ju-chu-li/</id>
+    <published>2026-07-20T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.276Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://ts1.tc.mm.bing.net/th/id/OIP-C.5H32yquLEXvGIYxVjHQcagHaDt?r=0&amp;amp;rs=1&amp;amp;pid=ImgDetMain&amp;amp;o=7&amp;amp;rm=3&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/categories/%E9%81%A5%E6%84%9F/"/>
+    
+    
+    <category term="遥感" scheme="https://ytkz11.github.io/tags/%E9%81%A5%E6%84%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>闲鱼是国内暗网</title>
+    <link href="https://ytkz11.github.io/2026/07/15/wei-shi-me-shuo-xian-yu-shi-guo-nei-an-wang/"/>
+    <id>https://ytkz11.github.io/2026/07/15/wei-shi-me-shuo-xian-yu-shi-guo-nei-an-wang/</id>
+    <published>2026-07-15T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;“闲鱼是国内暗网”是网友调侃。它不止卖二手，还能买到陪聊、代扫墓、前任分手通知、甚至”代挨骂”这种离谱服务，加上评论区人均段子手，画风越来越像”正规 App 里藏了个野路子集市”，所以被戏称”国内版暗网”，本质是审核边界 + 脑洞商品的化学反应。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遥感大模型DINOv3 逐层特征可视化</title>
+    <link href="https://ytkz11.github.io/2026/07/07/yao-gan-da-mo-xing-dinov3-zhu-ceng-te-zheng-ke-shi-hua/"/>
+    <id>https://ytkz11.github.io/2026/07/07/yao-gan-da-mo-xing-dinov3-zhu-ceng-te-zheng-ke-shi-hua/</id>
+    <published>2026-07-07T14:33:34.000Z</published>
+    <updated>2026-11-25T01:32:47.309Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;深度学习模型通常被认为是一个“黑盒”，我们知道它能够识别目标，却很难理解模型内部到底关注了哪些信息。&lt;/p&gt;
+&lt;p&gt;本文这个脚本，利用 &lt;strong&gt;DINOv3 ViT-Large（24层）&lt;/strong&gt; 提取同一张图像在每一层 Transformer Block</summary>
+        
+      
+    
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="深度学习" scheme="https://ytkz11.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+</feed>
